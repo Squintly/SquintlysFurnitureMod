@@ -1,0 +1,20 @@
+A furniture mod inspired by the likes of Terrarchitect and Dragon's Decorative Mod, this is my attempt to fill in some of the gaps, mostly for my own personal building purposes.
+At the moment, it's mostly fish.
+
+At the moment, it's mostly fish. 
+
+CURRENT CONTENT:
+    - 7 hanging fish based off the non-potion fish, all 2x3
+   	- 1 smaller string of fish (2x2) and a tiny cluster (1x2)
+	- 3x2 placeable rope coil
+	- A decorative (and thus invincible!) cobweb
+    - 2 barrels with decorative foodstuffs
+    - 2x2 versions of the vanilla animal skins and treasure map
+    - Silk flowers and grass, so you can swing your sword in peace
+    - Hieroglyphic blocks and walls, including faded versions
+    - Polished sandstone brick blocks and walls
+    - Sandstone brick platforms
+    - Egyptian-themed obelisks, in whole and broken variants
+
+More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. (For example, at one point the hanging flounder dropped 3166 muskets instead. No idea why that happened, no idea how I fixed it. Please let me know if you also recieve a musket bounty.)
+Suggestions and tips are welcome!
