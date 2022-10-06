@@ -13,6 +13,7 @@ public class DecorativeWebTile : ModTile
 	{
 		Main.tileFrameImportant[base.Type] = false;
 		Main.tileSolid[base.Type] = false;
+		TileID.Sets.CanBeSloped[Type] = true;
 		Main.tileNoFail[base.Type] = true;
 		Main.tileNoAttach[base.Type] = true;
 		Main.tileLavaDeath[base.Type] = true;

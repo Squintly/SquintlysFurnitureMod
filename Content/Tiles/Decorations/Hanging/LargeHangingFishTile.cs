@@ -35,25 +35,25 @@ public class LargeHangingFishTile : ModTile
 		switch (frameX / 36)
 		{
 		case 0:
-			item = ModContent.ItemType<LargeHangingCod>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingCod>();
 			break;
 		case 1:
-			item = ModContent.ItemType<LargeHangingBass>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingBass>();
 			break;
 		case 2:
-			item = ModContent.ItemType<LargeHangingFlounder>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingFlounder>();
 			break;
 		case 3:
-			item = ModContent.ItemType<LargeHangingSnapper>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingSnapper>();
 			break;
 		case 4:
-			item = ModContent.ItemType<LargeHangingSalmon>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingSalmon>();
 			break;
 		case 5:
-			item = ModContent.ItemType<LargeHangingTrout>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingTrout>();
 			break;
 		case 6:
-			item = ModContent.ItemType<LargeHangingTuna>();
+			item = ModContent.ItemType<Items.Decorations.Hanging.Fish.LargeHangingTuna>();
 			break;
 		}
 		if (item > 0)

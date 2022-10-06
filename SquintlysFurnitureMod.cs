@@ -1,8 +1,8 @@
 using Terraria.ModLoader;
 
-namespace getdemitem
+namespace SquintlysFurnitureMod
 {
-	public class getdemitem : Mod
+	public class SquintlysFurnitureMod : Mod
 	{
 	}
 }

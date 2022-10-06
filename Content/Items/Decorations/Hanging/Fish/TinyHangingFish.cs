@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Items.Decorations.Hanging;
+namespace SquintlysFurnitureMod.Content.Items.Decorations.Hanging.Fish;
 
 internal class TinyHangingFish : ModItem
 {

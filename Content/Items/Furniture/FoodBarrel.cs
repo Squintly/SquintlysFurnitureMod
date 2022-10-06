@@ -18,7 +18,7 @@ internal class FoodBarrel : ModItem
 	{
 		base.Item.width = 22;
 		base.Item.height = 32;
-		base.Item.value = Item.buyPrice(0, 0, 1);
+		base.Item.value = Item.buyPrice(silver: 1);
 		base.Item.maxStack = 999;
 		base.Item.useStyle = 1;
 		base.Item.useTurn = true;

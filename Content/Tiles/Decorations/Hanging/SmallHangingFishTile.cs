@@ -37,6 +37,6 @@ public class SmallHangingFishTile : ModTile
 
 	public override void KillMultiTile(int i, int j, int frameX, int frameY)
 	{
-		Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 24, ModContent.ItemType<SmallHangingFish>());
+		Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 24, ModContent.ItemType<Items.Decorations.Hanging.Fish.SmallHangingFish>());
 	}
 }
