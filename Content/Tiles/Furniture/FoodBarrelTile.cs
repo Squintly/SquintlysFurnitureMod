@@ -189,7 +189,7 @@ public class FoodBarrelTile : ModTile
 			player.cursorItemIconText = ((Main.chest[chest].name.Length > 0) ? Main.chest[chest].name : "Food Barrel");
 			if (player.cursorItemIconText == "Food Barrel")
 			{
-				player.cursorItemIconID = ModContent.ItemType<FishBarrel>();
+				player.cursorItemIconID = ModContent.ItemType<Items.Furniture.FishBarrel>();
 				player.cursorItemIconText = "";
 			}
 		}

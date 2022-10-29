@@ -10,14 +10,14 @@ internal class FishBarrel : ModItem
 	public override void SetStaticDefaults()
 	{
 		base.DisplayName.SetDefault("Fish Barrel");
-        base.Tooltip.SetDefault("Do not shoot");
+        base.Tooltip.SetDefault("Do Not Shoot");
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
 	}
 
 	public override void SetDefaults()
 	{
-		base.Item.width = 22;
-		base.Item.height = 32;
+		base.Item.width = 16;
+		base.Item.height = 16;
 		base.Item.value = Item.buyPrice(silver:1);
 		base.Item.maxStack = 999;
 

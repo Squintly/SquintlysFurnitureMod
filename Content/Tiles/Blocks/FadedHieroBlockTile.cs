@@ -11,6 +11,7 @@ public class FadedHieroBlockTile : ModTile
 	public override void SetStaticDefaults()
 	{
 		Main.tileSolid[base.Type] = true;
+		Main.tileBrick[base.Type] = true;
 		Main.tileNoAttach[base.Type] = false;
 		Main.tileMergeDirt[base.Type] = true;
 		Main.tileBlockLight[base.Type] = true;

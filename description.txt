@@ -13,8 +13,10 @@ CURRENT CONTENT:
 - Sandstone brick platforms
 - Egyptian-themed obelisks, in whole and broken variants
 - 1x1 ceiling lamps for all sets + dungeon lanterns! 
+- 2x2 armchairs for all sets! They're not currently sit-on-able, but they DO count as seating for NPC housing requirements!
+- New furniture set -- Tattered! Made with wood & ecto mist
 
 More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. (For example, I cannot make the cobwebs act like a normal block and I have no idea how to fix this. Also: opacity.)
 Suggestions and tips are welcome!
 
-Note: the ceiling lamps turned out to be more complicated than I thought, and I need a little break after finally figuring them out. Also: 1.4.4 :P It might be a while before another update, unless I get any bug reports, which will obviously take priority. Thanks for all the support, it's really been inspiring!
+Note: This likely won't update again until late October or possibly early November, as I have a procedure coming up and probably won't be able to work on this during recovery. Thanks for your patience.

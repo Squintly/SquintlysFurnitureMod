@@ -21,8 +21,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
 			TileID.Sets.HasOutlines[Type] = true;
-			TileID.Sets.CanBeSatOnForNPCs[Type] = true; // Facilitates calling ModifySittingTargetInfo for NPCs
-			TileID.Sets.CanBeSatOnForPlayers[Type] = true; // Facilitates calling ModifySittingTargetInfo for Players
+			//TileID.Sets.CanBeSatOnForNPCs[Type] = true; // Facilitates calling ModifySittingTargetInfo for NPCs
+			//TileID.Sets.CanBeSatOnForPlayers[Type] = true; // Facilitates calling ModifySittingTargetInfo for Players
 			TileID.Sets.DisableSmartCursor[Type] = true;
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
