@@ -1,7 +1,9 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc;
 using Terraria;
+using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
+using SquintlysFurnitureMod.Content.Items.Blocks;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc;
 
@@ -10,28 +12,45 @@ internal class BrokenObeliskItem : ModItem
 	public override void SetStaticDefaults()
 	{
 		base.DisplayName.SetDefault("Broken Obelisk");
-		base.Tooltip.SetDefault("... and despair.");
 		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
 	}
 
 	public override void SetDefaults()
 	{
-		base.Item.width = 32;
-		base.Item.height = 32;
-		base.Item.value = Item.buyPrice(0, 0, 0, 20);
+		base.Item.width = 22;
+		base.Item.height = 22;
+
+		base.Item.value = Item.buyPrice(copper:10);
+		base.Item.rare = ItemRarityID.White;
+
 		base.Item.maxStack = 999;
-		base.Item.useStyle = 1;
+
+		base.Item.useStyle = ItemUseStyleID.Swing;
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
+
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<BrokenObeliskTile>();
-		base.Item.placeStyle = 0;
 	}
 
 	public override void AddRecipes()
 	{
-		base.CreateRecipe().AddIngredient(607, 10).Register();
-	}
+		base.CreateRecipe()
+			.AddIngredient(ItemID.SandstoneBrick, 10)
+			.AddTile(TileID.WorkBenches)
+			.Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroBlock>(), 10)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+           .AddIngredient(ModContent.ItemType<HieroBlock>(), 10)
+           .AddTile(TileID.WorkBenches)
+           .Register();
+    }
 }

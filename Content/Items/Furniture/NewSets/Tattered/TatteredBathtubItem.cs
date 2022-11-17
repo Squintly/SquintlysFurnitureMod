@@ -1,5 +1,5 @@
-using Terraria.ID;
 using Terraria;
+using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
@@ -15,16 +15,21 @@ internal class TatteredBathtubItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(copper: 60);
+        base.Item.width = 30;
+        base.Item.height = 20;
+
+        base.Item.value = Item.buyPrice(copper: 60);
+
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredBathtubTile>();
 
 	}

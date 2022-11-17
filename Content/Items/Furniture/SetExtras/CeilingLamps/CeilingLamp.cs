@@ -20,15 +20,17 @@ internal class CeilingLamp : ModItem
 		base.Item.height = 16;
 
 		base.Item.value = Item.buyPrice(gold: 2);
+
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.HoldUp);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.CeilingLampsTile>();
 		base.Item.placeStyle = 0;
 
@@ -40,5 +42,11 @@ internal class CeilingLamp : ModItem
 			.AddIngredient(ItemID.Torch)
 			.AddTile(TileID.WorkBenches)
 			.Register();
+
+        CreateRecipe(1)
+            .AddIngredient(ItemID.PlatinumBar)
+            .AddIngredient(ItemID.Torch)
+            .AddTile(TileID.WorkBenches)
+            .Register();
     }
 }

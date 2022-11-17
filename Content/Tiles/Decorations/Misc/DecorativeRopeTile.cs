@@ -32,8 +32,27 @@ public class DecorativeRopeTile : ModTile
 		base.MineResist = 0.25f;
 	}
 
-	public override void KillMultiTile(int i, int j, int frameX, int frameY)
-	{
-		Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, 16, j * 16, 16, 18, ModContent.ItemType<DecorativeRope>());
-	}
+    public override void KillMultiTile(int x, int y, int frameX, int frameY)
+    {
+        int item = 0;
+        switch (frameX / 36)
+        {
+            case 0:
+                item = ModContent.ItemType<Items.Decorations.Misc.DecorativeRope>();
+                break;
+            case 1:
+                item = ModContent.ItemType<Items.Decorations.Misc.DecorativeSilkRope>();
+                break;
+            case 2:
+                item = ModContent.ItemType<Items.Decorations.Misc.DecorativeVineRope>();
+                break;
+            case 3:
+                item = ModContent.ItemType<Items.Decorations.Misc.DecorativeWebRope>();
+                break;
+        }
+        if (item > 0)
+        {
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 48, item);
+        }
+    }
 }

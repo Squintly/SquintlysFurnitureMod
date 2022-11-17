@@ -15,16 +15,20 @@ internal class TatteredClockItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(copper: 60);
+        base.Item.width = 18;
+        base.Item.height = 32;
+
+        base.Item.value = Item.buyPrice(copper: 60);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredClockTile>();
 
 	}
@@ -32,7 +36,7 @@ internal class TatteredClockItem : ModItem
     {
 		CreateRecipe(1)
 			.AddIngredient(ItemID.Wood, 20)
-			.AddIngredient(ItemID.IronBar, 3)
+			.AddIngredient(RecipeGroupID.IronBar, 3)
 			.AddIngredient(ItemID.Glass, 6)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)

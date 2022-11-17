@@ -16,16 +16,21 @@ internal class EbonwoodArmchair : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(silver: 2);
+        base.Item.width = 30;
+        base.Item.height = 32;
+
+        base.Item.value = Item.buyPrice(silver: 2);
+
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.Armchairs>();
 		base.Item.placeStyle = 2;
 

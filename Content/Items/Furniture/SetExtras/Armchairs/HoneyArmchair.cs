@@ -16,7 +16,10 @@ internal class HoneyArmchair : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(silver: 2);
+        base.Item.width = 30;
+        base.Item.height = 32;
+
+        base.Item.value = Item.buyPrice(silver: 2);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);

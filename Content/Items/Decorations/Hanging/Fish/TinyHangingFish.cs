@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Hanging;
 using Terraria;
+using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
@@ -10,7 +11,6 @@ internal class TinyHangingFish : ModItem
 	public override void SetStaticDefaults()
 	{
 		base.DisplayName.SetDefault("Tiny Hanging Fish");
-		base.Tooltip.SetDefault("There's always a bigger fish");
 		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
 	}
 
@@ -18,26 +18,51 @@ internal class TinyHangingFish : ModItem
 	{
 		base.Item.width = 14;
 		base.Item.height = 32;
-		base.Item.value = Item.buyPrice(0, 0, 5);
+
+		base.Item.value = Item.buyPrice(silver:5);
+		base.Item.rare = ItemRarityID.White;
+
 		base.Item.maxStack = 999;
-		base.Item.useStyle = 1;
+
+		base.Item.useStyle = ItemUseStyleID.Swing;
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
+
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<TinyHangingFishTile>();
-		base.Item.placeStyle = 0;
 	}
 
 	public override void AddRecipes()
 	{
-		base.CreateRecipe().AddIngredient(2300).Register();
-		base.CreateRecipe().AddIngredient(2297).Register();
-		base.CreateRecipe().AddIngredient(2301).Register();
-		base.CreateRecipe().AddIngredient(2298).Register();
-		base.CreateRecipe().AddIngredient(4401).Register();
-		base.CreateRecipe().AddIngredient(2290).Register();
-		base.CreateRecipe().AddIngredient(2299).Register();
-	}
+        base.CreateRecipe()
+            .AddIngredient(ItemID.Bass)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.AtlanticCod)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.Flounder).
+            Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.Salmon)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.RedSnapper)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.Trout)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ItemID.Tuna)
+            .Register();
+    }
 }

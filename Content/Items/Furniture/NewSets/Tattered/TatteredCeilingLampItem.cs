@@ -15,16 +15,20 @@ internal class TatteredCeilingLampItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(copper: 20);
+        base.Item.width = 12;
+        base.Item.height = 20;
+
+        base.Item.value = Item.buyPrice(copper: 20);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredCeilingLampTile>();
 
 	}

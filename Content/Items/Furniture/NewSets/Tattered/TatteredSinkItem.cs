@@ -15,16 +15,20 @@ internal class TatteredSinkItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(copper: 60);
+        base.Item.width = 15;
+        base.Item.height = 24;
+
+        base.Item.value = Item.buyPrice(copper: 60);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredSinkTile>();
 
 	}

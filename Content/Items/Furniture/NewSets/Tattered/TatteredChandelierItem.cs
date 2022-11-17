@@ -15,16 +15,20 @@ internal class TatteredChandelierItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(silver: 6);
+        base.Item.width = 23;
+        base.Item.height = 26;
+
+        base.Item.value = Item.buyPrice(silver: 6);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredChandelierTile>();
 
 	}

@@ -15,16 +15,20 @@ internal class TatteredChestItem : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.value = Item.buyPrice(silver: 1);
+        base.Item.width = 32;
+        base.Item.height = 30;
+
+        base.Item.value = Item.buyPrice(silver: 1);
 		base.Item.maxStack = 999;
 
 		base.Item.useStyle = (ItemUseStyleID.Swing);
 		base.Item.useTurn = true;
 		base.Item.useAnimation = 15;
 		base.Item.useTime = 15;
-		base.Item.autoReuse = true;
 
+		base.Item.autoReuse = true;
 		base.Item.consumable = true;
+
 		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredChestTile>();
 
 	}
@@ -32,7 +36,7 @@ internal class TatteredChestItem : ModItem
     {
 		CreateRecipe(1)
 			.AddIngredient(ItemID.Wood, 8)
-			.AddIngredient(ItemID.IronBar, 2)
+			.AddIngredient(RecipeGroupID.IronBar, 2)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)
             .Register();

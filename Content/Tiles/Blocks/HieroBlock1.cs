@@ -1,12 +1,11 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Blocks;
 
-public class HieroBlockTile : ModTile
+public class HieroBlock1 : ModTile
 {
 	public override void SetStaticDefaults()
 	{
@@ -16,7 +15,7 @@ public class HieroBlockTile : ModTile
 		Main.tileMergeDirt[base.Type] = true;
 		Main.tileBlockLight[base.Type] = true;
 		base.AddMapEntry(new Color(222, 184, 135), base.CreateMapEntryName());
-		base.ItemDrop = ModContent.ItemType<HieroBlock>();
+		base.ItemDrop = ModContent.ItemType<Items.Blocks.HieroBlock1Item>();
 		base.HitSound = SoundID.Dig;
 		base.MineResist = 1f;
 	}
