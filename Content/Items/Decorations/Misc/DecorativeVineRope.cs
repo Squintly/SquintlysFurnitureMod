@@ -16,8 +16,8 @@ internal class DecorativeVineRope : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.width = 16;
-		base.Item.height = 12;
+		base.Item.width = 32;
+		base.Item.height = 24;
 
 		base.Item.value = Item.buyPrice(copper:20);
 		base.Item.rare = ItemRarityID.White;

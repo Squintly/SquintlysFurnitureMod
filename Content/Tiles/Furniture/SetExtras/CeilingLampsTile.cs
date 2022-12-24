@@ -19,15 +19,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
         public override void SetStaticDefaults()
         {
-            // Properties
             Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileWaterDeath[Type] = true;
             Main.tileLavaDeath[Type] = true;
-            // Main.tileFlame[Type] = true; // This breaks it.
 
-            // Placement
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.WaterDeath = true;
             TileObjectData.newTile.Height = 1;
@@ -36,8 +33,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.addTile(Type);
-
-            // Etc
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 

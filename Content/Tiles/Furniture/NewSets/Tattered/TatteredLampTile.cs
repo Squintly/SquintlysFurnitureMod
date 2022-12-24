@@ -11,33 +11,33 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
-	// This class shows off many things common to Lamp tiles in Terraria. The process for creating this example is detailed in: https://github.com/tModLoader/tModLoader/wiki/Advanced-Vanilla-Code-Adaption#examplelamp-tile
-	// If you can't figure out how to recreate a vanilla tile, see that guide for instructions on how to figure it out yourself.
 	internal class TatteredLampTile : ModTile
 	{
 		private Asset<Texture2D> flameTexture;
 
 		public override void SetStaticDefaults() {
-			// Properties
-			Main.tileLighted[Type] = true;
-			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
-			Main.tileWaterDeath[Type] = true;
-			Main.tileLavaDeath[Type] = true;
-			// Main.tileFlame[Type] = true; // This breaks it.
+            Main.tileFrameImportant[Type] = true;
 
-			// Placement
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            
+            Main.tileLighted[Type] = true;
+            
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style1xX);
-			TileObjectData.newTile.WaterDeath = true;
-			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 			TileObjectData.addTile(Type);
 
-			// Etc
-			AddMapEntry(new Color(253, 221, 3), Language.GetText("MapObject.FloorLamp"));
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 
-			// Assets
-			if (!Main.dedServ) {
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Lamp"));
+
+            if (!Main.dedServ) {
 				flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Tattered/TatteredLampTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
 			}
 		}
@@ -81,33 +81,33 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             }
 		}
 
-        //public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
-        //{
-        //    if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
-        //    {
-        //        return;
-        //    }
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
 
-        //    Tile tile = Main.tile[i, j];
+            Tile tile = Main.tile[i, j];
 
-        //    short frameX = tile.TileFrameX;
-        //    short frameY = tile.TileFrameY;
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
 
-        //    // Return if the lamp is off (when frameX is 0), or if a random check failed.
-        //    if (frameX != 0 || !Main.rand.NextBool(40))
-        //    {
-        //        return;
-        //    }
+            // Return if the lamp is off (when frameX is 0), or if a random check failed.
+            if (frameX != 0 || !Main.rand.NextBool(40))
+            {
+                return;
+            }
 
-        //    int style = frameY / 18;
-        //    int dustChoice;
-        //    dustChoice = (DustID.Torch);
+            int style = frameY / 18;
+            int dustChoice;
+            dustChoice = (DustID.Torch);
 
-        //    var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-        //    dust.noGravity = true;
-        //    dust.velocity *= 0.3f;
-        //    dust.velocity.Y = dust.velocity.Y - 1.5f;
-        //}
+            var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+            dust.noGravity = true;
+            dust.velocity *= 0.3f;
+            dust.velocity.Y = dust.velocity.Y - 1.5f;
+        }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {

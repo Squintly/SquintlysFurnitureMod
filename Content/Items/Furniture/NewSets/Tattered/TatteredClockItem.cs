@@ -35,7 +35,7 @@ internal class TatteredClockItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 20)
+			.AddRecipeGroup(RecipeGroupID.Wood, 20)
 			.AddIngredient(RecipeGroupID.IronBar, 3)
 			.AddIngredient(ItemID.Glass, 6)
 			.AddTile(TileID.WorkBenches)

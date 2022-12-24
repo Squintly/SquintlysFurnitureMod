@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using System.Diagnostics.Tracing;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
@@ -19,53 +20,58 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override void SetStaticDefaults()
         {
-            // Properties
-            Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileWaterDeath[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            // Main.tileFlame[Type] = true; // This breaks it.
 
-            // Placement
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+
+            Main.tileLighted[Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-            TileObjectData.newTile.WaterDeath = true;
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18};
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.addTile(Type);
-
-            // Etc
-
-            base.ItemDrop = ModContent.ItemType<TatteredLanternItem>();
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Lantern"));
 
-            // Assets
             if (!Main.dedServ)
             {
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Tattered/TatteredLanternTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
 
-        //public override void HitWire(int i, int j)
-        //{
-        //    Tile tile = Main.tile[i, j];
-        //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<FestiveLanternItem>());
+        }
 
-        //    Main.tile[i, j].TileFrameX += frameAdjustment;
-        //    Wiring.SkipWire(i, j);
+        public override void HitWire(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topY = j - tile.TileFrameY / 18 % 2;
+            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -36 : 36);
 
-        //    // Avoid trying to send packets in singleplayer.
-        //    if (Main.netMode != NetmodeID.SinglePlayer)
-        //    {
-        //        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-        //    }
-        //}
+            Main.tile[i, topY].TileFrameX += frameAdjustment;
+            Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
+
+            Wiring.SkipWire(i, topY);
+            Wiring.SkipWire(i, topY + 1);
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, i, topY + 1, 2, TileChangeType.None);
+            }
+        }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -75,43 +81,39 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             b = 0.7f;
         }
 
-        //public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
-        //{
-        //    if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
-        //    {
-        //        return;
-        //    }
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
 
-        //    Tile tile = Main.tile[i, j];
+            Tile tile = Main.tile[i, j];
 
-        //    short frameX = tile.TileFrameX;
-        //    short frameY = tile.TileFrameY;
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
 
-        //    // Return if the lamp is off (when frameX is 0), or if a random check failed.
-        //    if (frameX != 0 || !Main.rand.NextBool(40))
-        //    {
-        //        return;
-        //    }
+            // Return if the lamp is off (when frameX is 0), or if a random check failed.
+            if (frameX != 0 || !Main.rand.NextBool(40))
+            {
+                return;
+            }
 
-        //    int style = frameY / 18;
-        //    int dustChoice;
-        //    dustChoice = (DustID.Torch);
+            int style = frameY / 18;
+            int dustChoice;
+            dustChoice = (DustID.Torch);
 
-        //    var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-        //    dust.noGravity = true;
-        //    dust.velocity *= 0.3f;
-        //    dust.velocity.Y = dust.velocity.Y - 1.5f;
+            var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+            dust.noGravity = true;
+            dust.velocity *= 0.3f;
+            dust.velocity.Y = dust.velocity.Y - 1.5f;
 
 
-        //}
+        }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
-
-            //if (i % 2 == 1) {
-            //	effects = SpriteEffects.FlipHorizontally;
-            //}
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
@@ -129,9 +131,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
             TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
 
-            ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(uint)i); // Don't remove any casts.
+            ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(uint)i); 
 
-            // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
             for (int c = 0; c < 2; c++)
             {
                 float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.0f;

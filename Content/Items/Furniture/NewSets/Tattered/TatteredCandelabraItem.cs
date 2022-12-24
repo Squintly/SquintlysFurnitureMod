@@ -35,7 +35,7 @@ internal class TatteredCandelabraItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 5)
+			.AddRecipeGroup(RecipeGroupID.Wood, 5)
 			.AddIngredient(ItemID.Torch, 3)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)

@@ -44,13 +44,8 @@ internal class BrokenObeliskItem : ModItem
 			.Register();
 
         base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroBlock>(), 10)
+            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>(), 10)
             .AddTile(TileID.WorkBenches)
             .Register();
-
-        base.CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HieroBlock>(), 10)
-           .AddTile(TileID.WorkBenches)
-           .Register();
     }
 }

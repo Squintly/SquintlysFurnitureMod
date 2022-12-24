@@ -16,39 +16,36 @@ public class DecorativeWebTile : ModTile
 {
 	public override void SetStaticDefaults()
 	{
-		Main.tileFrameImportant[base.Type] = false;
-		Main.tileSolid[base.Type] = false;
-		//Main.tileBrick[base.Type] = true;
-		TileID.Sets.CanBeSloped[Type] = false;
-		Main.tileNoFail[base.Type] = true;
-		Main.tileNoAttach[base.Type] = true;
-		Main.tileLavaDeath[base.Type] = true;
-		Main.tileWaterDeath[base.Type] = true;
-		Main.tileBlendAll[base.Type] = false;
-		//Main.tileMergeDirt[base.Type] = true;
+		TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileNoFail[base.Type] = true;
+        Main.tileNoAttach[base.Type] = true;
+
+        //Main.tileBrick[base.Type] = true;
+        //TileID.Sets.CanBeSloped[Type] = false;
+        //Main.tileMergeDirt[base.Type] = true;
+        //Main.tileBlendAll[base.Type] = false;
+        //TileID.Sets.BlockMergesWithMergeAllBlock[Type] = false;
+        //TileID.Sets.ChecksForMerge[Type] = false;
+        //TileID.Sets.NotReallySolid[Type] = false;
+
+        Main.tileLavaDeath[base.Type] = false;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        Main.tileWaterDeath[base.Type] = false;
+        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
 		Main.tileNoSunLight[base.Type] = true;
-		Main.tileBlockLight[base.Type] = false;
-
-		TileID.Sets.BlockMergesWithMergeAllBlock[Type] = false;
-		TileID.Sets.ChecksForMerge[Type] = false;
-		TileID.Sets.NotReallySolid[Type] = false;
-
-
 
 		TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
 		TileObjectData.newTile.Width = 1;
 		TileObjectData.newTile.Height = 1;
 		TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
 		TileObjectData.newTile.CoordinatePadding = 2;
+
 		TileObjectData.addTile(base.Type);
-		base.DustType = 30;
-		base.AddMapEntry(new Color(50, 50, 50), base.CreateMapEntryName());
+
+		base.AddMapEntry(new Color(189, 185, 179), base.CreateMapEntryName("Decorative Webs"));
 		base.ItemDrop = ModContent.ItemType<DecorativeWebItem>();
 		base.HitSound = SoundID.Grass;
-		base.MineResist = 0.25f;
-	}
-    public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
-	{
-		drawData.finalColor = drawData.tileLight * 0.5f;
 	}
 }

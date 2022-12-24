@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -10,25 +11,31 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 	public class TatteredSinkTile : ModTile
 	{
 		public override void SetStaticDefaults() {
+            Main.tileFrameImportant[Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            
 			TileID.Sets.CountsAsWaterSource[Type] = true;
 			
 			Main.tileSolid[Type] = false;
-			Main.tileLavaDeath[Type] = false;
-			Main.tileFrameImportant[Type] = true;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
 			TileObjectData.addTile(Type);
 
-			AddMapEntry(new Color(100, 100, 100));
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Sink"));
 
-			DustType = 84;
+            DustType = 84;
 			AdjTiles = new int[] { Type };
-		}
-
-		public override void NumDust(int i, int j, bool fail, ref int num) {
-			num = fail ? 1 : 3;
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY) {

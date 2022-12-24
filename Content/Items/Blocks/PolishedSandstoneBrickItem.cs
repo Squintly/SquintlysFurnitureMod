@@ -47,5 +47,55 @@ internal class PolishedSandstoneBrickItem : ModItem
 			.AddIngredient(ModContent.ItemType<PolishedSandstoneBrickWallItem>(), 4)
 			.AddTile(TileID.WorkBenches)
 			.Register();
-	}
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroBlock1Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroBlock2Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroBlock3Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroBlock4Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HieroBlock1Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HieroBlock2Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HieroBlock3Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HieroBlock4Item>(), 1)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HieroWallSmallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+
+        base.CreateRecipe()
+            .AddIngredient(ModContent.ItemType<FadedHieroWallSmallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+    }
 }

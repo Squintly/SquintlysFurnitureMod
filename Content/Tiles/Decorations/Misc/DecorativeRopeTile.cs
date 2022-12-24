@@ -1,7 +1,9 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -13,23 +15,24 @@ public class DecorativeRopeTile : ModTile
 	public override void SetStaticDefaults()
 	{
 		Main.tileFrameImportant[base.Type] = true;
-		Main.tileSolid[base.Type] = false;
-		Main.tileNoFail[base.Type] = true;
+        TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileNoFail[base.Type] = true;
 		Main.tileNoAttach[base.Type] = true;
-		Main.tileLavaDeath[base.Type] = true;
-		Main.tileWaterDeath[base.Type] = false;
-		Main.tileNoSunLight[base.Type] = false;
-		Main.tileBlockLight[base.Type] = false;
+
+        Main.tileLavaDeath[base.Type] = false;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
 		TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
 		TileObjectData.newTile.Width = 2;
 		TileObjectData.newTile.Height = 1;
 		TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
 		TileObjectData.newTile.CoordinatePadding = 2;
+
 		TileObjectData.addTile(base.Type);
-		base.DustType = 129;
-		base.AddMapEntry(new Color(50, 50, 50), base.CreateMapEntryName());
+
+		base.AddMapEntry(new Color(74, 62, 44), base.CreateMapEntryName("Decorative Rope"));
 		base.HitSound = SoundID.Grass;
-		base.MineResist = 0.25f;
 	}
 
     public override void KillMultiTile(int x, int y, int frameX, int frameY)
@@ -52,7 +55,8 @@ public class DecorativeRopeTile : ModTile
         }
         if (item > 0)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 48, item);
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, item);
         }
     }
 }
+

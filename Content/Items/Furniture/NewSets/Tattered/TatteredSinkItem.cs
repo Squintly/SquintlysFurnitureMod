@@ -35,7 +35,7 @@ internal class TatteredSinkItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 6)
+			.AddRecipeGroup(RecipeGroupID.Wood, 6)
 			.AddIngredient(ItemID.WaterBucket)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)

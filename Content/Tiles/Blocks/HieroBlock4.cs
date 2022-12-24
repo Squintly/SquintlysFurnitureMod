@@ -15,9 +15,7 @@ public class HieroBlock4 : ModTile
 		Main.tileNoAttach[base.Type] = false;
 		Main.tileMergeDirt[base.Type] = true;
 		Main.tileBlockLight[base.Type] = true;
-		base.AddMapEntry(new Color(222, 184, 135), base.CreateMapEntryName());
-		base.ItemDrop = ModContent.ItemType<Content.Items.Blocks.HieroBlock1>();
-		base.HitSound = SoundID.Dig;
-		base.MineResist = 1f;
+		base.AddMapEntry(new Color(230, 215, 177), base.CreateMapEntryName("Faded Hieroglyphic Block"));
+        base.ItemDrop = ModContent.ItemType<HieroBlock4Item>();
 	}
 }

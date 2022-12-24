@@ -11,46 +11,47 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
-	//Very similar to ExampleChair, but has special HitWire code and potentially additional AdjTiles
 	public class TatteredToiletTile : ModTile
 	{
-		public const int NextStyleHeight = 40; // Calculated by adding all CoordinateHeights + CoordinatePaddingFix.Y applied to all of them + 2
+		public const int NextStyleHeight = 40; 
 
 		public override void SetStaticDefaults() {
-			// Properties
-			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
-			Main.tileLavaDeath[Type] = true;
+            Main.tileFrameImportant[Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
 			TileID.Sets.HasOutlines[Type] = true;
-			TileID.Sets.CanBeSatOnForNPCs[Type] = true; // Facilitates calling ModifySittingTargetInfo for NPCs
-			TileID.Sets.CanBeSatOnForPlayers[Type] = true; // Facilitates calling ModifySittingTargetInfo for Players
-			TileID.Sets.DisableSmartCursor[Type] = true;
+
+			TileID.Sets.CanBeSatOnForNPCs[Type] = true; 
+			TileID.Sets.CanBeSatOnForPlayers[Type] = true;
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 
-			AdjTiles = new int[] { TileID.Toilets }; // Condider adding TileID.Chairs to AdjTiles to mirror "(regular) Toilet" and "Golden Toilet" behavior for crafting stations
+			AdjTiles = new int[] { TileID.Toilets }; 
 			AdjTiles = new int[] { TileID.Chairs };
-			// Names
-			AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Tattered Toilet"));
 
-			// Placement
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Toilet"));
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
 			TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 			TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 			TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
-			// The following 3 lines are needed if you decide to add more styles and stack them vertically
+
 			TileObjectData.newTile.StyleWrapLimit = 2;
 			TileObjectData.newTile.StyleMultiplier = 2;
 			TileObjectData.newTile.StyleHorizontal = true;
 
 			TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
 			TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-			TileObjectData.addAlternate(1); // Facing right will use the second texture style
+			TileObjectData.addAlternate(1);
 			TileObjectData.addTile(Type);
-		}
-
-		public override void NumDust(int i, int j, bool fail, ref int num) {
-			num = fail ? 1 : 3;
 		}
 
 		public override void KillMultiTile(int i, int j, int frameX, int frameY) {

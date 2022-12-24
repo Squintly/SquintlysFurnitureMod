@@ -21,31 +21,31 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override void SetStaticDefaults()
         {
-            // Properties
-            Main.tileLighted[Type] = true;
             Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileWaterDeath[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            // Main.tileFlame[Type] = true; // This breaks it.
 
-            // Placement
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+
+            Main.tileLighted[Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-            TileObjectData.newTile.WaterDeath = true;
             TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.addTile(Type);
-
-            // Etc
 
             base.ItemDrop = ModContent.ItemType<TatteredCeilingLampItem>();
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Ceiling Lamp"));
 
             // Assets
             if (!Main.dedServ)
@@ -54,20 +54,20 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             }
         }
 
-        public override void HitWire(int i, int j)
-        {
-            Tile tile = Main.tile[i, j];
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        //public override void HitWire(int i, int j)
+        //{
+        //    Tile tile = Main.tile[i, j];
+        //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-            Main.tile[i, j].TileFrameX += frameAdjustment;
-            Wiring.SkipWire(i, j);
+        //    Main.tile[i, j].TileFrameX += frameAdjustment;
+        //    Wiring.SkipWire(i, j);
 
-            // Avoid trying to send packets in singleplayer.
-            if (Main.netMode != NetmodeID.SinglePlayer)
-            {
-                NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-            }
-        }
+        //    // Avoid trying to send packets in singleplayer.
+        //    if (Main.netMode != NetmodeID.SinglePlayer)
+        //    {
+        //        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
+        //    }
+        //}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

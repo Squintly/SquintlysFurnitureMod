@@ -13,27 +13,33 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 	public class TatteredDoorOpen : ModTile
 	{
 		public override void SetStaticDefaults() {
-			// Properties
-			Main.tileFrameImportant[Type] = true;
-			Main.tileSolid[Type] = false;
-			Main.tileLavaDeath[Type] = true;
+            Main.tileFrameImportant[Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
+
+            Main.tileSolid[Type] = false;
 			Main.tileNoSunLight[Type] = true;
-			TileID.Sets.HousingWalls[Type] = true; // needed for non-solid blocks to count as walls
-			TileID.Sets.HasOutlines[Type] = true;
-			TileID.Sets.DisableSmartCursor[Type] = true;
+			TileID.Sets.HousingWalls[Type] = true;
 
 			AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
 
 			AdjTiles = new int[] { TileID.OpenDoor };
 			CloseDoorID = ModContent.TileType<TatteredDoorClosed>();
 
-			// Names
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("Tattered Door");
-			AddMapEntry(new Color(200, 200, 200), name);
+            // Names
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Door"));
 
-			// Placement
-			TileObjectData.newTile.Width = 2;
+            // Placement
+            TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.Origin = new Point16(0, 0);
 			TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile, 1, 0);

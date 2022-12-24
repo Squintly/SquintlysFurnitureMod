@@ -36,7 +36,7 @@ internal class TatteredBathtubItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 14)
+			.AddRecipeGroup(RecipeGroupID.Wood, 14)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)
             .Register();

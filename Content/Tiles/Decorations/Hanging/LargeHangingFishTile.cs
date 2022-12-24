@@ -1,7 +1,9 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Items.Decorations.Hanging;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -13,20 +15,28 @@ public class LargeHangingFishTile : ModTile
 	public override void SetStaticDefaults()
 	{
 		Main.tileFrameImportant[base.Type] = true;
-		Main.tileLavaDeath[base.Type] = true;
-		Main.tileNoAttach[base.Type] = true;
-		TileID.Sets.FramesOnKillWall[base.Type] = false;
-		TileID.Sets.DisableSmartCursor[base.Type] = true;
-		TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-		TileObjectData.newTile.DrawYOffset = -2;
+        TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileLavaDeath[base.Type] = true;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
+        Main.tileNoAttach[base.Type] = true;
+        Main.tileNoFail[base.Type] = true;
+        TileID.Sets.FramesOnKillWall[base.Type] = false;
+
+        TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
+        TileObjectData.newTile.DrawYOffset = -2;
 		TileObjectData.newTile.Width = 2;
 		TileObjectData.newTile.Height = 3;
 		TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
+
 		TileObjectData.newTile.StyleHorizontal = true;
+
 		TileObjectData.addTile(base.Type);
-		base.AddMapEntry(new Color(60, 179, 11), base.CreateMapEntryName());
-		base.HitSound = SoundID.NPCHit19;
-		base.DustType = 33;
+
+		base.AddMapEntry(new Color(90, 110, 199), base.CreateMapEntryName("Large Hanging Fish"));
+		base.HitSound = SoundID.NPCHit25;
+		base.DustType = DustID.Water;
 	}
 
 	public override void KillMultiTile(int x, int y, int frameX, int frameY)
@@ -58,7 +68,7 @@ public class LargeHangingFishTile : ModTile
 		}
 		if (item > 0)
 		{
-			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 48, item);
+			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, item);
 		}
 	}
 }

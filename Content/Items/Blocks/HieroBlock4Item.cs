@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
+using SquintlysFurnitureMod.Content.Items.WallItems;
 
 namespace SquintlysFurnitureMod.Content.Items.Blocks;
 
@@ -36,34 +37,19 @@ internal class HieroBlock4Item : ModItem
 
 	public override void AddRecipes()
 	{
-		base.CreateRecipe()
-			.AddIngredient(ModContent.ItemType<FadedHieroBlock>())
-			.AddTile(TileID.WorkBenches)
-			.Register();
+        base.CreateRecipe()
+           .AddIngredient(ModContent.ItemType<FadedHieroBlock4Item>())
+           .AddTile(TileID.WorkBenches)
+           .Register();
 
         base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock1Item>())
+            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
             .AddTile(TileID.WorkBenches)
-            .Register();
-
-        base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock2Item>())
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock3Item>())
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        base.CreateRecipe()
-			.AddIngredient(ItemID.SandstoneBrick)
-			.AddTile(TileID.WorkBenches)
 			.Register();
 
 		base.CreateRecipe()
-			.AddIngredient(ModContent.ItemType<HieroWallItem>(), 4)
-			.AddTile(TileID.WorkBenches)
-			.Register();
-	}
+            .AddIngredient(ModContent.ItemType<HieroWall4Item>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+    }
 }

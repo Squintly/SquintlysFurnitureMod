@@ -12,26 +12,26 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
-	// This class shows off many things common to Lamp tiles in Terraria. The process for creating this example is detailed in: https://github.com/tModLoader/tModLoader/wiki/Advanced-Vanilla-Code-Adaption#examplelamp-tile
-	// If you can't figure out how to recreate a vanilla tile, see that guide for instructions on how to figure it out yourself.
 	internal class TatteredCandleTile : ModTile
 	{
 		private Asset<Texture2D> flameTexture;
 
 		public override void SetStaticDefaults() {
-			// Properties
-			Main.tileLighted[Type] = true;
-			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
-			Main.tileWaterDeath[Type] = true;
-			Main.tileLavaDeath[Type] = true;
-			// Main.tileFlame[Type] = true; // This breaks it.
+            Main.tileFrameImportant[Type] = true;
 
-			// Placement
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+
+            Main.tileLighted[Type] = true;
+
 			TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
-			TileObjectData.newTile.WaterDeath = true;
-			TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-			TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.CoordinateHeights = new int[1] { 20 };
@@ -40,11 +40,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
             base.ItemDrop = ModContent.ItemType<TatteredCandleItem>();
 
-            // Etc
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("Tattered Candle"));
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 
-			// Assets
-			if (!Main.dedServ) {
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Candle"));
+
+            if (!Main.dedServ) {
 				flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Tattered/TatteredCandleTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
 			}
 		}	

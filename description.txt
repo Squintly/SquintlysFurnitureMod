@@ -1,22 +1,22 @@
 A furniture mod inspired by the likes of Terrarchitect and Dragon's Decorative Mod, this is my attempt to fill in some of the gaps, mostly for my own personal building purposes.
 
 CURRENT CONTENT:
-- 7 hanging fish based off the non-potion fish, all 2x3
-- 1 smaller string of fish (2x2) and a tiny cluster (1x2)
-- 3x2 placeable rope coil
+- 9 hanging fIsh in a variety of types and sizes
+- Placeable rope coils
 - A decorative (and thus invincible!) cobweb
 - 2 barrels with decorative foodstuffs
 - 2x2 versions of the vanilla animal skins and treasure map
 - Silk flowers and grass, so you can swing your sword in peace
-- Hieroglyphic blocks and walls, including faded versions
+- Hieroglyphic blocks and walls in a multitude of varieties
+- Sandstone Pillars that come as both blocks as walls, as well as Lotus varients, for all your Egypt needs
 - Polished sandstone brick blocks and walls
-- Sandstone brick platforms
+- Sandstone platforms and columns that match Sandstone Brick rather than Smooth Sandstone
 - Egyptian-themed obelisks, in whole and broken variants
 - 1x1 ceiling lamps for all sets + dungeon lanterns! 
 - 2x2 armchairs for all sets! They're not currently sit-on-able, but they DO count as seating for NPC housing requirements!
-- New furniture set -- Tattered! Made with wood & ecto mist
+- New furniture sets:
+	- Tattered! Made with wood & ecto mist
+	- Festive! Made at a special crafting station which also can be used to craft nearly 100 festive decorations because I am apparently a maniac!
 
-More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. (For example, I cannot make the cobwebs act like a normal block and I have no idea how to fix this. Also: opacity.)
-Suggestions and tips are welcome!
-
-Note: This likely won't update again until late October or possibly early November, as I have a procedure coming up and probably won't be able to work on this during recovery. Thanks for your patience.
+More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. 
+Suggestions, requests and tips are welcome! I also just created a [url=https://discord.gg/DYAqssHdMz]Discord[/url] channel, where I will post previews/WIPs and ask for opinions on what's coming next. And there's a LOT coming next :P

@@ -16,15 +16,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
     {
         public override void SetStaticDefaults()
         {
+            Main.tileFrameImportant[Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.HasOutlines[base.Type] = true;
+
             Main.tileSolidTop[base.Type] = true;
-            Main.tileFrameImportant[base.Type] = true;
-            Main.tileNoAttach[base.Type] = true;
             Main.tileTable[base.Type] = true;
             Main.tileContainer[base.Type] = true;
-            Main.tileLavaDeath[base.Type] = true;
-            TileID.Sets.HasOutlines[base.Type] = true;
-            TileID.Sets.DisableSmartCursor[base.Type] = true;
             TileID.Sets.BasicDresser[base.Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
@@ -32,13 +41,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, processedCoordinates: false);
             TileObjectData.newTile.AnchorInvalidTiles = new int[1] { 127 };
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.LavaDeath = false;
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
             TileObjectData.addTile(base.Type);
-            base.AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-            ModTranslation name = base.CreateMapEntryName();
-            name.SetDefault("Tattered Dresser");
-            base.AddMapEntry(new Color(100, 100, 100), name);
+
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Dresser"));
+
             base.ContainerName.SetDefault("Tattered Dresser");
             base.AdjTiles = new int[1] { 88 };
             base.DresserDrop = ModContent.ItemType<TatteredDresserItem>();
@@ -51,12 +58,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override bool RightClick(int i, int j)
         {
-            //IL_00b0: Unknown result type (might be due to invalid IL or missing references)
-            //IL_00e9: Unknown result type (might be due to invalid IL or missing references)
-            //IL_01a2: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0246: Unknown result type (might be due to invalid IL or missing references)
-            //IL_0292: Unknown result type (might be due to invalid IL or missing references)
-            //IL_02ce: Unknown result type (might be due to invalid IL or missing references)
             Player player = Main.LocalPlayer;
             if (Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameY == 0)
             {
@@ -229,11 +230,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             }
         }
 
-        public override void NumDust(int i, int j, bool fail, ref int num)
-        {
-            num = (fail ? 1 : 3);
-        }
-
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, base.DresserDrop);
@@ -241,30 +237,30 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
         }
 
         private readonly int animationFrameWidth = 54;
+
         public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
         {
-            // Tweak the frame drawn by x position so tiles next to each other are off-sync and look much more interesting
             int uniqueAnimationFrame = Main.tileFrame[Type] + i;
             if (i % 2 == 0)
-                uniqueAnimationFrame += 1;
+                uniqueAnimationFrame += 3;
             if (i % 3 == 0)
-                uniqueAnimationFrame += 1;
-            if (i % 4 == 0)
-                uniqueAnimationFrame += 1;
-            uniqueAnimationFrame %= 2;
+                uniqueAnimationFrame += 3;
+            uniqueAnimationFrame %= 14;
 
             // frameYOffset = modTile.animationFrameHeight * Main.tileFrame [type] will already be set before this hook is called
             // But we have a horizontal animated texture, so we use frameXOffset instead of frameYOffset
-            frameYOffset = uniqueAnimationFrame * AnimationFrameHeight;
+            frameXOffset = uniqueAnimationFrame * animationFrameWidth;
         }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
+
             // Spend 9 ticks on each of 6 frames, looping
             frameCounter++;
-            if (frameCounter >= 3)
+            if (frameCounter >= 15)
             {
                 frameCounter = 0;
-                if (++frame >= 2)
+                if (++frame >= 14)
                 {
                     frame = 0;
                 }

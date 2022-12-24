@@ -36,7 +36,7 @@ internal class TatteredBedItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 15)
+			.AddRecipeGroup(RecipeGroupID.Wood, 15)
 			.AddIngredient(ItemID.Silk, 5)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)

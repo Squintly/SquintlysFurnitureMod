@@ -35,7 +35,7 @@ internal class TatteredPianoItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 15)
+			.AddRecipeGroup(RecipeGroupID.Wood, 15)
 			.AddIngredient(ItemID.Book)
 			.AddIngredient(ItemID.Bone, 4)
 			.AddTile(TileID.WorkBenches)

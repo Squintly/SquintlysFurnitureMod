@@ -35,7 +35,7 @@ internal class TatteredPlatformItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(2)
-			.AddIngredient(ItemID.Wood, 1)
+			.AddRecipeGroup(RecipeGroupID.Wood, 1)
             .AddCondition(Recipe.Condition.InGraveyardBiome)
             .Register();
     }

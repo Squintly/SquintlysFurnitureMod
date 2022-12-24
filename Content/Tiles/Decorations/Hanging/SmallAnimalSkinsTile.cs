@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Hanging;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -12,26 +13,29 @@ public class SmallAnimalSkinsTile : ModTile
 {
 	public override void SetStaticDefaults()
 	{
-		Main.tileSolid[base.Type] = false;
-		Main.tileNoFail[base.Type] = true;
-		Main.tileNoAttach[base.Type] = true;
-		Main.tileLavaDeath[base.Type] = true;
-		Main.tileWaterDeath[base.Type] = true;
-		Main.tileFrameImportant[base.Type] = true;
-		TileID.Sets.FramesOnKillWall[base.Type] = true;
-		TileID.Sets.DisableSmartCursor[base.Type] = true;
-		Main.tileNoSunLight[base.Type] = false;
-		Main.tileBlockLight[base.Type] = false;
-		TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
+        Main.tileFrameImportant[base.Type] = true;
+        TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileLavaDeath[base.Type] = true;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        Main.tileWaterDeath[base.Type] = true;
+        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+        Main.tileNoAttach[base.Type] = true;
+        Main.tileNoFail[base.Type] = true;
+        TileID.Sets.FramesOnKillWall[base.Type] = false;
+
+        TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 		TileObjectData.newTile.DrawYOffset = -1;
 		TileObjectData.newTile.Width = 2;
 		TileObjectData.newTile.Height = 2;
 		TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 16 };
+
 		TileObjectData.newTile.StyleHorizontal = true;
+
 		TileObjectData.addTile(base.Type);
-		base.AddMapEntry(new Color(205, 133, 63), base.CreateMapEntryName());
-		base.HitSound = SoundID.Dig;
-		base.MineResist = 0.25f;
+
+		base.AddMapEntry(new Color(120, 111, 98), base.CreateMapEntryName("Small Animal Skin"));
 	}
 
 	public override void KillMultiTile(int i, int j, int frameX, int frameY)
@@ -51,7 +55,7 @@ public class SmallAnimalSkinsTile : ModTile
 		}
 		if (item > 0)
 		{
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);
+			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);
 		}
 	}
 }

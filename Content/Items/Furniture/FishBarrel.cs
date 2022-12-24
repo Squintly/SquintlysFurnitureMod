@@ -38,7 +38,7 @@ internal class FishBarrel : ModItem
 	public override void AddRecipes()
 	{
 		base.CreateRecipe()
-			.AddIngredient(ItemID.Wood, 9)
+			.AddRecipeGroup(RecipeGroupID.Wood, 9)
 			.AddIngredient(RecipeGroupID.IronBar)
 			.AddTile(TileID.Sawmill)
 			.Register();

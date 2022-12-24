@@ -35,7 +35,7 @@ internal class TatteredChandelierItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 4)
+			.AddRecipeGroup(RecipeGroupID.Wood, 4)
 			.AddIngredient(ItemID.Torch, 4)
 			.AddIngredient(ItemID.Chain)
 			.AddTile(TileID.WorkBenches)

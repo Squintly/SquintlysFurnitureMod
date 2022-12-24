@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -11,15 +12,21 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
     {
         public override void SetStaticDefaults()
         {
-            // Properties
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
             Main.tileFrameImportant[Type] = true;
-            Main.tileSolidTop[Type] = true;
-            Main.tileTable[base.Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[base.Type] = false;
+
+            Main.tileLavaDeath[Type] = true;
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            Main.tileWaterDeath[Type] = true;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-            // Placement
+            Main.tileSolidTop[Type] = true;
+            Main.tileTable[base.Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.Height = 2;
@@ -30,14 +37,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             // Etc
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Tattered Piano");
-            AddMapEntry(new Color(200, 200, 200), name);
-        }
-
-        public override void NumDust(int x, int y, bool fail, ref int num)
-        {
-            num = fail ? 1 : 3;
+            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Piano"));
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

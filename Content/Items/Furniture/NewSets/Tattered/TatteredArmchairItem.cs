@@ -37,7 +37,7 @@ internal class TatteredArmchairItem : ModItem
     public override void AddRecipes()
     {
 		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 4)
+			.AddRecipeGroup(RecipeGroupID.Wood, 4)
 			.AddIngredient(ItemID.Silk)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)

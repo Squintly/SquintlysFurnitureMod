@@ -16,8 +16,8 @@ internal class DecorativeWebRope : ModItem
 
 	public override void SetDefaults()
 	{
-		base.Item.width = 15;
-		base.Item.height = 11;
+		base.Item.width = 30;
+		base.Item.height = 22;
 
 		base.Item.value = Item.buyPrice(copper:20);
 		base.Item.rare = ItemRarityID.White;

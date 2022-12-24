@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -12,16 +13,17 @@ public class BlueSilkFlowersTile : ModTile
 {
 	public override void SetStaticDefaults()
 	{
-		Main.tileSolid[base.Type] = false;
-		Main.tileNoFail[base.Type] = true;
-		Main.tileNoAttach[base.Type] = true;
-		Main.tileLavaDeath[base.Type] = true;
-		Main.tileWaterDeath[base.Type] = true;
-		Main.tileTable[base.Type] = true;
-		Main.tileFrameImportant[base.Type] = true;
-		TileID.Sets.DisableSmartCursor[base.Type] = true;
-		Main.tileNoSunLight[base.Type] = false;
-		Main.tileBlockLight[base.Type] = false;
+        Main.tileFrameImportant[base.Type] = true;
+        TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileLavaDeath[base.Type] = false;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        Main.tileWaterDeath[base.Type] = false;
+        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+        Main.tileNoFail[base.Type] = false;
+        Main.tileNoAttach[base.Type] = true;
+
 		TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
 		TileObjectData.newTile.Width = 1;
 		TileObjectData.newTile.Height = 1;
@@ -30,14 +32,18 @@ public class BlueSilkFlowersTile : ModTile
 		TileObjectData.newTile.DrawYOffset = -16;
 		TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
 		TileObjectData.newTile.CoordinateWidth = 16;
-		TileObjectData.newTile.RandomStyleRange = 6;
-		TileObjectData.newTile.CoordinatePadding = 2;
+        TileObjectData.newTile.CoordinatePadding = 2;
+
+        TileObjectData.newTile.RandomStyleRange = 6;
 		TileObjectData.newTile.StyleHorizontal = true;
+
 		TileID.Sets.SwaysInWindBasic[base.Type] = true;
+
 		TileObjectData.addTile(base.Type);
+
 		base.ItemDrop = ModContent.ItemType<BlueSilkFlowers>();
-		base.AddMapEntry(new Color(205, 133, 63), base.CreateMapEntryName());
+
+		base.AddMapEntry(new Color(74, 122, 51), base.CreateMapEntryName("Flowers"));
 		base.HitSound = SoundID.Grass;
-		base.MineResist = 0.25f;
 	}
 }

@@ -33,39 +33,24 @@ internal class HieroBlock1Item : ModItem
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<Tiles.Blocks.HieroBlock1>();
+		base.Item.createTile = ModContent.TileType<HieroBlock1>();
 	}
 
 	public override void AddRecipes()
 	{
-		base.CreateRecipe()
-			.AddIngredient(ModContent.ItemType<FadedHieroBlock>())
-			.AddTile(TileID.WorkBenches)
-			.Register();
+        base.CreateRecipe()
+           .AddIngredient(ModContent.ItemType<FadedHieroWall1Item>())
+           .AddTile(TileID.WorkBenches)
+           .Register();
 
         base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock2Item>())
+            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
             .AddTile(TileID.WorkBenches)
             .Register();
 
         base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock3Item>())
+            .AddIngredient(ModContent.ItemType<HieroWall1Item>(), 4)
             .AddTile(TileID.WorkBenches)
             .Register();
-
-        base.CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock4Item>())
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        base.CreateRecipe()
-			.AddIngredient(ItemID.SandstoneBrick)
-			.AddTile(TileID.WorkBenches)
-			.Register();
-
-		base.CreateRecipe()
-			.AddIngredient(ModContent.ItemType<HieroWallItem>(), 4)
-			.AddTile(TileID.WorkBenches)
-			.Register();
-	}
+    }
 }

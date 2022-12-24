@@ -34,8 +34,8 @@ internal class TatteredDresserItem : ModItem
 	}
     public override void AddRecipes()
     {
-		CreateRecipe(1)
-			.AddIngredient(ItemID.Wood, 16)
+		CreateRecipe(1)	
+			.AddRecipeGroup(RecipeGroupID.Wood, 16)
 			.AddTile(TileID.WorkBenches)
             .AddCondition(Recipe.Condition.InGraveyardBiome)
             .Register();
