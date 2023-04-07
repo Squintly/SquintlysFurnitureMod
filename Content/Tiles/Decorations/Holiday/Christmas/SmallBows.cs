@@ -45,19 +45,28 @@ public class SmallBows : ModTile
         int item = 0;
 
         if (frame == 0)
-            item = ModContent.ItemType<SmallRedBow>();
+            item = ModContent.ItemType<SmallWhiteBow>();
 
         else if (frame == 1)
-            item = ModContent.ItemType<SmallGreenBow>();
+            item = ModContent.ItemType<SmallBlackBow>();
 
         else if (frame == 2)
             item = ModContent.ItemType<SmallBlueBow>();
 
         else if (frame == 3)
-            item = ModContent.ItemType<SmallWhiteBow>();
+            item = ModContent.ItemType<SmallGoldBow>();
 
         else if (frame == 4)
-            item = ModContent.ItemType<SmallGoldBow>();
+            item = ModContent.ItemType<SmallGreenBow>();
+
+        else if (frame == 5)
+            item = ModContent.ItemType<SmallRedBow>();
+
+        else if (frame == 6)
+            item = ModContent.ItemType<SmallPurpleBow>();
+
+        else if (frame == 7)
+            item = ModContent.ItemType<SmallOrangeBow>();
 
         if (item > 0)
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);

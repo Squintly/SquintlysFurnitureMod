@@ -32,8 +32,8 @@ internal class GoldBow : ModItem
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<HangingCrimbo2x2>();
-		base.Item.placeStyle = 8;
+		base.Item.createTile = ModContent.TileType<LargeBows>();
+		base.Item.placeStyle = 3;
 	}
 
 	public override void AddRecipes()

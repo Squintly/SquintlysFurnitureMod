@@ -17,6 +17,7 @@ CURRENT CONTENT:
 - New furniture sets:
 	- Tattered! Made with wood & ecto mist
 	- Festive! Made at a special crafting station which also can be used to craft nearly 100 festive decorations because I am apparently a maniac!
+	- Heartfelt! No crafting station, but some fun new blocks, which can *also* be used to craft a bunch of themed decorations, because again, maniac
 
 More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. 
 Suggestions, requests and tips are welcome! I also just created a [url=https://discord.gg/DYAqssHdMz]Discord[/url] channel, where I will post previews/WIPs and ask for opinions on what's coming next. And there's a LOT coming next :P

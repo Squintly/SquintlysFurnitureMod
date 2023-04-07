@@ -32,7 +32,7 @@ internal class FestiveBathtubItem : ModItem
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<FestiveBathtub>();
+		base.Item.createTile = ModContent.TileType<ToyTrain>();
 
 	}
     public override void AddRecipes()

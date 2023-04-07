@@ -92,4 +92,12 @@ public class Banners : ModTile
             Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, item);
         }
     }
+
+    public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
+    {
+        if (i % 2 == 1)
+        {
+            spriteEffects = SpriteEffects.FlipHorizontally;
+        }
+    }
 }

@@ -32,8 +32,8 @@ internal class RedBow : ModItem
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<HangingCrimbo2x2>();
-		base.Item.placeStyle = 4;
+		base.Item.createTile = ModContent.TileType<LargeBows>();
+		base.Item.placeStyle = 5;
 	}
 
 	public override void AddRecipes()

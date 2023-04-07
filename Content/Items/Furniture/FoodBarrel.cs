@@ -39,7 +39,7 @@ internal class FoodBarrel : ModItem
 	{
         base.CreateRecipe()
             .AddRecipeGroup(RecipeGroupID.Wood, 9)
-            .AddIngredient(RecipeGroupID.IronBar)
+            .AddRecipeGroup(RecipeGroupID.IronBar)
             .AddTile(TileID.Sawmill)
             .Register();
     }

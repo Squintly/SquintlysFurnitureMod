@@ -40,7 +40,7 @@ internal class Skates : ModItem
 	{
 		base.CreateRecipe()
 			.AddIngredient(ItemID.Silk, 4)
-			.AddIngredient(RecipeGroupID.IronBar)
+			.AddRecipeGroup(RecipeGroupID.IronBar)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
 	}

@@ -33,7 +33,7 @@ internal class SmallGoldBow : ModItem
 		base.Item.consumable = true;
 
 		base.Item.createTile = ModContent.TileType<SmallBows>();
-		base.Item.placeStyle = 4;
+		base.Item.placeStyle = 3;
 	}
 
 	public override void AddRecipes()

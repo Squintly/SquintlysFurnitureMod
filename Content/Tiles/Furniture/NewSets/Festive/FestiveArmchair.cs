@@ -5,6 +5,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
 {
@@ -47,7 +48,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 24, ModContent.ItemType<Items.Furniture.NewSets.Festive.FestiveArmchairItem>());
+            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 24, ModContent.ItemType<FestiveArmchairItem>());
         }
     }
 }

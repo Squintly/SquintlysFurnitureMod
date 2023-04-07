@@ -32,8 +32,8 @@ internal class BlueBow : ModItem
 		base.Item.autoReuse = true;
 		base.Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<HangingCrimbo2x2>();
-		base.Item.placeStyle = 6;
+		base.Item.createTile = ModContent.TileType<LargeBows>();
+		base.Item.placeStyle = 2;
 	}
 
 	public override void AddRecipes()

@@ -1,0 +1,58 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
+using Terraria;
+using Terraria.ID;
+using Terraria.DataStructures;
+using Terraria.Enums;
+using Terraria.ModLoader;
+using Terraria.ObjectData;
+
+namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
+
+public class Bears : ModTile
+{
+	public override void SetStaticDefaults()
+	{
+		Main.tileFrameImportant[base.Type] = true;
+        TileID.Sets.DisableSmartCursor[base.Type] = true;
+
+        Main.tileLavaDeath[base.Type] = false;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
+		Main.tileNoFail[base.Type] = false;
+        Main.tileNoAttach[base.Type] = true;
+
+		TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+		TileObjectData.newTile.Height = 2;
+		TileObjectData.newTile.Width = 2;
+        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+        TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidWithTop | AnchorType.SolidTile | AnchorType.Table, TileObjectData.newTile.Width, 0);
+
+        TileObjectData.newTile.StyleHorizontal = true;
+
+        TileObjectData.addTile(base.Type);
+
+        base.AddMapEntry(new Color(219, 0, 44), base.CreateMapEntryName("Heartfelt Decoration"));
+    }
+
+    public override void KillMultiTile(int x, int y, int frameX, int frameY)
+    {
+        int item = 0;
+        switch (frameX / 36)
+        {
+            case 0:
+                item = ModContent.ItemType<BigWhiteBear>();
+                break;
+            case 1:
+                item = ModContent.ItemType<BigHeartBear>();
+                break;
+        }
+        if (item > 0)
+        {
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, item);
+        }
+    }
+}
