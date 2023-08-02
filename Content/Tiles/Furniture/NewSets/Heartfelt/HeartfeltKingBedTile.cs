@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -8,30 +9,25 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 {
     public class HeartfeltKingBedTile : ModTile
     {
-      
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
-                
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair); 
-            AdjTiles = new int[] { TileID.Beds };
 
-            AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Bed"));
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            AdjTiles = new int[] { TileID.Beds };
 
             TileID.Sets.CanBeSleptIn[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
@@ -44,7 +40,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
             TileObjectData.addAlternate(1);
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
+
+            AddMapEntry(new Color(100, 100, 100), Language.GetText("MapObject.KingBed"));
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -60,12 +61,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
-            info.VisualOffset.Y += 4f; 
-        }
-
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<HeartfeltKingBed>());
+            info.VisualOffset.Y += 4f;
         }
 
         public override bool RightClick(int i, int j)
@@ -110,7 +106,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             if (!Player.IsHoveringOverABottomSideOfABed(i, j))
             {
                 if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                { 
+                {
                     player.noThrow = 2;
                     player.cursorItemIconEnabled = true;
                     player.cursorItemIconID = ItemID.SleepingIcon;

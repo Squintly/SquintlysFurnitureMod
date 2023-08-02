@@ -1,17 +1,17 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks;
-using SquintlysFurnitureMod.Content.Items.WallItems;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.WallTiles;
 
-public class FadedHieroWall1 : ModWall
+public class FrostedGlass : ModWall
 {
-	public override void SetStaticDefaults()
-	{
-		Main.wallHouse[base.Type] = true;
-		base.ItemDrop = ModContent.ItemType<FadedHieroWall1Item>();
-		base.AddMapEntry(new Color(230, 215, 177));
-	}
+    public override void SetStaticDefaults()
+    {
+        Main.wallHouse[Type] = true;
+        Main.wallLight[Type] = true;
+        WallID.Sets.Transparent[Type] |= true;
+        AddMapEntry(new Color(187, 248, 252));
+    }
 }

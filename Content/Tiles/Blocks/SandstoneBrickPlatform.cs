@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks;
 using Terraria;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -9,44 +9,41 @@ namespace SquintlysFurnitureMod.Content.Tiles.Blocks;
 
 public class SandstoneBrickPlatform : ModTile
 {
-	public override void SetStaticDefaults()
-	{
-		Main.tileFrameImportant[base.Type] = true;
+    public override void SetStaticDefaults()
+    {
+        Main.tileFrameImportant[Type] = true;
 
-        Main.tileSolidTop[base.Type] = true;
-		Main.tileSolid[base.Type] = true;
-		Main.tileNoAttach[base.Type] = true;
+        Main.tileNoAttach[Type] = true;
+        Main.tileNoFail[Type] = false;
 
-		Main.tileTable[base.Type] = true;
+        Main.tileLighted[Type] = true;
 
-		Main.tileLavaDeath[base.Type] = false;
+        TileID.Sets.DisableSmartCursor[Type] = true;
 
-		TileID.Sets.Platforms[base.Type] = true;
-		TileID.Sets.DisableSmartCursor[base.Type] = true;
+        AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+        AddMapEntry(new Color(200, 200, 200));
 
-		base.AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+        Main.tileSolidTop[Type] = true;
+        Main.tileSolid[Type] = true;
+        Main.tileTable[Type] = true;
+        TileID.Sets.Platforms[Type] = true;
 
-        base.AddMapEntry(new Color(230, 215, 177), base.CreateMapEntryName("Sandstone Platform"));
+        AdjTiles = new int[] { TileID.Platforms };
 
-        base.ItemDrop = ModContent.ItemType<SandstoneBrickPlatformItem>();
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+        TileObjectData.newTile.CoordinateWidth = 16;
+        TileObjectData.newTile.CoordinatePadding = 2;
 
-		base.AdjTiles = new int[1] { 19 };
+        TileObjectData.newTile.StyleHorizontal = true;
+        TileObjectData.newTile.StyleMultiplier = 27;
+        TileObjectData.newTile.StyleWrapLimit = 27;
 
-		TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-		TileObjectData.newTile.CoordinateWidth = 16;
-		TileObjectData.newTile.CoordinatePadding = 2;
+        TileObjectData.newTile.UsesCustomCanPlace = false;
+        TileObjectData.addTile(Type);
+    }
 
-		TileObjectData.newTile.StyleHorizontal = true;
-		TileObjectData.newTile.StyleMultiplier = 27;
-		TileObjectData.newTile.StyleWrapLimit = 27;
-
-		TileObjectData.newTile.UsesCustomCanPlace = false;
-
-		TileObjectData.addTile(base.Type);
-	}
-
-	public override void PostSetDefaults()
-	{
-		Main.tileNoSunLight[base.Type] = false;
-	}
+    public override void PostSetDefaults()
+    {
+        Main.tileNoSunLight[Type] = false;
+    }
 }

@@ -1,10 +1,7 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using Terraria;
-using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,14 +11,13 @@ public class Valentines1x1 : ModTile
 {
     public override void SetStaticDefaults()
     {
-        Main.tileFrameImportant[base.Type] = true;
-        TileID.Sets.DisableSmartCursor[base.Type] = true;
+        Main.tileFrameImportant[Type] = true;
+        TileID.Sets.DisableSmartCursor[Type] = true;
 
-        Main.tileLavaDeath[base.Type] = false;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        Main.tileLavaDeath[Type] = false;
 
-        Main.tileNoFail[base.Type] = false;
-        Main.tileNoAttach[base.Type] = true;
+        Main.tileNoFail[Type] = false;
+        Main.tileNoAttach[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
@@ -30,36 +26,10 @@ public class Valentines1x1 : ModTile
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidWithTop | AnchorType.SolidTile | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.StyleHorizontal = true;
+        TileObjectData.newTile.StyleWrapLimit = 111;
 
-        TileObjectData.addTile(base.Type);
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-        base.AddMapEntry(new Color(219, 0, 44), base.CreateMapEntryName("Heartfelt Decoration"));
-    }
-
-    public override bool Drop(int i, int j)
-    {
-        Tile t = Main.tile[i, j];
-        int frame = t.TileFrameX / 18;
-        int item = 0;
-
-        if (frame == 0)
-            item = ModContent.ItemType<ChocolateBowl>();
-
-        else if (frame == 1)
-            item = ModContent.ItemType<CandyBowl>();
-
-        else if (frame == 2)
-            item = ModContent.ItemType<EmptyBowl>();
-
-        else if (frame == 3)
-            item = ModContent.ItemType<PunchBowl>();
-
-        else if (frame == 4)
-            item = ModContent.ItemType<HeartBear>();
-
-        if (item > 0)
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);
-
-        return base.Drop(i, j);
+        TileObjectData.addTile(Type);
     }
 }

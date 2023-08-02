@@ -1,47 +1,46 @@
-using Terraria;
-using Terraria.ID;
-using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
 using SquintlysFurnitureMod.Content.Items.Blocks;
+using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
+using Terraria;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 
 internal class HeartfeltSofa : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Heartfelt Sofa");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
-
-	public override void SetDefaults()
-	{
-        base.Item.width = 23;
-        base.Item.height = 15;
-
-        base.Item.value = Item.buyPrice(silver: 1);
-		base.Item.rare = ItemRarityID.White;
-
-		base.Item.maxStack = 999;
-
-		base.Item.useStyle = (ItemUseStyleID.Swing);
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
-
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
-
-		base.Item.createTile = ModContent.TileType<HeartfeltSofaTile>();
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
-	public override void AddRecipes()
-	{
-		CreateRecipe(1)
-			.AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 5)
-			.AddIngredient(ItemID.Silk, 2)
+
+    public override void SetDefaults()
+    {
+        Item.width = 23;
+        Item.height = 15;
+
+        Item.value = Item.buyPrice(silver: 1);
+
+        Item.useStyle = (ItemUseStyleID.Swing);
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
+
+        Item.autoReuse = true;
+        Item.consumable = true;
+
+        Item.maxStack = 9999;
+
+        Item.createTile = ModContent.TileType<HeartfeltSofaTile>();
+    }
+
+    public override void AddRecipes()
+    {
+        CreateRecipe(1)
+            .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 5)
+            .AddIngredient(ItemID.Silk, 2)
             //.AddRecipeGroup(RecipeGroupID.IronBar, 3)
             .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
-			.Register();
-	}
+            .Register();
+    }
 }

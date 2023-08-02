@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
@@ -7,47 +6,45 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive;
-public class FestivePlatform: ModTile
+
+public class FestivePlatform : ModTile
 {
-	public override void SetStaticDefaults()
-	{
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
-        Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        Main.tileWaterDeath[Type] = true;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+        Main.tileLighted[Type] = true;
 
         TileID.Sets.DisableSmartCursor[Type] = true;
-		
-		Main.tileSolidTop[base.Type] = true;
-		Main.tileSolid[base.Type] = true;
-		Main.tileTable[base.Type] = true;
-		TileID.Sets.Platforms[base.Type] = true;
 
-        AddMapEntry(new Color(12, 69, 6), base.CreateMapEntryName("Festive Platform"));
+        AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+        AddMapEntry(new Color(200, 200, 200));
 
-        base.AdjTiles = new int[1] { 19 };
-		
-		TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-		TileObjectData.newTile.CoordinateWidth = 16;
-		TileObjectData.newTile.CoordinatePadding = 2;
+        Main.tileSolidTop[Type] = true;
+        Main.tileSolid[Type] = true;
+        Main.tileTable[Type] = true;
+        TileID.Sets.Platforms[Type] = true;
 
-		TileObjectData.newTile.StyleHorizontal = true;
-		TileObjectData.newTile.StyleMultiplier = 27;
-		TileObjectData.newTile.StyleWrapLimit = 27;
+        AdjTiles = new int[] { TileID.Platforms };
 
-		TileObjectData.newTile.UsesCustomCanPlace = false;
-		TileObjectData.addTile(base.Type);
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+        TileObjectData.newTile.CoordinateWidth = 16;
+        TileObjectData.newTile.CoordinatePadding = 2;
 
-        base.ItemDrop = ModContent.ItemType<FestivePlatformItem>();
+        TileObjectData.newTile.StyleHorizontal = true;
+        TileObjectData.newTile.StyleMultiplier = 27;
+        TileObjectData.newTile.StyleWrapLimit = 27;
+
+        TileObjectData.newTile.UsesCustomCanPlace = false;
+
+        TileObjectData.addTile(Type);
     }
 
-	public override void PostSetDefaults()
-	{
-		Main.tileNoSunLight[base.Type] = false;
-	}
+    public override void PostSetDefaults()
+    {
+        Main.tileNoSunLight[Type] = false;
+    }
 }

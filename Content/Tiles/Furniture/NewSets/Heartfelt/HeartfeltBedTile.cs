@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -8,12 +9,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 {
     public class HeartfeltBedTile : ModTile
     {
+        public const int NextStyleHeight = 38;
 
         public override void SetStaticDefaults()
         {
@@ -21,30 +22,37 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileID.Sets.HasOutlines[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             AdjTiles = new int[] { TileID.Beds };
 
-            AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Bed"));
-
             TileID.Sets.CanBeSleptIn[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); 
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileObjectData.newTile.Height = 2;
+            TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
             TileObjectData.addAlternate(1);
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
+
+            AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -60,27 +68,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
-            info.VisualOffset.Y += 4f; 
-        }
-
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<HeartfeltBed>());
+            info.VisualOffset.Y += 0f;
         }
 
         public override bool RightClick(int i, int j)
         {
             Player player = Main.LocalPlayer;
             Tile tile = Main.tile[i, j];
-            int spawnX = i - tile.TileFrameX / 18 + ((tile.TileFrameX >= 72) ? 5 : 2);
+            int spawnX = (i - (tile.TileFrameX / 18)) + (tile.TileFrameX >= 72 ? 5 : 2);
             int spawnY = j + 2;
-            if (tile.TileFrameY % 38 != 0)
+
+            if (tile.TileFrameY % NextStyleHeight != 0)
             {
                 spawnY--;
             }
+
             if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            {
-                if (player.IsWithinSnappngRangeToTile(i, j, 96))
+            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
+                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
                 {
                     player.GamepadEnableGrappleCooldown();
                     player.sleeping.StartSleeping(player, i, j);
@@ -89,6 +94,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             else
             {
                 player.FindSpawn();
+
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
                 {
                     player.RemoveSpawn();
@@ -100,6 +106,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
             }
+
             return true;
         }
 
@@ -110,7 +117,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             if (!Player.IsHoveringOverABottomSideOfABed(i, j))
             {
                 if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                { 
+                { // Match condition in RightClick. Interaction should only show if clicking it does something
                     player.noThrow = 2;
                     player.cursorItemIconEnabled = true;
                     player.cursorItemIconID = ItemID.SleepingIcon;
@@ -120,7 +127,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             {
                 player.noThrow = 2;
                 player.cursorItemIconEnabled = true;
-                player.cursorItemIconID = ModContent.ItemType<HeartfeltBed>();
+                player.cursorItemIconID = ModContent.ItemType<HeartfeltBedItem>();
             }
         }
     }

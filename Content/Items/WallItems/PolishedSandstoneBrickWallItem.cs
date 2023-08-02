@@ -1,43 +1,41 @@
 using SquintlysFurnitureMod.Content.Items.Blocks;
 using SquintlysFurnitureMod.Content.WallTiles;
 using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
 using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.WallItems;
 
 public class PolishedSandstoneBrickWallItem : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Polished Sandstone Brick Wall");
-		base.Tooltip.SetDefault("Okay, maybe it's a *little* shiny");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 400;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 400;
+    }
 
-	public override void SetDefaults()
-	{
-		base.Item.width = 16;
-		base.Item.height = 16;
+    public override void SetDefaults()
+    {
+        Item.width = 16;
+        Item.height = 16;
 
-		base.Item.maxStack = 999;
+        Item.useTurn = true;
+        Item.autoReuse = true;
+        Item.useAnimation = 15;
+        Item.useTime = 7;
+        Item.useStyle = ItemUseStyleID.Swing;
 
-		base.Item.useTurn = true;
-		base.Item.autoReuse = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 7;
-        base.Item.useStyle = ItemUseStyleID.Swing;
+        Item.consumable = true;
 
-        base.Item.consumable = true;
+        Item.maxStack = 9999;
 
-		base.Item.createWall = ModContent.WallType<PolishedSandstoneBrickWall>();
-	}
+        Item.createWall = ModContent.WallType<PolishedSandstoneBrickWall>();
+    }
 
-	public override void AddRecipes()
-	{
-		base.CreateRecipe(4)
-			.AddIngredient<PolishedSandstoneBrickItem>()
-			.AddTile(18)
-			.Register();
-	}
+    public override void AddRecipes()
+    {
+        CreateRecipe(4)
+            .AddIngredient<PolishedSandstoneBrickItem>()
+            .AddTile(18)
+            .Register();
+    }
 }

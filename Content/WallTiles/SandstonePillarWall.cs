@@ -7,10 +7,9 @@ namespace SquintlysFurnitureMod.Content.WallTiles;
 
 public class SandstonePillarWall : ModWall
 {
-	public override void SetStaticDefaults()
-	{
-		Main.wallHouse[base.Type] = true;
-		base.ItemDrop = ModContent.ItemType<SandstonePillarWallItem>();
-		base.AddMapEntry(new Color(222, 184, 135));
-	}
+    public override void SetStaticDefaults()
+    {
+        Main.wallHouse[Type] = true;
+        AddMapEntry(new Color(222, 184, 135));
+    }
 }

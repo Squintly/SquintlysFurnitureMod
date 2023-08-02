@@ -1,27 +1,25 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Blocks;
 using Terraria;
-using Terraria.ID;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.ObjectData;
 using Terraria.ModLoader;
+using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Blocks;
 
 public class FestiveColumn : ModTile
 {
-	public override void SetStaticDefaults()
-	{
-		Main.tileSolid[base.Type] = false;
-		Main.tileBrick[base.Type] = false;	
-		Main.tileNoAttach[base.Type] = false;
-		Main.tileBlockLight[base.Type] = false;
+    public override void SetStaticDefaults()
+    {
+        Main.tileSolid[Type] = false;
+        Main.tileBrick[Type] = false;
+        Main.tileNoAttach[Type] = false;
+        Main.tileBlockLight[Type] = false;
 
-        base.AddMapEntry(new Color(66, 38, 5), base.CreateMapEntryName("Festive Column"));
-		base.ItemDrop = ModContent.ItemType<FestiveColumnItem>();
+        AddMapEntry(new Color(66, 38, 5));
 
-		TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
+        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<FestiveColumnItem>());
     }
 }

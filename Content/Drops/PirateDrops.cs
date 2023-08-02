@@ -1,11 +1,9 @@
-﻿using Terraria;
-using Terraria.DataStructures;
+﻿using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
+using Terraria;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.ObjectData;
-using Terraria.GameContent.ItemDropRules;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
 
 namespace SquintlysFurnitureMod.Content.Drops
 {

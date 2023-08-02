@@ -1,45 +1,43 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Hanging;
 using Terraria;
-using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Hanging;
 
 internal class SmallTreasureMap : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Small Treasure Map");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
 
-	public override void SetDefaults()
-	{
-		base.Item.width = 16;
-		base.Item.height = 16;
-		
-		base.Item.value = Item.buyPrice(gold:1);
-		base.Item.rare = ItemRarityID.White;
-		
-		base.Item.maxStack = 999;
+    public override void SetDefaults()
+    {
+        Item.width = 16;
+        Item.height = 16;
 
-		base.Item.useStyle = ItemUseStyleID.Swing;
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.value = Item.buyPrice(gold: 1);
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.createTile = ModContent.TileType<SmallTreasureMapTile>();
-	}
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-	public override void AddRecipes()
-	{
-		base.CreateRecipe(2)
-			.AddIngredient(ItemID.TreasureMap)
-			.AddTile(TileID.WorkBenches)
-			.Register();
-	}
+        Item.maxStack = 9999;
+
+        Item.createTile = ModContent.TileType<SmallTreasureMapTile>();
+    }
+
+    public override void AddRecipes()
+    {
+        CreateRecipe(2)
+            .AddIngredient(ItemID.TreasureMap)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+    }
 }

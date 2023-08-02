@@ -1,28 +1,28 @@
 using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using Terraria;
+using Terraria.Enums;
+using Terraria.ID;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
 
 public class HeartfeltBathtubTile : ModTile
 {
     private Asset<Texture2D> flameTexture;
-    public override void SetStaticDefaults() {
+
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        
+
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLighted[Type] = true;
@@ -35,19 +35,19 @@ public class HeartfeltBathtubTile : ModTile
         AdjTiles = new int[] { TileID.Bathtubs };
         AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
-        AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Bathtub"));
-
         TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
 
         TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
         TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
         TileObjectData.addAlternate(1);
+        
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
         TileObjectData.addTile(Type);
+
+        AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Bathtub"));
     }
 
-	public override void KillMultiTile(int x, int y, int frameX, int frameY) {
-		Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<HeartfeltBathtub>());
-	}
     public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
     {
         Tile tile = Main.tile[i, j];
@@ -59,6 +59,7 @@ public class HeartfeltBathtubTile : ModTile
             b = 0.65f;
         }
     }
+
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
         SpriteEffects effects = SpriteEffects.None;

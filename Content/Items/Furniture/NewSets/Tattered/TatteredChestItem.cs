@@ -1,44 +1,45 @@
-using Terraria.ID;
+using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered;
 using Terraria;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
 
 internal class TatteredChestItem : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Tattered Chest");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
 
-	public override void SetDefaults()
-	{
-        base.Item.width = 32;
-        base.Item.height = 30;
+    public override void SetDefaults()
+    {
+        Item.width = 32;
+        Item.height = 30;
 
-        base.Item.value = Item.buyPrice(silver: 1);
-		base.Item.maxStack = 999;
+        Item.value = Item.buyPrice(silver: 1);
 
-		base.Item.useStyle = (ItemUseStyleID.Swing);
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.useStyle = (ItemUseStyleID.Swing);
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredChestTile>();
+        Item.maxStack = 9999;
 
-	}
+        Item.createTile = ModContent.TileType<TatteredChest>();
+    }
+
     public override void AddRecipes()
     {
-		CreateRecipe(1)
-			.AddRecipeGroup(RecipeGroupID.Wood, 8)
-			.AddIngredient(RecipeGroupID.IronBar, 2)
-			.AddTile(TileID.WorkBenches)
-            .AddCondition(Recipe.Condition.InGraveyardBiome)
+        CreateRecipe(1)
+            .AddRecipeGroup(RecipeGroupID.Wood, 8)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -1,9 +1,8 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -16,12 +15,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
@@ -41,17 +38,15 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
             TileObjectData.addAlternate(1);
 
-            TileObjectData.addTile(base.Type);
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
-            base.AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            TileObjectData.addTile(Type);
+
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             AdjTiles = new int[] { TileID.Chairs };
 
-            AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Sofa"));
-        }
-
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, ModContent.ItemType<HeartfeltSofa>());
+            AddMapEntry(new Color(100, 100, 100), Language.GetText("MapObject.Sofa"));
         }
     }
 }

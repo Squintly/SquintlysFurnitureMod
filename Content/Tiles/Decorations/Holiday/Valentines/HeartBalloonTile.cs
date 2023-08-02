@@ -1,7 +1,4 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -11,49 +8,28 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
 
 public class HeartBalloonTile : ModTile
 {
-	public override void SetStaticDefaults() {
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        
-        TileID.Sets.DisableSmartCursor[Type] = true;
 
-        AddMapEntry(new Color(12, 69, 6), base.CreateMapEntryName("Heart Balloons"));
+        TileID.Sets.DisableSmartCursor[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
         TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.Height = 2;
-		TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+        TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
         TileObjectData.newTile.StyleWrapLimit = 2;
         TileObjectData.newTile.StyleMultiplier = 2;
         TileObjectData.newTile.StyleHorizontal = true;
 
-        TileObjectData.addTile(Type);
-    }
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-    public override void KillMultiTile(int x, int y, int frameX, int frameY)
-    {
-        int item = 0;
-        switch (frameY / 36)
-        {
-            case 0:
-                item = ModContent.ItemType<HeartBalloon>();
-                break;
-            case 1:
-                item = ModContent.ItemType<GoldHeartBalloon>();
-                break;
-            case 2:
-                item = ModContent.ItemType<WhiteHeartBalloon>();
-                break;
-        }
-        if (item > 0)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 16, item);
-        }
+        TileObjectData.addTile(Type);
     }
 
     private readonly int animationFrameWidth = 18;
@@ -72,7 +48,6 @@ public class HeartBalloonTile : ModTile
 
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
-
         // Spend 9 ticks on each of 6 frames, looping
         frameCounter++;
         if (frameCounter >= 20)

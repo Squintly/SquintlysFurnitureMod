@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks;
 using SquintlysFurnitureMod.Content.Items.WallItems;
 using Terraria;
 using Terraria.ModLoader;
@@ -10,8 +9,7 @@ public class HieroWall3 : ModWall
 {
     public override void SetStaticDefaults()
     {
-        Main.wallHouse[base.Type] = true;
-        base.ItemDrop = ModContent.ItemType<HieroWall3Item>();
-        base.AddMapEntry(new Color(230, 215, 177));
+        Main.wallHouse[Type] = true;
+        AddMapEntry(new Color(230, 215, 177));
     }
 }

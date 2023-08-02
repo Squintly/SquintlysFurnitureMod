@@ -1,46 +1,44 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Hanging;
 using Terraria;
-using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Hanging;
 
 internal class SmallTigerSkin : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Small Tiger Skin");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
 
-	public override void SetDefaults()
-	{
-		base.Item.width = 17;
-		base.Item.height = 15;
+    public override void SetDefaults()
+    {
+        Item.width = 17;
+        Item.height = 15;
 
-		base.Item.value = Item.buyPrice(gold:1);
-		base.Item.rare = ItemRarityID.White;
+        Item.value = Item.buyPrice(gold: 1);
 
-		base.Item.maxStack = 999;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.useStyle = ItemUseStyleID.Swing;
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.maxStack = 9999;
 
-		base.Item.createTile = ModContent.TileType<SmallAnimalSkinsTile>();
-		base.Item.placeStyle = 0;
-	}
+        Item.createTile = ModContent.TileType<SmallAnimalSkinsTile>();
+        Item.placeStyle = 0;
+    }
 
-	public override void AddRecipes()
-	{
-		base.CreateRecipe(2)
-			.AddIngredient(ItemID.TigerSkin)
-			.AddTile(TileID.WorkBenches)
-			.Register();
-	}
+    public override void AddRecipes()
+    {
+        CreateRecipe(2)
+            .AddIngredient(ItemID.TigerSkin)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+    }
 }

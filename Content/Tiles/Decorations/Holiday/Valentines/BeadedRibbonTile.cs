@@ -1,27 +1,22 @@
-using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using Terraria;
-using Terraria.ID;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.ObjectData;
 using Terraria.ModLoader;
+using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
 
 public class BeadedRibbonTile : ModTile
 {
-	public override void SetStaticDefaults()
-	{
-		Main.tileSolid[base.Type] = false;
-		Main.tileBrick[base.Type] = false;	
-		Main.tileNoAttach[base.Type] = false;
-		Main.tileBlockLight[base.Type] = false;
+    public override void SetStaticDefaults()
+    {
+        Main.tileSolid[Type] = false;
+        Main.tileBrick[Type] = false;
+        Main.tileNoAttach[Type] = false;
+        Main.tileBlockLight[Type] = false;
 
-        base.AddMapEntry(new Color(219, 0, 44), base.CreateMapEntryName("Heartfelt Ribbon"));
-		base.ItemDrop = ModContent.ItemType<BeadedRibbons>();
-
-		TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
+        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<BeadedRibbons>());
     }
 }

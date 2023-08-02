@@ -1,5 +1,5 @@
-﻿using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -19,36 +19,54 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
-            TileID.Sets.HasOutlines[base.Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
 
-            Main.tileSolidTop[base.Type] = true;
-            Main.tileTable[base.Type] = true;
-            Main.tileContainer[base.Type] = true;
-            TileID.Sets.BasicDresser[base.Type] = true;
+            Main.tileSolidTop[Type] = true;
+            Main.tileTable[Type] = true;
+            Main.tileContainer[Type] = true;
+
+            TileID.Sets.BasicDresser[Type] = true;
+            TileID.Sets.AvoidedByNPCs[Type] = true;
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+            TileID.Sets.IsAContainer[Type] = true;
+
+            AdjTiles = new int[] { TileID.Dressers };
+
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.Origin = new Point16(1, 1);
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
             TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, processedCoordinates: true);
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, processedCoordinates: false);
-            TileObjectData.newTile.AnchorInvalidTiles = new int[1] { 127 };
-            TileObjectData.newTile.StyleHorizontal = true;
+
+            TileObjectData.newTile.AnchorInvalidTiles = new int[] {
+                TileID.MagicalIceBlock,
+                TileID.Boulder,
+                TileID.BouncyBoulder,
+                TileID.LifeCrystalBoulder,
+                TileID.RollingCactus
+            };
+
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
-            TileObjectData.addTile(base.Type);
+            
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
-            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Festive Dresser"));
+            TileObjectData.addTile(Type);
 
-            base.ContainerName.SetDefault("Festive Dresser");
-            base.AdjTiles = new int[1] { 88 };
-            base.DresserDrop = ModContent.ItemType<FestiveDresserItem>();
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Dresser"));
+        }
+
+        public override LocalizedText DefaultContainerName(int frameX, int frameY)
+        {
+            return CreateMapEntryName();
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -56,46 +74,50 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             return true;
         }
 
+        public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
+        {
+            width = 3;
+            height = 1;
+            extraY = 0;
+        }
+
         public override bool RightClick(int i, int j)
         {
             Player player = Main.LocalPlayer;
-            if (Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameY == 0)
+            int left = Main.tile[i, j].TileFrameX / 18;
+            left %= 3;
+            left = i - left;
+            int top = j - Main.tile[i, j].TileFrameY / 18;
+            if (Main.tile[i, j].TileFrameY == 0)
             {
-                Main.CancelClothesWindow(quiet: true);
+                Main.CancelClothesWindow(true);
                 Main.mouseRightRelease = false;
-                int left = Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameX / 18;
-                left %= 3;
-                left = Player.tileTargetX - left;
-                int top = Player.tileTargetY - Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameY / 18;
-                if (player.sign > -1)
-                {
-                    SoundEngine.PlaySound(in SoundID.MenuClose);
-                    player.sign = -1;
-                    Main.editSign = false;
-                    Main.npcChatText = string.Empty;
-                }
+                player.CloseSign();
+                player.SetTalkNPC(-1);
+                Main.npcChatCornerItem = 0;
+                Main.npcChatText = "";
                 if (Main.editChest)
                 {
-                    SoundEngine.PlaySound(in SoundID.MenuTick);
+                    SoundEngine.PlaySound(SoundID.MenuTick);
                     Main.editChest = false;
                     Main.npcChatText = string.Empty;
                 }
                 if (player.editedChestName)
                 {
-                    NetMessage.SendData(33, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
+                    NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
                     player.editedChestName = false;
                 }
-                if (Main.netMode == 1)
+                if (Main.netMode == NetmodeID.MultiplayerClient)
                 {
                     if (left == player.chestX && top == player.chestY && player.chest != -1)
                     {
                         player.chest = -1;
                         Recipe.FindRecipes();
-                        SoundEngine.PlaySound(in SoundID.MenuClose);
+                        SoundEngine.PlaySound(SoundID.MenuClose);
                     }
                     else
                     {
-                        NetMessage.SendData(31, -1, -1, null, left, top);
+                        NetMessage.SendData(MessageID.RequestChestOpen, -1, -1, null, left, top);
                         Main.stackSplit = 600;
                     }
                 }
@@ -103,33 +125,25 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
                 {
                     player.piggyBankProjTracker.Clear();
                     player.voidLensChest.Clear();
-                    int num213 = Chest.FindChest(left, top);
-                    if (num213 != -1)
+                    int chestIndex = Chest.FindChest(left, top);
+                    if (chestIndex != -1)
                     {
                         Main.stackSplit = 600;
-                        if (num213 == player.chest)
+                        if (chestIndex == player.chest)
                         {
                             player.chest = -1;
                             Recipe.FindRecipes();
-                            SoundEngine.PlaySound(in SoundID.MenuClose);
+                            SoundEngine.PlaySound(SoundID.MenuClose);
                         }
-                        else if (num213 != player.chest && player.chest == -1)
+                        else if (chestIndex != player.chest && player.chest == -1)
                         {
-                            player.chest = num213;
-                            Main.playerInventory = true;
-                            Main.recBigList = false;
-                            SoundEngine.PlaySound(in SoundID.MenuOpen);
-                            player.chestX = left;
-                            player.chestY = top;
+                            player.OpenChest(left, top, chestIndex);
+                            SoundEngine.PlaySound(SoundID.MenuOpen);
                         }
                         else
                         {
-                            player.chest = num213;
-                            Main.playerInventory = true;
-                            Main.recBigList = false;
-                            SoundEngine.PlaySound(in SoundID.MenuTick);
-                            player.chestX = left;
-                            player.chestY = top;
+                            player.OpenChest(left, top, chestIndex);
+                            SoundEngine.PlaySound(SoundID.MenuTick);
                         }
                         Recipe.FindRecipes();
                     }
@@ -140,19 +154,21 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
                 Main.playerInventory = false;
                 player.chest = -1;
                 Recipe.FindRecipes();
-                Main.interactedDresserTopLeftX = Player.tileTargetX;
-                Main.interactedDresserTopLeftY = Player.tileTargetY;
+                player.SetTalkNPC(-1);
+                Main.npcChatCornerItem = 0;
+                Main.npcChatText = "";
+                Main.interactedDresserTopLeftX = left;
+                Main.interactedDresserTopLeftY = top;
                 Main.OpenClothesWindow();
             }
             return true;
         }
 
-        public override void MouseOverFar(int i, int j)
+        public void MouseOverNearAndFarSharedLogic(Player player, int i, int j)
         {
-            Player player = Main.LocalPlayer;
-            Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
-            int left = Player.tileTargetX;
-            int top = Player.tileTargetY;
+            Tile tile = Main.tile[i, j];
+            int left = i;
+            int top = j;
             left -= tile.TileFrameX % 54 / 18;
             if (tile.TileFrameY % 36 != 0)
             {
@@ -166,15 +182,17 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             }
             else
             {
+                string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
+
                 if (Main.chest[chestIndex].name != "")
                 {
                     player.cursorItemIconText = Main.chest[chestIndex].name;
                 }
                 else
                 {
-                    player.cursorItemIconText = "Festive Dresser";
+                    player.cursorItemIconText = defaultName;
                 }
-                if (player.cursorItemIconText == "Festive Dresser")
+                if (player.cursorItemIconText == defaultName)
                 {
                     player.cursorItemIconID = ModContent.ItemType<FestiveDresserItem>();
                     player.cursorItemIconText = "";
@@ -182,6 +200,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             }
             player.noThrow = 2;
             player.cursorItemIconEnabled = true;
+        }
+
+        public override void MouseOverFar(int i, int j)
+        {
+            Player player = Main.LocalPlayer;
+            MouseOverNearAndFarSharedLogic(player, i, j);
             if (player.cursorItemIconText == "")
             {
                 player.cursorItemIconEnabled = false;
@@ -192,77 +216,46 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
         public override void MouseOver(int i, int j)
         {
             Player player = Main.LocalPlayer;
-            Tile tile = Main.tile[Player.tileTargetX, Player.tileTargetY];
-            int left = Player.tileTargetX;
-            int top = Player.tileTargetY;
-            left -= tile.TileFrameX % 54 / 18;
-            if (tile.TileFrameY % 36 != 0)
+            MouseOverNearAndFarSharedLogic(player, i, j);
+            if (Main.tile[i, j].TileFrameY > 0)
             {
-                top--;
-            }
-            int num138 = Chest.FindChest(left, top);
-            player.cursorItemIconID = -1;
-            if (num138 < 0)
-            {
-                player.cursorItemIconText = Language.GetTextValue("LegacyDresserType.0");
-            }
-            else
-            {
-                if (Main.chest[num138].name != "")
-                {
-                    player.cursorItemIconText = Main.chest[num138].name;
-                }
-                else
-                {
-                    player.cursorItemIconText = "Festive Dresser";
-                }
-                if (player.cursorItemIconText == "Festive Dresser")
-                {
-                    player.cursorItemIconID = ModContent.ItemType<FestiveDresserItem>();
-                    player.cursorItemIconText = "";
-                }
-            }
-            player.noThrow = 2;
-            player.cursorItemIconEnabled = true;
-            if (Main.tile[Player.tileTargetX, Player.tileTargetY].TileFrameY > 0)
-            {
-                player.cursorItemIconID = 269;
+                player.cursorItemIconID = ItemID.FamiliarShirt;
+                player.cursorItemIconText = "";
             }
         }
 
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 48, 32, base.DresserDrop);
             Chest.DestroyChest(i, j);
         }
 
-        //private readonly int animationFrameWidth = 54;
-        //public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
-        //{
-        //    int uniqueAnimationFrame = Main.tileFrame[Type] + i;
-        //    if (i % 2 == 0)
-        //        uniqueAnimationFrame += 1;
-        //    if (i % 3 == 0)
-        //        uniqueAnimationFrame += 1;
-        //    if (i % 4 == 0)
-        //        uniqueAnimationFrame += 1;
-        //    uniqueAnimationFrame %= 2;
+        public static string MapChestName(string name, int i, int j)
+        {
+            int left = i;
+            int top = j;
+            Tile tile = Main.tile[i, j];
+            if (tile.TileFrameX % 36 != 0)
+            {
+                left--;
+            }
 
-        //    frameYOffset = uniqueAnimationFrame * AnimationFrameHeight;
-        //}
-        //public override void AnimateTile(ref int frame, ref int frameCounter)
-        //{
-        //    // Spend 9 ticks on each of 6 frames, looping
-        //    frameCounter++;
-        //    if (frameCounter >= 3)
-        //    {
-        //        frameCounter = 0;
-        //        if (++frame >= 2)
-        //        {
-        //            frame = 0;
-        //        }
-        //    }
-        //}
+            if (tile.TileFrameY != 0)
+            {
+                top--;
+            }
+
+            int chest = Chest.FindChest(left, top);
+            if (chest < 0)
+            {
+                return Language.GetTextValue("LegacyDresserType.0");
+            }
+
+            if (Main.chest[chest].name == "")
+            {
+                return name;
+            }
+
+            return name + ": " + Main.chest[chest].name;
+        }
     }
 }
-

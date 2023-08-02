@@ -1,33 +1,33 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 {
-	public class HeartfeltSinkTile : ModTile
-	{
+    public class HeartfeltSinkTile : ModTile
+    {
         private Asset<Texture2D> flameTexture;
-        public override void SetStaticDefaults() {
+
+        public override void SetStaticDefaults()
+        {
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
-            
-			TileID.Sets.CountsAsWaterSource[Type] = true;
+
+            TileID.Sets.CountsAsWaterSource[Type] = true;
 
             Main.tileLighted[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
@@ -38,21 +38,22 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
             Main.tileSolid[Type] = false;
 
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-			TileObjectData.newTile.Height = 2;
-			TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Height = 2;
+            TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Sink"));
-
             DustType = 84;
-			AdjTiles = new int[] { Type };
-		}
+            AdjTiles = new int[] { Type };
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY) {
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<HeartfeltSink>());
-		}
+            AddMapEntry(new Color(100, 100, 100), Language.GetText("MapObject.Sink"));
+        }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
@@ -64,6 +65,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 b = 0.65f;
             }
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;

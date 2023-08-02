@@ -1,7 +1,7 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Plants;
 using Terraria;
-using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Plants;
@@ -10,34 +10,32 @@ internal class SilkWildflowers : ModItem
 {
     public override void SetStaticDefaults()
     {
-        base.DisplayName.SetDefault("Silk Wildflowers");
-        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
 
     public override void SetDefaults()
     {
-        base.Item.width = 24;
-        base.Item.height = 26;
+        Item.width = 24;
+        Item.height = 26;
 
-        base.Item.value = Item.buyPrice(silver:5);
-        base.Item.rare = ItemRarityID.White;
+        Item.value = Item.buyPrice(silver: 5);
 
-        base.Item.maxStack = 999;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-        base.Item.useStyle = ItemUseStyleID.Swing;
-        base.Item.useTurn = true;
-        base.Item.useAnimation = 15;
-        base.Item.useTime = 15;
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-        base.Item.autoReuse = true;
-        base.Item.consumable = true;
+        Item.maxStack = 9999;
 
-        base.Item.createTile = ModContent.TileType<SilkWildflowersTile>();
+        Item.createTile = ModContent.TileType<SilkWildflowersTile>();
     }
 
     public override void AddRecipes()
     {
-        base.CreateRecipe()
+        CreateRecipe()
             .AddIngredient(ItemID.FlowerPacketWild)
             .AddIngredient(ItemID.Silk)
             .AddTile(TileID.WorkBenches)

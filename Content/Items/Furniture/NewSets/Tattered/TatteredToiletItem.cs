@@ -1,44 +1,43 @@
-using Terraria.ID;
 using Terraria;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
 
 internal class TatteredToiletItem : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Tattered Toilet");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
-
-	public override void SetDefaults()
+    public override void SetStaticDefaults()
     {
-		base.Item.width = 16;
-        base.Item.height = 26;
-        
-		base.Item.value = Item.buyPrice(copper: 0);
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
 
-        base.Item.maxStack = 999;
+    public override void SetDefaults()
+    {
+        Item.width = 16;
+        Item.height = 26;
 
-		base.Item.useStyle = (ItemUseStyleID.Swing);
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.value = Item.buyPrice(copper: 0);
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.useStyle = (ItemUseStyleID.Swing);
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredToiletTile>();
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-	}
+        Item.maxStack = 9999;
+
+        Item.createTile = ModContent.TileType<Tiles.Furniture.NewSets.Tattered.TatteredToiletTile>();
+    }
+
     public override void AddRecipes()
     {
-		CreateRecipe(1)
-			.AddRecipeGroup(RecipeGroupID.Wood, 6)
-			.AddTile(TileID.WorkBenches)
-            .AddCondition(Recipe.Condition.InGraveyardBiome)
+        CreateRecipe(1)
+            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddTile(TileID.WorkBenches)
+            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

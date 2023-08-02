@@ -1,8 +1,9 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -10,35 +11,35 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive;
 
 public class FestiveBathtub : ModTile
 {
-	public override void SetStaticDefaults() {
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         AdjTiles = new int[] { TileID.Bathtubs };
         AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
-        AddMapEntry(new Color(12, 69, 6), base.CreateMapEntryName("Festive Bathtub"));
-
         TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
-		TileObjectData.newTile.Height = 3;
-		TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
+        TileObjectData.newTile.Height = 3;
+        TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
 
         TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
         TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
         TileObjectData.addAlternate(1);
-        TileObjectData.addTile(Type);
-    }
 
-	public override void KillMultiTile(int x, int y, int frameX, int frameY) {
-		Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.Furniture.NewSets.Festive.FestiveBathtubItem>());
-	}
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
+        TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<FestiveBathtubItem>());
+        AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Bathtub"));
+    }
 
     private readonly int animationFrameHeight = 54;
 
@@ -60,7 +61,6 @@ public class FestiveBathtub : ModTile
 
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
-
         // Spend 9 ticks on each of 6 frames, looping
         frameCounter++;
         if (frameCounter >= 9)

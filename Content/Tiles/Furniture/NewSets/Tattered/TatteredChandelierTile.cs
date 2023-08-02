@@ -2,15 +2,11 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using System.Diagnostics.Tracing;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
@@ -23,35 +19,34 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Width = 3;
-            TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18};
+            TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-
-            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Chandelier")); ;
 
             if (!Main.dedServ)
             {
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Tattered/TatteredChandelierTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
-        }
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<FestiveChandelierItem>());
+
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chandelier"));
         }
 
         //public override void HitWire(int i, int j)
@@ -103,7 +98,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
         //    dust.noGravity = true;
         //    dust.velocity *= 0.3f;
         //    dust.velocity.Y = dust.velocity.Y - 1.5f;
-
 
         //}
 

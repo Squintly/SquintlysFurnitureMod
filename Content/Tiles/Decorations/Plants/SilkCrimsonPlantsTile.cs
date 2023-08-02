@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,39 +10,39 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Plants;
 
 public class SilkCrimsonPlantsTile : ModTile
 {
-	public override void SetStaticDefaults()
-	{
-        Main.tileFrameImportant[base.Type] = true;
-        TileID.Sets.DisableSmartCursor[base.Type] = true;
+    public override void SetStaticDefaults()
+    {
+        Main.tileFrameImportant[Type] = true;
+        TileID.Sets.DisableSmartCursor[Type] = true;
 
-        Main.tileLavaDeath[base.Type] = false;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        Main.tileWaterDeath[base.Type] = false;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+        Main.tileLavaDeath[Type] = false;
+        Main.tileWaterDeath[Type] = false;
 
-        Main.tileNoFail[base.Type] = false;
-        Main.tileNoAttach[base.Type] = true;
+        Main.tileNoFail[Type] = false;
+        Main.tileNoAttach[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
         TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.Origin = new Point16(0, 0);
         TileObjectData.newTile.DrawXOffset = 0;
-        TileObjectData.newTile.DrawYOffset = -16;
+        TileObjectData.newTile.DrawYOffset = -14;
         TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
         TileObjectData.newTile.CoordinateWidth = 16;
         TileObjectData.newTile.CoordinatePadding = 2;
 
-        TileObjectData.newTile.RandomStyleRange = 22;
+        TileObjectData.newTile.RandomStyleRange = 6;
+        TileObjectData.newTile.StyleWrapLimit = 111;
         TileObjectData.newTile.StyleHorizontal = true;
 
-        TileID.Sets.SwaysInWindBasic[base.Type] = true;
+        TileID.Sets.SwaysInWindBasic[Type] = true;
 
-        TileObjectData.addTile(base.Type);
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
-        base.ItemDrop = ModContent.ItemType<SilkCrimsonPlants>();
+        TileObjectData.addTile(Type);
 
-        base.AddMapEntry(new Color(74, 122, 51), base.CreateMapEntryName("Flowers"));
-        base.HitSound = SoundID.Grass;
+        RegisterItemDrop(ModContent.ItemType<SilkCrimsonPlants>());
+        HitSound = SoundID.Grass;
     }
 }

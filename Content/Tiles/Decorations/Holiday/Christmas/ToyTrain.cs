@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -10,30 +10,28 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
 
 public class ToyTrain : ModTile
 {
-	public override void SetStaticDefaults() {
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         
+
         TileID.Sets.DisableSmartCursor[Type] = true;
 
-        AddMapEntry(new Color(12, 69, 6), base.CreateMapEntryName("Festive Decoration"));
-
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-		TileObjectData.newTile.Height = 2;
-		TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+        TileObjectData.newTile.Height = 2;
+        TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 
-        TileObjectData.addTile(Type);
-    }
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-	public override void KillMultiTile(int x, int y, int frameX, int frameY) {
-		Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.Decorations.Holiday.Christmas.ToyTrainItem>());
-	}
+        TileObjectData.addTile(Type);
+        RegisterItemDrop(ModContent.ItemType<ToyTrainItem>());
+    }
 
     private readonly int animationFrameWidth = 36;
 
@@ -55,7 +53,6 @@ public class ToyTrain : ModTile
 
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
-
         // Spend 9 ticks on each of 6 frames, looping
         frameCounter++;
         if (frameCounter >= 9)

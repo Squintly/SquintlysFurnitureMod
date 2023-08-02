@@ -1,47 +1,44 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Hanging;
-using Terraria;
-using Terraria.ID;
-using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
+using Terraria;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
 
 internal class SmallWhiteSock : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Small White Stocking");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
 
-	public override void SetDefaults()
-	{
-		base.Item.width = 16;
-		base.Item.height = 24;
+    public override void SetDefaults()
+    {
+        Item.width = 16;
+        Item.height = 24;
 
-		base.Item.value = Item.buyPrice(copper:1);
-		base.Item.rare = ItemRarityID.White;
+        Item.value = Item.buyPrice(copper: 1);
 
-		base.Item.maxStack = 999;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.useStyle = ItemUseStyleID.Swing;
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.maxStack = 9999;
 
-		base.Item.createTile = ModContent.TileType<Stockings>();
-		base.Item.placeStyle = 8;
-	}
+        Item.createTile = ModContent.TileType<Stockings>();
+        Item.placeStyle = 8;
+    }
 
-	public override void AddRecipes()
-	{
-		base.CreateRecipe()
-			.AddIngredient(ItemID.Silk, 2)
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+            .AddIngredient(ItemID.Silk, 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
-	}
+    }
 }

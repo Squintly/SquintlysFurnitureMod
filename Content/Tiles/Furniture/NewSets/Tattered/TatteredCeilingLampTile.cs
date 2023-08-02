@@ -8,10 +8,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
-using System.Diagnostics.Tracing;
-using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 {
@@ -24,34 +20,35 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
 
-            base.ItemDrop = ModContent.ItemType<TatteredCeilingLampItem>();
-
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-
-            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Tattered Ceiling Lamp"));
 
             // Assets
             if (!Main.dedServ)
             {
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Tattered/TatteredCeilingLampTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
+
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
         }
 
         //public override void HitWire(int i, int j)
@@ -103,8 +100,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             dust.noGravity = true;
             dust.velocity *= 0.3f;
             dust.velocity.Y = dust.velocity.Y - 1.5f;
-
-
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

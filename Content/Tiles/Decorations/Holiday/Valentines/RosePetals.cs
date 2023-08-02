@@ -1,10 +1,8 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using Terraria;
-using Terraria.ID;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,14 +12,13 @@ public class RosePetals : ModTile
 {
     public override void SetStaticDefaults()
     {
-        Main.tileFrameImportant[base.Type] = true;
-        TileID.Sets.DisableSmartCursor[base.Type] = true;
+        Main.tileFrameImportant[Type] = true;
+        TileID.Sets.DisableSmartCursor[Type] = true;
 
-        Main.tileLavaDeath[base.Type] = false;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        Main.tileLavaDeath[Type] = false;
 
-        Main.tileNoFail[base.Type] = false;
-        Main.tileNoAttach[base.Type] = true;
+        Main.tileNoFail[Type] = false;
+        Main.tileNoAttach[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
@@ -30,12 +27,13 @@ public class RosePetals : ModTile
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidWithTop | AnchorType.SolidTile | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.RandomStyleRange = 9;
+        TileObjectData.newTile.StyleWrapLimit = 111;
         TileObjectData.newTile.StyleHorizontal = true;
 
-        TileObjectData.addTile(base.Type);
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-        base.AddMapEntry(new Color(219, 0, 44), base.CreateMapEntryName("Heartfelt Decoration"));
+        TileObjectData.addTile(Type);
 
-        base.ItemDrop = ModContent.ItemType<RosePetalsItem>();
+        RegisterItemDrop(ModContent.ItemType<RosePetalsItem>());
     }
 }

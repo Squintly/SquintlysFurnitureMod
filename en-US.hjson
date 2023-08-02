@@ -1,0 +1,2643 @@
+Mods: {
+	SquintlysFurnitureMod: {
+		Items: {
+			ChocolateBlockItem: {
+				DisplayName: Chocolate Block
+				Tooltip: ""
+			}
+
+			FadedHieroBlock1Item: {
+				DisplayName: Faded Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			FadedHieroBlock2Item: {
+				DisplayName: Faded Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			FadedHieroBlock3Item: {
+				DisplayName: Faded Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			FadedHieroBlock4Item: {
+				DisplayName: Faded Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			FestiveColumnItem: {
+				DisplayName: Festive Column
+				Tooltip: ""
+			}
+
+			HeartfeltBlockItem: {
+				DisplayName: Heartfelt Block
+				Tooltip: ""
+			}
+
+			HieroBlock1Item: {
+				DisplayName: Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			HieroBlock2Item: {
+				DisplayName: Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			HieroBlock3Item: {
+				DisplayName: Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			HieroBlock4Item: {
+				DisplayName: Hieroglyphic Block
+				Tooltip: ""
+			}
+
+			LotusBlockItem: {
+				DisplayName: Lotus Block
+				Tooltip: ""
+			}
+
+			PaleSandstoneColumnItem: {
+				DisplayName: Pale Sandstone Column
+				Tooltip: ""
+			}
+
+			PolishedSandstoneBrickItem: {
+				DisplayName: Polished Sandstone Brick
+				Tooltip: ""
+			}
+
+			SandstoneBrickPlatformItem: {
+				DisplayName: Sandstone Brick Platform
+				Tooltip: ""
+			}
+
+			SandstonePillarItem: {
+				DisplayName: Sandstone Pillar
+				Tooltip: ""
+			}
+
+			DecoBox: {
+				DisplayName: Decoration Box
+				Tooltip: ""
+			}
+
+			LargeHangingBass: {
+				DisplayName: Hanging Bass
+				Tooltip: ""
+			}
+
+			LargeHangingCod: {
+				DisplayName: Hanging Cod
+				Tooltip: ""
+			}
+
+			LargeHangingFlounder: {
+				DisplayName: Hanging Flounder
+				Tooltip: ""
+			}
+
+			LargeHangingSalmon: {
+				DisplayName: Hanging Salmon
+				Tooltip: ""
+			}
+
+			LargeHangingSnapper: {
+				DisplayName: Hanging Snapper
+				Tooltip: ""
+			}
+
+			LargeHangingTrout: {
+				DisplayName: Hanging Trout
+				Tooltip: ""
+			}
+
+			LargeHangingTuna: {
+				DisplayName: Hanging Tuna
+				Tooltip: ""
+			}
+
+			SmallHangingFish: {
+				DisplayName: Small Hanging Fish
+				Tooltip: ""
+			}
+
+			TinyHangingFish: {
+				DisplayName: Tiny Hanging Fish
+				Tooltip: ""
+			}
+
+			SmallLeopardSkin: {
+				DisplayName: Small Leopard Skin
+				Tooltip: ""
+			}
+
+			SmallTigerSkin: {
+				DisplayName: Small Tiger Skin
+				Tooltip: ""
+			}
+
+			SmallTreasureMap: {
+				DisplayName: Small Treasure Map
+				Tooltip: ""
+			}
+
+			SmallZebraSkin: {
+				DisplayName: Small Zebra Skin
+				Tooltip: ""
+			}
+
+			Angel: {
+				DisplayName: Angel
+				Tooltip: ""
+			}
+
+			BellBoughsItem: {
+				DisplayName: Bell and Boughs
+				Tooltip: ""
+			}
+
+			BigBell: {
+				DisplayName: Big Bell
+				Tooltip: ""
+			}
+
+			BigBlueCard: {
+				DisplayName: Blue Card
+				Tooltip: ""
+			}
+
+			BigCandyCane: {
+				DisplayName: Big Candy Cane
+				Tooltip: ""
+			}
+
+			BigGreenCandyCane: {
+				DisplayName: Big Green Candy Cane
+				Tooltip: ""
+			}
+
+			BigRedCandle: {
+				DisplayName: Big Red Candle
+				Tooltip: ""
+			}
+
+			BigRedCard: {
+				DisplayName: Red Card
+				Tooltip: ""
+			}
+
+			BigSanta: {
+				DisplayName: Big Santa
+				Tooltip: ""
+			}
+
+			BigTeddy: {
+				DisplayName: Big Teddy
+				Tooltip: ""
+			}
+
+			BigWhiteCandle: {
+				DisplayName: Big White Candle
+				Tooltip: ""
+			}
+
+			BigWhiteCard: {
+				DisplayName: White Cards
+				Tooltip: ""
+			}
+
+			BlackBow: {
+				DisplayName: Black Bow
+				Tooltip: ""
+			}
+
+			BlocksItem: {
+				DisplayName: Blocks
+				Tooltip: ""
+			}
+
+			BlueBall: {
+				DisplayName: BlueBall
+				Tooltip: ""
+			}
+
+			BlueBanner: {
+				DisplayName: Blue Banner
+				Tooltip: ""
+			}
+
+			BlueBauble: {
+				DisplayName: Blue Bauble
+				Tooltip: ""
+			}
+
+			BlueBow: {
+				DisplayName: Blue Bow
+				Tooltip: ""
+			}
+
+			BlueSantaBanner: {
+				DisplayName: Blue Santa Banner
+				Tooltip: ""
+			}
+
+			BlueSnowflakeBanner: {
+				DisplayName: Blue Snowflake Banner
+				Tooltip: ""
+			}
+
+			BlueStarBanner: {
+				DisplayName: Blue Star Banner
+				Tooltip: ""
+			}
+
+			Diorama: {
+				DisplayName: Festive Diorama
+				Tooltip: ""
+			}
+
+			DreidelBanner: {
+				DisplayName: Dreidel Banner
+				Tooltip: ""
+			}
+
+			Elf: {
+				DisplayName: Festive Elf
+				Tooltip: ""
+			}
+
+			FestiveWorktableItem: {
+				DisplayName: Festive Worktable
+				Tooltip: Used for special crafting
+			}
+
+			GingerbreadHouse: {
+				DisplayName: Gingerbread House
+				Tooltip: ""
+			}
+
+			GoldBauble: {
+				DisplayName: Gold Bauble
+				Tooltip: ""
+			}
+
+			GoldBow: {
+				DisplayName: Gold Bow
+				Tooltip: ""
+			}
+
+			GoldNorthPole: {
+				DisplayName: Festive Pole
+				Tooltip: ""
+			}
+
+			GreenBall: {
+				DisplayName: Green Ball
+				Tooltip: ""
+			}
+
+			GreenBanner: {
+				DisplayName: Green Banner
+				Tooltip: ""
+			}
+
+			GreenBauble: {
+				DisplayName: Green Bauble
+				Tooltip: ""
+			}
+
+			GreenBow: {
+				DisplayName: Green Bow
+				Tooltip: ""
+			}
+
+			GreenEmbroideredSock: {
+				DisplayName: Embroidered Green Stocking
+				Tooltip: ""
+			}
+
+			GreenMug: {
+				DisplayName: Green Mug
+				Tooltip: ""
+			}
+
+			GreenSantaBanner: {
+				DisplayName: Green Santa Banner
+				Tooltip: ""
+			}
+
+			GreenSnowflakeBanner: {
+				DisplayName: Green Snowflake Banner
+				Tooltip: ""
+			}
+
+			GreenSock: {
+				DisplayName: Green Stocking
+				Tooltip: ""
+			}
+
+			HangingSnowflakesItem: {
+				DisplayName: Hanging Snowflakes
+				Tooltip: ""
+			}
+
+			HollyBanner: {
+				DisplayName: Holly Banner
+				Tooltip: ""
+			}
+
+			IciclesItem: {
+				DisplayName: Icicles
+				Tooltip: ""
+			}
+
+			JackInTheBox: {
+				DisplayName: Jack-in-the-Box
+				Tooltip: ""
+			}
+
+			LittleBells: {
+				DisplayName: Little Bells
+				Tooltip: ""
+			}
+
+			MenorahItem: {
+				DisplayName: Menorah
+				Tooltip: ""
+			}
+
+			Moon: {
+				DisplayName: Festive Moon
+				Tooltip: ""
+			}
+
+			NorthPole: {
+				DisplayName: Festive Pole
+				Tooltip: ""
+			}
+
+			Nutcracker: {
+				DisplayName: Nutcracker
+				Tooltip: ""
+			}
+
+			OrangeBow: {
+				DisplayName: Orange Bow
+				Tooltip: ""
+			}
+
+			Poinsettas: {
+				DisplayName: Poinsettas
+				Tooltip: ""
+			}
+
+			Poinsettas2: {
+				DisplayName: Poinsettas
+				Tooltip: ""
+			}
+
+			PoinsettaSleigh: {
+				DisplayName: Poinsetta Sleigh
+				Tooltip: ""
+			}
+
+			PresentPileLarge: {
+				DisplayName: Present Pile
+				Tooltip: ""
+			}
+
+			PresentPileSmall: {
+				DisplayName: Present Pile
+				Tooltip: ""
+			}
+
+			PresentSleigh: {
+				DisplayName: Present Sleigh
+				Tooltip: ""
+			}
+
+			PurpleBow: {
+				DisplayName: Purple Bow
+				Tooltip: ""
+			}
+
+			RedBall: {
+				DisplayName: Red Ball
+				Tooltip: ""
+			}
+
+			RedBanner: {
+				DisplayName: Red Banner
+				Tooltip: ""
+			}
+
+			RedBauble: {
+				DisplayName: Red Bauble
+				Tooltip: ""
+			}
+
+			RedBow: {
+				DisplayName: Red Bow
+				Tooltip: ""
+			}
+
+			RedEmbroideredSock: {
+				DisplayName: Embroidered Red Stocking
+				Tooltip: ""
+			}
+
+			RedMistletoe: {
+				DisplayName: Red Mistletoe
+				Tooltip: ""
+			}
+
+			RedMug: {
+				DisplayName: Red Mug
+				Tooltip: ""
+			}
+
+			RedSnowflakeBanner: {
+				DisplayName: Red Snowflake Banner
+				Tooltip: ""
+			}
+
+			RedSock: {
+				DisplayName: Red Stocking
+				Tooltip: ""
+			}
+
+			RedTreeBanner: {
+				DisplayName: Red Tree Banner
+				Tooltip: ""
+			}
+
+			Reindeer: {
+				DisplayName: Decorative Reindeer
+				Tooltip: ""
+			}
+
+			RockingHorseItem: {
+				DisplayName: Rocking Horse
+				Tooltip: ""
+			}
+
+			Santa: {
+				DisplayName: Santa
+				Tooltip: ""
+			}
+
+			SantaGnome: {
+				DisplayName: Santa Gnome
+				Tooltip: ""
+			}
+
+			SantaHat: {
+				DisplayName: Santa Hat
+				Tooltip: ""
+			}
+
+			Skates: {
+				DisplayName: Skates
+				Tooltip: ""
+			}
+
+			SmallBlackBow: {
+				DisplayName: Small Black Bow
+				Tooltip: ""
+			}
+
+			SmallBlueBow: {
+				DisplayName: Small Blue Bow
+				Tooltip: ""
+			}
+
+			SmallCandyCane: {
+				DisplayName: Small Candy Cane
+				Tooltip: ""
+			}
+
+			SmallCards: {
+				DisplayName: Festive Cards
+				Tooltip: ""
+			}
+
+			SmallGoldBow: {
+				DisplayName: Small Gold Bow
+				Tooltip: ""
+			}
+
+			SmallGreenBow: {
+				DisplayName: Small Green Bow
+				Tooltip: ""
+			}
+
+			SmallGreenCandyCane: {
+				DisplayName: Small Green Candy Cane
+				Tooltip: ""
+			}
+
+			SmallGreenEmbroideredSock: {
+				DisplayName: Small Embroidered Green Stocking
+				Tooltip: ""
+			}
+
+			SmallGreenSock: {
+				DisplayName: Small Green Stocking
+				Tooltip: ""
+			}
+
+			SmallOrangeBow: {
+				DisplayName: Small Orange Bow
+				Tooltip: ""
+			}
+
+			SmallPurpleBow: {
+				DisplayName: Small Purple Bow
+				Tooltip: ""
+			}
+
+			SmallRedBow: {
+				DisplayName: Small Red Bow
+				Tooltip: ""
+			}
+
+			SmallRedEmbroideredSock: {
+				DisplayName: Small Embroidered Red Stocking
+				Tooltip: ""
+			}
+
+			SmallRedSock: {
+				DisplayName: Small Red Stocking
+				Tooltip: ""
+			}
+
+			SmallTeddy: {
+				DisplayName: Small Teddy
+				Tooltip: ""
+			}
+
+			SmallWhiteBow: {
+				DisplayName: Small White Bow
+				Tooltip: ""
+			}
+
+			SmallWhiteEmbroideredSock: {
+				DisplayName: Small Embroidered White Stocking
+				Tooltip: ""
+			}
+
+			SmallWhiteSock: {
+				DisplayName: Small White Stocking
+				Tooltip: ""
+			}
+
+			SnowflakesItem: {
+				DisplayName: Snowflake Decal
+				Tooltip: ""
+			}
+
+			Snowglobe: {
+				DisplayName: Snowglobe
+				Tooltip: ""
+			}
+
+			Snowman: {
+				DisplayName: Snowman
+				Tooltip: ""
+			}
+
+			StarBall: {
+				DisplayName: Star Ball
+				Tooltip: ""
+			}
+
+			StripeBanner: {
+				DisplayName: Stripe Banner
+				Tooltip: ""
+			}
+
+			StripedBall: {
+				DisplayName: Striped Ball
+				Tooltip: ""
+			}
+
+			Sun: {
+				DisplayName: Festive Sun
+				Tooltip: ""
+			}
+
+			TippedTop: {
+				DisplayName: Top
+				Tooltip: ""
+			}
+
+			ToyTrainItem: {
+				DisplayName: Toy Train
+				Tooltip: ""
+			}
+
+			TrainSetItem: {
+				DisplayName: Train Set
+				Tooltip: ""
+			}
+
+			TreeGnome: {
+				DisplayName: Tree Gnome
+				Tooltip: ""
+			}
+
+			UprightTop: {
+				DisplayName: Top
+				Tooltip: ""
+			}
+
+			WhiteBanner: {
+				DisplayName: White Banner
+				Tooltip: ""
+			}
+
+			WhiteBauble: {
+				DisplayName: White Bauble
+				Tooltip: ""
+			}
+
+			WhiteBow: {
+				DisplayName: White Bow
+				Tooltip: ""
+			}
+
+			WhiteEmbroideredSock: {
+				DisplayName: Embroidered White Stocking
+				Tooltip: ""
+			}
+
+			WhiteMistletoe: {
+				DisplayName: White Mistletoe
+				Tooltip: ""
+			}
+
+			WhiteMug: {
+				DisplayName: White Mug
+				Tooltip: ""
+			}
+
+			WhiteSock: {
+				DisplayName: White Stocking
+				Tooltip: ""
+			}
+
+			WhiteStarBanner: {
+				DisplayName: White Star Banner
+				Tooltip: ""
+			}
+
+			WhiteTreeBanner: {
+				DisplayName: White Tree Banner
+				Tooltip: ""
+			}
+
+			Wreath: {
+				DisplayName: Festive Wreath
+				Tooltip: ""
+			}
+
+			YellowBall: {
+				DisplayName: Yellow Ball
+				Tooltip: ""
+			}
+
+			BlackBunting: {
+				DisplayName: Black Bunting
+				Tooltip: ""
+			}
+
+			BlackCracker: {
+				DisplayName: Black Cracker
+				Tooltip: ""
+			}
+
+			BlackRibbonRosette: {
+				DisplayName: Black Ribbon Rosette
+				Tooltip: ""
+			}
+
+			BlackRosette: {
+				DisplayName: Black Rosette
+				Tooltip: ""
+			}
+
+			BlueBunting: {
+				DisplayName: Blue Bunting
+				Tooltip: ""
+			}
+
+			BlueCracker: {
+				DisplayName: Blue Cracker
+				Tooltip: ""
+			}
+
+			BlueRibbonRosette: {
+				DisplayName: Blue Ribbon Rosette
+				Tooltip: ""
+			}
+
+			BlueRosette: {
+				DisplayName: Blue Rosette
+				Tooltip: ""
+			}
+
+			ChampagneFluteItem: {
+				DisplayName: Champagne Flute
+				Tooltip: ""
+			}
+
+			ChampagneFlutesItem: {
+				DisplayName: Champagne Flutes
+				Tooltip: ""
+			}
+
+			ChampagneItem: {
+				DisplayName: Champagne
+				Tooltip: ""
+			}
+
+			ChocolateFountainItem: {
+				DisplayName: Chocolate Fountain
+				Tooltip: ""
+			}
+
+			CrackerPile1: {
+				DisplayName: Crackers
+				Tooltip: ""
+			}
+
+			CrackerPile2: {
+				DisplayName: Crackers
+				Tooltip: ""
+			}
+
+			CrackerPile3: {
+				DisplayName: Crackers
+				Tooltip: ""
+			}
+
+			CrackerPileItem: {
+				DisplayName: Fancy Crackers
+				Tooltip: ""
+			}
+
+			GlassPyramidItem: {
+				DisplayName: Glass Pyramid
+				Tooltip: ""
+			}
+
+			GoldRibbonRosette: {
+				DisplayName: Gold Ribbon Rosette
+				Tooltip: ""
+			}
+
+			GoldRosette: {
+				DisplayName: Gold Rosette
+				Tooltip: ""
+			}
+
+			GreenBunting: {
+				DisplayName: Green Bunting
+				Tooltip: ""
+			}
+
+			GreenChampagneItem: {
+				DisplayName: Expensive Champagne
+				Tooltip: ""
+			}
+
+			GreenCracker: {
+				DisplayName: Green Cracker
+				Tooltip: ""
+			}
+
+			GreenRibbonRosette: {
+				DisplayName: Green Ribbon Rosette
+				Tooltip: ""
+			}
+
+			GreenRosette: {
+				DisplayName: Green Rosette
+				Tooltip: ""
+			}
+
+			OrangeBunting: {
+				DisplayName: Orange Bunting
+				Tooltip: ""
+			}
+
+			OrangeRibbonRosette: {
+				DisplayName: Orange Ribbon Rosette
+				Tooltip: ""
+			}
+
+			OrangeRosette: {
+				DisplayName: Orange Rosette
+				Tooltip: ""
+			}
+
+			PurpleBunting: {
+				DisplayName: Purple Bunting
+				Tooltip: ""
+			}
+
+			PurpleRibbonRosette: {
+				DisplayName: Purple Ribbon Rosette
+				Tooltip: ""
+			}
+
+			PurpleRosette: {
+				DisplayName: Purple Rosette
+				Tooltip: ""
+			}
+
+			RedBunting: {
+				DisplayName: Red Bunting
+				Tooltip: ""
+			}
+
+			RedCracker: {
+				DisplayName: Red Cracker
+				Tooltip: ""
+			}
+
+			RedRibbonRosette: {
+				DisplayName: Red Ribbon Rosette
+				Tooltip: ""
+			}
+
+			RedRosette: {
+				DisplayName: Red Rosette
+				Tooltip: ""
+			}
+
+			SmallBlackBunting: {
+				DisplayName: Small Black Bunting
+				Tooltip: ""
+			}
+
+			SmallBlackRibbonRosette: {
+				DisplayName: Small Black Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallBlackRosette: {
+				DisplayName: Small Black Rosette
+				Tooltip: ""
+			}
+
+			SmallBlueBunting: {
+				DisplayName: Small Blue Bunting
+				Tooltip: ""
+			}
+
+			SmallBlueRibbonRosette: {
+				DisplayName: Small Blue Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallBlueRosette: {
+				DisplayName: Small Blue Rosette
+				Tooltip: ""
+			}
+
+			SmallGoldRibbonRosette: {
+				DisplayName: Small Gold Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallGoldRosette: {
+				DisplayName: Small Gold Rosette
+				Tooltip: ""
+			}
+
+			SmallGreenBunting: {
+				DisplayName: Small Green Bunting
+				Tooltip: ""
+			}
+
+			SmallGreenRibbonRosette: {
+				DisplayName: Small Green Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallGreenRosette: {
+				DisplayName: Small Green Rosette
+				Tooltip: ""
+			}
+
+			SmallOrangeBunting: {
+				DisplayName: Small Orange Bunting
+				Tooltip: ""
+			}
+
+			SmallOrangeRibbonRosette: {
+				DisplayName: Small Orange Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallOrangeRosette: {
+				DisplayName: Small Orange Rosette
+				Tooltip: ""
+			}
+
+			SmallPurpleBunting: {
+				DisplayName: Small Purple Bunting
+				Tooltip: ""
+			}
+
+			SmallPurpleRibbonRosette: {
+				DisplayName: Small Purple Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallPurpleRosette: {
+				DisplayName: Small Purple Rosette
+				Tooltip: ""
+			}
+
+			SmallRedBunting: {
+				DisplayName: Small Red Bunting
+				Tooltip: ""
+			}
+
+			SmallRedRibbonRosette: {
+				DisplayName: Small Red Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallRedRosette: {
+				DisplayName: Small Red Rosette
+				Tooltip: ""
+			}
+
+			SmallWhiteBunting: {
+				DisplayName: Small White Bunting
+				Tooltip: ""
+			}
+
+			SmallWhiteRibbonRosette: {
+				DisplayName: Small White Ribbon Rosette
+				Tooltip: ""
+			}
+
+			SmallWhiteRosette: {
+				DisplayName: Small White Rosette
+				Tooltip: ""
+			}
+
+			SmallYellowBunting: {
+				DisplayName: Small Yellow Bunting
+				Tooltip: ""
+			}
+
+			TopHat: {
+				DisplayName: TopHat
+				Tooltip: ""
+			}
+
+			WhiteBunting: {
+				DisplayName: White Bunting
+				Tooltip: ""
+			}
+
+			WhiteCracker: {
+				DisplayName: White Cracker
+				Tooltip: ""
+			}
+
+			WhiteRibbonRosette: {
+				DisplayName: White Ribbon Rosette
+				Tooltip: ""
+			}
+
+			WhiteRosette: {
+				DisplayName: White Rosette
+				Tooltip: ""
+			}
+
+			YellowBunting: {
+				DisplayName: Yellow Bunting
+				Tooltip: ""
+			}
+
+			YellowCracker: {
+				DisplayName: Yellow Cracker
+				Tooltip: ""
+			}
+
+			BeadedRibbons: {
+				DisplayName: Beaded Ribbons
+				Tooltip: ""
+			}
+
+			BigHeartBear: {
+				DisplayName: Big Heart Bear
+				Tooltip: ""
+			}
+
+			BigHeartDecal: {
+				DisplayName: Big Heart Decal
+				Tooltip: ""
+			}
+
+			BigWhiteBear: {
+				DisplayName: Big White Bear
+				Tooltip: ""
+			}
+
+			BlackChocolates: {
+				DisplayName: Box of Chocolates
+				Tooltip: ""
+			}
+
+			BlackChocolatesOpen: {
+				DisplayName: Box of Chocolates
+				Tooltip: ""
+			}
+
+			BrightRose: {
+				DisplayName: Bright Rose
+				Tooltip: ""
+			}
+
+			BundledHeartBalloons: {
+				DisplayName: Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			CandyBowl: {
+				DisplayName: Bowl of Candy
+				Tooltip: ""
+			}
+
+			ChocolateBowl: {
+				DisplayName: Bowl of Chocolates
+				Tooltip: ""
+			}
+
+			DarkRose: {
+				DisplayName: Dark Rose
+				Tooltip: ""
+			}
+
+			EmptyBowl: {
+				DisplayName: Bowl
+				Tooltip: ""
+			}
+
+			GoldBundledHeartBalloons: {
+				DisplayName: Gold Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			GoldHeartBalloon: {
+				DisplayName: Gold Heart Balloons
+				Tooltip: ""
+			}
+
+			GoldHeartBow: {
+				DisplayName: Gold Heart Bow
+				Tooltip: ""
+			}
+
+			GoldHeartDecal: {
+				DisplayName: Gold Heart Decal
+				Tooltip: ""
+			}
+
+			GoldHeartStrand: {
+				DisplayName: Strand of Gold Hearts
+				Tooltip: ""
+			}
+
+			GoldRibbons: {
+				DisplayName: Gold Ribbons
+				Tooltip: ""
+			}
+
+			GoldStreamer: {
+				DisplayName: Gold Streamer
+				Tooltip: ""
+			}
+
+			HeartBalloon: {
+				DisplayName: Heart Balloons
+				Tooltip: ""
+			}
+
+			HeartBear: {
+				DisplayName: Heart Bear
+				Tooltip: ""
+			}
+
+			HeartBow: {
+				DisplayName: Heart Bow
+				Tooltip: ""
+			}
+
+			HeartDecal: {
+				DisplayName: Heart Decal
+				Tooltip: ""
+			}
+
+			HeartfeltCard1: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartfeltCard2: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartfeltCard3: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartfeltCard4: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartfeltCard5: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartfeltCard6: {
+				DisplayName: Heartfelt Card
+				Tooltip: ""
+			}
+
+			HeartMobile: {
+				DisplayName: Heart Mobile
+				Tooltip: ""
+			}
+
+			HeartStrand: {
+				DisplayName: Strand of Hearts
+				Tooltip: ""
+			}
+
+			HeartStringsItem: {
+				DisplayName: Strand of Hearts
+				Tooltip: ""
+			}
+
+			LaceDecal: {
+				DisplayName: Lace Decal
+				Tooltip: ""
+			}
+
+			LaceHeartDecal: {
+				DisplayName: Lace Heart Decal
+				Tooltip: ""
+			}
+
+			MixedBundledHeartBalloons: {
+				DisplayName: Mixed Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			PunchBowl: {
+				DisplayName: Punch Bowl
+				Tooltip: ""
+			}
+
+			RedChocolates: {
+				DisplayName: Box of Chocolates
+				Tooltip: ""
+			}
+
+			RedChocolatesOpen: {
+				DisplayName: Box of Chocolates
+				Tooltip: ""
+			}
+
+			RedRibbon: {
+				DisplayName: Red Ribbon
+				Tooltip: ""
+			}
+
+			RedStreamer: {
+				DisplayName: Red Streamer
+				Tooltip: ""
+			}
+
+			RedWhiteBundledHeartBalloons: {
+				DisplayName: Red & White Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			RedWhiteRibbons: {
+				DisplayName: Red & White Ribbons
+				Tooltip: ""
+			}
+
+			RosePetalsItem: {
+				DisplayName: Rose Petals
+				Tooltip: ""
+			}
+
+			SmallGoldHeartDecal: {
+				DisplayName: Small Gold Heart Decal
+				Tooltip: ""
+			}
+
+			SmallHeartDecal: {
+				DisplayName: Small Heart Decal
+				Tooltip: ""
+			}
+
+			SmallRoseVase: {
+				DisplayName: Small Rose Vase
+				Tooltip: ""
+			}
+
+			TallRoseVase: {
+				DisplayName: Tall Rose Vase
+				Tooltip: ""
+			}
+
+			WhiteBundledHeartBalloons: {
+				DisplayName: White Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			WhiteHeartBalloon: {
+				DisplayName: White Heart Balloons
+				Tooltip: ""
+			}
+
+			WhiteRedRibbons: {
+				DisplayName: White & Red Ribbons
+				Tooltip: ""
+			}
+
+			WhiteRibbons: {
+				DisplayName: White Ribbons
+				Tooltip: ""
+			}
+
+			BrokenObeliskItem: {
+				DisplayName: Broken Obelisk
+				Tooltip: ""
+			}
+
+			DecorativeRope: {
+				DisplayName: Decorative Rope
+				Tooltip: ""
+			}
+
+			DecorativeSilkRope: {
+				DisplayName: Decorative Silk Rope
+				Tooltip: ""
+			}
+
+			DecorativeVineRope: {
+				DisplayName: Decorative Vine Rope
+				Tooltip: ""
+			}
+
+			DecorativeWebItem: {
+				DisplayName: Decorative Web
+				Tooltip: ""
+			}
+
+			DecorativeWebRope: {
+				DisplayName: Decorative Web Rope
+				Tooltip: ""
+			}
+
+			ObeliskItem: {
+				DisplayName: Obelisk
+				Tooltip: ""
+			}
+
+			BlueSilkFlowers: {
+				DisplayName: Blue Silk Flowers
+				Tooltip: ""
+			}
+
+			PinkSilkFlowers: {
+				DisplayName: Pink Silk Flowers
+				Tooltip: ""
+			}
+
+			PurpleSilkFlowers: {
+				DisplayName: Purple Silk Flowers
+				Tooltip: ""
+			}
+
+			RedSilkFlowers: {
+				DisplayName: Red Silk Flowers
+				Tooltip: ""
+			}
+
+			SilkCorruptionPlants: {
+				DisplayName: Silk Corruption Plants
+				Tooltip: ""
+			}
+
+			SilkCrimsonPlants: {
+				DisplayName: Silk Crimson Plants
+				Tooltip: ""
+			}
+
+			SilkGrass: {
+				DisplayName: Silk Grass
+				Tooltip: ""
+			}
+
+			SilkHallowPlants: {
+				DisplayName: Silk Hallow Plants
+				Tooltip: ""
+			}
+
+			SilkJungleFlowers: {
+				DisplayName: Silk Jungle Flowers
+				Tooltip: ""
+			}
+
+			SilkJunglePlants: {
+				DisplayName: Silk Jungle Plants
+				Tooltip: ""
+			}
+
+			SilkWildflowers: {
+				DisplayName: Silk Wildflowers
+				Tooltip: ""
+			}
+
+			WhiteSilkFlowers: {
+				DisplayName: White Silk Flowers
+				Tooltip: ""
+			}
+
+			YellowSilkFlowers: {
+				DisplayName: Yellow Silk Flowers
+				Tooltip: ""
+			}
+
+			FishBarrel: {
+				DisplayName: Fish Barrel
+				Tooltip: ""
+			}
+
+			FoodBarrel: {
+				DisplayName: Food Barrel
+				Tooltip: ""
+			}
+
+			FestiveArmchairItem: {
+				DisplayName: Festive Armchair
+				Tooltip: ""
+			}
+
+			FestiveBathtubItem: {
+				DisplayName: Festive Bathtub
+				Tooltip: ""
+			}
+
+			FestiveBedItem: {
+				DisplayName: Festive Bed
+				Tooltip: ""
+			}
+
+			FestiveBookcaseItem: {
+				DisplayName: Festive Bookcase
+				Tooltip: ""
+			}
+
+			FestiveCandelabraItem: {
+				DisplayName: Festive Candelabra
+				Tooltip: ""
+			}
+
+			FestiveCandleItem: {
+				DisplayName: Festive Candle
+				Tooltip: ""
+			}
+
+			FestiveCeilingLampItem: {
+				DisplayName: Festive Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FestiveChairItem: {
+				DisplayName: Festive Chair
+				Tooltip: ""
+			}
+
+			FestiveChandelierItem: {
+				DisplayName: Festive Chandelier
+				Tooltip: ""
+			}
+
+			FestiveChestItem: {
+				DisplayName: Festive Chest
+				Tooltip: ""
+			}
+
+			FestiveClockItem: {
+				DisplayName: Festive Clock
+				Tooltip: ""
+			}
+
+			FestiveDoorItem: {
+				DisplayName: Festive Door
+				Tooltip: ""
+			}
+
+			FestiveDresserItem: {
+				DisplayName: Festive Dresser
+				Tooltip: ""
+			}
+
+			FestiveLampItem: {
+				DisplayName: Festive Lamp
+				Tooltip: ""
+			}
+
+			FestiveLamppostItem: {
+				DisplayName: Festive Lamppost
+				Tooltip: ""
+			}
+
+			FestiveLanternItem: {
+				DisplayName: Festive Lantern
+				Tooltip: ""
+			}
+
+			FestivePianoItem: {
+				DisplayName: Festive Piano
+				Tooltip: ""
+			}
+
+			FestivePlatformItem: {
+				DisplayName: Festive Platform
+				Tooltip: ""
+			}
+
+			FestiveSinkItem: {
+				DisplayName: Festive Sink
+				Tooltip: ""
+			}
+
+			FestiveSofaItem: {
+				DisplayName: Festive Sofa
+				Tooltip: ""
+			}
+
+			FestiveTableItem: {
+				DisplayName: Festive Table
+				Tooltip: ""
+			}
+
+			FestiveToiletItem: {
+				DisplayName: Festive Toilet
+				Tooltip: ""
+			}
+
+			FestiveWorkbenchItem: {
+				DisplayName: Festive Work Bench
+				Tooltip: ""
+			}
+
+			BigHeartfeltPlatform: {
+				DisplayName: Heartfelt Platform
+				Tooltip: ""
+			}
+
+			HeartfeltArmchair: {
+				DisplayName: Heartfelt Armchair
+				Tooltip: ""
+			}
+
+			HeartfeltBathtub: {
+				DisplayName: Heartfelt Bathtub
+				Tooltip: ""
+			}
+
+			HeartfeltBed.DisplayName: Heartfelt Bed
+
+			HeartfeltBookcase: {
+				DisplayName: Heartfelt Bookcase
+				Tooltip: ""
+			}
+
+			HeartfeltCandelabra: {
+				DisplayName: Heartfelt Candelabra
+				Tooltip: ""
+			}
+
+			HeartfeltCandle: {
+				DisplayName: Heartfelt Candle
+				Tooltip: ""
+			}
+
+			HeartfeltCeilingLamp: {
+				DisplayName: Heartfelt Ceiling Lamp
+				Tooltip: ""
+			}
+
+			HeartfeltChair: {
+				DisplayName: Heartfelt Chair
+				Tooltip: ""
+			}
+
+			HeartfeltChandelier: {
+				DisplayName: Heartfelt Chandelier
+				Tooltip: ""
+			}
+
+			HeartfeltChest: {
+				DisplayName: Heartfelt Chest
+				Tooltip: ""
+			}
+
+			HeartfeltClock: {
+				DisplayName: Heartfelt Clock
+				Tooltip: ""
+			}
+
+			HeartfeltCoveredTable: {
+				DisplayName: Covered Heartfelt Table
+				Tooltip: ""
+			}
+
+			HeartfeltCoveredWorkBench: {
+				DisplayName: Covered Heartfelt Work Bench
+				Tooltip: ""
+			}
+
+			HeartfeltCraftingTable: {
+				DisplayName: Heartfelt Crafting Table
+				Tooltip: Used for special crafting
+			}
+
+			HeartfeltDecoratedTable: {
+				DisplayName: Decorated Heartfelt Table
+				Tooltip: ""
+			}
+
+			HeartfeltDoor: {
+				DisplayName: Heartfelt Door
+				Tooltip: ""
+			}
+
+			HeartfeltDresser: {
+				DisplayName: Heartfelt Dresser
+				Tooltip: ""
+			}
+
+			HeartfeltKingBed: {
+				DisplayName: Heartfelt Royal Bed
+				Tooltip: ""
+			}
+
+			HeartfeltLamp: {
+				DisplayName: Heartfelt Lamp
+				Tooltip: ""
+			}
+
+			HeartfeltLantern: {
+				DisplayName: Heartfelt Lantern
+				Tooltip: ""
+			}
+
+			HeartfeltOttoman: {
+				DisplayName: Heartfelt Ottoman
+				Tooltip: ""
+			}
+
+			HeartfeltPiano: {
+				DisplayName: Heartfelt Piano
+				Tooltip: ""
+			}
+
+			HeartfeltPlatform: {
+				DisplayName: Heartfelt Platform
+				Tooltip: ""
+			}
+
+			HeartfeltSink: {
+				DisplayName: Heartfelt Sink
+				Tooltip: ""
+			}
+
+			HeartfeltSofa: {
+				DisplayName: Heartfelt Sofa
+				Tooltip: ""
+			}
+
+			HeartfeltTable: {
+				DisplayName: Heartfelt Table
+				Tooltip: ""
+			}
+
+			HeartfeltToilet: {
+				DisplayName: Heartfelt Toilet
+				Tooltip: ""
+			}
+
+			HeartfeltWorkBench: {
+				DisplayName: Heartfelt Work Bench
+				Tooltip: ""
+			}
+
+			TatteredArmchairItem: {
+				DisplayName: Tattered Armchair
+				Tooltip: ""
+			}
+
+			TatteredBathtubItem: {
+				DisplayName: Tattered Bathtub
+				Tooltip: ""
+			}
+
+			TatteredBedItem: {
+				DisplayName: Tattered Bed
+				Tooltip: ""
+			}
+
+			TatteredBookcaseItem: {
+				DisplayName: Tattered Bookcase
+				Tooltip: ""
+			}
+
+			TatteredCandelabraItem: {
+				DisplayName: Tattered Candelabra
+				Tooltip: ""
+			}
+
+			TatteredCandleItem: {
+				DisplayName: Tattered Candle
+				Tooltip: ""
+			}
+
+			TatteredCeilingLampItem: {
+				DisplayName: Tattered Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TatteredChairItem: {
+				DisplayName: Tattered Chair
+				Tooltip: ""
+			}
+
+			TatteredChandelierItem: {
+				DisplayName: Tattered Chandelier
+				Tooltip: ""
+			}
+
+			TatteredChestItem: {
+				DisplayName: Tattered Chest
+				Tooltip: ""
+			}
+
+			TatteredClockItem: {
+				DisplayName: Tattered Clock
+				Tooltip: ""
+			}
+
+			TatteredDoorItem: {
+				DisplayName: Tattered Door
+				Tooltip: ""
+			}
+
+			TatteredDresserItem: {
+				DisplayName: Tattered Dresser
+				Tooltip: ""
+			}
+
+			TatteredLampItem: {
+				DisplayName: Tattered Lamp
+				Tooltip: ""
+			}
+
+			TatteredLanternItem: {
+				DisplayName: Tattered Lantern
+				Tooltip: ""
+			}
+
+			TatteredPianoItem: {
+				DisplayName: Tattered Piano
+				Tooltip: ""
+			}
+
+			TatteredPlatformItem: {
+				DisplayName: Tattered Platform
+				Tooltip: ""
+			}
+
+			TatteredSinkItem: {
+				DisplayName: Tattered Sink
+				Tooltip: ""
+			}
+
+			TatteredSofaItem: {
+				DisplayName: Tattered Sofa
+				Tooltip: ""
+			}
+
+			TatteredTableItem: {
+				DisplayName: Tattered Table
+				Tooltip: ""
+			}
+
+			TatteredToiletItem: {
+				DisplayName: Tattered Toilet
+				Tooltip: ""
+			}
+
+			TatteredWorkbenchItem: {
+				DisplayName: Tattered Work Bench
+				Tooltip: ""
+			}
+
+			BambooArmchair: {
+				DisplayName: Bamboo Armchair
+				Tooltip: ""
+			}
+
+			BeanbagArmchair: {
+				DisplayName: Beanbag
+				Tooltip: ""
+			}
+
+			BlueDungeonArmchair: {
+				DisplayName: Blue Dungeon Armchair
+				Tooltip: ""
+			}
+
+			BoneArmchair: {
+				DisplayName: Bone Armchair
+				Tooltip: ""
+			}
+
+			BorealArmchair: {
+				DisplayName: Boreal Armchair
+				Tooltip: ""
+			}
+
+			CactusArmchair: {
+				DisplayName: Cactus Armchair
+				Tooltip: ""
+			}
+
+			CrystalArmchair: {
+				DisplayName: Crystal Armchair
+				Tooltip: ""
+			}
+
+			DynastyArmchair: {
+				DisplayName: Dynasty Armchair
+				Tooltip: ""
+			}
+
+			EbonwoodArmchair: {
+				DisplayName: Ebonwood Armchair
+				Tooltip: ""
+			}
+
+			FleshArmchair: {
+				DisplayName: Flesh Armchair
+				Tooltip: ""
+			}
+
+			FrozenArmchair: {
+				DisplayName: Frozen Armchair
+				Tooltip: ""
+			}
+
+			GlassArmchair: {
+				DisplayName: Glass Armchair
+				Tooltip: ""
+			}
+
+			GoldenArmchair: {
+				DisplayName: Golden Armchair
+				Tooltip: ""
+			}
+
+			GraniteArmchair: {
+				DisplayName: Granite Armchair
+				Tooltip: ""
+			}
+
+			GreenDungeonArmchair: {
+				DisplayName: Green Dungeon Armchair
+				Tooltip: ""
+			}
+
+			HoneyArmchair: {
+				DisplayName: Honey Armchair
+				Tooltip: ""
+			}
+
+			LesionArmchair: {
+				DisplayName: Lesion Armchair
+				Tooltip: ""
+			}
+
+			LihzahrdArmchair: {
+				DisplayName: Lihzahrd Armchair
+				Tooltip: ""
+			}
+
+			LivingwoodArmchair: {
+				DisplayName: Livingwood Armchair
+				Tooltip: ""
+			}
+
+			MahoganyArmchair: {
+				DisplayName: Rich Mahogany Armchair
+				Tooltip: ""
+			}
+
+			MarbleArmchair: {
+				DisplayName: Marble Armchair
+				Tooltip: ""
+			}
+
+			MartianArmchair: {
+				DisplayName: Martian Armchair
+				Tooltip: ""
+			}
+
+			MeteorArmchair: {
+				DisplayName: Meteorite Armchair
+				Tooltip: ""
+			}
+
+			MushroomArmchair: {
+				DisplayName: Mushroom Armchair
+				Tooltip: ""
+			}
+
+			MushroomLawnchair: {
+				DisplayName: Mushroom Lawnchair
+				Tooltip: ""
+			}
+
+			NebulaArmchair: {
+				DisplayName: Nebula Armchair
+				Tooltip: ""
+			}
+
+			ObsidianArmchair: {
+				DisplayName: Obsidian Armchair
+				Tooltip: ""
+			}
+
+			PalmwoodArmchair: {
+				DisplayName: Palmwood Armchair
+				Tooltip: ""
+			}
+
+			PalmwoodLawnchair: {
+				DisplayName: Palmwood Lawnchair
+				Tooltip: ""
+			}
+
+			PearlwoodArmchair: {
+				DisplayName: Pearlwood Armchair
+				Tooltip: ""
+			}
+
+			PinkDungeonArmchair: {
+				DisplayName: Pink Dungeon Armchair
+				Tooltip: ""
+			}
+
+			PumpkinArmchair: {
+				DisplayName: Pumpkin Armchair
+				Tooltip: ""
+			}
+
+			SandstoneArmchair: {
+				DisplayName: Sandstone Armchair
+				Tooltip: ""
+			}
+
+			ShadewoodArmchair: {
+				DisplayName: Shadewood Armchair
+				Tooltip: ""
+			}
+
+			SkywareArmchair: {
+				DisplayName: Skyware Armchair
+				Tooltip: ""
+			}
+
+			SlimeArmchair: {
+				DisplayName: Slime Armchair
+				Tooltip: ""
+			}
+
+			SolarArmchair: {
+				DisplayName: Solar Armchair
+				Tooltip: ""
+			}
+
+			SpiderArmchair: {
+				DisplayName: Spider Armchair
+				Tooltip: ""
+			}
+
+			SpookyArmchair: {
+				DisplayName: Spooky Armchair
+				Tooltip: ""
+			}
+
+			StardustArmchair: {
+				DisplayName: Stardust Armchair
+				Tooltip: ""
+			}
+
+			SteampunkArmchair: {
+				DisplayName: Steampunk Armchair
+				Tooltip: ""
+			}
+
+			VortexArmchair: {
+				DisplayName: Vortex Armchair
+				Tooltip: ""
+			}
+
+			WoodenArmchair: {
+				DisplayName: Wooden Armchair
+				Tooltip: ""
+			}
+
+			WoodenLawnchair: {
+				DisplayName: Wooden Lawnchair
+				Tooltip: ""
+			}
+
+			AshWoodArmchair: {
+				DisplayName: Ash Wood Armchair
+				Tooltip: ""
+			}
+
+			BalloonArmchair: {
+				DisplayName: Balloon Armchair
+				Tooltip: ""
+			}
+
+			ReefArmchair: {
+				DisplayName: Reef Armchair
+				Tooltip: ""
+			}
+
+			ConchArmchair: {
+				DisplayName: Conch Armchair
+				Tooltip: ""
+			}
+
+			AlchemyCeilingLamp: {
+				DisplayName: Alchemy Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BambooCeilingLamp: {
+				DisplayName: Bamboo Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BlueDungeonCeilingLamp: {
+				DisplayName: Blue Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BorealCeilingLamp: {
+				DisplayName: Boreal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BrassCeilingLamp: {
+				DisplayName: Brass Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CactusCeilingLamp: {
+				DisplayName: Cactus Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CagedCeilingLamp: {
+				DisplayName: Caged Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CarriageCeilingLamp: {
+				DisplayName: Carriage Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CeilingLamp: {
+				DisplayName: Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ChainedCeilingLamp: {
+				DisplayName: Chained Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CrystalCeilingLamp: {
+				DisplayName: Crystal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DiabolistCeilingLamp: {
+				DisplayName: Diabolist Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DynastyCeilingLamp: {
+				DisplayName: Dynasty Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DynastyCeilingLampThin: {
+				DisplayName: Thin Dynasty Ceiling Lamp
+				Tooltip: ""
+			}
+
+			EbonwoodCeilingLamp: {
+				DisplayName: Ebonwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FleshCeilingLamp1: {
+				DisplayName: Pustulant Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FleshCeilingLamp2: {
+				DisplayName: Flesh Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FrozenCeilingLamp: {
+				DisplayName: Frozen Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GlassCeilingLamp: {
+				DisplayName: Glass Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GoldenCeilingLamp: {
+				DisplayName: Golden Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GraniteCeilingLamp: {
+				DisplayName: Granite Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GreenDungeonCeilingLamp: {
+				DisplayName: Green Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			HoneyCeilingLamp: {
+				DisplayName: Honey Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LesionCeilingLamp: {
+				DisplayName: Lesion Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LihzahrdCeilingLamp: {
+				DisplayName: Lihzard Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LivingwoodCeilingLamp: {
+				DisplayName: Livingwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MahoganyCeilingLamp: {
+				DisplayName: Rich Mahogany Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MarbleCeilingLamp: {
+				DisplayName: Marble Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MartianCeilingLamp: {
+				DisplayName: Martian Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MeteorCeilingLamp: {
+				DisplayName: Meteorite Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MushroomCeilingLamp: {
+				DisplayName: Mushroom Ceiling Lamp
+				Tooltip: ""
+			}
+
+			NebulaCeilingLamp: {
+				DisplayName: Nebula Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ObsidianCeilingLamp: {
+				DisplayName: Obsidian Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PalmwoodCeilingLamp: {
+				DisplayName: Palm Wood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PaperCeilingLamp: {
+				DisplayName: Chinese Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PearlwoodCeilingLamp: {
+				DisplayName: Pearlwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PinkDungeonCeilingLamp: {
+				DisplayName: Pink Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PumpkinCeilingLamp: {
+				DisplayName: Pumpkin Ceiling Lamp
+				Tooltip: ""
+			}
+
+			RagSconceCeilingLamp: {
+				DisplayName: Rag Sconce Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SandstoneCeilingLamp: {
+				DisplayName: Sandstone Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ShadewoodCeilingLamp: {
+				DisplayName: Shadewood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SkywareCeilingLamp: {
+				DisplayName: Skyware Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SlimeCeilingLamp: {
+				DisplayName: Slime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SolarCeilingLamp: {
+				DisplayName: Solar Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpiderCeilingLamp: {
+				DisplayName: Spider Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpookyCeilingLamp: {
+				DisplayName: Spooky Ceiling Lamp
+				Tooltip: ""
+			}
+
+			StardustCeilingLamp: {
+				DisplayName: Stardust Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SteampunkCeilingLamp: {
+				DisplayName: Steampunk Ceiling Lamp
+				Tooltip: ""
+			}
+
+			VortexCeilingLamp: {
+				DisplayName: Vortex Ceiling Lamp
+				Tooltip: ""
+			}
+
+			AshWoodCeilingLamp: {
+				DisplayName: Ash Wood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BallonCeilingLamp: {
+				DisplayName: Balloon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ReefCeilingLamp: {
+				DisplayName: Reef Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ChocolateWallItem: {
+				DisplayName: Chocolate Wall
+				Tooltip: ""
+			}
+
+			FadedHieroWall1Item: {
+				DisplayName: Faded Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			FadedHieroWall2Item: {
+				DisplayName: Faded Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			FadedHieroWall3Item: {
+				DisplayName: Faded Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			FadedHieroWall4Item: {
+				DisplayName: Faded Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			FadedHieroWallSmallItem: {
+				DisplayName: Faded Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			FrostedGlassItem: {
+				DisplayName: Frosted Glass
+				Tooltip: ""
+			}
+
+			HeartfeltWallItem: {
+				DisplayName: Heartfelt Wall
+				Tooltip: ""
+			}
+
+			HieroWall1Item: {
+				DisplayName: Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			HieroWall2Item: {
+				DisplayName: Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			HieroWall3Item: {
+				DisplayName: Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			HieroWall4Item: {
+				DisplayName: Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			HieroWallSmallItem: {
+				DisplayName: Hieroglyphic Wall
+				Tooltip: ""
+			}
+
+			LotusWallItem: {
+				DisplayName: Lotus Wall
+				Tooltip: ""
+			}
+
+			PolishedSandstoneBrickWallItem: {
+				DisplayName: Polished Sandstone Brick Wall
+				Tooltip: ""
+			}
+
+			SandstonePillarWallItem: {
+				DisplayName: Sandstone Pillar Wall
+				Tooltip: ""
+			}
+
+			HeartfeltBedItem: {
+				DisplayName: Heartfelt Bed
+				Tooltip: ""
+			}
+
+			HeartfeltDresserItem: {
+				DisplayName: Heartfelt Dresser
+				Tooltip: ""
+			}
+
+			BalloonCeilingLamp: {
+				DisplayName: Balloon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			HeartfeltChestItem: {
+				Tooltip: ""
+				DisplayName: Heartfelt Chest
+			}
+
+			BasketItem: {
+				DisplayName: Basket
+				Tooltip: ""
+			}
+
+			DecoSpikeItem: {
+				DisplayName: Decorative Spike
+				Tooltip: ""
+			}
+
+			DecoWoodenSpikeItem: {
+				DisplayName: Decorative Wooden Spike
+				Tooltip: ""
+			}
+
+			WetBasketItem: {
+				DisplayName: Wet Basket
+				Tooltip: ""
+			}
+
+			AshVineBasket: {
+				DisplayName: Ash Vine Basket
+				Tooltip: ""
+			}
+
+			CorruptReedBasket: {
+				DisplayName: Corrupt Reed Basket
+				Tooltip: ""
+			}
+
+			CorruptThornBasket: {
+				DisplayName: Corrupt Thorn Basket
+				Tooltip: ""
+			}
+
+			CorruptVineBasket: {
+				DisplayName: Corrupt Vine Basket
+				Tooltip: ""
+			}
+
+			CrimsonReedBasket: {
+				DisplayName: Crimson Reed Basket
+				Tooltip: ""
+			}
+
+			CrimsonThornBasket: {
+				DisplayName: Crimson Thorn Basket
+				Tooltip: ""
+			}
+
+			CrimsonVineBasket: {
+				DisplayName: Crimson Vine Basket
+				Tooltip: ""
+			}
+
+			FloweringVineBasket: {
+				DisplayName: Flowering Vine Basket
+				Tooltip: ""
+			}
+
+			HallowReedBasket: {
+				DisplayName: Hallow Reed Basket
+				Tooltip: ""
+			}
+
+			HallowVineBasket: {
+				DisplayName: Hallow Vine Basket
+				Tooltip: ""
+			}
+
+			JungleReedBasket: {
+				DisplayName: Jungle Reed Basket
+				Tooltip: ""
+			}
+
+			JungleThornBasket: {
+				DisplayName: Jungle Thorn Basket
+				Tooltip: ""
+			}
+
+			JungleVineBasket: {
+				DisplayName: Jungle Vine Basket
+				Tooltip: ""
+			}
+
+			MushroomReedBasket: {
+				DisplayName: Mushroom Reed Basket
+				Tooltip: ""
+			}
+
+			MushroomVineBasket: {
+				DisplayName: Mushroom Vine Basket
+				Tooltip: ""
+			}
+
+			SilkAshPlantsItem: {
+				DisplayName: Silk Ash Plants
+				Tooltip: ""
+			}
+
+			SilkMushroomsItem: {
+				DisplayName: Silk Mushrooms
+				Tooltip: ""
+			}
+
+			SilkOatsBouquet: {
+				DisplayName: Silk Oats
+				Tooltip: ""
+			}
+
+			SilkOatsCorruptBouquet: {
+				DisplayName: Corrupt Silk Oats
+				Tooltip: ""
+			}
+
+			SilkOatsCrimsonBouquet: {
+				DisplayName: Crimson Silk Oats
+				Tooltip: ""
+			}
+
+			SilkOatsDesertBouquet: {
+				DisplayName: Desert Silk Oats
+				Tooltip: ""
+			}
+
+			SilkOatsHallowBouquet: {
+				DisplayName: Hallow Silk Oats
+				Tooltip: ""
+			}
+
+			VineBasket: {
+				DisplayName: Vine Basket
+				Tooltip: ""
+			}
+
+			ReedBasket: {
+				DisplayName: Reed Basket
+				Tooltip: ""
+			}
+
+			SeaweedBasket: {
+				DisplayName: Seaweed Basket
+				Tooltip: ""
+			}
+		}
+
+		Tiles: {
+			FishBarrelTile: {
+				ContainerName: Fish Barrel
+				MapEntry: Fish Barrel
+				MapEntry0: Fish Barrel
+			}
+
+			FoodBarrelTile: {
+				ContainerName: Food Barrel
+				MapEntry: Food Barrel
+				MapEntry0: Food Barrel
+			}
+
+			FestiveChest: {
+				ContainerName: Festive Chest
+				MapEntry0: Festive Chest
+			}
+
+			FestiveDresser.ContainerName: Festive Dresser
+
+			HeartfeltChest: {
+				ContainerName: Heartfelt Chest
+				MapEntry0: Heartfelt Chest
+			}
+
+			HeartfeltDresser.ContainerName: Heartfelt Dresser
+
+			TatteredChest: {
+				ContainerName: Tattered Chest
+				MapEntry0: Tattered Chest
+			}
+
+			TatteredDresser.MapEntry: Tattered Dresser
+			Chocolate_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Chocolate_Block
+			Faded_Hieroglyphic_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Faded_Hieroglyphic_Block
+			Festive_Column.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Column
+			Heartfelt_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Block
+			Lotus_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Lotus_Block
+			Sandstone_Column.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Column
+			Polished_Sandstone_Brick.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Polished_Sandstone_Brick
+			Sandstone_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Platform
+			Sandstone_Pillar.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Pillar
+			Deco_Box.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Deco_Box
+			Large_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Large_Hanging_Fish
+			Small_Animal_Skin.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Animal_Skin
+			Small_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Hanging_Fish
+			Small_Treasure_Map.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Treasure_Map
+			Tiny_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tiny_Hanging_Fish
+			Festive_Decoration.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Decoration
+			Festive_Clutter.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Clutter
+			Festive_Worktable.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Worktable
+			Festive_Mug.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Mug
+			Heartfelt_Ribbon.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ribbon
+			Heartfelt_Decoration.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Decoration
+			Heart_Balloons.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heart_Balloons
+			Broken_Obelisk.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Broken_Obelisk
+			Decorative_Rope.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Decorative_Rope
+			Decorative_Webs.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Decorative_Webs
+			Obelisk.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Obelisk
+			Flowers.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Flowers
+			Festive_Armchair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Armchair
+			Festive_Bathtub.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bathtub
+			Festive_Bed.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bed
+			Festive_Bookcase.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bookcase
+			Festive_Candle.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Candle
+			Festive_Ceiling_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Ceiling_Lamp
+			Festive_Chair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Chair
+			Festive_Chandelier.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Chandelier
+			Festive_Clock.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Clock
+			Festive_Door.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Door
+			Festive_Dresser.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Dresser
+			Festive_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lamp
+			Festive_Lamppost.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lamppost
+			Festive_Lantern.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lantern
+			Festive_Piano.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Piano
+			Festive_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Platform
+			Festive_Sink.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Sink
+			Festive_Sofa.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Sofa
+			Festive_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Table
+			Festive_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Toilet
+			Festive_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Work_Bench
+			Heartfelt_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Platform
+			Heartfelt_Armchair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Armchair
+			Heartfelt_Bathtub.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bathtub
+			Heartfelt_Bed.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bed
+			Heartfelt_Bookcase.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bookcase
+			Heartfelt_Candle.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Candle
+			Heartfelt_Ceiling_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ceiling_Lamp
+			Heartfelt_Chandelier.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Chandelier
+			Heartfelt_Clock.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Clock
+			Heartfelt_Crafting_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Crafting_Table
+			Heartfelt_Door.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Door
+			Heartfelt_Dresser.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Dresser
+			Heartfelt_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Lamp
+			Heartfelt_Lantern.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Lantern
+			Heartfelt_Ottoman.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ottoman
+			Heartfelt_Piano.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Piano
+			Heartfelt_Sink.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Sink
+			Heartfelt_Sofa.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Sofa
+			Heartfelt_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Table
+			Heartfelt_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Toilet
+			Heartfelt_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Work_Bench
+			Tattered_Armchair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Armchair
+			Tattered_Bathtub.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Bathtub
+			Tattered_Bed.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Bed
+			Tattered_Bookcase.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Bookcase
+			Tattered_Candle.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Candle
+			Tattered_Ceiling_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Ceiling_Lamp
+			Tattered_Chair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Chair
+			Tattered_Chandelier.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Chandelier
+			Tattered_Clock.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Clock
+			Tattered_Door.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Door
+			Tattered_Dresser.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Dresser
+			Tattered_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Lamp
+			Tattered_Lantern.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Lantern
+			Tattered_Piano.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Piano
+			Tattered_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Platform
+			Tattered_Sink.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Sink
+			Tattered_Sofa.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Sofa
+			Tattered_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Table
+			Tattered_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Toilet
+			Tattered_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Work_Bench
+		}
+
+		"MapObject.Year's_End_Decoration": Mods.SquintlysFurnitureMod.MapObject.Year's_End_Decoration
+	}
+}

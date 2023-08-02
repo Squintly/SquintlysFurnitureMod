@@ -1,48 +1,44 @@
 using SquintlysFurnitureMod.Content.Items.Blocks;
-using Terraria;
-using Terraria.ID;
-using Terraria.GameContent.Creative;
-using Terraria.ModLoader;
 using SquintlysFurnitureMod.Content.WallTiles;
+using Terraria;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.WallItems;
 
 internal class FadedHieroWallSmallItem : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Faded Hieroglyphic Wall");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 100;
-	}
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
+    }
 
-	public override void SetDefaults()
-	{
-		base.Item.width = 32;
-		base.Item.height = 32;
+    public override void SetDefaults()
+    {
+        Item.width = 32;
+        Item.height = 32;
 
-		base.Item.value = Item.buyPrice(copper:0);
-		base.Item.value = Item.rare = ItemRarityID.White;
+        Item.value = Item.buyPrice(copper: 0);
 
-		base.Item.maxStack = 999;
+        Item.useStyle = ItemUseStyleID.Swing;
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
 
-		base.Item.useStyle = ItemUseStyleID.Swing;
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
+        Item.autoReuse = true;
+        Item.consumable = true;
 
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
+        Item.maxStack = 9999;
 
-		base.Item.createWall = ModContent.WallType<FadedHieroWallSmall>();
-	}
+        Item.createWall = ModContent.WallType<FadedHieroWallSmall>();
+    }
 
-	public override void AddRecipes()
-	{
-        base.CreateRecipe(4)
+    public override void AddRecipes()
+    {
+        CreateRecipe(4)
            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
     }
 }
-
-

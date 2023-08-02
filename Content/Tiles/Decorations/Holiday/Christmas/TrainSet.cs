@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -10,33 +10,30 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
 
 public class TrainSet : ModTile
 {
-	public override void SetStaticDefaults() {
+    public override void SetStaticDefaults()
+    {
         Main.tileFrameImportant[Type] = true;
 
         Main.tileNoAttach[Type] = true;
-        Main.tileNoFail[base.Type] = false;
+        Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         
         TileID.Sets.DisableSmartCursor[Type] = true;
 
-        AddMapEntry(new Color(12, 69, 6), base.CreateMapEntryName("Festive Decoration"));
-
-        TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1); 
+        TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
         TileObjectData.newTile.Width = 2;
         TileObjectData.newTile.Height = 1;
-		TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
 
         AnimationFrameHeight = 20;
+        RegisterItemDrop(ModContent.ItemType<TrainSetItem>());
     }
-
-	public override void KillMultiTile(int x, int y, int frameX, int frameY) {
-		Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.Decorations.Holiday.Christmas.TrainSetItem>());
-	}
 
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
@@ -48,6 +45,7 @@ public class TrainSet : ModTile
             frame %= 31;
         }
     }
+
     //private readonly int animationFrameHeight = 18;
 
     //public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)

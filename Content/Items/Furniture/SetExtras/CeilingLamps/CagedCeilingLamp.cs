@@ -1,47 +1,46 @@
-using Terraria.ID;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras;
 using Terraria;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
 
 internal class CagedCeilingLamp : ModItem
 {
-	public override void SetStaticDefaults()
-	{
-		base.DisplayName.SetDefault("Caged Ceiling Lamp");
-		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
-	}
-
-	public override void SetDefaults()
-	{
-		base.Item.width = 16;
-		base.Item.height = 16;
-
-		base.Item.value = Item.buyPrice(gold: 2);
-
-		base.Item.maxStack = 999;
-
-		base.Item.useStyle = (ItemUseStyleID.HoldUp);
-		base.Item.useTurn = true;
-		base.Item.useAnimation = 15;
-		base.Item.useTime = 15;
-
-		base.Item.autoReuse = true;
-		base.Item.consumable = true;
-
-		base.Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.CeilingLampsTile>();
-		base.Item.placeStyle = 46;
-
+    public override void SetStaticDefaults()
+    {
+        // DisplayName.SetDefault("Caged Ceiling Lamp");
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
+    public override void SetDefaults()
+    {
+        Item.width = 16;
+        Item.height = 16;
+
+        Item.value = Item.buyPrice(gold: 2);
+
+        Item.useStyle = (ItemUseStyleID.HoldUp);
+        Item.useTurn = true;
+        Item.useAnimation = 15;
+        Item.useTime = 15;
+
+        Item.autoReuse = true;
+        Item.consumable = true;
+
+        Item.maxStack = 9999;
+
+        Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.CeilingLampsTile>();
+        Item.placeStyle = 46;
+    }
+
     public override void AddRecipes()
     {
-		CreateRecipe(1)
-			.AddIngredient(ItemID.BlueBrick, 4)
-			.AddIngredient(ItemID.Torch)
-			.AddTile(TileID.BoneWelder)
-			.Register();
+        CreateRecipe(1)
+            .AddIngredient(ItemID.BlueBrick, 4)
+            .AddIngredient(ItemID.Torch)
+            .AddTile(TileID.BoneWelder)
+            .Register();
         CreateRecipe(1)
             .AddIngredient(ItemID.GreenBrick, 4)
             .AddIngredient(ItemID.Torch)

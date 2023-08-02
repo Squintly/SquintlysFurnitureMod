@@ -2,86 +2,87 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
 {
-	internal class FestiveLamppost : ModTile
-	{
-		private Asset<Texture2D> flameTexture;
+    internal class FestiveLamppost : ModTile
+    {
+        private Asset<Texture2D> flameTexture;
 
-		public override void SetStaticDefaults() {
+        public override void SetStaticDefaults()
+        {
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
-            
+
             Main.tileLighted[Type] = true;
-            
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style1xX);
-            TileObjectData.newTile.Height= 5;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style1xX);
+            TileObjectData.newTile.Height = 5;
             TileObjectData.newTile.CoordinateHeights = new int[5] { 16, 16, 16, 16, 18 };
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
-            
+
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            AddMapEntry(new Color(79, 71, 58), base.CreateMapEntryName("Festive Lamppost"));
 
-            if (!Main.dedServ) {
-				flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Festive/FestiveLamppost_Flame"); 
-			}
-		}
+            if (!Main.dedServ)
+            {
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Festive/FestiveLamppost_Flame");
+            }
 
-		public override void KillMultiTile(int i, int j, int frameX, int frameY) {
-			Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<FestiveLamppostItem>());
-		}
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lamp"));
+        }
 
-		//public override void HitWire(int i, int j) {
-		//	Tile tile = Main.tile[i, j];
-		//	int topY = j - tile.TileFrameY / 18 % 3;
-		//	short frameAdjustment = (short)(tile.TileFrameX > 0 ? -36 : 36);
+        //public override void HitWire(int i, int j) {
+        //	Tile tile = Main.tile[i, j];
+        //	int topY = j - tile.TileFrameY / 18 % 3;
+        //	short frameAdjustment = (short)(tile.TileFrameX > 0 ? -36 : 36);
 
-		//	Main.tile[i, topY].TileFrameX += frameAdjustment;
-		//	Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
-		//	Main.tile[i, topY + 2].TileFrameX += frameAdjustment;
+        //	Main.tile[i, topY].TileFrameX += frameAdjustment;
+        //	Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
+        //	Main.tile[i, topY + 2].TileFrameX += frameAdjustment;
 
-		//	Wiring.SkipWire(i, topY);
-		//	Wiring.SkipWire(i, topY + 1);
-		//	Wiring.SkipWire(i, topY + 2);
+        //	Wiring.SkipWire(i, topY);
+        //	Wiring.SkipWire(i, topY + 1);
+        //	Wiring.SkipWire(i, topY + 2);
 
-		//	// Avoid trying to send packets in singleplayer.
-		//	if (Main.netMode != NetmodeID.SinglePlayer) {
-		//		NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
-		//	}
-		//}
+        //	// Avoid trying to send packets in singleplayer.
+        //	if (Main.netMode != NetmodeID.SinglePlayer) {
+        //		NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
+        //	}
+        //}
 
-		//public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects) {
-		//	if (i % 2 == 1) {
-		//		spriteEffects = SpriteEffects.FlipHorizontally;
-		//	}
-		//}
+        //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects) {
+        //	if (i % 2 == 1) {
+        //		spriteEffects = SpriteEffects.FlipHorizontally;
+        //	}
+        //}
 
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b) {
-			Tile tile = Main.tile[i, j];
-			if (tile.TileFrameX == 0) {
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            Tile tile = Main.tile[i, j];
+            if (tile.TileFrameX == 0)
+            {
                 // We can support different light colors for different styles here: switch (tile.frameY / 54)
                 r = 1f;
                 g = 0.95f;
                 b = 0.65f;
             }
-		}
+        }
 
         //public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         //{

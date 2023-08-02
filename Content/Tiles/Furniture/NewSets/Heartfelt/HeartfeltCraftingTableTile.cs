@@ -1,30 +1,27 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 {
     public class HeartfeltCraftingTableTile : ModTile
     {
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
 
             Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[base.Type] = false;
+            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             Main.tileWaterDeath[Type] = true;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
@@ -35,15 +32,17 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileID.Sets.IgnoredByNpcStepUp[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
-            //TileObjectData.newTile.StyleHorizontal = true;
+            
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
             TileObjectData.addTile(Type);
 
             AdjTiles = new int[] { TileID.Tables };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-
-            AddMapEntry(new Color(252, 3, 3), base.CreateMapEntryName("Heartfelt Crafting Table"));
 
             if (!Main.dedServ)
             {
@@ -51,10 +50,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             }
         }
 
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 48, ModContent.ItemType<HeartfeltCraftingTable>());
-        }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
@@ -62,6 +57,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             g = 0.95f;
             b = 0.65f;
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
@@ -94,4 +90,3 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
         }
     }
 }
-

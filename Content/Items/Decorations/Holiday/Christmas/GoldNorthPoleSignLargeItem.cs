@@ -10,35 +10,32 @@
 //{
 //	public override void SetStaticDefaults()
 //	{
-//		base.DisplayName.SetDefault("Festive Sign");
-//		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[base.Type] = 1;
+//		DisplayName.SetDefault("Festive Sign");
+//		CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 //	}
 
 //	public override void SetDefaults()
 //	{
-//		base.Item.width = 16;
-//		base.Item.height = 36;
+//		Item.width = 16;
+//		Item.height = 36;
 
-//		base.Item.value = Item.buyPrice(copper:1);
-//		base.Item.rare = ItemRarityID.White;
+//		Item.value = Item.buyPrice(copper:1);
 
-//		base.Item.maxStack = 999;
+//		Item.useStyle = ItemUseStyleID.Swing;
+//		Item.useTurn = true;
+//		Item.useAnimation = 15;
+//		Item.useTime = 15;
 
-//		base.Item.useStyle = ItemUseStyleID.Swing;
-//		base.Item.useTurn = true;
-//		base.Item.useAnimation = 15;
-//		base.Item.useTime = 15;
+//		Item.autoReuse = true;
+//		Item.consumable = true;
 
-//		base.Item.autoReuse = true;
-//		base.Item.consumable = true;
-
-//		base.Item.createTile = ModContent.TileType<NorthPoleSignsLarge>();
-//        base.Item.placeStyle = 0;
+//		Item.createTile = ModContent.TileType<NorthPoleSignsLarge>();
+//        Item.placeStyle = 0;
 //    }
 
 //	public override void AddRecipes()
 //	{
-//		base.CreateRecipe()
+//		CreateRecipe()
 //			.AddIngredient(ItemID.CandyCaneBlock, 4)
 //            .AddTile(ModContent.TileType<FestiveWorktable>())
 //            .Register();
