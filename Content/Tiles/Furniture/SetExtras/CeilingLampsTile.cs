@@ -353,7 +353,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y = dust.velocity.Y - 1.5f;
+                dust.velocity.Y += - 1.5f;
             }
 
             if (style == 27)
@@ -363,7 +363,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y = dust.velocity.Y - 1.5f;
+                dust.velocity.Y += - 1.5f;
             }
 
             if (style == 34)
@@ -373,7 +373,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y = dust.velocity.Y - 1.5f;
+                dust.velocity.Y += - 1.5f;
             }
 
             if (style == 22)
@@ -383,7 +383,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y = dust.velocity.Y - 1.5f;
+                dust.velocity.Y += - 1.5f;
             }
         }
 
@@ -396,7 +396,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 effects = SpriteEffects.FlipHorizontally;
             }
 
-            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
             {

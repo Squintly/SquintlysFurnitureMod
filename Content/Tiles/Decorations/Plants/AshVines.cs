@@ -1,10 +1,16 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Terraria;
-using Terraria.Enums;
+using Terraria.DataStructures;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Plants;
 
@@ -28,14 +34,20 @@ public class AshVines : ModTile
         TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
         TileObjectData.newTile.CoordinatePadding = 2;
 
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-
-        TileObjectData.addTile(Type);
-
         RegisterItemDrop(ModContent.ItemType<AshVineBasket>());
         HitSound = SoundID.Grass;
 
         AddMapEntry(new Color(255, 153, 0));
     }
+    //public override void KillTile(int i, int j, ref bool fail, ref bool effectOnly, ref bool noItem)
+    //{
+    //    if (Main.tile[i, j + 1].TileType == Type)
+    //        WorldGen.KillTile(i, j + 1, false, false, true);
+    //}
+    //public override void NearbyEffects(int i, int j, bool closer)
+    //{
+    //    if (!Main.tile[i, j - 1].HasTile)
+    //        WorldGen.KillTile(i, j);
+    //}
+    //public override bool CanPlace(int i, int j) => Main.tile[i,j - 1].HasTile;
 }

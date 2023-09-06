@@ -51,27 +51,30 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
         }
 
-        //public override void HitWire(int i, int j)
-        //{
-        //    Tile tile = Main.tile[i, j];
-        //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+         public override void HitWire(int i, int j)
+         {
+             Tile tile = Main.tile[i, j];
+             short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-        //    Main.tile[i, j].TileFrameX += frameAdjustment;
-        //    Wiring.SkipWire(i, j);
+             Main.tile[i, j].TileFrameX += frameAdjustment;
+             Wiring.SkipWire(i, j);
 
-        //    // Avoid trying to send packets in singleplayer.
-        //    if (Main.netMode != NetmodeID.SinglePlayer)
-        //    {
-        //        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-        //    }
-        //}
+             // Avoid trying to send packets in singleplayer.
+             if (Main.netMode != NetmodeID.SinglePlayer)
+             {
+                 NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
+             }
+         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            r = 0.8f;
-            g = 0.75f;
-            b = 0.7f;
+            if(tile.TileFrameX == 0)
+            {
+                r = 0.8f;
+                g = 0.75f;
+                b = 0.7f;
+            }
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
@@ -110,7 +113,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             //	effects = SpriteEffects.FlipHorizontally;
             //}
 
-            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
             {

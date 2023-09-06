@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 
-internal class KingBedBalloonItem : ModItem
+internal class KingBedLivingwoodArch : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -16,7 +16,7 @@ internal class KingBedBalloonItem : ModItem
     public override void SetDefaults()
     {
         Item.width = 32;
-        Item.height = 16;
+        Item.height = 32;
 
         Item.value = Item.buyPrice(silver: 2);
 
@@ -30,28 +30,16 @@ internal class KingBedBalloonItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBed4x2>();
-        Item.placeStyle = 29;
+        Item.createTile = ModContent.TileType<KingBeds4x4Lighted>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonGreen, 15)
+            .AddIngredient(ItemID.Wood, 15)
             .AddIngredient(ItemID.Silk, 5)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonPink, 15)
-            .AddIngredient(ItemID.Silk, 5)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonPurple, 15)
-            .AddIngredient(ItemID.Silk, 5)
-            .AddTile(TileID.WorkBenches)
+            .AddTile(TileID.LivingLoom)
             .Register();
     }
 }

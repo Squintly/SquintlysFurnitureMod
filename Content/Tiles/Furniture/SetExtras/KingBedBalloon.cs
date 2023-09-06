@@ -7,6 +7,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
@@ -35,7 +36,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.addTile(Type);
 
             AnimationFrameHeight = 72;
-            RegisterItemDrop(ModContent.ItemType<KingBedBalloonItem>());
+            RegisterItemDrop(ModContent.ItemType<KingBedBalloonLarge>());
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
         public override void AnimateTile(ref int frame, ref int frameCounter)
@@ -73,16 +74,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 spawnY--;
             }
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                {
-                    player.GamepadEnableGrappleCooldown();
-                    player.sleeping.StartSleeping(player, i, j);
-                }
-            }
-            else
-            {
+            
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -95,7 +87,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            }
+            
 
             return true;
         }

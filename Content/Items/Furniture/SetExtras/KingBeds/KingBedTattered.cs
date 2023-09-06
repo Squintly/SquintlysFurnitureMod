@@ -30,7 +30,7 @@ internal class KingBedTattered : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBed4x4>();
+        Item.createTile = ModContent.TileType<KingBeds4x4>();
         Item.placeStyle = 12;
     }
 

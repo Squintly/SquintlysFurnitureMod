@@ -29,7 +29,6 @@ public class SilkMushroomReeds : ModTile
         TileObjectData.newTile.CoordinatePadding = 2;
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
 

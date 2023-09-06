@@ -31,7 +31,7 @@ internal class HeartfeltBedItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBedMartianTile>();
+        //Item.createTile = ModContent.TileType<KingBedMartianTile>();
     }
 
     public override void AddRecipes()

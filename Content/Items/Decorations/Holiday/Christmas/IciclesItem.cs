@@ -36,7 +36,7 @@ internal class IciclesItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.Silk, 3)
+            .AddIngredient(ItemID.IceBlock, 3)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

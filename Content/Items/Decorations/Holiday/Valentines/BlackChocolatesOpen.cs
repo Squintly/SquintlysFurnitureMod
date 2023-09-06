@@ -1,47 +1,47 @@
-using SquintlysFurnitureMod.Content.Items.Blocks;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
-using Terraria;
-using Terraria.GameContent.Creative;
-using Terraria.ID;
-using Terraria.ModLoader;
+//using SquintlysFurnitureMod.Content.Items.Blocks;
+//using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
+//using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
+//using Terraria;
+//using Terraria.GameContent.Creative;
+//using Terraria.ID;
+//using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
+//namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 
-internal class BlackChocolatesOpen : ModItem
-{
-    public override void SetStaticDefaults()
-    {
-        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-    }
+//internal class BlackChocolatesOpen : ModItem
+//{
+//    public override void SetStaticDefaults()
+//    {
+//        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+//    }
 
-    public override void SetDefaults()
-    {
-        Item.width = 16;
-        Item.height = 12;
+//    public override void SetDefaults()
+//    {
+//        Item.width = 16;
+//        Item.height = 12;
 
-        Item.value = Item.buyPrice(copper: 1);
+//        Item.value = Item.buyPrice(copper: 1);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
+//        Item.useStyle = ItemUseStyleID.Swing;
+//        Item.useTurn = true;
+//        Item.useAnimation = 15;
+//        Item.useTime = 15;
 
-        Item.autoReuse = true;
-        Item.consumable = true;
+//        Item.autoReuse = true;
+//        Item.consumable = true;
 
-        Item.maxStack = 9999;
+//        Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<ChocolatesOpen>();
-        Item.placeStyle = 1;
-    }
+//        Item.createTile = ModContent.TileType<ChocolatesOpen>();
+//        Item.placeStyle = 1;
+//    }
 
-    public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.Silk, 2)
-            .AddIngredient(ModContent.ItemType<ChocolateBlockItem>())
-            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
-            .Register();
-    }
-}
+//    public override void AddRecipes()
+//    {
+//        CreateRecipe()
+//            .AddIngredient(ItemID.Silk, 2)
+//            .AddIngredient(ModContent.ItemType<ChocolateBlockItem>())
+//            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
+//            .Register();
+//    }
+//}

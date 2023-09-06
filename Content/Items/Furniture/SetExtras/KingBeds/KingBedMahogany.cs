@@ -30,7 +30,7 @@ internal class KingBedMahogany : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBed4x2>();
+        Item.createTile = ModContent.TileType<KingBeds4x2>();
         Item.placeStyle = 2;
     }
 

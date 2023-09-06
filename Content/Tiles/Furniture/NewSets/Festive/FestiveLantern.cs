@@ -53,7 +53,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
         {
             Tile tile = Main.tile[i, j];
             int topY = j - tile.TileFrameY / 18 % 2;
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -36 : 36);
+            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
             Main.tile[i, topY].TileFrameX += frameAdjustment;
             Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
@@ -70,9 +70,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            r = 1f;
-            g = 0.95f;
-            b = 0.65f;
+            if(tile.TileFrameX == 0)
+            {
+                r = 1f;
+                g = 0.95f;
+                b = 0.65f;
+            }
+            
         }
 
         //public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

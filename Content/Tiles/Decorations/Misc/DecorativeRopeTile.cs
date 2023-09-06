@@ -22,7 +22,7 @@ public class DecorativeRopeTile : ModTile
         TileObjectData.newTile.Width = 2;
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.CoordinateHeights = new int[1] { 24 };
-        TileObjectData.newTile.DrawYOffset = 6;
+        TileObjectData.newTile.DrawYOffset = -6;
         TileObjectData.newTile.CoordinatePadding = 2;
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;

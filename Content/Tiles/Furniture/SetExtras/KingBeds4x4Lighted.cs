@@ -13,11 +13,10 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 {
-    public class KingBed4x4Lighted : ModTile
+    public class KingBeds4x4Lighted : ModTile
     {
         public const int NextStyleHeight = 74; //Calculated by adding all CoordinateHeights + CoordinatePaddingFix.Y applied to all of them + 2
         private Asset<Texture2D> flameTexture;
-
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -35,9 +34,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             AdjTiles = new int[] { TileID.Beds };
             AdjTiles = new int[] { TileID.Torches };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); // this style already takes care of direction for us
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style5x4);
             TileObjectData.newTile.Height = 4;
+            TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
+            TileObjectData.newTile.Origin = new(0,0);
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
 
             TileObjectData.newTile.StyleLineSkip = 2;
@@ -54,7 +55,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
-        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        public override bool HasSmartInteract(int X, int j, SmartInteractScanSettings settings)
         {
             return true;
         }
@@ -92,6 +93,32 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 }
             }
         }
+        public override void HitWire(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int Y = j - tile.TileFrameY % 72 / 18;
+         	int X = i - tile.TileFrameX % 72 / 18;
+
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
+
+            for (int x = 0; x < X + 4; x++)
+            {
+                for (int y = Y; y < Y + 4; y++)
+                {
+                    Main.tile[x,y].TileFrameX += frameAdjustment;
+
+                    
+                        Wiring.SkipWire(x,y);
+                    
+                }
+            }
+
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, X, Y, 4, TileChangeType.None);
+            }
+        }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
@@ -103,17 +130,18 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             Tile tile = Main.tile[i, j];
 
             short frameX = tile.TileFrameX;
-            short frameY = tile.TileFrameY;
 
             // Return if the lamp is off (when frameX is 0), or if a random check failed.
             if (frameX != 0 || !Main.rand.NextBool(40))
             {
                 return;
             }
-
-            int style = frameY / 36;
         }
-
+        public override void PlaceInWorld(int i, int j, Item item)
+        {
+            Main.NewText(new Vector2(i,j));
+            Main.NewText(Main.MouseWorld / 16);
+        }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
@@ -123,7 +151,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 effects = SpriteEffects.FlipHorizontally;
             }
 
-            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
             {
@@ -141,7 +169,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(uint)i); // Don't remove any casts.
 
-            // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 5
+            // We can support different flames for different styles here: int style = Main.tile[j, X].frameY / 5
             int frame = frameY / 18;
 
             if (frame == 0) // Livingwood
@@ -164,7 +192,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-            else if (frame == 4) // Sandstone
+            else if (frame == 8) // Sandstone
             {
                 for (int c = 0; c < 7; c++)
                 {
@@ -176,7 +204,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
-    public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
+        public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections
             width = 2; // Default to the Width defined for TileObjectData.newTile
@@ -202,17 +230,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             {
                 spawnY--;
             }
-
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                {
-                    player.GamepadEnableGrappleCooldown();
-                    player.sleeping.StartSleeping(player, i, j);
-                }
-            }
-            else
-            {
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -225,7 +242,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            }
+            
 
             return true;
         }

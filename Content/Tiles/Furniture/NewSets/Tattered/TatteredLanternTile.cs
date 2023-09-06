@@ -54,7 +54,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
         {
             Tile tile = Main.tile[i, j];
             int topY = j - tile.TileFrameY / 18 % 2;
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -36 : 36);
+            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
             Main.tile[i, topY].TileFrameX += frameAdjustment;
             Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
@@ -70,10 +70,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            Tile tile = Main.tile[i, j];
-            r = 0.8f;
-            g = 0.75f;
-            b = 0.7f;
+            Tile tile = Main.tile[i,j];
+            if(tile.TileFrameX == 0)
+            {
+                r = 0.8f;
+                g = 0.75f;
+                b = 0.7f;
+            }   
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
@@ -93,8 +96,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             {
                 return;
             }
-
-            int style = frameY / 18;
             int dustChoice;
             dustChoice = (DustID.Torch);
 
@@ -108,7 +109,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
         {
             SpriteEffects effects = SpriteEffects.None;
 
-            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
             {

@@ -1,5 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -18,6 +19,10 @@ namespace SquintlysFurnitureMod.Content.Drops
             if (npc.type == NPCID.PirateCorsair || npc.type == NPCID.PirateCrossbower || npc.type == NPCID.PirateDeadeye || npc.type == NPCID.PirateDeckhand)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GoldenCeilingLamp>(), 300));
+            }
+            if(npc.type == NPCID.PirateCorsair || npc.type == NPCID.PirateCrossbower || npc.type == NPCID.PirateDeadeye || npc.type == NPCID.PirateDeckhand)
+            {
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingBedGold>(), 300));
             }
         }
     }

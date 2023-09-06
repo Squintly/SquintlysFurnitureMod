@@ -1,4 +1,6 @@
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.DataStructures;
@@ -15,6 +17,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
     public class KingBedMartianTile : ModTile
     {
         public const int NextStyleHeight = 38;
+        private Asset<Texture2D> flameTexture;
 
         public override void SetStaticDefaults()
         {
@@ -53,6 +56,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
+
+            if (!Main.dedServ)
+            {
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/SetExtras/KingBedMartianTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+            }
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -83,16 +91,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 spawnY--;
             }
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                {
-                    player.GamepadEnableGrappleCooldown();
-                    player.sleeping.StartSleeping(player, i, j);
-                }
-            }
-            else
-            {
+            
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -105,9 +104,33 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            }
+            
 
             return true;
+        }
+        public override void HitWire(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topY = j - tile.TileFrameY / 18 % 2;
+            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -72 : 72);
+
+            Main.tile[i, topY].TileFrameX += frameAdjustment;
+            Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
+
+            Wiring.SkipWire(i, topY);
+            Wiring.SkipWire(i + 1, topY);
+            Wiring.SkipWire(i + 2, topY);
+            Wiring.SkipWire(i + 3, topY);
+            Wiring.SkipWire(i, topY + 1);
+            Wiring.SkipWire(i + 1, topY + 1);
+            Wiring.SkipWire(i + 2, topY);
+            Wiring.SkipWire(i + 3, topY + 1);
+            
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, i, topY + 1, 2, TileChangeType.None);
+            }
         }
 
         public override void MouseOver(int i, int j)
@@ -127,7 +150,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             {
                 player.noThrow = 2;
                 player.cursorItemIconEnabled = true;
-                player.cursorItemIconID = ModContent.ItemType<KingBedMartian>();
+                //player.cursorItemIconID = ModContent.ItemType<KingBedMartian>();
             }
         }
     }

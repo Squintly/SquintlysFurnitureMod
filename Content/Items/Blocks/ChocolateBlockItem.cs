@@ -43,7 +43,7 @@ internal class ChocolateBlockItem : ModItem
            .Register();
 
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 4)
+           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 1)
            .AddTile(TileID.WorkBenches)
            .Register();
 

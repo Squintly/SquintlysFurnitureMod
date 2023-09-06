@@ -10,7 +10,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 {
-    public class KingBed4x2 : ModTile
+    public class KingBeds4x2 : ModTile
     {
         public const int NextStyleHeight = 38; //Calculated by adding all CoordinateHeights + CoordinatePaddingFix.Y applied to all of them + 2
 
@@ -68,16 +68,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 spawnY--;
             }
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                {
-                    player.GamepadEnableGrappleCooldown();
-                    player.sleeping.StartSleeping(player, i, j);
-                }
-            }
-            else
-            {
+            
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -90,7 +81,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            }
+            
 
             return true;
         }

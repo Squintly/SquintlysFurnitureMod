@@ -32,7 +32,7 @@ internal class RedChocolates : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<ChocolatesClosed>();
+        Item.createTile = ModContent.TileType<Chocolates>();
         Item.placeStyle = 0;
     }
 

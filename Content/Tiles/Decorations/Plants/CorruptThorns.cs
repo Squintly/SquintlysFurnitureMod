@@ -29,9 +29,6 @@ public class CorruptThorns : ModTile
         TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
         TileObjectData.newTile.CoordinatePadding = 2;
 
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-
         TileObjectData.addTile(Type);
 
         RegisterItemDrop(ModContent.ItemType<CorruptThornBasket>());

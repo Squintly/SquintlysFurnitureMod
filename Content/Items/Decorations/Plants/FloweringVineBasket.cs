@@ -36,7 +36,7 @@ internal class FloweringVineBasket : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.Wildflowers)
+            .AddIngredient(ItemID.FlowerPacketWild)
             .AddIngredient(ItemID.Silk)
             .AddTile(TileID.WorkBenches)
             .Register();
