@@ -30,7 +30,7 @@ internal class KingBedSpider : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBeds4x3>();
+        Item.createTile = ModContent.TileType<KingBedWeb>();
         Item.placeStyle = 0;
     }
 

@@ -1,16 +1,9 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Plants;
 
@@ -23,16 +16,14 @@ public class AshVines : ModTile
         Main.tileNoFail[Type] = true;
         Main.tileNoAttach[Type] = true;
 
-        Main.tileLavaDeath[Type] = false;
-        Main.tileWaterDeath[Type] = false;
-
         Main.tileNoSunLight[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
         TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-        TileObjectData.newTile.CoordinatePadding = 2;
+
+        TileObjectData.addTile(Type);
 
         RegisterItemDrop(ModContent.ItemType<AshVineBasket>());
         HitSound = SoundID.Grass;

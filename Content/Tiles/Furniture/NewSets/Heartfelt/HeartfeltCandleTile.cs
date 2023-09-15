@@ -28,7 +28,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
             TileObjectData.newTile.Width = 1;
@@ -37,6 +36,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
 
@@ -50,27 +51,27 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Candle"));
         }
 
-               public override void HitWire(int i, int j) {
-                   Tile tile = Main.tile[i, j];
-                   int Y = j - Main.tile[i, j].TileFrameY / 18;
-         	int X = i - Main.tile[i, j].TileFrameX / 18;
-                   short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+         //      public override void HitWire(int i, int j) {
+         //          Tile tile = Main.tile[i, j];
+         //          int Y = j - Main.tile[i, j].TileFrameY / 18;
+         //	int X = i - Main.tile[i, j].TileFrameX / 18;
+         //          short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-                   Main.tile[X, Y].TileFrameX += frameAdjustment;
-                   Main.tile[X, Y + 1].TileFrameX += frameAdjustment;
-                   Main.tile[X + 1, Y].TileFrameX += frameAdjustment;
-                   Main.tile[X + 1, Y + 1].TileFrameX += frameAdjustment;
-                   Wiring.SkipWire(X, Y);
-         	Wiring.SkipWire(X, Y + 1);
-                   Wiring.SkipWire(X + 1, Y);
-                   Wiring.SkipWire(X + 1, Y + 1);
+         //          Main.tile[X, Y].TileFrameX += frameAdjustment;
+         //          Main.tile[X, Y + 1].TileFrameX += frameAdjustment;
+         //          Main.tile[X + 1, Y].TileFrameX += frameAdjustment;
+         //          Main.tile[X + 1, Y + 1].TileFrameX += frameAdjustment;
+         //          Wiring.SkipWire(X, Y);
+         //	Wiring.SkipWire(X, Y + 1);
+         //          Wiring.SkipWire(X + 1, Y);
+         //          Wiring.SkipWire(X + 1, Y + 1);
 
-                   // Avoid trying to send packets in singleplayer.
-                   if (Main.netMode != NetmodeID.SinglePlayer)
-                   {
-                       NetMessage.SendTileSquare(-1, i, j + 1, 2, TileChangeType.None);
-                   }
-         }
+         //          // Avoid trying to send packets in singleplayer.
+         //          if (Main.netMode != NetmodeID.SinglePlayer)
+         //          {
+         //              NetMessage.SendTileSquare(-1, i, j + 1, 2, TileChangeType.None);
+         //          }
+         //}
 
          public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects) {
          	if (i % 2 == 1) {
@@ -107,25 +108,25 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
          	int style = frameY / 54;
 
-         	if (frameY / 36 % 3 == 0) {
-         		int dustChoice = -1;
+         	//if (frameY / 36 % 3 == 0) {
+         	//	int dustChoice = -1;
 
-         		if (style == 0) {
-         			dustChoice = (DustID.Torch);
-         		}
+         	//	if (style == 0) {
+         	//		dustChoice = (DustID.Torch);
+         	//	}
 
-         		// We can support different dust for different styles here
-         		if (dustChoice != -1) {
-         			var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+         	//	// We can support different dust for different styles here
+         	//	if (dustChoice != -1) {
+         	//		var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
 
-         			if (!Main.rand.NextBool(3)) {
-         				dust.noGravity = true;
-         			}
+         	//		if (!Main.rand.NextBool(3)) {
+         	//			dust.noGravity = true;
+         	//		}
 
-         			dust.velocity *= 0.3f;
-         			dust.velocity.Y = dust.velocity.Y - 1.5f;
-         		}
-         	}
+         	//		dust.velocity *= 0.3f;
+         	//		dust.velocity.Y = dust.velocity.Y - 1.5f;
+         	//	}
+         	//}
          }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

@@ -15,15 +15,21 @@ public class DecorativeWebTile : ModTile
 
         Main.tileNoFail[Type] = true;
         Main.tileNoAttach[Type] = true;
-        Main.tileBlendAll[Type] = true;
+        //Main.tileBlendAll[Type] = true;
 
-        TileID.Sets.BlockMergesWithMergeAllBlock[Type] = true;
+        //TileID.Sets.BlockMergesWithMergeAllBlock[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
         Main.tileWaterDeath[Type] = false;
 
         Main.tileNoSunLight[Type] = true;
-        
+
+        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
+        TileObjectData.newTile.Width = 1;
+        TileObjectData.newTile.Height = 1;
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+        TileObjectData.newTile.CoordinatePadding = 2;
+
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 

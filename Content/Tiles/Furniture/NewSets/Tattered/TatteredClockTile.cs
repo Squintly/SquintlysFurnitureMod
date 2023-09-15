@@ -34,24 +34,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
             TileObjectData.addTile(Type);
 
-            AnimationFrameHeight = 36;
+            //AnimationFrameHeight = 90;
 
             RegisterItemDrop(ModContent.ItemType<TatteredClockItem>());
         }
 
-        public override void AnimateTile(ref int frame, ref int frameCounter)
-        {
-            // Spend 9 ticks on each of 6 frames, looping
-            frameCounter++;
-            if (frameCounter >= 9)
-            {
-                frameCounter = 0;
-                if (++frame >= 3)
-                {
-                    frame = 0;
-                }
-            }
-        }
+        //public override void AnimateTile(ref int frame, ref int frameCounter)
+        //{
+        //    // Spend 9 ticks on each of 6 frames, looping
+        //    frameCounter++;
+        //    if (frameCounter >= 9)
+        //    {
+        //        frameCounter = 0;
+        //        if (++frame >= 4)
+        //        {
+        //            frame = 0;
+        //        }
+        //    }
+        //}
         public override bool RightClick(int x, int y)
         {
             string text = "AM";

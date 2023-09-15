@@ -28,7 +28,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 3;
@@ -37,6 +36,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
 
@@ -50,20 +51,20 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chandelier"));
         }
 
-         public override void HitWire(int i, int j)
-         {
-             Tile tile = Main.tile[i, j];
-             short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+         //public override void HitWire(int i, int j)
+         //{
+         //    Tile tile = Main.tile[i, j];
+         //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-             Main.tile[i, j].TileFrameX += frameAdjustment;
-             Wiring.SkipWire(i, j);
+         //    Main.tile[i, j].TileFrameX += frameAdjustment;
+         //    Wiring.SkipWire(i, j);
 
-               //Avoid trying to send packets in singleplayer.
-             if (Main.netMode != NetmodeID.SinglePlayer)
-             {
-                 NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-             }
-         }
+         //      //Avoid trying to send packets in singleplayer.
+         //    if (Main.netMode != NetmodeID.SinglePlayer)
+         //    {
+         //        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
+         //    }
+         //}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

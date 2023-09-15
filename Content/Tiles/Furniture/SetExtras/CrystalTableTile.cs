@@ -14,7 +14,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 {
     public class CrystalTableTile : ModTile
     {
-        public const int NextStyleHeight = 110;
+        public const int NextStyleHeight = 54;
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -28,8 +28,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
             AdjTiles = new int[] { TileID.Beds };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); 
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16, 18 };
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
+            TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.Width = 4;
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
 
             TileObjectData.addTile(Type);
@@ -56,9 +58,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections
-            width = 2; // Default to the Width defined for TileObjectData.newTile
-            height = 6; // Default to the Height defined for TileObjectData.newTile
-            extraY = 4;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
+            width = 4; // Default to the Width defined for TileObjectData.newTile
+            height = 3; // Default to the Height defined for TileObjectData.newTile
+            extraY = 1;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
         }
 
         public override bool RightClick(int i, int j)
@@ -73,15 +75,15 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 spawnY--;
             }
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            { // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                {
-                    player.GamepadEnableGrappleCooldown();
-                    player.sleeping.StartSleeping(player, i, j);
-                }
-            }
-            else
+            //if (!Player.IsHoveringOverABottomSideOfABed(i, j))
+            //{ // This assumes your bed is 4x2 with 2x2 sections. You have to write your own code here otherwise
+            //    if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
+            //    {
+            //        player.GamepadEnableGrappleCooldown();
+            //        player.sleeping.StartSleeping(player, i, j);
+            //    }
+            //}
+            //else
             {
                 player.FindSpawn();
 
@@ -100,19 +102,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             return true;
         }
 
-        public override void MouseOver(int i, int j)
-        {
-            Player player = Main.LocalPlayer;
+        //public override void MouseOver(int i, int j)
+        //{
+        //    Player player = Main.LocalPlayer;
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            {
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                { // Match condition in RightClick. Interaction should only show if clicking it does something
-                    player.noThrow = 2;
-                    player.cursorItemIconEnabled = true;
-                    player.cursorItemIconID = ItemID.SleepingIcon;
-                }
-            }
-        }
+        //    if (!Player.IsHoveringOverABottomSideOfABed(i, j))
+        //    {
+        //        if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
+        //        { // Match condition in RightClick. Interaction should only show if clicking it does something
+        //            player.noThrow = 2;
+        //            player.cursorItemIconEnabled = true;
+        //            player.cursorItemIconID = ItemID.SleepingIcon;
+        //        }
+        //    }
+        //}
     }
 }

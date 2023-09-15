@@ -28,7 +28,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 1;
@@ -37,6 +36,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
+
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
 
@@ -91,19 +92,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
              short frameY = tile.TileFrameY;
 
              // Return if the lamp is off (when frameX is 0), or if a random check failed.
-             if (frameX != 0 || !Main.rand.NextBool(40))
-             {
-                 return;
-             }
+             //if (frameX != 0 || !Main.rand.NextBool(40))
+             //{
+             //    return;
+             //}
 
-             int style = frameY / 18;
-             int dustChoice;
-             dustChoice = (DustID.Torch);
+             //int style = frameY / 18;
+             //int dustChoice;
+             //dustChoice = (DustID.Torch);
 
-             var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-             dust.noGravity = true;
-             dust.velocity *= 0.3f;
-             dust.velocity.Y += - 1.5f;
+             //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+             //dust.noGravity = true;
+             //dust.velocity *= 0.3f;
+             //dust.velocity.Y += - 1.5f;
 
          }
 

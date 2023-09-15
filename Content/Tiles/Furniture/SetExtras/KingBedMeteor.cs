@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
+using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.DataStructures;
@@ -14,35 +14,45 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 {
     public class KingBedMeteor : ModTile
     {
-        public const int NextStyleHeight = 110;
+        public const int NextStyleHeight = 108;
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
+            TileID.Sets.HasOutlines[Type] = true;
+
+            Main.tileNoAttach[Type] = true;
+            Main.tileNoFail[Type] = false;
+
             Main.tileLavaDeath[Type] = true;
-            TileID.Sets.HasOutlines[Type] = true; // Facilitates calling ModifySleepingTargetInfo
+
+            Main.tileLighted[Type] = true;
+
+            TileID.Sets.DisableSmartCursor[Type] = true; // Facilitates calling ModifySleepingTargetInfo
             TileID.Sets.InteractibleByNPCs[Type] = true; // Town NPCs will palm their hand at this tile
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair); // Beds count as chairs for the purpose of suitable room creation
-
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+            AdjTiles = new int[] { TileID.Torches };
             AdjTiles = new int[] { TileID.Beds };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2); // this style already takes care of direction for us
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3); // this style already takes care of direction for us
             TileObjectData.newTile.Height = 6;
+            TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
+            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 
             TileObjectData.addTile(Type);
 
-            AnimationFrameHeight = 72;
+            AnimationFrameHeight = 110;
             RegisterItemDrop(ModContent.ItemType<KingBedMeteorItem>());
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
-            if (frameCounter >= 9)
+            if (frameCounter >= 16)
             {
                 frameCounter = 0;
                 frame++;
@@ -57,7 +67,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections
-            width = 2; // Default to the Width defined for TileObjectData.newTile
+            width = 4; // Default to the Width defined for TileObjectData.newTile
             height = 6; // Default to the Height defined for TileObjectData.newTile
             extraY = 4;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
         }
@@ -74,7 +84,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 spawnY--;
             }
 
-            
+            {
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -87,24 +97,54 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            
+            }
 
             return true;
         }
 
-        public override void MouseOver(int i, int j)
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            Player player = Main.LocalPlayer;
-
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
+            Tile tile = Main.tile[i, j];
+            if (tile.TileFrameX == 0)
             {
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                { // Match condition in RightClick. Interaction should only show if clicking it does something
-                    player.noThrow = 2;
-                    player.cursorItemIconEnabled = true;
-                    player.cursorItemIconID = ItemID.SleepingIcon;
-                }
+                // We can support different light colors for different styles here: switch (tile.frameY / 54)
+                r = 0.8f;
+                g = 0.5f;
+                b = 0.5f;
             }
         }
+            public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
+
+            Tile tile = Main.tile[i, j];
+
+            short frameX = tile.TileFrameX;
+
+            //Return if the lamp is off (when frameX is 0), or if a random check failed.
+            if (frameX != 0 || !Main.rand.NextBool(40))
+            {
+                return;
+            }
+        }
+
     }
+
+        //public override void MouseOver(int i, int j)
+        //{
+        //    Player player = Main.LocalPlayer;
+
+        //    if (!Player.IsHoveringOverABottomSideOfABed(i, j))
+        //    {
+        //        if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
+        //        { // Match condition in RightClick. Interaction should only show if clicking it does something
+        //            player.noThrow = 2;
+        //            player.cursorItemIconEnabled = true;
+        //            player.cursorItemIconID = ItemID.SleepingIcon;
+        //        }
+        //    }
+        //}
 }

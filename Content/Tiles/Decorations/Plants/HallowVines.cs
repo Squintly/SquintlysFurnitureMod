@@ -13,7 +13,6 @@ public class HallowVines : ModTile
     public override void SetStaticDefaults()
     {
         TileID.Sets.DisableSmartCursor[Type] = true;
-
         Main.tileNoFail[Type] = true;
         Main.tileNoAttach[Type] = true;
 
@@ -23,7 +22,6 @@ public class HallowVines : ModTile
         TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-        TileObjectData.newTile.CoordinatePadding = 2;
 
         TileObjectData.addTile(Type);
 

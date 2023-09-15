@@ -28,13 +28,14 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
-            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.WaterDeath = true;
             TileObjectData.newTile.Height = 1;
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.CoordinateHeights = new int[1] { 26 };
+
+            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -51,28 +52,28 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Candle"));
         }
 
-        public override void HitWire(int i, int j) 
-        {
-            Tile tile = Main.tile[i, j];
-            int Y = j - Main.tile[i, j].TileFrameY / 18;
-         	int X = i - Main.tile[i, j].TileFrameX / 18;
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        //public override void HitWire(int i, int j) 
+        //{
+        //    Tile tile = Main.tile[i, j];
+        //    int Y = j - Main.tile[i, j].TileFrameY / 18;
+        // 	int X = i - Main.tile[i, j].TileFrameX / 18;
+        //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-            Main.tile[X, Y].TileFrameX += frameAdjustment;
-            Main.tile[X, Y + 1].TileFrameX += frameAdjustment;
-            Main.tile[X + 1, Y].TileFrameX += frameAdjustment;
-            Main.tile[X + 1, Y + 1].TileFrameX += frameAdjustment;
-            Wiring.SkipWire(X, Y);
-            Wiring.SkipWire(X, Y + 1);
-            Wiring.SkipWire(X + 1, Y);
-            Wiring.SkipWire(X + 1, Y + 1);
+        //    Main.tile[X, Y].TileFrameX += frameAdjustment;
+        //    Main.tile[X, Y + 1].TileFrameX += frameAdjustment;
+        //    Main.tile[X + 1, Y].TileFrameX += frameAdjustment;
+        //    Main.tile[X + 1, Y + 1].TileFrameX += frameAdjustment;
+        //    Wiring.SkipWire(X, Y);
+        //    Wiring.SkipWire(X, Y + 1);
+        //    Wiring.SkipWire(X + 1, Y);
+        //    Wiring.SkipWire(X + 1, Y + 1);
 
-            // Avoid trying to send packets in singleplayer.
-            if (Main.netMode != NetmodeID.SinglePlayer)
-            {
-                NetMessage.SendTileSquare(-1, i, j + 1, 2, TileChangeType.None);
-            }
-         }
+        //    // Avoid trying to send packets in singleplayer.
+        //    if (Main.netMode != NetmodeID.SinglePlayer)
+        //    {
+        //        NetMessage.SendTileSquare(-1, i, j + 1, 2, TileChangeType.None);
+        //    }
+        // }
 
          public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects) 
          {

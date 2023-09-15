@@ -22,19 +22,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
-            TileID.Sets.CanBeSleptIn[Type] = true; // Facilitates calling ModifySleepingTargetInfo
+            /*TileID.Sets.CanBeSleptIn[Type] = true; */// Facilitates calling ModifySleepingTargetInfo
             TileID.Sets.InteractibleByNPCs[Type] = true; // Town NPCs will palm their hand at this tile
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
 
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair); // Beds count as chairs for the purpose of suitable room creation
-
-            AdjTiles = new int[] { TileID.Beds };
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             AdjTiles = new int[] { TileID.Torches };
+            AdjTiles = new int[] { TileID.Beds };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style5x4);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.Height = 4;
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
@@ -93,32 +93,32 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 }
             }
         }
-        public override void HitWire(int i, int j)
-        {
-            Tile tile = Main.tile[i, j];
-            int Y = j - tile.TileFrameY % 72 / 18;
-         	int X = i - tile.TileFrameX % 72 / 18;
+        //public override void HitWire(int i, int j)
+        //{
+        //    Tile tile = Main.tile[i, j];
+        //    int Y = j - tile.TileFrameY % 72 / 18;
+        // 	int X = i - tile.TileFrameX % 72 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
+        //    short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
 
-            for (int x = 0; x < X + 4; x++)
-            {
-                for (int y = Y; y < Y + 4; y++)
-                {
-                    Main.tile[x,y].TileFrameX += frameAdjustment;
+        //    for (int x = 0; x < X + 4; x++)
+        //    {
+        //        for (int y = Y; y < Y + 4; y++)
+        //        {
+        //            Main.tile[x,y].TileFrameX += frameAdjustment;
 
                     
-                        Wiring.SkipWire(x,y);
+        //                Wiring.SkipWire(x,y);
                     
-                }
-            }
+        //        }
+        //    }
 
 
-            if (Main.netMode != NetmodeID.SinglePlayer)
-            {
-                NetMessage.SendTileSquare(-1, X, Y, 4, TileChangeType.None);
-            }
-        }
+        //    if (Main.netMode != NetmodeID.SinglePlayer)
+        //    {
+        //        NetMessage.SendTileSquare(-1, X, Y, 4, TileChangeType.None);
+        //    }
+        //}
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
@@ -137,19 +137,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 return;
             }
         }
-        public override void PlaceInWorld(int i, int j, Item item)
-        {
-            Main.NewText(new Vector2(i,j));
-            Main.NewText(Main.MouseWorld / 16);
-        }
+        //public override void PlaceInWorld(int i, int j, Item item)
+        //{
+        //    Main.NewText(new Vector2(i,j));
+        //    Main.NewText(Main.MouseWorld / 16);
+        //}
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
+            //if (i % 2 == 1)
+            //{
+            //    effects = SpriteEffects.FlipHorizontally;
+            //}
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
@@ -170,7 +170,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(uint)i); // Don't remove any casts.
 
             // We can support different flames for different styles here: int style = Main.tile[j, X].frameY / 5
-            int frame = frameY / 18;
+            int frame = frameY / 72;
 
             if (frame == 0) // Livingwood
             {
@@ -182,7 +182,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(75, 75, 75, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-            else if (frame == 4) // Pumpkin
+            else if (frame == 1) // Pumpkin
             {
                 for (int c = 0; c < 7; c++)
                 {
@@ -192,7 +192,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-            else if (frame == 8) // Sandstone
+            else if (frame == 2) // Sandstone
             {
                 for (int c = 0; c < 7; c++)
                 {
@@ -207,7 +207,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections
-            width = 2; // Default to the Width defined for TileObjectData.newTile
+            width = 4; // Default to the Width defined for TileObjectData.newTile
             height = 4; // Default to the Height defined for TileObjectData.newTile
             extraY = 2;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
         }
@@ -223,13 +223,15 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         {
             Player player = Main.LocalPlayer;
             Tile tile = Main.tile[i, j];
-            int spawnX = (i - (tile.TileFrameX / 36)) + (tile.TileFrameX >= 72 ? 5 : 2);
+            int spawnX = (i - (tile.TileFrameX / 18)) + (tile.TileFrameX >= 72 ? 5 : 2);
             int spawnY = j + 2;
 
             if (tile.TileFrameY % NextStyleHeight != 0)
             {
                 spawnY--;
             }
+
+            {
                 player.FindSpawn();
 
                 if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -242,24 +244,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     player.ChangeSpawn(spawnX, spawnY);
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
-            
+            }
 
             return true;
         }
 
-        public override void MouseOver(int i, int j)
-        {
-            Player player = Main.LocalPlayer;
+        //public override void MouseOver(int i, int j)
+        //{
+        //    Player player = Main.LocalPlayer;
 
-            if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-            {
-                if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-                { // Match condition in RightClick. Interaction should only show if clicking it does something
-                    player.noThrow = 2;
-                    player.cursorItemIconEnabled = true;
-                    player.cursorItemIconID = ItemID.SleepingIcon;
-                }
-            }
-        }
+        //    if (!Player.IsHoveringOverABottomSideOfABed(i, j))
+        //    {
+        //        if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
+        //        { // Match condition in RightClick. Interaction should only show if clicking it does something
+        //            player.noThrow = 2;
+        //            player.cursorItemIconEnabled = true;
+        //            player.cursorItemIconID = ItemID.SleepingIcon;
+        //        }
+        //    }
+        //}
     }
 }

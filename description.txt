@@ -14,6 +14,7 @@ CURRENT CONTENT:
 - Egyptian-themed obelisks, in whole and broken variants
 - 1x1 ceiling lamps for all sets + dungeon lanterns! 
 - 2x2 armchairs for all sets! They're not currently sit-on-able, but they DO count as seating for NPC housing requirements!
+- New front-facing beds for all sets! You can't sleep on them, but they work as spawn points, count for NPC housing requirements, and really brighten up a room!
 - New furniture sets:
 	- Tattered! Made with wood & ecto mist
 	- Festive! Made at a special crafting station which also can be used to craft nearly 100 festive decorations because I am apparently a maniac!
