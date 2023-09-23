@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -48,26 +50,48 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lamp"));
         }
 
-        //public override void HitWire(int i, int j)
-        //{
-        //    Tile tile = Main.tile[i, j];
-        //    int topY = j - tile.TileFrameY / 18 % 3;
-        //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        {
+            return true;
+        }
 
-        //    Main.tile[i, topY].TileFrameX += frameAdjustment;
-        //    Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
-        //    Main.tile[i, topY + 2].TileFrameX += frameAdjustment;
+        public override bool RightClick(int i, int j)
+        {
+            SoundEngine.PlaySound(SoundID.Mech);
+            ToggleTile(i, j);
+            return true;
+        }
+        public override void HitWire(int i, int j)
+        {
+            ToggleTile(i, j);
+        }
 
-        //    Wiring.SkipWire(i, topY);
-        //    Wiring.SkipWire(i, topY + 1);
-        //    Wiring.SkipWire(i, topY + 2);
+        public void ToggleTile(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
+            int topY = j - tile.TileFrameY % 54 / 18;
 
-        //    // Avoid trying to send packets in singleplayer.
-        //    if (Main.netMode != NetmodeID.SinglePlayer)
-        //    {
-        //        NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
-        //    }
-        //}
+            short frameAdjustment = (short)(tile.TileFrameX >= 18 ? -18 : 18); //change depending width
+
+            for (int x = topX; x < topX + 1; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 3; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 1, 3); //change for width, height
+            }
+        }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

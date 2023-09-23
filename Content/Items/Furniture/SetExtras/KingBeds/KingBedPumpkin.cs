@@ -30,8 +30,8 @@ internal class KingBedPumpkin : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBeds4x4Lighted>();
-        Item.placeStyle = 1;
+        Item.createTile = ModContent.TileType<KingBedsLightedPumpkin>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

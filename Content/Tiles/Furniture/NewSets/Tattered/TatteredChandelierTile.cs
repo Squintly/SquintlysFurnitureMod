@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -51,20 +53,48 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chandelier"));
         }
 
-         //public override void HitWire(int i, int j)
-         //{
-         //    Tile tile = Main.tile[i, j];
-         //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        {
+            return true;
+        }
 
-         //    Main.tile[i, j].TileFrameX += frameAdjustment;
-         //    Wiring.SkipWire(i, j);
+        public override bool RightClick(int i, int j)
+        {
+            SoundEngine.PlaySound(SoundID.Mech);
+            ToggleTile(i, j);
+            return true;
+        }
+        public override void HitWire(int i, int j)
+        {
+            ToggleTile(i, j);
+        }
 
-         //      //Avoid trying to send packets in singleplayer.
-         //    if (Main.netMode != NetmodeID.SinglePlayer)
-         //    {
-         //        NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-         //    }
-         //}
+        public void ToggleTile(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 54 / 18; //change first number depending on size
+            int topY = j - tile.TileFrameY % 54 / 18;
+
+            short frameAdjustment = (short)(tile.TileFrameX >= 54 ? -54 : 54); //change last two depending on size
+
+            for (int x = topX; x < topX + 3; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 3; y++)
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 3, 3);
+            }
+        }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -87,19 +117,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
              short frameY = tile.TileFrameY;
 
              // Return if the lamp is off (when frameX is 0), or if a random check failed.
-             if (frameX != 0 || !Main.rand.NextBool(40))
-             {
-                 return;
-             }
+             //if (frameX != 0 || !Main.rand.NextBool(40))
+             //{
+             //    return;
+             //}
 
-             int style = frameY / 18;
-             int dustChoice;
-             dustChoice = (DustID.Torch);
+             //int style = frameY / 18;
+             //int dustChoice;
+             //dustChoice = (DustID.Torch);
 
-             var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-             dust.noGravity = true;
-             dust.velocity *= 0.3f;
-             dust.velocity.Y = dust.velocity.Y - 1.5f;
+             //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+             //dust.noGravity = true;
+             //dust.velocity *= 0.3f;
+             //dust.velocity.Y = dust.velocity.Y - 1.5f;
 
          }
 

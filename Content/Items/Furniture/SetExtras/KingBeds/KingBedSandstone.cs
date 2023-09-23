@@ -30,8 +30,8 @@ internal class KingBedSandstone : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBeds4x4Lighted>();
-        Item.placeStyle = 2;
+        Item.createTile = ModContent.TileType<KingBedsLightedSandstone>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

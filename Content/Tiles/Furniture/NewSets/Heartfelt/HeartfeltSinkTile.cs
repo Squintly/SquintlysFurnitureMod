@@ -1,9 +1,13 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -52,8 +56,52 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             AdjTiles = new int[] { Type };
 
             AddMapEntry(new Color(100, 100, 100), Language.GetText("MapObject.Sink"));
+
+            RegisterItemDrop(ModContent.ItemType<HeartfeltSink>());
         }
 
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        {
+            return true;
+        }
+
+        public override bool RightClick(int i, int j)
+        {
+            SoundEngine.PlaySound(SoundID.Mech);
+            ToggleTile(i, j);
+            return true;
+        }
+        public override void HitWire(int i, int j)
+        {
+            ToggleTile(i, j);
+        }
+
+        public void ToggleTile(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 36 / 18; //change first number to width
+            int topY = j - tile.TileFrameY % 36 / 18; //change first number to height
+
+            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change depending on width
+
+            for (int x = topX; x < topX + 2; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 2; y++) // height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 2, 2); //width, height
+            }
+        }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];

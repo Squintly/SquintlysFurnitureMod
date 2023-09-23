@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -45,18 +47,46 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        {
+            return true;
+        }
+
+        public override bool RightClick(int i, int j)
+        {
+            SoundEngine.PlaySound(SoundID.Mech, new Vector2(i * 16, j * 16));
+            ToggleTile(i, j);
+            return true;
+        }
         public override void HitWire(int i, int j)
         {
+            ToggleTile(i, j);
+        }
+
+        public void ToggleTile(int i, int j)
+        {
             Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 18 / 18;
+            int topY = j - tile.TileFrameY % 18 / 18;
+
             short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
 
-            Main.tile[i, j].TileFrameX += frameAdjustment;
-            Wiring.SkipWire(i, j);
+            for (int x = topX; x < topX + 1; x++)
+            {
+                for (int y = topY; y < topY + 1; y++)
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
 
-            // Avoid trying to send packets in singleplayer.
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
-                NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
+                NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
             }
         }
 
@@ -317,14 +347,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
-
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
@@ -390,11 +412,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
-
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 

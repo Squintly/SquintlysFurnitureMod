@@ -51,13 +51,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             extraY = 2;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
         }
 
-        //public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
-        //{
-        //    // Default values match the regular vanilla bed
-        //    // You might need to mess with the info here if your bed is not a typical 4x2 tile
-        //    info.VisualOffset.Y += 4f; // Move player down a notch because the bed is not as high as a regular bed
-        //}
-
         public override bool RightClick(int i, int j)
         {
             Player player = Main.LocalPlayer;
@@ -87,20 +80,5 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
             return true;
         }
-
-        //public override void MouseOver(int i, int j)
-        //{
-        //    Player player = Main.LocalPlayer;
-
-        //    if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-        //    {
-        //        if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-        //        { // Match condition in RightClick. Interaction should only show if clicking it does something
-        //            player.noThrow = 2;
-        //            player.cursorItemIconEnabled = true;
-        //            player.cursorItemIconID = ItemID.SleepingIcon;
-        //        }
-        //    }
-        //}
     }
 }

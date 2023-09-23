@@ -30,7 +30,7 @@ internal class KingBedLivingwoodArch : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<KingBeds4x4Lighted>();
+        Item.createTile = ModContent.TileType<KingBedsLightedLivingwood>();
         Item.placeStyle = 0;
     }
 

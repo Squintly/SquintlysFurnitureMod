@@ -1,8 +1,11 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
+using Terraria.Audio;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -36,22 +39,64 @@ public class HeartfeltBathtubTile : ModTile
         AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
-
-        TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-        TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-        TileObjectData.addAlternate(1);
         
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        TileObjectData.newTile.StyleLineSkip = 2;
 
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Bathtub"));
+        RegisterItemDrop(ModContent.ItemType<HeartfeltBathtub>());
+    }
+
+    public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+    {
+        return true;
+    }
+
+    public override bool RightClick(int i, int j)
+    {
+        SoundEngine.PlaySound(SoundID.Mech, new Vector2(i * 16, j * 16));
+        ToggleTile(i, j);
+        return true;
+    }
+
+    public override void HitWire(int i, int j)
+    {
+        ToggleTile(i, j);
+    }
+
+    public void ToggleTile(int i, int j)
+    {
+        Tile tile = Main.tile[i, j];
+        int topX = i - tile.TileFrameX % 72 / 18;
+        int topY = j - tile.TileFrameY % 36 / 18;
+
+        short frameAdjustment = (short)(tile.TileFrameY >= 36 ? -36 : 36);
+
+        for (int x = topX; x < topX + 4; x++)
+        {
+            for (int y = topY; y < topY + 2; y++)
+            {
+                Main.tile[x, y].TileFrameY += frameAdjustment;
+
+                if (Wiring.running)
+                {
+                    Wiring.SkipWire(x, y);
+                }
+            }
+        }
+
+        if (Main.netMode != NetmodeID.SinglePlayer)
+        {
+            NetMessage.SendTileSquare(-1, topX, topY, 4, 2);
+        }
     }
 
     public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
     {
         Tile tile = Main.tile[i, j];
-        if (tile.TileFrameX == 0)
+        if (tile.TileFrameY == 0)
         {
             // We can support different light colors for different styles here: switch (tile.frameY / 54)
             r = 1f;

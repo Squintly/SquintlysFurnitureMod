@@ -2,8 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -52,20 +54,48 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
         }
 
-         public override void HitWire(int i, int j)
-         {
-             Tile tile = Main.tile[i, j];
-             short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        {
+            return true;
+        }
 
-             Main.tile[i, j].TileFrameX += frameAdjustment;
-             Wiring.SkipWire(i, j);
+        public override bool RightClick(int i, int j)
+        {
+            SoundEngine.PlaySound(SoundID.Mech, new Vector2(i * 16, j * 16));
+            ToggleTile(i, j);
+            return true;
+        }
+        public override void HitWire(int i, int j)
+        {
+            ToggleTile(i, j);
+        }
 
-             // Avoid trying to send packets in singleplayer.
-             if (Main.netMode != NetmodeID.SinglePlayer)
-             {
-                 NetMessage.SendTileSquare(-1, i, j + 1, 3, TileChangeType.None);
-             }
-         }
+        public void ToggleTile(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 18 / 18;
+            int topY = j - tile.TileFrameY % 18 / 18;
+
+            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+
+            for (int x = topX; x < topX + 1; x++)
+            {
+                for (int y = topY; y < topY + 1; y++)
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
+            }
+        }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

@@ -1,10 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
@@ -14,10 +15,11 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 {
-    public class KingBedMeteor : ModTile
+    public class KingBedsLightedLivingwood : ModTile
     {
-        public const int NextStyleHeight = 108;
+        public const int NextStyleHeight = 72;
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -29,11 +31,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             Main.tileLavaDeath[Type] = true;
 
             Main.tileLighted[Type] = true;
-            Main.tileBlockLight[Type] = false;
 
-            TileID.Sets.DisableSmartCursor[Type] = true; // Facilitates calling ModifySleepingTargetInfo
-            TileID.Sets.InteractibleByNPCs[Type] = true; // Town NPCs will palm their hand at this tile
-            TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
@@ -41,33 +39,33 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             AdjTiles = new int[] { TileID.Torches };
             AdjTiles = new int[] { TileID.Beds };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3); // this style already takes care of direction for us
-            TileObjectData.newTile.Height = 6;
+            TileID.Sets.CanBeSleptIn[Type] = false;
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+            TileID.Sets.IsValidSpawnPoint[Type] = true;
+            TileID.Sets.DisableSmartCursor[Type] = true;
+
+            TileID.Sets.InteractibleByNPCs[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Height = 4;
             TileObjectData.newTile.Width = 4;
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 16, 16, 18 };
+            TileObjectData.newTile.CoordinateHeights = new int[4] { 16, 16, 16, 18 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+
+            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.addTile(Type);
 
-            AnimationFrameHeight = 110;
-            RegisterItemDrop(ModContent.ItemType<KingBedMeteorItem>());
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/SetExtras/KingBedMeteor_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/SetExtras/KingBedsLightedLivingwood_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
+
+            RegisterItemDrop(ModContent.ItemType<KingBedLivingwoodArch>());
         }
-        public override void AnimateTile(ref int frame, ref int frameCounter)
-        {
-            frameCounter++;
-            if (frameCounter >= 25)
-            {
-                frameCounter = 0;
-                frame++;
-                frame %= 4;
-            }
-        }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -75,10 +73,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
-            // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections
-            width = 4; // Default to the Width defined for TileObjectData.newTile
-            height = 6; // Default to the Height defined for TileObjectData.newTile
-            extraY = 4;            //extraY = 0; // Depends on how you set up frameHeight and CoordinateHeights and CoordinatePaddingFix.Y
+            width = 4;
+            height = 4;
+            extraY = 2;
         }
 
         public override bool RightClick(int i, int j)
@@ -131,13 +128,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         {
             Tile tile = Main.tile[i, j];
             int topX = i - tile.TileFrameX % 72 / 18;
-            int topY = j - tile.TileFrameY % 108 / 18;
+            int topY = j - tile.TileFrameY % 72 / 18;
 
             short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
 
             for (int x = topX; x < topX + 4; x++)
             {
-                for (int y = topY; y < topY + 6; y++)
+                for (int y = topY; y < topY + 4; y++)
                 {
                     Main.tile[x, y].TileFrameX += frameAdjustment;
 
@@ -150,9 +147,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
-                NetMessage.SendTileSquare(-1, topX, topY, 4, 6);
+                NetMessage.SendTileSquare(-1, topX, topY, 4, 4);
             }
         }
+
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -160,11 +158,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             if (tile.TileFrameX == 0)
             {
                 // We can support different light colors for different styles here: switch (tile.frameY / 54)
-                r = 0.8f;
-                g = 0.5f;
-                b = 0.5f;
+                r = 1f;
+                g = 1f;
+                b = 0.6f;
             }
         }
+
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
@@ -182,6 +181,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 return;
             }
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
@@ -210,14 +210,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (long)(uint)i); // Don't remove any casts.
 
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
-            for (int c = 0; c < 1; c++)
+            for (int c = 0; c < 8; c++)
             {
-                float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0f;
-                float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0f;
+                float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.1f;
+                float shakeY = Utils.RandomInt(ref randSeed, -10, 11) * 0.1f;
 
-                spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+                spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(75, 75, 75, 0), 0f, default, 1f, effects, 0f);
             }
-
         }
     }
 }

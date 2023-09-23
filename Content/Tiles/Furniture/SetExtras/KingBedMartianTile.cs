@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
@@ -61,6 +62,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             {
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/SetExtras/KingBedMartianTile_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
+
+            RegisterItemDrop(ModContent.ItemType<KingBedMartianItem>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -71,13 +74,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             width = 4;
-            height = 2;
+            height = 1;
+            extraY = 0;
         }
-
-        //public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
-        //{
-        //    info.VisualOffset.Y += 0f;
-        //}
 
         public override bool RightClick(int i, int j)
         {
@@ -85,12 +84,17 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             Tile tile = Main.tile[i, j];
             int spawnX = (i - (tile.TileFrameX / 18)) + (tile.TileFrameX >= 72 ? 5 : 2);
             int spawnY = j + 2;
+            int left = Main.tile[i, j].TileFrameX / 18;
+            left %= 3;
+            left = i - left;
+            int top = j - Main.tile[i, j].TileFrameY / 18;
 
-            if (tile.TileFrameY % NextStyleHeight != 0)
+            if (tile.TileFrameY != 0)
             {
                 spawnY--;
             }
 
+            if (Main.tile[i, j].TileFrameY != 0)
             {
                 player.FindSpawn();
 
@@ -106,8 +110,47 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 }
             }
 
+            else
+            {
+                SoundEngine.PlaySound(SoundID.Mech);
+                ToggleTile(i, j);
+            }
+
             return true;
         }
+
+        public override void HitWire(int i, int j)
+        {
+            ToggleTile(i, j);
+        }
+
+        public void ToggleTile(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int topX = i - tile.TileFrameX % 72 / 18;
+            int topY = j - tile.TileFrameY % 36 / 18;
+
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
+
+            for (int x = topX; x < topX + 4; x++)
+            {
+                for (int y = topY; y < topY + 2; y++)
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 4, 2);
+            }
+        }
+
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -176,52 +219,4 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
     }
-
-
-
-    //public override void HitWire(int i, int j)
-    //{
-    //    Tile tile = Main.tile[i, j];
-    //    int topY = j - tile.TileFrameY / 18 % 2;
-    //    short frameAdjustment = (short)(tile.TileFrameX > 0 ? -72 : 72);
-
-    //    Main.tile[i, topY].TileFrameX += frameAdjustment;
-    //    Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
-
-    //    Wiring.SkipWire(i, topY);
-    //    Wiring.SkipWire(i + 1, topY);
-    //    Wiring.SkipWire(i + 2, topY);
-    //    Wiring.SkipWire(i + 3, topY);
-    //    Wiring.SkipWire(i, topY + 1);
-    //    Wiring.SkipWire(i + 1, topY + 1);
-    //    Wiring.SkipWire(i + 2, topY);
-    //    Wiring.SkipWire(i + 3, topY + 1);
-
-
-    //    if (Main.netMode != NetmodeID.SinglePlayer)
-    //    {
-    //        NetMessage.SendTileSquare(-1, i, topY + 1, 2, TileChangeType.None);
-    //    }
-    //}
-
-    //public override void MouseOver(int i, int j)
-    //{
-    //    Player player = Main.LocalPlayer;
-
-    //    if (!Player.IsHoveringOverABottomSideOfABed(i, j))
-    //    {
-    //        if (player.IsWithinSnappngRangeToTile(i, j, PlayerSleepingHelper.BedSleepingMaxDistance))
-    //        { // Match condition in RightClick. Interaction should only show if clicking it does something
-    //            player.noThrow = 2;
-    //            player.cursorItemIconEnabled = true;
-    //            player.cursorItemIconID = ItemID.SleepingIcon;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        player.noThrow = 2;
-    //        player.cursorItemIconEnabled = true;
-    //        //player.cursorItemIconID = ModContent.ItemType<KingBedMartian>();
-    //    }
-    //}
 }
