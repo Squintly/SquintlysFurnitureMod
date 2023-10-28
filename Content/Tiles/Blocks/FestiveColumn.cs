@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Blocks;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -15,10 +16,9 @@ public class FestiveColumn : ModTile
         Main.tileNoAttach[Type] = false;
         Main.tileBlockLight[Type] = false;
 
-        AddMapEntry(new Color(66, 38, 5));
+        TileID.Sets.IsBeam[Type] = true;
 
-        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
-        TileObjectData.addTile(Type);
+        AddMapEntry(new Color(66, 38, 5));
 
         RegisterItemDrop(ModContent.ItemType<FestiveColumnItem>());
     }

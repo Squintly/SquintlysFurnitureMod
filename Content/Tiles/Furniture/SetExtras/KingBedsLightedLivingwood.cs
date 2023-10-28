@@ -6,8 +6,8 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -109,7 +109,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
             }
-
             else
             {
                 SoundEngine.PlaySound(SoundID.Mech);
@@ -151,7 +150,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
-
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
@@ -184,12 +182,14 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            SpriteEffects effects = SpriteEffects.None;
+            var tile = Main.tile[i, j];
 
-            //if (i % 2 == 1)
-            //{
-            //    effects = SpriteEffects.FlipHorizontally;
-            //}
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
+            SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
@@ -198,7 +198,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 18;
             int offsetY = 0;
             int height = 18;

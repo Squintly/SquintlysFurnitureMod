@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -27,7 +26,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
             AdjTiles = new int[] { TileID.Beds };
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top); 
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 4;
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };

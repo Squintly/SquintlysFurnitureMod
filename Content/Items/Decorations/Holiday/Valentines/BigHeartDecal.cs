@@ -1,6 +1,7 @@
 using SquintlysFurnitureMod.Content.Items.Blocks;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
+using SquintlysFurnitureMod.Content.Items.Materials;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -39,7 +40,7 @@ internal class BigHeartDecal : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(2)
-            .AddIngredient(ItemID.Silk, 4)
+            .AddIngredient(ModContent.ItemType<DecalSheet>(), 1)
             .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>())
             .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
             .Register();

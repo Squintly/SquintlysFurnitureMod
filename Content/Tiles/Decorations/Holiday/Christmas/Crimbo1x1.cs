@@ -15,7 +15,6 @@ public class Crimbo1x1 : ModTile
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
-        
 
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
@@ -23,6 +22,8 @@ public class Crimbo1x1 : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 

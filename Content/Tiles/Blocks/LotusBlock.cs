@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Blocks;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -19,8 +20,8 @@ public class LotusBlock : ModTile
         Main.tileMerge[ModContent.TileType<SandstonePillar>()][ModContent.TileType<LotusBlock>()] = true;
 
         AddMapEntry(new Color(18, 135, 133));
-        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
-        TileObjectData.addTile(Type);
+
+        TileID.Sets.IsBeam[Type] = true;
 
         RegisterItemDrop(ModContent.ItemType<LotusBlockItem>());
     }

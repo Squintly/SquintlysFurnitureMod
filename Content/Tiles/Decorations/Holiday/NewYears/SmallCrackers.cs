@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,7 +15,7 @@ public class SmallCrackers : ModTile
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
-        
+
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
@@ -22,6 +23,8 @@ public class SmallCrackers : ModTile
 
         TileObjectData.newTile.StyleHorizontal = true;
         TileObjectData.newTile.StyleWrapLimit = 111;
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 

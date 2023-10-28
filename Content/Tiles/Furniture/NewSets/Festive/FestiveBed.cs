@@ -25,7 +25,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
-            
+
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);

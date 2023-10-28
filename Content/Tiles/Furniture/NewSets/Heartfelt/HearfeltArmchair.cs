@@ -21,7 +21,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             Main.tileNoAttach[Type] = true;
 
             Main.tileLavaDeath[Type] = true;
-            
+
             TileID.Sets.HasOutlines[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 

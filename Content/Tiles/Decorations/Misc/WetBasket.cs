@@ -20,7 +20,7 @@ public class WetBasket : ModTile
 
         Main.tileLavaDeath[Type] = false;
         Main.tileWaterDeath[Type] = false;
-        
+
         Main.tileNoSunLight[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
@@ -28,6 +28,8 @@ public class WetBasket : ModTile
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.CoordinateHeights = new int[1] { 20 };
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;

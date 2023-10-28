@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
-using System.Reflection.Metadata;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -11,7 +10,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Plants;
 
 public class SilkCorruptionPlantsTile : ModTile
 {
-    public const int NextStyleWidth = 18; 
+    public const int NextStyleWidth = 18;
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -32,6 +32,8 @@ public class SilkCorruptionPlantsTile : ModTile
         TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
         TileObjectData.newTile.CoordinateWidth = 16;
         TileObjectData.newTile.CoordinatePadding = 2;
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.RandomStyleRange = 6;
         TileObjectData.newTile.StyleWrapLimit = 111;

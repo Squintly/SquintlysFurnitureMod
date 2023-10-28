@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -31,7 +32,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
 
             TileObjectData.newTile.StyleLineSkip = 2;
-            
+
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
@@ -58,6 +59,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -349,13 +351,18 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
-            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
             {
                 return;
             }
 
-            Tile tile = Main.tile[i, j];
-
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
+            
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -375,7 +382,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y += - 1.5f;
+                dust.velocity.Y += -1.5f;
             }
 
             if (style == 27)
@@ -385,7 +392,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y += - 1.5f;
+                dust.velocity.Y += -1.5f;
             }
 
             if (style == 34)
@@ -395,7 +402,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y += - 1.5f;
+                dust.velocity.Y += -1.5f;
             }
 
             if (style == 22)
@@ -405,12 +412,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
                 dust.noGravity = true;
                 dust.velocity *= 0.3f;
-                dust.velocity.Y += - 1.5f;
+                dust.velocity.Y += -1.5f;
             }
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
@@ -420,7 +434,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 16;
             int offsetY = -1;
             int height = 16;
@@ -524,7 +537,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(50, 50, 50, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-            else if (frame == 29 || frame == 30 ) // granite, meteorite, balloon
+            else if (frame == 29 || frame == 30) // granite, meteorite, balloon
             {
                 for (int c = 0; c < 1; c++)
                 {
@@ -576,8 +589,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-
-
             else
             {
                 for (int c = 0; c < 0; c++)

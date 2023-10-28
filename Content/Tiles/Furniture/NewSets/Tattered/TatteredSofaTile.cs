@@ -27,7 +27,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
-            
+
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 

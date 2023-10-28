@@ -1,13 +1,12 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
 {
@@ -15,6 +14,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
     {
         public abstract int OpenDoorType { get; }
         public abstract int ItemDropType { get; }
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -22,7 +22,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
             Main.tileSolid[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
-            TileID.Sets.NotReallySolid[Type] = true;   
+            TileID.Sets.NotReallySolid[Type] = true;
             TileID.Sets.DrawsWalls[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
@@ -33,7 +33,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
             AdjTiles = new int[] { TileID.ClosedDoor };
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Door"));
-            
+
             TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.ClosedDoor, 0));
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.Height = 3;

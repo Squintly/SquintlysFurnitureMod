@@ -47,7 +47,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Armchair"));
         }
 
-
         //public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings) {
         //	return settings.player.IsWithinSnappngRangeToTile(i, j, PlayerSittingHelper.ChairSittingMaxDistance); // Avoid being able to trigger it from long range
         //}

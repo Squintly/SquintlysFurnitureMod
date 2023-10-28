@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -36,7 +37,7 @@ internal class SnowflakesItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.SnowBlock, 1)
+            .AddIngredient(ModContent.ItemType<DecalSheet>(), 1)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

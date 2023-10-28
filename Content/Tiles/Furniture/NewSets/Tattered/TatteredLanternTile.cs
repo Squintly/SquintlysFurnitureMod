@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -64,6 +65,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -98,13 +100,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            Tile tile = Main.tile[i,j];
-            if(tile.TileFrameX == 0)
+            Tile tile = Main.tile[i, j];
+            if (tile.TileFrameX == 0)
             {
                 r = 0.8f;
                 g = 0.75f;
                 b = 0.7f;
-            }   
+            }
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
@@ -135,6 +137,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
@@ -144,7 +153,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 34;
             int offsetY = 0;
             int height = 34;

@@ -222,7 +222,7 @@ Mods: {
 			}
 
 			BlueBall: {
-				DisplayName: BlueBall
+				DisplayName: Blue Ball
 				Tooltip: ""
 			}
 
@@ -272,7 +272,7 @@ Mods: {
 			}
 
 			FestiveWorktableItem: {
-				DisplayName: Festive Worktable
+				DisplayName: Festive Crafting Table
 				Tooltip: Used for special crafting
 			}
 
@@ -1058,12 +1058,12 @@ Mods: {
 
 			BlackChocolates: {
 				DisplayName: Box of Chocolates
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			BlackChocolatesOpen: {
 				DisplayName: Box of Chocolates
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			BrightRose: {
@@ -1218,12 +1218,12 @@ Mods: {
 
 			RedChocolates: {
 				DisplayName: Box of Chocolates
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			RedChocolatesOpen: {
 				DisplayName: Box of Chocolates
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			RedRibbon: {
@@ -2738,11 +2738,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			KingBeds4x4Lighteddebugitem: {
-				DisplayName: King Beds4x4 Lighteddebugitem
-				Tooltip: ""
-			}
-
 			KingBedFestiveItem: {
 				DisplayName: Festive Royal Bed
 				Tooltip: ""
@@ -2785,6 +2780,396 @@ Mods: {
 
 			KingBedSpider: {
 				DisplayName: Spider Royal Bed
+				Tooltip: ""
+			}
+
+			DecalSheet: {
+				Tooltip: ""
+				DisplayName: Decal Sheet
+			}
+
+			WitchHatItem: {
+				Tooltip: ""
+				DisplayName: Witch Hat
+			}
+
+			Vials: {
+				Tooltip: Try right clicking!
+				DisplayName: Vials
+			}
+
+			TinyJarWhite: {
+				Tooltip: Try right clicking!
+				DisplayName: Little White Jar
+			}
+
+			TinyJarBlack: {
+				Tooltip: Try right clicking!
+				DisplayName: Little Black Jar
+			}
+
+			TinyCauldronItem: {
+				Tooltip: ""
+				DisplayName: Tiny Cauldron
+			}
+
+			StreamerSpiderItem: {
+				Tooltip: ""
+				DisplayName: Spider Streamer
+			}
+
+			StreamerPumpkinItem: {
+				Tooltip: ""
+				DisplayName: Pumpkin Streamer
+			}
+
+			StreamerGhostItem: {
+				Tooltip: ""
+				DisplayName: Ghost Streamer
+			}
+
+			StreamerCatItem: {
+				Tooltip: ""
+				DisplayName: Cat Streamer
+			}
+
+			StreamerBatItem: {
+				Tooltip: ""
+				DisplayName: Bat Streamer
+			}
+
+			SpookyMeltedCandleWhite: {
+				Tooltip: ""
+				DisplayName: Melted Candles
+			}
+
+			SpookyMeltedCandleRed: {
+				Tooltip: ""
+				DisplayName: Melted Red Candles
+			}
+
+			SpookyMeltedCandleBlack: {
+				Tooltip: ""
+				DisplayName: Melted Black Candles
+			}
+
+			SpookyLanternItem: {
+				Tooltip: ""
+				DisplayName: Spooky Lantern
+			}
+
+			SpookyCandleWhite: {
+				Tooltip: ""
+				DisplayName: Slender Candle
+			}
+
+			SpookyCandlesTallWhiteItem: {
+				Tooltip: ""
+				DisplayName: Tall Candles
+			}
+
+			SpookyCandlesTallRedItem: {
+				Tooltip: ""
+				DisplayName: Tall Red Candles
+			}
+
+			SpookyCandlesTallBlackItem: {
+				Tooltip: ""
+				DisplayName: Tall Black Candles
+			}
+
+			SpookyCandleRed: {
+				Tooltip: ""
+				DisplayName: Slender Red Candles
+			}
+
+			SpookyCandleHolderWhite: {
+				Tooltip: ""
+				DisplayName: Candle Holder
+			}
+
+			SpookyCandleHolderRed: {
+				Tooltip: ""
+				DisplayName: Red Candle Holder
+			}
+
+			SpookyCandleHolderBlack: {
+				Tooltip: ""
+				DisplayName: Black Candle Holder
+			}
+
+			SpookyCandleBlack: {
+				Tooltip: ""
+				DisplayName: Slender Black Candle
+			}
+
+			SparklyBottlePurple: {
+				Tooltip: ""
+				DisplayName: Purple Brew
+			}
+
+			SparklyBottleOrange: {
+				Tooltip: ""
+				DisplayName: Orange Brew
+			}
+
+			SparklyBottleGreen: {
+				Tooltip: ""
+				DisplayName: Green Brew
+			}
+
+			Scales: {
+				Tooltip: Try right clicking!
+				DisplayName: Scales
+			}
+
+			PumpkinTallItem: {
+				Tooltip: ""
+				DisplayName: Tall Pumpkin
+			}
+
+			PumpkinSmallItem: {
+				Tooltip: ""
+				DisplayName: Little Pumpkin
+			}
+
+			PumpkinBigItem: {
+				Tooltip: ""
+				DisplayName: Big Pumpkin
+			}
+
+			MortarItem: {
+				Tooltip: Try right clicking!
+				DisplayName: Mortar & Pestle
+			}
+
+			JarWormItem: {
+				Tooltip: ""
+				DisplayName: Jar of Worms
+			}
+
+			JarEyeItem: {
+				Tooltip: ""
+				DisplayName: Jar of Eyeballs
+			}
+
+			JarBrainItem: {
+				Tooltip: ""
+				DisplayName: Jar of Brains
+			}
+
+			HalloweenDecalsWebItem: {
+				Tooltip: ""
+				DisplayName: Web Decal
+			}
+
+			HalloweenDecalsSkullItem: {
+				Tooltip: ""
+				DisplayName: Skull Decal
+			}
+
+			HalloweenDecalsPumpkinItem: {
+				Tooltip: ""
+				DisplayName: Pumpkin Decal
+			}
+
+			HalloweenDecalsMiscItem: {
+				Tooltip: ""
+				DisplayName: Spooky Decal
+			}
+
+			HalloweenDecalsGhostItem: {
+				Tooltip: ""
+				DisplayName: Ghost Decal
+			}
+
+			HalloweenDecalsCrowItem: {
+				Tooltip: ""
+				DisplayName: Crow Decal
+			}
+
+			HalloweenDecalsCatItem: {
+				Tooltip: ""
+				DisplayName: Cat Decal
+			}
+
+			HalloweenDecalsCandyItem: {
+				Tooltip: ""
+				DisplayName: Candy Decal
+			}
+
+			HalloweenDecalsBatItem: {
+				Tooltip: ""
+				DisplayName: Bat Decal
+			}
+
+			GobletItem: {
+				Tooltip: ""
+				DisplayName: Goblet
+			}
+
+			FlaskTall: {
+				Tooltip: Try right clicking!
+				DisplayName: Tall Flask
+			}
+
+			FlaskSmall: {
+				Tooltip: Try right clicking!
+				DisplayName: Flask
+			}
+
+			FlaskMounted: {
+				Tooltip: Try right clicking!
+				DisplayName: Mounted Flask
+			}
+
+			CauldronCracked: {
+				Tooltip: ""
+				DisplayName: Cracked Cauldron
+			}
+
+			CauldronBronze: {
+				Tooltip: ""
+				DisplayName: Bronze Cauldron
+			}
+
+			CauldronBlack: {
+				Tooltip: ""
+				DisplayName: Black Cauldron
+			}
+
+			BubblingJarPurple: {
+				Tooltip: ""
+				DisplayName: Bubbling Purple Brew
+			}
+
+			BubblingJarOrange: {
+				Tooltip: ""
+				DisplayName: Bubbling Orange Brew
+			}
+
+			BubblingJarGreen: {
+				Tooltip: ""
+				DisplayName: Bubbling Green Brew
+			}
+
+			BrassAlembicSmall: {
+				Tooltip: ""
+				DisplayName: Brass Alembic
+			}
+
+			BrassAlembic: {
+				Tooltip: ""
+				DisplayName: Brass Alembic
+			}
+
+			BottleSmallBlack: {
+				Tooltip: ""
+				DisplayName: Small Black Bottle
+			}
+
+			BottleGreenSmall: {
+				Tooltip: Try right clicking!
+				DisplayName: Small Green Bottle
+			}
+
+			BottleGreen: {
+				Tooltip: Try right clicking!
+				DisplayName: Green Bottle
+			}
+
+			BottleGlass: {
+				Tooltip: Try right clicking!
+				DisplayName: Glass Bottle
+			}
+
+			BottleFancy: {
+				Tooltip: Try right clicking!
+				DisplayName: Fancy Bottle
+			}
+
+			BottleBronze: {
+				Tooltip: ""
+				DisplayName: Bronze Bottle
+			}
+
+			BottleBlack: {
+				Tooltip: Try right clicking!
+				DisplayName: Black Bottle
+			}
+
+			BellJarTall: {
+				Tooltip: ""
+				DisplayName: Bell Jar
+			}
+
+			BellJarItemWorm: {
+				Tooltip: ""
+				DisplayName: Lesioned Bell Jar
+			}
+
+			BellJarItemMaggot: {
+				Tooltip: ""
+				DisplayName: Infested Bell Jar
+			}
+
+			BellJarItem: {
+				Tooltip: ""
+				DisplayName: Small Bell Jar
+			}
+
+			AlembicMounted: {
+				Tooltip: Try right clicking!
+				DisplayName: Mounted Alembic
+			}
+
+			AlembicHorizontal: {
+				Tooltip: ""
+				DisplayName: Alembic Horizontal
+			}
+
+			AlembicGlassSmall: {
+				Tooltip: Try right clicking!
+				DisplayName: Glass Alembic
+			}
+
+			AlembicGlass: {
+				Tooltip: Try right clicking!
+				DisplayName: Glass Alembic
+			}
+
+			AlchemyChestItem: {
+				Tooltip: For decorative purposes only. It sounds like there's something inside. Try right clicking!
+				DisplayName: Alchemy Chest
+			}
+
+			Scarecrow: {
+				DisplayName: Scarecrow
+				Tooltip: ""
+			}
+
+			BigCauldronItem: {
+				DisplayName: Big Cauldron
+				Tooltip: ""
+			}
+
+			AutumnalWreath: {
+				DisplayName: Autumnal Wreath
+				Tooltip: ""
+			}
+
+			HangingSpoons: {
+				DisplayName: Hanging Spoons
+				Tooltip: ""
+			}
+
+			SpookyWreath: {
+				DisplayName: Spooky Wreath
+				Tooltip: ""
+			}
+
+			DecorativeWebDarkItem: {
+				DisplayName: Decorative Black Web
 				Tooltip: ""
 			}
 		}

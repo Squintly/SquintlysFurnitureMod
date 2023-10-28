@@ -1,5 +1,4 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -13,12 +12,12 @@ public abstract class OmnidirectionalAnchorTile : ModTile
     /// <summary>
     /// this determines how many styles should this tile have
     /// the tilesheet needs to be in this order:
-    /// horizontal: rotations (needs to rotate 4 times) 
+    /// horizontal: rotations (needs to rotate 4 times)
     /// vertical: styles
     /// </summary>
     protected virtual int StyleRange => 1;
 
-    public sealed override void SetStaticDefaults()
+    public override sealed void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
         Main.tileObsidianKill[Type] = true;
@@ -32,10 +31,12 @@ public abstract class OmnidirectionalAnchorTile : ModTile
         StaticDefaults();
     }
 
-    protected virtual void StaticDefaults() { }
+    protected virtual void StaticDefaults()
+    { }
+
     public override bool CanPlace(int i, int j) => AnyValidDirection(i, j);
 
-    public sealed override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
+    public override sealed bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
     {
         Tile tile = Main.tile[i, j];
 

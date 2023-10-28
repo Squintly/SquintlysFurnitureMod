@@ -1,12 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.ObjectInteractions;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -26,7 +26,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
 
             Main.tileLavaDeath[Type] = true;
             Main.tileWaterDeath[Type] = true;
-           
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
@@ -36,6 +35,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
             TileObjectData.newTile.Width = 1;
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 16 };
+
+            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
             TileObjectData.newTile.StyleLineSkip = 2;
 
@@ -63,6 +64,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -94,7 +96,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 2); //change for width, height
             }
         }
-
+        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
+        {
+            if (i % 2 == 1)
+            {
+                spriteEffects = SpriteEffects.FlipHorizontally;
+            }
+        }
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
@@ -107,41 +115,50 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
             }
         }
 
-         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
-         {
-             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
-             {
-                 return;
-             }
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
 
-             Tile tile = Main.tile[i, j];
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
 
-             short frameX = tile.TileFrameX;
-             short frameY = tile.TileFrameY;
+            Tile tile = Main.tile[i, j];
 
-               //Return if the lamp is off (when frameX is 0), or if a random check failed.
-             //if (frameX != 0 || !Main.rand.NextBool(40))
-             //{
-             //    return;
-             //}
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
 
-             //int style = frameY / 18;
-             //int dustChoice;
-             //dustChoice = (DustID.Torch);
+            //Return if the lamp is off (when frameX is 0), or if a random check failed.
+            //if (frameX != 0 || !Main.rand.NextBool(40))
+            //{
+            //    return;
+            //}
 
-             //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-             //dust.noGravity = true;
-             //dust.velocity *= 0.3f;
-             //dust.velocity.Y += - 1.5f;
-         }
+            //int style = frameY / 18;
+            //int dustChoice;
+            //dustChoice = (DustID.Torch);
+
+            //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+            //dust.noGravity = true;
+            //dust.velocity *= 0.3f;
+            //dust.velocity.Y += - 1.5f;
+        }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
-             if (i % 2 == 1) {
-             	effects = SpriteEffects.FlipHorizontally;
-             }
+            if (i % 2 == 1)
+            {
+                effects = SpriteEffects.FlipHorizontally;
+            }
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
@@ -150,7 +167,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 34;
             int offsetY = 0;
             int height = 34;

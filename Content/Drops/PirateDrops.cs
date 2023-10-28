@@ -20,7 +20,7 @@ namespace SquintlysFurnitureMod.Content.Drops
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GoldenCeilingLamp>(), 300));
             }
-            if(npc.type == NPCID.PirateCorsair || npc.type == NPCID.PirateCrossbower || npc.type == NPCID.PirateDeadeye || npc.type == NPCID.PirateDeckhand)
+            if (npc.type == NPCID.PirateCorsair || npc.type == NPCID.PirateCrossbower || npc.type == NPCID.PirateDeadeye || npc.type == NPCID.PirateDeckhand)
             {
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingBedGold>(), 300));
             }

@@ -38,9 +38,9 @@ internal class HeartfeltCraftingTable : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 8)
-            .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.Glass)
-            //.AddRecipeGroup(RecipeGroupID.IronBar, 3)
+            .AddRecipeGroup(RecipeGroupID.Wood)
+            .AddRecipeGroup(RecipeGroupID.IronBar)
             .AddTile(TileID.WorkBenches)
             .Register();
     }

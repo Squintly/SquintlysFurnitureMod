@@ -19,7 +19,7 @@ public class FestiveBathtub : ModTile
         Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        
+
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         AdjTiles = new int[] { TileID.Bathtubs };
@@ -52,7 +52,7 @@ public class FestiveBathtub : ModTile
             uniqueAnimationFrame += 3;
         if (i % 4 == 0)
             uniqueAnimationFrame += 3;
-        uniqueAnimationFrame %= 5;
+        uniqueAnimationFrame %= 14;
 
         // frameYOffset = modTile.animationFrameHeight * Main.tileFrame [type] will already be set before this hook is called
         // But we have a horizontal animated texture, so we use frameXOffset instead of frameYOffset

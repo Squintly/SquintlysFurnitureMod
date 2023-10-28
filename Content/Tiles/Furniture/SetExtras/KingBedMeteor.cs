@@ -5,7 +5,7 @@ using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
-using Terraria.GameContent;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -18,6 +18,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
     {
         public const int NextStyleHeight = 108;
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -58,6 +59,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/SetExtras/KingBedMeteor_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
@@ -68,6 +70,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 frame %= 4;
             }
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -112,7 +115,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                     Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
                 }
             }
-
             else
             {
                 SoundEngine.PlaySound(SoundID.Mech);
@@ -165,6 +167,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 b = 0.5f;
             }
         }
+
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
@@ -182,14 +185,17 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 return;
             }
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            SpriteEffects effects = SpriteEffects.None;
+            var tile = Main.tile[i, j];
 
-            //if (i % 2 == 1)
-            //{
-            //    effects = SpriteEffects.FlipHorizontally;
-            //}
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
+            SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
@@ -198,7 +204,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 18;
             int offsetY = 0;
             int height = 18;
@@ -217,7 +222,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
 
                 spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
             }
-
         }
     }
 }

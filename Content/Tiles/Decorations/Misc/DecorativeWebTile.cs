@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -13,28 +14,13 @@ public class DecorativeWebTile : ModTile
     {
         TileID.Sets.DisableSmartCursor[Type] = true;
 
+        Main.tileSolid[Type]= false;
         Main.tileNoFail[Type] = true;
         Main.tileNoAttach[Type] = true;
-        //Main.tileBlendAll[Type] = true;
 
-        //TileID.Sets.BlockMergesWithMergeAllBlock[Type] = true;
+        Main.tileBlockLight[Type] = false;
 
-        Main.tileLavaDeath[Type] = false;
-        Main.tileWaterDeath[Type] = false;
-
-        Main.tileNoSunLight[Type] = true;
-
-        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
-        TileObjectData.newTile.Width = 1;
-        TileObjectData.newTile.Height = 1;
-        TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-        TileObjectData.newTile.CoordinatePadding = 2;
-
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-
-        TileObjectData.addTile(Type);
-
+        TileID.Sets.IsBeam[Type] = true;
         HitSound = SoundID.Grass;
 
         RegisterItemDrop(ModContent.ItemType<DecorativeWebItem>());

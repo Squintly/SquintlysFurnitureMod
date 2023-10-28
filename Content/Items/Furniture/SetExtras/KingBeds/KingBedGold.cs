@@ -36,6 +36,5 @@ internal class KingBedGold : ModItem
 
     public override void AddRecipes()
     {
-        
     }
 }

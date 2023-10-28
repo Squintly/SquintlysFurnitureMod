@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -61,6 +62,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -105,36 +107,43 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             }
         }
 
-         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
-         {
-             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
-             {
-                 return;
-             }
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
 
-             Tile tile = Main.tile[i, j];
+            Tile tile = Main.tile[i, j];
 
-             short frameX = tile.TileFrameX;
-             short frameY = tile.TileFrameY;
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
 
-             // Return if the lamp is off (when frameX is 0), or if a random check failed.
-             //if (frameX != 0 || !Main.rand.NextBool(40))
-             //{
-             //    return;
-             //}
+            // Return if the lamp is off (when frameX is 0), or if a random check failed.
+            //if (frameX != 0 || !Main.rand.NextBool(40))
+            //{
+            //    return;
+            //}
 
-             //int style = frameY / 18;
-             //int dustChoice;
-             //dustChoice = (DustID.Torch);
+            //int style = frameY / 18;
+            //int dustChoice;
+            //dustChoice = (DustID.Torch);
 
-             //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-             //dust.noGravity = true;
-             //dust.velocity *= 0.3f;
-             //dust.velocity.Y = dust.velocity.Y - 1.5f;
-         }
+            //var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+            //dust.noGravity = true;
+            //dust.velocity *= 0.3f;
+            //dust.velocity.Y = dust.velocity.Y - 1.5f;
+        }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
@@ -144,7 +153,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 34;
             int offsetY = 0;
             int height = 34;

@@ -25,7 +25,7 @@ public class MixedBundledHeartBalloonTile : ModTile
         TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-        
+
         TileObjectData.addTile(Type);
 
         AnimationFrameHeight = 36;

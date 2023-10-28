@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -19,11 +18,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
-            TileID.Sets.InteractibleByNPCs[Type] = true; 
+            TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsValidSpawnPoint[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair); 
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 
             AdjTiles = new int[] { TileID.Beds };
 
@@ -32,7 +31,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
-            
+
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));

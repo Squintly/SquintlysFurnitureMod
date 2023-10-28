@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Decorations.Plants;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -22,15 +23,7 @@ public class SilkReeds : ModTile
 
         Main.tileNoSunLight[Type] = true;
 
-        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
-        TileObjectData.newTile.Width = 1;
-        TileObjectData.newTile.Height = 1;
-        TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
-        TileObjectData.newTile.CoordinatePadding = 2;
-
-        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-
-        TileObjectData.addTile(Type);
+        TileID.Sets.IsBeam[Type] = true;
 
         RegisterItemDrop(ModContent.ItemType<ReedBasket>());
         HitSound = SoundID.Grass;

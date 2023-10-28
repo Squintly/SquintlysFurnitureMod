@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.WallItems;
 using Terraria;
 using Terraria.ModLoader;
 

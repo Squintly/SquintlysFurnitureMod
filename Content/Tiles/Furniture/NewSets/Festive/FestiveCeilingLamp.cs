@@ -2,11 +2,11 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -67,6 +67,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -102,7 +103,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if(tile.TileFrameX == 0)
+            if (tile.TileFrameX == 0)
             {
                 r = 1f;
                 g = 0.95f;
@@ -140,6 +141,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
@@ -149,7 +157,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 18;
             int offsetY = 0;
             int height = 18;

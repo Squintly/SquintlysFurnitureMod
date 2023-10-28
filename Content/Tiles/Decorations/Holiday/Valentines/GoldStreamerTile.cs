@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,8 +15,7 @@ public class GoldStreamerTile : ModTile
         Main.tileNoAttach[Type] = false;
         Main.tileBlockLight[Type] = false;
 
-        TileObjectData.newTile.CopyFrom(TileObjectData.StyleSwitch);
-        TileObjectData.addTile(Type);
+        TileID.Sets.IsBeam[Type] = true;
 
         RegisterItemDrop(ModContent.ItemType<GoldStreamer>());
     }

@@ -14,7 +14,7 @@ public class FestiveWorktable : ModTile
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
-       
+
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 

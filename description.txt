@@ -1,24 +1,42 @@
 A furniture mod inspired by the likes of Terrarchitect and Dragon's Decorative Mod, this is my attempt to fill in some of the gaps, mostly for my own personal building purposes.
 
-CURRENT CONTENT:
-- 9 hanging fIsh in a variety of types and sizes
-- Placeable rope coils
-- A decorative (and thus invincible!) cobweb
-- 2 barrels with decorative foodstuffs
-- 2x2 versions of the vanilla animal skins and treasure map
-- Silk flowers, grass, vines, thorns and reeds, so you can swing your sword in peace
-- Hieroglyphic blocks and walls in a multitude of varieties
-- Sandstone Pillars that come as both blocks as walls, as well as Lotus varients, for all your Egypt needs
-- Polished sandstone brick blocks and walls
-- Sandstone platforms and columns that match Sandstone Brick rather than Smooth Sandstone
-- Egyptian-themed obelisks, in whole and broken variants
-- 1x1 ceiling lamps for all sets + dungeon lanterns! 
-- 2x2 armchairs for all sets! They're not currently sit-on-able, but they DO count as seating for NPC housing requirements!
-- New front-facing beds for all sets! You can't sleep on them, but they work as spawn points, count for NPC housing requirements, and really brighten up a room!
-- New furniture sets:
-	- Tattered! Made with wood & ecto mist
-	- Festive! Made at a special crafting station which also can be used to craft nearly 100 festive decorations because I am apparently a maniac!
-	- Heartfelt! Made with another new crafting station, with some fun new blocks -- which can *also* be used to craft a bunch of themed decorations, because again, maniac
-
-More will be added with time, though updates may be sporadic. I've also never coded anything before, so please forgive any... rough patches. 
-Suggestions, requests and tips are welcome! I also just created a [url=https://discord.gg/DYAqssHdMz]Discord[/url] channel, where I will post previews/WIPs and ask for opinions on what's coming next. And there's a LOT coming next :P
+[h1]Current Content:[/h1]
+There are now officially over 600 items in the mod! Whoo!
+[h2]Vanilla Plus[/h2]
+These are things which use vanilla sprites or are based on vanilla objects, such as:
+[list]
+[*] Placeable & Invincible Plants, Vines, Thorns, Reeds, Cobewbs and more
+[*] Small Versions of Animal Skins & Treasure Map
+[*] Sandstone Pillars, Blocks and Platforms that match the Yellow Bricks
+[*] Visual Variants of Vanilla Items like Barrels
+[*] Placeable Rope Coils and Hanging Fish
+[/list]
+[h2]Extra Items for Existing Sets[/h2]
+Ever wanted a type of furniture that doesn't exist? That's these!
+[list]
+[*] 1x1 Ceiling Lamps
+[*] 2x2 Armchairs
+[*] Front-facing Royal Beds
+[/list]
+[h2]New Furniture Sets[/h2]
+Complete with all vanilla furniture items, as well as my set extras! Lights can be turned off with wires or right-click, and all function for NPC housing requirements
+[list]
+[*] Tattered: Made like generic set, but with Ecto Mist
+[*] Festive: Made at the Festive Crafting Table, using Candy Cane & Pine
+[*] Hearfelt: Made at the Heartfelt Crafting Table, using Heartfelt Blocks made from Life Crystals
+[/list]
+[h2]Themed Decorations[/h2]
+Not a lot of these yet, but going forward there'll be more!
+[list]
+[*] Egyptian, including hieroglyphic blocks and walls, obelisks and ornamental pillars
+[/list]
+[h2]Holiday Decorations[/h2]
+There are too many of these. Includes ribbons, bunting, figurines, toys, banners, decals, tools, containers, and more!
+[list]
+[*] Christmas: Mostly made at the Festive Crafting Table
+[*] Valentines: Mostly made at the Hearfelt Crafting Table
+[*] Halloween: Mostly made at the Decoration Box
+[*] New Years: Mostly made at the Decoration Box
+[/list]
+More's being added all the time, though updates may be sporadic at times. [b]Please report any bugs or unexpected behavior[/b]. Due to the size of the mod, playtesting everything is increasingly difficult. 
+Suggestions, questions and comments are very welcome, especially on the new [url=https://discord.gg/DYAqssHdMz]Discord[/url] server, where I post previews and ask opinions. If you've used my mod to build something neat, please share! I'm excited to see what y'all can do with all this!

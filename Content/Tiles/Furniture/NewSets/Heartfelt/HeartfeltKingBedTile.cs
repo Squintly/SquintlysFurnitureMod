@@ -1,9 +1,6 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -15,6 +12,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
     public class HeartfeltKingBedTile : ModTile
     {
         public const int NextStyleHeight = 38;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -72,7 +70,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 spawnY--;
             }
 
-
             player.FindSpawn();
 
             if (player.SpawnX == spawnX && player.SpawnY == spawnY)
@@ -85,7 +82,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 player.ChangeSpawn(spawnX, spawnY);
                 Main.NewText(Language.GetTextValue("Game.SpawnPointSet"), byte.MaxValue, 240, 20);
             }
-
 
             return true;
         }

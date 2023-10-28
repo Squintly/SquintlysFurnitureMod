@@ -1,13 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
@@ -15,6 +13,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
     public class KingBedBalloon : ModTile
     {
         public const int NextStyleHeight = 108;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -40,6 +39,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             RegisterItemDrop(ModContent.ItemType<KingBedBalloonLarge>());
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
@@ -50,6 +50,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 frame %= 4;
             }
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;

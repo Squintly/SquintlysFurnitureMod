@@ -1,10 +1,9 @@
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
-using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Tiles.Abstracts;
+using Terraria.DataStructures;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Hanging;
 

@@ -2,11 +2,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Festive;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -68,6 +68,7 @@ public class FestiveBookcase : ModTile
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
@@ -154,6 +155,13 @@ public class FestiveBookcase : ModTile
 
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
+        var tile = Main.tile[i, j];
+
+        if (!TileDrawing.IsVisible(tile))
+        {
+            return;
+        }
+
         SpriteEffects effects = SpriteEffects.None;
 
         Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
@@ -163,7 +171,6 @@ public class FestiveBookcase : ModTile
             zero = Vector2.Zero;
         }
 
-        Tile tile = Main.tile[i, j];
         int width = 34;
         int offsetY = 0;
         int height = 34;

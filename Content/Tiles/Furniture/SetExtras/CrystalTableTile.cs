@@ -1,9 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -15,6 +13,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
     public class CrystalTableTile : ModTile
     {
         public const int NextStyleHeight = 54;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -31,7 +30,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Width = 4;
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
+            TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16 };
             TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, -2);
 
             TileObjectData.addTile(Type);
@@ -40,6 +39,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             RegisterItemDrop(ModContent.ItemType<CrystalTable>());
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
@@ -50,6 +50,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 frame %= 6;
             }
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;

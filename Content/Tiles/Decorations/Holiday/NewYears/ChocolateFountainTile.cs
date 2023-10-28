@@ -17,7 +17,7 @@ public class ChocolateFountainTile : ModTile
         Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        
+
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);

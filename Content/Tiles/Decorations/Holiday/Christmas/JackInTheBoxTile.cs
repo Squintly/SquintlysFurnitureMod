@@ -15,7 +15,7 @@ public class JackInTheBoxTile : ModTile
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
-       
+
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
@@ -24,6 +24,8 @@ public class JackInTheBoxTile : ModTile
         TileObjectData.newTile.Width = 1;
         TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.Origin = new Point16(0, 0);
 

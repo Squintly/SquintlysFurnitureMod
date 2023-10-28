@@ -10,6 +10,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines;
 public class HeartfeltCards : ModTile
 {
     public const int NextStyleWidth = 18;
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -24,6 +25,8 @@ public class HeartfeltCards : ModTile
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
 
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
+            
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.newTile.StyleHorizontal = true;

@@ -1,7 +1,5 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.WallItems;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.WallTiles;

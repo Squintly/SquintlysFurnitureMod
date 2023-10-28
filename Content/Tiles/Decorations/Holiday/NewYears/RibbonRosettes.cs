@@ -15,7 +15,7 @@ public class RibbonRosettes : ModTile
         TileID.Sets.DisableSmartCursor[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
-       
+
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 

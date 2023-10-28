@@ -5,6 +5,7 @@ using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Heartfelt;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -39,7 +40,7 @@ public class HeartfeltBathtubTile : ModTile
         AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
-        
+
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         TileObjectData.newTile.StyleLineSkip = 2;
 
@@ -107,12 +108,15 @@ public class HeartfeltBathtubTile : ModTile
 
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
+        var tile = Main.tile[i, j];
+
+        if (!TileDrawing.IsVisible(tile))
+        {
+            return;
+        }
+
         SpriteEffects effects = SpriteEffects.None;
-
-        //if (i % 2 == 1) {
-        //	effects = SpriteEffects.FlipHorizontally;
-        //}
-
+        
         Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
         if (Main.drawToScreen)
@@ -120,7 +124,6 @@ public class HeartfeltBathtubTile : ModTile
             zero = Vector2.Zero;
         }
 
-        Tile tile = Main.tile[i, j];
         int width = 34;
         int offsetY = 0;
         int height = 34;

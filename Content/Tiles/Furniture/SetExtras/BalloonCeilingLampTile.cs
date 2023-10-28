@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -65,6 +66,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
@@ -109,24 +111,33 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
             }
         }
 
-         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData) 
-         {
-         	if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4)) {
-         		return;
-         	}
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
 
-         	Tile tile = Main.tile[i, j];
+            Tile tile = Main.tile[i, j];
 
-         	short frameX = tile.TileFrameX;
+            short frameX = tile.TileFrameX;
 
-         	  //Return if the lamp is off (when frameX is 0), or if a random check failed.
-         	if (frameX != 0 || !Main.rand.NextBool(40)) {
-         		return;
-         	}
-         }
+            //Return if the lamp is off (when frameX is 0), or if a random check failed.
+            if (frameX != 0 || !Main.rand.NextBool(40))
+            {
+                return;
+            }
+        }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            var tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             SpriteEffects effects = SpriteEffects.None;
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
@@ -136,7 +147,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras
                 zero = Vector2.Zero;
             }
 
-            Tile tile = Main.tile[i, j];
             int width = 18;
             int offsetY = 0;
             int height = 18;

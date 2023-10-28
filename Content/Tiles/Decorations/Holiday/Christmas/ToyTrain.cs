@@ -18,7 +18,6 @@ public class ToyTrain : ModTile
         Main.tileNoFail[Type] = false;
 
         Main.tileLavaDeath[Type] = true;
-        
 
         TileID.Sets.DisableSmartCursor[Type] = true;
 
@@ -28,6 +27,8 @@ public class ToyTrain : ModTile
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.addTile(Type);
         RegisterItemDrop(ModContent.ItemType<ToyTrainItem>());

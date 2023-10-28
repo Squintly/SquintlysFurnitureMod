@@ -36,7 +36,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             TileID.Sets.IgnoredByNpcStepUp[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
-            
+
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
 
@@ -66,6 +66,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
             ToggleTile(i, j);
             return true;
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);

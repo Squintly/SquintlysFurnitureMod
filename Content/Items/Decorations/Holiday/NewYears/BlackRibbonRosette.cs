@@ -30,7 +30,7 @@ internal class BlackRibbonRosette : ModItem
         Item.consumable = true;
 
         Item.maxStack = 9999;
-        
+
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<RibbonRosettes>();

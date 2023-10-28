@@ -1,21 +1,21 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Tattered;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
 {
     public abstract class DoorOpen_Tile : ModTile
     {
         public abstract int ClosedDoorType { get; }
-        public abstract int ItemDropType {get;}
-        public sealed override void SetStaticDefaults()
+        public abstract int ItemDropType { get; }
+
+        public override sealed void SetStaticDefaults()
         {
             // Properties
             Main.tileFrameImportant[Type] = true;
@@ -77,12 +77,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Abstracts
             TileObjectData.addTile(Type);
         }
 
-        public sealed override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        public override sealed bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
         }
 
-        public sealed override void MouseOver(int i, int j)
+        public override sealed void MouseOver(int i, int j)
         {
             Player player = Main.LocalPlayer;
             player.noThrow = 2;
