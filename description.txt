@@ -38,5 +38,22 @@ There are too many of these. Includes ribbons, bunting, figurines, toys, banners
 [*] Halloween: Mostly made at the Decoration Box
 [*] New Years: Mostly made at the Decoration Box
 [/list]
+[h2]Miscellaneous Decorations[/h2]
+The random stuff you find around the house, from supplies to appliances to random decor, etc.
+[list]
+[+] Dozens of 1x1 paintings
+[+] Sports Equipment
+[+] Cleaning Supplies
+[+] Bathroom & Office clutter
+[+] Towels of various sizes
+[+] Food and drink
+[+] Technology such as phones
+[+] So, so, so many other random things
+[/list]
+[h2]Materials[/h2]
+[+] Paper: made from wood, used to craft items like cards, paintings and such
+[+] Plastic: made from wood and gel, used to craft little cups, bottles, kitschy decorations, etc.
+[+] Decal Sheet: made from paper and plastic, used to craft decals
+[/list]
 More's being added all the time, though updates may be sporadic at times. [b]Please report any bugs or unexpected behavior[/b]. Due to the size of the mod, playtesting everything is increasingly difficult. 
-Suggestions, questions and comments are very welcome, especially on the new [url=https://discord.gg/DYAqssHdMz]Discord[/url] server, where I post previews and ask opinions. If you've used my mod to build something neat, please share! I'm excited to see what y'all can do with all this!
+Suggestions, questions and comments are very welcome, especially on the new [url=https://discord.gg/DYAqssHdMz]Discord[/url] server, where I post previews and ask opinions. There's also an under-construction [url=https://terrariamods.wiki.gg/wiki/Squintly%27s_Furniture_Mod]Wiki[/url]. If you've used my mod to build something neat, please share! I'm excited to see what y'all can do with all this!

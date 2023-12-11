@@ -121,7 +121,7 @@ public class HeartfeltBookcaseTile : ModTile
         }
 
         SpriteEffects effects = SpriteEffects.None;
-        
+
         Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
         if (Main.drawToScreen)

@@ -94,13 +94,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 3); //change for width, height
             }
         }
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
@@ -151,7 +145,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Tattered
             }
 
             SpriteEffects effects = SpriteEffects.None;
-            
+
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)

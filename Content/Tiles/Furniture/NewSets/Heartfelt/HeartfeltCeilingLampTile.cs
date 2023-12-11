@@ -98,6 +98,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
             }
         }
+
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         {
             if (i % 2 == 1)
@@ -105,6 +106,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
                 spriteEffects = SpriteEffects.FlipHorizontally;
             }
         }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];

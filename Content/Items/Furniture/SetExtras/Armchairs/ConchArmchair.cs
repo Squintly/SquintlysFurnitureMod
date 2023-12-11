@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras;
+using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.Armchairs;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

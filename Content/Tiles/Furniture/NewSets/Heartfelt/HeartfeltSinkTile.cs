@@ -118,7 +118,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             SpriteEffects effects = SpriteEffects.None;
-            
+
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)

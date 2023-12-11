@@ -8,6 +8,23 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.png" />
+    <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignLargeItem.png" />
+    <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignItem.png" />
+    <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignLargeItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.cs" />
+    <Compile Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignLargeItem.cs" />
+    <Compile Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignItem.cs" />
+    <Compile Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignLargeItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Content\Items\Decorations\Crafting\PrintingPress.png" />
+    <None Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.png" />
+    <None Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignLargeItem.png" />
+    <None Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignItem.png" />
+    <None Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignLargeItem.png" />
     <None Remove="Content\Items\Decorations\Holiday\Halloween\AlchemyChestItem.png" />
     <None Remove="Content\Items\Decorations\Holiday\Halloween\AlembicGlass.png" />
     <None Remove="Content\Items\Decorations\Holiday\Halloween\AlembicGlassSmall.png" />
@@ -62,7 +79,72 @@
     <None Remove="Content\Items\Decorations\Holiday\Halloween\TinyJarBlack.png" />
     <None Remove="Content\Items\Decorations\Holiday\Halloween\TinyJarWhite.png" />
     <None Remove="Content\Items\Decorations\Holiday\Halloween\Vials.png" />
+    <None Remove="Content\Items\Decorations\Misc\Artwork\PaintingTinyBlack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Artwork\PaintingTinyBrown.png" />
+    <None Remove="Content\Items\Decorations\Misc\Artwork\PaintingTinyGold.png" />
+    <None Remove="Content\Items\Decorations\Misc\Artwork\PaintingTinyMetal.png" />
+    <None Remove="Content\Items\Decorations\Misc\Artwork\PaintingTinyWhite.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Study\Tome.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Hygeine\SoapBottles.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Hygeine\ToiletriesItem.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Hygeine\ToothpasteItem.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Medical\MedicineBottle.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Medical\MedicineCaddyItem.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Baskets\GroceryBasketBlack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Baskets\GroceryBasketPlastic.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Baskets\GroceryBasketWicker.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Bottles\BabyBottle.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Bottles\WaterBottleBig.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Bottles\WaterBottleSmall.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Outdoors\BeachBall.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Outdoors\Oar1.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Outdoors\Oar2.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Outdoors\Oar3.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Sports\Baseball.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Sports\BaseballBat.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Sports\Football.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Sports\SoccerBall.png" />
+    <None Remove="Content\Items\Decorations\Misc\Hobbies\Sports\TennisBall.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Cleaning\Detergent.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Cleaning\Sponge.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\Binder.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\InkwelIteml.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\PaperStack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\PaperTray.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\PencilHolder.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\Scroll.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\ScrollStack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Office\StickyNote.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelFoldedBlue.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelFoldedGreen.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelFoldedRed.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelFoldedWhite.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelLarge.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelLong.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelRolledBlue.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelRolledGreen.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelRolledRed.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelRolledWhite.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelSmall.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelStackedBlue.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelStackedGreen.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelStackedRed.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelStackedWhite.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelWide.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\Bowls\NutBowl.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneBlack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneGreen.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneOld.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneRed.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneBlack.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneGreen.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneOldItem.png" />
+    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneRed.png" />
+    <None Remove="Content\Items\Decorations\Misc\Utilities\RedTap.png" />
+    <None Remove="Content\Items\Decorations\Misc\Utilities\Tap.png" />
     <None Remove="Content\Items\Materials\DecalSheet.png" />
+    <None Remove="Content\Items\Materials\Paper.png" />
+    <None Remove="Content\Items\Materials\Plastic.png" />
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\Alchemy1x2.png" />
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\Alchemy2x2.png" />
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\AlchemyChest.png" />
@@ -107,8 +189,59 @@
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\TallPumpkins.png" />
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\TinyCauldron.png" />
     <None Remove="Content\Tiles\Decorations\Holiday\Halloween\WormBell.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Black.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Brown.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Gold.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Metal.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1White.png" />
+    <None Remove="Content\Tiles\Decorations\Crafting\PrintingPressTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Outdoors\BeachBallTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Outdoors\Paddles.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Sports\BaseballBatTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Sports\FootballTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Sports\Sportsballs.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Study\Tomes.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Cleaning\CleaningSupplies.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Cleaning\SpongeTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Hygeine\Soaps.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Hygeine\Toothpaste.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Medical\MedicineBottles.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Medical\MedicineCaddy.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Office\Binders.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Office\Inkwell.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Office\Papers.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Office\PencilHolders.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Clutter\Office\Scrolls.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\StickyNotes.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsFolded.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsLarge.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsNarrow.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsRolled.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsSmall.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsStacked.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Decor\Towels\TowelsWide.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Food\Baskets\GroceryBaskets.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Food\Bottles\BabyBottleTile.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Food\Bottles\BigWaterBottle.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Household\Food\Bottles\SmallWaterBottle.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Technology\Communication\Phones\TablePhonesClassic.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Technology\Communication\Phones\WallPhoneOld.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Technology\Communication\Phones\WallPhonesClassic.png" />
+    <None Remove="Content\Tiles\Decorations\Misc\Utilities\Taps.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Items\Blocks\Other\" />
+    <Folder Include="Content\Items\Decorations\Misc\Hobbies\Music\" />
+    <Folder Include="Content\Items\Decorations\Misc\Technology\Medical\" />
+    <Folder Include="Content\Items\Decorations\Misc\Technology\Appliances\" />
+    <Folder Include="Content\Items\Decorations\Misc\Technology\Entertainment\" />
+    <Folder Include="Content\Tiles\Blocks\Other\" />
+    <Folder Include="Content\Tiles\Decorations\Misc\Hobbies\Music\" />
+    <Folder Include="Content\Tiles\Decorations\Misc\Technology\Appliances\" />
+    <Folder Include="Content\Tiles\Decorations\Misc\Technology\Entertainment\" />
+    <Folder Include="Content\Tiles\Decorations\Misc\Technology\Medical\" />
   </ItemGroup>
 </Project>

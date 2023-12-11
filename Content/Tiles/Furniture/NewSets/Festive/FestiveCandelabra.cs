@@ -164,7 +164,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Festive
             {
                 zero = Vector2.Zero;
             }
-            
+
             int width = 34;
             int offsetY = 0;
             int height = 34;

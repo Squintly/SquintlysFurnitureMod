@@ -343,7 +343,7 @@ Mods: {
 
 			HangingSnowflakesItem: {
 				DisplayName: Hanging Snowflakes
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			HollyBanner: {
@@ -353,7 +353,7 @@ Mods: {
 
 			IciclesItem: {
 				DisplayName: Icicles
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			JackInTheBox: {
@@ -598,7 +598,7 @@ Mods: {
 
 			SnowflakesItem: {
 				DisplayName: Snowflake Decal
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			Snowglobe: {
@@ -1248,7 +1248,7 @@ Mods: {
 
 			RosePetalsItem: {
 				DisplayName: Rose Petals
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SmallGoldHeartDecal: {
@@ -1328,67 +1328,67 @@ Mods: {
 
 			BlueSilkFlowers: {
 				DisplayName: Blue Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			PinkSilkFlowers: {
 				DisplayName: Pink Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			PurpleSilkFlowers: {
 				DisplayName: Purple Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			RedSilkFlowers: {
 				DisplayName: Red Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkCorruptionPlants: {
 				DisplayName: Silk Corruption Plants
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkCrimsonPlants: {
 				DisplayName: Silk Crimson Plants
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkGrass: {
 				DisplayName: Silk Grass
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkHallowPlants: {
 				DisplayName: Silk Hallow Plants
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkJungleFlowers: {
 				DisplayName: Silk Jungle Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkJunglePlants: {
 				DisplayName: Silk Jungle Plants
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkWildflowers: {
 				DisplayName: Silk Wildflowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			WhiteSilkFlowers: {
 				DisplayName: White Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			YellowSilkFlowers: {
 				DisplayName: Yellow Silk Flowers
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			FishBarrel: {
@@ -2465,37 +2465,37 @@ Mods: {
 
 			SilkAshPlantsItem: {
 				DisplayName: Silk Ash Plants
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkMushroomsItem: {
 				DisplayName: Silk Mushrooms
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkOatsBouquet: {
 				DisplayName: Silk Oats
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkOatsCorruptBouquet: {
 				DisplayName: Corrupt Silk Oats
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkOatsCrimsonBouquet: {
 				DisplayName: Crimson Silk Oats
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkOatsDesertBouquet: {
 				DisplayName: Desert Silk Oats
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SilkOatsHallowBouquet: {
 				DisplayName: Hallow Silk Oats
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			VineBasket: {
@@ -2519,7 +2519,7 @@ Mods: {
 			}
 
 			KingBedAsh: {
-				DisplayName: Ash Royal Bed
+				DisplayName: Ash Wood Royal Bed
 				Tooltip: ""
 			}
 
@@ -2624,7 +2624,7 @@ Mods: {
 			}
 
 			KingBedLihzahrdArch2: {
-				DisplayName: Lihzahrd Arch Bed
+				DisplayName: Arched Lihzahrd Bed
 				Tooltip: ""
 			}
 
@@ -2634,7 +2634,7 @@ Mods: {
 			}
 
 			KingBedMahogany: {
-				DisplayName: Mahogany Royal Bed
+				DisplayName: Rich Mahogany Royal Bed
 				Tooltip: ""
 			}
 
@@ -2664,7 +2664,7 @@ Mods: {
 			}
 
 			KingBedPalm: {
-				DisplayName: Palm Royal Bed
+				DisplayName: Palm Wood Royal Bed
 				Tooltip: ""
 			}
 
@@ -2754,7 +2754,7 @@ Mods: {
 			}
 
 			KingBedLivingwoodArch: {
-				DisplayName: Livingwood Arch Bed
+				DisplayName: Arched Livingwood Bed
 				Tooltip: ""
 			}
 
@@ -2764,7 +2764,7 @@ Mods: {
 			}
 
 			KingBedMeteorItem: {
-				DisplayName: Meteor Royal Bed
+				DisplayName: Meteorite Royal Bed
 				Tooltip: ""
 			}
 
@@ -3099,7 +3099,7 @@ Mods: {
 			}
 
 			BellJarTall: {
-				Tooltip: ""
+				Tooltip: Try right-clicking!
 				DisplayName: Bell Jar
 			}
 
@@ -3114,7 +3114,7 @@ Mods: {
 			}
 
 			BellJarItem: {
-				Tooltip: ""
+				Tooltip: Try right-clicking!
 				DisplayName: Small Bell Jar
 			}
 
@@ -3169,7 +3169,342 @@ Mods: {
 			}
 
 			DecorativeWebDarkItem: {
-				DisplayName: Decorative Black Web
+				DisplayName: Decorative Dark Web
+				Tooltip: ""
+			}
+
+			PrintingPress: {
+				DisplayName: Printing Press
+				Tooltip: Used for special crafting
+			}
+
+			PaintingTinyBlack: {
+				DisplayName: Tiny Painting
+				Tooltip: Try right-clicking!
+			}
+
+			PaintingTinyBrown: {
+				DisplayName: Tiny Painting
+				Tooltip: Try right-clicking!
+			}
+
+			PaintingTinyGold: {
+				DisplayName: Tiny Painting
+				Tooltip: Try right-clicking!
+			}
+
+			PaintingTinyMetal: {
+				DisplayName: Tiny Painting
+				Tooltip: Try right-clicking!
+			}
+
+			PaintingTinyWhite: {
+				DisplayName: Tiny Painting
+				Tooltip: Try right-clicking!
+			}
+
+			BeachBall: {
+				DisplayName: Beach Ball
+				Tooltip: ""
+			}
+
+			Oar1: {
+				DisplayName: Oar
+				Tooltip: ""
+			}
+
+			Oar2: {
+				DisplayName: Oar
+				Tooltip: ""
+			}
+
+			Oar3: {
+				DisplayName: Oar
+				Tooltip: ""
+			}
+
+			Baseball: {
+				DisplayName: Baseball
+				Tooltip: ""
+			}
+
+			BaseballBat: {
+				DisplayName: Baseball Bat
+				Tooltip: ""
+			}
+
+			Football: {
+				DisplayName: Football
+				Tooltip: ""
+			}
+
+			SoccerBall: {
+				DisplayName: Soccer Ball
+				Tooltip: ""
+			}
+
+			TennisBall: {
+				DisplayName: Tennis Ball
+				Tooltip: ""
+			}
+
+			Tome: {
+				DisplayName: Tome
+				Tooltip: ""
+			}
+
+			Detergent: {
+				DisplayName: Detergent
+				Tooltip: Try right-clicking!
+			}
+
+			Sponge: {
+				DisplayName: Sponge
+				Tooltip: ""
+			}
+
+			SoapBottles: {
+				DisplayName: Soap Bottle
+				Tooltip: Try right-clicking!
+			}
+
+			ToiletriesItem: {
+				DisplayName: Toiletries
+				Tooltip: Try right-clicking!
+			}
+
+			ToothpasteItem: {
+				DisplayName: Toothpaste
+				Tooltip: Try right-clicking!
+			}
+
+			MedicineBottle: {
+				DisplayName: Medicine Bottle
+				Tooltip: Try right-clicking!
+			}
+
+			MedicineCaddyItem: {
+				DisplayName: Medicine Caddy
+				Tooltip: Try right-clicking!
+			}
+
+			Binder: {
+				DisplayName: Binder
+				Tooltip: Try right clicking!
+			}
+
+			PaperStack: {
+				DisplayName: Paper Stack
+				Tooltip: ""
+			}
+
+			PaperTray: {
+				DisplayName: Paper Tray
+				Tooltip: ""
+			}
+
+			Paper: {
+				DisplayName: Paper
+				Tooltip: ""
+			}
+
+			Scroll: {
+				DisplayName: Scroll
+				Tooltip: Try right clicking!
+			}
+
+			ScrollStack: {
+				DisplayName: Scroll Stack
+				Tooltip: ""
+			}
+
+			PencilHolder: {
+				DisplayName: Pencil Holder
+				Tooltip: Try right-clicking!
+			}
+
+			StickyNote: {
+				DisplayName: Sticky Note
+				Tooltip: Try right-clicking!
+			}
+
+			InkwellItem: {
+				DisplayName: Inkwell
+				Tooltip: Try right clicking!
+			}
+
+			TowelLarge: {
+				DisplayName: Large Towel
+				Tooltip: Try right-clicking!
+			}
+
+			TowelNarrow: {
+				DisplayName: Narrow Towel
+				Tooltip: Try right-clicking!
+			}
+
+			TowelSmall: {
+				DisplayName: Small Towel
+				Tooltip: Try right-clicking!
+			}
+
+			TowelWide: {
+				DisplayName: Wide Towel
+				Tooltip: Try right-clicking!
+			}
+
+			TowelFoldedBlue: {
+				DisplayName: Folded Blue Towel
+				Tooltip: ""
+			}
+
+			TowelFoldedGreen: {
+				DisplayName: Folded Green Towel
+				Tooltip: ""
+			}
+
+			TowelFoldedRed: {
+				DisplayName: Folded Red Towel
+				Tooltip: ""
+			}
+
+			TowelFoldedWhite: {
+				DisplayName: Folded White Towel
+				Tooltip: ""
+			}
+
+			TowelRolledBlue: {
+				DisplayName: Rolled Blue Towel
+				Tooltip: ""
+			}
+
+			TowelRolledGreen: {
+				DisplayName: Rolled Green Towel
+				Tooltip: ""
+			}
+
+			TowelRolledRed: {
+				DisplayName: Rolled Red Towel
+				Tooltip: ""
+			}
+
+			TowelRolledWhite: {
+				DisplayName: Rolled White Towel
+				Tooltip: ""
+			}
+
+			TowelStackedBlue: {
+				DisplayName: Stacked Blue Towel
+				Tooltip: ""
+			}
+
+			TowelStackedGreen: {
+				DisplayName: Stacked Green Towel
+				Tooltip: ""
+			}
+
+			TowelStackedRed: {
+				DisplayName: Stacked Red Towel
+				Tooltip: ""
+			}
+
+			TowelStackedWhite: {
+				DisplayName: Stacked White Towel
+				Tooltip: ""
+			}
+
+			GroceryBasketBlack: {
+				DisplayName: Black Grocery Basket
+				Tooltip: Try right-clicking!
+			}
+
+			GroceryBasketPlastic: {
+				DisplayName: Plastic Grocery Basket
+				Tooltip: Try right-clicking!
+			}
+
+			GroceryBasketWicker: {
+				DisplayName: Wicker Grocery Basket
+				Tooltip: Try right-clicking!
+			}
+
+			BabyBottle: {
+				DisplayName: Baby Bottle
+				Tooltip: ""
+			}
+
+			WaterBottleBig: {
+				DisplayName: Big Water Bottle
+				Tooltip: ""
+			}
+
+			WaterBottleSmall: {
+				DisplayName: Small Water Bottle
+				Tooltip: ""
+			}
+
+			NutBowl: {
+				DisplayName: Bowl of Nuts
+				Tooltip: ""
+			}
+
+			TablePhoneBlack: {
+				DisplayName: Black Table Phone
+				Tooltip: ""
+			}
+
+			TablePhoneGreen: {
+				DisplayName: Green Table Phone
+				Tooltip: ""
+			}
+
+			TablePhoneOld: {
+				DisplayName: Old-Fashioned Table Phone
+				Tooltip: ""
+			}
+
+			TablePhoneRed: {
+				DisplayName: Red Table Phone
+				Tooltip: ""
+			}
+
+			WallPhoneBlack: {
+				DisplayName: Black Wall Phone
+				Tooltip: ""
+			}
+
+			WallPhoneGreen: {
+				DisplayName: Green Wall Phone
+				Tooltip: ""
+			}
+
+			WallPhoneOldItem: {
+				DisplayName: Old-Fashioned Wall Phone
+				Tooltip: ""
+			}
+
+			WallPhoneRed: {
+				DisplayName: Red Wall Phone
+				Tooltip: ""
+			}
+
+			RedTap: {
+				DisplayName: Red Tap
+				Tooltip: ""
+			}
+
+			Tap: {
+				DisplayName: Tap
+				Tooltip: ""
+			}
+
+			TatteredKingBedItem: {
+				DisplayName: Tattered Royal Bed
+				Tooltip: ""
+			}
+
+			Plastic: {
+				DisplayName: Plastic
 				Tooltip: ""
 			}
 		}

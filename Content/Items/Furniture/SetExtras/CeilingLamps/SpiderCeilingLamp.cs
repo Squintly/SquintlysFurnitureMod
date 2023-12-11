@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,7 +30,7 @@ internal class SpiderCeilingLamp : ModItem
         Item.consumable = true;
 
         Item.maxStack = 9999;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.CeilingLampsTile>();
+        Item.createTile = ModContent.TileType<CeilingLampsTile>();
         Item.placeStyle = 33;
     }
 

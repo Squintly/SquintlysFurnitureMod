@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,13 +29,13 @@ internal class DecalSheet : ModItem
         Item.consumable = true;
 
         Item.maxStack = 9999;
-
     }
 
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood)
+            .AddIngredient(ModContent.ItemType<Paper>())
+            .AddIngredient(ModContent.ItemType<Plastic>())
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
     }

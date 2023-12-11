@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas.Toys;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;

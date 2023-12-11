@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.Armchairs;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,7 +30,7 @@ internal class PumpkinArmchair : ModItem
         Item.consumable = true;
 
         Item.maxStack = 9999;
-        Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.Armchairs>();
+        Item.createTile = ModContent.TileType<ArmchairsTile>();
         Item.placeStyle = 20;
     }
 

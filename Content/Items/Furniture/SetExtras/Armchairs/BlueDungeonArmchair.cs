@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.Armchairs;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,7 +31,7 @@ internal class BlueDungeonArmchair : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Tiles.Furniture.SetExtras.Armchairs>();
+        Item.createTile = ModContent.TileType<ArmchairsTile>();
         Item.placeStyle = 6;
     }
 

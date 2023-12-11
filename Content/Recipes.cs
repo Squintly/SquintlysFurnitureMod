@@ -1,4 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Items.WallItems;
+﻿using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

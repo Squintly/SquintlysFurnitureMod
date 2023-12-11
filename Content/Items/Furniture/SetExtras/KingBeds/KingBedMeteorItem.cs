@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras;
+using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -37,7 +37,7 @@ internal class KingBedMeteorItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.MeteoriteBrick, 15)
+            .AddIngredient(ItemID.MeteoriteBrick, 30)
             .AddIngredient(ItemID.Silk, 5)
             .AddTile(TileID.WorkBenches)
             .Register();
