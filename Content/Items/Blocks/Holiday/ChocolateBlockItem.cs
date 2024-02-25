@@ -1,6 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.WallItems.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Heartfelt;
+using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

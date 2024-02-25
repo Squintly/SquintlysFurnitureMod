@@ -40,10 +40,5 @@ internal class PaleSandstoneColumnItem : ModItem
             .AddIngredient(ItemID.SandstoneBrick)
             .AddTile(TileID.WorkBenches)
             .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
-            .AddTile(TileID.WorkBenches)
-            .Register();
     }
 }

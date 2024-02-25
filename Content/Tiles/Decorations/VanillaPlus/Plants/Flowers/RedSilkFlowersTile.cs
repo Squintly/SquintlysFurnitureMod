@@ -32,7 +32,12 @@ public class RedSilkFlowersTile : ModTile
         TileObjectData.newTile.CoordinateWidth = 16;
         TileObjectData.newTile.CoordinatePadding = 2;
 
-        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table | AnchorType.PlanterBox | AnchorType.AlternateTile, TileObjectData.newTile.Width, 0);
+
+        TileObjectData.newTile.AnchorAlternateTiles = new int[]
+            {
+                TileID.ClayPot,
+            };
 
         TileObjectData.newTile.RandomStyleRange = 14;
         TileObjectData.newTile.StyleWrapLimit = 111;

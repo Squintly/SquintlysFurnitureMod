@@ -37,7 +37,7 @@ internal class RockingHorseItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.Wood, 4)
+            .AddIngredient(ItemID.Wood, 6)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

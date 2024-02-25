@@ -38,12 +38,7 @@ internal class BrassAlembic : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.CopperBar, 4)
-            .AddTile(ModContent.TileType<DecoBoxTile>())
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ItemID.TinBar, 4)
+            .AddRecipeGroup(nameof(ItemID.CopperBar), 4)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
     }

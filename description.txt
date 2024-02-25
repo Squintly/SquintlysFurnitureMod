@@ -22,8 +22,10 @@ Ever wanted a type of furniture that doesn't exist? That's these!
 Complete with all vanilla furniture items, as well as my set extras! Lights can be turned off with wires or right-click, and all function for NPC housing requirements
 [list]
 [*] Tattered: Made like generic set, but with Ecto Mist
+[*] Repaired: Made at a Heavy Work Bench with the Tattered set items and half their usual crafting cost
 [*] Festive: Made at the Festive Crafting Table, using Candy Cane & Pine
 [*] Hearfelt: Made at the Heartfelt Crafting Table, using Heartfelt Blocks made from Life Crystals
+[+] Teak: Made with Teak Wood, purchasable from the Travelling Merchant
 [/list]
 [h2]Themed Decorations[/h2]
 Not a lot of these yet, but going forward there'll be more!

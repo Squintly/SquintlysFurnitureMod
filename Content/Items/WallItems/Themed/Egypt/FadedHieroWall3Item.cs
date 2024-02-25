@@ -37,7 +37,7 @@ internal class FadedHieroWall3Item : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<FadedHieroBlock3Item>())
+           .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
            .AddTile(TileID.WorkBenches)
            .Register();
     }

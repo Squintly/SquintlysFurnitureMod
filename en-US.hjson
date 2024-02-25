@@ -3507,6 +3507,546 @@ Mods: {
 				DisplayName: Plastic
 				Tooltip: ""
 			}
+
+			RepairedWorkbenchItem: {
+				Tooltip: ""
+				DisplayName: Repaired Workbench
+			}
+
+			RepairedToiletItem: {
+				Tooltip: ""
+				DisplayName: Repaired Toilet
+			}
+
+			RepairedTableItem: {
+				Tooltip: ""
+				DisplayName: Repaired Table
+			}
+
+			RepairedSofaItem: {
+				Tooltip: ""
+				DisplayName: Repaired Sofa
+			}
+
+			RepairedSinkItem: {
+				Tooltip: ""
+				DisplayName: Repaired Sink
+			}
+
+			RepairedPlatformItem: {
+				Tooltip: ""
+				DisplayName: Repaired Platform
+			}
+
+			RepairedPianoItem: {
+				Tooltip: ""
+				DisplayName: Repaired Piano
+			}
+
+			RepairedLanternItem: {
+				Tooltip: ""
+				DisplayName: Repaired Lantern
+			}
+
+			RepairedLampItem: {
+				Tooltip: ""
+				DisplayName: Repaired Lamp
+			}
+
+			RepairedKingBedItem: {
+				Tooltip: ""
+				DisplayName: Repaired Royal Bed
+			}
+
+			RepairedDresserItem: {
+				Tooltip: ""
+				DisplayName: Repaired Dresser
+			}
+
+			RepairedDoorItem: {
+				Tooltip: ""
+				DisplayName: Repaired Door
+			}
+
+			RepairedClockItem: {
+				Tooltip: ""
+				DisplayName: Repaired Clock
+			}
+
+			RepairedChestItem: {
+				Tooltip: ""
+				DisplayName: Repaired Chest
+			}
+
+			RepairedChandelierItem: {
+				Tooltip: ""
+				DisplayName: Repaired Chandelier
+			}
+
+			RepairedChairItem: {
+				Tooltip: ""
+				DisplayName: Repaired Chair
+			}
+
+			RepairedCeilingLampItem: {
+				Tooltip: ""
+				DisplayName: Repaired Ceiling Lamp
+			}
+
+			RepairedCandleItem: {
+				Tooltip: ""
+				DisplayName: Repaired Candle
+			}
+
+			RepairedCandelabraItem: {
+				Tooltip: ""
+				DisplayName: Repaired Candelabra
+			}
+
+			RepairedBookcaseItem: {
+				Tooltip: ""
+				DisplayName: Repaired Bookcase
+			}
+
+			RepairedBedItem: {
+				Tooltip: ""
+				DisplayName: Repaired Bed
+			}
+
+			RepairedBathtubItem: {
+				Tooltip: ""
+				DisplayName: Repaired Bathtub
+			}
+
+			RepairedArmchairItem: {
+				Tooltip: ""
+				DisplayName: Repaired Armchair
+			}
+
+			HangingSausageSmall: {
+				Tooltip: ""
+				DisplayName: Small Hanging Sausage
+			}
+
+			HangingSausage: {
+				Tooltip: ""
+				DisplayName: Large Hanging Sausage
+			}
+
+			HangingRibsItem: {
+				Tooltip: ""
+				DisplayName: Hanging Ribs
+			}
+
+			HangingRabbit: {
+				Tooltip: ""
+				DisplayName: Hanging Rabbit
+			}
+
+			HangingPheasant: {
+				Tooltip: ""
+				DisplayName: Hanging Pheasant
+			}
+
+			HangingMegaChicken: {
+				Tooltip: ""
+				DisplayName: Hanging Mega Chicken
+			}
+
+			HangingMeat: {
+				Tooltip: ""
+				DisplayName: Hanging Meat
+			}
+
+			HangingGoose: {
+				Tooltip: ""
+				DisplayName: Hanging Goose
+			}
+
+			HangingDuck: {
+				Tooltip: ""
+				DisplayName: Hanging Duck
+			}
+
+			HangingChicken: {
+				Tooltip: ""
+				DisplayName: Hanging Chicken
+			}
+
+			TeakBeamItem: {
+				DisplayName: Teak Beam
+				Tooltip: ""
+			}
+
+			TeakShinglesItem: {
+				DisplayName: Teak Shingles
+				Tooltip: ""
+			}
+
+			TeakSlatsItem: {
+				DisplayName: Teak Slats
+				Tooltip: ""
+			}
+
+			TeakWood: {
+				DisplayName: Teak Wood
+				Tooltip: ""
+			}
+
+			TeakArmchairGreenItem: {
+				DisplayName: Green Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakArmchairItem: {
+				DisplayName: Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakArmchairRedItem: {
+				DisplayName: Red Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakBathtubItem: {
+				DisplayName: Teak Bathtub
+				Tooltip: ""
+			}
+
+			TeakBedBlackItem: {
+				DisplayName: Black Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedCreamItem: {
+				DisplayName: Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedItem: {
+				DisplayName: Green Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedRedItem: {
+				DisplayName: Red Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBookcaseItem: {
+				DisplayName: Teak Bookcase
+				Tooltip: ""
+			}
+
+			TeakCandelabraGreenItem: {
+				DisplayName: Green Teak Candelabra
+				Tooltip: ""
+			}
+
+			TeakCandelabraItem: {
+				DisplayName: Teak Candelabra
+				Tooltip: ""
+			}
+
+			TeakCandleGreenItem: {
+				DisplayName: Green Teak Candle
+				Tooltip: ""
+			}
+
+			TeakCandleItem: {
+				DisplayName: Teak Candle
+				Tooltip: ""
+			}
+
+			TeakCeilingLampGreenItem: {
+				DisplayName: Green Teak Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TeakCeilingLampItem: {
+				DisplayName: Teak Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TeakChairGreenItem: {
+				DisplayName: Green Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairItem: {
+				DisplayName: Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairRedItem: {
+				DisplayName: Red Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairWoodItem: {
+				DisplayName: Bare Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChandelierItem: {
+				DisplayName: Teak Chandelier
+				Tooltip: ""
+			}
+
+			TeakChestItem: {
+				DisplayName: Teak Chest
+				Tooltip: ""
+			}
+
+			TeakClockItem: {
+				DisplayName: Teak Clock
+				Tooltip: ""
+			}
+
+			TeakDoorGlassItem: {
+				DisplayName: Glass Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorItem: {
+				DisplayName: Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorNarrowItem: {
+				DisplayName: Slatted Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorSolidItem: {
+				DisplayName: Solid Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorWindowedItem: {
+				DisplayName: Windowed Teak Door
+				Tooltip: ""
+			}
+
+			TeakDresserItem: {
+				DisplayName: Teak Dresser
+				Tooltip: ""
+			}
+
+			TeakKingBedBlackItem: {
+				DisplayName: Black Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedGreenItem: {
+				DisplayName: Green Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedItem: {
+				DisplayName: Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedRedItem: {
+				DisplayName: Red Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallBlackItem: {
+				DisplayName: Small Black Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallGreenItem: {
+				DisplayName: Small Green Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallItem: {
+				DisplayName: Small Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallRedItem: {
+				DisplayName: Small Red Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakLampGreenItem: {
+				DisplayName: Green Teak Lamp
+				Tooltip: ""
+			}
+
+			TeakLampItem: {
+				DisplayName: Teak Lamp
+				Tooltip: ""
+			}
+
+			TeakLanternGreenItem: {
+				DisplayName: Green Teak Lantern
+				Tooltip: ""
+			}
+
+			TeakLanternItem: {
+				DisplayName: Teak Lantern
+				Tooltip: ""
+			}
+
+			TeakNightstandItem: {
+				DisplayName: Teak Nightstand
+				Tooltip: ""
+			}
+
+			TeakOttomanGreenItem: {
+				DisplayName: Green Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakOttomanItem: {
+				DisplayName: Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakOttomanRedItem: {
+				DisplayName: Red Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakPianoItem: {
+				DisplayName: Teak Piano
+				Tooltip: ""
+			}
+
+			TeakPlatformItem: {
+				DisplayName: Teak Platform
+				Tooltip: ""
+			}
+
+			TeakSconceItem: {
+				DisplayName: Teak Sconce
+				Tooltip: ""
+			}
+
+			TeakShelfItem: {
+				DisplayName: Teak Shelf
+				Tooltip: ""
+			}
+
+			TeakSinkItem: {
+				DisplayName: Teak Sink
+				Tooltip: ""
+			}
+
+			TeakSofaGreenItem: {
+				DisplayName: Green Teak Sofa
+				Tooltip: ""
+			}
+
+			TeakSofaItem: {
+				DisplayName: Teak Sofa
+				Tooltip: ""
+			}
+
+			TeakSofaRedItem: {
+				DisplayName: Red Teak Sofa
+				Tooltip: ""
+			}
+
+			TeakSpotlightGreenItem: {
+				DisplayName: Green Teak Spotlight
+				Tooltip: ""
+			}
+
+			TeakSpotlightItem: {
+				DisplayName: Teak Spotlight
+				Tooltip: ""
+			}
+
+			TeakStoolGreenItem: {
+				DisplayName: Green Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolItem: {
+				DisplayName: Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolRedItem: {
+				DisplayName: Red Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolWoodItem: {
+				DisplayName: Bare Teak Stool
+				Tooltip: ""
+			}
+
+			TeakTableFancyItem: {
+				DisplayName: Fancy Teak Table
+				Tooltip: ""
+			}
+
+			TeakTableItem: {
+				DisplayName: Teak Table
+				Tooltip: ""
+			}
+
+			TeakToiletItem: {
+				DisplayName: Teak Toilet
+				Tooltip: ""
+			}
+
+			TeakWorkbenchItem: {
+				DisplayName: Teak Work Bench
+				Tooltip: ""
+			}
+
+			TeakFenceItem: {
+				DisplayName: Teak Fence
+				Tooltip: ""
+			}
+
+			TeakFenceSlatItem: {
+				DisplayName: Teak Slat Fence
+				Tooltip: ""
+			}
+
+			TeakFenceSolidItem: {
+				DisplayName: Solid Teak Fence
+				Tooltip: ""
+			}
+
+			TeakShingleWallItem: {
+				DisplayName: Teak Shingle Wall
+				Tooltip: ""
+			}
+
+			TeakSlatsWallItem: {
+				DisplayName: Teak Slat Wall
+				Tooltip: ""
+			}
+
+			TeakWallItem: {
+				DisplayName: Teak Wall
+				Tooltip: ""
+			}
+
+			TeakFenceLatticeItem: {
+				DisplayName: Teak Lattice Fence
+				Tooltip: ""
+			}
+
+			TeakPoleItem: {
+				DisplayName: Teak Pole
+				Tooltip: ""
+			}
+
+			TeakBarItem: {
+				DisplayName: Teak Bar
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {
@@ -3631,6 +4171,7 @@ Mods: {
 			Tattered_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Table
 			Tattered_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Toilet
 			Tattered_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Work_Bench
+			RepairedDresser.MapEntry: Repaired Dresser
 		}
 
 		"MapObject.Year's_End_Decoration": Mods.SquintlysFurnitureMod.MapObject.Year's_End_Decoration

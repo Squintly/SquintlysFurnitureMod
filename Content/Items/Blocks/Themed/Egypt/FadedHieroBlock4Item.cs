@@ -39,18 +39,8 @@ internal class FadedHieroBlock4Item : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HieroBlock4Item>())
+           .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
            .AddTile(TileID.WorkBenches)
            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroWall4Item>(), 4)
-            .AddTile(TileID.WorkBenches)
-            .Register();
     }
 }

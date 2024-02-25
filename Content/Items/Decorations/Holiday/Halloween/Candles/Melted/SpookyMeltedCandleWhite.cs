@@ -37,15 +37,15 @@ internal class SpookyMeltedCandleWhite : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.GoldBar)
+            .AddRecipeGroup(nameof(ItemID.GoldBar))
             .AddIngredient(ItemID.Torch)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
 
-        CreateRecipe()
-            .AddIngredient(ItemID.PlatinumBar)
-            .AddIngredient(ItemID.Torch)
-            .AddTile(ModContent.TileType<DecoBoxTile>())
-            .Register();
+        //CreateRecipe()
+        //    .AddIngredient(ItemID.PlatinumBar)
+        //    .AddIngredient(ItemID.Torch)
+        //    .AddTile(ModContent.TileType<DecoBoxTile>())
+        //    .Register();
     }
 }

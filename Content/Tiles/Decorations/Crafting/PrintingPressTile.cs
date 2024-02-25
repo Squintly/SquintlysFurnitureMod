@@ -3,8 +3,10 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Color = Microsoft.Xna.Framework.Color;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
 
@@ -31,6 +33,8 @@ public class PrintingPressTile : ModTile
 
         AnimationFrameHeight = 54;
         RegisterItemDrop(ModContent.ItemType<PrintingPress>());
+
+        AddMapEntry(new Color(200, 200, 200), Language.GetText("Printing Press"));
     }
 
     public override void AnimateTile(ref int frame, ref int frameCounter)

@@ -39,7 +39,7 @@ internal class PresentSleigh : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddRecipeGroup(RecipeGroupID.Wood, 4)
             .AddIngredient(ModContent.ItemType<Paper>(), 4)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();

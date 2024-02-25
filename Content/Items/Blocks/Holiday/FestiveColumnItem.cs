@@ -38,17 +38,7 @@ internal class FestiveColumnItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-           .AddIngredient(ItemID.CandyCaneBlock)
-           .AddTile(ModContent.TileType<FestiveWorktable>())
-           .Register();
-
-        CreateRecipe()
-           .AddIngredient(ItemID.GreenCandyCaneBlock)
-           .AddTile(ModContent.TileType<FestiveWorktable>())
-           .Register();
-
-        CreateRecipe()
-           .AddIngredient(ItemID.PineTreeBlock)
+           .AddRecipeGroup("SquintlyFurnitureMod:Festive")
            .AddTile(ModContent.TileType<FestiveWorktable>())
            .Register();
     }

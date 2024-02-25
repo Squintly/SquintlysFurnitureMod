@@ -38,7 +38,7 @@ internal class LittleBells : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.GoldBar)
+            .AddRecipeGroup(nameof(ItemID.GoldBar))
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

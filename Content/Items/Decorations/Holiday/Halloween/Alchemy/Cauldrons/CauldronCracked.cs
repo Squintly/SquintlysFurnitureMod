@@ -38,13 +38,13 @@ internal class CauldronCracked : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.CopperBar, 6)
+            .AddRecipeGroup(nameof(ItemID.CopperBar), 6)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
 
-        CreateRecipe()
-            .AddIngredient(ItemID.TinBar, 6)
-            .AddTile(ModContent.TileType<DecoBoxTile>())
-            .Register();
+        //CreateRecipe()
+        //    .AddIngredient(ItemID.TinBar, 6)
+        //    .AddTile(ModContent.TileType<DecoBoxTile>())
+        //    .Register();
     }
 }

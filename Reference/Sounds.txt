@@ -2,3 +2,4 @@
 Item156 = Celebration, dry papery scuff
 Item35 = bell
 Item 106 = glassy clink
+NPCHit25 = fishy/wet

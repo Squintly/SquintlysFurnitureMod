@@ -38,7 +38,7 @@ internal class Reindeer : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.GoldBar)
+            .AddRecipeGroup(nameof(ItemID.GoldBar), 4)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

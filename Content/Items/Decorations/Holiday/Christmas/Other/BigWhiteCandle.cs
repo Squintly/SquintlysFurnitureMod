@@ -39,7 +39,7 @@ internal class BigWhiteCandle : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Torch)
-            .AddIngredient(ItemID.GoldBar)
+            .AddRecipeGroup(nameof(ItemID.GoldBar))
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

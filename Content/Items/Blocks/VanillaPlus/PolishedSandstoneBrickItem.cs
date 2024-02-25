@@ -41,62 +41,7 @@ internal class PolishedSandstoneBrickItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.SandstoneBrick)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickWallItem>(), 4)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroBlock1Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroBlock2Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroBlock3Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroBlock4Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock1Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock2Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock3Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroBlock4Item>(), 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HieroWallSmallItem>(), 4)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<FadedHieroWallSmallItem>(), 4)
+            .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
             .AddTile(TileID.WorkBenches)
             .Register();
     }

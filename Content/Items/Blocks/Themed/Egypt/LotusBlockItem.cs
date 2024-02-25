@@ -39,11 +39,6 @@ internal class LotusBlockItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.SandstoneBrick)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe()
             .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
             .AddTile(TileID.WorkBenches)
             .Register();

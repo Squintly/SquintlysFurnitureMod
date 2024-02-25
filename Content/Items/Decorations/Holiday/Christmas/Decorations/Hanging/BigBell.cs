@@ -38,7 +38,7 @@ internal class BigBell : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.GoldBar)
+            .AddRecipeGroup(nameof(ItemID.GoldBar))
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

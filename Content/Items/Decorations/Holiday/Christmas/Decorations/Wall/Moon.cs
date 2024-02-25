@@ -38,7 +38,7 @@ internal class Moon : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.GoldBar, 4)
+            .AddRecipeGroup(nameof(ItemID.GoldBar), 4)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

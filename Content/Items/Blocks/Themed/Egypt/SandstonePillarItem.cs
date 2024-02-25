@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
+using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.Themed.Egypt;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,12 +39,12 @@ internal class SandstonePillarItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.SandstoneBrick)
+            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
             .AddTile(TileID.WorkBenches)
             .Register();
 
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<PolishedSandstoneBrickItem>())
+            .AddIngredient(ModContent.ItemType<SandstonePillarWallItem>(), 4)
             .AddTile(TileID.WorkBenches)
             .Register();
     }

@@ -37,5 +37,10 @@ public class PolishedSandstoneBrickWallItem : ModItem
             .AddIngredient<PolishedSandstoneBrickItem>()
             .AddTile(18)
             .Register();
+
+        CreateRecipe()
+           .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
+           .AddTile(TileID.WorkBenches)
+           .Register();
     }
 }

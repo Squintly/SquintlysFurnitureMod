@@ -37,7 +37,7 @@ internal class HieroWall4Item : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<HieroBlock4Item>())
+           .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
            .AddTile(TileID.WorkBenches)
            .Register();
     }

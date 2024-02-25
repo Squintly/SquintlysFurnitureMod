@@ -41,6 +41,7 @@ internal class Poinsettas2 : ModItem
         CreateRecipe()
             .AddIngredient(ItemID.DirtBlock, 1)
             .AddIngredient(ItemID.FlowerPacketRed)
+            .AddRecipeGroup(RecipeGroupID.Wood)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

@@ -38,22 +38,7 @@ internal class HieroWallSmallItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<HieroBlock1Item>())
-           .AddTile(TileID.WorkBenches)
-           .Register();
-
-        CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<HieroBlock2Item>())
-           .AddTile(TileID.WorkBenches)
-           .Register();
-
-        CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<HieroBlock3Item>())
-           .AddTile(TileID.WorkBenches)
-           .Register();
-
-        CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<HieroBlock4Item>())
+           .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
            .AddTile(TileID.WorkBenches)
            .Register();
     }
