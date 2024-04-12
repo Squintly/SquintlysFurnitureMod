@@ -1,5 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Items;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Meats.Hanging;
 using Terraria;
 using Terraria.ID;
@@ -24,16 +25,13 @@ public class Shops : GlobalNPC
         nextSlot++;
     }
 
-    //public override void ModifyShop (NPCShop shop)
-    //{ 
-    //if (shop.NpcType == NPCID.Merchant)
-    //    {
-    //        shop.Add(new Item(ItemID.Silk)
-    //        {
-    //            shopCustomPrice = Item.buyPrice(0, 0, 12, 10)
-    //        });
-    //    }    
-    //}
+    public override void ModifyShop(NPCShop shop)
+    {
+        if (shop.NpcType == NPCID.Merchant)
+        {
+            shop.Add<Egg>();
+        }
+    }
 }
 
 

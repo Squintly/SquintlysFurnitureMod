@@ -24,7 +24,15 @@ namespace SquintlysFurnitureMod.Content
         public override void AddRecipeGroups()
         {
             RecipeGroup Meat = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Meat", ItemID.Steak, ItemID.Bacon, ItemID.BBQRibs, ItemID.ChickenNugget, ItemID.HamBat);
-            RecipeGroup.RegisterGroup("SquintlysFurnitureMod:Meat", Meat);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Meat", Meat);
+
+            RecipeGroup Paint = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Paint", ItemID.WhitePaint, ItemID.GrayPaint, ItemID.BlackPaint, ItemID.BrownPaint, 
+                ItemID.RedPaint, ItemID.OrangePaint, ItemID.YellowPaint, ItemID.LimePaint, ItemID.GreenPaint, ItemID.TealPaint, ItemID.SkyBluePaint, ItemID.BluePaint, ItemID.PurplePaint, ItemID.PinkPaint, ItemID.VioletPaint, 
+                ItemID.DeepRedPaint, ItemID.DeepOrangePaint, ItemID.DeepYellowPaint, ItemID.DeepLimePaint, ItemID.DeepGreenPaint, ItemID.DeepTealPaint, ItemID.DeepSkyBluePaint, ItemID.DeepBluePaint, ItemID.DeepPurplePaint, ItemID.DeepPinkPaint, ItemID.DeepVioletPaint);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Paint", Paint);
+
+            RecipeGroup FlowerSeeds = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Flower Seeds", ItemID.FlowerPacketRed, ItemID.FlowerPacketYellow, ItemID.FlowerPacketBlue, ItemID.FlowerPacketViolet, ItemID.FlowerPacketMagenta, ItemID.FlowerPacketWhite, ItemID.FlowerPacketPink, ItemID.FlowerPacketWild);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:FlowerSeeds", FlowerSeeds);
 
             RecipeGroup GoldBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), GoldBar);
@@ -32,12 +40,15 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
 
+
             RecipeGroup Festive = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Festive Block", ItemID.CandyCaneBlock, ItemID.GreenCandyCaneBlock, ItemID.PineTreeBlock);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Festive", Festive);
+
 
             RecipeGroup TeakWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Wall", ModContent.ItemType<TeakWallItem>(), ModContent.ItemType<TeakFenceItem>(), 
                 ModContent.ItemType<TeakFenceSlatItem>(), ModContent.ItemType<TeakFenceSolidItem>(), ModContent.ItemType<TeakFenceLatticeItem>(), ModContent.ItemType<TeakPoleItem>());
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakWalls", TeakWalls);
+
 
             RecipeGroup HieroBlocks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sandstone Block/Wall", 
                 ModContent.ItemType<HieroBlock1Item>(), ModContent.ItemType<HieroBlock2Item>(), ModContent.ItemType<HieroBlock3Item>(), ModContent.ItemType<HieroBlock4Item>(), 

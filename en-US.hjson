@@ -4047,6 +4047,146 @@ Mods: {
 				DisplayName: Teak Bar
 				Tooltip: ""
 			}
+
+			FloralWorktableItem: {
+				DisplayName: Floral Crafting Table
+				Tooltip: ""
+			}
+
+			BasketHandle: {
+				DisplayName: Handled Basket
+				Tooltip: ""
+			}
+
+			EasterBasket: {
+				DisplayName: Simple Basket
+				Tooltip: ""
+			}
+
+			EmptyBasketItem: {
+				DisplayName: Empty Basket
+				Tooltip: ""
+			}
+
+			PlanterFloral: {
+				DisplayName: Floral Planter
+				Tooltip: ""
+			}
+
+			PlanterItem: {
+				DisplayName: Planter
+				Tooltip: ""
+			}
+
+			SpringBasket: {
+				DisplayName: Spring Basket
+				Tooltip: ""
+			}
+
+			VaseFloral: {
+				DisplayName: Floral Vase
+				Tooltip: ""
+			}
+
+			BigCarrot: {
+				DisplayName: Big Carrot
+				Tooltip: ""
+			}
+
+			CarrotPennant: {
+				DisplayName: Carrot Pennant
+				Tooltip: ""
+			}
+
+			Carrot: {
+				DisplayName: Carrot
+				Tooltip: ""
+			}
+
+			EggCup: {
+				DisplayName: Egg Cup
+				Tooltip: ""
+			}
+
+			EggCupLight: {
+				DisplayName: Egg Cup Light
+				Tooltip: ""
+			}
+
+			EggLight: {
+				DisplayName: Egg Light
+				Tooltip: ""
+			}
+
+			Egg: {
+				DisplayName: Egg
+				Tooltip: ""
+			}
+
+			FloralDecal: {
+				DisplayName: Floral Decal
+				Tooltip: ""
+			}
+
+			RabbitStandee: {
+				DisplayName: Rabbit Standee
+				Tooltip: ""
+			}
+
+			SpringPennant: {
+				DisplayName: Spring Pennant
+				Tooltip: ""
+			}
+
+			ChocolateSpringEgg: {
+				DisplayName: Chocolate Egg
+				Tooltip: ""
+			}
+
+			SpringEgg: {
+				DisplayName: Spring Egg
+				Tooltip: ""
+			}
+
+			SpringChick: {
+				DisplayName: Spring Chick
+				Tooltip: ""
+			}
+
+			SpringRabbitBrown: {
+				DisplayName: Brown Rabbit Stuffie
+				Tooltip: ""
+			}
+
+			SpringRabbitBrownBig: {
+				DisplayName: Big Brown Rabbit Stuffie
+				Tooltip: ""
+			}
+
+			SpringRabbitBrownPlush: {
+				DisplayName: Brown Rabbit Plush
+				Tooltip: ""
+			}
+
+			SpringRabbitWhite: {
+				DisplayName: White Rabbit Stuffie
+				Tooltip: ""
+			}
+
+			SpringRabbitWhiteBig: {
+				DisplayName: Big White Rabbit Stuffie
+				Tooltip: ""
+			}
+
+			SpringRabbitWhitePlush: {
+				DisplayName: White Rabbit Plush
+				Tooltip: ""
+			}
+
+			CandyEggBowl: {
+				DisplayName: Candy Egg Bowl
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {

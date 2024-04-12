@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.KingBeds;
 using Terraria;

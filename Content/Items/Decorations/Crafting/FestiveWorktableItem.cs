@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

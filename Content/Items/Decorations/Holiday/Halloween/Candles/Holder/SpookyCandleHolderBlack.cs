@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Candles;
 using Terraria;
 using Terraria.GameContent.Creative;

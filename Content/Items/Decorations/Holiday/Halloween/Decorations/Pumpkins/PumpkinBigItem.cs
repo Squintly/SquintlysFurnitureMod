@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Decorations.Pumpkins;
 using Terraria;
 using Terraria.GameContent.Creative;

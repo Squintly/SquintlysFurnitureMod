@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

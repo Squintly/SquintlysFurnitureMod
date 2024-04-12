@@ -37,6 +37,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
             TileID.Sets.IsAContainer[Type] = true;
 
             AdjTiles = new int[] { TileID.Dressers };
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.Height = 3;

@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Color = Microsoft.Xna.Framework.Color;
 
-namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
+namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 
 public class DecoBoxTile : ModTile
 {

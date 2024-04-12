@@ -36,7 +36,7 @@ internal class HangingMeat : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup("SquintlysFurnitureMod:Meat", 2)
+            .AddRecipeGroup("SquintlyFurnitureMod:Meat", 2)
             .AddTile(TileID.CookingPots)
             .Register();
         

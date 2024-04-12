@@ -1,5 +1,5 @@
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines.Balloons;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

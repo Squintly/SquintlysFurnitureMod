@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Hobbies.Study;
 using Terraria;
 using Terraria.GameContent.Creative;
