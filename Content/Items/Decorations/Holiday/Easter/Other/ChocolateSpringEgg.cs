@@ -2,9 +2,11 @@ using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 
@@ -12,7 +14,7 @@ internal class ChocolateSpringEgg : ModItem
 {
     public override void SetStaticDefaults()
     {
-        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 5;
     }
 
     public override void SetDefaults()
@@ -34,12 +36,15 @@ internal class ChocolateSpringEgg : ModItem
 
         Item.createTile = ModContent.TileType<ChocolateSpringEggs>();
     }
-
     public override void AddRecipes()
     {
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<ChocolateBlockItem>(), 1)
             .AddTile(ModContent.TileType<FloralWorktable>())
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<EdibleChocEgg>(), 1)
             .Register();
     }
 }

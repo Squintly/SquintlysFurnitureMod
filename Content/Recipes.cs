@@ -1,5 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Items.Blocks.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
@@ -14,15 +15,9 @@ namespace SquintlysFurnitureMod.Content
 {
     public class Recipes : ModSystem
     {
-        public override void AddRecipes()
-        {
-            Recipe recipe = Recipe.Create(ItemID.Glass);
-            recipe.AddIngredient(ModContent.ItemType<FrostedGlassItem>(), 4);
-            recipe.Register();
-        }
-
         public override void AddRecipeGroups()
         {
+            //Vanilla Groups
             RecipeGroup Meat = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Meat", ItemID.Steak, ItemID.Bacon, ItemID.BBQRibs, ItemID.ChickenNugget, ItemID.HamBat);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Meat", Meat);
 
@@ -40,15 +35,16 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
             RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
 
+            RecipeGroup Streamers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Streamers", ItemID.SillyStreamerGreen, ItemID.SillyStreamerPink, ItemID.SillyStreamerBlue);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Streamers", Streamers);
 
+            //Mod Groups
             RecipeGroup Festive = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Festive Block", ItemID.CandyCaneBlock, ItemID.GreenCandyCaneBlock, ItemID.PineTreeBlock);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Festive", Festive);
-
 
             RecipeGroup TeakWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Wall", ModContent.ItemType<TeakWallItem>(), ModContent.ItemType<TeakFenceItem>(), 
                 ModContent.ItemType<TeakFenceSlatItem>(), ModContent.ItemType<TeakFenceSolidItem>(), ModContent.ItemType<TeakFenceLatticeItem>(), ModContent.ItemType<TeakPoleItem>());
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakWalls", TeakWalls);
-
 
             RecipeGroup HieroBlocks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sandstone Block/Wall", 
                 ModContent.ItemType<HieroBlock1Item>(), ModContent.ItemType<HieroBlock2Item>(), ModContent.ItemType<HieroBlock3Item>(), ModContent.ItemType<HieroBlock4Item>(), 

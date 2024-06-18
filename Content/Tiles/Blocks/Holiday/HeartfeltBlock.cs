@@ -13,6 +13,7 @@ public class HeartfeltBlock : ModTile
         Main.tileNoAttach[Type] = false;
         Main.tileMergeDirt[Type] = false;
         Main.tileBlockLight[Type] = true;
+
         AddMapEntry(new Color(219, 0, 44));
     }
 }

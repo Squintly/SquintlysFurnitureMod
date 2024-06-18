@@ -33,3 +33,13 @@ internal class Egg : ModItem
         Item.createTile = ModContent.TileType<Eggs>();
     }
 }
+public class EggRecipes : ModSystem
+{
+    public override void AddRecipes()
+    {
+        Recipe recipe = Recipe.Create(ItemID.FriedEgg);
+        recipe.AddIngredient(ModContent.ItemType<Egg>());
+        recipe.AddTile(TileID.CookingPots);
+        recipe.Register();
+    }
+}

@@ -19,7 +19,7 @@ public class DecoWoodenSpikes : ModTile
 
         Main.tileNoSunLight[Type] = true;
 
-        TileID.Sets.IsBeam[Type] = true;
+        TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
 
         RegisterItemDrop(ModContent.ItemType<DecoWoodenSpikeItem>());
     }

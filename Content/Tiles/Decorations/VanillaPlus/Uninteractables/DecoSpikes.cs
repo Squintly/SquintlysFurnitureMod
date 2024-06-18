@@ -19,7 +19,7 @@ public class DecoSpikes : ModTile
 
         Main.tileNoSunLight[Type] = true;
 
-        TileID.Sets.IsBeam[Type] = true;
+        TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
 
         RegisterItemDrop(ModContent.ItemType<DecoSpikeItem>());
     }

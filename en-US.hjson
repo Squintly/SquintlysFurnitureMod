@@ -4187,6 +4187,761 @@ Mods: {
 				DisplayName: Candy Egg Bowl
 				Tooltip: ""
 			}
+
+			SpringtimeBarstool: {
+				DisplayName: Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolCover: {
+				DisplayName: Covered Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolDraped: {
+				DisplayName: Draped Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatterned: {
+				DisplayName: Patterned Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatternedCover: {
+				DisplayName: Patterned Covered Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatternedDraped: {
+				DisplayName: Patterned Draped Springtime Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBar: {
+				DisplayName: Springtime Bar
+				Tooltip: ""
+			}
+
+			SpringtimeChair: {
+				DisplayName: Springtime Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairDraped: {
+				DisplayName: Draped Springtime Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairDrapedPatterned: {
+				DisplayName: Patterned Draped Springtime Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairPatterned: {
+				DisplayName: Patterned Springtime Chair
+				Tooltip: ""
+			}
+
+			SpringtimeStoolItem: {
+				DisplayName: Springtime Stool
+				Tooltip: ""
+			}
+
+			SpringtimeStoolItemPatterned: {
+				DisplayName: Patterned Springtime Stool
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraBlue: {
+				DisplayName: Blue Springtime Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraGreen: {
+				DisplayName: Green Springtime Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraPink: {
+				DisplayName: Pink Springtime Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraWhite: {
+				DisplayName: Springtime Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandleItem: {
+				DisplayName: Springtime Candle
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampBlue: {
+				DisplayName: Blue Springtime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampGreen: {
+				DisplayName: Green Springtime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampPink: {
+				DisplayName: Pink Springtime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampWhite: {
+				DisplayName: Springtime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierBlueCrystalItem: {
+				DisplayName: Blue Crystal Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierBlueItem: {
+				DisplayName: Blue Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierGreenCrystalItem: {
+				DisplayName: Green Crystal Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierGreenItem: {
+				DisplayName: Green Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierPinkCrystalItem: {
+				DisplayName: Pink Crystal  Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierPinkItem: {
+				DisplayName: Pink Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierWhiteCrystalItem: {
+				DisplayName: Crystal Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierWhiteItem: {
+				DisplayName: Springtime Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeLampBlue: {
+				DisplayName: Blue Springtime Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampGreen: {
+				DisplayName: Green Springtime Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampPink: {
+				DisplayName: Pink Springtime Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampWhite: {
+				DisplayName: Springtime Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLanternBlue: {
+				DisplayName: Blue Springtime Lantern
+				Tooltip: ""
+			}
+
+			SpringtimeLanternGreen: {
+				DisplayName: Green Springtime Lantern
+				Tooltip: ""
+			}
+
+			SpringtimeLanternPink: {
+				DisplayName: Pink Springtime Lantern
+				Tooltip: ""
+			}
+
+			SpringtimeLanternWhite: {
+				DisplayName: Springtime Lantern
+				Tooltip: ""
+			}
+
+			SpringtimeSconceBlue: {
+				DisplayName: Blue Springtime Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconceGreen: {
+				DisplayName: Green Springtime Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconcePink: {
+				DisplayName: Pink Springtime Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconceWhite: {
+				DisplayName: Springtime Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightBlue: {
+				DisplayName: Blue Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightBlueCrystal: {
+				DisplayName: Blue Crystal Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightGreen: {
+				DisplayName: Green Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightGreenCrystal: {
+				DisplayName: Green Crystal Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightPink: {
+				DisplayName: Pink Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightPinkCrystal: {
+				DisplayName: Pink Crystal Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightWhite: {
+				DisplayName: Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightWhiteCrystal: {
+				DisplayName: Crystal Springtime Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereBlue: {
+				DisplayName: Blue Springtime Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereGreen: {
+				DisplayName: Green Springtime Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchierePink: {
+				DisplayName: Pink Springtime Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereWhite: {
+				DisplayName: Springtime Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeArmchair: {
+				DisplayName: Springtime Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubItem: {
+				DisplayName: Springtime Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBedItem: {
+				DisplayName: Springtime Bed
+				Tooltip: ""
+			}
+
+			SpringtimeBookcaseItem: {
+				DisplayName: Springtime Bookcase
+				Tooltip: ""
+			}
+
+			SpringtimeChestItem: {
+				DisplayName: Springtime Chest
+				Tooltip: ""
+			}
+
+			SpringtimeClockItem: {
+				DisplayName: Springtime Clock
+				Tooltip: ""
+			}
+
+			SpringtimeConsoleItem: {
+				DisplayName: Springtime Console
+				Tooltip: ""
+			}
+
+			SpringtimeDoorItem: {
+				DisplayName: Springtime Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorRectangleItem: {
+				DisplayName: Rectanglular Springtime Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorRoundItem: {
+				DisplayName: Round Springtime Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorSquareItem: {
+				DisplayName: Square Springtime Door
+				Tooltip: ""
+			}
+
+			SpringtimeDresserItem: {
+				DisplayName: Springtime Dresser
+				Tooltip: ""
+			}
+
+			SpringtimeEggChair: {
+				DisplayName: Springtime Egg Chair
+				Tooltip: ""
+			}
+
+			SpringtimeKingBedItem: {
+				DisplayName: Springtime Royal Bed
+				Tooltip: ""
+			}
+
+			SpringtimeNightstandItem: {
+				DisplayName: Springtime Nightstand
+				Tooltip: ""
+			}
+
+			SpringtimeOttoman: {
+				DisplayName: Springtime Ottoman
+				Tooltip: ""
+			}
+
+			SpringtimePianoItem: {
+				DisplayName: Springtime Piano
+				Tooltip: ""
+			}
+
+			SpringtimePlatformFloralItem: {
+				DisplayName: Floral Springtime Platform
+				Tooltip: ""
+			}
+
+			SpringtimePlatformItem: {
+				DisplayName: Springtime Platform
+				Tooltip: ""
+			}
+
+			SpringtimeShelfItem: {
+				DisplayName: Springtime Shelf
+				Tooltip: ""
+			}
+
+			SpringtimeSinkItem: {
+				DisplayName: Springtime Sink
+				Tooltip: ""
+			}
+
+			SpringtimeSofaBlue: {
+				DisplayName: Blue Springtime Sofa
+				Tooltip: ""
+			}
+
+			SpringtimeSofaPatterns: {
+				DisplayName: Patterned Springtime Sofa
+				Tooltip: ""
+			}
+
+			SpringtimeSofaWhite: {
+				DisplayName: Springtime Sofa
+				Tooltip: ""
+			}
+
+			SpringtimeTable: {
+				DisplayName: Springtime Table
+				Tooltip: ""
+			}
+
+			SpringtimeToiletItem: {
+				DisplayName: Springtime Toilet
+				Tooltip: ""
+			}
+
+			SpringtimeWorkbench: {
+				DisplayName: Springtime Work Bench
+				Tooltip: ""
+			}
+
+			SpringyWood: {
+				DisplayName: Springy Wood
+				Tooltip: ""
+			}
+
+			SpringyWoodWallItem: {
+				DisplayName: Springy Wood Wall
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairFancy: {
+				DisplayName: Fancy Springtime Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairFancyPattern: {
+				DisplayName: Fancy Patterned Springtime Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairPattern: {
+				DisplayName: Patterned Springtime Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeOttomanPattern: {
+				DisplayName: Patterned Springtime Ottoman
+				Tooltip: ""
+			}
+
+			SpringtimeSinkFancy: {
+				DisplayName: Springtime Sink
+				Tooltip: ""
+			}
+
+			SpringtimeSinkPattern: {
+				DisplayName: Patterned Springtime Sink
+				Tooltip: ""
+			}
+
+			SpringtimeTableFancy: {
+				DisplayName: Fancy Springtime Table
+				Tooltip: ""
+			}
+
+			SpringtimeTablePattern: {
+				DisplayName: Patterned Springtime Table
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubColor: {
+				DisplayName: Springtime Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubPattern: {
+				DisplayName: Patterned Springtime Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubStripe: {
+				DisplayName: Striped Springtime Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBedItemPatterned: {
+				Tooltip: ""
+				DisplayName: Patterned Springtime Bed
+			}
+
+			CookedCarrot: {
+				Tooltip: ""
+				DisplayName: Cooked Carrot
+			}
+
+			EdibleChocEgg: {
+				DisplayName: Tasty Chococolate Egg
+				Tooltip: ""
+			}
+
+			ColumnCorinthianItem: {
+				DisplayName: Corinthian Column
+				Tooltip: ""
+			}
+
+			ColumnDoricItem: {
+				DisplayName: Doric Column
+				Tooltip: ""
+			}
+
+			ColumnIonicItem: {
+				DisplayName: Ionic Column
+				Tooltip: ""
+			}
+
+			PlasterBlueItem: {
+				DisplayName: Blue Plaster
+				Tooltip: ""
+			}
+
+			PlasterBlueWornItem: {
+				DisplayName: Worn Blue Plaster
+				Tooltip: ""
+			}
+
+			PlasterItem: {
+				DisplayName: Plaster
+				Tooltip: ""
+			}
+
+			PlasterWornItem: {
+				DisplayName: Worn Plaster
+				Tooltip: ""
+			}
+
+			SpringyBeamDecoratedItem: {
+				DisplayName: Decorated Springy Beam
+				Tooltip: ""
+			}
+
+			SpringyBeamFloralItem: {
+				DisplayName: Floral Springy Beam
+				Tooltip: ""
+			}
+
+			SpringyBeamItem: {
+				DisplayName: Springy Beam
+				Tooltip: ""
+			}
+
+			SpringyWoodBlueItem: {
+				DisplayName: Blue Springy Wood
+				Tooltip: ""
+			}
+
+			SpringyWoodGreenItem: {
+				DisplayName: Green Springy Wood
+				Tooltip: ""
+			}
+
+			TileBlueItem: {
+				DisplayName: Blue Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredBlueItem: {
+				DisplayName: Checkered Blue Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredItem: {
+				DisplayName: Checkered Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallBlueItem: {
+				DisplayName: Small Blue Checkered Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallItem: {
+				DisplayName: Small Checkered Tile
+				Tooltip: ""
+			}
+
+			TileFloralBlueItem: {
+				DisplayName: Floral Blue Tile
+				Tooltip: ""
+			}
+
+			TileFloralPinkItem: {
+				DisplayName: Floral Pink Tile
+				Tooltip: ""
+			}
+
+			TileFloralYellowItem: {
+				DisplayName: Floral Yellow Tile
+				Tooltip: ""
+			}
+
+			TileMediterraneanItem: {
+				DisplayName: Mediterranean Tile
+				Tooltip: ""
+			}
+
+			TilePinkItem: {
+				DisplayName: Pink Tile
+				Tooltip: ""
+			}
+
+			TileSmallBlueItem: {
+				DisplayName: Small Blue Tile
+				Tooltip: ""
+			}
+
+			TileSmallPinkItem: {
+				DisplayName: Small Pink Tile
+				Tooltip: ""
+			}
+
+			TileSmallWhiteItem: {
+				DisplayName: Small White Tile
+				Tooltip: ""
+			}
+
+			TileWhiteItem: {
+				DisplayName: White Tile
+				Tooltip: ""
+			}
+
+			ColumnCorinthianWallItem: {
+				DisplayName: Corinthian Column Wall
+				Tooltip: ""
+			}
+
+			ColumnDoricWallItem: {
+				DisplayName: Doric Column Wall
+				Tooltip: ""
+			}
+
+			ColumnIonicWallItem: {
+				DisplayName: Ionic Column Wall
+				Tooltip: ""
+			}
+
+			PlasterBlueWallItem: {
+				DisplayName: Blue Plaster Wall
+				Tooltip: ""
+			}
+
+			PlasterBlueWornWallItem: {
+				DisplayName: Worn Blue Plaster Wall
+				Tooltip: ""
+			}
+
+			PlasterWallItem: {
+				DisplayName: Plaster Wall
+				Tooltip: ""
+			}
+
+			PlasterWornWallItem: {
+				DisplayName: Worn Plaster Wall
+				Tooltip: ""
+			}
+
+			SpringFenceFloralItem: {
+				DisplayName: Floral Springtime Fence
+				Tooltip: ""
+			}
+
+			SpringFenceMetalItem: {
+				DisplayName: Springtime Fence
+				Tooltip: ""
+			}
+
+			SpringyWoodBlueWallItem: {
+				DisplayName: Blue Springy Wood Wall
+				Tooltip: ""
+			}
+
+			SpringyWoodGreenWallItem: {
+				DisplayName: Green Springy Wood Wall
+				Tooltip: ""
+			}
+
+			SpringyWoodPoleBlueItem: {
+				DisplayName: Blue Springy Wood Pole
+				Tooltip: ""
+			}
+
+			SpringyWoodPoleGreenItem: {
+				DisplayName: Green Springy Wood Pole
+				Tooltip: ""
+			}
+
+			SpringyWoodPoleWhiteItem: {
+				DisplayName: Springy Wood Pole
+				Tooltip: ""
+			}
+
+			TileBlueWallItem: {
+				DisplayName: Blue Tile Wall
+				Tooltip: ""
+			}
+
+			TileCheckeredBlueWallItem: {
+				DisplayName: Blue Checkered Tile Wall
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallBlueWallItem: {
+				DisplayName: Small Blue Checkered Tile Wall
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallWallItem: {
+				DisplayName: Small Checkered Tile Wall
+				Tooltip: ""
+			}
+
+			TileCheckeredWallItem: {
+				DisplayName: Checkered Tile Wall
+				Tooltip: ""
+			}
+
+			TileFloralBlueWallItem: {
+				DisplayName: Floral Blue Tile Wall
+				Tooltip: ""
+			}
+
+			TileFloralPinkWallItem: {
+				DisplayName: Floral Pink Tile Wall
+				Tooltip: ""
+			}
+
+			TileFloralYellowWallItem: {
+				DisplayName: Floral Yellow Tile Wall
+				Tooltip: ""
+			}
+
+			TileMediterraneanWallItem: {
+				DisplayName: Mediterranean Tile Wall
+				Tooltip: ""
+			}
+
+			TilePinkWallItem: {
+				DisplayName: Pink Tile Wall
+				Tooltip: ""
+			}
+
+			TileSmallBlueWallItem: {
+				DisplayName: Small Blue Tile Wall
+				Tooltip: ""
+			}
+
+			TileSmallPinkWallItem: {
+				DisplayName: Small Pink Tile Wall
+				Tooltip: ""
+			}
+
+			TileSmallWhiteWallItem: {
+				DisplayName: Small White Tile Wall
+				Tooltip: ""
+			}
+
+			TileWhiteWallItem: {
+				DisplayName: White Tile Wall
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {
@@ -4202,26 +4957,52 @@ Mods: {
 				MapEntry0: Food Barrel
 			}
 
+			TatteredChest: {
+				ContainerName: Tattered Chest
+				MapEntry0: Tattered Chest
+			}
+
+			RepairedChest: {
+				ContainerName: Repaired Chest
+				MapEntry0: Repaired Chest
+			}
+
 			FestiveChest: {
 				ContainerName: Festive Chest
 				MapEntry0: Festive Chest
 			}
-
-			FestiveDresser.ContainerName: Festive Dresser
 
 			HeartfeltChest: {
 				ContainerName: Heartfelt Chest
 				MapEntry0: Heartfelt Chest
 			}
 
-			HeartfeltDresser.ContainerName: Heartfelt Dresser
+			TeakChest: {
+				ContainerName: Teak Chest
+				MapEntry0: Teak Chest
+			}
 
-			TatteredChest: {
-				ContainerName: Tattered Chest
-				MapEntry0: Tattered Chest
+			TeakNightstand: {
+				ContainerName: Teak Nightstand
+				MapEntry0: Teak Nightstand
+			}
+
+			SpringtimeChest: {
+				ContainerName: Springtime Chest
+				MapEntry0: Springtime Chest
+			}
+
+			SpringtimeNightstand: {
+				ContainerName: Springtime Nightstand
+				MapEntry0: Springtime Nightstand
 			}
 
 			TatteredDresser.MapEntry: Tattered Dresser
+			RepairedDresser.MapEntry: Repaired Dresser
+			FestiveDresser.ContainerName: Festive Dresser
+			HeartfeltDresser.ContainerName: Heartfelt Dresser
+			TeakDresser.MapEntry: Teak Dresser
+			SpringtimeDresser.MapEntry: Springtime Dresser
 			Chocolate_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Chocolate_Block
 			Faded_Hieroglyphic_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Faded_Hieroglyphic_Block
 			Festive_Column.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Column
@@ -4311,7 +5092,6 @@ Mods: {
 			Tattered_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Table
 			Tattered_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Toilet
 			Tattered_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tattered_Work_Bench
-			RepairedDresser.MapEntry: Repaired Dresser
 		}
 
 		"MapObject.Year's_End_Decoration": Mods.SquintlysFurnitureMod.MapObject.Year's_End_Decoration

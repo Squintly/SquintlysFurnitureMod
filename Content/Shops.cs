@@ -1,4 +1,5 @@
 ﻿using SquintlysFurnitureMod.Content.Items;
+using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Meats.Hanging;
@@ -22,6 +23,9 @@ public class Shops : GlobalNPC
         nextSlot++;
 
         shop[nextSlot] = ModContent.ItemType<TeakWood>();
+        nextSlot++;
+
+        shop[nextSlot] = ModContent.ItemType<SpringyWood>();
         nextSlot++;
     }
 

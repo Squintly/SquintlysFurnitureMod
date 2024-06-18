@@ -17,7 +17,8 @@ public class DecorativeWebTile : ModTile
 
         Main.tileBlockLight[Type] = false;
 
-        TileID.Sets.IsBeam[Type] = true;
+        TileID.Sets.CanPlaceNextToNonSolidTile[Type] = true;
+
         HitSound = SoundID.Grass;
 
         RegisterItemDrop(ModContent.ItemType<DecorativeWebItem>());

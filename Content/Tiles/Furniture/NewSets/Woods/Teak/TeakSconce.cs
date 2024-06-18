@@ -99,7 +99,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX < 66)
             {
                 // We can support different light colors for different styles here: switch (tile.frameY / 54)
                 r = 1f;

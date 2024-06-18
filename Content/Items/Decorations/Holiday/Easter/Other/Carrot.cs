@@ -1,8 +1,12 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 
@@ -10,7 +14,7 @@ internal class Carrot : ModItem
 {
     public override void SetStaticDefaults()
     {
-        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 5;
     }
 
     public override void SetDefaults()
@@ -32,4 +36,5 @@ internal class Carrot : ModItem
 
         Item.createTile = ModContent.TileType<Carrots>();
     }
+   
 }

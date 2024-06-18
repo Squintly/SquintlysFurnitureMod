@@ -38,7 +38,6 @@ internal class TeakDresserItem : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<TeakWood>(), 16)
-            .AddIngredient(ItemID.Glass, 4)
             .AddTile(TileID.WorkBenches)
             .Register();
     }
