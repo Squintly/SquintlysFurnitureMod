@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Baskets;
+using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeThree;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,7 @@ internal class PlanterFloral : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<PlantersFloral>();
+        Item.createTile = ModContent.TileType<S_3x3_3>();
     }
 
     public override void AddRecipes()

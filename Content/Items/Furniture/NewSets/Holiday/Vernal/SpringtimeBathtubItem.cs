@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
+using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
@@ -40,6 +41,7 @@ internal class SpringtimeBathtubItem : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ItemID.ClayBlock, 10)
+            .AddIngredient(ModContent.ItemType<Plastic>(), 5)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 5)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();

@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines.Other;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,8 @@ internal class DarkRose : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<DarkRoseTile>();
+        Item.createTile = ModContent.TileType<S_1x1_N_2>();
+        Item.placeStyle = 5;
     }
 
     public override void AddRecipes()

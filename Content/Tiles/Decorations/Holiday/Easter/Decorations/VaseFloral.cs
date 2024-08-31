@@ -1,5 +1,5 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Baskets;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Decor.Vases;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Clutter.Office;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,8 @@ internal class Binder : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Binders>();
+        Item.createTile = ModContent.TileType<S_1x1_N_4>();
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()

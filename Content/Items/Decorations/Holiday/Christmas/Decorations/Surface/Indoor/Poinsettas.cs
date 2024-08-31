@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Surface;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,8 +32,8 @@ internal class Poinsettas : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Crimbo2x2>();
-        Item.placeStyle = 5;
+        Item.createTile = ModContent.TileType<S_2x2_3>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()
@@ -40,6 +41,7 @@ internal class Poinsettas : ModItem
         CreateRecipe()
             .AddIngredient(ItemID.DirtBlock, 1)
             .AddIngredient(ItemID.FlowerPacketRed)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

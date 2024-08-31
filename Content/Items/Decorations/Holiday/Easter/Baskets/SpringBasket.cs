@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Baskets;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,8 @@ internal class SpringBasket : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<SpringBaskets>();
+        Item.createTile = ModContent.TileType<S_2x2_5>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

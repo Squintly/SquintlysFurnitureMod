@@ -1,6 +1,8 @@
 ﻿using SquintlysFurnitureMod.Content.Items.Blocks.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Fruit;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
@@ -38,6 +40,9 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup Streamers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Streamers", ItemID.SillyStreamerGreen, ItemID.SillyStreamerPink, ItemID.SillyStreamerBlue);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Streamers", Streamers);
 
+            RecipeGroup Berries = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Berry", ItemID.Elderberry, ItemID.BlackCurrant);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Berries", Berries);
+
             //Mod Groups
             RecipeGroup Festive = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Festive Block", ItemID.CandyCaneBlock, ItemID.GreenCandyCaneBlock, ItemID.PineTreeBlock);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Festive", Festive);
@@ -53,6 +58,28 @@ namespace SquintlysFurnitureMod.Content
                 ModContent.ItemType<FadedHieroWall1Item>(), ModContent.ItemType<FadedHieroWall2Item>(), ModContent.ItemType<FadedHieroWall3Item>(), ModContent.ItemType<FadedHieroWall4Item>(), ModContent.ItemType<FadedHieroWallSmallItem>(),
                 ModContent.ItemType<PolishedSandstoneBrickItem>(), ModContent.ItemType<PolishedSandstoneBrickWallItem>(), ItemID.Sandstone, ItemID.SandstoneBrick, ItemID.SandstoneBrickWall, ItemID.SandstoneSlab);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:HieroBlocks", HieroBlocks);
+
+            RecipeGroup Milks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Milk", ItemID.MilkCarton, ModContent.ItemType<Milk>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Milk", Milks);
+
+            RecipeGroup AllFruit = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Fruit", RecipeGroupID.Fruit, ModContent.ItemType<Cherry>(), ModContent.ItemType<Dragonfruit>(), ModContent.ItemType<AppleGreen>(), 
+                ModContent.ItemType<AppleRed>(), ModContent.ItemType<Apricot>(), ModContent.ItemType<Avocado>(), ModContent.ItemType<Banana>(), ModContent.ItemType<Berries>(), ModContent.ItemType<Breadfruit>(), ModContent.ItemType<Coconut>(), 
+                ModContent.ItemType<Grapefruit>(), ModContent.ItemType<Grapes>(), ModContent.ItemType<Guava>(), ModContent.ItemType<Kiwi>(), ModContent.ItemType<Lemon>(), ModContent.ItemType<Lime>(), 
+                ModContent.ItemType<Mango>(), ModContent.ItemType<Orange>(), ModContent.ItemType<Papaya>(), ModContent.ItemType<Passionfruit>(), ModContent.ItemType<Peach>(), ModContent.ItemType<Pear>(), ModContent.ItemType<Persimmon>(), 
+                ModContent.ItemType<Pineapple>(), ModContent.ItemType<Pomegranate>(), ModContent.ItemType<Strawberry>(), ModContent.ItemType<Watermelon>(), ModContent.ItemType<WatermelonSmall>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:AllFruit", AllFruit);
+
+            RecipeGroup Apples = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Apple", ItemID.Apple, ModContent.ItemType<AppleRed>(), ModContent.ItemType<AppleGreen>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Apples", Apples);
+
+            RecipeGroup Peppers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Pepper", ItemID.SpicyPepper, ModContent.ItemType<Pepper>(), ModContent.ItemType<BellPepper>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Peppers", Peppers);
+
+            RecipeGroup Flours = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Flour", ModContent.ItemType<Flour>(), ModContent.ItemType<FlourBig>(), ModContent.ItemType<FlourSmall>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Flours", Flours);
+
+            RecipeGroup Sugars = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sugar", ModContent.ItemType<Sugar>(), ModContent.ItemType<SugarBig>(), ModContent.ItemType<SugarSmall>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Sugars", Sugars);
 
         }
 

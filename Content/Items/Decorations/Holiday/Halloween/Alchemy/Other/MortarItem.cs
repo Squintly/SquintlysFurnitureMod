@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Alchemy;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,8 +32,8 @@ internal class MortarItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Mortar>();
-        Item.placeStyle = 0;
+        Item.createTile = ModContent.TileType<S_1x1_N_2>();
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()

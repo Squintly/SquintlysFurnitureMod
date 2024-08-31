@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Surface;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,14 +32,19 @@ internal class SmallCandyCane : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Crimbo1x1>();
-        Item.placeStyle = 0;
+        Item.createTile = ModContent.TileType<S_1x1_N_2>();
+        Item.placeStyle = 12;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe()
             .AddIngredient(ItemID.CandyCaneBlock, 1)
+            .AddTile(ModContent.TileType<FestiveWorktable>())
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.GreenCandyCaneBlock, 1)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

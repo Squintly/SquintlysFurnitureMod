@@ -40,6 +40,7 @@ internal class SpringtimeBarstool : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 4)
+            .AddIngredient(ItemID.Silk)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }

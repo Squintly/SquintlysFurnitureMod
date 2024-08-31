@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Surface;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,8 +31,8 @@ internal class SantaHat : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Crimbo1x1>();
-        Item.placeStyle = 2;
+        Item.createTile = ModContent.TileType<S_1x1_N>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

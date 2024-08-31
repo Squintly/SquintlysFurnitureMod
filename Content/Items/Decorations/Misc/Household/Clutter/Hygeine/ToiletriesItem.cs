@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Clutter.Hygeine;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,7 @@ internal class ToiletriesItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Toiletries>();
+        Item.createTile = ModContent.TileType<S_1x1_N_13>();
     }
 
     public override void AddRecipes()

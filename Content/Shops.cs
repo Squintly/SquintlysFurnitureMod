@@ -1,7 +1,7 @@
 ﻿using SquintlysFurnitureMod.Content.Items;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Meats.Hanging;
 using Terraria;
 using Terraria.ID;
@@ -34,6 +34,11 @@ public class Shops : GlobalNPC
         if (shop.NpcType == NPCID.Merchant)
         {
             shop.Add<Egg>();
+            shop.Add<Sugar>();
+            shop.Add<Flour>();
+            shop.Add<Yeast>();
+            shop.Add<Salt>();
+
         }
     }
 }

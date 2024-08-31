@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Clutter.Hygeine;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,8 @@ internal class ToothpasteItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<Toothpaste>();
+        Item.createTile = ModContent.TileType<S_1x1_B_2>();
+        Item.placeStyle = 12;
     }
 
     public override void AddRecipes()

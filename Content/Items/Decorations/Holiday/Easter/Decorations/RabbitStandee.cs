@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeFour;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +32,8 @@ internal class RabbitStandee : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<RabbitStandeeTile>();
+        Item.createTile = ModContent.TileType<S_3x4>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

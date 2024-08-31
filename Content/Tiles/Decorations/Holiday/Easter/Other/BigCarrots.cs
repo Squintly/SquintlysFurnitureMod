@@ -1,5 +1,5 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Decorations;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Farming.Crops;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Bowls;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,8 +32,8 @@ internal class CandyBowl : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<SnackBowls>();
-        Item.placeStyle = 1;
+        Item.createTile = ModContent.TileType<S_1x1_N_6>();
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()
@@ -40,6 +41,11 @@ internal class CandyBowl : ModItem
         CreateRecipe()
             .AddIngredient(ItemID.Glass, 4)
             .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>())
+            .AddTile(TileID.WorkBenches)
+            .Register();
+        CreateRecipe()
+            .AddIngredient(ItemID.Glass, 4)
+            .AddIngredient(ModContent.ItemType<ChocolateBlockItem>())
             .AddTile(TileID.WorkBenches)
             .Register();
     }

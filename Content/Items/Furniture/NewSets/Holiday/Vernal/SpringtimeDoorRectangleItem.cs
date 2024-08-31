@@ -39,7 +39,7 @@ internal class SpringtimeDoorRectangleItem : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 6)
-            .AddIngredient(ItemID.Glass, 4)
+            .AddIngredient(ItemID.Glass, 2)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }

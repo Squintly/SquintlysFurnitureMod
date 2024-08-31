@@ -40,7 +40,7 @@ internal class SpringtimeChairDrapedPatterned : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 4)
-            .AddIngredient(ItemID.Silk, 2)
+            .AddIngredient(ItemID.Silk)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }
