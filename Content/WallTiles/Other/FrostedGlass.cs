@@ -1,10 +1,8 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 
 namespace SquintlysFurnitureMod.Content.WallTiles.Other;
 

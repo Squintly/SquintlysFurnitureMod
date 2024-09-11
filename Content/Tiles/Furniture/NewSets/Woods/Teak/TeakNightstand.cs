@@ -45,6 +45,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
 
             AdjTiles = new int[] { TileID.Containers };
 
+            AdjTiles = new int[] { TileID.Tables };
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.Origin = new Point16(0, 1);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };

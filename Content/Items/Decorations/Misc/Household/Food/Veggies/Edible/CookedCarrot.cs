@@ -1,10 +1,9 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Veggies.Edible;
 
@@ -37,6 +36,7 @@ internal class CookedCarrot : ModItem
     {
         player.AddBuff(BuffID.WellFed, 3600);
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

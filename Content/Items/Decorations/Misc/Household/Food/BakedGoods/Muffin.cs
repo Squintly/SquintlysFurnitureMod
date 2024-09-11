@@ -1,7 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -36,6 +34,7 @@ internal class Muffin : ModItem
         Item.createTile = ModContent.TileType<S_1x1_B_7>();
         Item.placeStyle = 2;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

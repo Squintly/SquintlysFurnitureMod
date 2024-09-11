@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.WallTiles.Other;
 using Terraria;
 using Terraria.GameContent.Creative;

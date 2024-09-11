@@ -151,11 +151,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Angel: {
-				DisplayName: Angel
-				Tooltip: ""
-			}
-
 			BellBoughsItem: {
 				DisplayName: Bell and Boughs
 				Tooltip: ""
@@ -163,11 +158,6 @@ Mods: {
 
 			BigBell: {
 				DisplayName: Big Bell
-				Tooltip: ""
-			}
-
-			BigBlueCard: {
-				DisplayName: Blue Card
 				Tooltip: ""
 			}
 
@@ -186,11 +176,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			BigRedCard: {
-				DisplayName: Red Card
-				Tooltip: ""
-			}
-
 			BigSanta: {
 				DisplayName: Big Santa
 				Tooltip: ""
@@ -206,11 +191,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			BigWhiteCard: {
-				DisplayName: White Cards
-				Tooltip: ""
-			}
-
 			BlackBow: {
 				DisplayName: Black Bow
 				Tooltip: ""
@@ -218,11 +198,6 @@ Mods: {
 
 			BlocksItem: {
 				DisplayName: Blocks
-				Tooltip: ""
-			}
-
-			BlueBall: {
-				DisplayName: Blue Ball
 				Tooltip: ""
 			}
 
@@ -253,11 +228,6 @@ Mods: {
 
 			BlueStarBanner: {
 				DisplayName: Blue Star Banner
-				Tooltip: ""
-			}
-
-			Diorama: {
-				DisplayName: Festive Diorama
 				Tooltip: ""
 			}
 
@@ -293,11 +263,6 @@ Mods: {
 
 			GoldNorthPole: {
 				DisplayName: Festive Pole
-				Tooltip: ""
-			}
-
-			GreenBall: {
-				DisplayName: Green Ball
 				Tooltip: ""
 			}
 
@@ -393,17 +358,7 @@ Mods: {
 
 			Poinsettas: {
 				DisplayName: Poinsettas
-				Tooltip: ""
-			}
-
-			Poinsettas2: {
-				DisplayName: Poinsettas
-				Tooltip: ""
-			}
-
-			PoinsettaSleigh: {
-				DisplayName: Poinsetta Sleigh
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			PresentPileLarge: {
@@ -423,11 +378,6 @@ Mods: {
 
 			PurpleBow: {
 				DisplayName: Purple Bow
-				Tooltip: ""
-			}
-
-			RedBall: {
-				DisplayName: Red Ball
 				Tooltip: ""
 			}
 
@@ -476,11 +426,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Reindeer: {
-				DisplayName: Decorative Reindeer
-				Tooltip: ""
-			}
-
 			RockingHorseItem: {
 				DisplayName: Rocking Horse
 				Tooltip: ""
@@ -518,12 +463,7 @@ Mods: {
 
 			SmallCandyCane: {
 				DisplayName: Small Candy Cane
-				Tooltip: ""
-			}
-
-			SmallCards: {
-				DisplayName: Festive Cards
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SmallGoldBow: {
@@ -533,11 +473,6 @@ Mods: {
 
 			SmallGreenBow: {
 				DisplayName: Small Green Bow
-				Tooltip: ""
-			}
-
-			SmallGreenCandyCane: {
-				DisplayName: Small Green Candy Cane
 				Tooltip: ""
 			}
 
@@ -611,28 +546,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			StarBall: {
-				DisplayName: Star Ball
-				Tooltip: ""
-			}
-
 			StripeBanner: {
 				DisplayName: Stripe Banner
 				Tooltip: ""
 			}
 
-			StripedBall: {
-				DisplayName: Striped Ball
-				Tooltip: ""
-			}
-
 			Sun: {
 				DisplayName: Festive Sun
-				Tooltip: ""
-			}
-
-			TippedTop: {
-				DisplayName: Top
 				Tooltip: ""
 			}
 
@@ -648,11 +568,6 @@ Mods: {
 
 			TreeGnome: {
 				DisplayName: Tree Gnome
-				Tooltip: ""
-			}
-
-			UprightTop: {
-				DisplayName: Top
 				Tooltip: ""
 			}
 
@@ -706,18 +621,8 @@ Mods: {
 				Tooltip: ""
 			}
 
-			YellowBall: {
-				DisplayName: Yellow Ball
-				Tooltip: ""
-			}
-
 			BlackBunting: {
 				DisplayName: Black Bunting
-				Tooltip: ""
-			}
-
-			BlackCracker: {
-				DisplayName: Black Cracker
 				Tooltip: ""
 			}
 
@@ -736,11 +641,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			BlueCracker: {
-				DisplayName: Blue Cracker
-				Tooltip: ""
-			}
-
 			BlueRibbonRosette: {
 				DisplayName: Blue Ribbon Rosette
 				Tooltip: ""
@@ -751,14 +651,9 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ChampagneFluteItem: {
+			ChampagneFlute: {
 				DisplayName: Champagne Flute
-				Tooltip: ""
-			}
-
-			ChampagneFlutesItem: {
-				DisplayName: Champagne Flutes
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			ChampagneItem: {
@@ -768,26 +663,6 @@ Mods: {
 
 			ChocolateFountainItem: {
 				DisplayName: Chocolate Fountain
-				Tooltip: ""
-			}
-
-			CrackerPile1: {
-				DisplayName: Crackers
-				Tooltip: ""
-			}
-
-			CrackerPile2: {
-				DisplayName: Crackers
-				Tooltip: ""
-			}
-
-			CrackerPile3: {
-				DisplayName: Crackers
-				Tooltip: ""
-			}
-
-			CrackerPileItem: {
-				DisplayName: Fancy Crackers
 				Tooltip: ""
 			}
 
@@ -816,11 +691,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			GreenCracker: {
-				DisplayName: Green Cracker
-				Tooltip: ""
-			}
-
 			GreenRibbonRosette: {
 				DisplayName: Green Ribbon Rosette
 				Tooltip: ""
@@ -846,6 +716,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Orange: {
+				DisplayName: Orange
+				Tooltip: Try right clicking!
+			}
+
 			PurpleBunting: {
 				DisplayName: Purple Bunting
 				Tooltip: ""
@@ -863,11 +738,6 @@ Mods: {
 
 			RedBunting: {
 				DisplayName: Red Bunting
-				Tooltip: ""
-			}
-
-			RedCracker: {
-				DisplayName: Red Cracker
 				Tooltip: ""
 			}
 
@@ -1002,17 +872,17 @@ Mods: {
 			}
 
 			TopHat: {
-				DisplayName: TopHat
+				DisplayName: Top Hat
 				Tooltip: ""
+			}
+
+			Top: {
+				DisplayName: Top
+				Tooltip: Try right clicking!
 			}
 
 			WhiteBunting: {
 				DisplayName: White Bunting
-				Tooltip: ""
-			}
-
-			WhiteCracker: {
-				DisplayName: White Cracker
 				Tooltip: ""
 			}
 
@@ -1028,11 +898,6 @@ Mods: {
 
 			YellowBunting: {
 				DisplayName: Yellow Bunting
-				Tooltip: ""
-			}
-
-			YellowCracker: {
-				DisplayName: Yellow Cracker
 				Tooltip: ""
 			}
 
@@ -1061,14 +926,9 @@ Mods: {
 				Tooltip: Try right clicking!
 			}
 
-			BlackChocolatesOpen: {
-				DisplayName: Box of Chocolates
-				Tooltip: Try right clicking!
-			}
-
 			BrightRose: {
 				DisplayName: Bright Rose
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			BundledHeartBalloons: {
@@ -1076,19 +936,19 @@ Mods: {
 				Tooltip: ""
 			}
 
-			CandyBowl: {
-				DisplayName: Bowl of Candy
-				Tooltip: ""
+			Bun: {
+				DisplayName: Bun
+				Tooltip: Try right clicking!
 			}
 
-			ChocolateBowl: {
-				DisplayName: Bowl of Chocolates
-				Tooltip: ""
+			CandyBowl: {
+				DisplayName: Bowl of Candy
+				Tooltip: Try right clicking!
 			}
 
 			DarkRose: {
 				DisplayName: Dark Rose
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			EmptyBowl: {
@@ -1151,36 +1011,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			HeartfeltCard1: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
-			HeartfeltCard2: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
-			HeartfeltCard3: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
-			HeartfeltCard4: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
-			HeartfeltCard5: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
-			HeartfeltCard6: {
-				DisplayName: Heartfelt Card
-				Tooltip: ""
-			}
-
 			HeartMobile: {
 				DisplayName: Heart Mobile
 				Tooltip: ""
@@ -1192,8 +1022,8 @@ Mods: {
 			}
 
 			HeartStringsItem: {
-				DisplayName: Strand of Hearts
-				Tooltip: ""
+				DisplayName: String of Hearts
+				Tooltip: Try right clicking!
 			}
 
 			LaceDecal: {
@@ -1211,17 +1041,7 @@ Mods: {
 				Tooltip: ""
 			}
 
-			PunchBowl: {
-				DisplayName: Punch Bowl
-				Tooltip: ""
-			}
-
 			RedChocolates: {
-				DisplayName: Box of Chocolates
-				Tooltip: Try right clicking!
-			}
-
-			RedChocolatesOpen: {
 				DisplayName: Box of Chocolates
 				Tooltip: Try right clicking!
 			}
@@ -2103,6 +1923,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Glass: {
+				DisplayName: Glass
+				Tooltip: Try right clicking!
+			}
+
 			GoldenCeilingLamp: {
 				DisplayName: Golden Ceiling Lamp
 				Tooltip: ""
@@ -2186,6 +2011,11 @@ Mods: {
 			PearlwoodCeilingLamp: {
 				DisplayName: Pearlwood Ceiling Lamp
 				Tooltip: ""
+			}
+
+			Pear: {
+				DisplayName: Pear
+				Tooltip: Try right clicking!
 			}
 
 			PinkDungeonCeilingLamp: {
@@ -2361,6 +2191,11 @@ Mods: {
 			BalloonCeilingLamp: {
 				DisplayName: Balloon Ceiling Lamp
 				Tooltip: ""
+			}
+
+			Ball: {
+				DisplayName: Ball
+				Tooltip: Try right clicking!
 			}
 
 			HeartfeltChestItem: {
@@ -3004,7 +2839,7 @@ Mods: {
 			}
 
 			GobletItem: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Goblet
 			}
 
@@ -3021,21 +2856,6 @@ Mods: {
 			FlaskMounted: {
 				Tooltip: Try right clicking!
 				DisplayName: Mounted Flask
-			}
-
-			CauldronCracked: {
-				Tooltip: ""
-				DisplayName: Cracked Cauldron
-			}
-
-			CauldronBronze: {
-				Tooltip: ""
-				DisplayName: Bronze Cauldron
-			}
-
-			CauldronBlack: {
-				Tooltip: ""
-				DisplayName: Black Cauldron
 			}
 
 			BubblingJarPurple: {
@@ -3250,12 +3070,12 @@ Mods: {
 
 			Tome: {
 				DisplayName: Tome
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			Detergent: {
 				DisplayName: Detergent
-				Tooltip: Try right-clicking!
+				Tooltip: ""
 			}
 
 			Sponge: {
@@ -3373,24 +3193,9 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TowelRolledBlue: {
-				DisplayName: Rolled Blue Towel
-				Tooltip: ""
-			}
-
-			TowelRolledGreen: {
-				DisplayName: Rolled Green Towel
-				Tooltip: ""
-			}
-
-			TowelRolledRed: {
-				DisplayName: Rolled Red Towel
-				Tooltip: ""
-			}
-
-			TowelRolledWhite: {
-				DisplayName: Rolled White Towel
-				Tooltip: ""
+			TowelRolled: {
+				DisplayName: Rolled Towel
+				Tooltip: Try right clicking!
 			}
 
 			TowelStackedBlue: {
@@ -3440,11 +3245,6 @@ Mods: {
 
 			WaterBottleSmall: {
 				DisplayName: Small Water Bottle
-				Tooltip: ""
-			}
-
-			NutBowl: {
-				DisplayName: Bowl of Nuts
 				Tooltip: ""
 			}
 
@@ -3624,12 +3424,12 @@ Mods: {
 			}
 
 			HangingSausageSmall: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Small Hanging Sausage
 			}
 
 			HangingSausage: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Large Hanging Sausage
 			}
 
@@ -3649,12 +3449,12 @@ Mods: {
 			}
 
 			HangingMegaChicken: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Hanging Mega Chicken
 			}
 
 			HangingMeat: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Hanging Meat
 			}
 
@@ -3669,7 +3469,7 @@ Mods: {
 			}
 
 			HangingChicken: {
-				Tooltip: ""
+				Tooltip: Try right clicking!
 				DisplayName: Hanging Chicken
 			}
 
@@ -4050,17 +3850,17 @@ Mods: {
 
 			FloralWorktableItem: {
 				DisplayName: Floral Crafting Table
-				Tooltip: ""
+				Tooltip: Used for special crafting
 			}
 
 			BasketHandle: {
 				DisplayName: Handled Basket
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			EasterBasket: {
 				DisplayName: Simple Basket
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			EmptyBasketItem: {
@@ -4070,7 +3870,7 @@ Mods: {
 
 			PlanterFloral: {
 				DisplayName: Floral Planter
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			PlanterItem: {
@@ -4080,27 +3880,27 @@ Mods: {
 
 			SpringBasket: {
 				DisplayName: Spring Basket
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			VaseFloral: {
 				DisplayName: Floral Vase
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			BigCarrot: {
 				DisplayName: Big Carrot
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			CarrotPennant: {
 				DisplayName: Carrot Pennant
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			Carrot: {
 				DisplayName: Carrot
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			EggCup: {
@@ -4120,12 +3920,12 @@ Mods: {
 
 			Egg: {
 				DisplayName: Egg
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			FloralDecal: {
 				DisplayName: Floral Decal
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			RabbitStandee: {
@@ -4135,57 +3935,22 @@ Mods: {
 
 			SpringPennant: {
 				DisplayName: Spring Pennant
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			ChocolateSpringEgg: {
 				DisplayName: Chocolate Egg
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SpringEgg: {
 				DisplayName: Spring Egg
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SpringChick: {
 				DisplayName: Spring Chick
-				Tooltip: ""
-			}
-
-			SpringRabbitBrown: {
-				DisplayName: Brown Rabbit Stuffie
-				Tooltip: ""
-			}
-
-			SpringRabbitBrownBig: {
-				DisplayName: Big Brown Rabbit Stuffie
-				Tooltip: ""
-			}
-
-			SpringRabbitBrownPlush: {
-				DisplayName: Brown Rabbit Plush
-				Tooltip: ""
-			}
-
-			SpringRabbitWhite: {
-				DisplayName: White Rabbit Stuffie
-				Tooltip: ""
-			}
-
-			SpringRabbitWhiteBig: {
-				DisplayName: Big White Rabbit Stuffie
-				Tooltip: ""
-			}
-
-			SpringRabbitWhitePlush: {
-				DisplayName: White Rabbit Plush
-				Tooltip: ""
-			}
-
-			CandyEggBowl: {
-				DisplayName: Candy Egg Bowl
-				Tooltip: ""
+				Tooltip: Try right clicking!
 			}
 
 			SpringtimeBarstool: {
@@ -4803,21 +4568,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			ColumnCorinthianWallItem: {
-				DisplayName: Corinthian Column Wall
-				Tooltip: ""
-			}
-
-			ColumnDoricWallItem: {
-				DisplayName: Doric Column Wall
-				Tooltip: ""
-			}
-
-			ColumnIonicWallItem: {
-				DisplayName: Ionic Column Wall
-				Tooltip: ""
-			}
-
 			PlasterBlueWallItem: {
 				DisplayName: Blue Plaster Wall
 				Tooltip: ""
@@ -4940,6 +4690,456 @@ Mods: {
 
 			TileWhiteWallItem: {
 				DisplayName: White Tile Wall
+				Tooltip: ""
+			}
+
+			FestiveDecor: {
+				DisplayName: Festive Decor
+				Tooltip: Try right clicking!
+			}
+
+			ChristmasCards: {
+				DisplayName: Festive Cards
+				Tooltip: Try right clicking!
+			}
+
+			Cauldrons: {
+				DisplayName: Cauldrons
+				Tooltip: Try right clicking!
+			}
+
+			Crackers: {
+				DisplayName: Crackers
+				Tooltip: Try right clicking!
+			}
+
+			HeartfeltCards: {
+				DisplayName: Heartfelt Cards
+				Tooltip: Try right clicking!
+			}
+
+			SpringRabbitBig: {
+				DisplayName: Spring Rabbit Plush
+				Tooltip: Try right clicking!
+			}
+
+			SpringRabbitSmall: {
+				DisplayName: Spring Rabbit Stuffie
+				Tooltip: Try right clicking!
+			}
+
+			Bucket: {
+				DisplayName: Bucket
+				Tooltip: Try right clicking!
+			}
+
+			Spraybottle: {
+				DisplayName: Spray Bottle
+				Tooltip: Try right clicking!
+			}
+
+			CreamandSugar: {
+				DisplayName: Cream and Sugar
+				Tooltip: Try right clicking!
+			}
+
+			PepperMill: {
+				DisplayName: Pepper Mill
+				Tooltip: ""
+			}
+
+			Pepper: {
+				DisplayName: Pepper
+				Tooltip: Try right clicking!
+			}
+
+			Pitcher: {
+				DisplayName: Pitcher
+				Tooltip: Try right clicking!
+			}
+
+			SaltandPepper: {
+				DisplayName: Salt and Pepper
+				Tooltip: Try right clicking!
+			}
+
+			SaltandPepperGlass: {
+				DisplayName: Salt and Pepper Glass
+				Tooltip: Try right clicking!
+			}
+
+			Salt: {
+				DisplayName: Salt
+				Tooltip: ""
+			}
+
+			Scoop: {
+				DisplayName: Scoop
+				Tooltip: Try right clicking!
+			}
+
+			BigCake: {
+				DisplayName: Big Cake
+				Tooltip: Try right clicking!
+			}
+
+			BigCakeSlice: {
+				DisplayName: Big Cake Slice
+				Tooltip: Try right clicking!
+			}
+
+			BirthdayCakeBlue: {
+				DisplayName: Blue Birthday Cake
+				Tooltip: ""
+			}
+
+			BirthdayCakeGreen: {
+				DisplayName: Green Birthday Cake
+				Tooltip: ""
+			}
+
+			BirthdayCakePink: {
+				DisplayName: Pink Birthday Cake
+				Tooltip: ""
+			}
+
+			BirthdayCakeSliceBlue: {
+				DisplayName: Blue Birthday Cake Slice
+				Tooltip: ""
+			}
+
+			BirthdayCakeSliceGreen: {
+				DisplayName: Green Birthday Cake Slice
+				Tooltip: ""
+			}
+
+			BirthdayCakeSlicePink: {
+				DisplayName: Pink Birthday Cake Slice
+				Tooltip: ""
+			}
+
+			Bread: {
+				DisplayName: Bread
+				Tooltip: Try right clicking!
+			}
+
+			Breadbasket: {
+				DisplayName: Breadbasket
+				Tooltip: Try right clicking!
+			}
+
+			Bunbasket: {
+				DisplayName: Bunbasket
+				Tooltip: Try right clicking!
+			}
+
+			Cake: {
+				DisplayName: Cake
+				Tooltip: Try right clicking!
+			}
+
+			CakeSlice: {
+				DisplayName: Cake Slice
+				Tooltip: Try right clicking!
+			}
+
+			Cupcake: {
+				DisplayName: Cupcake
+				Tooltip: Try right clicking!
+			}
+
+			CupcakeBirthday: {
+				DisplayName: Birthday Cupcake
+				Tooltip: ""
+			}
+
+			Loaf: {
+				DisplayName: Loaf
+				Tooltip: Try right clicking!
+			}
+
+			Muffin: {
+				DisplayName: Muffin
+				Tooltip: Try right clicking!
+			}
+
+			Pie: {
+				DisplayName: Pie
+				Tooltip: Try right clicking!
+			}
+
+			SmallBaguette: {
+				DisplayName: Baguette
+				Tooltip: Try right clicking!
+			}
+
+			BreadbasketEmpty: {
+				DisplayName: Empty Breadbasket
+				Tooltip: ""
+			}
+
+			BerryBowl: {
+				DisplayName: Berry Bowl
+				Tooltip: Try right clicking!
+			}
+
+			AppleGreen: {
+				DisplayName: Green Apple
+				Tooltip: Try right clicking!
+			}
+
+			AppleRed: {
+				DisplayName: Red Apple
+				Tooltip: Try right clicking!
+			}
+
+			Apricot: {
+				DisplayName: Apricot
+				Tooltip: Try right clicking!
+			}
+
+			Avocado: {
+				DisplayName: Avocado
+				Tooltip: Try right clicking!
+			}
+
+			Banana: {
+				DisplayName: Banana
+				Tooltip: Try right clicking!
+			}
+
+			BellPepper: {
+				DisplayName: Bell Pepper
+				Tooltip: Try right clicking!
+			}
+
+			Berries: {
+				DisplayName: Berries
+				Tooltip: Try right clicking!
+			}
+
+			BloodOrange: {
+				DisplayName: Blood Orange
+				Tooltip: Try right clicking!
+			}
+
+			Breadfruit: {
+				DisplayName: Breadfruit
+				Tooltip: Try right clicking!
+			}
+
+			Cherry: {
+				DisplayName: Cherry
+				Tooltip: ""
+			}
+
+			Coconut: {
+				DisplayName: Coconut
+				Tooltip: Try right clicking!
+			}
+
+			Dragonfruit: {
+				DisplayName: Dragonfruit
+				Tooltip: ""
+			}
+
+			Grapefruit: {
+				DisplayName: Grapefruit
+				Tooltip: Try right clicking!
+			}
+
+			Grapes: {
+				DisplayName: Grapes
+				Tooltip: Try right clicking!
+			}
+
+			Guava: {
+				DisplayName: Guava
+				Tooltip: Try right clicking!
+			}
+
+			Kiwi: {
+				DisplayName: Kiwi
+				Tooltip: Try right clicking!
+			}
+
+			Lemon: {
+				DisplayName: Lemon
+				Tooltip: Try right clicking!
+			}
+
+			Lime: {
+				DisplayName: Lime
+				Tooltip: Try right clicking!
+			}
+
+			Mango: {
+				DisplayName: Mango
+				Tooltip: Try right clicking!
+			}
+
+			Papaya: {
+				DisplayName: Papaya
+				Tooltip: Try right clicking!
+			}
+
+			Passionfruit: {
+				DisplayName: Passionfruit
+				Tooltip: Try right clicking!
+			}
+
+			Peach: {
+				DisplayName: Peach
+				Tooltip: Try right clicking!
+			}
+
+			Persimmon: {
+				DisplayName: Persimmon
+				Tooltip: Try right clicking!
+			}
+
+			Pineapple: {
+				DisplayName: Pineapple
+				Tooltip: Try right clicking!
+			}
+
+			Plum: {
+				DisplayName: Plum
+				Tooltip: Try right clicking!
+			}
+
+			Pomegranate: {
+				DisplayName: Pomegranate
+				Tooltip: Try right clicking!
+			}
+
+			Starfruit: {
+				DisplayName: Starfruit
+				Tooltip: Try right clicking!
+			}
+
+			Strawberry: {
+				DisplayName: Strawberry
+				Tooltip: Try right clicking!
+			}
+
+			SugarApple: {
+				DisplayName: Sugar Apple
+				Tooltip: Try right clicking!
+			}
+
+			Sugar: {
+				DisplayName: Sugar
+				Tooltip: ""
+			}
+
+			Watermelon: {
+				DisplayName: Watermelon
+				Tooltip: Try right clicking!
+			}
+
+			WatermelonSmall: {
+				DisplayName: Small Watermelon
+				Tooltip: Try right clicking!
+			}
+
+			Butter: {
+				DisplayName: Butter
+				Tooltip: Try right clicking!
+			}
+
+			Cheese: {
+				DisplayName: Cheese
+				Tooltip: Try right clicking!
+			}
+
+			CheeseSlice: {
+				DisplayName: Cheese Slice
+				Tooltip: Try right clicking!
+			}
+
+			CheeseWheel: {
+				DisplayName: Cheese Wheel
+				Tooltip: Try right clicking!
+			}
+
+			EggCarton: {
+				DisplayName: Egg Carton
+				Tooltip: Try right clicking!
+			}
+
+			Flour: {
+				DisplayName: Flour
+				Tooltip: ""
+			}
+
+			FlourBig: {
+				DisplayName: Flour Sack
+				Tooltip: Try right clicking!
+			}
+
+			FlourSmall: {
+				DisplayName: Small Flour Sack
+				Tooltip: Try right clicking!
+			}
+
+			Milk: {
+				DisplayName: Milk
+				Tooltip: Try right clicking!
+			}
+
+			SugarBig: {
+				DisplayName: Sugar Sack
+				Tooltip: Try right clicking!
+			}
+
+			SugarSmall: {
+				DisplayName: Small Sugar Sack
+				Tooltip: Try right clicking!
+			}
+
+			Yeast: {
+				DisplayName: Yeast
+				Tooltip: ""
+			}
+
+			RollingPin: {
+				DisplayName: Rolling Pin
+				Tooltip: ""
+			}
+
+			RollingPinBig: {
+				DisplayName: Big Rolling Pin
+				Tooltip: ""
+			}
+
+			WheatBushel: {
+				DisplayName: Wheat Bushel
+				Tooltip: ""
+			}
+
+			WateringCan: {
+				DisplayName: Watering Can
+				Tooltip: ""
+			}
+
+			BasketEmpty: {
+				DisplayName: Empty Basket
+				Tooltip: ""
+			}
+
+			BasketWicker: {
+				DisplayName: Wicker Basket
+				Tooltip: ""
+			}
+
+			HeartfeltCardsItem: {
+				Tooltip: Try right clicking!
+				DisplayName: Heartfelt Cards
+			}
+
+			ColumnTuscanItem: {
+				DisplayName: Tuscan Column
 				Tooltip: ""
 			}
 		}

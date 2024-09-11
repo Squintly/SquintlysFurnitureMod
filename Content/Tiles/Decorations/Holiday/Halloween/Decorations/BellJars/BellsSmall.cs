@@ -37,6 +37,7 @@ public class BellsSmall : ModTile
         TileObjectData.addTile(Type);
         RegisterItemDrop(ModContent.ItemType<BellJarItem>());
     }
+
     public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
     {
         return true;

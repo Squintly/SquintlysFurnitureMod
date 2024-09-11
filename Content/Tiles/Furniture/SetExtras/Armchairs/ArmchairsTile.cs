@@ -2,8 +2,6 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -13,7 +11,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.Armchairs
 {
     public class ArmchairsTile : ModTile
     {
-        public const int NextStyleHeight = 40; 
+        public const int NextStyleHeight = 40;
 
         public override void SetStaticDefaults()
         {

@@ -33,6 +33,7 @@ internal class TeakWood : ModItem
 
         Item.createTile = ModContent.TileType<TeakBlock>();
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

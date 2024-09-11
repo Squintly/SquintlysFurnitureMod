@@ -1,3 +1,5 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Halloween.Alchemy.Cauldrons;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Hobbies.Toys.Stuffies;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -31,5 +33,6 @@ public class Cauldrons2x2 : ModTile
         TileObjectData.newTile.StyleWrapLimit = 111;
 
         TileObjectData.addTile(Type);
+        RegisterItemDrop(ModContent.ItemType<Cauldrons>());
     }
 }

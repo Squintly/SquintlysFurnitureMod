@@ -39,8 +39,5 @@ internal class HangingMeat : ModItem
             .AddRecipeGroup("SquintlyFurnitureMod:Meat", 2)
             .AddTile(TileID.CookingPots)
             .Register();
-        
     }
-
-
 }

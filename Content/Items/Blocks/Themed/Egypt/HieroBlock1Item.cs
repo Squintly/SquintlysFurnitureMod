@@ -1,5 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
-using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.Themed.Egypt;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,8 +36,6 @@ internal class HieroBlock1Item : ModItem
 
     public override void AddRecipes()
     {
-
-
         CreateRecipe()
            .AddRecipeGroup("SquintlyFurnitureMod:HieroBlocks")
            .AddTile(TileID.WorkBenches)

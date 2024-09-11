@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other;
 
-internal class HeartfeltCards : ModItem
+internal class HeartfeltCardsItem : ModItem
 {
     public override void SetStaticDefaults()
     {

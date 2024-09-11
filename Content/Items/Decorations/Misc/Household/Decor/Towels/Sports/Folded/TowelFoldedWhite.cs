@@ -40,7 +40,7 @@ internal class TowelFoldedWhite : ModItem
             .AddIngredient(ItemID.Silk, 2)
             .AddTile(TileID.Loom)
             .Register();
-        
+
         CreateRecipe()
             .AddIngredient(ItemID.Silk, 2)
             .AddTile(TileID.LivingLoom)

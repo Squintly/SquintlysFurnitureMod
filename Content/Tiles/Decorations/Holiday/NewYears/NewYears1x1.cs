@@ -1,3 +1,5 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.NewYears.Food;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Hobbies.Toys.Stuffies;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -31,5 +33,6 @@ public class NewYears1x1 : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
+        RegisterItemDrop(ModContent.ItemType<ChampagneFlute>());
     }
 }

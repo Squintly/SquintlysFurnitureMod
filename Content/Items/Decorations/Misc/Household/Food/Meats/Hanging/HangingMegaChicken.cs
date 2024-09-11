@@ -32,5 +32,4 @@ internal class HangingMegaChicken : ModItem
 
         Item.createTile = ModContent.TileType<HangingMegaChickens>();
     }
-
 }

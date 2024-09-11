@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Blocks.Unsolids.Pillars.Classical;

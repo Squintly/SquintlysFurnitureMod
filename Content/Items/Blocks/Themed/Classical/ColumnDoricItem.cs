@@ -1,13 +1,12 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
-using SquintlysFurnitureMod.Content.Walls.Unsolids;
+using SquintlysFurnitureMod.Content.Blocks.Unsolids.Pillars.Classical;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Items.WallItems.Holiday.Spring;
+namespace SquintlysFurnitureMod.Content.Items.Blocks.Themed.Classical;
 
-internal class ColumnCorinthianWallItem : ModItem
+internal class ColumnDoricItem : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -16,8 +15,8 @@ internal class ColumnCorinthianWallItem : ModItem
 
     public override void SetDefaults()
     {
-        Item.width = 32;
-        Item.height = 32;
+        Item.width = 16;
+        Item.height = 16;
 
         Item.value = Item.buyPrice(copper: 0);
 
@@ -31,13 +30,13 @@ internal class ColumnCorinthianWallItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createWall = ModContent.WallType<ColumnCorinthianWall>();
+        Item.createTile = ModContent.TileType<ColumnDoric>();
     }
 
     public override void AddRecipes()
     {
-        CreateRecipe(4)
-           .AddIngredient(ModContent.ItemType<ColumnCorinthianItem>())
+        CreateRecipe()
+           .AddIngredient(ItemID.MarbleBlock)
            .AddTile(TileID.WorkBenches)
            .Register();
     }

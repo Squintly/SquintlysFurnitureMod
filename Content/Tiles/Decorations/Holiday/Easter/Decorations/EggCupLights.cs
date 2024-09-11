@@ -17,6 +17,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Decorat
     internal class EggCupLights : ModTile
     {
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -55,7 +56,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Decorat
             {
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Decorations/Holiday/Easter/Decorations/EggCupLights_Flame");
             }
-
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

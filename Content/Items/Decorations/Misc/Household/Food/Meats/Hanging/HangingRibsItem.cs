@@ -39,8 +39,5 @@ internal class HangingRibsItem : ModItem
             .AddIngredient(ItemID.BBQRibs)
             .AddTile(TileID.CookingPots)
             .Register();
-        
     }
-
-
 }

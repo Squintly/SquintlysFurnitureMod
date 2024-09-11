@@ -1,10 +1,6 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Decorations;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
-using Terraria.Audio;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;

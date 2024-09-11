@@ -64,5 +64,5 @@ The random stuff you find around the house, from supplies to appliances to rando
 More's being added all the time, though updates may be sporadic at times. [b]Please report any bugs or unexpected behavior[/b]. Due to the size of the mod, playtesting everything is increasingly difficult. 
 Suggestions, questions and comments are very welcome, especially on the [url=https://discord.gg/DYAqssHdMz]Discord[/url] server, where I post previews and ask opinions. There's also an under-construction [url=https://terrariamods.wiki.gg/wiki/Squintly%27s_Furniture_Mod]Wiki[/url] and a [url=https://trello.com/b/Eoijs8dM/squintlys-furniture-mod]Trello[/url] to-do list. If you've used my mod to build something neat, please share! I'm excited to see what y'all can do with all this!
 
-Due to sudden housing issues, I've also made a [url=https://www.patreon.com/squintlymods]Patreon[/url] and a [url=https://ko-fi.com/squintly]Ko-Fi[/url] for one-time donations. Please don't feel obligated to donate, but every little bit helps!
+Due to increased living expenses, I've also made a [url=https://www.patreon.com/squintlymods]Patreon[/url] and a [url=https://ko-fi.com/squintly]Ko-Fi[/url] for one-time donations. Please don't feel obligated to donate, but every little bit helps!
 [quote=tModLoader]Developed By Squintly[/quote]

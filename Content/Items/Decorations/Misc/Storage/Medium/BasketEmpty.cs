@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Baskets;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

@@ -2,12 +2,11 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneTwo.Big;
+namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Big;
 
 public class S_2x1_B_4 : ModTile
 {
@@ -25,7 +24,7 @@ public class S_2x1_B_4 : ModTile
 
         TileObjectData.newTile.Width = 2;
 
-        TileObjectData.newTile.CoordinateHeights = new[] {30};
+        TileObjectData.newTile.CoordinateHeights = new[] { 30 };
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.DrawYOffset = -12;
 
@@ -41,21 +40,24 @@ public class S_2x1_B_4 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 18;
+        int topY = j - tile.TileFrameY % 32 / 32;
 
         short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 36); //change first two by total size, last by style size
 
@@ -80,5 +82,5 @@ public class S_2x1_B_4 : ModTile
 }
 
 /* STYLES
-0- Cake
+0- Cake X
 */

@@ -1,8 +1,4 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneTwo.Big;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -34,9 +30,10 @@ internal class BirthdayCakeBlue : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_2x1_B_2>();
+        Item.createTile = ModContent.TileType<S_2x1_B_2_Lighted>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

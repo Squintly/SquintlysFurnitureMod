@@ -1,9 +1,7 @@
-﻿using SquintlysFurnitureMod.Content.Items;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
+﻿using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Meats.Hanging;
-using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -38,9 +36,6 @@ public class Shops : GlobalNPC
             shop.Add<Flour>();
             shop.Add<Yeast>();
             shop.Add<Salt>();
-
         }
     }
 }
-
-

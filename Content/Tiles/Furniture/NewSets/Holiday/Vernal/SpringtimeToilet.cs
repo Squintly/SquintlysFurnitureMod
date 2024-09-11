@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;

@@ -1,6 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,8 +31,9 @@ internal class Mango : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B_2>();
-        Item.placeStyle = 10;
+        Item.placeStyle = 7;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

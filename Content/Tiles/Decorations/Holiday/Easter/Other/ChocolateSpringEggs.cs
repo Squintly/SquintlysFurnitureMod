@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Sweets;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

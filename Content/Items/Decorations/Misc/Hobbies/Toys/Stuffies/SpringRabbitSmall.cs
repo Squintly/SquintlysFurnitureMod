@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Toys;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -33,7 +32,7 @@ internal class SpringRabbitSmall : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B_2>();
-        Item.placeStyle = 14;
+        Item.placeStyle = 10;
     }
 
     public override void AddRecipes()

@@ -101,9 +101,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            r = 1f;
-            g = 0.95f;
-            b = 0.95f;
+            if (tile.TileFrameX == 0)
+            {
+                r = 1f;
+                g = 0.95f;
+                b = 0.95f;
+            }
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

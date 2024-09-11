@@ -1,7 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -36,6 +33,7 @@ internal class Papaya : ModItem
         Item.createTile = ModContent.TileType<S_2x1_N_2>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

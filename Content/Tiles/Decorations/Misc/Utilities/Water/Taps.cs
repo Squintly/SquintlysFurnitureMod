@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -21,7 +20,7 @@ public class Taps : ModTile
 
         TileID.Sets.FramesOnKillWall[Type] = true;
 
-        TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.Torches, 0)); 
+        TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.Torches, 0));
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 

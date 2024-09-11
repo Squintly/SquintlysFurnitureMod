@@ -2,7 +2,6 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -72,6 +71,7 @@ public class S_1x1_N_2 : ModTile
         }
     }
 }
+
 /*STYLES
 0- Top X
 1- Carrot X
@@ -80,8 +80,8 @@ public class S_1x1_N_2 : ModTile
 4- Bright Rose X
 5- Dark Rose X
 6- Red Chocolates X
-7- Black Chocolates X 
-8- Persimmon X 
+7- Black Chocolates X
+8- Persimmon X
 9- Guava X
 10- Buns X
 11- Buckets X

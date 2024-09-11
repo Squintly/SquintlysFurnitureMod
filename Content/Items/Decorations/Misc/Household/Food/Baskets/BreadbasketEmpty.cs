@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Baskets;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -35,6 +34,7 @@ internal class Bun : ModItem
         Item.createTile = ModContent.TileType<S_1x1_N_2>();
         Item.placeStyle = 10;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

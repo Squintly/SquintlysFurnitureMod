@@ -53,6 +53,7 @@ public class WhiteSilkFlowersTile : ModTile
         RegisterItemDrop(ModContent.ItemType<WhiteSilkFlowers>());
         HitSound = SoundID.Grass;
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Grass);
@@ -71,7 +72,7 @@ public class WhiteSilkFlowersTile : ModTile
         int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 18 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 270? -270 : 18); //change last two depending on size
+        short frameAdjustment = (short)(tile.TileFrameX >= 270 ? -270 : 18); //change last two depending on size
 
         for (int x = topX; x < topX + 1; x++) // change depending on width
         {

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Repaired;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.Enums;

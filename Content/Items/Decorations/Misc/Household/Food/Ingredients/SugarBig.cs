@@ -1,6 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,8 +31,9 @@ internal class SugarBig : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_2x2_4>();
-        Item.placeStyle = 2;
+        Item.placeStyle = 1;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

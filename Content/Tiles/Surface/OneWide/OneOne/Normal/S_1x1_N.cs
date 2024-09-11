@@ -1,8 +1,6 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -42,7 +40,7 @@ public class S_1x1_N : ModTile
 5- Small Teddy Bear X
 6- Small Heart Bear X
 7- Sponge X
-8- Bleach X 
-9- Small Water Bottle X 
+8- Bleach X
+9- Small Water Bottle X
 10- Salt & Pepper X
 */

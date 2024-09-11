@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Alchemy;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

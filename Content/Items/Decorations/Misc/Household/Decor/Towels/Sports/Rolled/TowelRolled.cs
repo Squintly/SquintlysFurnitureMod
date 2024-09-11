@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Decor.Towels;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

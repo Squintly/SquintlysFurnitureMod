@@ -49,6 +49,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday
 
             AdjTiles = new int[] { TileID.Tables };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
 
             if (!Main.dedServ)
             {

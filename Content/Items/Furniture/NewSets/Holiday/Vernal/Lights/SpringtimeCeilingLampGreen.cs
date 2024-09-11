@@ -1,11 +1,10 @@
+using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
-
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
 

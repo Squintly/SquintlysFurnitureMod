@@ -1,13 +1,12 @@
 using SquintlysFurnitureMod.Content.Blocks.Unsolids.Pillars.Classical;
-using SquintlysFurnitureMod.Content.Items.WallItems.Holiday.Spring;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
+namespace SquintlysFurnitureMod.Content.Items.Blocks.Themed.Classical;
 
-internal class ColumnCorinthianItem : ModItem
+internal class ColumnTuscanItem : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -31,18 +30,13 @@ internal class ColumnCorinthianItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<ColumnCorinthian>();
+        Item.createTile = ModContent.TileType<ColumnTuscan>();
     }
 
     public override void AddRecipes()
     {
         CreateRecipe()
            .AddIngredient(ItemID.MarbleBlock)
-           .AddTile(TileID.WorkBenches)
-           .Register();
-
-        CreateRecipe()
-           .AddIngredient(ModContent.ItemType<ColumnCorinthianWallItem>(), 4)
            .AddTile(TileID.WorkBenches)
            .Register();
     }

@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Clutter.Office;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -32,7 +31,7 @@ internal class StickyNote : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_1x1_N_7>();
+        Item.createTile = ModContent.TileType<S_1x1_N_5>();
         Item.placeStyle = 2;
     }
 

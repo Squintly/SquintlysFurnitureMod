@@ -16,6 +16,5 @@ public class SpringFenceMetal : ModWall
         WallID.Sets.Transparent[Type] = true;
 
         AddMapEntry(new Color(224, 229, 231));
-
     }
 }

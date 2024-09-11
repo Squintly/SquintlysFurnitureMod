@@ -39,6 +39,7 @@ public class BellsLarge : ModTile
 
         RegisterItemDrop(ModContent.ItemType<BellJarTall>());
     }
+
     public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
     {
         return true;

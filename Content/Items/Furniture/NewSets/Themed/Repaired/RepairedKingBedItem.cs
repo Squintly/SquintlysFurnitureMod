@@ -1,6 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Tattered;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Themed.Repaired;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.KingBeds;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

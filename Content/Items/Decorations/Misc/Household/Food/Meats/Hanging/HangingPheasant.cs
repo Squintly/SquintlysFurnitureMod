@@ -33,5 +33,4 @@ internal class HangingPheasant : ModItem
         Item.createTile = ModContent.TileType<HangingGame>();
         Item.placeStyle = 2;
     }
-
 }

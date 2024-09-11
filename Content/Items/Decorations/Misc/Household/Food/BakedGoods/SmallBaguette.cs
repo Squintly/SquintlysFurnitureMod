@@ -1,13 +1,13 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Baskets;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Baskets;
+namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.BakedGoods;
 
-internal class BunbasketEmpty : ModItem
+internal class SmallBaguette : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -17,9 +17,9 @@ internal class BunbasketEmpty : ModItem
     public override void SetDefaults()
     {
         Item.width = 28;
-        Item.height = 16;
+        Item.height = 12;
 
-        Item.value = Item.buyPrice(gold: 1);
+        Item.value = Item.buyPrice(copper: 1);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -31,16 +31,17 @@ internal class BunbasketEmpty : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_2x1_N>();
-        Item.placeStyle = 3;
+        Item.createTile = ModContent.TileType<S_2x1_N_4>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.Wood, 2)
-            .AddIngredient(ItemID.Silk)
-            .AddTile(TileID.HeavyWorkBench)
+            .AddRecipeGroup("SquintlyFurnitureMod:Flours")
+            .AddIngredient(ModContent.ItemType<Yeast>())
+            .AddIngredient(ItemID.WaterBucket)
+            .AddTile(TileID.CookingPots)
             .Register();
     }
 }

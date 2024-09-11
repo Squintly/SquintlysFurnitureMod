@@ -34,6 +34,7 @@ internal class SpringEgg : ModItem
 
         Item.createTile = ModContent.TileType<SpringEggs>();
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

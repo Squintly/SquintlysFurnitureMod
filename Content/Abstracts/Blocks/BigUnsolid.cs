@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -8,7 +6,7 @@ namespace SquintlysFurnitureMod.Content.Abstracts.Blocks;
 
 public abstract class BigUnsolid : ModTile
 {
-    public sealed override void SetStaticDefaults()
+    public override sealed void SetStaticDefaults()
     {
         Main.tileSolid[Type] = false;
         Main.tileBrick[Type] = false;
@@ -21,9 +19,11 @@ public abstract class BigUnsolid : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }
+
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
     {
         Framing.SelfFrame8Way(i, j, Main.tile[i, j], resetFrame);

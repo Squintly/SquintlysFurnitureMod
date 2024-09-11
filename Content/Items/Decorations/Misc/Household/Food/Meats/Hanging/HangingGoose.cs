@@ -32,5 +32,4 @@ internal class HangingGoose : ModItem
 
         Item.createTile = ModContent.TileType<HangingGooseTile>();
     }
-
 }

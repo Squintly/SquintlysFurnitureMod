@@ -1,4 +1,3 @@
-using System.Drawing;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;

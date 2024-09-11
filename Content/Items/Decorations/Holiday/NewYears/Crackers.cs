@@ -35,6 +35,7 @@ internal class Crackers : ModItem
         Item.createTile = ModContent.TileType<S_1x1_N_9>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

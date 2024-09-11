@@ -24,6 +24,12 @@
     <Compile Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignLargeItem.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Content\Blocks\Unsolids\Pillars\Classical\ColumnDoric.png" />
+    <None Remove="Content\Blocks\Unsolids\Pillars\Classical\ColumnTuscan.png" />
+    <None Remove="Content\Items\Blocks\Themed\Classical\ColumnCorinthianItem.png" />
+    <None Remove="Content\Items\Blocks\Themed\Classical\ColumnDoricItem.png" />
+    <None Remove="Content\Items\Blocks\Themed\Classical\ColumnIonicItem.png" />
+    <None Remove="Content\Items\Blocks\Themed\Classical\ColumnTuscanItem.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Cleaning\Spraybottle.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\CreamandSugar.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\PepperMill.png" />
@@ -31,7 +37,6 @@
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepper.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepperGlass.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\Scoop.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\Baguette.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCake.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCakeSlice.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BirthdayCakeBlue.png" />
@@ -51,8 +56,8 @@
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\Loaf.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\Muffin.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\Pie.png" />
+    <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\SmallBaguette.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Baskets\BreadbasketEmpty.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Baskets\BunbasketEmpty.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Bottles\Glass.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Bowls\BerryBowl.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Fruit\AppleGreen.png" />
@@ -128,14 +133,13 @@
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\surface 1x1 big 8-swap.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\S_1x1_B_10.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\S_1x1_B_2.png" />
+    <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\S_1x1_B_2_Lighted.png" />
+    <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\S_1x1_B_2_Lighted_Flame.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Big\S_1x1_B_4.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Normal\SOO13.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Normal\SOO7.png" />
     <None Remove="Content\Tiles\Surface\OneWide\OneOne\Normal\SOO9.png" />
     <None Remove="Content\Items\Blocks\Holiday\SpringyWood.png" />
-    <None Remove="Content\Items\Blocks\Holiday\Spring\ColumnCorinthianItem.png" />
-    <None Remove="Content\Items\Blocks\Holiday\Spring\ColumnDoricItem.png" />
-    <None Remove="Content\Items\Blocks\Holiday\Spring\ColumnIonicItem.png" />
     <None Remove="Content\Items\Blocks\Holiday\Spring\PlasterBlueItem.png" />
     <None Remove="Content\Items\Blocks\Holiday\Spring\PlasterBlueWornItem.png" />
     <None Remove="Content\Items\Blocks\Holiday\Spring\PlasterItem.png" />
@@ -811,6 +815,8 @@
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeFour\S_3x4.png" />
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeOne\Normal\S_3x1_N.png" />
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeThree\S_3x3_3.png" />
+    <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Big\S_2x1_B_2_Lighted.png" />
+    <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Big\S_2x1_B_3.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Normal\S_2x1_N.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Normal\S_2x1_N_3.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\surface 2x1 2-swap.png" />
@@ -827,6 +833,7 @@
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_4.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_5.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_8.png" />
+    <None Remove="Content\Walls\Unsolids\ColumnTuscanWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnCorinthianWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnDoricWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnIonicWall.png" />
@@ -867,10 +874,12 @@
   <ItemGroup>
     <Folder Include="Content\Abstracts\Tiles\" />
     <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
+    <Folder Include="Content\Items\Walls\Themed\Classical\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />
     <Folder Include="Content\Tiles\Surface\ThreeWide\ThreeOne\Big\" />
-    <Folder Include="Content\Walls\Fences\" />
-    <Folder Include="Content\Walls\Poles\" />
+    <Folder Include="Content\Walls\Unsolids\Columns\" />
+    <Folder Include="Content\Walls\Unsolids\Fences\" />
+    <Folder Include="Content\Walls\Unsolids\Poles\" />
     <Folder Include="Content\Items\Blocks\Other\" />
     <Folder Include="Content\Items\Decorations\Misc\Hobbies\Music\" />
     <Folder Include="Content\Items\Decorations\Misc\Technology\Medical\" />

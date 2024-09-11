@@ -1,7 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeOne.Normal;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -35,5 +32,12 @@ internal class RollingPinBig : ModItem
 
         Item.createTile = ModContent.TileType<S_3x1_N>();
         Item.placeStyle = 0;
+    }
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddTile(TileID.WorkBenches)
+            .Register();
     }
 }
