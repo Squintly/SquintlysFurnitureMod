@@ -38,7 +38,7 @@ internal class BellBoughsItem : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ItemID.PineTreeBlock, 4)
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

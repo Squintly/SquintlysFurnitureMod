@@ -26,11 +26,13 @@ internal class ImperialWoodFancyItem : ModItem
 
         Item.width = 28;
         Item.height = 22;
+
+        Item.maxStack = Item.CommonMaxStack;
     }
     public override void AddRecipes()
     {
         CreateRecipe()
-           .AddIngredient(ModContent.TileType<ImperialWood>())
+           .AddIngredient(ModContent.ItemType<ImperialWoodItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
     }

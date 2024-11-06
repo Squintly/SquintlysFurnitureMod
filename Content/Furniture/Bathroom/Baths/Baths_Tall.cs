@@ -29,13 +29,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths
 
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleLineSkip = 2;
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
+            TileObjectData.addAlternate(1);
 
             TileObjectData.addTile(Type);
         }

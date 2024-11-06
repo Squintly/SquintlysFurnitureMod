@@ -25,20 +25,27 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths
             AdjTiles = new int[] { TileID.Bathtubs };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+            TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 2;
-            TileObjectData.newTile.StyleMultiplier = 2;
+            TileObjectData.newTile.StyleWrapLimit = 4;
+            TileObjectData.newTile.StyleMultiplier = 4;
+            TileObjectData.newTile.StyleLineSkip = 4;
             TileObjectData.newTile.RandomStyleRange = 2;
+
+            TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
+            TileObjectData.addAlternate(2);
 
             TileObjectData.addTile(Type);
 

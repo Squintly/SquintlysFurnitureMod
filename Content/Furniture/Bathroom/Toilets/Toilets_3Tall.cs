@@ -39,7 +39,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;

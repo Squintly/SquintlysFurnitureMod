@@ -34,7 +34,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Width = 2;
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -46,7 +45,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Spotlights/Spotlights_Flame.png"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Spotlights/Spotlights_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
 
@@ -73,7 +72,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             int topX = i - tile.TileFrameX % 36 / 18;
             int topY = j - tile.TileFrameY % 36 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX > 36 ? -36 : 36);
+            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36);
 
             for (int x = topX; x < topX + 2; x++)
             {
@@ -94,20 +93,20 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             }
         }
 
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
+        //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
+        //{
+        //    if (i % 2 == 1)
+        //    {
+        //        spriteEffects = SpriteEffects.FlipHorizontally;
+        //    }
+        //}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                switch (tile.TileFrameY / 18)
+                switch (tile.TileFrameY / 36)
                 {
                     case 0:
                         r = 1f;
@@ -164,10 +163,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
+            //if (i % 2 == 1)
+            //{
+            //    effects = SpriteEffects.FlipHorizontally;
+            //}
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 

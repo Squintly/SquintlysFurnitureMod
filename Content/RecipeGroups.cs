@@ -30,13 +30,13 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:FlowerSeeds", FlowerSeeds);
 
             RecipeGroup GoldBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.GoldBar)}", ItemID.GoldBar, ItemID.PlatinumBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.GoldBar), GoldBar);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:GoldBar", GoldBar);
 
             RecipeGroup SilverBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.SilverBar)}", ItemID.SilverBar, ItemID.TungstenBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.SilverBar), SilverBar);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:SilverBar", SilverBar);
 
             RecipeGroup CopperBar = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} {Lang.GetItemNameValue(ItemID.CopperBar)}", ItemID.CopperBar, ItemID.TinBar);
-            RecipeGroup.RegisterGroup(nameof(ItemID.CopperBar), CopperBar);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:CopperBar", CopperBar);
 
             RecipeGroup Streamers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Streamers", ItemID.SillyStreamerGreen, ItemID.SillyStreamerPink, ItemID.SillyStreamerBlue);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Streamers", Streamers);

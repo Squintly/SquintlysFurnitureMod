@@ -46,7 +46,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Surface/Candelabras/Candelabras_2_Flame.png");
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Surface/Candelabras/Candelabras_2_Flame");
             }
         }
 
@@ -73,7 +73,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
             int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
             int topY = j - tile.TileFrameY % 36 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change last two depending on size
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72); //change last two depending on size
 
             for (int x = topX; x < topX + 2; x++) // change depending on width
             {
@@ -93,13 +93,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
                 NetMessage.SendTileSquare(-1, topX, topY, 2, 2);
             }
         }
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
+        //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
+        //{
+        //    if (i % 2 == 1)
+        //    {
+        //        spriteEffects = SpriteEffects.FlipHorizontally;
+        //    }
+        //}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -158,10 +158,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
+            //if (i % 2 == 1)
+            //{
+            //    effects = SpriteEffects.FlipHorizontally;
+            //}
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 

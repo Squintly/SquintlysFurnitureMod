@@ -1,31 +1,3221 @@
-﻿Custom Shimmer Crafting 
-	
-	public override void AddRecipes() {
-		// AddCustomShimmerResult can be used to change the decrafting results. Rather that return 1 ExampleItem, decrafting this item will return 1 Rotten Egg and 3 Chain.
-		CreateRecipe()
-			.AddIngredient<ExampleItem>()
-			.AddTile<Tiles.Furniture.ExampleWorkbench>()
-			.AddCustomShimmerResult(ItemID.RottenEgg)
-			.AddCustomShimmerResult(ItemID.Chain, 3)
-			.Register(); 
+﻿public static void TileFrame(int i, int j, bool resetFrame = false, bool noBreak = false)
+	{
+		bool addToList = false;
+		try
+		{
+			if (i > 5 && j > 5 && i < Main.maxTilesX - 5 && j < Main.maxTilesY - 5 && Main.tile[i, j] != null)
+			{
+				if (SkipFramingBecauseOfGen && !Main.tileFrameImportant[Main.tile[i, j].type])
+				{
+					return;
+				}
+				addToList = UpdateMapTile(i, j);
+				Tile tile = Main.tile[i, j];
+				if (!tile.active())
+				{
+					tile.halfBrick(halfBrick: false);
+					tile.ClearBlockPaintAndCoating();
+					tile.slope(0);
 
-			.AddDecraftCondition(Recipe.Condition.CorruptWorld)
-			.AddDecraftCondition(Recipe.Condition.InDesert) < allow decrafting only in biome/world type
-
-			.DisableDecraft()    << make a recipe not count for decrafting
-									Decrafting uses last recipe in list by default
-
-
-Marks stuff as materials
-	public static bool[] IsAMaterial = Factory.CreateBoolSet();
-
-BIOME CRAFTING (?)
-		"InHive": "Needs to be in Hive",
-		"InGemCave": "Needs to be in Gem Cave",
-		"InLihzardTemple": "Needs to be in Lihzard Temple",
-		"InGraveyardBiome": "Needs to be in Graveyard Biome"
-		"EverythingSeed": "Needs to be an Everything world"
-		needSnowBiome
-		"CrimsonWorld": "Needs to be a Crimson World",
-		"CorruptWorld": "Needs to be a Corrupt World"
-
+				if (tile.active())
+				{
+					if (noBreak && Main.tileFrameImportant[tile.type] && tile.type != 4)
+					{
+						return;
+					}
+					int num = tile.type;
+					if (Main.tileStone[num])
+					{
+						num = 1;
+					}
+					int frameX = tile.frameX;
+					int frameY = tile.frameY;
+					Rectangle rectangle = new Rectangle(-1, -1, 0, 0);
+					
+						default:
+							if (num != 461)
+							{
+								
+							TileMergeAttempt(0, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							switch (num)
+							{
+							case 147:
+								TileMergeAttempt(num, Main.tileBrick, TileID.Sets.Ices, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								break;
+							case 161:
+							case 163:
+							case 164:
+							case 200:
+								TileMergeAttempt(num, Main.tileBrick, TileID.Sets.Snow, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								break;
+							case 162:
+								TileMergeAttempt(num, Main.tileBrick, TileID.Sets.IcesSnow, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								break;
+							default:
+								if (Main.tileBrick[num])
+								{
+									switch (num)
+									{
+									case 60:
+									case 70:
+									case 661:
+									case 662:
+										TileMergeAttempt(num, Main.tileBrick, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+										break;
+									case 633:
+										TileMergeAttempt(num, Main.tileBrick, TileID.Sets.Ash, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+										break;
+									default:
+										TileMergeAttempt(num, Main.tileBrick, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+										break;
+									}
+								}
+								else if (Main.tilePile[num])
+								{
+									TileMergeAttempt(num, Main.tilePile, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								break;
+							}
+							if ((num == 1 || Main.tileMoss[num] || num == 117 || num == 25 || num == 203) && down == 165)
+							{
+								if (tile3 != null && tile3.frameY == 72)
+								{
+									down = num;
+								}
+								else if (tile3 != null && tile3.frameY == 0)
+								{
+									down = num;
+								}
+							}
+							if ((num == 1 || Main.tileMoss[num] || num == 117 || num == 25 || num == 203) && up == 165)
+							{
+								if (tile2 != null && tile2.frameY == 90)
+								{
+									up = num;
+								}
+								else if (tile2 != null && tile2.frameY == 54)
+								{
+									up = num;
+								}
+							}
+							if (num == 225)
+							{
+								if (down == 165)
+								{
+									down = num;
+								}
+								if (up == 165)
+								{
+									up = num;
+								}
+							}
+							if ((num == 200 || num == 161 || num == 147 || num == 163 || num == 164) && down == 165)
+							{
+								down = num;
+							}
+							if ((tile.slope() == 1 || tile.slope() == 2) && down > -1 && !TileID.Sets.Platforms[down])
+							{
+								down = num;
+							}
+							if (up > -1 && tile2 != null && (tile2.slope() == 1 || tile2.slope() == 2) && !TileID.Sets.Platforms[up])
+							{
+								up = num;
+							}
+							if ((tile.slope() == 3 || tile.slope() == 4) && up > -1 && !TileID.Sets.Platforms[up])
+							{
+								up = num;
+							}
+							if (down > -1 && tile3 != null && (tile3.slope() == 3 || tile3.slope() == 4) && !TileID.Sets.Platforms[down])
+							{
+								down = num;
+							}
+							if (num == 124)
+							{
+								if (up > -1 && Main.tileSolid[up] && !TileID.Sets.Platforms[up])
+								{
+									up = num;
+								}
+								if (down > -1 && Main.tileSolid[down] && !TileID.Sets.Platforms[down])
+								{
+									down = num;
+								}
+							}
+							if (up > -1 && tile2 != null && tile2.halfBrick() && !TileID.Sets.Platforms[up])
+							{
+								up = num;
+							}
+							if (left > -1 && tile4 != null && tile4.halfBrick())
+							{
+								if (tile.halfBrick())
+								{
+									left = num;
+								}
+								else if (tile4.type != num)
+								{
+									left = -1;
+								}
+							}
+							if (right > -1 && tile5 != null && tile5.halfBrick())
+							{
+								if (tile.halfBrick())
+								{
+									right = num;
+								}
+								else if (tile5.type != num)
+								{
+									right = -1;
+								}
+							}
+							if (tile.halfBrick())
+							{
+								if (left != num)
+								{
+									left = -1;
+								}
+								if (right != num)
+								{
+									right = -1;
+								}
+								up = -1;
+							}
+							if (tile3 != null && tile3.halfBrick())
+							{
+								down = -1;
+							}
+							if (!Main.tileSolid[num])
+							{
+								switch (num)
+								{
+								case 49:
+									CheckOnTable1x1(i, j, (byte)num);
+									return;
+								case 80:
+									CactusFrame(i, j);
+									return;
+								}
+							}
+							mergeUp = false;
+							mergeDown = false;
+							mergeLeft = false;
+							mergeRight = false;
+							int num27 = 0;
+							if (resetFrame)
+							{
+								num27 = genRand.Next(0, 3);
+								tile.frameNumber((byte)num27);
+							}
+							else
+							{
+								num27 = tile.frameNumber();
+							}
+							if (Main.tileLargeFrames[num] == 1)
+							{
+								int num28 = j % 4;
+								int num29 = i % 3;
+								num27 = (new int[4, 3]
+								{
+									{ 2, 4, 2 },
+									{ 1, 3, 1 },
+									{ 2, 2, 4 },
+									{ 1, 1, 3 }
+								})[num28, num29] - 1;
+							}
+							if (Main.tileLargeFrames[num] == 2)
+							{
+								int num30 = i % 2;
+								int num31 = j % 2;
+								num27 = num30 + num31 * 2;
+							}
+							if (!Main.tileRope[num] && TileID.Sets.BlockMergesWithMergeAllBlock[num])
+							{
+								TileMergeAttempt(num, Main.tileBlendAll, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							if (Main.tileBlendAll[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.BlockMergesWithMergeAllBlock, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							if (TileID.Sets.ForcedDirtMerging[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							
+							else
+							{
+								switch (num)
+								{
+								case 53:
+									TileMergeAttemptFrametest(i, j, num, 397, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 396, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 234:
+									TileMergeAttemptFrametest(i, j, num, 399, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 401, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 112:
+									TileMergeAttemptFrametest(i, j, num, 398, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 400, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 116:
+									TileMergeAttemptFrametest(i, j, num, 402, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 403, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								}
+							}
+							if (Main.tileMergeDirt[num])
+							{
+								TileMergeAttempt(-2, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								if (num == 1)
+								{
+									if ((double)j > Main.rockLayer)
+									{
+										TileMergeAttemptFrametest(i, j, num, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									}
+									TileMergeAttemptFrametest(i, j, num, TileID.Sets.Ash, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+							}
+							else
+							{
+								switch (num)
+								{
+								case 58:
+								case 75:
+								case 76:
+									TileMergeAttempt(-2, TileID.Sets.Ash, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 57:
+									TileMergeAttempt(-2, 1, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(num, 633, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, TileID.Sets.HellSpecial, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 59:
+									if ((double)j > Main.rockLayer)
+									{
+										TileMergeAttempt(-2, 1, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									}
+									TileMergeAttempt(num, TileID.Sets.GrassSpecial, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, TileID.Sets.JungleSpecial, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									if ((double)j < Main.rockLayer)
+									{
+										TileMergeAttemptFrametest(i, j, num, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									}
+									else
+									{
+										TileMergeAttempt(num, TileID.Sets.Dirt, ref up, ref down, ref left, ref right);
+									}
+									break;
+								case 211:
+									TileMergeAttempt(59, 60, ref up, ref down, ref left, ref right);
+									TileMergeAttempt(-2, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 225:
+								case 226:
+									TileMergeAttempt(-2, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 60:
+									TileMergeAttempt(59, 211, ref up, ref down, ref left, ref right);
+									break;
+								case 189:
+									TileMergeAttemptFrametest(i, j, num, TileID.Sets.MergesWithClouds, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 196:
+									TileMergeAttempt(-2, 189, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(num, 460, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 460:
+									TileMergeAttempt(-2, 189, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(num, 196, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 147:
+									TileMergeAttemptFrametest(i, j, num, TileID.Sets.IcesSlush, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 161:
+								case 163:
+								case 164:
+								case 200:
+								case 224:
+									TileMergeAttempt(-2, 147, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 162:
+									TileMergeAttempt(-2, TileID.Sets.IcesSnow, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 32:
+									if (down == 23)
+									{
+										down = num;
+									}
+									break;
+								case 352:
+									if (down == 199)
+									{
+										down = num;
+									}
+									break;
+								case 69:
+									if (down == 60)
+									{
+										down = num;
+									}
+									break;
+								case 655:
+									if (down == 60)
+									{
+										down = num;
+									}
+									break;
+								case 51:
+									TileMergeAttempt(num, TileID.Sets.AllTiles, Main.tileNoAttach, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 192:
+									TileMergeAttemptFrametest(i, j, num, 191, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 191:
+									TileMergeAttempt(-2, 192, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(num, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 384:
+									TileMergeAttemptFrametest(i, j, num, 383, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 383:
+									TileMergeAttempt(-2, 384, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(num, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 407:
+									TileMergeAttempt(-2, 404, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 404:
+									TileMergeAttempt(-2, 396, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 407, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 397:
+									TileMergeAttempt(-2, 53, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 396, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 396:
+									TileMergeAttempt(-2, 397, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(-2, 53, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 404, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 398:
+									TileMergeAttempt(-2, 112, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 400, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 400:
+									TileMergeAttempt(-2, 398, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(-2, 112, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 399:
+									TileMergeAttempt(-2, 234, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 401, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 401:
+									TileMergeAttempt(-2, 399, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(-2, 234, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 402:
+									TileMergeAttempt(-2, 116, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttemptFrametest(i, j, num, 403, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								case 403:
+									TileMergeAttempt(-2, 402, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									TileMergeAttempt(-2, 116, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									break;
+								}
+							}
+							if (num == 0)
+							{
+								TileMergeAttempt(num, Main.tileMoss, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								TileMergeAttempt(num, TileID.Sets.tileMossBrick, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							else if (Main.tileMoss[num] || TileID.Sets.tileMossBrick[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							else if (Main.tileStone[num] || num == 1)
+							{
+								TileMergeAttempt(num, Main.tileMoss, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							else if (num == 38)
+							{
+								TileMergeAttempt(num, TileID.Sets.tileMossBrick, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							if (TileID.Sets.Conversion.Grass[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.Ore, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							else if (TileID.Sets.Ore[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.Conversion.Grass, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							if (num >= 0 && num < TileID.Count && TileID.Sets.Mud[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.OreMergesWithMud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							else if (TileID.Sets.OreMergesWithMud[num])
+							{
+								TileMergeAttempt(num, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							bool flag = false;
+							TileMergeCullCache tileMergeCullCache = default(TileMergeCullCache);
+							if (!Main.ShouldShowInvisibleWalls())
+							{
+								bool flag2 = tile.invisibleBlock();
+								tileMergeCullCache.CullTop |= tile2 != null && tile2.invisibleBlock() != flag2;
+								tileMergeCullCache.CullBottom |= tile3 != null && tile3.invisibleBlock() != flag2;
+								tileMergeCullCache.CullLeft |= tile4 != null && tile4.invisibleBlock() != flag2;
+								tileMergeCullCache.CullRight |= tile5 != null && tile5.invisibleBlock() != flag2;
+								tileMergeCullCache.CullTopLeft |= tile8 != null && tile8.invisibleBlock() != flag2;
+								tileMergeCullCache.CullTopRight |= tile9 != null && tile9.invisibleBlock() != flag2;
+								tileMergeCullCache.CullBottomLeft |= tile6 != null && tile6.invisibleBlock() != flag2;
+								tileMergeCullCache.CullBottomRight |= tile7 != null && tile7.invisibleBlock() != flag2;
+							}
+							if (num == 2 || num == 23 || num == 661 || num == 662 || num == 60 || num == 477 || num == 492 || num == 70 || num == 109 || num == 199 || Main.tileMoss[num] || TileID.Sets.NeedsGrassFraming[num] || TileID.Sets.tileMossBrick[num])
+							{
+								flag = true;
+								TileMergeAttemptWeird(num, -1, Main.tileSolid, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								int num32 = TileID.Sets.NeedsGrassFramingDirt[num];
+								if (num == 60 || num == 70 || num == 661 || num == 662)
+								{
+									num32 = 59;
+								}
+								else if (Main.tileMoss[num])
+								{
+									num32 = 1;
+								}
+								else if (TileID.Sets.tileMossBrick[num])
+								{
+									num32 = 38;
+								}
+								else
+								{
+									switch (num)
+									{
+									case 2:
+									case 477:
+										TileMergeAttempt(num32, 23, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+										break;
+									case 23:
+										TileMergeAttempt(num32, 2, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+										break;
+									}
+								}
+								tileMergeCullCache.Cull(ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								if (up != num && up != num32 && (down == num || down == num32))
+								{
+									if (left == num32 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 198;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 198;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 198;
+											break;
+										}
+									}
+									else if (left == num && right == num32)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 198;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 198;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 198;
+											break;
+										}
+									}
+								}
+								else if (down != num && down != num32 && (up == num || up == num32))
+								{
+									if (left == num32 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 216;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 216;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 216;
+											break;
+										}
+									}
+									else if (left == num && right == num32)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 216;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 216;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 216;
+											break;
+										}
+									}
+								}
+								else if (left != num && left != num32 && (right == num || right == num32))
+								{
+									if (up == num32 && down == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 72;
+											rectangle.Y = 144;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 162;
+											break;
+										default:
+											rectangle.X = 72;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (down == num && up == num32)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 72;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 72;
+											rectangle.Y = 126;
+											break;
+										}
+									}
+								}
+								else if (right != num && right != num32 && (left == num || left == num32))
+								{
+									if (up == num32 && down == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 90;
+											rectangle.Y = 144;
+											break;
+										case 1:
+											rectangle.X = 90;
+											rectangle.Y = 162;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (down == num && right == up)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 90;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 90;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 126;
+											break;
+										}
+									}
+								}
+								else if (up == num && down == num && left == num && right == num)
+								{
+									if (upLeft != num && upRight != num && downLeft != num && downRight != num)
+									{
+										if (downRight == num32)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 108;
+												rectangle.Y = 324;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 324;
+												break;
+											default:
+												rectangle.X = 144;
+												rectangle.Y = 324;
+												break;
+											}
+										}
+										else if (upRight == num32)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 108;
+												rectangle.Y = 342;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 342;
+												break;
+											default:
+												rectangle.X = 144;
+												rectangle.Y = 342;
+												break;
+											}
+										}
+										else if (downLeft == num32)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 108;
+												rectangle.Y = 360;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 360;
+												break;
+											default:
+												rectangle.X = 144;
+												rectangle.Y = 360;
+												break;
+											}
+										}
+										else if (upLeft == num32)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 108;
+												rectangle.Y = 378;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 378;
+												break;
+											default:
+												rectangle.X = 144;
+												rectangle.Y = 378;
+												break;
+											}
+										}
+										else
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 144;
+												rectangle.Y = 234;
+												break;
+											case 1:
+												rectangle.X = 198;
+												rectangle.Y = 234;
+												break;
+											default:
+												rectangle.X = 252;
+												rectangle.Y = 234;
+												break;
+											}
+										}
+									}
+									else if (upLeft != num && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 306;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 306;
+											break;
+										default:
+											rectangle.X = 72;
+											rectangle.Y = 306;
+											break;
+										}
+									}
+									else if (upRight != num && downLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 90;
+											rectangle.Y = 306;
+											break;
+										case 1:
+											rectangle.X = 108;
+											rectangle.Y = 306;
+											break;
+										default:
+											rectangle.X = 126;
+											rectangle.Y = 306;
+											break;
+										}
+									}
+									else if (upLeft != num && upRight == num && downLeft == num && downRight == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (upLeft == num && upRight != num && downLeft == num && downRight == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (upLeft == num && upRight == num && downLeft != num && downRight == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+									else if (upLeft == num && upRight == num && downLeft == num && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+								}
+								else if (up == num && down == num32 && left == num && right == num && upLeft == -1 && upRight == -1)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 108;
+										rectangle.Y = 18;
+										break;
+									case 1:
+										rectangle.X = 126;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 144;
+										rectangle.Y = 18;
+										break;
+									}
+								}
+								else if (up == num32 && down == num && left == num && right == num && downLeft == -1 && downRight == -1)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 108;
+										rectangle.Y = 36;
+										break;
+									case 1:
+										rectangle.X = 126;
+										rectangle.Y = 36;
+										break;
+									default:
+										rectangle.X = 144;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up == num && down == num && left == num32 && right == num && upRight == -1 && downRight == -1)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 198;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 198;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 198;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up == num && down == num && left == num && right == num32 && upLeft == -1 && downLeft == -1)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 180;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 180;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 180;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up == num && down == num32 && left == num && right == num)
+								{
+									if (upRight != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (upLeft != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+								}
+								else if (up == num32 && down == num && left == num && right == num)
+								{
+									if (downRight != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+									else if (downLeft != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+								}
+								else if (up == num && down == num && left == num && right == num32)
+								{
+									if (upLeft != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+									else if (downLeft != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+								}
+								else if (up == num && down == num && left == num32 && right == num)
+								{
+									if (upRight != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+									else if (downRight != -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+								}
+								else if ((up == num32 && down == num && left == num && right == num) || (up == num && down == num32 && left == num && right == num) || (up == num && down == num && left == num32 && right == num) || (up == num && down == num && left == num && right == num32))
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 18;
+										break;
+									case 1:
+										rectangle.X = 36;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 54;
+										rectangle.Y = 18;
+										break;
+									}
+								}
+								if ((up == num || up == num32) && (down == num || down == num32) && (left == num || left == num32) && (right == num || right == num32))
+								{
+									if (upLeft != num && upLeft != num32 && (upRight == num || upRight == num32) && (downLeft == num || downLeft == num32) && (downRight == num || downRight == num32))
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (upRight != num && upRight != num32 && (upLeft == num || upLeft == num32) && (downLeft == num || downLeft == num32) && (downRight == num || downRight == num32))
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 180;
+											break;
+										}
+									}
+									else if (downLeft != num && downLeft != num32 && (upLeft == num || upLeft == num32) && (upRight == num || upRight == num32) && (downRight == num || downRight == num32))
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+									else if (downRight != num && downRight != num32 && (upLeft == num || upLeft == num32) && (downLeft == num || downLeft == num32) && (upRight == num || upRight == num32))
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 162;
+											break;
+										}
+									}
+								}
+								if (up != num32 && up != num && down == num && left != num32 && left != num && right == num && downRight != num32 && downRight != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 90;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 108;
+										rectangle.Y = 270;
+										break;
+									default:
+										rectangle.X = 126;
+										rectangle.Y = 270;
+										break;
+									}
+								}
+								else if (up != num32 && up != num && down == num && left == num && right != num32 && right != num && downLeft != num32 && downLeft != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 144;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 162;
+										rectangle.Y = 270;
+										break;
+									default:
+										rectangle.X = 180;
+										rectangle.Y = 270;
+										break;
+									}
+								}
+								else if (down != num32 && down != num && up == num && left != num32 && left != num && right == num && upRight != num32 && upRight != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 90;
+										rectangle.Y = 288;
+										break;
+									case 1:
+										rectangle.X = 108;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 126;
+										rectangle.Y = 288;
+										break;
+									}
+								}
+								else if (down != num32 && down != num && up == num && left == num && right != num32 && right != num && upLeft != num32 && upLeft != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 144;
+										rectangle.Y = 288;
+										break;
+									case 1:
+										rectangle.X = 162;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 180;
+										rectangle.Y = 288;
+										break;
+									}
+								}
+								else if (up != num && up != num32 && down == num && left == num && right == num && downLeft != num && downLeft != num32 && downRight != num && downRight != num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 144;
+										rectangle.Y = 216;
+										break;
+									case 1:
+										rectangle.X = 198;
+										rectangle.Y = 216;
+										break;
+									default:
+										rectangle.X = 252;
+										rectangle.Y = 216;
+										break;
+									}
+								}
+								else if (down != num && down != num32 && up == num && left == num && right == num && upLeft != num && upLeft != num32 && upRight != num && upRight != num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 144;
+										rectangle.Y = 252;
+										break;
+									case 1:
+										rectangle.X = 198;
+										rectangle.Y = 252;
+										break;
+									default:
+										rectangle.X = 252;
+										rectangle.Y = 252;
+										break;
+									}
+								}
+								else if (left != num && left != num32 && down == num && up == num && right == num && upRight != num && upRight != num32 && downRight != num && downRight != num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 126;
+										rectangle.Y = 234;
+										break;
+									case 1:
+										rectangle.X = 180;
+										rectangle.Y = 234;
+										break;
+									default:
+										rectangle.X = 234;
+										rectangle.Y = 234;
+										break;
+									}
+								}
+								else if (right != num && right != num32 && down == num && up == num && left == num && upLeft != num && upLeft != num32 && downLeft != num && downLeft != num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 162;
+										rectangle.Y = 234;
+										break;
+									case 1:
+										rectangle.X = 216;
+										rectangle.Y = 234;
+										break;
+									default:
+										rectangle.X = 270;
+										rectangle.Y = 234;
+										break;
+									}
+								}
+								else if (up != num32 && up != num && (down == num32 || down == num) && left == num32 && right == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 36;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 54;
+										rectangle.Y = 270;
+										break;
+									default:
+										rectangle.X = 72;
+										rectangle.Y = 270;
+										break;
+									}
+								}
+								else if (down != num32 && down != num && (up == num32 || up == num) && left == num32 && right == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 36;
+										rectangle.Y = 288;
+										break;
+									case 1:
+										rectangle.X = 54;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 72;
+										rectangle.Y = 288;
+										break;
+									}
+								}
+								else if (left != num32 && left != num && (right == num32 || right == num) && up == num32 && down == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 0;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 0;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 0;
+										rectangle.Y = 306;
+										break;
+									}
+								}
+								else if (right != num32 && right != num && (left == num32 || left == num) && up == num32 && down == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 18;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 18;
+										rectangle.Y = 306;
+										break;
+									}
+								}
+								else if (up == num && down == num32 && left == num32 && right == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 198;
+										rectangle.Y = 288;
+										break;
+									case 1:
+										rectangle.X = 216;
+										rectangle.Y = 288;
+										break;
+									default:
+										rectangle.X = 234;
+										rectangle.Y = 288;
+										break;
+									}
+								}
+								else if (up == num32 && down == num && left == num32 && right == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 198;
+										rectangle.Y = 270;
+										break;
+									case 1:
+										rectangle.X = 216;
+										rectangle.Y = 270;
+										break;
+									default:
+										rectangle.X = 234;
+										rectangle.Y = 270;
+										break;
+									}
+								}
+								else if (up == num32 && down == num32 && left == num && right == num32)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 198;
+										rectangle.Y = 306;
+										break;
+									case 1:
+										rectangle.X = 216;
+										rectangle.Y = 306;
+										break;
+									default:
+										rectangle.X = 234;
+										rectangle.Y = 306;
+										break;
+									}
+								}
+								else if (up == num32 && down == num32 && left == num32 && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 144;
+										rectangle.Y = 306;
+										break;
+									case 1:
+										rectangle.X = 162;
+										rectangle.Y = 306;
+										break;
+									default:
+										rectangle.X = 180;
+										rectangle.Y = 306;
+										break;
+									}
+								}
+								if (up != num && up != num32 && down == num && left == num && right == num)
+								{
+									if ((downLeft == num32 || downLeft == num) && downRight != num32 && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 324;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 324;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 324;
+											break;
+										}
+									}
+									else if ((downRight == num32 || downRight == num) && downLeft != num32 && downLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 324;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 324;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 324;
+											break;
+										}
+									}
+								}
+								else if (down != num && down != num32 && up == num && left == num && right == num)
+								{
+									if ((upLeft == num32 || upLeft == num) && upRight != num32 && upRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 342;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 342;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 342;
+											break;
+										}
+									}
+									else if ((upRight == num32 || upRight == num) && upLeft != num32 && upLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 342;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 342;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 342;
+											break;
+										}
+									}
+								}
+								else if (left != num && left != num32 && up == num && down == num && right == num)
+								{
+									if ((upRight == num32 || upRight == num) && downRight != num32 && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 360;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 360;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 360;
+											break;
+										}
+									}
+									else if ((downRight == num32 || downRight == num) && upRight != num32 && upRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 360;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 360;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 360;
+											break;
+										}
+									}
+								}
+								else if (right != num && right != num32 && up == num && down == num && left == num)
+								{
+									if ((upLeft == num32 || upLeft == num) && downLeft != num32 && downLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 378;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 378;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 378;
+											break;
+										}
+									}
+									else if ((downLeft == num32 || downLeft == num) && upLeft != num32 && upLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 378;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 378;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 378;
+											break;
+										}
+									}
+								}
+								if ((up == num || up == num32) && (down == num || down == num32) && (left == num || left == num32) && (right == num || right == num32) && upLeft != -1 && upRight != -1 && downLeft != -1 && downRight != -1)
+								{
+									if ((i + j) % 2 == 1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 198;
+											break;
+										case 1:
+											rectangle.X = 126;
+											rectangle.Y = 198;
+											break;
+										default:
+											rectangle.X = 144;
+											rectangle.Y = 198;
+											break;
+										}
+									}
+									else
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 18;
+											rectangle.Y = 18;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 18;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 18;
+											break;
+										}
+									}
+								}
+								if (num32 >= 0 && num32 < TileID.Count && TileID.Sets.Dirt[num32])
+								{
+									TileMergeAttempt(-2, TileID.Sets.Dirt, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								else if (num32 >= 0 && num32 < TileID.Count && TileID.Sets.Mud[num32])
+								{
+									TileMergeAttempt(-2, TileID.Sets.Mud, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								else
+								{
+									TileMergeAttempt(-2, num32, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								tileMergeCullCache.Cull(ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							}
+							TileMergeAttempt(num, Main.tileMerge[num], ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+							if (rectangle.X == -1 && rectangle.Y == -1 && (Main.tileMergeDirt[num] || (num > -1 && TileID.Sets.ChecksForMerge[num])))
+							{
+								if (!flag)
+								{
+									flag = true;
+									TileMergeAttemptWeird(num, -1, Main.tileSolid, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								if (up > -1 && up != num)
+								{
+									up = -1;
+								}
+								if (down > -1 && down != num)
+								{
+									down = -1;
+								}
+								if (left > -1 && left != num)
+								{
+									left = -1;
+								}
+								if (right > -1 && right != num)
+								{
+									right = -1;
+								}
+								tileMergeCullCache.Cull(ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								if (up != -1 && down != -1 && left != -1 && right != -1)
+								{
+									if (up == -2 && down == num && left == num && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 144;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 162;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 180;
+											rectangle.Y = 108;
+											break;
+										}
+										mergeUp = true;
+									}
+									else if (up == num && down == -2 && left == num && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 144;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 162;
+											rectangle.Y = 90;
+											break;
+										default:
+											rectangle.X = 180;
+											rectangle.Y = 90;
+											break;
+										}
+										mergeDown = true;
+									}
+									else if (up == num && down == num && left == -2 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 162;
+											rectangle.Y = 126;
+											break;
+										case 1:
+											rectangle.X = 162;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 162;
+											rectangle.Y = 162;
+											break;
+										}
+										mergeLeft = true;
+									}
+									else if (up == num && down == num && left == num && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 144;
+											rectangle.Y = 126;
+											break;
+										case 1:
+											rectangle.X = 144;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 144;
+											rectangle.Y = 162;
+											break;
+										}
+										mergeRight = true;
+									}
+									else if (up == -2 && down == num && left == -2 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 162;
+											break;
+										}
+										mergeUp = true;
+										mergeLeft = true;
+									}
+									else if (up == -2 && down == num && left == num && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 126;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 162;
+											break;
+										}
+										mergeUp = true;
+										mergeRight = true;
+									}
+									else if (up == num && down == -2 && left == -2 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 36;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeDown = true;
+										mergeLeft = true;
+									}
+									else if (up == num && down == -2 && left == num && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 108;
+											break;
+										case 1:
+											rectangle.X = 54;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeDown = true;
+										mergeRight = true;
+									}
+									else if (up == num && down == num && left == -2 && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 180;
+											rectangle.Y = 126;
+											break;
+										case 1:
+											rectangle.X = 180;
+											rectangle.Y = 144;
+											break;
+										default:
+											rectangle.X = 180;
+											rectangle.Y = 162;
+											break;
+										}
+										mergeLeft = true;
+										mergeRight = true;
+									}
+									else if (up == -2 && down == -2 && left == num && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 144;
+											rectangle.Y = 180;
+											break;
+										case 1:
+											rectangle.X = 162;
+											rectangle.Y = 180;
+											break;
+										default:
+											rectangle.X = 180;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeUp = true;
+										mergeDown = true;
+									}
+									else if (up == -2 && down == num && left == -2 && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 198;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 198;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 198;
+											rectangle.Y = 126;
+											break;
+										}
+										mergeUp = true;
+										mergeLeft = true;
+										mergeRight = true;
+									}
+									else if (up == num && down == -2 && left == -2 && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 198;
+											rectangle.Y = 144;
+											break;
+										case 1:
+											rectangle.X = 198;
+											rectangle.Y = 162;
+											break;
+										default:
+											rectangle.X = 198;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeDown = true;
+										mergeLeft = true;
+										mergeRight = true;
+									}
+									else if (up == -2 && down == -2 && left == num && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 216;
+											rectangle.Y = 144;
+											break;
+										case 1:
+											rectangle.X = 216;
+											rectangle.Y = 162;
+											break;
+										default:
+											rectangle.X = 216;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeUp = true;
+										mergeDown = true;
+										mergeRight = true;
+									}
+									else if (up == -2 && down == -2 && left == -2 && right == num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 216;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 216;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 216;
+											rectangle.Y = 126;
+											break;
+										}
+										mergeUp = true;
+										mergeDown = true;
+										mergeLeft = true;
+									}
+									else if (up == -2 && down == -2 && left == -2 && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 198;
+											break;
+										case 1:
+											rectangle.X = 126;
+											rectangle.Y = 198;
+											break;
+										default:
+											rectangle.X = 144;
+											rectangle.Y = 198;
+											break;
+										}
+										mergeUp = true;
+										mergeDown = true;
+										mergeLeft = true;
+										mergeRight = true;
+									}
+									else if (up == num && down == num && left == num && right == num)
+									{
+										if (upLeft == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 18;
+												rectangle.Y = 108;
+												break;
+											case 1:
+												rectangle.X = 18;
+												rectangle.Y = 144;
+												break;
+											default:
+												rectangle.X = 18;
+												rectangle.Y = 180;
+												break;
+											}
+										}
+										if (upRight == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 0;
+												rectangle.Y = 108;
+												break;
+											case 1:
+												rectangle.X = 0;
+												rectangle.Y = 144;
+												break;
+											default:
+												rectangle.X = 0;
+												rectangle.Y = 180;
+												break;
+											}
+										}
+										if (downLeft == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 18;
+												rectangle.Y = 90;
+												break;
+											case 1:
+												rectangle.X = 18;
+												rectangle.Y = 126;
+												break;
+											default:
+												rectangle.X = 18;
+												rectangle.Y = 162;
+												break;
+											}
+										}
+										if (downRight == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 0;
+												rectangle.Y = 90;
+												break;
+											case 1:
+												rectangle.X = 0;
+												rectangle.Y = 126;
+												break;
+											default:
+												rectangle.X = 0;
+												rectangle.Y = 162;
+												break;
+											}
+										}
+									}
+								}
+								else
+								{
+									if (num != 2 && num != 23 && num != 60 && num != 70 && num != 109 && num != 199 && num != 477 && num != 492 && num != 633 && num != 661 && num != 662)
+									{
+										if (up == -1 && down == -2 && left == num && right == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 234;
+												rectangle.Y = 0;
+												break;
+											case 1:
+												rectangle.X = 252;
+												rectangle.Y = 0;
+												break;
+											default:
+												rectangle.X = 270;
+												rectangle.Y = 0;
+												break;
+											}
+											mergeDown = true;
+										}
+										else if (up == -2 && down == -1 && left == num && right == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 234;
+												rectangle.Y = 18;
+												break;
+											case 1:
+												rectangle.X = 252;
+												rectangle.Y = 18;
+												break;
+											default:
+												rectangle.X = 270;
+												rectangle.Y = 18;
+												break;
+											}
+											mergeUp = true;
+										}
+										else if (up == num && down == num && left == -1 && right == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 234;
+												rectangle.Y = 36;
+												break;
+											case 1:
+												rectangle.X = 252;
+												rectangle.Y = 36;
+												break;
+											default:
+												rectangle.X = 270;
+												rectangle.Y = 36;
+												break;
+											}
+											mergeRight = true;
+										}
+										else if (up == num && down == num && left == -2 && right == -1)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 234;
+												rectangle.Y = 54;
+												break;
+											case 1:
+												rectangle.X = 252;
+												rectangle.Y = 54;
+												break;
+											default:
+												rectangle.X = 270;
+												rectangle.Y = 54;
+												break;
+											}
+											mergeLeft = true;
+										}
+									}
+									if (up != -1 && down != -1 && left == -1 && right == num)
+									{
+										if (up == -2 && down == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 72;
+												rectangle.Y = 144;
+												break;
+											case 1:
+												rectangle.X = 72;
+												rectangle.Y = 162;
+												break;
+											default:
+												rectangle.X = 72;
+												rectangle.Y = 180;
+												break;
+											}
+											mergeUp = true;
+										}
+										else if (down == -2 && up == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 72;
+												rectangle.Y = 90;
+												break;
+											case 1:
+												rectangle.X = 72;
+												rectangle.Y = 108;
+												break;
+											default:
+												rectangle.X = 72;
+												rectangle.Y = 126;
+												break;
+											}
+											mergeDown = true;
+										}
+									}
+									else if (up != -1 && down != -1 && left == num && right == -1)
+									{
+										if (up == -2 && down == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 90;
+												rectangle.Y = 144;
+												break;
+											case 1:
+												rectangle.X = 90;
+												rectangle.Y = 162;
+												break;
+											default:
+												rectangle.X = 90;
+												rectangle.Y = 180;
+												break;
+											}
+											mergeUp = true;
+										}
+										else if (down == -2 && up == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 90;
+												rectangle.Y = 90;
+												break;
+											case 1:
+												rectangle.X = 90;
+												rectangle.Y = 108;
+												break;
+											default:
+												rectangle.X = 90;
+												rectangle.Y = 126;
+												break;
+											}
+											mergeDown = true;
+										}
+									}
+									else if (up == -1 && down == num && left != -1 && right != -1)
+									{
+										if (left == -2 && right == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 0;
+												rectangle.Y = 198;
+												break;
+											case 1:
+												rectangle.X = 18;
+												rectangle.Y = 198;
+												break;
+											default:
+												rectangle.X = 36;
+												rectangle.Y = 198;
+												break;
+											}
+											mergeLeft = true;
+										}
+										else if (right == -2 && left == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 54;
+												rectangle.Y = 198;
+												break;
+											case 1:
+												rectangle.X = 72;
+												rectangle.Y = 198;
+												break;
+											default:
+												rectangle.X = 90;
+												rectangle.Y = 198;
+												break;
+											}
+											mergeRight = true;
+										}
+									}
+									else if (up == num && down == -1 && left != -1 && right != -1)
+									{
+										if (left == -2 && right == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 0;
+												rectangle.Y = 216;
+												break;
+											case 1:
+												rectangle.X = 18;
+												rectangle.Y = 216;
+												break;
+											default:
+												rectangle.X = 36;
+												rectangle.Y = 216;
+												break;
+											}
+											mergeLeft = true;
+										}
+										else if (right == -2 && left == num)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 54;
+												rectangle.Y = 216;
+												break;
+											case 1:
+												rectangle.X = 72;
+												rectangle.Y = 216;
+												break;
+											default:
+												rectangle.X = 90;
+												rectangle.Y = 216;
+												break;
+											}
+											mergeRight = true;
+										}
+									}
+									else if (up != -1 && down != -1 && left == -1 && right == -1)
+									{
+										if (up == -2 && down == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 108;
+												rectangle.Y = 216;
+												break;
+											case 1:
+												rectangle.X = 108;
+												rectangle.Y = 234;
+												break;
+											default:
+												rectangle.X = 108;
+												rectangle.Y = 252;
+												break;
+											}
+											mergeUp = true;
+											mergeDown = true;
+										}
+										else if (up == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 126;
+												rectangle.Y = 144;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 162;
+												break;
+											default:
+												rectangle.X = 126;
+												rectangle.Y = 180;
+												break;
+											}
+											mergeUp = true;
+										}
+										else if (down == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 126;
+												rectangle.Y = 90;
+												break;
+											case 1:
+												rectangle.X = 126;
+												rectangle.Y = 108;
+												break;
+											default:
+												rectangle.X = 126;
+												rectangle.Y = 126;
+												break;
+											}
+											mergeDown = true;
+										}
+									}
+									else if (up == -1 && down == -1 && left != -1 && right != -1)
+									{
+										if (left == -2 && right == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 162;
+												rectangle.Y = 198;
+												break;
+											case 1:
+												rectangle.X = 180;
+												rectangle.Y = 198;
+												break;
+											default:
+												rectangle.X = 198;
+												rectangle.Y = 198;
+												break;
+											}
+											mergeLeft = true;
+											mergeRight = true;
+										}
+										else if (left == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 0;
+												rectangle.Y = 252;
+												break;
+											case 1:
+												rectangle.X = 18;
+												rectangle.Y = 252;
+												break;
+											default:
+												rectangle.X = 36;
+												rectangle.Y = 252;
+												break;
+											}
+											mergeLeft = true;
+										}
+										else if (right == -2)
+										{
+											switch (num27)
+											{
+											case 0:
+												rectangle.X = 54;
+												rectangle.Y = 252;
+												break;
+											case 1:
+												rectangle.X = 72;
+												rectangle.Y = 252;
+												break;
+											default:
+												rectangle.X = 90;
+												rectangle.Y = 252;
+												break;
+											}
+											mergeRight = true;
+										}
+									}
+									else if (up == -2 && down == -1 && left == -1 && right == -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 144;
+											break;
+										case 1:
+											rectangle.X = 108;
+											rectangle.Y = 162;
+											break;
+										default:
+											rectangle.X = 108;
+											rectangle.Y = 180;
+											break;
+										}
+										mergeUp = true;
+									}
+									else if (up == -1 && down == -2 && left == -1 && right == -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 90;
+											break;
+										case 1:
+											rectangle.X = 108;
+											rectangle.Y = 108;
+											break;
+										default:
+											rectangle.X = 108;
+											rectangle.Y = 126;
+											break;
+										}
+										mergeDown = true;
+									}
+									else if (up == -1 && down == -1 && left == -2 && right == -1)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 0;
+											rectangle.Y = 234;
+											break;
+										case 1:
+											rectangle.X = 18;
+											rectangle.Y = 234;
+											break;
+										default:
+											rectangle.X = 36;
+											rectangle.Y = 234;
+											break;
+										}
+										mergeLeft = true;
+									}
+									else if (up == -1 && down == -1 && left == -1 && right == -2)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 54;
+											rectangle.Y = 234;
+											break;
+										case 1:
+											rectangle.X = 72;
+											rectangle.Y = 234;
+											break;
+										default:
+											rectangle.X = 90;
+											rectangle.Y = 234;
+											break;
+										}
+										mergeRight = true;
+									}
+								}
+							}
+							int num33 = tile.blockType();
+							if (TileID.Sets.HasSlopeFrames[num])
+							{
+								if (num33 == 0)
+								{
+									bool flag3 = num == up && tile2 != null && tile2.topSlope();
+									bool flag4 = num == left && tile4 != null && tile4.leftSlope();
+									bool flag5 = num == right && tile5 != null && tile5.rightSlope();
+									bool flag6 = num == down && tile3 != null && tile3.bottomSlope();
+									int num34 = 0;
+									int num35 = 0;
+									if (flag3.ToInt() + flag4.ToInt() + flag5.ToInt() + flag6.ToInt() > 2)
+									{
+										int num36 = (tile2 != null && tile2.slope() == 1).ToInt() + (tile5 != null && tile5.slope() == 1).ToInt() + (tile3 != null && tile3.slope() == 4).ToInt() + (tile4 != null && tile4.slope() == 4).ToInt();
+										int num37 = (tile2 != null && tile2.slope() == 2).ToInt() + (tile5 != null && tile5.slope() == 3).ToInt() + (tile3 != null && tile3.slope() == 3).ToInt() + (tile4 != null && tile4.slope() == 2).ToInt();
+										if (num36 == num37)
+										{
+											num34 = 2;
+											num35 = 4;
+										}
+										else if (num36 > num37)
+										{
+											bool num38 = num == upLeft && tile8 != null && tile8.slope() == 0;
+											bool flag7 = num == downRight && tile7 != null && tile7.slope() == 0;
+											if (num38 && flag7)
+											{
+												num35 = 4;
+											}
+											else if (flag7)
+											{
+												num34 = 6;
+											}
+											else
+											{
+												num34 = 7;
+												num35 = 1;
+											}
+										}
+										else
+										{
+											bool num39 = num == upRight && tile9 != null && tile9.slope() == 0;
+											bool flag8 = num == downLeft && tile6 != null && tile6.slope() == 0;
+											if (num39 && flag8)
+											{
+												num35 = 4;
+												num34 = 1;
+											}
+											else if (flag8)
+											{
+												num34 = 7;
+											}
+											else
+											{
+												num34 = 6;
+												num35 = 1;
+											}
+										}
+										rectangle.X = (18 + num34) * 18;
+										rectangle.Y = num35 * 18;
+									}
+									else
+									{
+										if (flag3 && flag4 && num == down && num == right)
+										{
+											num35 = 2;
+										}
+										else if (flag3 && flag5 && num == down && num == left)
+										{
+											num34 = 1;
+											num35 = 2;
+										}
+										else if (flag5 && flag6 && num == up && num == left)
+										{
+											num34 = 1;
+											num35 = 3;
+										}
+										else if (flag6 && flag4 && num == up && num == right)
+										{
+											num35 = 3;
+										}
+										if (num34 != 0 || num35 != 0)
+										{
+											rectangle.X = (18 + num34) * 18;
+											rectangle.Y = num35 * 18;
+										}
+									}
+								}
+								if (num33 >= 2 && (rectangle.X < 0 || rectangle.Y < 0))
+								{
+									int num40 = -1;
+									int num41 = -1;
+									int num42 = -1;
+									int num43 = 0;
+									int num44 = 0;
+									switch (num33)
+									{
+									case 2:
+										num40 = left;
+										num41 = down;
+										num42 = downLeft;
+										num43++;
+										break;
+									case 3:
+										num40 = right;
+										num41 = down;
+										num42 = downRight;
+										break;
+									case 4:
+										num40 = left;
+										num41 = up;
+										num42 = upLeft;
+										num43++;
+										num44++;
+										break;
+									case 5:
+										num40 = right;
+										num41 = up;
+										num42 = upRight;
+										num44++;
+										break;
+									}
+									if (num != num40 || num != num41 || num != num42)
+									{
+										if (num == num40 && num == num41)
+										{
+											num43 += 2;
+										}
+										else if (num == num40)
+										{
+											num43 += 4;
+										}
+										else if (num == num41)
+										{
+											num43 += 4;
+											num44 += 2;
+										}
+										else
+										{
+											num43 += 2;
+											num44 += 2;
+										}
+									}
+									rectangle.X = (18 + num43) * 18;
+									rectangle.Y = num44 * 18;
+								}
+							}
+							if (rectangle.X < 0 || rectangle.Y < 0)
+							{
+								if (!flag)
+								{
+									flag = true;
+									TileMergeAttemptWeird(num, -1, Main.tileSolid, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									tileMergeCullCache.Cull(ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								if (num == 2 || num == 23 || num == 60 || num == 70 || num == 109 || num == 199 || num == 477 || num == 492 || num == 633 || num == 661 || num == 662 || Main.tileMoss[num] || TileID.Sets.tileMossBrick[num])
+								{
+									TileMergeAttempt(num, -2, ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+									tileMergeCullCache.Cull(ref up, ref down, ref left, ref right, ref upLeft, ref upRight, ref downLeft, ref downRight);
+								}
+								if (up == num && down == num && left == num && right == num)
+								{
+									if (upLeft != num && upRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 18;
+											break;
+										case 1:
+											rectangle.X = 126;
+											rectangle.Y = 18;
+											break;
+										default:
+											rectangle.X = 144;
+											rectangle.Y = 18;
+											break;
+										}
+									}
+									else if (downLeft != num && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 108;
+											rectangle.Y = 36;
+											break;
+										case 1:
+											rectangle.X = 126;
+											rectangle.Y = 36;
+											break;
+										default:
+											rectangle.X = 144;
+											rectangle.Y = 36;
+											break;
+										}
+									}
+									else if (upLeft != num && downLeft != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 180;
+											rectangle.Y = 0;
+											break;
+										case 1:
+											rectangle.X = 180;
+											rectangle.Y = 18;
+											break;
+										default:
+											rectangle.X = 180;
+											rectangle.Y = 36;
+											break;
+										}
+									}
+									else if (upRight != num && downRight != num)
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 198;
+											rectangle.Y = 0;
+											break;
+										case 1:
+											rectangle.X = 198;
+											rectangle.Y = 18;
+											break;
+										default:
+											rectangle.X = 198;
+											rectangle.Y = 36;
+											break;
+										}
+									}
+									else
+									{
+										switch (num27)
+										{
+										case 0:
+											rectangle.X = 18;
+											rectangle.Y = 18;
+											break;
+										case 1:
+											rectangle.X = 36;
+											rectangle.Y = 18;
+											break;
+										default:
+											rectangle.X = 54;
+											rectangle.Y = 18;
+											break;
+										}
+									}
+								}
+								else if (up != num && down == num && left == num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 36;
+										rectangle.Y = 0;
+										break;
+									default:
+										rectangle.X = 54;
+										rectangle.Y = 0;
+										break;
+									}
+								}
+								else if (up == num && down != num && left == num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 36;
+										break;
+									case 1:
+										rectangle.X = 36;
+										rectangle.Y = 36;
+										break;
+									default:
+										rectangle.X = 54;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up == num && down == num && left != num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 0;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 0;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 0;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up == num && down == num && left == num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 72;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 72;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 72;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up != num && down == num && left != num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 0;
+										rectangle.Y = 54;
+										break;
+									case 1:
+										rectangle.X = 36;
+										rectangle.Y = 54;
+										break;
+									default:
+										rectangle.X = 72;
+										rectangle.Y = 54;
+										break;
+									}
+								}
+								else if (up != num && down == num && left == num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 54;
+										break;
+									case 1:
+										rectangle.X = 54;
+										rectangle.Y = 54;
+										break;
+									default:
+										rectangle.X = 90;
+										rectangle.Y = 54;
+										break;
+									}
+								}
+								else if (up == num && down != num && left != num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 0;
+										rectangle.Y = 72;
+										break;
+									case 1:
+										rectangle.X = 36;
+										rectangle.Y = 72;
+										break;
+									default:
+										rectangle.X = 72;
+										rectangle.Y = 72;
+										break;
+									}
+								}
+								else if (up == num && down != num && left == num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 18;
+										rectangle.Y = 72;
+										break;
+									case 1:
+										rectangle.X = 54;
+										rectangle.Y = 72;
+										break;
+									default:
+										rectangle.X = 90;
+										rectangle.Y = 72;
+										break;
+									}
+								}
+								else if (up == num && down == num && left != num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 90;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 90;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 90;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up != num && down != num && left == num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 108;
+										rectangle.Y = 72;
+										break;
+									case 1:
+										rectangle.X = 126;
+										rectangle.Y = 72;
+										break;
+									default:
+										rectangle.X = 144;
+										rectangle.Y = 72;
+										break;
+									}
+								}
+								else if (up != num && down == num && left != num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 108;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 126;
+										rectangle.Y = 0;
+										break;
+									default:
+										rectangle.X = 144;
+										rectangle.Y = 0;
+										break;
+									}
+								}
+								else if (up == num && down != num && left != num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 108;
+										rectangle.Y = 54;
+										break;
+									case 1:
+										rectangle.X = 126;
+										rectangle.Y = 54;
+										break;
+									default:
+										rectangle.X = 144;
+										rectangle.Y = 54;
+										break;
+									}
+								}
+								else if (up != num && down != num && left != num && right == num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 162;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 162;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 162;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up != num && down != num && left == num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 216;
+										rectangle.Y = 0;
+										break;
+									case 1:
+										rectangle.X = 216;
+										rectangle.Y = 18;
+										break;
+									default:
+										rectangle.X = 216;
+										rectangle.Y = 36;
+										break;
+									}
+								}
+								else if (up != num && down != num && left != num && right != num)
+								{
+									switch (num27)
+									{
+									case 0:
+										rectangle.X = 162;
+										rectangle.Y = 54;
+										break;
+									case 1:
+										rectangle.X = 180;
+										rectangle.Y = 54;
+										break;
+									default:
+										rectangle.X = 198;
+										rectangle.Y = 54;
+										break;
+									}
+								}
+							}
+							if (rectangle.X <= -1 || rectangle.Y <= -1)
+							{
+								if (num27 <= 0)
+								{
+									rectangle.X = 18;
+									rectangle.Y = 18;
+								}
+								else if (num27 == 1)
+								{
+									rectangle.X = 36;
+									rectangle.Y = 18;
+								}
+								if (num27 >= 2)
+								{
+									rectangle.X = 54;
+									rectangle.Y = 18;
+								}
+							}
+							if (Main.tileLargeFrames[num] == 1 && num27 == 3)
+							{
+								rectangle.Y += 90;
+							}
+							if (Main.tileLargeFrames[num] == 2 && num27 == 3)
+							{
+								rectangle.Y += 90;
+							}
+							tile.frameX = (short)rectangle.X;
+							tile.frameY = (short)rectangle.Y;
+							if (TileID.Sets.IsVine[num])
+							{
+								up = ((tile2 == null) ? num : ((!tile2.nactive()) ? (-1) : ((!tile2.bottomSlope()) ? tile2.type : (-1))));
+								if (num != up)
+								{
+									bool num45 = up == 60 || up == 62;
+									bool num46 = up == 109 || up == 115;
+									bool flag9 = up == 23 || up == 636 || up == 661;
+									bool flag10 = up == 199 || up == 205 || up == 662;
+									bool flag11 = up == 2 || up == 52;
+									bool flag12 = up == 382;
+									bool num47 = up == 70 || up == 528;
+									bool num48 = up == 633 || up == 638;
+									ushort num49 = 0;
+									if (num48)
+									{
+										num49 = 638;
+									}
+									if (num47)
+									{
+										num49 = 528;
+									}
+									if (num46)
+									{
+										num49 = 115;
+									}
+									if (num45)
+									{
+										num49 = 62;
+									}
+									if (flag9)
+									{
+										num49 = 636;
+									}
+									if (flag10)
+									{
+										num49 = 205;
+									}
+									if (flag11 && num != 382)
+									{
+										num49 = 52;
+									}
+									if (flag12)
+									{
+										num49 = 382;
+									}
+									if (num49 != 0 && num49 != num)
+									{
+										tile.type = num49;
+										SquareTileFrame(i, j);
+										return;
+									}
+								}
+								if (up != num)
+								{
+									bool flag13 = false;
+									if (up == -1)
+									{
+										flag13 = true;
+									}
+									if (num == 52 && up != 2 && up != 192)
+									{
+										flag13 = true;
+									}
+									if (num == 382 && up != 2 && up != 192)
+									{
+										flag13 = true;
+									}
+									if (num == 62 && up != 60)
+									{
+										flag13 = true;
+									}
+									if (num == 115 && up != 109)
+									{
+										flag13 = true;
+									}
+									if (num == 528 && up != 70)
+									{
+										flag13 = true;
+									}
+									if (num == 636 && up != 23 && up != 661)
+									{
+										flag13 = true;
+									}
+									if (num == 205 && up != 199 && up != 662)
+									{
+										flag13 = true;
+									}
+									if (num == 638 && up != 633)
+									{
+										flag13 = true;
+									}
+									if (flag13)
+									{
+										KillTile(i, j);
+									}
+								}
+							}
+							bool flag14 = false;
+							if (!noTileActions && tile.active() && TileID.Sets.Falling[num])
+							{
+								SpawnFallingBlockProjectile(i, j, tile, tile2, tile3, num);
+							}
+							if ((rectangle.X != frameX && rectangle.Y != frameY && frameX >= 0 && frameY >= 0) || flag14)
+							{
+								tileReframeCount++;
+								if (tileReframeCount < 25)
+								{
+									bool num50 = mergeUp;
+									bool flag15 = mergeDown;
+									bool flag16 = mergeLeft;
+									bool flag17 = mergeRight;
+									TileFrame(i - 1, j);
+									TileFrame(i + 1, j);
+									TileFrame(i, j - 1);
+									TileFrame(i, j + 1);
+									mergeUp = num50;
+									mergeDown = flag15;
+									mergeLeft = flag16;
+									mergeRight = flag17;
+								}
+								tileReframeCount--;
+							}
+							goto end_IL_0002;
+						}
+						}
+					}
+					Framing.SelfFrame8Way(i, j, tile, resetFrame);
+					return;
+				}
+			}
+			end_IL_0002:;
+		}
+		catch
+		{
+		}
+		if (i > 0 && j > 0)
+		{
+			UpdateMapTile(i, j, addToList);
+		}
+	}

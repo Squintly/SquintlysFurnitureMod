@@ -1,12 +1,10 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,7 +12,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
 {
     public class Toilets_4 : ModTile
     {
-        public const int NextStyleHeight = 38;
+        public const int NextStyleHeight = 40;
 
         public override void SetStaticDefaults()
         {
@@ -33,11 +31,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             AdjTiles = new int[] { TileID.Toilets };
-            AdjTiles = new int[] { TileID.Chairs };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -52,7 +48,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(1);
+            TileObjectData.addAlternate(4);
 
             TileObjectData.addTile(Type);
         }
@@ -117,7 +113,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
 
             player.noThrow = 2;
             player.cursorItemIconEnabled = true;
-            player.cursorItemIconID = ModContent.ItemType<TeakToiletItem>();
+            int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
+            player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
             if (Main.tile[i, j].TileFrameX / 18 < 1)
             {

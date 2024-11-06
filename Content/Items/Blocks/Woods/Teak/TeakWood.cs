@@ -19,7 +19,7 @@ internal class TeakWood : ModItem
         Item.width = 28;
         Item.height = 22;
 
-        Item.value = Item.buyPrice(copper: 50);
+        Item.value = Item.buyPrice(copper: 20);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;

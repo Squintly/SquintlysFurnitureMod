@@ -40,6 +40,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans
 
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 3;
+            TileObjectData.newTile.StyleMultiplier = 3;
             TileObjectData.newTile.RandomStyleRange = 3;
 
             TileObjectData.addTile(Type);

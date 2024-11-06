@@ -29,24 +29,26 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
             TileID.Sets.DisableSmartCursor[Type] = true;
 
             Main.tileLighted[Type] = true;
-            
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+            AdjTiles = new int[] { TileID.Torches };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 1;
-            TileObjectData.newTile.Width = 1;
-            TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+            TileObjectData.newTile.CoordinateHeights = new int[1] { 30 };
+            TileObjectData.newTile.CoordinateWidth = 30;
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
+            TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/CeilingLamps/CeilingLamps_Flame.png"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/CeilingLamps/CeilingLamps_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
 
@@ -70,10 +72,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 18 / 18;
-            int topY = j - tile.TileFrameY % 18 / 18;
+            int topX = i - tile.TileFrameX % 32 / 32;
+            int topY = j - tile.TileFrameY % 32 / 32;
 
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+            short frameAdjustment = (short)(tile.TileFrameX >= 32 ? -32 : 32);
 
             for (int x = topX; x < topX + 1; x++)
             {
@@ -94,20 +96,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
             }
         }
 
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
-
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                switch (tile.TileFrameY / 18)
+                switch (tile.TileFrameY / 32)
                 {
                     case 0:
                         r = 1f;
@@ -164,11 +158,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
-
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -176,9 +165,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
                 zero = Vector2.Zero;
             }
 
-            int width = 18;
+            int width = 32;
             int offsetY = 0;
-            int height = 18;
+            int height = 32;
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -187,7 +176,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
 
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
-            switch (tile.TileFrameY / 18)
+            switch (tile.TileFrameY / 32)
             {
                 case 0:
                     for (int c = 0; c < 2; c++)

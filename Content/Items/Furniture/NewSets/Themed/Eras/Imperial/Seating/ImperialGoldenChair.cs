@@ -1,9 +1,6 @@
+using SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -24,8 +21,9 @@ internal class ImperialGoldenChair : ModItem
         Item.height = 32;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
-        Item.createTile = ModContent.TileType<Chairs_3>();
+        Item.DefaultToPlaceableTile(ModContent.TileType<Chairs_3>());
         Item.placeStyle = 0;
     }
 

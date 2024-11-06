@@ -1,0 +1,31 @@
+﻿Custom Shimmer Crafting 
+	
+	public override void AddRecipes() {
+		// AddCustomShimmerResult can be used to change the decrafting results. Rather that return 1 ExampleItem, decrafting this item will return 1 Rotten Egg and 3 Chain.
+		CreateRecipe()
+			.AddIngredient<ExampleItem>()
+			.AddTile<Tiles.Furniture.ExampleWorkbench>()
+			.AddCustomShimmerResult(ItemID.RottenEgg)
+			.AddCustomShimmerResult(ItemID.Chain, 3)
+			.Register(); 
+
+			.AddDecraftCondition(Recipe.Condition.CorruptWorld)
+			.AddDecraftCondition(Recipe.Condition.InDesert) < allow decrafting only in biome/world type
+
+			.DisableDecraft()    << make a recipe not count for decrafting
+									Decrafting uses last recipe in list by default
+
+
+Marks stuff as materials
+	public static bool[] IsAMaterial = Factory.CreateBoolSet();
+
+BIOME CRAFTING (?)
+		"InHive": "Needs to be in Hive",
+		"InGemCave": "Needs to be in Gem Cave",
+		"InLihzardTemple": "Needs to be in Lihzard Temple",
+		"InGraveyardBiome": "Needs to be in Graveyard Biome"
+		"EverythingSeed": "Needs to be an Everything world"
+		needSnowBiome
+		"CrimsonWorld": "Needs to be a Crimson World",
+		"CorruptWorld": "Needs to be a Corrupt World"
+

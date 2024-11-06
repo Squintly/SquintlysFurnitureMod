@@ -38,7 +38,7 @@ internal class SpookyCandleHolderBlack : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddIngredient(ItemID.Torch)
             .AddIngredient(ItemID.BlackDye)
             .AddTile(ModContent.TileType<DecoBoxTile>())

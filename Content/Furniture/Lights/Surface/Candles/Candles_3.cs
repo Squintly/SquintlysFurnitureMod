@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
+namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
 {
     internal class Candles_3 : ModTile
     {
@@ -35,7 +35,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
             TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
             TileObjectData.newTile.CoordinateHeights = new int[1] { 30 };
             TileObjectData.newTile.CoordinateWidth = 30;
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.DrawYOffset = -12;
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
@@ -53,7 +52,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Surface/Candles/Candles_3_Flame.png");
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Surface/Candles/Candles_3_Flame");
             }
         }
 
@@ -77,10 +76,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
-            int topY = j - tile.TileFrameY % 18 / 18;
+            int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
+            int topY = j - tile.TileFrameY % 32 / 32;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); 
+            short frameAdjustment = (short)(tile.TileFrameX >= 96 ? -96 : 96); 
 
             for (int x = topX; x < topX + 1; x++) // change depending on width
             {
@@ -100,20 +99,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
             }
         }
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                switch (tile.TileFrameY / 18)
+                switch (tile.TileFrameY / 32)
                 {
                     case 0:
                         r = 1f;
@@ -165,11 +157,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
-
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -177,9 +164,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
                 zero = Vector2.Zero;
             }
 
-            int width = 18;
+            int width = 32;
             int offsetY = 0;
-            int height = 18;
+            int height = 32;
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -187,7 +174,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
 
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i);
 
-            switch (tile.TileFrameY / 18)
+            switch (tile.TileFrameY / 32)
             {
                 case 0:
                     for (int c = 0; c < 7; c++)

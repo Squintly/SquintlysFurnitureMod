@@ -29,7 +29,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -44,7 +43,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(1);
+            TileObjectData.addAlternate(3);
 
             TileObjectData.addTile(Type);
         }

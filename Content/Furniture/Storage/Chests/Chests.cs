@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -56,12 +55,15 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             };
 
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+            
+            TileObjectData.newTile.StyleHorizontal = true;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chest"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+
         }
 
         public override ushort GetMapOption(int i, int j)
@@ -147,6 +149,24 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
                 NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
                 player.editedChestName = false;
             }
+
+            int chest = Chest.FindChest(left, top);
+            if (chest != -1)
+            {
+                Main.stackSplit = 600;
+                if (chest == player.chest)
+                {
+                    player.chest = -1;
+                    SoundEngine.PlaySound(SoundID.MenuClose);
+                }
+                else
+                {
+                    SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+                    player.OpenChest(left, top, chest);
+                }
+
+                Recipe.FindRecipes();
+            }
             return true;
         }
 
@@ -201,3 +221,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
         }
     }
 }
+/*STYLES
+0- Imperial
+1- Tattered
+2- Repaired
+*/

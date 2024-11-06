@@ -1,7 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras;
-using SquintlysFurnitureMod.Content.Furniture.Misc.Bookcases;
-using SquintlysFurnitureMod.Content.Furniture.Misc.Doors;
-using SquintlysFurnitureMod.Content.Furniture.Surfaces.Pianos;
+using SquintlysFurnitureMod.Content.Furniture.Misc.Pianos;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -12,14 +9,19 @@ namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Impe
 
 internal class ImperialHarpsichord : ModItem
 {
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
     public override void SetDefaults()
     {
         Item.width = 30;
         Item.height = 32;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Pianos_Tall>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<Pianos_3Tall_NoTop>());
         Item.placeStyle = 0;
     }
 

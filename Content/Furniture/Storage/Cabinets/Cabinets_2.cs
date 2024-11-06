@@ -44,5 +44,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets
         }
     }
 }
-
+/*STYLES
+0- Imperial
+1- Tattered
+2- Repaired
+*/
 

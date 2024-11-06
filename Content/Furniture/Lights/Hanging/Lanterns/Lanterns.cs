@@ -33,17 +33,19 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             AdjTiles = new int[] { TileID.Torches };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
+            TileObjectData.newTile.CoordinateWidth = 30;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
+            TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Lanterns/Lanterns_Flame.png"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Lanterns/Lanterns_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
 
@@ -67,10 +69,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 18 / 18;
+            int topX = i - tile.TileFrameX % 32 / 32;
             int topY = j - tile.TileFrameY % 36 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -18 : 18);
+            short frameAdjustment = (short)(tile.TileFrameX >= 32 ? -32 : 32);
 
             for (int x = topX; x < topX + 1; x++)
             {
@@ -88,14 +90,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 2);
-            }
-        }
-
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
             }
         }
 
@@ -161,11 +155,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
-
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -173,7 +162,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
                 zero = Vector2.Zero;
             }
 
-            int width = 18;
+            int width = 32;
             int offsetY = 0;
             int height = 36;
             short frameX = tile.TileFrameX;
@@ -187,10 +176,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             switch (tile.TileFrameY / 36)
             {
                 case 0:
-                    for (int c = 0; c < 2; c++)
+                    for (int c = 0; c < 7; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
 
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }

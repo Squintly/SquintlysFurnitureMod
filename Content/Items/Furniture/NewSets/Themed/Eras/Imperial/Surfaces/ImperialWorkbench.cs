@@ -11,12 +11,17 @@ namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Impe
 
 internal class ImperialWorkBench : ModItem
 {
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
     public override void SetDefaults()
     {
         Item.width = 32;
         Item.height = 18;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<WorkBenches_5>());
         Item.placeStyle = 0;
@@ -25,7 +30,7 @@ internal class ImperialWorkBench : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(ModContent.TileType<ImperialWood>(), 10)
+            .AddIngredient(ModContent.ItemType<ImperialWoodItem>(), 10)
             .AddTile(TileID.WorkBenches)
             .Register();
     }

@@ -50,4 +50,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Platforms
 0- Imperial
 1- Imperial Fancy
 2- Imperial Shelf
+3- Tattered
+4- Tattered Carpet
+5- Tattered Shelf
+6- Repaired
+7- Repaired Carpet
+8- Repaired Shelf
 */

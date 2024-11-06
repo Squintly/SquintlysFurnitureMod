@@ -38,13 +38,7 @@ internal class CeilingLamp : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.GoldBar)
-            .AddIngredient(ItemID.Torch)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe(1)
-            .AddIngredient(ItemID.PlatinumBar)
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar")
             .AddIngredient(ItemID.Torch)
             .AddTile(TileID.WorkBenches)
             .Register();

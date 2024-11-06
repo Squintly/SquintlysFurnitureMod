@@ -37,4 +37,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths
 }
 /*STYLES
  0- Imperial
+1- Tattered
+2- Repaired
 */

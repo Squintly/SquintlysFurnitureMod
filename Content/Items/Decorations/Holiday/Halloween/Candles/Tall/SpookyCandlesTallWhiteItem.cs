@@ -37,7 +37,7 @@ internal class SpookyCandlesTallWhiteItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddIngredient(ItemID.Torch)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();

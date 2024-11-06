@@ -38,7 +38,7 @@ internal class Scales : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.CopperBar), 6)
+            .AddRecipeGroup("SquintlyFurnitureMod:CopperBar", 6)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
     }

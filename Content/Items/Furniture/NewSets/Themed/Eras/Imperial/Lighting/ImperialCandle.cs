@@ -1,5 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks;
-using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -10,12 +9,17 @@ namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Impe
 
 internal class ImperialCandle : ModItem
 {
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
     public override void SetDefaults()
     {
         Item.width = 14;
         Item.height = 26;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<Candles_3>());
         Item.placeStyle = 0;

@@ -1,8 +1,6 @@
-using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
+using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools;
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -22,8 +20,9 @@ internal class ImperialWoodenBarstool : ModItem
         Item.height = 32;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
-        Item.createTile = ModContent.TileType<Stools_3>();
+        Item.DefaultToPlaceableTile(ModContent.TileType<Barstools_3>());
         Item.placeStyle = 1;
     }
 

@@ -1,10 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
-using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -14,12 +9,17 @@ namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Impe
 
 internal class ImperialBathtubFancy : ModItem
 {
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
     public override void SetDefaults()
     {
         Item.width = 30;
         Item.height = 28;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<Baths_Tall>());
         Item.placeStyle = 0;

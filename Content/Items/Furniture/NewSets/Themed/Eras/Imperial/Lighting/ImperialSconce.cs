@@ -1,5 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks;
-using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
@@ -11,15 +9,20 @@ namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Impe
 
 internal class ImperialSconce : ModItem
 {
+    public override void SetStaticDefaults()
+    {
+        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+    }
     public override void SetDefaults()
     {
         Item.width = 14;
         Item.height = 14;
 
         Item.value = Item.buyPrice(silver: 1);
+        Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sconces_3>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sconces>());
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

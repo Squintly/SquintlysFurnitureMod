@@ -89,4 +89,5 @@ public class S_1x1_B_4 : ModTile
 5- Small Cake Slice X
 6- Small Sugar X
 7- Small Flour X
+8- Wooden Bucket X
 */

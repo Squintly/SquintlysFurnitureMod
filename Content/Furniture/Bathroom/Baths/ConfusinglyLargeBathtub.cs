@@ -25,18 +25,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths
             AdjTiles = new int[] { TileID.Bathtubs };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
 
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.Width = 6;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-
-            TileObjectData.newTile.StyleLineSkip = 2;
 
             TileObjectData.addTile(Type);
         }

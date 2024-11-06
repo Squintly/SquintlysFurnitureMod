@@ -36,7 +36,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Width = 3;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
-            TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -48,7 +47,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Chandeliers/Chandeliers_Flame.png"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Chandeliers/Chandeliers_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
             }
         }
 
@@ -75,7 +74,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             int topX = i - tile.TileFrameX % 54 / 18;
             int topY = j - tile.TileFrameY % 54 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX > 0 ? -54 : 54);
+            short frameAdjustment = (short)(tile.TileFrameX >= 54 ? -54 : 54);
 
             for (int x = topX; x < topX + 3; x++)
             {
@@ -96,22 +95,20 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             }
         }
 
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 1)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
-        }
-
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                switch (tile.TileFrameY / 18)
+                switch (tile.TileFrameY / 54)
                 {
-                    case 0:
+                    case 0: //Tattered
+                        r = 1f;
+                        g = .95f;
+                        b = .90f;
+                        break;
+                        
+                    case 1: //Repaired
                         r = 1f;
                         g = .95f;
                         b = .95f;
@@ -166,10 +163,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1)
-            {
-                effects = SpriteEffects.FlipHorizontally;
-            }
+            //if (i % 2 == 1)
+            //{
+            //    effects = SpriteEffects.FlipHorizontally;
+            //}
 
             Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
 
@@ -178,9 +175,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
                 zero = Vector2.Zero;
             }
 
-            int width = 54;
+            int width = 18;
             int offsetY = 0;
-            int height = 54;
+            int height = 18;
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -191,7 +188,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
             switch (tile.TileFrameY / 54)
             {
-                case 0:
+                case 0: //Tattered
+                    for (int c = 0; c < 7; c++)
+                    {
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+                    }
+                    break;
+                case 1: //Repaired
                     for (int c = 0; c < 7; c++)
                     {
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;

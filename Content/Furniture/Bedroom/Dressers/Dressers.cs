@@ -60,12 +60,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Dresser"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
 
         public override LocalizedText DefaultContainerName(int frameX, int frameY)
         {
-            return CreateMapEntryName();
+            int option = frameX / 36;
+            return this.GetLocalization("MapEntry" + option);
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -260,3 +261,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
         }
     }
 }
+/*STYLES
+ 0- Imperial
+1- Repaired
+*/

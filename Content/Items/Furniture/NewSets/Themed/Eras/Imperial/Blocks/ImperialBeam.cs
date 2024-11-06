@@ -22,15 +22,17 @@ internal class ImperialBeamItem : ModItem
     }
     public override void SetDefaults()
     {
-        Item.DefaultToPlaceableTile(ModContent.TileType<ImperialWood>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<ImperialBeam>());
 
         Item.width = 16;
         Item.height = 16;
+
+        Item.maxStack = Item.CommonMaxStack;
     }
     public override void AddRecipes()
     {
         CreateRecipe(2)
-           .AddIngredient(ModContent.TileType<ImperialWood>())
+           .AddIngredient(ModContent.ItemType<ImperialWoodItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
     }

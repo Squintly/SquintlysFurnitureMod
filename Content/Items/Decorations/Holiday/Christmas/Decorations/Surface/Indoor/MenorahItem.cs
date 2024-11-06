@@ -38,7 +38,7 @@ internal class MenorahItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar), 2)
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

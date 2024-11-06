@@ -1,7 +1,7 @@
 A furniture mod inspired by the likes of Terrarchitect and Dragon's Decorative Mod, this is my attempt to fill in some of the gaps, mostly for my own personal building purposes.
 
 [h1]Current Content:[/h1]
-There are now officially over 600 items in the mod! Whoo!
+There are now officially over 1000 items in the mod! Whoo!
 [h2]Vanilla Plus[/h2]
 These are things which use vanilla sprites or are based on vanilla objects, such as:
 [list]
@@ -27,6 +27,7 @@ Complete with all vanilla furniture items, as well as my set extras! Lights can 
 [*] Hearfelt: Made at the Heartfelt Crafting Table, using Heartfelt Blocks made from Life Crystals
 [*] Teak: Made with Teak Wood, purchasable from the Travelling Merchant
 [*] Springtime: Made at the Floral Crafting Table with Springy Wood, purchasable from the Travelling Merchant
+[*] Imperial: Made at any work bench with Imperial Wood, crafted with Dynasty Wood and Gold
 [/list]
 [h2]Themed Decorations[/h2]
 Not a lot of these yet, but going forward there'll be more!
@@ -64,5 +65,4 @@ The random stuff you find around the house, from supplies to appliances to rando
 More's being added all the time, though updates may be sporadic at times. [b]Please report any bugs or unexpected behavior[/b]. Due to the size of the mod, playtesting everything is increasingly difficult. 
 Suggestions, questions and comments are very welcome, especially on the [url=https://discord.gg/DYAqssHdMz]Discord[/url] server, where I post previews and ask opinions. There's also an under-construction [url=https://terrariamods.wiki.gg/wiki/Squintly%27s_Furniture_Mod]Wiki[/url] and a [url=https://trello.com/b/Eoijs8dM/squintlys-furniture-mod]Trello[/url] to-do list. If you've used my mod to build something neat, please share! I'm excited to see what y'all can do with all this!
 
-Due to increased living expenses, I've also made a [url=https://www.patreon.com/squintlymods]Patreon[/url] and a [url=https://ko-fi.com/squintly]Ko-Fi[/url] for one-time donations. Please don't feel obligated to donate, but every little bit helps!
-[quote=tModLoader]Developed By Squintly[/quote]
+Due to increased living expenses, I've also made a [url=https://www.patreon.com/squintlymods]Patreon[/url] and a [url=https://ko-fi.com/squintly]Ko-Fi[/url] for one-time donations. Paid requests are bumped to the top of the list, so if you've got an abiding need for something, think about tossing me some scratch! Please don't feel obligated to donate, but every little bit helps.

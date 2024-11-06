@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Walls;
 
-public class ImperialPanelling : Wall
+public class ImperialPanelling : WallLargePhlebas
 {
     public override void SafeSetStaticDefaults()
     {
@@ -23,15 +23,17 @@ internal class ImperialPanellingItem : ModItem
     }
     public override void SetDefaults()
     {
-        Item.createWall = ModContent.WallType<ImperialPanelling>();
+        Item.DefaultToPlaceableWall(ModContent.WallType<ImperialPanelling>());
 
         Item.width = 24;
         Item.height = 24;
+
+        Item.maxStack = Item.CommonMaxStack;
     }
     public override void AddRecipes()
     {
         CreateRecipe(4)
-           .AddIngredient(ModContent.TileType<ImperialWood>())
+           .AddIngredient(ModContent.ItemType<ImperialWoodItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
     }

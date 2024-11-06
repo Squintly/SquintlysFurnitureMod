@@ -83,4 +83,5 @@ public class S_2x1_B_4 : ModTile
 
 /* STYLES
 0- Cake X
+1- Stacked ROlled TOwels (Front) X
 */

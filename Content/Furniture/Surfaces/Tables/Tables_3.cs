@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.Localization;
@@ -8,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
 {
-    public class Tables : ModTile
+    public class Tables_3 : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -31,14 +32,21 @@ namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
-            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
-            TileObjectData.newTile.StyleHorizontal = false;
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.StyleWrapLimit = 3;
+            TileObjectData.newTile.StyleMultiplier = 3;
+            TileObjectData.newTile.RandomStyleRange = 3;
 
             TileObjectData.addTile(Type);
         }
     }
 }
+/*STYLES
+0- Imperial
+1- Imperial Covered
+*/

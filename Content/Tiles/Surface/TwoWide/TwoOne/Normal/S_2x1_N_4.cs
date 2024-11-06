@@ -85,4 +85,6 @@ public class S_2x1_N_4 : ModTile
 1- Baguettes X
 2- Round Loaf X
 3- Cheese Wheel X
+4- Rolled Towel X
+5- Bolster X
 */

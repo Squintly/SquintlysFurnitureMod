@@ -5142,6 +5142,326 @@ Mods: {
 				DisplayName: Tuscan Column
 				Tooltip: ""
 			}
+
+			ImperialWallpaperItem: {
+				Tooltip: ""
+				DisplayName: Imperial Wallpaper
+			}
+
+			ImperialWallpaperFancyItem: {
+				Tooltip: ""
+				DisplayName: Fancy Imperial Wallpaper
+			}
+
+			ImperialPanellingItem: {
+				Tooltip: ""
+				DisplayName: Imperial Panelling
+			}
+
+			ImperialWorkBench: {
+				Tooltip: ""
+				DisplayName: Imperial Work Bench
+			}
+
+			ImperialTable: {
+				Tooltip: ""
+				DisplayName: Imperial Table
+			}
+
+			ImperialCoveredTable: {
+				Tooltip: ""
+				DisplayName: Imperial Covered Table
+			}
+
+			ImperialConsole: {
+				Tooltip: ""
+				DisplayName: Imperial Console
+			}
+
+			ImperialBar: {
+				Tooltip: ""
+				DisplayName: Imperial Bar
+			}
+
+			ImperialChest: {
+				Tooltip: ""
+				DisplayName: Imperial Chest
+			}
+
+			ImperialCabinet: {
+				Tooltip: ""
+				DisplayName: Imperial Cabinet
+			}
+
+			ImperialWoodenChair: {
+				Tooltip: ""
+				DisplayName: Imperial Wooden Chair
+			}
+
+			ImperialWoodenBarstool: {
+				Tooltip: ""
+				DisplayName: Imperial Wooden Barstool
+			}
+
+			ImperialSofa: {
+				Tooltip: ""
+				DisplayName: Imperial Sofa
+			}
+
+			ImperialOttoman: {
+				Tooltip: ""
+				DisplayName: Imperial Ottoman
+			}
+
+			ImperialGoldenChair: {
+				Tooltip: ""
+				DisplayName: Imperial Golden Chair
+			}
+
+			ImperialGoldenBarstool: {
+				Tooltip: ""
+				DisplayName: Imperial Golden Barstool
+			}
+
+			ImperialChesterfield: {
+				Tooltip: ""
+				DisplayName: Imperial Chesterfield
+			}
+
+			ImperialArmchair: {
+				Tooltip: ""
+				DisplayName: Imperial Armchair
+			}
+
+			ImperialShelf: {
+				Tooltip: ""
+				DisplayName: Imperial Shelf
+			}
+
+			ImperialPlatformFancy: {
+				Tooltip: ""
+				DisplayName: Fancy Imperial Platform
+			}
+
+			ImperialPlatform: {
+				Tooltip: ""
+				DisplayName: Imperial Platform
+			}
+
+			ImperialMirror: {
+				Tooltip: ""
+				DisplayName: Imperial Mirror
+			}
+
+			ImperialHarpsichord: {
+				Tooltip: ""
+				DisplayName: Imperial Harpsichord
+			}
+
+			ImperialDoor: {
+				Tooltip: ""
+				DisplayName: Imperial Door
+			}
+
+			ImperialClock: {
+				Tooltip: ""
+				DisplayName: Imperial Clock
+			}
+
+			ImperialBookcase: {
+				Tooltip: ""
+				DisplayName: Imperial Bookcase
+			}
+
+			ImperialTorchiere: {
+				Tooltip: ""
+				DisplayName: Imperial Torchiere
+			}
+
+			ImperialSpotlight: {
+				Tooltip: ""
+				DisplayName: Imperial Spotlight
+			}
+
+			ImperialSconce: {
+				Tooltip: ""
+				DisplayName: Imperial Sconce
+			}
+
+			ImperialLantern: {
+				Tooltip: ""
+				DisplayName: Imperial Lantern
+			}
+
+			ImperialLamp: {
+				Tooltip: ""
+				DisplayName: Imperial Lamp
+			}
+
+			ImperialChandelier: {
+				Tooltip: ""
+				DisplayName: Imperial Chandelier
+			}
+
+			ImperialCeilingLamp: {
+				Tooltip: ""
+				DisplayName: Imperial Ceiling Lamp
+			}
+
+			ImperialCandle: {
+				Tooltip: ""
+				DisplayName: Imperial Candle
+			}
+
+			ImperialCandelabra: {
+				Tooltip: ""
+				DisplayName: Imperial Candelabra
+			}
+
+			ImperialWoodItem: {
+				Tooltip: ""
+				DisplayName: Imperial Wood
+			}
+
+			ImperialWoodInlayItem: {
+				Tooltip: ""
+				DisplayName: Imperial Wood Inlay
+			}
+
+			ImperialWoodFancyItem: {
+				Tooltip: ""
+				DisplayName: Fancy Imperial Wood
+			}
+
+			ImperialBeamItem: {
+				Tooltip: ""
+				DisplayName: Imperial Beam
+			}
+
+			ImperialRoyalBed: {
+				Tooltip: ""
+				DisplayName: Imperial Royal Bed
+			}
+
+			ImperialNightstand: {
+				Tooltip: ""
+				DisplayName: Imperial Nightstand
+			}
+
+			ImperialDresser: {
+				Tooltip: ""
+				DisplayName: Imperial Dresser
+			}
+
+			ImperialBed: {
+				Tooltip: ""
+				DisplayName: Imperial Bed
+			}
+
+			ImperialWoodenBathtub: {
+				Tooltip: ""
+				DisplayName: Imperial Wooden Bathtub
+			}
+
+			ImperialToilet: {
+				Tooltip: ""
+				DisplayName: Imperial Toilet
+			}
+
+			ImperialSink: {
+				Tooltip: ""
+				DisplayName: Imperial Sink
+			}
+
+			ImperialCommode: {
+				Tooltip: ""
+				DisplayName: Imperial Commode
+			}
+
+			ImperialBathtubFancy: {
+				Tooltip: ""
+				DisplayName: Fancy Imperial Bathtub
+			}
+
+			ImperialBathtub: {
+				Tooltip: ""
+				DisplayName: Imperial Bathtub
+			}
+
+			ConfusinglyLargeBathtubItem: {
+				Tooltip: ""
+				DisplayName: Confusingly Large Bathtub
+			}
+
+			RolledTowels: {
+				Tooltip: ""
+				DisplayName: Rolled Towels
+			}
+
+			RolledTowel: {
+				Tooltip: ""
+				DisplayName: Rolled Towel
+			}
+
+			RolledStackedTowels: {
+				Tooltip: ""
+				DisplayName: Rolled Stacked Towels
+			}
+
+			FoldedTowel: {
+				Tooltip: ""
+				DisplayName: Folded Towel
+			}
+
+			Bolster: {
+				Tooltip: ""
+				DisplayName: Bolster
+			}
+
+			WoodenBucket: {
+				Tooltip: ""
+				DisplayName: Wooden Bucket
+			}
+
+			ImperialFenceItem: {
+				DisplayName: Imperial Fence
+				Tooltip: ""
+			}
+
+			ImperialDoorRounded: {
+				DisplayName: Imperial Door
+				Tooltip: ""
+			}
+
+			ImperialDoorRoundedWindow: {
+				DisplayName: Imperial Door
+				Tooltip: ""
+			}
+
+			ImperialDoorWindow: {
+				DisplayName: Imperial Door
+				Tooltip: ""
+			}
+
+			ImperialSconceCandle: {
+				DisplayName: Imperial Sconce
+				Tooltip: ""
+			}
+
+			ImperialSconceGlass: {
+				DisplayName: Glass Imperial Sconce
+				Tooltip: ""
+			}
+
+			WebsDarkItem: {
+				DisplayName: Fancy Dark Webs
+				Tooltip: Clings to ceilings and corners
+			}
+
+			WebsItem: {
+				DisplayName: Fancy Webs
+				Tooltip: Clings to ceilings and corners
+			}
 		}
 
 		Tiles: {
@@ -5195,6 +5515,21 @@ Mods: {
 			SpringtimeNightstand: {
 				ContainerName: Springtime Nightstand
 				MapEntry0: Springtime Nightstand
+			}
+
+			Nightstands: {
+				ContainerName: Nightstands
+				MapEntry0: Imperial Nightstand
+			}
+
+			Chests: {
+				ContainerName: Chests
+				MapEntry0: Imperial Chest
+			}
+
+			Dressers: {
+				ContainerName: Dressers
+				MapEntry0: Imperial Dresser
 			}
 
 			TatteredDresser.MapEntry: Tattered Dresser

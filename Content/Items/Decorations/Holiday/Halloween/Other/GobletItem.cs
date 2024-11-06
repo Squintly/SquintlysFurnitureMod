@@ -37,7 +37,7 @@ internal class GobletItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.CopperBar), 4)
+            .AddRecipeGroup("SquintlyFurnitureMod:CopperBar", 4)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
 

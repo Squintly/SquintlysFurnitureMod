@@ -38,7 +38,7 @@ internal class Sun : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar), 4)
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 4)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

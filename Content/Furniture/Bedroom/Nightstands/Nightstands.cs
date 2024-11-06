@@ -27,6 +27,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands
             Main.tileSpelunker[Type] = true;
             Main.tileOreFinderPriority[Type] = 500;
 
+            Main.tileSolidTop[Type] = true;
+            Main.tileTable[Type] = true;
+
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
+
             Main.tileContainer[Type] = true;
             TileID.Sets.BasicChest[Type] = true;
 
@@ -57,11 +62,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands
 
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 
+            TileObjectData.newTile.StyleHorizontal = true;
+
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chest"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
 
         public override ushort GetMapOption(int i, int j)
@@ -147,6 +154,43 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands
                 NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
                 player.editedChestName = false;
             }
+            bool isLocked = Chest.IsLocked(left, top);
+            if (Main.netMode == NetmodeID.MultiplayerClient && !isLocked)
+            {
+                if (left == player.chestX && top == player.chestY && player.chest != -1)
+                {
+                    player.chest = -1;
+                    Recipe.FindRecipes();
+                    SoundEngine.PlaySound(SoundID.MenuClose);
+                }
+                else
+                {
+                    NetMessage.SendData(MessageID.RequestChestOpen, -1, -1, null, left, top);
+                    Main.stackSplit = 600;
+                }
+            }
+            else
+            {
+                {
+                    int chest = Chest.FindChest(left, top);
+                    if (chest != -1)
+                    {
+                        Main.stackSplit = 600;
+                        if (chest == player.chest)
+                        {
+                            player.chest = -1;
+                            SoundEngine.PlaySound(SoundID.MenuClose);
+                        }
+                        else
+                        {
+                            SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+                            player.OpenChest(left, top, chest);
+                        }
+
+                        Recipe.FindRecipes();
+                    }
+                }
+            }
             return true;
         }
 
@@ -201,3 +245,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands
         }
     }
 }
+/*STYLES
+0- Imperial
+1- Tattered
+2- Repaired
+*/

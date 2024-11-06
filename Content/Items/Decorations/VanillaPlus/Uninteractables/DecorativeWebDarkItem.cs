@@ -37,7 +37,7 @@ internal class DecorativeWebDarkItem : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Cobweb, 5)
-            .AddIngredient(ItemID.BlackDye)
+            .AddIngredient(ItemID.BlackPaint)
             .Register();
     }
 }

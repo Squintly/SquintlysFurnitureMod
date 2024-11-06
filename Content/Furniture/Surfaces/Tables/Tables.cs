@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
 {
-    public class Tables_3 : ModTile
+    public class Tables : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -30,11 +30,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
-
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 3;
-            TileObjectData.newTile.StyleMultiplier = 3;
-            TileObjectData.newTile.RandomStyleRange = 3;
+
+            TileObjectData.newTile.StyleWrapLimit = 111;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -43,3 +41,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
         }
     }
 }
+/*STYLES
+0- Imperial Console
+1- Imperial Bar
+2- Tattered Console
+3- Tattered Bar
+4- Repaired Console
+5- Repaired Bar
+*/

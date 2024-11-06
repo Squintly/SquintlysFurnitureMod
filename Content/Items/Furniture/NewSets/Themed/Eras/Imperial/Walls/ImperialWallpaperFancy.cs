@@ -23,15 +23,17 @@ internal class ImperialWallpaperFancyItem : ModItem
     }
     public override void SetDefaults()
     {
-        Item.createWall = ModContent.WallType<ImperialWallpaperFancy>();
+        Item.DefaultToPlaceableWall(ModContent.WallType<ImperialWallpaperFancy>());
 
         Item.width = 24;
         Item.height = 24;
+
+        Item.maxStack = Item.CommonMaxStack;
     }
     public override void AddRecipes()
     {
         CreateRecipe(4)
-           .AddIngredient(ModContent.TileType<ImperialWood>())
+           .AddIngredient(ModContent.ItemType<ImperialWoodInlayItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
     }
