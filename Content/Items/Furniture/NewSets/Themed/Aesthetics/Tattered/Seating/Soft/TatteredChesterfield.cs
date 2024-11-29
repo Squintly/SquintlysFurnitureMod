@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -21,7 +22,7 @@ internal class TatteredChesterfield : ModItem
         Item.value = Item.buyPrice(copper: 60);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<Chesterfields_3Tall_6>());
         Item.placeStyle = 0;
     }
 

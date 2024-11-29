@@ -61,6 +61,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry1"), MapChestName);
         }
 
         public override LocalizedText DefaultContainerName(int frameX, int frameY)
@@ -196,7 +197,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
                 }
                 if (player.cursorItemIconText == defaultName)
                 {
-                    player.cursorItemIconID = ModContent.ItemType<SpringtimeDresserItem>();
+                    int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
+                    player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
                     player.cursorItemIconText = "";
                 }
             }

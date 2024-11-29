@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Bedroom;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.DataStructures;
@@ -46,12 +47,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(1);
+            TileObjectData.addAlternate(4);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.addTile(Type);
+
+            RegisterItemDrop(ModContent.ItemType<ImperialBed>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

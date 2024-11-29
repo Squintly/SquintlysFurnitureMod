@@ -1,4 +1,6 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Soft;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -21,17 +23,17 @@ internal class RepairedChesterfield : ModItem
         Item.value = Item.buyPrice(copper: 60);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<Chesterfields_3Tall_6>());
         Item.placeStyle = 1;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 8)
-            .AddIngredient(ItemID.Silk, 5)
+            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddIngredient(ItemID.Silk, 2)
+            .AddIngredient(ModContent.ItemType<TatteredChesterfield>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

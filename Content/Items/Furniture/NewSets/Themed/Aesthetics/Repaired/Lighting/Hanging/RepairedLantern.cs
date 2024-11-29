@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Hanging;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -27,10 +28,10 @@ internal class RepairedLantern : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddIngredient(ItemID.Torch, 1)
+            .AddIngredient(ModContent.ItemType<TatteredLantern>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

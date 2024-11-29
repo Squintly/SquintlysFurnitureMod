@@ -41,7 +41,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
 
             TileObjectData.addTile(Type);
 
-            AnimationFrameHeight = 90;
+            AnimationFrameHeight = 92;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
@@ -58,9 +58,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
         {
             Tile tile = Main.tile[i, j];
             int topX = i - tile.TileFrameX % 36 / 18;
-            int topY = j - tile.TileFrameY % 90 / 18;
+            int topY = j - tile.TileFrameY % 92 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameY >= 90 ? -90 : 90);
+            short frameAdjustment = (short)(tile.TileFrameY >= 92 ? -92 : 92);
 
             for (int x = topX; x < topX + 2; x++)
             {
@@ -85,12 +85,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
 
             if (tile.TileFrameY < 90)
             {
-                frameYOffset = Main.tileFrame[type] * 90;
+                frameYOffset = Main.tileFrame[type] * 92;
             }
 
             else
             {
-                frameYOffset = 630;
+                frameYOffset = 644;
             }
         }
         public override bool RightClick(int x, int y)

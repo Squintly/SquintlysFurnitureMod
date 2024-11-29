@@ -38,17 +38,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds
 
             TileID.Sets.InteractibleByNPCs[Type] = true;
 
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
+            TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
+
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 24;
             TileObjectData.newTile.StyleMultiplier = 24;
             TileObjectData.newTile.RandomStyleRange = 12;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
-            TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
-
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(1);
+            TileObjectData.addAlternate(12);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;

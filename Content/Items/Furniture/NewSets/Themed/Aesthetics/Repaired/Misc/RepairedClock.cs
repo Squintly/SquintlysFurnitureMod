@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces;
 using SquintlysFurnitureMod.Content.Furniture.Misc.Clocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,11 +30,11 @@ internal class RepairedClock : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 20)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 3)
-            .AddIngredient(ItemID.Glass, 6)
+            .AddRecipeGroup(RecipeGroupID.Wood, 10)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 1)
+            .AddIngredient(ItemID.Glass, 3)
+            .AddIngredient(ModContent.ItemType<TatteredClock>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

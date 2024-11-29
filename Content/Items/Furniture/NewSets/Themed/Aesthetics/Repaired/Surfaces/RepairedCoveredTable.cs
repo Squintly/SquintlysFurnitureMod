@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Surfaces;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedCoveredTable : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 8)
-            .AddIngredient(ItemID.Silk, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddIngredient(ItemID.Silk, 3)
+            .AddIngredient(ModContent.ItemType<TatteredBar>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

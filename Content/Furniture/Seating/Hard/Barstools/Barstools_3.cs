@@ -12,7 +12,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
 {
-    public class Barstools_6 : ModTile
+    public class Barstools_3 : ModTile
     {
         public const int NextStyleHeight = 40;
         public override void SetStaticDefaults()
@@ -39,9 +39,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             TileObjectData.newTile.CoordinateWidth = 30;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 12;
-            TileObjectData.newTile.StyleMultiplier = 12;
-            TileObjectData.newTile.RandomStyleRange = 6;
+            TileObjectData.newTile.StyleWrapLimit = 6;
+            TileObjectData.newTile.StyleMultiplier = 6;
+            TileObjectData.newTile.RandomStyleRange = 3;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -65,7 +65,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             Tile tile = Framing.GetTileSafely(i, j);
 
             info.TargetDirection = -1;
-            if (tile.TileFrameX != 0)
+            if (tile.TileFrameX >= 96)
             {
                 info.TargetDirection = 1; // Facing right if sat down on the right alternate (added through addAlternate in SetStaticDefaults earlier)
             }
@@ -73,7 +73,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight == 0)
+            if (tile.TileFrameY % NextStyleHeight <= 96)
             {
                 info.AnchorTilePosition.Y++;
             }
@@ -106,7 +106,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
-            if (Main.tile[i, j].TileFrameX / 32 < 1)
+            if (Main.tile[i, j].TileFrameX / 96 < 1)
             {
                 player.cursorItemIconReversed = true;
             }
@@ -114,6 +114,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
     }
 }
 /*STYLES
-0- Tattered
-1- Repaired
+0- Imperial Gold
+1- Imperial Wood
 */

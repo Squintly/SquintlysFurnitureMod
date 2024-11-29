@@ -29,14 +29,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets
             AdjTiles = new int[] { TileID.Bookcases };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.DefendersForge, 0));
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x4);
             TileObjectData.newTile.CoordinateHeights = new int[4] { 16, 16, 16, 18 };
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 2;
             TileObjectData.newTile.StyleMultiplier = 2;
             TileObjectData.newTile.RandomStyleRange = 2;
 

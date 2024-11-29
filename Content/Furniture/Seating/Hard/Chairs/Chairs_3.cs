@@ -34,6 +34,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.CoordinateWidth = 30;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -67,7 +68,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
 
             info.TargetDirection = -1;
 
-            if (tile.TileFrameX != 0)
+            if (tile.TileFrameX >= 96)
             {
                 info.TargetDirection = 1; // Facing right if sat down on the right alternate (added through addAlternate in SetStaticDefaults earlier)
             }
@@ -77,7 +78,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
             info.AnchorTilePosition.X = i; // Our chair is only 1 wide, so nothing special required
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight == 0)
+            if (tile.TileFrameY % NextStyleHeight <= 96)
             {
                 info.AnchorTilePosition.Y++; // Here, since our chair is only 2 tiles high, we can just check if the tile is the top-most one, then move it 1 down
             }
@@ -115,7 +116,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
-            if (Main.tile[i, j].TileFrameX / 18 < 1)
+            if (Main.tile[i, j].TileFrameX / 96 < 1)
             {
                 player.cursorItemIconReversed = true;
             }

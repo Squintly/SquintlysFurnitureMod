@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedMetalRoyalBed : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.Wood, 20)
-            .AddIngredient(ItemID.Silk, 5)
+            .AddIngredient(ItemID.Wood, 10)
+            .AddIngredient(ItemID.Silk, 2)
+            .AddIngredient(ModContent.ItemType<TatteredMetalRoyalBed>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

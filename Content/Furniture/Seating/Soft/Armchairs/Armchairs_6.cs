@@ -43,7 +43,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(3);
+            TileObjectData.addAlternate(6);
 
             TileObjectData.addTile(Type);
         }

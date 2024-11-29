@@ -1,4 +1,6 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Platforms;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,7 +31,11 @@ internal class RepairedShelf : ModItem
     {
         CreateRecipe(2)
             .AddRecipeGroup(RecipeGroupID.Wood, 1)
-            .AddCondition(Condition.InGraveyard)
+            .AddIngredient(ModContent.ItemType<TatteredShelf>())
             .Register();
+
+        CreateRecipe(2)
+           .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+           .Register();
     }
 }

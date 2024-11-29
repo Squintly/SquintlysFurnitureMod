@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Pianos;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,11 +29,11 @@ internal class RepairedPlayerPiano : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 20)
+            .AddRecipeGroup(RecipeGroupID.Wood, 10)
             .AddIngredient(ItemID.Book)
-            .AddIngredient(ItemID.Bone, 4)
+            .AddIngredient(ItemID.Bone, 2)
+            .AddIngredient(ModContent.ItemType<TatteredPlayerPiano>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -21,8 +21,8 @@ internal class TatteredSink : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sinks>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sinks_2>());
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

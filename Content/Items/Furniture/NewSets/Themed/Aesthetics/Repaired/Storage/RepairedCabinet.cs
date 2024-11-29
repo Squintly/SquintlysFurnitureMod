@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets;
-using SquintlysFurnitureMod.Content.Furniture.Storage.Chests;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Storage;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,10 +29,10 @@ internal class RepairedCabinet : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 8)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
+            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 1)
+            .AddIngredient(ModContent.ItemType<TatteredCabinet>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

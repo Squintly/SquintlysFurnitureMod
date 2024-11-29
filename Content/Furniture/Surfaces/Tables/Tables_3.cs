@@ -38,7 +38,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 3;
             TileObjectData.newTile.StyleMultiplier = 3;
             TileObjectData.newTile.RandomStyleRange = 3;
 

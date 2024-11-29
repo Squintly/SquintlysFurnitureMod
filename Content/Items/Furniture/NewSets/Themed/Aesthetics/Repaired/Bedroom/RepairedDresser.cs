@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,9 +29,9 @@ internal class RepairedDresser : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 16)
+            .AddRecipeGroup(RecipeGroupID.Wood, 8)
+            .AddIngredient(ModContent.ItemType<TatteredDresser>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Lamps;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Surface;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,10 +30,10 @@ internal class RepairedTorchiere : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddIngredient(ItemID.Torch, 1)
+            .AddIngredient(ModContent.ItemType<TatteredTorchiere>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -109,14 +109,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX <= 214)
             {
                 switch (tile.TileFrameY / 54)
                 {
                     case 0: //Tattered
                         r = 1f;
-                        g = .95f;
-                        b = .90f;
+                        g = .75f;
+                        b = .75f;
                         break;
                     case 1: //Repaired
                         r = 1f;

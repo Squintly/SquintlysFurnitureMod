@@ -22,7 +22,7 @@ internal class TatteredMirror : ModItem
         Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<Mirrors>());
-        Item.placeStyle = 0;
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

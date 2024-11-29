@@ -9,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields
 {
-    public class Chesterfields_6 : ModTile
+    public class Chesterfields_3Tall_6 : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -29,8 +29,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
 
             TileObjectData.newTile.Width = 4;
-            TileObjectData.newTile.Height = 2;
-            TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
+            TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.ObjectInteractions;
@@ -40,6 +41,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
+
+            RegisterItemDrop(ModContent.ItemType<ImperialFourPoster>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

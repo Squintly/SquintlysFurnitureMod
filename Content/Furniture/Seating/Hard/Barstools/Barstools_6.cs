@@ -12,7 +12,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
 {
-    public class Barstools_3 : ModTile
+    public class Barstools_6 : ModTile
     {
         public const int NextStyleHeight = 40;
         public override void SetStaticDefaults()
@@ -34,13 +34,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             AdjTiles = new int[] { TileID.Chairs };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
-
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+            TileObjectData.newTile.CoordinateWidth = 30;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 6;
-            TileObjectData.newTile.StyleMultiplier = 6;
-            TileObjectData.newTile.RandomStyleRange = 3;
+            TileObjectData.newTile.StyleWrapLimit = 12;
+            TileObjectData.newTile.StyleMultiplier = 12;
+            TileObjectData.newTile.RandomStyleRange = 6;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -49,7 +49,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(3);
+            TileObjectData.addAlternate(6);
 
             TileObjectData.addTile(Type);
         }
@@ -64,7 +64,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             Tile tile = Framing.GetTileSafely(i, j);
 
             info.TargetDirection = -1;
-            if (tile.TileFrameX != 0)
+            if (tile.TileFrameX >= 192)
             {
                 info.TargetDirection = 1; // Facing right if sat down on the right alternate (added through addAlternate in SetStaticDefaults earlier)
             }
@@ -72,7 +72,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight == 0)
+            if (tile.TileFrameY % NextStyleHeight <= 192)
             {
                 info.AnchorTilePosition.Y++;
             }
@@ -105,7 +105,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
-            if (Main.tile[i, j].TileFrameX / 18 < 1)
+            if (Main.tile[i, j].TileFrameX / 192 < 1)
             {
                 player.cursorItemIconReversed = true;
             }
@@ -113,6 +113,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
     }
 }
 /*STYLES
-0- Imperial Gold
-1- Imperial Wood
+0- Tattered
+1- Repaired
 */

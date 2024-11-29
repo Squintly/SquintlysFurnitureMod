@@ -48,7 +48,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
-            TileObjectData.addAlternate(3);
+            TileObjectData.addAlternate(12);
 
             TileObjectData.addTile(Type);
         }
@@ -63,7 +63,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             Tile tile = Framing.GetTileSafely(i, j);
 
             info.TargetDirection = -1;
-            if (tile.TileFrameX != 0)
+            if (tile.TileFrameX >= 384)
             {
                 info.TargetDirection = 1; // Facing right if sat down on the right alternate (added through addAlternate in SetStaticDefaults earlier)
             }
@@ -71,7 +71,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight == 0)
+            if (tile.TileFrameY % NextStyleHeight <= 384)
             {
                 info.AnchorTilePosition.Y++;
             }
@@ -104,7 +104,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
-            if (Main.tile[i, j].TileFrameX / 32 < 1)
+            if (Main.tile[i, j].TileFrameX / 384 < 1)
             {
                 player.cursorItemIconReversed = true;
             }

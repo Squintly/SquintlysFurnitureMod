@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Surfaces.Workbenches;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Surfaces;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,8 +29,8 @@ internal class RepairedWorkBench : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddCondition(Condition.InGraveyard)
+            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddIngredient(ModContent.ItemType<TatteredWorkBench>())
             .Register();
     }
 }

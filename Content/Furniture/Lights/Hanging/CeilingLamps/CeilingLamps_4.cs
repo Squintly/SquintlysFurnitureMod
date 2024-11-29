@@ -34,6 +34,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.Height = 1;
+            TileObjectData.newTile.DrawYOffset = 0;
             TileObjectData.newTile.CoordinateHeights = new int[1] { 30 };
             TileObjectData.newTile.CoordinateWidth = 30;
             TileObjectData.newTile.Origin = new Point16(0, 0);
@@ -101,14 +102,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX <= 126)
             {
                 switch (tile.TileFrameY / 32)
                 {
                     case 0: //Tattered
                         r = 1f;
-                        g = .90f;
-                        b = .80f;
+                        g = .75f;
+                        b = .75f;
                         break;
 
                     case 1: //Repaired
@@ -122,7 +123,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
-            var tile = Main.tile[i, j];
+            Tile tile = Main.tile[i, j];
 
             if (!TileDrawing.IsVisible(tile))
             {
@@ -137,7 +138,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
-            if (frameX != 0 || !Main.rand.NextBool(40))
+            if (frameX <= 126 || !Main.rand.NextBool(40))
             {
                 return;
             }
@@ -166,7 +167,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
 
             SpriteEffects effects = SpriteEffects.None;
 
-            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
+            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
             {
@@ -189,8 +190,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
                 case 0: //Tattered
                     for (int c = 0; c < 2; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.1f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.1f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.02f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.02f;
 
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
@@ -198,8 +199,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
                 case 1: //Repaired
                     for (int c = 0; c < 3; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.01f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.01f;
 
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }

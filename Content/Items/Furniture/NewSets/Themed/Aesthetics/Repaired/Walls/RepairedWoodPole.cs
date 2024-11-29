@@ -17,7 +17,7 @@ public class RepairedWoodPole : Wall
         AddMapEntry(new Color(85, 58, 48));
     }
 }
-internal class TRepairedWoodPoleItem : ModItem
+internal class RepairedWoodPoleItem : ModItem
 {
     public override void SetStaticDefaults()
     {

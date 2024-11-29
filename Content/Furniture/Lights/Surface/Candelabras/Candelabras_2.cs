@@ -104,7 +104,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX <= 70)
             {
                 switch (tile.TileFrameY / 36)
                 {

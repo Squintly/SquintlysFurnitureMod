@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bathroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -21,17 +22,17 @@ internal class RepairedSink : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sinks>());
-        Item.placeStyle = 1;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sinks_2>());
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddIngredient(ItemID.WaterBucket)
+            .AddIngredient(ModContent.ItemType<TatteredSink>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

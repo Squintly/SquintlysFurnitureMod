@@ -21,7 +21,7 @@ internal class ImperialMirror : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Mirrors_Wide>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<Mirrors>());
         Item.placeStyle = 0;
     }
 

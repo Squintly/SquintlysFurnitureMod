@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Bedroom;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
 
@@ -38,8 +38,13 @@ internal class RepairedBeamItem : ModItem
     {
         CreateRecipe(2)
             .AddIngredient(ItemID.Wood)
+            .AddIngredient(ModContent.ItemType<TatteredBeamItem>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
+            .Register();
+
+        CreateRecipe(2)
+            .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+            .AddTile(TileID.WorkBenches)
             .Register();
     }
 }

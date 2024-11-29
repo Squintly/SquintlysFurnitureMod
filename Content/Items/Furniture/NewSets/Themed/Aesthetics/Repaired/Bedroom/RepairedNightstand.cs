@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,9 +29,9 @@ internal class RepairedNightstand : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 12)
+            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddIngredient(ModContent.ItemType<TatteredNightstand>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

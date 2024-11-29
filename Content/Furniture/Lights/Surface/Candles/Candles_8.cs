@@ -103,14 +103,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX <= 256)
             {
                 switch (tile.TileFrameY / 32)
                 {
                     case 0: //Tattered
                         r = 1f;
-                        g = .95f;
-                        b = .90f;
+                        g = .75f;
+                        b = .75f;
                         break;
 
                     case 1: //Repaired
@@ -124,18 +124,23 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
         {
+            Tile tile = Main.tile[i, j];
+
+            if (!TileDrawing.IsVisible(tile))
+            {
+                return;
+            }
+
             if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
             {
                 return;
             }
 
-            Tile tile = Main.tile[i, j];
-
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
             //Return if the lamp is off (when frameX is 0), or if a random check failed.
-            if (frameX != 0 || !Main.rand.NextBool(40))
+            if (frameX <= 256 || !Main.rand.NextBool(40))
             {
                 return;
             }
@@ -207,5 +212,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
 }
 /*STYLES
 0- Tattered
-1- Repaired
+1- Tattered Silver
+2- Repaired
+3- Repaired Silver
 */

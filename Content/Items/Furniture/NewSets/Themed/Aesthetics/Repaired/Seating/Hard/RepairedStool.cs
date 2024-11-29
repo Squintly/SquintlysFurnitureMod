@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Hard;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -7,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Seating.Hard;
 
-internal class TRepairedStool : ModItem
+internal class RepairedStool : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -29,9 +30,9 @@ internal class TRepairedStool : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 3)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(ModContent.ItemType<TatteredStool>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

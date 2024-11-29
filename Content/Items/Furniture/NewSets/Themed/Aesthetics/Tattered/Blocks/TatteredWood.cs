@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 
-public class TatteredWood : Unsolid
+public class TatteredWood : Solid
 {
     public override void SafeSetStaticDefaults()
     {
@@ -30,7 +30,7 @@ internal class TatteredWoodItem : ModItem
         Item.value = Item.buyPrice(0);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<TatteredBeam>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<TatteredWood>());
     }
 
     public override void AddRecipes()

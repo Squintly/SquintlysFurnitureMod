@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Surface;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -22,16 +23,16 @@ internal class RepairedCandleSilver : ModItem
         Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<Candles_8>());
-        Item.placeStyle = 2;
+        Item.placeStyle = 3;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddIngredient(ItemID.Torch, 1)
+            .AddIngredient(ModContent.ItemType<TatteredCandleSilver>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Doors;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,9 +29,9 @@ internal class RepairedDoor : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
+            .AddIngredient(ModContent.ItemType<TatteredDoor>())
             .Register();
     }
 }

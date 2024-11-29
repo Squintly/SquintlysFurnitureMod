@@ -45,5 +45,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas
 }
 /*STYLES
 0- Tattered
-1- Repaired
+1- Tattered Bench
+2- Repaired
+3- Repaired Bench
 */

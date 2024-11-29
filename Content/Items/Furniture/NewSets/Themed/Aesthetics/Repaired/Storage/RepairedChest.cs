@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Storage.Chests;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Storage;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedChest : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 8)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
+            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 1)
+            .AddIngredient(ModContent.ItemType<TatteredChest>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

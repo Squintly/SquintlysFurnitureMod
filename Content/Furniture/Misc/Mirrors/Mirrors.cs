@@ -28,22 +28,26 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
-
-            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
-
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.AnchorWall = true;
-            TileObjectData.addAlternate(0);
+            
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.StyleMultiplier = 2;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorWall = true;
+            TileObjectData.addAlternate(1);
+
+            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
             TileObjectData.addTile(Type);
         }
     }
 }
 /*STYLES
-0- Tattered
-1- Repaired
+0- Imperial
+1- Tattered
+2- Repaired
 */

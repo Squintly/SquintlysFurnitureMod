@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Hanging;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -27,10 +28,10 @@ internal class RepairedSpotlight : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
             .AddIngredient(ItemID.Torch, 3)
+            .AddIngredient(ModContent.ItemType<TatteredSpotlight>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

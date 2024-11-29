@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Hard;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -29,9 +29,9 @@ internal class RepairedBarstool : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(ModContent.ItemType<TatteredBarstool>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

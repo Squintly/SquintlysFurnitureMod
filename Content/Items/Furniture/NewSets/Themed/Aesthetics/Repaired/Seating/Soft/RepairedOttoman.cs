@@ -1,5 +1,6 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Soft;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,8 +32,8 @@ internal class RepairedOttoman : ModItem
         CreateRecipe(1)
             .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddIngredient(ItemID.Silk)
+            .AddIngredient(ModContent.ItemType<TatteredOttoman>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

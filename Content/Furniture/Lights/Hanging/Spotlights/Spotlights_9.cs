@@ -107,14 +107,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 0)
+            if (tile.TileFrameX <= 322)
             {
                 switch (tile.TileFrameY / 36)
                 {
                     case 0: //Tattered
                         r = 1f;
-                        g = .95f;
-                        b = .90f;
+                        g = .75f;
+                        b = .75f;
                         break;
                     case 1: //Repaired
                         r = 1f;
@@ -199,18 +199,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                 case 0: //Tattered
                     for (int c = 0; c < 2; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.1f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.1f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.02f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.02f;
 
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
-
                 case 1: //Repaired
                     for (int c = 0; c < 3; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.01f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.01f;
 
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }

@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Hanging;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedCeilingLamp : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddIngredient(ItemID.Torch, 1)
+            .AddIngredient(ModContent.ItemType<TatteredCeilingLamp>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

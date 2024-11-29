@@ -32,7 +32,7 @@ internal class RepairedArmchair : ModItem
             .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddIngredient(ItemID.Silk)
             .AddIngredient(ModContent.ItemType<TatteredArmchair>())
-            .AddTile(TileID.HeavyWorkBench)
+            .AddTile(TileID.WorkBenches)
             .Register();
     }
 }

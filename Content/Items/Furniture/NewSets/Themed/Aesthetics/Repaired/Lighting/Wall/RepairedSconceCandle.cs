@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Lighting.Wall;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedSconceCandle : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddIngredient(ItemID.Torch, 1)
+            .AddIngredient(ModContent.ItemType<TatteredSconceCandle>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

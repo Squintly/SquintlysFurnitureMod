@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -22,16 +22,16 @@ internal class RepairedMirror : ModItem
         Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<Mirrors>());
-        Item.placeStyle = 1;
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
-            .AddIngredient(ItemID.Glass, 2)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
+            .AddIngredient(ItemID.Glass, 1)
             .AddRecipeGroup("SquintlyFurnitureMod:SilverBar")
-            .AddCondition(Condition.InGraveyard)
+            .AddIngredient(ModContent.ItemType<TatteredMirror>())
             .AddTile(TileID.WorkBenches)
             .Register();
     }

@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Bookcases;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedBookcase : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 20)
-            .AddIngredient(ItemID.Book, 10)
+            .AddRecipeGroup(RecipeGroupID.Wood, 10)
+            .AddIngredient(ItemID.Book, 5)
+            .AddIngredient(ModContent.ItemType<TatteredBookcase>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

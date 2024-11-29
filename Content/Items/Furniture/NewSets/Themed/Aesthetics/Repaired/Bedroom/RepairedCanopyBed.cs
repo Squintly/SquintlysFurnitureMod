@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,10 +29,10 @@ internal class RepairedCanopyBed : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 15)
-            .AddIngredient(ItemID.Silk, 5)
+            .AddRecipeGroup(RecipeGroupID.Wood, 7)
+            .AddIngredient(ItemID.Silk, 2)
+            .AddIngredient(ModContent.ItemType<TatteredCanopyBed>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Soft;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -6,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Seating.Soft;
 
-internal class RepairedLawnhair : ModItem
+internal class RepairedLawnchair : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -28,9 +29,9 @@ internal class RepairedLawnhair : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(ModContent.ItemType<TatteredLawnchair>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

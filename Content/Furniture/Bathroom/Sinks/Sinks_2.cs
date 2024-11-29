@@ -35,7 +35,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 2;
             TileObjectData.newTile.StyleMultiplier = 2;
             TileObjectData.newTile.RandomStyleRange = 2;
 
@@ -44,5 +43,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks
     }
 }
 /*STYLES
- 0- Imperial
+0- Imperial
+1- Tattered
+2- Repaired
 */

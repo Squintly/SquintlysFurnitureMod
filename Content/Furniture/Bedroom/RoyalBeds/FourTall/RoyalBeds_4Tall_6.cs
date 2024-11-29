@@ -30,17 +30,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall
 
             TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsValidSpawnPoint[Type] = true;
-
-            TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 12;
-            TileObjectData.newTile.StyleMultiplier = 12;
-            TileObjectData.newTile.RandomStyleRange = 6;
-
+                     
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.Height = 4;
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
+
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.StyleWrapLimit = 6;
+            TileObjectData.newTile.StyleMultiplier = 6;
+            TileObjectData.newTile.RandomStyleRange = 6;
 
             TileObjectData.addTile(Type);
 
@@ -92,6 +92,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall
     }
 }
 /*STYLES
- 0- Tattered
+0- Tattered
 1- Repaired
 */

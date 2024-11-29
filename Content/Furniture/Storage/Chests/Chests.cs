@@ -29,12 +29,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             Main.tileContainer[Type] = true;
             TileID.Sets.BasicChest[Type] = true;
 
+            TileID.Sets.IsAContainer[Type] = true;
+            TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
+
             TileID.Sets.AvoidedByNPCs[Type] = true;
             TileID.Sets.AvoidedByMeteorLanding[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
-
-            TileID.Sets.IsAContainer[Type] = true;
-            TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
 
             AdjTiles = new int[] { TileID.Containers };
 
@@ -63,6 +63,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry1"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry2"), MapChestName);
 
         }
 

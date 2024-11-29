@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Soft;
 
-internal class TatteredLawnhair : ModItem
+internal class TatteredLawnchair : ModItem
 {
     public override void SetStaticDefaults()
     {

@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bathroom;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -28,9 +29,10 @@ internal class RepairedToilet : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 6)
+            .AddRecipeGroup(RecipeGroupID.Wood, 3)
+            .AddIngredient(ModContent.ItemType<TatteredToilet>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
+
             .Register();
     }
 }

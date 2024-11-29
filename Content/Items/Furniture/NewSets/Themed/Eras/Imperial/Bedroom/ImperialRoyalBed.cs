@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -21,7 +21,7 @@ internal class ImperialRoyalBed : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_4Tall>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_3Tall_3>());
         Item.placeStyle = 0;
     }
 

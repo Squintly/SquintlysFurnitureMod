@@ -4,6 +4,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
 
@@ -30,15 +31,15 @@ internal class RepairedWoodItem : ModItem
         Item.value = Item.buyPrice(0);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RepairedBeam>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<RepairedWood>());
     }
 
     public override void AddRecipes()
     {
         CreateRecipe(1)
             .AddIngredient(ItemID.Wood)
+            .AddIngredient(ModContent.ItemType<TatteredWoodItem>())
             .AddTile(TileID.WorkBenches)
-            .AddCondition(Condition.InGraveyard)
             .Register();
     }
 }

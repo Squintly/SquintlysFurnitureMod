@@ -118,47 +118,42 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX < 66)
             {
-                // We can support different light colors for different styles here: switch (tile.frameY / 54)
-                r = 1f;
-                g = 0.95f;
-                b = 0.65f;
+                switch (tile.TileFrameY / 22)
+                {
+
+                    //warm/flame
+                    case 0: //Imperial Candle
+                    case 1: //Imperial 
+                    case 2: //Imperial Glass
+                    case 9: //Repaired Candle
+                    case 10: //Repaired Glass
+                    case 11: //Repaired Thick
+                    case 12: //Repaired Candle Silver
+                    case 13: //Repaired Glass Silver
+                    case 14: //Repaired Thick Silver
+                        r = 1f;
+                        g = .95f;
+                        b = .95f;
+                        break;
+
+                    case 3: //Tattered Candle
+                    case 4: //Tattered Glass
+                    case 5: //Tattered Thick
+                    case 6: //Tattered Candle Silver
+                    case 7: //Tattered Glass Silver
+                    case 8: //Tattered Thick Silver
+                        r = 1f;
+                        g = .75f;
+                        b = .75f;
+                        break;
+
+                    default:
+                        r = 1f;
+                        g = 1f;
+                        b = 1f;
+                        break;
+                }
             }
-            switch (tile.TileFrameY / 22)
-            {
-
-                //warm/flame
-                case 0: //Imperial Candle
-                case 1: //Imperial 
-                case 2: //Imperial Glass
-                case 9: //Repaired Candle
-                case 10: //Repaired Glass
-                case 11: //Repaired Thick
-                case 12: //Repaired Candle Silver
-                case 13: //Repaired Glass Silver
-                case 14: //Repaired Thick Silver
-                    r = 1f;
-                    g = .95f;
-                    b = .95f;
-                    break;
-
-                case 3: //Tattered Candle
-                case 4: //Tattered Glass
-                case 5: //Tattered Thick
-                case 6: //Tattered Candle Silver
-                case 7: //Tattered Glass Silver
-                case 8: //Tattered Thick Silver
-                    r = 1f;
-                    g = .95f;
-                    b = .90f;
-                    break;
-
-                default:
-                    r = 1f;
-                    g = 1f;
-                    b = 1f;
-                    break;
-            }
-
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

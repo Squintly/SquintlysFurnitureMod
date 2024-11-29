@@ -31,16 +31,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall
             TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsValidSpawnPoint[Type] = true;
 
-            TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 24;
-            TileObjectData.newTile.StyleMultiplier = 24;
-            TileObjectData.newTile.RandomStyleRange = 12;
-
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-            TileObjectData.newTile.Origin = new Point16(0, 0);
+            TileObjectData.newTile.Origin = new Point16(1, 1);
+
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.StyleWrapLimit = 12;
+            TileObjectData.newTile.StyleMultiplier = 12;
+            TileObjectData.newTile.RandomStyleRange = 12;
 
             TileObjectData.addTile(Type);
 
@@ -64,8 +64,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall
         {
             Player player = Main.LocalPlayer;
             Tile tile = Main.tile[i, j];
-            int spawnX = i - tile.TileFrameX / 18 + (tile.TileFrameX >= 56 ? 5 : 2);
-            int spawnY = j + 2;
+            int spawnX = i - tile.TileFrameX / 18 + (tile.TileFrameX >= 72 ? 5 : 2);
+            int spawnY = j + 3;
 
             if (tile.TileFrameY % NextStyleHeight != 0)
             {
@@ -92,6 +92,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall
     }
 }
 /*STYLES
- 0- Tattered Metal
+0- Tattered Metal
 1- Repaired Metal
 */
