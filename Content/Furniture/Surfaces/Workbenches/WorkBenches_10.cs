@@ -32,7 +32,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Surfaces.Workbenches
             TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 10;
             TileObjectData.newTile.StyleMultiplier = 10;
             TileObjectData.newTile.RandomStyleRange = 10;
 

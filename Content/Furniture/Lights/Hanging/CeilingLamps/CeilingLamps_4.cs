@@ -16,7 +16,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
     internal class CeilingLamps_4 : ModTile
     {
         private Asset<Texture2D> flameTexture;
-
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

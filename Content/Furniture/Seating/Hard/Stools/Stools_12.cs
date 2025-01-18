@@ -71,10 +71,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight <= 384)
-            {
-                info.AnchorTilePosition.Y++;
-            }
         }
 
         public override bool RightClick(int i, int j)

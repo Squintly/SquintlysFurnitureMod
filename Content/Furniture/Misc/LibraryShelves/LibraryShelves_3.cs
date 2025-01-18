@@ -84,8 +84,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
 
             int height = tile.TileFrameY % 92 == 92 ? 18 : 16;
 
-            int frameXOffset = 162;
-
             if (right.HasTile && tile.TileType == ModContent.TileType<LibraryShelves_3>())
             {
                 spriteBatch.Draw(

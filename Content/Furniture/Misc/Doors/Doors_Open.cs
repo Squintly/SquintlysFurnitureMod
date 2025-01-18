@@ -1,4 +1,6 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
 using Terraria;
 using Terraria.DataStructures;
@@ -29,6 +31,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
             AdjTiles = new int[] { TileID.OpenDoor };
             RegisterItemDrop(ModContent.ItemType<ImperialDoor>(), 0);
             RegisterItemDrop(ModContent.ItemType<ImperialDoorRounded>(), 1);
+            RegisterItemDrop(ModContent.ItemType<TatteredDoor>(), 2);
+            RegisterItemDrop(ModContent.ItemType<TatteredDoorRound>(), 3);
+            RegisterItemDrop(ModContent.ItemType<RepairedDoor>(), 4);
+            RegisterItemDrop(ModContent.ItemType<RepairedDoorRound>(), 5);
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Door"));
 

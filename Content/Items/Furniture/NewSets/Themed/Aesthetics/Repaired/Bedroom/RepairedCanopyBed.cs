@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall.Six;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -22,8 +22,7 @@ internal class RepairedCanopyBed : ModItem
         Item.value = Item.buyPrice(silver: 4);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Beds_3Tall_6>());
-        Item.placeStyle = 1;
+        Item.DefaultToPlaceableTile(ModContent.TileType<RepairedCanopyBeds>());
     }
 
     public override void AddRecipes()

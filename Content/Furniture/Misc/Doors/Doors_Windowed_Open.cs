@@ -1,5 +1,7 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
@@ -32,6 +34,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
             AdjTiles = new int[] { TileID.OpenDoor };
             RegisterItemDrop(ModContent.ItemType<ImperialDoorWindow>(), 0);
             RegisterItemDrop(ModContent.ItemType<ImperialDoorRoundedWindow>(), 1);
+            RegisterItemDrop(ModContent.ItemType<TatteredDoorWindowed>(), 2);
+            RegisterItemDrop(ModContent.ItemType<TatteredDoorRoundWindowed>(), 3);
+            RegisterItemDrop(ModContent.ItemType<RepairedDoorWindowed>(), 4);
+            RegisterItemDrop(ModContent.ItemType<RepairedDoorRoundWindowed>(), 5);
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Door"));
 

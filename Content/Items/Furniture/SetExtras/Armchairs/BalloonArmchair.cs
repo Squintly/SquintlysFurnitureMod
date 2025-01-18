@@ -37,19 +37,7 @@ internal class BalloonArmchair : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonGreen, 4)
-            .AddIngredient(ItemID.Silk)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonPink, 4)
-            .AddIngredient(ItemID.Silk)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-
-        CreateRecipe(1)
-            .AddIngredient(ItemID.SillyBalloonPurple, 4)
+            .AddRecipeGroup("SquintlyFurnitureMod:Balloons", 4)
             .AddIngredient(ItemID.Silk)
             .AddTile(TileID.WorkBenches)
             .Register();

@@ -30,7 +30,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
             TileObjectData.newTile.Origin = new Point16(0, 0);
             
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleMultiplier = 2;
+            TileObjectData.newTile.RandomStyleRange = 2;
+            TileObjectData.newTile.StyleMultiplier = 4;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
@@ -38,7 +39,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorWall = true;
-            TileObjectData.addAlternate(1);
+            TileObjectData.addAlternate(2);
 
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 

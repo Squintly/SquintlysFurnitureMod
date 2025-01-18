@@ -5,6 +5,7 @@ using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Farming.C
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Stools;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -37,6 +38,7 @@ namespace SquintlysFurnitureMod.Content
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GoldenArmchair>(), 300));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GoldenCeilingLamp>(), 300));
                 npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<KingBedGold>(), 300));
+                npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<GoldenStool>(), 300));
             }
         }
     }

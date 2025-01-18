@@ -31,6 +31,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
 
             TileID.Sets.IsAContainer[Type] = true;
             TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
+            TileID.Sets.GeneralPlacementTiles[Type] = false;
 
             TileID.Sets.AvoidedByNPCs[Type] = true;
             TileID.Sets.AvoidedByMeteorLanding[Type] = true;

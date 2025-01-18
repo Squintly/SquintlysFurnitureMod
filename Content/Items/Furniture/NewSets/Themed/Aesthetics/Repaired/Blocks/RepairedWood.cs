@@ -8,7 +8,7 @@ using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Ta
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
 
-public class RepairedWood : Unsolid
+public class RepairedWood : Solid
 {
     public override void SafeSetStaticDefaults()
     {

@@ -31,7 +31,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans
 
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.Height = 1;
-            TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
+            TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
 
             TileObjectData.newTile.Origin = new Point16(0, 0);
 

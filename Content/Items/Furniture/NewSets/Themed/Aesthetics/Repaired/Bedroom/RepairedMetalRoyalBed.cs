@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Twelve;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -22,8 +22,7 @@ internal class RepairedMetalRoyalBed : ModItem
         Item.value = Item.buyPrice(silver: 4);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_3Tall_12>());
-        Item.placeStyle = 1;
+        Item.DefaultToPlaceableTile(ModContent.TileType<RepairedRoyalMetalBeds>());
     }
 
     public override void AddRecipes()

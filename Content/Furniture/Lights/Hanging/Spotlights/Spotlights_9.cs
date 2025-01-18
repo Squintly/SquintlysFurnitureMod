@@ -148,16 +148,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             }
 
             //Dust
-            int style = frameY / 36;
-            int dustChoice;
-            if (style == 0)
-            {
-                dustChoice = DustID.Torch;
-                var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-                dust.noGravity = true;
-                dust.velocity *= 0.3f;
-                dust.velocity.Y += -1.5f;
-            }
+            //int style = frameY / 36;
+            //int dustChoice;
+            //if (style == 0)
+            //{
+            //    dustChoice = DustID.Torch;
+            //    var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
+            //    dust.noGravity = true;
+            //    dust.velocity *= 0.3f;
+            //    dust.velocity.Y += -1.5f;
+            //}
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

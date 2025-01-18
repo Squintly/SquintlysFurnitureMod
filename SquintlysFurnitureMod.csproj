@@ -58,8 +58,6 @@
     <None Remove="Content\Furniture\Bedroom\Beds\Beds_3Tall_6.png" />
     <None Remove="Content\Furniture\Bedroom\Beds\Beds_3Tall_6_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\Beds\Beds_3_Highlight.png" />
-    <None Remove="Content\Furniture\Bedroom\Beds\FourTall\Beds_4Tall_3.png" />
-    <None Remove="Content\Furniture\Bedroom\Beds\FourTall\Beds_4Tall_3_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\Beds_4Tall.png" />
     <None Remove="Content\Furniture\Bedroom\Beds_4Tall_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\Dressers\Dressers_Animated.png" />
@@ -70,8 +68,6 @@
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_3Tall_6_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_4Tall_6.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_4Tall_6_Highlight.png" />
-    <None Remove="Content\Furniture\Bedroom\RoyalBeds\ThreeTall\RoyalBeds_3Tall_3.png" />
-    <None Remove="Content\Furniture\Bedroom\RoyalBeds\ThreeTall\RoyalBeds_3Tall_3_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall_Highlight.png" />
     <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps.png" />
@@ -334,10 +330,6 @@
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Surfaces\RepairedCoveredTable.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Surfaces\RepairedTable.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Surfaces\RepairedWorkbench.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedFence.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedFenceItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedFencePillar.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedFencePillarItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedWoodPole.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedWoodPoleItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Repaired\Walls\RepairedWoodWall.png" />
@@ -406,10 +398,6 @@
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Surfaces\TatteredCoveredTable.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Surfaces\TatteredTable.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Surfaces\TatteredWorkBench.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredFence - Copy.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredFence.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredFenceItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredFencePillarItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredWoodPole.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredWoodPoleItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Themed\Aesthetics\Tattered\Walls\TatteredWoodWall.png" />

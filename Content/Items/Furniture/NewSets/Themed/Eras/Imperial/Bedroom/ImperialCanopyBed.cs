@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall.Three;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -21,8 +21,7 @@ internal class ImperialCanopyBed : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Beds_4Tall_3>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<ImperialCanopyBeds>());
     }
 
     public override void AddRecipes()

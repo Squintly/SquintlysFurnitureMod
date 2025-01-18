@@ -5882,6 +5882,221 @@ Mods: {
 				DisplayName: Imperial Stool
 				Tooltip: ""
 			}
+
+			AshWoodStool: {
+				DisplayName: Ash Wood Stool
+				Tooltip: ""
+			}
+
+			BalloonStool: {
+				DisplayName: Balloon Stool
+				Tooltip: ""
+			}
+
+			BambooStool: {
+				DisplayName: Bamboo Stool
+				Tooltip: ""
+			}
+
+			BlueDungeonStool: {
+				DisplayName: Blue Dungeon Stool
+				Tooltip: ""
+			}
+
+			BoneStool: {
+				DisplayName: Bone Stool
+				Tooltip: ""
+			}
+
+			BorealStool: {
+				DisplayName: Boreal Stool
+				Tooltip: ""
+			}
+
+			CactusStool: {
+				DisplayName: Cactus Stool
+				Tooltip: ""
+			}
+
+			CrystalStool: {
+				DisplayName: Crystal Stool
+				Tooltip: ""
+			}
+
+			DynastyStool: {
+				DisplayName: Dynasty Stool
+				Tooltip: ""
+			}
+
+			EbonwoodStool: {
+				DisplayName: Ebonwood Stool
+				Tooltip: ""
+			}
+
+			FleshStool: {
+				DisplayName: Flesh Stool
+				Tooltip: ""
+			}
+
+			FrozenStool: {
+				DisplayName: Frozen Stool
+				Tooltip: ""
+			}
+
+			GlassStool: {
+				DisplayName: Glass Stool
+				Tooltip: ""
+			}
+
+			GoldenStool: {
+				DisplayName: Golden Stool
+				Tooltip: ""
+			}
+
+			GraniteStool: {
+				DisplayName: Granite Stool
+				Tooltip: ""
+			}
+
+			GreenDungeonStool: {
+				DisplayName: Green Dungeon Stool
+				Tooltip: ""
+			}
+
+			HoneyStool: {
+				DisplayName: Honey Stool
+				Tooltip: ""
+			}
+
+			LesionStool: {
+				DisplayName: Lesion Stool
+				Tooltip: ""
+			}
+
+			LihzahrdStool: {
+				DisplayName: Lihzahrd Stool
+				Tooltip: ""
+			}
+
+			LivingwoodStool: {
+				DisplayName: Livingwood Stool
+				Tooltip: ""
+			}
+
+			MahoganyStool: {
+				DisplayName: Mahogany Stool
+				Tooltip: ""
+			}
+
+			MarbleStool: {
+				DisplayName: Marble Stool
+				Tooltip: ""
+			}
+
+			MartianStool: {
+				DisplayName: Martian Stool
+				Tooltip: ""
+			}
+
+			MeteorStool: {
+				DisplayName: Meteor Stool
+				Tooltip: ""
+			}
+
+			MushroomStool: {
+				DisplayName: Mushroom Stool
+				Tooltip: ""
+			}
+
+			NebulaStool: {
+				DisplayName: Nebula Stool
+				Tooltip: ""
+			}
+
+			ObsidianStool: {
+				DisplayName: Obsidian Stool
+				Tooltip: ""
+			}
+
+			PalmwoodStool: {
+				DisplayName: Palmwood Stool
+				Tooltip: ""
+			}
+
+			PearlwoodStool: {
+				DisplayName: Pearlwood Stool
+				Tooltip: ""
+			}
+
+			PinkDungeonStool: {
+				DisplayName: Pink Dungeon Stool
+				Tooltip: ""
+			}
+
+			PumpkinStool: {
+				DisplayName: Pumpkin Stool
+				Tooltip: ""
+			}
+
+			ReefStool: {
+				DisplayName: Reef Stool
+				Tooltip: ""
+			}
+
+			SandstoneStool: {
+				DisplayName: Sandstone Stool
+				Tooltip: ""
+			}
+
+			ShadewoodStool: {
+				DisplayName: Shadewood Stool
+				Tooltip: ""
+			}
+
+			SkywareStool: {
+				DisplayName: Skyware Stool
+				Tooltip: ""
+			}
+
+			SlimeStool: {
+				DisplayName: Slime Stool
+				Tooltip: ""
+			}
+
+			SolarStool: {
+				DisplayName: Solar Stool
+				Tooltip: ""
+			}
+
+			SpiderStool: {
+				DisplayName: Spider Stool
+				Tooltip: ""
+			}
+
+			SpookyStool: {
+				DisplayName: Spooky Stool
+				Tooltip: ""
+			}
+
+			StardustStool: {
+				DisplayName: Stardust Stool
+				Tooltip: ""
+			}
+
+			SteampunkStool: {
+				DisplayName: Steampunk Stool
+				Tooltip: ""
+			}
+
+			VortexStool: {
+				DisplayName: Vortex Stool
+				Tooltip: ""
+			}
+
+			WoodenStool: {
+				DisplayName: Wooden Stool
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {
@@ -5942,6 +6157,7 @@ Mods: {
 				MapEntry0: Imperial Nightstand
 				MapEntry1: Tattered Nightstand
 				MapEntry2: Repaired Nightstand
+				MapEntry3: Mods.SquintlysFurnitureMod.Tiles.Nightstands.MapEntry3
 			}
 
 			Chests: {

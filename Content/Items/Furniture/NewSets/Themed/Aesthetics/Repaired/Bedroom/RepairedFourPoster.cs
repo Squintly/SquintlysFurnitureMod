@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Six;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -22,8 +22,7 @@ internal class RepairedFourPoster : ModItem
         Item.value = Item.buyPrice(silver: 4);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_4Tall_6>());
-        Item.placeStyle = 1;
+        Item.DefaultToPlaceableTile(ModContent.TileType<RepairedFourPosters>());
     }
 
     public override void AddRecipes()

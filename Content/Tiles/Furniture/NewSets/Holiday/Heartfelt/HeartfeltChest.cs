@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Festive;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.Audio;
@@ -31,6 +32,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
 
             Main.tileContainer[Type] = true;
             TileID.Sets.BasicChest[Type] = true;
+            TileID.Sets.GeneralPlacementTiles[Type] = false;
+
             TileID.Sets.AvoidedByNPCs[Type] = true;
             TileID.Sets.AvoidedByMeteorLanding[Type] = true;
             TileID.Sets.InteractibleByNPCs[Type] = true;
@@ -45,6 +48,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
             TileObjectData.newTile.Origin = new Point16(0, 1);
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
 
+            TileObjectData.newTile.StyleHorizontal = true;
+
             TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);
             TileObjectData.newTile.AnchorInvalidTiles = new int[] {
@@ -56,13 +61,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
             };
 
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
-
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-            TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Dresser"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
 
         public override ushort GetMapOption(int i, int j)
@@ -149,41 +150,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
                 player.editedChestName = false;
             }
 
-            bool isLocked = Chest.IsLocked(left, top);
-            if (Main.netMode == NetmodeID.MultiplayerClient && !isLocked)
-            {
-                if (left == player.chestX && top == player.chestY && player.chest != -1)
-                {
-                    player.chest = -1;
-                    Recipe.FindRecipes();
-                    SoundEngine.PlaySound(SoundID.MenuClose);
-                }
-                else
-                {
-                    NetMessage.SendData(MessageID.RequestChestOpen, -1, -1, null, left, top);
-                    Main.stackSplit = 600;
-                }
-            }
             else
             {
+                int chest = Chest.FindChest(left, top);
+                if (chest != -1)
                 {
-                    int chest = Chest.FindChest(left, top);
-                    if (chest != -1)
+                    Main.stackSplit = 600;
+                    if (chest == player.chest)
                     {
-                        Main.stackSplit = 600;
-                        if (chest == player.chest)
-                        {
-                            player.chest = -1;
-                            SoundEngine.PlaySound(SoundID.MenuClose);
-                        }
-                        else
-                        {
-                            SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
-                            player.OpenChest(left, top, chest);
-                        }
-
-                        Recipe.FindRecipes();
+                        player.chest = -1;
+                        SoundEngine.PlaySound(SoundID.MenuClose);
                     }
+                    else
+                    {
+                        SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+                        player.OpenChest(left, top, chest);
+                    }
+
+                    Recipe.FindRecipes();
                 }
             }
 
@@ -218,7 +202,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
                 player.cursorItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : defaultName;
                 if (player.cursorItemIconText == defaultName)
                 {
-                    player.cursorItemIconID = ModContent.ItemType<HeartfeltChestItem>();
+                    player.cursorItemIconID = ModContent.ItemType<FestiveChestItem>();
 
                     player.cursorItemIconText = "";
                 }

@@ -27,6 +27,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             Main.tileLavaDeath[Type] = true;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
+            //TileID.Sets.MultiTileSway[Type] = true;
 
             Main.tileLighted[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
@@ -35,19 +36,44 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
             TileObjectData.newTile.CoordinateWidth = 30;
 
+            TileObjectData.newTile.Origin = Point16.Zero;
+
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleLineSkip = 2;
 
+            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
+
+            //TileObjectData.newTile.DrawYOffset = -2;
+
+            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            //TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.Platform, TileObjectData.newTile.Width, 0);
+            //TileObjectData.newAlternate.DrawYOffset = -10;
+            //TileObjectData.addAlternate(0);
+
             TileObjectData.addTile(Type);
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Lanterns/Lanterns_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>(Texture + "_Flame");
             }
         }
+
+        //public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        //{
+        //    Tile tile = Main.tile[i, j];
+
+        //    //if (TileObjectData.IsTopLeft(tile))
+        //    //{
+        //    //    // Makes this tile sway in the wind and with player interaction when used with TileID.Sets.MultiTileSway
+        //    //    Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+        //    //}
+
+        //    // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
+        //    return true;
+        //}
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
@@ -130,18 +156,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             {
                 return;
             }
-
-            //Dust
-            //int style = frameY / 18;
-            //int dustChoice;
-            //if (style == 0)
-            //{
-            //    dustChoice = DustID.Torch;
-            //    var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
-            //    dust.noGravity = true;
-            //    dust.velocity *= 0.3f;
-            //    dust.velocity.Y += -1.5f;
-            //}
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

@@ -33,6 +33,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
             AdjTiles = new int[] { TileID.Torches };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -104,7 +105,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX == 394)
+            if (tile.TileFrameX <= 396)
             {
                 switch (tile.TileFrameY / 36)
                 {

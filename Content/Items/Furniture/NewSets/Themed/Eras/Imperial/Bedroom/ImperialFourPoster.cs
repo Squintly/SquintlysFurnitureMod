@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Three;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -21,8 +22,7 @@ internal class ImperialFourPoster : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_4Tall>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<ImperialFourPosters>());
     }
 
     public override void AddRecipes()

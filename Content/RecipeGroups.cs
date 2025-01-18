@@ -43,6 +43,10 @@ namespace SquintlysFurnitureMod.Content
 
             RecipeGroup Berries = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Berry", ItemID.Elderberry, ItemID.BlackCurrant);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Berries", Berries);
+
+            RecipeGroup Balloons = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Balloons", ItemID.SillyBalloonGreen, ItemID.SillyBalloonPink, ItemID.SillyBalloonPurple);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Balloons", Balloons);
+
         }
     }
     public class ModRecipeGroups : ModSystem

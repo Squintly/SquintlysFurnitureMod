@@ -31,10 +31,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
             TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 2;
             TileObjectData.newTile.StyleMultiplier = 2;
             TileObjectData.newTile.RandomStyleRange = 2;
-            TileObjectData.newTile.StyleLineSkip = 9;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;

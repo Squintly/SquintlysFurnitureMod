@@ -69,6 +69,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry1"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry2"), MapChestName);
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry3"), MapChestName);
         }
 
         public override ushort GetMapOption(int i, int j)

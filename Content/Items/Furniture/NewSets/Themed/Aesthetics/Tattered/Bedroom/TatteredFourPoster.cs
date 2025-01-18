@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Six;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -21,8 +21,7 @@ internal class TatteredFourPoster : ModItem
         Item.value = Item.buyPrice(silver: 4);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<RoyalBeds_4Tall_6>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<TatteredFourPosters>());
     }
 
     public override void AddRecipes()

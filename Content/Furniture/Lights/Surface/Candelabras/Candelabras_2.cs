@@ -33,6 +33,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
             AdjTiles = new int[] { TileID.Torches };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;

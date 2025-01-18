@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds;
+using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Twelve;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -21,8 +21,7 @@ internal class TatteredBed : ModItem
         Item.value = Item.buyPrice(silver: 4);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Beds_12>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<TatteredBeds>());
     }
 
     public override void AddRecipes()

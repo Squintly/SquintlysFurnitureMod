@@ -17,6 +17,7 @@ Ever wanted a type of furniture that doesn't exist? That's these!
 [*] 1x1 Ceiling Lamps
 [*] 2x2 Armchairs
 [*] Front-facing Royal Beds
+[*] 1x1 Stools
 [/list]
 [h2]New Furniture Sets[/h2]
 Complete with all vanilla furniture items, as well as my set extras! Lights can be turned off with wires or right-click, and all function for NPC housing requirements

@@ -16,7 +16,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
     internal class Candles_8 : ModTile
     {
         private Asset<Texture2D> flameTexture;
-
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -107,13 +106,15 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
             {
                 switch (tile.TileFrameY / 32)
                 {
-                    case 0: //Tattered
+                    case 0: //Tattered 
+                    case 1: //Tattered Silver
                         r = 1f;
                         g = .75f;
                         b = .75f;
                         break;
 
-                    case 1: //Repaired
+                    case 2: //Repaired
+                    case 3: //Repaired SIlver
                         r = 1f;
                         g = .95f;
                         b = .95f;
@@ -188,6 +189,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
             switch (tile.TileFrameY / 32)
             {
                 case 0: //Tattered
+                case 1: //Tattered Silver
                     for (int c = 0; c < 7; c++)
                     {
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.2f;
@@ -197,7 +199,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
                     }
                     break;
 
-                case 1: //Repaired
+                case 2: //Repaired
+                case 3: //Repaired Silver
                     for (int c = 0; c < 7; c++)
                     {
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;

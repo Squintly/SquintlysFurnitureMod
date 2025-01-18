@@ -28,6 +28,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
+            //TileID.Sets.MultiTileSway[Type] = true;
+
             Main.tileLighted[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
             AdjTiles = new int[] { TileID.Torches };
@@ -41,13 +43,31 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             TileObjectData.newTile.StyleLineSkip = 2;
 
+            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
+
+            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            //TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.Platform, TileObjectData.newTile.Width, 0);
+            
+            //TileObjectData.addAlternate(0);
+
             TileObjectData.addTile(Type);
 
             if (!Main.dedServ)
             {
-                flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Furniture/Lights/Hanging/Spotlights/Spotlights_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                flameTexture = ModContent.Request<Texture2D>(Texture + "_Flame");
             }
         }
+
+        //public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        //{
+        //    Tile tile = Main.tile[i, j];
+
+        //    if (TileObjectData.IsTopLeft(tile))
+        //    {
+        //        Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+        //    }
+        //    return false;
+        //}
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {

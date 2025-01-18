@@ -31,7 +31,7 @@ internal class NebulaArmchair : ModItem
 
         Item.maxStack = 9999;
         Item.createTile = ModContent.TileType<ArmchairsTile>();
-        Item.placeStyle = 40;
+        Item.placeStyle = 39;
     }
 
     public override void AddRecipes()
