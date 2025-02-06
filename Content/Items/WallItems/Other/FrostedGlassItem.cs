@@ -41,3 +41,12 @@ internal class FrostedGlassItem : ModItem
            .Register();
     }
 }
+public class FrostedRecipes : ModSystem
+{
+    public override void AddRecipes()
+    {
+        Recipe recipe = Recipe.Create(ItemID.Glass);
+        recipe.AddIngredient(ModContent.ItemType<FrostedGlassItem>(), 4);
+        recipe.Register();
+    }
+}

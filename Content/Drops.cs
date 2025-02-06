@@ -1,5 +1,4 @@
 ﻿using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Veggies;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Farming.Crops;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;

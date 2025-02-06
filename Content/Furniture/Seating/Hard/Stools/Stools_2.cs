@@ -63,7 +63,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             Tile tile = Framing.GetTileSafely(i, j);
 
             info.TargetDirection = -1;
-            if (tile.TileFrameX >= 32)
+            if (tile.TileFrameX >= 64)
             {
                 info.TargetDirection = 1; // Facing right if sat down on the right alternate (added through addAlternate in SetStaticDefaults earlier)
             }
@@ -100,7 +100,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
 
-            if (Main.tile[i, j].TileFrameX / 32 < 1)
+            if (Main.tile[i, j].TileFrameX / 64 < 1)
             {
                 player.cursorItemIconReversed = true;
             }
