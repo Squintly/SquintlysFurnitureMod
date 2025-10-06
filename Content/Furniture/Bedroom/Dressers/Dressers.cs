@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -263,6 +262,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
         }
     }
 }
+
 /*STYLES
  0- Imperial
 1- Repaired

@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

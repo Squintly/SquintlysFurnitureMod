@@ -17,7 +17,6 @@
 //using Terraria.ObjectData;
 //using Terraria.WorldBuilding;
 
-
 //namespace SquintlysFurnitureMod.Content.Abstracts.Blocks;
 
 //public static class TallDoorsOpen
@@ -72,7 +71,6 @@
 
 //        return type == TileID.TallClosedDoor;
 //    }
-
 
 //}
 
@@ -159,7 +157,7 @@
 ////                break;
 ////            }
 ////        }
-////        // TODO: Placed modded tiles can't automatically reorient themselves to an alternate placement, like Torch and Sign do. 
+////        // TODO: Placed modded tiles can't automatically reorient themselves to an alternate placement, like Torch and Sign do.
 ////        if (partiallyDestroyed || !TileObject.CanPlace(originX, originY, type, style, 0, out TileObject objectData, onlyCheck: true, checkStay: true))
 ////        {
 ////            WorldGen.destroyObject = true;

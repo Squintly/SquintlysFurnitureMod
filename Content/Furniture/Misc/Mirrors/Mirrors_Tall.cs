@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
@@ -47,6 +46,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
         }
     }
 }
+
 /*STYLES
 0- Imperial
 */

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.VanillaPlus;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -44,7 +43,7 @@ public class SandstoneBrickPlatformItem : ModItem
     }
 }
 
-public class SandstonePLatformRecipe : ModSystem
+public class SandstonePlatformRecipe : ModSystem
 {
     public override void AddRecipes()
     {

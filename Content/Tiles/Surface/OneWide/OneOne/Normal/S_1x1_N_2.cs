@@ -34,16 +34,19 @@ public class S_1x1_N_2 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];

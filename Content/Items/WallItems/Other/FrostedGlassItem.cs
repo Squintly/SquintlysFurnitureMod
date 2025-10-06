@@ -41,6 +41,7 @@ internal class FrostedGlassItem : ModItem
            .Register();
     }
 }
+
 public class FrostedRecipes : ModSystem
 {
     public override void AddRecipes()

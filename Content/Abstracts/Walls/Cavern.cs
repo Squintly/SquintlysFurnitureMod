@@ -13,6 +13,7 @@ public abstract class Cavern : ModWall
         WallID.Sets.AllowsWind[Type] = true;
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

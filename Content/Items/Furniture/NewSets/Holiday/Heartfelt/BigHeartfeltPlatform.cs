@@ -43,4 +43,14 @@ internal class BigHeartfeltPlatform : ModItem
             .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
             .Register();
     }
+
+    public class HeartfeltPlatformRecipe : ModSystem
+    {
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ModContent.ItemType<HeartfeltBlockItem>(), 2);
+            recipe.AddIngredient(ModContent.ItemType<HeartfeltPlatform>(), 2);
+            recipe.Register();
+        }
+    }
 }

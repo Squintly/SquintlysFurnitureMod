@@ -40,9 +40,9 @@ internal class HeartfeltBlockItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HeartfeltWallItem>(), 4)
-           .AddTile(TileID.WorkBenches)
-           .Register();
+            .AddIngredient(ModContent.ItemType<HeartfeltWallItem>(), 4)
+            .AddTile(TileID.WorkBenches)
+            .Register();
 
         CreateRecipe(10)
             .AddIngredient(ItemID.LifeCrystal)
@@ -50,12 +50,12 @@ internal class HeartfeltBlockItem : ModItem
             .Register();
 
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HeartfeltPlatform>(), 2)
-           .Register();
+            .AddIngredient(ModContent.ItemType<HeartfeltPlatform>(), 2)
+            .Register();
 
         CreateRecipe()
-          .AddIngredient(ModContent.ItemType<BigHeartfeltPlatform>(), 2)
-          .Register();
+           .AddIngredient(ModContent.ItemType<BigHeartfeltPlatform>(), 2)
+           .Register();
 
         CreateRecipe()
            .AddIngredient(ModContent.ItemType<HeartfeltWallItem>(), 4)
@@ -63,8 +63,8 @@ internal class HeartfeltBlockItem : ModItem
            .Register();
 
         CreateRecipe(10)
-            .AddIngredient(ItemID.LifeCrystal)
-            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
-            .Register();
+           .AddIngredient(ItemID.LifeCrystal)
+           .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
+           .Register();
     }
 }

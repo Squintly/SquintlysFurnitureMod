@@ -1,11 +1,7 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -94,10 +90,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
             player.cursorItemIconEnabled = true;
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
-
         }
     }
 }
+
 /*STYLES\
 0- Imperial Windowed
 1- Imperial Round Windowed

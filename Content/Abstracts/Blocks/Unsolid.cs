@@ -17,6 +17,7 @@ public abstract class Unsolid : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

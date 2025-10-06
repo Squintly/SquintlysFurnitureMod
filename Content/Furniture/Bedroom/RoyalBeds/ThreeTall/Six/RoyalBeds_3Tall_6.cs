@@ -1,6 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Bedroom;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -56,9 +54,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Si
             TileObjectData.addTile(Type);
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -103,12 +103,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Si
             return true;
         }
     }
+
     public class TatteredRoyalBeds : RoyalBeds_3Tall_6
     {
         public override void SafeSetStaticDefaults()
         {
         }
     }
+
     public class RepairedRoyalBeds : RoyalBeds_3Tall_6
     {
         public override void SafeSetStaticDefaults()

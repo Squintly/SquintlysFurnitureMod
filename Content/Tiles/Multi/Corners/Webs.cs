@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -20,8 +19,6 @@ public class Webs : ModTile
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
-
-
         TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
 
         TileObjectData.newTile.Height = 1;
@@ -41,7 +38,7 @@ public class Webs : ModTile
         TileObjectData.newTile.DrawYOffset = -14;
 
         AnchorData SolidAnchor1 = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, 1, 0);
-                
+
         //Top Rights
 
         TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
@@ -81,11 +78,13 @@ public class Webs : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {
         offsetY = -14;
     }
 }
+
 /* STYLES
 0- Webs
 1- Dark Webs

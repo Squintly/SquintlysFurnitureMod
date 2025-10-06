@@ -79,6 +79,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
         }
     }
 }
+
 /*STYLES
 0- Imperial
 */

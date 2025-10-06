@@ -98,6 +98,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Lamps
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 3);
             }
         }
+
         //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         //{
         //    if (i % 2 == 1)
@@ -200,6 +201,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Lamps
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

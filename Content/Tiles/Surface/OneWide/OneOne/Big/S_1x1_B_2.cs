@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -83,19 +81,19 @@ public class S_1x1_B_2 : ModTile
 }
 
 /* STYLES
-0- Avocado 
-1- Pear 
-2- Pomegranate 
-3- Sugar Apple 
-4- Strawberry 
-5- Passionfruit 
-6- Grapefruit 
-7- Mango 
-8- Cheese Slice 
-9- Toothpaste 
-10- Bunny Plushes 
-11- Scoops 
-12- Starfruit 
-13- Pepper 
-14- Small Watermelon 
+0- Avocado
+1- Pear
+2- Pomegranate
+3- Sugar Apple
+4- Strawberry
+5- Passionfruit
+6- Grapefruit
+7- Mango
+8- Cheese Slice
+9- Toothpaste
+10- Bunny Plushes
+11- Scoops
+12- Starfruit
+13- Pepper
+14- Small Watermelon
 */

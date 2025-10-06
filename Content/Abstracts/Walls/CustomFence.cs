@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
 namespace SquintlysFurnitureMod.Content.Abstracts.Walls;
 
@@ -17,6 +17,7 @@ public abstract class CustomFence : ModWall
         WallID.Sets.Transparent[Type] = true;
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }
@@ -34,7 +35,6 @@ public abstract class CustomFence : ModWall
         Tile downright = Main.tile[i + 1, j + 1];
         Tile downleft = Main.tile[i - 1, j + 1];
         Tile down = Main.tile[i, j + 1];
-
 
         //Two-Ways
 

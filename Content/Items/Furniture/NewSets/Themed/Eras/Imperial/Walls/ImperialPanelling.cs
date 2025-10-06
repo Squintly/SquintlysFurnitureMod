@@ -15,12 +15,14 @@ public class ImperialPanelling : WallLargePhlebas
         AddMapEntry(new Color(83, 45, 30));
     }
 }
+
 internal class ImperialPanellingItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableWall(ModContent.WallType<ImperialPanelling>());
@@ -30,6 +32,7 @@ internal class ImperialPanellingItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

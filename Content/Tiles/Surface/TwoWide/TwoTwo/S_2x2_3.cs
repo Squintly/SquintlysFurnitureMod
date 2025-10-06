@@ -37,6 +37,7 @@ public class S_2x2_3 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);

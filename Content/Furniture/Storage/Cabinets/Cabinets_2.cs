@@ -1,11 +1,6 @@
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.Audio;
-using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -43,9 +38,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets
         }
     }
 }
+
 /*STYLES
 0- Imperial
 1- Tattered
 2- Repaired
 */
-

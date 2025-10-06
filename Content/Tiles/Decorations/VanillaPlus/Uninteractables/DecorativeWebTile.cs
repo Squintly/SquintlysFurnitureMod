@@ -2,8 +2,6 @@ using SquintlysFurnitureMod.Content.Items.Decorations.VanillaPlus.Uninteractable
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Classical.Pillars;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Decorations.VanillaPlus.Uninteractables;
 
@@ -40,6 +38,5 @@ public class DecorativeWebTile : ModTile
 
     //public override void PostTileFrame(int i, int j, int up, int down, int left, int right, int upLeft, int upRight, int downLeft, int downRight)
     //{
-
     //}
 }

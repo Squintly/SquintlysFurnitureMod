@@ -16,6 +16,7 @@ public abstract class FenceLargeLazure : ModWall
         Main.wallLargeFrames[Type] = 2; //Phlebas = 1, Lazure = 2
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

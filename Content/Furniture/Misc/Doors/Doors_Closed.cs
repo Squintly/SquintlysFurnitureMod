@@ -1,11 +1,5 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
-using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.Enums;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -53,11 +47,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
         }
     }
 }
+
 /*STYLES\
-0- Imperial 
-1- Imperial Round 
+0- Imperial
+1- Imperial Round
 2- Tattered
 3- Tattered Round
-4- Repaired 
+4- Repaired
 5- Repaired Round
 */

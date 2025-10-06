@@ -18,9 +18,11 @@ public abstract class BigSolid : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }
+
     public override bool TileFrame(int i, int j, ref bool resetFrame, ref bool noBreak)
     {
         Framing.SelfFrame8Way(i, j, Main.tile[i, j], resetFrame);

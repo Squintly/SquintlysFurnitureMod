@@ -1,18 +1,11 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
-using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-
 
 namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
 {
@@ -71,9 +64,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
             //TileObjectData.newAlternate.AnchorAlternateTiles = [ModContent.TileType<LibraryShelves_3>()];
             //TileObjectData.addAlternate(9);
 
-
             TileObjectData.addTile(Type);
         }
+
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
@@ -109,9 +102,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
                 new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
                 new Rectangle(tile.TileFrameX + 486, tile.TileFrameY, 16, height),
                 Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
-
             }
-
             else
             {
                 spriteBatch.Draw(

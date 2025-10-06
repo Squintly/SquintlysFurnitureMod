@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;

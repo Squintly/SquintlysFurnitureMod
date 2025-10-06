@@ -13,6 +13,7 @@ internal class ImperialBookcase : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 30;

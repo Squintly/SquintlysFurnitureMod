@@ -27,6 +27,7 @@ public class S_1x2_B_3 : ModTile
         TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
         TileObjectData.newTile.CoordinateWidth = 30;
         TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+        TileObjectData.newTile.Origin = new Point16(0, 0);
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 

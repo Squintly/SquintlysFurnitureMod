@@ -1,6 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Three;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
-using System;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -14,6 +13,7 @@ internal class ImperialBed : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 32;
@@ -24,6 +24,7 @@ internal class ImperialBed : ModItem
 
         Item.DefaultToPlaceableTile(ModContent.TileType<ImperialBeds>());
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

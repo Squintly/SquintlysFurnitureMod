@@ -32,7 +32,7 @@
 
 //namespace SquintlysFurnitureMod.Content
 //{
-//    public class CustomFraming 
+//    public class CustomFraming
 //    {
 //        public static bool UpdateMapTile(int i, int j, bool addToList = true)
 //        {

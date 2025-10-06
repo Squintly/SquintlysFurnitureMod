@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
 using Terraria;
@@ -31,7 +32,8 @@ internal class TeakChandelierItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<TeakChandelier>();
+        Item.createTile = ModContent.TileType<Chandeliers>();
+        Item.placeStyle = 3;
     }
 
     public override void AddRecipes()

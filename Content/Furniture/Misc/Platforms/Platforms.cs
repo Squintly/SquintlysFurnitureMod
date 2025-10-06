@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -46,6 +45,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Platforms
         }
     }
 }
+
 /*STYLES
 0- Imperial
 1- Imperial Fancy

@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -13,12 +12,13 @@ internal class FoldedTowel : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 20;
         Item.height = 14;
 
-        Item.value = Item.buyPrice(silver: 1); 
+        Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<S_1x1_B_16>());

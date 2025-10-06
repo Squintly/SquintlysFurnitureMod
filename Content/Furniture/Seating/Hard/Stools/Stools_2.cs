@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -70,7 +69,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
 
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
-
         }
 
         public override bool RightClick(int i, int j)
@@ -107,6 +105,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools
         }
     }
 }
+
 /*STYLES
 0- wooden
 1- ebon

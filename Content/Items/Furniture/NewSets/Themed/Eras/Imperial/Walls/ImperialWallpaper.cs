@@ -15,12 +15,14 @@ public class ImperialWallpaper : Wall
         AddMapEntry(new Color(159, 23, 52));
     }
 }
+
 internal class ImperialWallpaperItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableWall(ModContent.WallType<ImperialWallpaper>());
@@ -30,6 +32,7 @@ internal class ImperialWallpaperItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

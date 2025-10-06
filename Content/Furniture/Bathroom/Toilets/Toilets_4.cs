@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -140,6 +139,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

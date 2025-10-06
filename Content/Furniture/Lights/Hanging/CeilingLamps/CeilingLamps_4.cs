@@ -16,6 +16,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
     internal class CeilingLamps_4 : ModTile
     {
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -195,6 +196,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
+
                 case 1: //Repaired
                     for (int c = 0; c < 3; c++)
                     {
@@ -208,6 +210,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

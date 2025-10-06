@@ -1,11 +1,11 @@
+using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Microsoft.Xna.Framework;
-using Terraria.Audio;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
 {
@@ -52,6 +52,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
                 frame = ++frame % 8;
             }
         }
+
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
@@ -73,10 +74,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
                 }
             }
         }
+
         public override void HitWire(int i, int j)
         {
             ToggleTile(i, j);
         }
+
         public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
         {
             var tile = Main.tile[i, j];
@@ -85,12 +88,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
             {
                 frameYOffset = Main.tileFrame[type] * 92;
             }
-
             else
             {
                 frameYOffset = 644;
             }
         }
+
         public override bool RightClick(int x, int y)
         {
             string text = "AM";
@@ -140,6 +143,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Clocks
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

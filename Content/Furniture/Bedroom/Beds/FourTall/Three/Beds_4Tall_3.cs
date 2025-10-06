@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -55,9 +53,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall.Three
             TileObjectData.addTile(Type);
             SafeSetStaticDefaults();
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -133,10 +133,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall.Three
                 player.cursorItemIconEnabled = true;
                 int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
                 player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
-
             }
         }
     }
+
     public class ImperialCanopyBeds : Beds_4Tall_3
     {
         public override void SafeSetStaticDefaults()

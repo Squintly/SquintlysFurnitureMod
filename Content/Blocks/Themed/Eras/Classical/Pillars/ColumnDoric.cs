@@ -19,12 +19,14 @@ public class ColumnDoric : BigUnsolid
         AddMapEntry(new Color(232, 236, 238));
     }
 }
+
 internal class ColumnDoricItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<ColumnDoric>());
@@ -32,6 +34,7 @@ internal class ColumnDoricItem : ModItem
         Item.width = 16;
         Item.height = 16;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Abstracts.Walls;
@@ -12,6 +11,7 @@ public abstract class WallLargePhlebas : ModWall
         Main.wallLargeFrames[Type] = 1; //Phlebas = 1, Lazure = 2
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

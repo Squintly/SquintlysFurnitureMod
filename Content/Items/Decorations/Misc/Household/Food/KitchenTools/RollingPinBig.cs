@@ -33,6 +33,7 @@ internal class RollingPinBig : ModItem
         Item.createTile = ModContent.TileType<S_3x1_N>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

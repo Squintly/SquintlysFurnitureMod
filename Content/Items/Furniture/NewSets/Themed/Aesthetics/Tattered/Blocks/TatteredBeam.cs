@@ -1,5 +1,5 @@
-using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

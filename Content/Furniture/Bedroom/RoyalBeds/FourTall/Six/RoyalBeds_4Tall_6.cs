@@ -1,6 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Bedroom;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -55,6 +53,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Six
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
@@ -109,6 +108,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Six
         {
         }
     }
+
     public class RepairedFourPosters : RoyalBeds_4Tall_6
     {
         public override void SafeSetStaticDefaults()

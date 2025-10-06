@@ -3878,6 +3878,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			SpringtimeChandelier: {
+				DisplayName: Springtime Chandelier
+				Tooltip: ""
+			}
+
 			SpringtimeLampBlue: {
 				DisplayName: Blue Springtime Lamp
 				Tooltip: ""
@@ -6095,6 +6100,461 @@ Mods: {
 
 			WoodenStool: {
 				DisplayName: Wooden Stool
+				Tooltip: ""
+			}
+
+			FutureExplosive: {
+				DisplayName: High-Tech Explosive
+				Tooltip: ""
+			}
+
+			GrenadeFuture: {
+				DisplayName: High-Tech Grenade
+				Tooltip: ""
+			}
+
+			FutureGun: {
+				DisplayName: Mounted High-Tech Gun
+				Tooltip: ""
+			}
+
+			FutureGunRackWall: {
+				DisplayName: High-Tech Gun Rack
+				Tooltip: ""
+			}
+
+			FutureGunRackWallLarge: {
+				DisplayName: Large High-Tech Gun Rack
+				Tooltip: ""
+			}
+
+			FutureGunStand: {
+				DisplayName: High-Tech Gun Stand
+				Tooltip: ""
+			}
+
+			FutureGunStanding: {
+				DisplayName: High-Tech Gun
+				Tooltip: ""
+			}
+
+			GunRackEmpty: {
+				DisplayName: Empty Weapon Rack
+				Tooltip: ""
+			}
+
+			GunRackEmptyLarge: {
+				DisplayName: Large Empty Weapon Rack
+				Tooltip: ""
+			}
+
+			Axe: {
+				DisplayName: Axe
+				Tooltip: ""
+			}
+
+			AxeLong: {
+				DisplayName: Long Axe
+				Tooltip: ""
+			}
+
+			AxePlaque: {
+				DisplayName: Axe Plaque
+				Tooltip: ""
+			}
+
+			AxeRack: {
+				DisplayName: Axe Stand
+				Tooltip: ""
+			}
+
+			AxeRackLong: {
+				DisplayName: Long Axe Stand
+				Tooltip: ""
+			}
+
+			MountedAxe: {
+				DisplayName: Mounted Axe
+				Tooltip: ""
+			}
+
+			MountedAxeLong: {
+				DisplayName: Mounted Long Axe
+				Tooltip: ""
+			}
+
+			MountedAxes: {
+				DisplayName: Mounted Axes
+				Tooltip: ""
+			}
+
+			WallAxe: {
+				DisplayName: Mounted Hatchet
+				Tooltip: ""
+			}
+
+			GuanDao: {
+				DisplayName: Guan Dao
+				Tooltip: ""
+			}
+
+			GuanDaoLong: {
+				DisplayName: Long Guan Dao
+				Tooltip: ""
+			}
+
+			GuanDaoRack: {
+				DisplayName: Guan Dao Stand
+				Tooltip: ""
+			}
+
+			GuanDaoRackLong: {
+				DisplayName: Long Guan Dao Stand
+				Tooltip: ""
+			}
+
+			MountedGuanDao: {
+				DisplayName: Mounted Guan Dao
+				Tooltip: ""
+			}
+
+			MountedGuanDaoLong: {
+				DisplayName: Mounted Long Guan Dao
+				Tooltip: ""
+			}
+
+			Hammer: {
+				DisplayName: Hammer
+				Tooltip: ""
+			}
+
+			HammerLong: {
+				DisplayName: Long Hammer
+				Tooltip: ""
+			}
+
+			HammerPlaque: {
+				DisplayName: Hammer Plaque
+				Tooltip: ""
+			}
+
+			HammerPlaqueSmall: {
+				DisplayName: Small Hammer Plaque
+				Tooltip: ""
+			}
+
+			HammerRack: {
+				DisplayName: Hammer Stand
+				Tooltip: ""
+			}
+
+			MountedHammer: {
+				DisplayName: Mounted Hammer
+				Tooltip: ""
+			}
+
+			MountedHammerLong: {
+				DisplayName: Mounted Long Hammer
+				Tooltip: ""
+			}
+
+			MixedRack: {
+				DisplayName: Mixed Weapon Stand
+				Tooltip: ""
+			}
+
+			MixedRackLong: {
+				DisplayName: Large Mixed Weapon Stand
+				Tooltip: ""
+			}
+
+			MixedRackSmall: {
+				DisplayName: Small Mixed Weapon Stand
+				Tooltip: ""
+			}
+
+			MountedPick: {
+				DisplayName: Short Mounted Pick
+				Tooltip: ""
+			}
+
+			MountedPickLong: {
+				DisplayName: Mounted Pick
+				Tooltip: ""
+			}
+
+			MountedPicks: {
+				DisplayName: Mounted Pickaxes
+				Tooltip: ""
+			}
+
+			Pickaxe: {
+				DisplayName: Short Pickaxe
+				Tooltip: ""
+			}
+
+			PickaxeLong: {
+				DisplayName: Pickaxe
+				Tooltip: ""
+			}
+
+			PickPlaque: {
+				DisplayName: Pick Plaque
+				Tooltip: ""
+			}
+
+			PickPlaqueSmall: {
+				DisplayName: Small Pick Plaque
+				Tooltip: ""
+			}
+
+			PickRack: {
+				DisplayName: Pick Stand
+				Tooltip: ""
+			}
+
+			MountedPole: {
+				DisplayName: Mounted Polearm
+				Tooltip: ""
+			}
+
+			MountedPoleLong: {
+				DisplayName: Mounted Long Polearm
+				Tooltip: ""
+			}
+
+			Pole: {
+				DisplayName: Polearm
+				Tooltip: ""
+			}
+
+			PoleLong: {
+				DisplayName: Long Polearm
+				Tooltip: ""
+			}
+
+			PoleRack: {
+				DisplayName: Polearm Stand
+				Tooltip: ""
+			}
+
+			PoleRackLong: {
+				DisplayName: Long Polearm Stand
+				Tooltip: ""
+			}
+
+			MountedSpear: {
+				DisplayName: Mounted Spear
+				Tooltip: ""
+			}
+
+			MountedSpearLong: {
+				DisplayName: Mounted Long Spear
+				Tooltip: ""
+			}
+
+			MountedSpears: {
+				DisplayName: Mounted Spears
+				Tooltip: ""
+			}
+
+			MountedSpearsSmall: {
+				DisplayName: Mounted Small Spears
+				Tooltip: ""
+			}
+
+			Spear: {
+				DisplayName: Spear
+				Tooltip: ""
+			}
+
+			SpearLong: {
+				DisplayName: Long Spear
+				Tooltip: ""
+			}
+
+			SpearPlaque: {
+				DisplayName: Spear Plaque
+				Tooltip: ""
+			}
+
+			SpearRack: {
+				DisplayName: Spear Stand
+				Tooltip: ""
+			}
+
+			SpearRackLong: {
+				DisplayName: Long Spear Stand
+				Tooltip: ""
+			}
+
+			MountedCutlasses: {
+				DisplayName: Mounted Cutlasses
+				Tooltip: ""
+			}
+
+			MountedCutlassesLarge: {
+				DisplayName: Large Mounted Cutlasses
+				Tooltip: ""
+			}
+
+			MountedSabers: {
+				DisplayName: Mounted Sabers
+				Tooltip: ""
+			}
+
+			MountedSwords: {
+				DisplayName: Mounted Swords
+				Tooltip: ""
+			}
+
+			Sword: {
+				DisplayName: Sword
+				Tooltip: ""
+			}
+
+			SwordMounted: {
+				DisplayName: Mounted Sword
+				Tooltip: ""
+			}
+
+			SwordMountedScabbard: {
+				DisplayName: Mounted Sword with Scabbard
+				Tooltip: ""
+			}
+
+			SwordMountedThin: {
+				DisplayName: Mounted Sword
+				Tooltip: ""
+			}
+
+			SwordPlaque: {
+				DisplayName: Sword Plaque
+				Tooltip: ""
+			}
+
+			SwordRackDynasty: {
+				DisplayName: Dynasty Sword Stand
+				Tooltip: ""
+			}
+
+			SwordRackWall: {
+				DisplayName: Sword Rack
+				Tooltip: ""
+			}
+
+			SwordRackWallDynasty: {
+				DisplayName: Dynasty Sword Rack
+				Tooltip: ""
+			}
+
+			SwordScabbard: {
+				DisplayName: Sword with Scabbard
+				Tooltip: ""
+			}
+
+			SwordStand: {
+				DisplayName: Sword Stand
+				Tooltip: ""
+			}
+
+			SwordStandDynasty: {
+				DisplayName: Dynasty Sword Stand
+				Tooltip: ""
+			}
+
+			SwordStanding: {
+				DisplayName: Sword
+				Tooltip: ""
+			}
+
+			GrenadeBlack: {
+				DisplayName: Black Grenade
+				Tooltip: ""
+			}
+
+			GrenadeBrown: {
+				DisplayName: Brown Grenade
+				Tooltip: ""
+			}
+
+			GrenadeGreen: {
+				DisplayName: Green Grenade
+				Tooltip: ""
+			}
+
+			GrenadeLauncher: {
+				DisplayName: Mounted Grenade Launcher
+				Tooltip: ""
+			}
+
+			GrenadeLauncherSmall: {
+				DisplayName: Small Mounted Grenade Launcher
+				Tooltip: ""
+			}
+
+			GrenadeLauncherSmallStanding: {
+				DisplayName: Small Grenade Launcher
+				Tooltip: ""
+			}
+
+			GrenadeLauncherStanding: {
+				DisplayName: Grenade Launcher
+				Tooltip: ""
+			}
+
+			GrenadeRed: {
+				DisplayName: Red Grenade
+				Tooltip: ""
+			}
+
+			GunMounted: {
+				DisplayName: Mounted Gun
+				Tooltip: ""
+			}
+
+			GunRackWall: {
+				DisplayName: Gun Rack
+				Tooltip: ""
+			}
+
+			GunRackWallLarge: {
+				DisplayName: Large Gun Rack
+				Tooltip: ""
+			}
+
+			GunStand: {
+				DisplayName: Gun Stand
+				Tooltip: ""
+			}
+
+			GunStanding: {
+				DisplayName: Gun
+				Tooltip: ""
+			}
+
+			ModernWeaponRack: {
+				DisplayName: Modern Weapon Rack
+				Tooltip: ""
+			}
+
+			ModernWeaponRackLarge: {
+				DisplayName: Large Modern Weapon Rack
+				Tooltip: ""
+			}
+
+			ModernWeaponStand: {
+				DisplayName: Modern Weapon Stand
+				Tooltip: ""
+			}
+
+			WeaponStandEmpty: {
+				DisplayName: Empty Weapon Stand
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierCrystal: {
+				DisplayName: Springtime Chandelier Crystal
 				Tooltip: ""
 			}
 		}

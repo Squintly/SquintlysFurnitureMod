@@ -15,12 +15,14 @@ public class ImperialFence : FenceLargeLazure
         AddMapEntry(new Color(246, 190, 72));
     }
 }
+
 internal class ImperialFenceItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableWall(ModContent.WallType<ImperialFence>());
@@ -30,6 +32,7 @@ internal class ImperialFenceItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

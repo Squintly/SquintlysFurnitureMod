@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Lamps;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres;
 using Terraria;
 using Terraria.GameContent.Creative;

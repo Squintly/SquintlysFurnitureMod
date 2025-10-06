@@ -28,6 +28,7 @@ namespace SquintlysFurnitureMod.Content
             }
         }
     }
+
     public class PirateDrops : GlobalNPC
     {
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)

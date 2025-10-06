@@ -1,9 +1,7 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -22,7 +20,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans
 
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.HasOutlines[Type] = true;
-
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             AdjTiles = new int[] { TileID.Chairs };
@@ -47,6 +44,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

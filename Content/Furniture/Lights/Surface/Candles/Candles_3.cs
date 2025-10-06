@@ -79,7 +79,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
             int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
             int topY = j - tile.TileFrameY % 32 / 32;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 96 ? -96 : 96); 
+            short frameAdjustment = (short)(tile.TileFrameX >= 96 ? -96 : 96);
 
             for (int x = topX; x < topX + 1; x++) // change depending on width
             {
@@ -189,6 +189,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

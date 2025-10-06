@@ -1,6 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.VanillaPlus.Uninteractables;
 using SquintlysFurnitureMod.Content.Tiles.Multi.Corners;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -34,6 +32,7 @@ internal class WebsItem : ModItem
             .Register();
     }
 }
+
 internal class WebsDarkItem : ModItem
 {
     public override void SetStaticDefaults()

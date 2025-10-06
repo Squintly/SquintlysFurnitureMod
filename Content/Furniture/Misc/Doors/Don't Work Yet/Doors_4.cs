@@ -50,7 +50,6 @@
 //            TileObjectData.newTile.StyleMultiplier = 8;
 //            TileObjectData.newTile.RandomStyleRange = 4;
 //            TileObjectData.newTile.StyleWrapLimit = 8;
-            
 
 //            TileObjectData.newTile.UsesCustomCanPlace = true;
 
@@ -122,7 +121,6 @@
 //            TileID.Sets.NotReallySolid[Type] = true;
 //            TileID.Sets.DrawsWalls[Type] = true;
 
-
 //            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
 //            AdjTiles = new int[] { TileID.ClosedDoor };
 
@@ -138,10 +136,10 @@
 
 //            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile, TileObjectData.newTile.Width, 0);
 //            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile, TileObjectData.newTile.Width, 0);
-            
+
 //            TileObjectData.newTile.UsesCustomCanPlace = true;
 //            TileObjectData.newTile.LavaDeath = true;
-            
+
 //            TileObjectData.newTile.StyleHorizontal = false;
 //            TileObjectData.newTile.StyleMultiplier = 12;
 //            TileObjectData.newTile.StyleWrapLimit = 12;

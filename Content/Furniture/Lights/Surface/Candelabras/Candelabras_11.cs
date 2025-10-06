@@ -94,6 +94,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
                 NetMessage.SendTileSquare(-1, topX, topY, 2, 2);
             }
         }
+
         //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         //{
         //    if (i % 2 == 1)
@@ -211,7 +212,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
                         }
                         break;
                     }
-                    
 
                 case 1: //Repaired
                     if (tile.TileFrameX >= 324)
@@ -240,6 +240,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

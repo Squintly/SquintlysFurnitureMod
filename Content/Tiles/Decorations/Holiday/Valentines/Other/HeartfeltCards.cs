@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -12,6 +11,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines.Oth
 public class HeartfeltCards : ModTile
 {
     public const int NextStyleWidth = 18;
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

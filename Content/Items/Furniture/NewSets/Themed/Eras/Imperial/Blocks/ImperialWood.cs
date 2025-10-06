@@ -14,12 +14,14 @@ public class ImperialWood : Solid
         AddMapEntry(new Color(92, 54, 38));
     }
 }
+
 internal class ImperialWoodItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<ImperialWood>());
@@ -29,6 +31,7 @@ internal class ImperialWoodItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)
@@ -36,5 +39,13 @@ internal class ImperialWoodItem : ModItem
            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar")
            .AddTile(TileID.WorkBenches)
            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:ImperialPlatforms", 2)
+            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:ImperialWalls", 4)
+            .Register();
     }
 }

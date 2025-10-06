@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.WallItems.Other;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,4 +15,3 @@ public class FrostedGlass : ModWall
         AddMapEntry(new Color(187, 248, 252));
     }
 }
-

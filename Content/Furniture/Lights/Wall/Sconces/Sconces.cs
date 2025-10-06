@@ -32,7 +32,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 
-
             Main.tileLighted[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.StyleTorch);
@@ -120,10 +119,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             {
                 switch (tile.TileFrameY / 22)
                 {
-
                     //warm/flame
                     case 0: //Imperial Candle
-                    case 1: //Imperial 
+                    case 1: //Imperial
                     case 2: //Imperial Glass
                     case 9: //Repaired Candle
                     case 10: //Repaired Glass
@@ -204,7 +202,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
 
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
-                
+
             switch (tile.TileFrameY / 22)
             {
                 //Flame
@@ -245,6 +243,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
         }
     }
 }
+
 /* STYLES
 0- Imperial Candle
 1- Imperial

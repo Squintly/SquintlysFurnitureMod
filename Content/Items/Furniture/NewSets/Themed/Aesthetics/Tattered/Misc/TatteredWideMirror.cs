@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -13,6 +12,7 @@ internal class TatteredWideMirror : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 32;

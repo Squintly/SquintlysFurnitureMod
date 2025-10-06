@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -69,10 +67,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Three
             width = 2;
             height = 2;
         }
+
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
             info.VisualOffset.Y += 0f;
         }
+
         public override bool RightClick(int i, int j)
         {
             Player player = Main.LocalPlayer;

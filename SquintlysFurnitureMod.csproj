@@ -1196,6 +1196,8 @@
     <Folder Include="Content\Furniture\Lights\Surface\Lampposts\" />
     <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />
+    <Folder Include="Content\Tiles\Wall\FiveWide\FiveOne\Normal\" />
+    <Folder Include="Content\Tiles\Wall\FourWide\FourOne\Normal\" />
     <Folder Include="Content\Walls\Unsolids\Columns\" />
     <Folder Include="Content\Walls\Unsolids\Fences\" />
     <Folder Include="Content\Walls\Unsolids\Poles\" />

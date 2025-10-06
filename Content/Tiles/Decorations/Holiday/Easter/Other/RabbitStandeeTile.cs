@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Decorations;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other.Clutter;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;

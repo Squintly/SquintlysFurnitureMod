@@ -8,7 +8,6 @@ using Terraria.Enums;
 using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -17,6 +16,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres
     internal class Torchieres_4 : ModTile
     {
         private Asset<Texture2D> flameTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -96,6 +96,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres
                 NetMessage.SendTileSquare(-1, topX, topY, 2, 3);
             }
         }
+
         //public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         //{
         //    if (i % 2 == 1)
@@ -225,6 +226,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres
         }
     }
 }
+
 /*Styles
 0- Tattered
 1- Repaired

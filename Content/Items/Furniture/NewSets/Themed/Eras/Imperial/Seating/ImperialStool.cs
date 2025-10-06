@@ -1,6 +1,4 @@
-using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -15,6 +13,7 @@ internal class ImperialStool : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 18;

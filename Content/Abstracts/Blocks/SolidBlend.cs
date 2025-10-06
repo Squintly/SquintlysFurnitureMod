@@ -18,6 +18,7 @@ public abstract class SolidBlend : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

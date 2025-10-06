@@ -191,6 +191,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

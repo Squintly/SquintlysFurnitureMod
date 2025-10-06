@@ -18,6 +18,7 @@ public abstract class SolidDirt : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

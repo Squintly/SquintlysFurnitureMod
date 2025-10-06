@@ -1,7 +1,7 @@
 A furniture mod inspired by the likes of Terrarchitect and Dragon's Decorative Mod, this is my attempt to fill in some of the gaps, mostly for my own personal building purposes.
 
 [h1]Current Content:[/h1]
-There are now officially over 1000 items in the mod! Whoo!
+There are now officially over 1200 items in the mod! Whoo!
 [h2]Vanilla Plus[/h2]
 These are things which use vanilla sprites or are based on vanilla objects, such as:
 [list]
@@ -54,6 +54,7 @@ The random stuff you find around the house, from supplies to appliances to rando
 [*] Towels of various sizes
 [*] Food and drink
 [*] Technology such as phones
+[*] A variety of weaponry, medieval, modern and futuristic
 [*] So, so, so many other random things
 [/list]
 [h2]Materials[/h2]

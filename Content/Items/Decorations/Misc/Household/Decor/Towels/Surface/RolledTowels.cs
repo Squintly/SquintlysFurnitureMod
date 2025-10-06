@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -13,12 +12,13 @@ internal class RolledTowels : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 30;
         Item.height = 28;
 
-        Item.value = Item.buyPrice(silver: 1); 
+        Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
         Item.DefaultToPlaceableTile(ModContent.TileType<S_2x1_B_4>());

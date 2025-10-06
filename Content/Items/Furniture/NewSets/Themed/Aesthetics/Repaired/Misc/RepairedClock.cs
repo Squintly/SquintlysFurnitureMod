@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces;
 using SquintlysFurnitureMod.Content.Furniture.Misc.Clocks;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 using Terraria;

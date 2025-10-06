@@ -202,6 +202,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

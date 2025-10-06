@@ -26,9 +26,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.CloseDoorID[Type] = ModContent.TileType<Doors_Closed>();
 
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
+            TileID.Sets.DrawTileInSolidLayer[Type] = true;
 
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsDoor);
             AdjTiles = new int[] { TileID.OpenDoor };
+
             RegisterItemDrop(ModContent.ItemType<ImperialDoor>(), 0);
             RegisterItemDrop(ModContent.ItemType<ImperialDoorRounded>(), 1);
             RegisterItemDrop(ModContent.ItemType<TatteredDoor>(), 2);
@@ -91,15 +93,15 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Doors
             player.cursorItemIconEnabled = true;
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
-
         }
     }
 }
+
 /*STYLES\
-0- Imperial 
-1- Imperial Round 
+0- Imperial
+1- Imperial Round
 2- Tattered
 3- Tattered Round
-4- Repaired 
+4- Repaired
 5- Repaired Round
 */

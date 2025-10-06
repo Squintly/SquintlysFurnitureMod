@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Bathroom.Sinks;
 using SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
@@ -14,6 +13,7 @@ internal class ImperialToilet : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 16;

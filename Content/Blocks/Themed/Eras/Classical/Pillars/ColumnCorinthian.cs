@@ -19,12 +19,14 @@ public class ColumnCorinthian : BigUnsolid
         AddMapEntry(new Color(232, 236, 238));
     }
 }
+
 internal class ColumnCorinthianItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<ColumnCorinthian>());
@@ -32,6 +34,7 @@ internal class ColumnCorinthianItem : ModItem
         Item.width = 16;
         Item.height = 16;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

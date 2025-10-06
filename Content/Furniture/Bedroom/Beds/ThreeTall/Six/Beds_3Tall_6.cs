@@ -1,6 +1,3 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Bedroom;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -55,6 +52,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall.Six
 
             TileObjectData.addTile(Type);
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
@@ -134,7 +132,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall.Six
                 player.cursorItemIconEnabled = true;
                 int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
                 player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
-
             }
         }
     }
@@ -145,6 +142,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.ThreeTall.Six
         {
         }
     }
+
     public class RepairedCanopyBeds : Beds_3Tall_6
     {
         public override void SafeSetStaticDefaults()

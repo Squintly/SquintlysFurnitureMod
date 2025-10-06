@@ -47,7 +47,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             //TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.Platform, TileObjectData.newTile.Width, 0);
-            
+
             //TileObjectData.addAlternate(0);
 
             TileObjectData.addTile(Type);
@@ -221,6 +221,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

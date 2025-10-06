@@ -1,6 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Bedroom;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -46,7 +44,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Tw
             TileObjectData.newTile.StyleWrapLimit = 12;
             TileObjectData.newTile.StyleMultiplier = 24;
             TileObjectData.newTile.RandomStyleRange = 12;
-            
+
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
@@ -57,9 +55,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Tw
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -103,13 +103,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.ThreeTall.Tw
             return true;
         }
     }
-    
+
     public class TatteredRoyalMetalBeds : RoyalBeds_3Tall_12
     {
         public override void SafeSetStaticDefaults()
         {
         }
     }
+
     public class RepairedRoyalMetalBeds : RoyalBeds_3Tall_12
     {
         public override void SafeSetStaticDefaults()

@@ -25,6 +25,7 @@ internal class RepairedLantern : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<Lanterns_11>());
         Item.placeStyle = 1;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(1)

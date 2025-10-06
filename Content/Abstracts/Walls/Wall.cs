@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Abstracts.Walls;
@@ -11,6 +10,7 @@ public abstract class Wall : ModWall
         Main.wallHouse[Type] = true;
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

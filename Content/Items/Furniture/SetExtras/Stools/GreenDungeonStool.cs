@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.Armchairs;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -13,6 +12,7 @@ internal class RolledStackedTowels : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 30;

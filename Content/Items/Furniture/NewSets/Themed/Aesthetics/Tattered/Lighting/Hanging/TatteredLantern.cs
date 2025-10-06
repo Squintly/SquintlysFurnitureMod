@@ -24,6 +24,7 @@ internal class TatteredLantern : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<Lanterns_11>());
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(1)

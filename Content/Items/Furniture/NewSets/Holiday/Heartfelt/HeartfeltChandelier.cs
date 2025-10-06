@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
@@ -32,7 +33,8 @@ internal class HeartfeltChandelier : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HeartfeltChandelierTile>();
+        Item.createTile = ModContent.TileType<Chandeliers>();
+        Item.placeStyle = 2;
     }
 
     public override void AddRecipes()

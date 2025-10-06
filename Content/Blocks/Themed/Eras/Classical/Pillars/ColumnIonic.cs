@@ -19,12 +19,14 @@ public class ColumnIonic : BigUnsolid
         AddMapEntry(new Color(232, 236, 238));
     }
 }
+
 internal class ColumnIonicItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<ColumnIonic>());
@@ -32,6 +34,7 @@ internal class ColumnIonicItem : ModItem
         Item.width = 16;
         Item.height = 16;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

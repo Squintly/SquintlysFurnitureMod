@@ -148,26 +148,25 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive
                 NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
                 player.editedChestName = false;
             }
-
             else
             {
-                 int chest = Chest.FindChest(left, top);
-                 if (chest != -1)
-                 {
-                     Main.stackSplit = 600;
-                     if (chest == player.chest)
-                     {
-                         player.chest = -1;
-                         SoundEngine.PlaySound(SoundID.MenuClose);
-                     }
-                     else
-                     {
-                         SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
-                         player.OpenChest(left, top, chest);
-                     }
+                int chest = Chest.FindChest(left, top);
+                if (chest != -1)
+                {
+                    Main.stackSplit = 600;
+                    if (chest == player.chest)
+                    {
+                        player.chest = -1;
+                        SoundEngine.PlaySound(SoundID.MenuClose);
+                    }
+                    else
+                    {
+                        SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+                        player.OpenChest(left, top, chest);
+                    }
 
-                     Recipe.FindRecipes();
-                 }
+                    Recipe.FindRecipes();
+                }
             }
 
             return true;

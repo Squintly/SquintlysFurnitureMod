@@ -453,7 +453,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 5
             int frame = frameY / 18;
 
-            if (frame == 0) // normal 
+            if (frame == 0) // normal
             {
                 for (int c = 0; c < 7; c++)
                 {

@@ -18,6 +18,7 @@ public abstract class SolidClear : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

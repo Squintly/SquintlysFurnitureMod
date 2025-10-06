@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs;
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Ottomans;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Seating.Soft;
 using Terraria;

@@ -1,9 +1,7 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -48,10 +46,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Baths
             TileObjectData.addAlternate(2);
 
             TileObjectData.addTile(Type);
-
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

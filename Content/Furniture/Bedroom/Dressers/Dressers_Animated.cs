@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -66,6 +65,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
 
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
@@ -76,6 +76,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
                 frame %= 8;
             }
         }
+
         public override LocalizedText DefaultContainerName(int frameX, int frameY)
         {
             int option = frameX / 36;
@@ -275,6 +276,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers
         }
     }
 }
+
 /*STYLES
 0- Tattered
 */

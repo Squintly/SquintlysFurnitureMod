@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -78,9 +77,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
             info.AnchorTilePosition.X = i; // Our chair is only 1 wide, so nothing special required
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight <= 384)
+            if (tile.TileFrameY % NextStyleHeight == 0)
             {
-                info.AnchorTilePosition.Y++; // Here, since our chair is only 2 tiles high, we can just check if the tile is the top-most one, then move it 1 down
+                info.AnchorTilePosition.Y++;
             }
 
             // Here we add a custom fun effect to this tile that vanilla toilets do not have. This shows how you can type cast the restingEntity to Player and use visualOffset as well.
@@ -123,6 +122,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Chairs
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

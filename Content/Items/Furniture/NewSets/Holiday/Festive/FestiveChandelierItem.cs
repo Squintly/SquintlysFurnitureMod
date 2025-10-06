@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive;
 using Terraria;
@@ -31,7 +32,8 @@ internal class FestiveChandelierItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<FestiveChandelier>();
+        Item.createTile = ModContent.TileType<Chandeliers>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

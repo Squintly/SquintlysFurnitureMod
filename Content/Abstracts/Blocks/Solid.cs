@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Abstracts.Blocks;
@@ -16,6 +15,7 @@ public abstract class Solid : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

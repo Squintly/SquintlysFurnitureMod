@@ -23,8 +23,6 @@ public class S_3x3_3 : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
 
         TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
-
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -36,6 +34,7 @@ public class S_3x3_3 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -54,7 +53,7 @@ public class S_3x3_3 : ModTile
         int topX = i - tile.TileFrameX % 54 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 54 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 54); //change first two by total size, last by style size
+        short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 54); //change first two by total size - one style, last by style size
 
         for (int x = topX; x < topX + 3; x++) // change depending on width
         {

@@ -1,5 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Bedroom;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -54,13 +53,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.FourTall.Thr
 
             AddMapEntry(new Color(191, 142, 111), Language.GetText("ItemName.Bed"));
         }
+
         public virtual void SafeSetStaticDefaults()
         {
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
         }
+
         public override void ModifySmartInteractCoords(ref int width, ref int height, ref int frameWidth, ref int frameHeight, ref int extraY)
         {
             // Because beds have special smart interaction, this splits up the left and right side into the necessary 2x2 sections

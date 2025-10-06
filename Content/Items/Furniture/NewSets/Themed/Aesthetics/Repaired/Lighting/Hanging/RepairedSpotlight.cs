@@ -25,6 +25,7 @@ internal class RepairedSpotlight : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<Spotlights_9>());
         Item.placeStyle = 1;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(1)

@@ -1,5 +1,6 @@
-using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Abstracts.Blocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Walls;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -39,6 +40,18 @@ internal class TatteredWoodItem : ModItem
             .AddIngredient(ItemID.Wood)
             .AddTile(TileID.WorkBenches)
             .AddCondition(Condition.InGraveyard)
+            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:TatteredPlatforms", 2)
+            .Register();
+
+        CreateRecipe(1)
+            .AddIngredient(ModContent.ItemType<TatteredFenceItem>(), 4)
+            .Register();
+
+        CreateRecipe(1)
+            .AddIngredient(ModContent.ItemType<TatteredWoodWallItem>(), 4)
             .Register();
     }
 }

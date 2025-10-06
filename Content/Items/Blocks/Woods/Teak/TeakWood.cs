@@ -40,5 +40,9 @@ internal class TeakWood : ModItem
            .AddRecipeGroup("SquintlyFurnitureMod:TeakWalls", 4)
            .AddTile(TileID.WorkBenches)
            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:TeakPlatforms", 2)
+            .Register();
     }
 }

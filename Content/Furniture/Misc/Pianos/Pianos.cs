@@ -1,8 +1,6 @@
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -41,6 +39,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Pianos
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

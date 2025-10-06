@@ -1,12 +1,9 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -15,6 +12,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
     public class Barstools_6 : ModTile
     {
         public const int NextStyleHeight = 40;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -72,7 +70,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
             info.AnchorTilePosition.X = i;
             info.AnchorTilePosition.Y = j;
 
-            if (tile.TileFrameY % NextStyleHeight <= 192)
+            if (tile.TileFrameY % NextStyleHeight == 0)
             {
                 info.AnchorTilePosition.Y++;
             }
@@ -112,6 +110,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Barstools
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

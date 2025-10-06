@@ -38,16 +38,19 @@ public class HeartStrings : ModTile
 
         RegisterItemDrop(ModContent.ItemType<HeartStringsItem>());
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Grass);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];

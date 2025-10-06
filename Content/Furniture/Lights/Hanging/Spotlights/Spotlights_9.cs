@@ -116,6 +116,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                         g = .75f;
                         b = .75f;
                         break;
+
                     case 1: //Repaired
                         r = 1f;
                         g = .95f;
@@ -205,6 +206,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
+
                 case 1: //Repaired
                     for (int c = 0; c < 3; c++)
                     {
@@ -218,6 +220,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

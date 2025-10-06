@@ -1,4 +1,3 @@
-using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +5,6 @@ using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -144,6 +142,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bathroom.Toilets
         }
     }
 }
+
 /*STYLES
  0- Imperial
 */

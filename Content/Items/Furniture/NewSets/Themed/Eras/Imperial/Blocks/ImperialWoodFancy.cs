@@ -14,12 +14,14 @@ public class ImperialWoodFancy : Solid
         AddMapEntry(new Color(92, 54, 38));
     }
 }
+
 internal class ImperialWoodFancyItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableTile(ModContent.TileType<ImperialWoodFancy>());
@@ -29,11 +31,20 @@ internal class ImperialWoodFancyItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()
            .AddIngredient(ModContent.ItemType<ImperialWoodItem>())
            .AddTile(TileID.WorkBenches)
            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:ImperialPlatforms", 2)
+            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:ImperialWalls", 4)
+            .Register();
     }
 }

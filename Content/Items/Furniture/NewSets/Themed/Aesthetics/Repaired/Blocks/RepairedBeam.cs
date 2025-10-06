@@ -1,10 +1,10 @@
-using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Abstracts.Blocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
 

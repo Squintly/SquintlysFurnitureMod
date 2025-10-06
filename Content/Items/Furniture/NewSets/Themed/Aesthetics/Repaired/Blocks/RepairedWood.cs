@@ -1,10 +1,11 @@
-using SquintlysFurnitureMod.Content.Abstracts.Blocks;
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Abstracts.Blocks;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Walls;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Blocks;
 
@@ -40,6 +41,18 @@ internal class RepairedWoodItem : ModItem
             .AddIngredient(ItemID.Wood)
             .AddIngredient(ModContent.ItemType<TatteredWoodItem>())
             .AddTile(TileID.WorkBenches)
+            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:RepairedPlatforms", 2)
+            .Register();
+
+        CreateRecipe(1)
+            .AddIngredient(ModContent.ItemType<RepairedFenceItem>(), 4)
+            .Register();
+
+        CreateRecipe(1)
+            .AddIngredient(ModContent.ItemType<RepairedWoodWallItem>(), 4)
             .Register();
     }
 }

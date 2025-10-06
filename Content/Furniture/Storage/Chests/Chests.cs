@@ -46,7 +46,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
             TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);
 
-            TileObjectData.newTile.AnchorInvalidTiles = new int[] 
+            TileObjectData.newTile.AnchorInvalidTiles = new int[]
             {
                 TileID.MagicalIceBlock,
                 TileID.Boulder,
@@ -56,7 +56,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             };
 
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
-            
+
             TileObjectData.newTile.StyleHorizontal = true;
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -66,7 +66,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry1"), MapChestName);
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry2"), MapChestName);
-
         }
 
         public override ushort GetMapOption(int i, int j)
@@ -224,6 +223,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests
         }
     }
 }
+
 /*STYLES
 0- Imperial
 1- Tattered

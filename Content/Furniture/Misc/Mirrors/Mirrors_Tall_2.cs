@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
@@ -28,7 +27,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
             TileObjectData.newTile.Width = 2;
             TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 18 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
-            
+
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.RandomStyleRange = 2;
             TileObjectData.newTile.StyleMultiplier = 4;
@@ -47,6 +46,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors
         }
     }
 }
+
 /*STYLES
 0- Tattered
 1- Repaired

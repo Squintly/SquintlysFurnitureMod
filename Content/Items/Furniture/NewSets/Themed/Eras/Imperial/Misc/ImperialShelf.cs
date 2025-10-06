@@ -12,6 +12,7 @@ internal class ImperialShelf : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 200;
     }
+
     public override void SetDefaults()
     {
         Item.width = 28;
@@ -28,7 +29,6 @@ internal class ImperialShelf : ModItem
     {
         CreateRecipe(2)
             .AddIngredient(ModContent.ItemType<ImperialWoodItem>(), 1)
-            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar")
             .Register();
     }
 }

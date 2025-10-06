@@ -14,6 +14,7 @@ public abstract class Glass : ModWall
         WallID.Sets.Transparent[Type] = true;
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }

@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets;
-using SquintlysFurnitureMod.Content.Furniture.Storage.Chests;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Festive;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -149,7 +148,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
                 NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
                 player.editedChestName = false;
             }
-
             else
             {
                 int chest = Chest.FindChest(left, top);

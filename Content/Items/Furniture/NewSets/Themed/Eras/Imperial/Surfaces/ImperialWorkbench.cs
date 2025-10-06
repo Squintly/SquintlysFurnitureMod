@@ -1,5 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Storage.Cabinets;
-using SquintlysFurnitureMod.Content.Furniture.Surfaces.Tables;
 using SquintlysFurnitureMod.Content.Furniture.Surfaces.Workbenches;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
@@ -15,6 +13,7 @@ internal class ImperialWorkBench : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 32;

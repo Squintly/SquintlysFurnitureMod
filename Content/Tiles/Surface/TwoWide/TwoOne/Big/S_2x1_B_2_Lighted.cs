@@ -1,5 +1,5 @@
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
@@ -16,6 +16,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Big;
 public class S_2x1_B_2_Lighted : ModTile
 {
     private Asset<Texture2D> flameTexture;
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -55,10 +56,12 @@ public class S_2x1_B_2_Lighted : ModTile
             flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Surface/TwoWide/TwoOne/Big/S_2x1_B_2_Lighted_Flame");
         }
     }
+
     public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
     {
         return true;
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -97,6 +100,7 @@ public class S_2x1_B_2_Lighted : ModTile
             NetMessage.SendTileSquare(-1, topX, topY, 2, 1); //change for width, height
         }
     }
+
     public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
     {
         Tile tile = Main.tile[i, j];
@@ -107,6 +111,7 @@ public class S_2x1_B_2_Lighted : ModTile
             b = 0.65f;
         }
     }
+
     public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
     {
         if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
@@ -127,6 +132,7 @@ public class S_2x1_B_2_Lighted : ModTile
 
         int style = frameY / 54;
     }
+
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
         var tile = Main.tile[i, j];

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -13,6 +12,7 @@ internal class Bolster : ModItem
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
     }
+
     public override void SetDefaults()
     {
         Item.width = 32;

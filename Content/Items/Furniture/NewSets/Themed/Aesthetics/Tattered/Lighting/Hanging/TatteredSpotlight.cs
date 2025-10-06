@@ -24,6 +24,7 @@ internal class TatteredSpotlight : ModItem
         Item.DefaultToPlaceableTile(ModContent.TileType<Spotlights_9>());
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(1)

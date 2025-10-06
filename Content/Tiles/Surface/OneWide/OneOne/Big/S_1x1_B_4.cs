@@ -90,4 +90,10 @@ public class S_1x1_B_4 : ModTile
 6- Small Sugar X
 7- Small Flour X
 8- Wooden Bucket X
+9- grenades
+10- brown grenades
+11- black grenades
+12- red grenades
+13- future grenades
+
 */

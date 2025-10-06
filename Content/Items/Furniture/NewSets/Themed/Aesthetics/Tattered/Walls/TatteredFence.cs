@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Walls;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Blocks;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -16,12 +15,14 @@ public class TatteredFence : FenceLargeLazure
         AddMapEntry(new Color(58, 51, 36));
     }
 }
+
 internal class TatteredFenceItem : ModItem
 {
     public override void SetStaticDefaults()
     {
         CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
     }
+
     public override void SetDefaults()
     {
         Item.DefaultToPlaceableWall(ModContent.WallType<TatteredFence>());
@@ -31,6 +32,7 @@ internal class TatteredFenceItem : ModItem
 
         Item.maxStack = Item.CommonMaxStack;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

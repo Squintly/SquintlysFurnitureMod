@@ -4,6 +4,11 @@ using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Fruit;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Walls;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.WallItems.Woods.Teak;
@@ -47,8 +52,13 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup Balloons = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Balloons", ItemID.SillyBalloonGreen, ItemID.SillyBalloonPink, ItemID.SillyBalloonPurple);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Balloons", Balloons);
 
+            RecipeGroup Explosives = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Explosives", ItemID.Bomb, ItemID.StickyBomb, ItemID.BouncyBomb, ItemID.DirtBomb, ItemID.DirtStickyBomb,
+                    ItemID.DryBomb, ItemID.WetBomb, ItemID.HoneyBomb, ItemID.LavaBomb, ItemID.ScarabBomb, ItemID.BombFish, ItemID.SmokeBomb, ItemID.Grenade, ItemID.BouncyGrenade, ItemID.StickyGrenade, ItemID.PartyGirlGrenade,
+                    ItemID.Dynamite, ItemID.BouncyDynamite, ItemID.StickyDynamite, ItemID.DynamiteFish);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Explosives", Explosives);
         }
     }
+
     public class ModRecipeGroups : ModSystem
     {
         public override void AddRecipeGroups()
@@ -60,6 +70,9 @@ namespace SquintlysFurnitureMod.Content
                 ModContent.ItemType<TeakFenceSlatItem>(), ModContent.ItemType<TeakFenceSolidItem>(), ModContent.ItemType<TeakFenceLatticeItem>(), ModContent.ItemType<TeakPoleItem>());
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakWalls", TeakWalls);
 
+            RecipeGroup TeakPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Platforms", ModContent.ItemType<TeakPlatformItem>(), ModContent.ItemType<TeakShelfItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakPlatforms", TeakPlatforms);
+
             RecipeGroup HieroBlocks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sandstone Block/Wall",
                 ModContent.ItemType<HieroBlock1Item>(), ModContent.ItemType<HieroBlock2Item>(), ModContent.ItemType<HieroBlock3Item>(), ModContent.ItemType<HieroBlock4Item>(),
                 ModContent.ItemType<FadedHieroBlock1Item>(), ModContent.ItemType<FadedHieroBlock2Item>(), ModContent.ItemType<FadedHieroBlock3Item>(), ModContent.ItemType<FadedHieroBlock4Item>(),
@@ -67,8 +80,22 @@ namespace SquintlysFurnitureMod.Content
                 ModContent.ItemType<FadedHieroWall1Item>(), ModContent.ItemType<FadedHieroWall2Item>(), ModContent.ItemType<FadedHieroWall3Item>(), ModContent.ItemType<FadedHieroWall4Item>(), ModContent.ItemType<FadedHieroWallSmallItem>(),
                 ModContent.ItemType<PolishedSandstoneBrickItem>(), ModContent.ItemType<PolishedSandstoneBrickWallItem>(), ItemID.Sandstone, ItemID.SandstoneBrick, ItemID.SandstoneBrickWall, ItemID.SandstoneSlab);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:HieroBlocks", HieroBlocks);
+
+            RecipeGroup ImperialWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Wall", ModContent.ItemType<ImperialWallpaperFancyItem>(), ModContent.ItemType<ImperialWallpaperItem>(),
+                ModContent.ItemType<ImperialPanellingItem>(), ModContent.ItemType<ImperialFenceItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialWalls", ImperialWalls);
+
+            RecipeGroup ImperialPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Platforms", ModContent.ItemType<ImperialPlatform>(), ModContent.ItemType<ImperialPlatformFancy>(), ModContent.ItemType<ImperialShelf>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialPlatforms", ImperialPlatforms);
+
+            RecipeGroup TatteredPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Tattered Platforms", ModContent.ItemType<TatteredPlatform>(), ModContent.ItemType<TatteredCarpet>(), ModContent.ItemType<TatteredShelf>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TatteredPlatforms", TatteredPlatforms);
+
+            RecipeGroup RepairedPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Repaired Platforms", ModContent.ItemType<RepairedPlatform>(), ModContent.ItemType<RepairedCarpet>(), ModContent.ItemType<RepairedShelf>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:RepairedPlatforms", RepairedPlatforms);
         }
     }
+
     public class FoodRecipeGroups : ModSystem
     {
         public override void AddRecipeGroups()
