@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Surfaces.Workbenches;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
