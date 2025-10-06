@@ -63,7 +63,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, 1, 1);
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, 3, 0);
             TileObjectData.newAlternate.DrawYOffset = -8;
             TileObjectData.addAlternate(0);
 

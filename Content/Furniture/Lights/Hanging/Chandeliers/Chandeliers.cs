@@ -60,19 +60,18 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             TileObjectData.newTile.StyleMultiplier = 2;
             TileObjectData.newTile.StyleWrapLimit = 2;
 
-            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, 1, 1);
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
+            TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, 1, 1);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, 1, 1);
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, 3, 0);
             TileObjectData.newAlternate.DrawYOffset = -8;
+            TileObjectData.addAlternate(0);
 
             TileObjectData.newSubTile.CopyFrom(TileObjectData.newTile); //3-wide attachment
             TileObjectData.newSubTile.LinkedAlternates = true;
             TileObjectData.newSubTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
             TileObjectData.addSubTile(3);
-            TileObjectData.addAlternate(0);
-
 
             TileObjectData.addTile(Type);
 
