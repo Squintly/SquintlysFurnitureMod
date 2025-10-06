@@ -49,7 +49,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.Origin = new Point16(1, 0);
-            
+
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 18 };
 
             TileObjectData.newTile.LavaDeath = true;
@@ -76,7 +76,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(235, 166, 135), Language.GetText("MapObject.Chandelier"));
-
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -162,7 +161,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
                     g = 0.95f;
                     b = 0.8f;
                     break;
-
             }
         }
 

@@ -70,7 +70,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(235, 166, 135), Language.GetText("MapObject.Chandelier"));
-
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

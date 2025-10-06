@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -52,6 +53,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfel
             }
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chandelier"));
+
+            RegisterItemDrop(ModContent.ItemType<HeartfeltChandelier>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
