@@ -12,9 +12,9 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
+namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
 {
-    public class Spotlights : ModTile
+    public class Lanterns_5 : ModTile
     {
         public enum StyleID
         {
@@ -41,18 +41,18 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             TileID.Sets.IsAMechanism[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-            TileObjectData.newTile.Origin = new Point16(1, 0);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
 
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
-            TileObjectData.newTile.Width = 2;
 
             TileObjectData.newTile.LavaDeath = true;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleMultiplier = 2;
-            TileObjectData.newTile.StyleWrapLimit = 2;
+            TileObjectData.newTile.StyleMultiplier = 10;
+            TileObjectData.newTile.StyleWrapLimit = 10;
+            TileObjectData.newTile.RandomStyleRange = 5;
 
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
@@ -87,12 +87,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 36 / 18;
+            int topX = i - tile.TileFrameX % 18 / 18;
             int topY = j - tile.TileFrameY % 36 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36);
+            short frameAdjustment = (short)(tile.TileFrameX >= 90 ? -90 : 90);
 
-            for (int x = topX; x < topX + 2; x++)
+            for (int x = topX; x < topX + 1; x++)
             {
                 for (int y = topY; y < topY + 2; y++)
                 {
@@ -107,13 +107,13 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
-                NetMessage.SendTileSquare(-1, topX, topY, 2, 2);
+                NetMessage.SendTileSquare(-1, topX, topY, 1, 2);
             }
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            if (Main.tile[i, j].TileFrameX / 36 != 0)
+            if (Main.tile[i, j].TileFrameX / 90 != 0)
             {
                 return;
             }
@@ -121,7 +121,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                case StyleID.Imperial: //Bright
+                case StyleID.Imperial: //Cool
                     r = 1f;
                     g = .95f;
                     b = .90f;
@@ -225,16 +225,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                //case StyleID.Imperial: //Low flicker
-                //    tileFlameData.flameCount = 7;
-                //    tileFlameData.flameColor = new Color(100, 100, 100, 0);
-                //    tileFlameData.flameRangeXMin = -10;
-                //    tileFlameData.flameRangeXMax = 11;
-                //    tileFlameData.flameRangeYMin = -10;
-                //    tileFlameData.flameRangeYMax = 1;
-                //    tileFlameData.flameRangeMultX = 0.08f;
-                //    tileFlameData.flameRangeMultY = 0.08f;
-                    //break;
+                case StyleID.Imperial: //Low glow, no flicker
+                    tileFlameData.flameCount = 1;
+                    tileFlameData.flameColor = new Color(100, 100, 100, 0);
+                    tileFlameData.flameRangeXMin = -8;
+                    tileFlameData.flameRangeXMax = 9;
+                    tileFlameData.flameRangeYMin = -8;
+                    tileFlameData.flameRangeYMax = 1;
+                    tileFlameData.flameRangeMultX = 0.1f;
+                    tileFlameData.flameRangeMultY = 0.25f;
+                    break;
 
                 default:
                     tileFlameData.flameCount = 7;

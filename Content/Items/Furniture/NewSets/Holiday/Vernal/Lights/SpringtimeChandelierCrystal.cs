@@ -44,7 +44,6 @@ internal class SpringtimeChandelierCrystal : ModItem
             .AddIngredient(ItemID.Torch, 4)
             .AddIngredient(ItemID.Chain)
             .AddIngredient(ItemID.CrystalShard)
-            .AddIngredient(ItemID.BlueDye)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }

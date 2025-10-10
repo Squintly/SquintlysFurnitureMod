@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
 using Terraria;
@@ -31,7 +32,7 @@ internal class TeakLanternItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<TeakLanterns>();
+        Item.createTile = ModContent.TileType<Lanterns_2>();
         Item.placeStyle = 0;
     }
 

@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
@@ -32,7 +33,8 @@ internal class HeartfeltLantern : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HeartfeltLanternTile>();
+        Item.createTile = ModContent.TileType<Lanterns>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()

@@ -14,11 +14,12 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 {
-    public class Spotlights : ModTile
+    public class Spotlights_4 : ModTile
     {
         public enum StyleID
         {
-            Imperial //0
+            VernalCrystal, //0
+            Vernal
         }
 
         private Asset<Texture2D> flameTexture;
@@ -51,8 +52,9 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleMultiplier = 2;
-            TileObjectData.newTile.StyleWrapLimit = 2;
+            TileObjectData.newTile.StyleMultiplier = 8;
+            TileObjectData.newTile.StyleWrapLimit = 8;
+            TileObjectData.newTile.RandomStyleRange = 4;
 
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
@@ -90,7 +92,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             int topX = i - tile.TileFrameX % 36 / 18;
             int topY = j - tile.TileFrameY % 36 / 18;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36);
+            short frameAdjustment = (short)(tile.TileFrameX >= 144 ? -144 : 144);
 
             for (int x = topX; x < topX + 2; x++)
             {
@@ -113,7 +115,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            if (Main.tile[i, j].TileFrameX / 36 != 0)
+            if (Main.tile[i, j].TileFrameX / 144 != 0)
             {
                 return;
             }
@@ -121,10 +123,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                case StyleID.Imperial: //Bright
+                case StyleID.VernalCrystal: //Bright, slightly yellow
+                case StyleID.Vernal:
                     r = 1f;
-                    g = .95f;
-                    b = .90f;
+                    g = 1f;
+                    b = .85f;
                     break;
 
                 default:
@@ -199,7 +202,8 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             switch (style)
             {
-                case StyleID.Imperial: //Default
+                case StyleID.VernalCrystal: //Default
+                case StyleID.Vernal:
                     break;
 
                 //case StyleID.Teak:
@@ -225,16 +229,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                //case StyleID.Imperial: //Low flicker
-                //    tileFlameData.flameCount = 7;
-                //    tileFlameData.flameColor = new Color(100, 100, 100, 0);
-                //    tileFlameData.flameRangeXMin = -10;
-                //    tileFlameData.flameRangeXMax = 11;
-                //    tileFlameData.flameRangeYMin = -10;
-                //    tileFlameData.flameRangeYMax = 1;
-                //    tileFlameData.flameRangeMultX = 0.08f;
-                //    tileFlameData.flameRangeMultY = 0.08f;
-                    //break;
+                case StyleID.VernalCrystal: //Low, no flicker
+                case StyleID.Vernal:
+                    tileFlameData.flameCount = 1;
+                    tileFlameData.flameColor = new Color(100, 100, 100, 0);
+                    tileFlameData.flameRangeXMin = -5;
+                    tileFlameData.flameRangeXMax = 5;
+                    tileFlameData.flameRangeYMin = -5;
+                    tileFlameData.flameRangeYMax = 1;
+                    tileFlameData.flameRangeMultX = 0.01f;
+                    tileFlameData.flameRangeMultY = 0.01f;
+                    break;
 
                 default:
                     tileFlameData.flameCount = 7;

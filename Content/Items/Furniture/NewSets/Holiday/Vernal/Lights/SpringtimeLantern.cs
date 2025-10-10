@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
@@ -8,7 +9,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
 
-internal class SpringtimeLanternPink : ModItem
+internal class SpringtimeLantern : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -32,8 +33,8 @@ internal class SpringtimeLanternPink : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<SpringtimeLanterns>();
-        Item.placeStyle = 2;
+        Item.createTile = ModContent.TileType<Lanterns_4>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()
@@ -41,7 +42,6 @@ internal class SpringtimeLanternPink : ModItem
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 6)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ItemID.PinkDye)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }

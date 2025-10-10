@@ -3458,11 +3458,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TeakLanternGreenItem: {
-				DisplayName: Green Teak Lantern
-				Tooltip: ""
-			}
-
 			TeakLanternItem: {
 				DisplayName: Teak Lantern
 				Tooltip: ""
@@ -3525,11 +3520,6 @@ Mods: {
 
 			TeakSofaRedItem: {
 				DisplayName: Red Teak Sofa
-				Tooltip: ""
-			}
-
-			TeakSpotlightGreenItem: {
-				DisplayName: Green Teak Spotlight
 				Tooltip: ""
 			}
 
@@ -3903,22 +3893,7 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SpringtimeLanternBlue: {
-				DisplayName: Blue Springtime Lantern
-				Tooltip: ""
-			}
-
-			SpringtimeLanternGreen: {
-				DisplayName: Green Springtime Lantern
-				Tooltip: ""
-			}
-
-			SpringtimeLanternPink: {
-				DisplayName: Pink Springtime Lantern
-				Tooltip: ""
-			}
-
-			SpringtimeLanternWhite: {
+			SpringtimeLantern: {
 				DisplayName: Springtime Lantern
 				Tooltip: ""
 			}
@@ -3943,42 +3918,12 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SpringtimeSpotlightBlue: {
-				DisplayName: Blue Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightBlueCrystal: {
-				DisplayName: Blue Crystal Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightGreen: {
-				DisplayName: Green Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightGreenCrystal: {
-				DisplayName: Green Crystal Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightPink: {
-				DisplayName: Pink Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightPinkCrystal: {
-				DisplayName: Pink Crystal Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightWhite: {
+			SpringtimeSpotlight: {
 				DisplayName: Springtime Spotlight
 				Tooltip: ""
 			}
 
-			SpringtimeSpotlightWhiteCrystal: {
+			SpringtimeSpotlightCrystal: {
 				DisplayName: Crystal Springtime Spotlight
 				Tooltip: ""
 			}
@@ -6554,8 +6499,8 @@ Mods: {
 			}
 
 			SpringtimeChandelierCrystal: {
-				DisplayName: Springtime Chandelier Crystal
 				Tooltip: ""
+				DisplayName: Springtime Chandelier Crystal
 			}
 		}
 

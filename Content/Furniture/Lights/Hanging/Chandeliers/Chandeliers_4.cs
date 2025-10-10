@@ -40,7 +40,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
             Main.tileLighted[Type] = true;
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            //            AdjTiles = new int[] { TileID.Torches };
 
             TileID.Sets.MultiTileSway[Type] = true;
             TileID.Sets.IsAMechanism[Type] = true;
@@ -69,7 +68,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(235, 166, 135), Language.GetText("MapObject.Chandelier"));
+            AddMapEntry(new Color(230, 200, 50), Language.GetText("MapObject.Chandelier"));
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -118,7 +117,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            if (Main.tile[i, j].TileFrameX / 162 != 0)
+            if (Main.tile[i, j].TileFrameX / 216 != 0)
             {
                 return;
             }

@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent;
 using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
@@ -12,13 +13,13 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
+namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
 {
-    public class Spotlights : ModTile
+    public class Lanterns_2 : ModTile
     {
         public enum StyleID
         {
-            Imperial //0
+            Teak //0
         }
 
         private Asset<Texture2D> flameTexture;
@@ -40,19 +41,18 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             TileID.Sets.MultiTileSway[Type] = true;
             TileID.Sets.IsAMechanism[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2Top);
-            TileObjectData.newTile.Origin = new Point16(1, 0);
-
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style1x2);
+            TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 18 };
-            TileObjectData.newTile.Width = 2;
 
             TileObjectData.newTile.LavaDeath = true;
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleMultiplier = 2;
-            TileObjectData.newTile.StyleWrapLimit = 2;
+            TileObjectData.newTile.StyleMultiplier = 4;
+            TileObjectData.newTile.StyleWrapLimit = 4;
+            TileObjectData.newTile.RandomStyleRange = 2;
 
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
@@ -87,12 +87,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 36 / 18;
+            int topX = i - tile.TileFrameX % 18 / 18;
             int topY = j - tile.TileFrameY % 36 / 18;
 
             short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36);
 
-            for (int x = topX; x < topX + 2; x++)
+            for (int x = topX; x < topX + 1; x++)
             {
                 for (int y = topY; y < topY + 2; y++)
                 {
@@ -107,7 +107,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
-                NetMessage.SendTileSquare(-1, topX, topY, 2, 2);
+                NetMessage.SendTileSquare(-1, topX, topY, 1, 2);
             }
         }
 
@@ -121,10 +121,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                case StyleID.Imperial: //Bright
+                case StyleID.Teak: //Bright
                     r = 1f;
-                    g = .95f;
-                    b = .90f;
+                    g = 1f;
+                    b = 1f;
                     break;
 
                 default:
@@ -185,6 +185,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                 // Makes this tile sway in the wind and with player interaction when used with TileID.Sets.MultiTileSway
                 Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
             }
+           
 
             // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
             return false;
@@ -199,7 +200,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
 
             switch (style)
             {
-                case StyleID.Imperial: //Default
+                case StyleID.Teak: //Default
                     break;
 
                 //case StyleID.Teak:
@@ -225,16 +226,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)
             {
-                //case StyleID.Imperial: //Low flicker
-                //    tileFlameData.flameCount = 7;
-                //    tileFlameData.flameColor = new Color(100, 100, 100, 0);
-                //    tileFlameData.flameRangeXMin = -10;
-                //    tileFlameData.flameRangeXMax = 11;
-                //    tileFlameData.flameRangeYMin = -10;
-                //    tileFlameData.flameRangeYMax = 1;
-                //    tileFlameData.flameRangeMultX = 0.08f;
-                //    tileFlameData.flameRangeMultY = 0.08f;
-                    //break;
+                case StyleID.Teak: //Low glow, no flicker
+                    tileFlameData.flameCount = 1;
+                    tileFlameData.flameColor = new Color(50, 50, 50, 0);
+                    tileFlameData.flameRangeXMin = -5;
+                    tileFlameData.flameRangeXMax = 5;
+                    tileFlameData.flameRangeYMin = -5;
+                    tileFlameData.flameRangeYMax = 1;
+                    tileFlameData.flameRangeMultX = 0.01f;
+                    tileFlameData.flameRangeMultY = 0.01f;
+                    break;
 
                 default:
                     tileFlameData.flameCount = 7;

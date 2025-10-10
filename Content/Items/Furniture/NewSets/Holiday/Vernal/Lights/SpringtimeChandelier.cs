@@ -43,7 +43,6 @@ internal class SpringtimeChandelier : ModItem
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 4)
             .AddIngredient(ItemID.Torch, 4)
             .AddIngredient(ItemID.Chain)
-            .AddIngredient(ItemID.PinkDye)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
     }

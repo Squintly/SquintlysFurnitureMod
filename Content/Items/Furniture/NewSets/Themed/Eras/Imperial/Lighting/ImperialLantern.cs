@@ -22,7 +22,7 @@ internal class ImperialLantern : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Lanterns>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<Lanterns_5>());
         Item.placeStyle = 0;
     }
 

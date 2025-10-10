@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
 using Terraria;
@@ -31,7 +32,7 @@ internal class TeakSpotlightItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<TeakSpotlights>();
+        Item.createTile = ModContent.TileType<Spotlights_2>();
         Item.placeStyle = 0;
     }
 

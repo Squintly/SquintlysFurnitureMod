@@ -825,8 +825,6 @@
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakKingBedSmallRedItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakLampGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakLampItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakLanternGreenItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakLanternItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakNightstandItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakOttomanGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakOttomanItem.png" />
@@ -838,7 +836,6 @@
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaRedItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSpotlightGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSpotlightItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakStoolGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakStoolItem.png" />

@@ -1,6 +1,6 @@
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
 
-internal class SpringtimeSpotlightBlueCrystal : ModItem
+internal class SpringtimeSpotlightCrystal : ModItem
 {
     public override void SetStaticDefaults()
     {
@@ -32,8 +32,8 @@ internal class SpringtimeSpotlightBlueCrystal : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<SpringtimeSpotlights>();
-        Item.placeStyle = 4;
+        Item.createTile = ModContent.TileType<Spotlights_4>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()
@@ -41,7 +41,6 @@ internal class SpringtimeSpotlightBlueCrystal : ModItem
         CreateRecipe(1)
             .AddIngredient(ModContent.ItemType<SpringyWood>(), 5)
             .AddIngredient(ItemID.Torch, 3)
-            .AddIngredient(ItemID.BlueDye)
             .AddIngredient(ItemID.CrystalShard)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();
