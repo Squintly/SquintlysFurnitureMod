@@ -20,7 +20,7 @@ public class ColumnIonic : BigUnsolid
     }
 }
 
-internal class ColumnIonicItem : ModItem
+public class ColumnIonicItem : ModItem
 {
     public override void SetStaticDefaults()
     {

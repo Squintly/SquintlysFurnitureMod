@@ -25,7 +25,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers
         }
 
         private Asset<Texture2D> flameTexture;
-        private int turningOnAnimationType;
 
         public override void Load()
         {

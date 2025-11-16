@@ -1,8 +1,189 @@
 Mods: {
 	SquintlysFurnitureMod: {
+		Tiles: {
+			Dressers: {
+				ContainerName: Dressers
+				MapEntry0: Imperial Dresser
+				MapEntry1: Repaired Dresser
+			}
+
+			Dressers_Animated.MapEntry0: Tattered Dresser
+
+			Nightstands: {
+				ContainerName: Nightstands
+				MapEntry0: Imperial Nightstand
+				MapEntry1: Tattered Nightstand
+				MapEntry2: Repaired Nightstand
+			}
+
+			Chests: {
+				ContainerName: Chests
+				MapEntry0: Imperial Chest
+				MapEntry1: Tattered Chest
+				MapEntry2: Repaired Chest
+			}
+
+			FestiveChest.MapEntry0: Festive Chest
+			HeartfeltChest.MapEntry0: Heartfelt Chest
+			TeakChest.MapEntry0: Teak Chest
+			SpringtimeChest.MapEntry0: Vernal Chest
+		}
+
 		Items: {
+			// Blocks
+			
+			ColumnCorinthianItem: {
+				DisplayName: Corinthian Column
+				Tooltip: ""
+			}
+
+			ColumnDoricItem: {
+				DisplayName: Doric Column
+				Tooltip: ""
+			}
+
+			ColumnIonicItem: {
+				DisplayName: Ionic Column
+				Tooltip: ""
+			}
+
+			ColumnTuscanItem: {
+				DisplayName: Tuscan Column
+				Tooltip: ""
+			}
+
 			ChocolateBlockItem: {
 				DisplayName: Chocolate Block
+				Tooltip: ""
+			}
+
+			FestiveColumnItem: {
+				DisplayName: Festive Column
+				Tooltip: ""
+			}
+
+			HeartfeltBlockItem: {
+				DisplayName: Heartfelt Block
+				Tooltip: ""
+			}
+
+			PlasterBlueItem: {
+				DisplayName: Blue Plaster
+				Tooltip: ""
+			}
+
+			PlasterBlueWornItem: {
+				DisplayName: Worn Blue Plaster
+				Tooltip: ""
+			}
+
+			PlasterItem: {
+				DisplayName: Plaster
+				Tooltip: ""
+			}
+
+			PlasterWornItem: {
+				DisplayName: Worn Plaster
+				Tooltip: ""
+			}
+
+			SpringyBeamDecoratedItem: {
+				DisplayName: Decorated Vernal Beam
+				Tooltip: ""
+			}
+
+			SpringyBeamFloralItem: {
+				DisplayName: Floral Vernal Beam
+				Tooltip: ""
+			}
+
+			SpringyBeamItem: {
+				DisplayName: Vernal Beam
+				Tooltip: ""
+			}
+
+			SpringyWood: {
+				DisplayName: Vernal Wood
+				Tooltip: ""
+			}
+
+			SpringyWoodBlueItem: {
+				DisplayName: Blue Vernal Wood
+				Tooltip: ""
+			}
+
+			SpringyWoodGreenItem: {
+				DisplayName: Green Vernal Wood
+				Tooltip: ""
+			}
+
+			TileBlueItem: {
+				DisplayName: Blue Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredBlueItem: {
+				DisplayName: Checkered Blue Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredItem: {
+				DisplayName: Checkered Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallBlueItem: {
+				DisplayName: Small Blue Checkered Tile
+				Tooltip: ""
+			}
+
+			TileCheckeredSmallItem: {
+				DisplayName: Small Checkered Tile
+				Tooltip: ""
+			}
+
+			TileFloralBlueItem: {
+				DisplayName: Blue Floral Tile
+				Tooltip: ""
+			}
+
+			TileFloralPinkItem: {
+				DisplayName: Pink Floral Tile
+				Tooltip: ""
+			}
+
+			TileFloralYellowItem: {
+				DisplayName: Yellow Floral Tile
+				Tooltip: ""
+			}
+
+			TileMediterraneanItem: {
+				DisplayName: Mediterranean Tile
+				Tooltip: ""
+			}
+
+			TilePinkItem: {
+				DisplayName: Pink Tile
+				Tooltip: ""
+			}
+
+			TileSmallBlueItem: {
+				DisplayName: Small Blue Tile
+				Tooltip: ""
+			}
+
+			TileSmallPinkItem: {
+				DisplayName: Small Pink Tile
+				Tooltip: ""
+			}
+
+			TileSmallWhiteItem: {
+				DisplayName: Small White Tile
+				Tooltip: ""
+			}
+
+			TileWhiteItem: {
+				DisplayName: White Tile
 				Tooltip: ""
 			}
 
@@ -23,16 +204,6 @@ Mods: {
 
 			FadedHieroBlock4Item: {
 				DisplayName: Faded Hieroglyphic Block
-				Tooltip: ""
-			}
-
-			FestiveColumnItem: {
-				DisplayName: Festive Column
-				Tooltip: ""
-			}
-
-			HeartfeltBlockItem: {
-				DisplayName: Heartfelt Block
 				Tooltip: ""
 			}
 
@@ -61,6 +232,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			SandstonePillarItem: {
+				DisplayName: Sandstone Pillar
+				Tooltip: ""
+			}
+
 			PaleSandstoneColumnItem: {
 				DisplayName: Pale Sandstone Column
 				Tooltip: ""
@@ -76,234 +252,68 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SandstonePillarItem: {
-				DisplayName: Sandstone Pillar
+			TeakBeamItem: {
+				DisplayName: Teak Beam
 				Tooltip: ""
 			}
 
+			TeakShinglesItem: {
+				DisplayName: Teak Shingles
+				Tooltip: ""
+			}
+
+			TeakSlatsItem: {
+				DisplayName: Teak Slats
+				Tooltip: ""
+			}
+
+			TeakWood: {
+				DisplayName: Teak Wood
+				Tooltip: ""
+			}
+
+			//Workbenches
+			
 			DecoBox: {
 				DisplayName: Decoration Box
 				Tooltip: ""
 			}
 
-			LargeHangingBass: {
-				DisplayName: Hanging Bass
-				Tooltip: ""
-			}
-
-			LargeHangingCod: {
-				DisplayName: Hanging Cod
-				Tooltip: ""
-			}
-
-			LargeHangingFlounder: {
-				DisplayName: Hanging Flounder
-				Tooltip: ""
-			}
-
-			LargeHangingSalmon: {
-				DisplayName: Hanging Salmon
-				Tooltip: ""
-			}
-
-			LargeHangingSnapper: {
-				DisplayName: Hanging Snapper
-				Tooltip: ""
-			}
-
-			LargeHangingTrout: {
-				DisplayName: Hanging Trout
-				Tooltip: ""
-			}
-
-			LargeHangingTuna: {
-				DisplayName: Hanging Tuna
-				Tooltip: ""
-			}
-
-			SmallHangingFish: {
-				DisplayName: Small Hanging Fish
-				Tooltip: ""
-			}
-
-			TinyHangingFish: {
-				DisplayName: Tiny Hanging Fish
-				Tooltip: ""
-			}
-
-			SmallLeopardSkin: {
-				DisplayName: Small Leopard Skin
-				Tooltip: ""
-			}
-
-			SmallTigerSkin: {
-				DisplayName: Small Tiger Skin
-				Tooltip: ""
-			}
-
-			SmallTreasureMap: {
-				DisplayName: Small Treasure Map
-				Tooltip: ""
-			}
-
-			SmallZebraSkin: {
-				DisplayName: Small Zebra Skin
-				Tooltip: ""
-			}
-
-			BellBoughsItem: {
-				DisplayName: Bell and Boughs
-				Tooltip: ""
-			}
-
-			BigBell: {
-				DisplayName: Big Bell
-				Tooltip: ""
-			}
-
-			BigCandyCane: {
-				DisplayName: Big Candy Cane
-				Tooltip: ""
-			}
-
-			BigGreenCandyCane: {
-				DisplayName: Big Green Candy Cane
-				Tooltip: ""
-			}
-
-			BigRedCandle: {
-				DisplayName: Big Red Candle
-				Tooltip: ""
-			}
-
-			BigSanta: {
-				DisplayName: Big Santa
-				Tooltip: ""
-			}
-
-			BigTeddy: {
-				DisplayName: Big Teddy
-				Tooltip: ""
-			}
-
-			BigWhiteCandle: {
-				DisplayName: Big White Candle
-				Tooltip: ""
-			}
-
-			BlackBow: {
-				DisplayName: Black Bow
-				Tooltip: ""
-			}
-
-			BlocksItem: {
-				DisplayName: Blocks
-				Tooltip: ""
-			}
-
-			BlueBanner: {
-				DisplayName: Blue Banner
-				Tooltip: ""
-			}
-
-			BlueBauble: {
-				DisplayName: Blue Bauble
-				Tooltip: ""
-			}
-
-			BlueBow: {
-				DisplayName: Blue Bow
-				Tooltip: ""
-			}
-
-			BlueSantaBanner: {
-				DisplayName: Blue Santa Banner
-				Tooltip: ""
-			}
-
-			BlueSnowflakeBanner: {
-				DisplayName: Blue Snowflake Banner
-				Tooltip: ""
-			}
-
-			BlueStarBanner: {
-				DisplayName: Blue Star Banner
-				Tooltip: ""
-			}
-
-			DreidelBanner: {
-				DisplayName: Dreidel Banner
-				Tooltip: ""
-			}
-
-			Elf: {
-				DisplayName: Festive Elf
-				Tooltip: ""
-			}
-
 			FestiveWorktableItem: {
-				DisplayName: Festive Crafting Table
-				Tooltip: Used for special crafting
-			}
-
-			GingerbreadHouse: {
-				DisplayName: Gingerbread House
+				DisplayName: Festive Worktable
 				Tooltip: ""
 			}
 
-			GoldBauble: {
-				DisplayName: Gold Bauble
+			FloralWorktableItem: {
+				DisplayName: Floral Worktable
 				Tooltip: ""
 			}
 
-			GoldBow: {
-				DisplayName: Gold Bow
+			HeartfeltCraftingTable: {
+				DisplayName: Heartfelt Worktable
 				Tooltip: ""
 			}
 
-			GoldNorthPole: {
-				DisplayName: Festive Pole
+			PrintingPress: {
+				DisplayName: Printing Press
 				Tooltip: ""
 			}
 
-			GreenBanner: {
-				DisplayName: Green Banner
-				Tooltip: ""
+			// Decorations
+			
+			FestiveBanners: {
+				DisplayName: Festive Banner
+				Tooltip: Try right clicking!
 			}
 
-			GreenBauble: {
-				DisplayName: Green Bauble
-				Tooltip: ""
+			FestiveBauble: {
+				DisplayName: Festive Bauble
+				Tooltip: Try right clicking!
 			}
 
-			GreenBow: {
-				DisplayName: Green Bow
-				Tooltip: ""
-			}
-
-			GreenEmbroideredSock: {
-				DisplayName: Embroidered Green Stocking
-				Tooltip: ""
-			}
-
-			GreenMug: {
-				DisplayName: Green Mug
-				Tooltip: ""
-			}
-
-			GreenSantaBanner: {
-				DisplayName: Green Santa Banner
-				Tooltip: ""
-			}
-
-			GreenSnowflakeBanner: {
-				DisplayName: Green Snowflake Banner
-				Tooltip: ""
-			}
-
-			GreenSock: {
-				DisplayName: Green Stocking
-				Tooltip: ""
+			FestiveBells: {
+				DisplayName: Festive Bell
+				Tooltip: Try right clicking!
 			}
 
 			HangingSnowflakesItem: {
@@ -311,123 +321,28 @@ Mods: {
 				Tooltip: Try right clicking!
 			}
 
-			HollyBanner: {
-				DisplayName: Holly Banner
-				Tooltip: ""
-			}
-
 			IciclesItem: {
 				DisplayName: Icicles
 				Tooltip: Try right clicking!
 			}
 
-			JackInTheBox: {
-				DisplayName: Jack-in-the-Box
-				Tooltip: ""
+			Mistletoe: {
+				DisplayName: Mistletoe
+				Tooltip: Try right clicking!
 			}
 
-			LittleBells: {
-				DisplayName: Little Bells
-				Tooltip: ""
+			FestiveDecor: {
+				DisplayName: Festive Decor
+				Tooltip: Try right clicking!
 			}
 
-			MenorahItem: {
-				DisplayName: Menorah
-				Tooltip: ""
-			}
-
-			Moon: {
-				DisplayName: Festive Moon
-				Tooltip: ""
-			}
-
-			NorthPole: {
-				DisplayName: Festive Pole
+			Elf: {
+				DisplayName: Elf
 				Tooltip: ""
 			}
 
 			Nutcracker: {
 				DisplayName: Nutcracker
-				Tooltip: ""
-			}
-
-			OrangeBow: {
-				DisplayName: Orange Bow
-				Tooltip: ""
-			}
-
-			Poinsettas: {
-				DisplayName: Poinsettas
-				Tooltip: Try right clicking!
-			}
-
-			PresentPileLarge: {
-				DisplayName: Present Pile
-				Tooltip: ""
-			}
-
-			PresentPileSmall: {
-				DisplayName: Present Pile
-				Tooltip: ""
-			}
-
-			PresentSleigh: {
-				DisplayName: Present Sleigh
-				Tooltip: ""
-			}
-
-			PurpleBow: {
-				DisplayName: Purple Bow
-				Tooltip: ""
-			}
-
-			RedBanner: {
-				DisplayName: Red Banner
-				Tooltip: ""
-			}
-
-			RedBauble: {
-				DisplayName: Red Bauble
-				Tooltip: ""
-			}
-
-			RedBow: {
-				DisplayName: Red Bow
-				Tooltip: ""
-			}
-
-			RedEmbroideredSock: {
-				DisplayName: Embroidered Red Stocking
-				Tooltip: ""
-			}
-
-			RedMistletoe: {
-				DisplayName: Red Mistletoe
-				Tooltip: ""
-			}
-
-			RedMug: {
-				DisplayName: Red Mug
-				Tooltip: ""
-			}
-
-			RedSnowflakeBanner: {
-				DisplayName: Red Snowflake Banner
-				Tooltip: ""
-			}
-
-			RedSock: {
-				DisplayName: Red Stocking
-				Tooltip: ""
-			}
-
-			RedTreeBanner: {
-				DisplayName: Red Tree Banner
-				Tooltip: ""
-			}
-
-			RockingHorseItem: {
-				DisplayName: Rocking Horse
 				Tooltip: ""
 			}
 
@@ -441,6 +356,136 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Snowman: {
+				DisplayName: Snowman
+				Tooltip: ""
+			}
+
+			TreeGnome: {
+				DisplayName: Tree Gnome
+				Tooltip: ""
+			}
+
+			GingerbreadHouse: {
+				DisplayName: Gingerbread House
+				Tooltip: ""
+			}
+
+			MenorahItem: {
+				DisplayName: Menorah
+				Tooltip: ""
+			}
+
+			Poinsettas: {
+				DisplayName: Poinsettas
+				Tooltip: Try right clicking!
+			}
+
+			Snowglobe: {
+				DisplayName: Snowglobe
+				Tooltip: ""
+			}
+
+			BigCandyCane: {
+				DisplayName: Big Candy Cane
+				Tooltip: ""
+			}
+
+			BigGreenCandyCane: {
+				DisplayName: Big Green Candy Cane
+				Tooltip: ""
+			}
+
+			GoldNorthPole: {
+				DisplayName: Gold North Pole
+				Tooltip: ""
+			}
+
+			NorthPole: {
+				DisplayName: North Pole
+				Tooltip: ""
+			}
+
+			SmallCandyCane: {
+				DisplayName: Small Candy Cane
+				Tooltip: ""
+			}
+
+			BellBoughsItem: {
+				DisplayName: Bell Boughs
+				Tooltip: ""
+			}
+
+			Moon: {
+				DisplayName: Moon
+				Tooltip: ""
+			}
+
+			SnowflakesItem: {
+				DisplayName: Snowflake Decal
+				Tooltip: Try right clicking!
+			}
+
+			Stocking: {
+				DisplayName: Stocking
+				Tooltip: Try right clicking!
+			}
+
+			Sun: {
+				DisplayName: Sun
+				Tooltip: ""
+			}
+
+			Wreath: {
+				DisplayName: Wreath
+				Tooltip: ""
+			}
+
+			BigRedCandle: {
+				DisplayName: Big Red Candle
+				Tooltip: ""
+			}
+
+			BigWhiteCandle: {
+				DisplayName: Big White Candle
+				Tooltip: ""
+			}
+
+			ChristmasCards: {
+				DisplayName: Christmas Cards
+				Tooltip: Try right clicking!
+			}
+
+			GreenMug: {
+				DisplayName: Green Mug
+				Tooltip: ""
+			}
+
+			RedMug: {
+				DisplayName: Red Mug
+				Tooltip: ""
+			}
+
+			WhiteMug: {
+				DisplayName: White Mug
+				Tooltip: ""
+			}
+
+			PresentPileLarge: {
+				DisplayName: Large Present Pile
+				Tooltip: ""
+			}
+
+			PresentPileSmall: {
+				DisplayName: Small Present Pile
+				Tooltip: ""
+			}
+
+			PresentSleigh: {
+				DisplayName: Present Sleigh
+				Tooltip: ""
+			}
+
 			SantaHat: {
 				DisplayName: Santa Hat
 				Tooltip: ""
@@ -451,209 +496,489 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SmallBlackBow: {
-				DisplayName: Small Black Bow
-				Tooltip: ""
-			}
-
-			SmallBlueBow: {
-				DisplayName: Small Blue Bow
-				Tooltip: ""
-			}
-
-			SmallCandyCane: {
-				DisplayName: Small Candy Cane
+			PlanterFloral: {
+				DisplayName: Vernal Planter
 				Tooltip: Try right clicking!
 			}
 
-			SmallGoldBow: {
-				DisplayName: Small Gold Bow
+			PlanterItem: {
+				DisplayName: Planter
 				Tooltip: ""
 			}
 
-			SmallGreenBow: {
-				DisplayName: Small Green Bow
-				Tooltip: ""
-			}
-
-			SmallGreenEmbroideredSock: {
-				DisplayName: Small Embroidered Green Stocking
-				Tooltip: ""
-			}
-
-			SmallGreenSock: {
-				DisplayName: Small Green Stocking
-				Tooltip: ""
-			}
-
-			SmallOrangeBow: {
-				DisplayName: Small Orange Bow
-				Tooltip: ""
-			}
-
-			SmallPurpleBow: {
-				DisplayName: Small Purple Bow
-				Tooltip: ""
-			}
-
-			SmallRedBow: {
-				DisplayName: Small Red Bow
-				Tooltip: ""
-			}
-
-			SmallRedEmbroideredSock: {
-				DisplayName: Small Embroidered Red Stocking
-				Tooltip: ""
-			}
-
-			SmallRedSock: {
-				DisplayName: Small Red Stocking
-				Tooltip: ""
-			}
-
-			SmallTeddy: {
-				DisplayName: Small Teddy
-				Tooltip: ""
-			}
-
-			SmallWhiteBow: {
-				DisplayName: Small White Bow
-				Tooltip: ""
-			}
-
-			SmallWhiteEmbroideredSock: {
-				DisplayName: Small Embroidered White Stocking
-				Tooltip: ""
-			}
-
-			SmallWhiteSock: {
-				DisplayName: Small White Stocking
-				Tooltip: ""
-			}
-
-			SnowflakesItem: {
-				DisplayName: Snowflake Decal
+			SpringBasket: {
+				DisplayName: Vernal Basket
 				Tooltip: Try right clicking!
 			}
 
-			Snowglobe: {
-				DisplayName: Snowglobe
+			CarrotPennant: {
+				DisplayName: Carrot Pennant
+				Tooltip: Try right clicking!
+			}
+
+			Carrot: {
+				DisplayName: Carrot
+				Tooltip: Try right clicking!
+			}
+
+			EggCup: {
+				DisplayName: Egg Cup
+				Tooltip: Try right clicking!
+			}
+
+			EggCupLight: {
+				DisplayName: Egg Cup Light
 				Tooltip: ""
 			}
 
-			Snowman: {
-				DisplayName: Snowman
+			EggLight: {
+				DisplayName: Egg Light
 				Tooltip: ""
 			}
 
-			StripeBanner: {
-				DisplayName: Stripe Banner
+			Egg: {
+				DisplayName: Egg
+				Tooltip: Try right clicking!
+			}
+
+			FloralDecal: {
+				DisplayName: Floral Decal
+				Tooltip: Try right clicking!
+			}
+
+			RabbitStandee: {
+				DisplayName: Rabbit Standee
 				Tooltip: ""
 			}
 
-			Sun: {
-				DisplayName: Festive Sun
+			SpringPennant: {
+				DisplayName: Spring Pennant
+				Tooltip: Try right clicking!
+			}
+
+			SpringEgg: {
+				DisplayName: Spring Egg
+				Tooltip: Try right clicking!
+			}
+
+			Bow: {
+				DisplayName: Bow
+				Tooltip: Try right clicking!
+			}
+
+			LargeBunting: {
+				DisplayName: Bunting
+				Tooltip: Try right clicking!
+			}
+
+			RibbonRosette: {
+				DisplayName: Ribbon Rosette
+				Tooltip: Try right clicking!
+			}
+
+			Rosette: {
+				DisplayName: Rosette
+				Tooltip: Try right clicking!
+			}
+
+			SmallBow: {
+				DisplayName: Small Bow
+				Tooltip: Try right clicking!
+			}
+
+			SmallBunting: {
+				DisplayName: Small Bunting
+				Tooltip: Try right clicking!
+			}
+
+			SmallRibbonRosette: {
+				DisplayName: Small Ribbon Rosette
+				Tooltip: Try right clicking!
+			}
+
+			SmallRosette: {
+				DisplayName: Small Rosette
+				Tooltip: Try right clicking!
+			}
+
+			AlembicGlass: {
+				DisplayName: Glass Alembic
+				Tooltip: Try right clicking!
+			}
+
+			AlembicGlassSmall: {
+				DisplayName: Small Glass Alembic
+				Tooltip: Try right clicking!
+			}
+
+			AlembicHorizontal: {
+				DisplayName: Horizontal Alembic
 				Tooltip: ""
 			}
 
-			ToyTrainItem: {
-				DisplayName: Toy Train
+			AlembicMounted: {
+				DisplayName: Mounted Alembic
+				Tooltip: Try right clicking!
+			}
+
+			BrassAlembic: {
+				DisplayName: Brass Alembic
 				Tooltip: ""
 			}
 
-			TrainSetItem: {
-				DisplayName: Train Set
+			BrassAlembicSmall: {
+				DisplayName: Small Brass Alembic
 				Tooltip: ""
 			}
 
-			TreeGnome: {
-				DisplayName: Tree Gnome
+			BigCauldronItem: {
+				DisplayName: Big Cauldron
 				Tooltip: ""
 			}
 
-			WhiteBanner: {
-				DisplayName: White Banner
+			Cauldrons: {
+				DisplayName: Cauldron
+				Tooltip: Try right clicking!
+			}
+
+			TinyCauldronItem: {
+				DisplayName: Tiny Cauldron
 				Tooltip: ""
 			}
 
-			WhiteBauble: {
-				DisplayName: White Bauble
+			FlaskMounted: {
+				DisplayName: Mounted Flask
 				Tooltip: ""
 			}
 
-			WhiteBow: {
-				DisplayName: White Bow
+			FlaskSmall: {
+				DisplayName: Small Flask
+				Tooltip: Try right clicking!
+			}
+
+			FlaskTall: {
+				DisplayName: Tall Flask
+				Tooltip: Try right clicking!
+			}
+
+			Vials: {
+				DisplayName: Vials
+				Tooltip: Try right clicking!
+			}
+
+			AlchemyChestItem: {
+				DisplayName: Alchemy Chest
+				Tooltip: Try right clicking!
+			}
+
+			MortarItem: {
+				DisplayName: Mortar
+				Tooltip: Try right clicking!
+			}
+
+			Scales: {
+				DisplayName: Scales
+				Tooltip: Try right clicking!
+			}
+
+			BottleBlack: {
+				DisplayName: Black Bottle
+				Tooltip: Try right clicking!
+			}
+
+			BottleBronze: {
+				DisplayName: Bronze Bottle
 				Tooltip: ""
 			}
 
-			WhiteEmbroideredSock: {
-				DisplayName: Embroidered White Stocking
+			BottleFancy: {
+				DisplayName: Fancy Bottle
+				Tooltip: Try right clicking!
+			}
+
+			BottleGlass: {
+				DisplayName: Glass Bottle
+				Tooltip: Try right clicking!
+			}
+
+			BottleGreen: {
+				DisplayName: Green Bottle
+				Tooltip: Try right clicking!
+			}
+
+			BottleGreenSmall: {
+				DisplayName: Small Green Bottle
+				Tooltip: Try right clicking!
+			}
+
+			BottleSmallBlack: {
+				DisplayName: Small Black Bottle
+				Tooltip: Try right clicking!
+			}
+
+			TinyJarBlack: {
+				DisplayName: Tiny Black Jar
+				Tooltip: Try right clicking!
+			}
+
+			TinyJarWhite: {
+				DisplayName: Tiny White Jar
+				Tooltip: Try right clicking!
+			}
+
+			BubblingJarGreen: {
+				DisplayName: Bubbling Green Jar
 				Tooltip: ""
 			}
 
-			WhiteMistletoe: {
-				DisplayName: White Mistletoe
+			BubblingJarOrange: {
+				DisplayName: Bubbling Orange Jar
 				Tooltip: ""
 			}
 
-			WhiteMug: {
-				DisplayName: White Mug
+			BubblingJarPurple: {
+				DisplayName: Bubbling Purple Jar
 				Tooltip: ""
 			}
 
-			WhiteSock: {
-				DisplayName: White Stocking
+			SparklyBottleGreen: {
+				DisplayName: Sparkly Green Bottle
 				Tooltip: ""
 			}
 
-			WhiteStarBanner: {
-				DisplayName: White Star Banner
+			SparklyBottleOrange: {
+				DisplayName: Sparkly Orange Bottle
 				Tooltip: ""
 			}
 
-			WhiteTreeBanner: {
-				DisplayName: White Tree Banner
+			SparklyBottlePurple: {
+				DisplayName: Sparkly Purple Bottle
 				Tooltip: ""
 			}
 
-			Wreath: {
-				DisplayName: Festive Wreath
+			SpookyCandleHolderBlack: {
+				DisplayName: Spooky Black Candle Holder
 				Tooltip: ""
 			}
 
-			BlackBunting: {
-				DisplayName: Black Bunting
+			SpookyCandleHolderRed: {
+				DisplayName: Spooky Red Candle Holder
 				Tooltip: ""
 			}
 
-			BlackRibbonRosette: {
-				DisplayName: Black Ribbon Rosette
+			SpookyCandleHolderWhite: {
+				DisplayName: Spooky White Candle Holder
 				Tooltip: ""
 			}
 
-			BlackRosette: {
-				DisplayName: Black Rosette
+			SpookyMeltedCandleBlack: {
+				DisplayName: Spooky Black Melted Candle
 				Tooltip: ""
 			}
 
-			BlueBunting: {
-				DisplayName: Blue Bunting
+			SpookyMeltedCandleRed: {
+				DisplayName: Spooky Red Melted Candle
 				Tooltip: ""
 			}
 
-			BlueRibbonRosette: {
-				DisplayName: Blue Ribbon Rosette
+			SpookyMeltedCandleWhite: {
+				DisplayName: Spooky White Melted Candle
 				Tooltip: ""
 			}
 
-			BlueRosette: {
-				DisplayName: Blue Rosette
+			SpookyCandleBlack: {
+				DisplayName: Spooky Black Candle
 				Tooltip: ""
+			}
+
+			SpookyCandleRed: {
+				DisplayName: Spooky Red Candle
+				Tooltip: ""
+			}
+
+			SpookyCandleWhite: {
+				DisplayName: Spooky White Candle
+				Tooltip: ""
+			}
+
+			SpookyLanternItem: {
+				DisplayName: Spooky Lantern
+				Tooltip: ""
+			}
+
+			SpookyCandlesTallBlackItem: {
+				DisplayName: Tall Spooky Black Candle
+				Tooltip: ""
+			}
+
+			SpookyCandlesTallRedItem: {
+				DisplayName: Tall Spooky Red Candle
+				Tooltip: ""
+			}
+
+			SpookyCandlesTallWhiteItem: {
+				DisplayName: Tall Spooky White Candle
+				Tooltip: ""
+			}
+
+			HalloweenDecalsBatItem: {
+				DisplayName: Bat Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsCandyItem: {
+				DisplayName: Candy Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsCatItem: {
+				DisplayName: Cat Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsCrowItem: {
+				DisplayName: Crow Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsGhostItem: {
+				DisplayName: Ghost Decals
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsMiscItem: {
+				DisplayName: Spooky Decals
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsPumpkinItem: {
+				DisplayName: Pumpkin Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsSkullItem: {
+				DisplayName: Skull Decal
+				Tooltip: Try right clicking!
+			}
+
+			HalloweenDecalsWebItem: {
+				DisplayName: Web Decals
+				Tooltip: Try right clicking!
+			}
+
+			PumpkinBigItem: {
+				DisplayName: Big Pumpkin
+				Tooltip: Try right clicking!
+			}
+
+			PumpkinSmallItem: {
+				DisplayName: Small Pumpkin
+				Tooltip: Try right clicking!
+			}
+
+			PumpkinTallItem: {
+				DisplayName: Tall Pumpkin
+				Tooltip: Try right clicking!
+			}
+
+			StreamerBatItem: {
+				DisplayName: Bat Streamer
+				Tooltip: ""
+			}
+
+			StreamerCatItem: {
+				DisplayName: Cat Streamer
+				Tooltip: ""
+			}
+
+			StreamerGhostItem: {
+				DisplayName: Ghost Streamer
+				Tooltip: ""
+			}
+
+			StreamerPumpkinItem: {
+				DisplayName: Pumpkin Streamer
+				Tooltip: ""
+			}
+
+			StreamerSpiderItem: {
+				DisplayName: Spider Streamer
+				Tooltip: ""
+			}
+
+			AutumnalWreath: {
+				DisplayName: Autumnal Wreath
+				Tooltip: ""
+			}
+
+			SpookyWreath: {
+				DisplayName: Spooky Wreath
+				Tooltip: ""
+			}
+
+			BellJarItem: {
+				DisplayName: Bell Jar
+				Tooltip: Try right clicking!
+			}
+
+			BellJarItemMaggot: {
+				DisplayName: Infested Bell Jar
+				Tooltip: ""
+			}
+
+			BellJarItemWorm: {
+				DisplayName: Lesioned Bell Jar
+				Tooltip: ""
+			}
+
+			BellJarTall: {
+				DisplayName: Tall Bell Jar
+				Tooltip: Try right clicking!
+			}
+
+			JarBrainItem: {
+				DisplayName: Brain Jar
+				Tooltip: ""
+			}
+
+			JarEyeItem: {
+				DisplayName: Eye Jar
+				Tooltip: ""
+			}
+
+			JarWormItem: {
+				DisplayName: Worm Jar
+				Tooltip: ""
+			}
+
+			GobletItem: {
+				DisplayName: Goblet
+				Tooltip: Try right-clicking!
+			}
+
+			HangingSpoons: {
+				DisplayName: Hanging Spoons
+				Tooltip: ""
+			}
+
+			Scarecrow: {
+				DisplayName: Scarecrow
+				Tooltip: ""
+			}
+
+			WitchHatItem: {
+				DisplayName: Witch Hat
+				Tooltip: ""
+			}
+
+			Crackers: {
+				DisplayName: Cracker
+				Tooltip: Try right-clicking!
 			}
 
 			ChampagneFlute: {
 				DisplayName: Champagne Flute
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			ChampagneItem: {
@@ -671,203 +996,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			GoldRibbonRosette: {
-				DisplayName: Gold Ribbon Rosette
-				Tooltip: ""
-			}
-
-			GoldRosette: {
-				DisplayName: Gold Rosette
-				Tooltip: ""
-			}
-
-			GreenBunting: {
-				DisplayName: Green Bunting
+			Glass: {
+				DisplayName: Glass
 				Tooltip: ""
 			}
 
 			GreenChampagneItem: {
 				DisplayName: Expensive Champagne
-				Tooltip: ""
-			}
-
-			GreenRibbonRosette: {
-				DisplayName: Green Ribbon Rosette
-				Tooltip: ""
-			}
-
-			GreenRosette: {
-				DisplayName: Green Rosette
-				Tooltip: ""
-			}
-
-			OrangeBunting: {
-				DisplayName: Orange Bunting
-				Tooltip: ""
-			}
-
-			OrangeRibbonRosette: {
-				DisplayName: Orange Ribbon Rosette
-				Tooltip: ""
-			}
-
-			OrangeRosette: {
-				DisplayName: Orange Rosette
-				Tooltip: ""
-			}
-
-			Orange: {
-				DisplayName: Orange
-				Tooltip: Try right clicking!
-			}
-
-			PurpleBunting: {
-				DisplayName: Purple Bunting
-				Tooltip: ""
-			}
-
-			PurpleRibbonRosette: {
-				DisplayName: Purple Ribbon Rosette
-				Tooltip: ""
-			}
-
-			PurpleRosette: {
-				DisplayName: Purple Rosette
-				Tooltip: ""
-			}
-
-			RedBunting: {
-				DisplayName: Red Bunting
-				Tooltip: ""
-			}
-
-			RedRibbonRosette: {
-				DisplayName: Red Ribbon Rosette
-				Tooltip: ""
-			}
-
-			RedRosette: {
-				DisplayName: Red Rosette
-				Tooltip: ""
-			}
-
-			SmallBlackBunting: {
-				DisplayName: Small Black Bunting
-				Tooltip: ""
-			}
-
-			SmallBlackRibbonRosette: {
-				DisplayName: Small Black Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallBlackRosette: {
-				DisplayName: Small Black Rosette
-				Tooltip: ""
-			}
-
-			SmallBlueBunting: {
-				DisplayName: Small Blue Bunting
-				Tooltip: ""
-			}
-
-			SmallBlueRibbonRosette: {
-				DisplayName: Small Blue Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallBlueRosette: {
-				DisplayName: Small Blue Rosette
-				Tooltip: ""
-			}
-
-			SmallGoldRibbonRosette: {
-				DisplayName: Small Gold Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallGoldRosette: {
-				DisplayName: Small Gold Rosette
-				Tooltip: ""
-			}
-
-			SmallGreenBunting: {
-				DisplayName: Small Green Bunting
-				Tooltip: ""
-			}
-
-			SmallGreenRibbonRosette: {
-				DisplayName: Small Green Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallGreenRosette: {
-				DisplayName: Small Green Rosette
-				Tooltip: ""
-			}
-
-			SmallOrangeBunting: {
-				DisplayName: Small Orange Bunting
-				Tooltip: ""
-			}
-
-			SmallOrangeRibbonRosette: {
-				DisplayName: Small Orange Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallOrangeRosette: {
-				DisplayName: Small Orange Rosette
-				Tooltip: ""
-			}
-
-			SmallPurpleBunting: {
-				DisplayName: Small Purple Bunting
-				Tooltip: ""
-			}
-
-			SmallPurpleRibbonRosette: {
-				DisplayName: Small Purple Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallPurpleRosette: {
-				DisplayName: Small Purple Rosette
-				Tooltip: ""
-			}
-
-			SmallRedBunting: {
-				DisplayName: Small Red Bunting
-				Tooltip: ""
-			}
-
-			SmallRedRibbonRosette: {
-				DisplayName: Small Red Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallRedRosette: {
-				DisplayName: Small Red Rosette
-				Tooltip: ""
-			}
-
-			SmallWhiteBunting: {
-				DisplayName: Small White Bunting
-				Tooltip: ""
-			}
-
-			SmallWhiteRibbonRosette: {
-				DisplayName: Small White Ribbon Rosette
-				Tooltip: ""
-			}
-
-			SmallWhiteRosette: {
-				DisplayName: Small White Rosette
-				Tooltip: ""
-			}
-
-			SmallYellowBunting: {
-				DisplayName: Small Yellow Bunting
 				Tooltip: ""
 			}
 
@@ -878,57 +1013,7 @@ Mods: {
 
 			Top: {
 				DisplayName: Top
-				Tooltip: Try right clicking!
-			}
-
-			WhiteBunting: {
-				DisplayName: White Bunting
 				Tooltip: ""
-			}
-
-			WhiteRibbonRosette: {
-				DisplayName: White Ribbon Rosette
-				Tooltip: ""
-			}
-
-			WhiteRosette: {
-				DisplayName: White Rosette
-				Tooltip: ""
-			}
-
-			YellowBunting: {
-				DisplayName: Yellow Bunting
-				Tooltip: ""
-			}
-
-			BeadedRibbons: {
-				DisplayName: Beaded Ribbons
-				Tooltip: ""
-			}
-
-			BigHeartBear: {
-				DisplayName: Big Heart Bear
-				Tooltip: ""
-			}
-
-			BigHeartDecal: {
-				DisplayName: Big Heart Decal
-				Tooltip: ""
-			}
-
-			BigWhiteBear: {
-				DisplayName: Big White Bear
-				Tooltip: ""
-			}
-
-			BlackChocolates: {
-				DisplayName: Box of Chocolates
-				Tooltip: Try right clicking!
-			}
-
-			BrightRose: {
-				DisplayName: Bright Rose
-				Tooltip: Try right clicking!
 			}
 
 			BundledHeartBalloons: {
@@ -938,22 +1023,7 @@ Mods: {
 
 			Bun: {
 				DisplayName: Bun
-				Tooltip: Try right clicking!
-			}
-
-			CandyBowl: {
-				DisplayName: Bowl of Candy
-				Tooltip: Try right clicking!
-			}
-
-			DarkRose: {
-				DisplayName: Dark Rose
-				Tooltip: Try right clicking!
-			}
-
-			EmptyBowl: {
-				DisplayName: Bowl
-				Tooltip: ""
+				Tooltip: Try right-clicking!
 			}
 
 			GoldBundledHeartBalloons: {
@@ -962,12 +1032,57 @@ Mods: {
 			}
 
 			GoldHeartBalloon: {
-				DisplayName: Gold Heart Balloons
+				DisplayName: Gold Heart Balloon
 				Tooltip: ""
+			}
+
+			HeartBalloon: {
+				DisplayName: Heart Balloon
+				Tooltip: ""
+			}
+
+			MixedBundledHeartBalloons: {
+				DisplayName: Mixed Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			RedWhiteBundledHeartBalloons: {
+				DisplayName: Red White Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			WhiteBundledHeartBalloons: {
+				DisplayName: White Bundled Heart Balloons
+				Tooltip: ""
+			}
+
+			WhiteHeartBalloon: {
+				DisplayName: White Heart Balloon
+				Tooltip: ""
+			}
+
+			HeartMobile: {
+				DisplayName: Heart Mobile
+				Tooltip: ""
+			}
+
+			HeartStringsItem: {
+				DisplayName: Heart Strings
+				Tooltip: Try right-clicking!
 			}
 
 			GoldHeartBow: {
 				DisplayName: Gold Heart Bow
+				Tooltip: ""
+			}
+
+			HeartBow: {
+				DisplayName: Heart Bow
+				Tooltip: ""
+			}
+
+			BigHeartDecal: {
+				DisplayName: Big Heart Decal
 				Tooltip: ""
 			}
 
@@ -976,8 +1091,73 @@ Mods: {
 				Tooltip: ""
 			}
 
+			HeartDecal: {
+				DisplayName: Heart Decal
+				Tooltip: ""
+			}
+
+			LaceDecal: {
+				DisplayName: Lace Decal
+				Tooltip: ""
+			}
+
+			LaceHeartDecal: {
+				DisplayName: Lace Heart Decal
+				Tooltip: ""
+			}
+
+			SmallGoldHeartDecal: {
+				DisplayName: Small Gold Heart Decal
+				Tooltip: ""
+			}
+
+			SmallHeartDecal: {
+				DisplayName: Small Heart Decal
+				Tooltip: ""
+			}
+
 			GoldHeartStrand: {
-				DisplayName: Strand of Gold Hearts
+				DisplayName: Gold Heart Strand
+				Tooltip: ""
+			}
+
+			HeartStrand: {
+				DisplayName: Heart Strand
+				Tooltip: ""
+			}
+
+			BrightRose: {
+				DisplayName: Bright Rose
+				Tooltip: ""
+			}
+
+			DarkRose: {
+				DisplayName: Dark Rose
+				Tooltip: ""
+			}
+
+			RosePetalsItem: {
+				DisplayName: Rose Petals
+				Tooltip: Try right-clicking!
+			}
+
+			HeartfeltCardsItem: {
+				DisplayName: Heartfelt Cards
+				Tooltip: Try right-clicking!
+			}
+
+			SmallRoseVase: {
+				DisplayName: Small Rose Vase
+				Tooltip: ""
+			}
+
+			TallRoseVase: {
+				DisplayName: Tall Rose Vase
+				Tooltip: ""
+			}
+
+			BeadedRibbons: {
+				DisplayName: Beaded Ribbons
 				Tooltip: ""
 			}
 
@@ -991,61 +1171,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			HeartBalloon: {
-				DisplayName: Heart Balloons
-				Tooltip: ""
-			}
-
-			HeartBear: {
-				DisplayName: Heart Bear
-				Tooltip: ""
-			}
-
-			HeartBow: {
-				DisplayName: Heart Bow
-				Tooltip: ""
-			}
-
-			HeartDecal: {
-				DisplayName: Heart Decal
-				Tooltip: ""
-			}
-
-			HeartMobile: {
-				DisplayName: Heart Mobile
-				Tooltip: ""
-			}
-
-			HeartStrand: {
-				DisplayName: Strand of Hearts
-				Tooltip: ""
-			}
-
-			HeartStringsItem: {
-				DisplayName: String of Hearts
-				Tooltip: Try right clicking!
-			}
-
-			LaceDecal: {
-				DisplayName: Lace Decal
-				Tooltip: ""
-			}
-
-			LaceHeartDecal: {
-				DisplayName: Lace Heart Decal
-				Tooltip: ""
-			}
-
-			MixedBundledHeartBalloons: {
-				DisplayName: Mixed Bundled Heart Balloons
-				Tooltip: ""
-			}
-
-			RedChocolates: {
-				DisplayName: Box of Chocolates
-				Tooltip: Try right clicking!
-			}
-
 			RedRibbon: {
 				DisplayName: Red Ribbon
 				Tooltip: ""
@@ -1056,53 +1181,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RedWhiteBundledHeartBalloons: {
-				DisplayName: Red & White Bundled Heart Balloons
-				Tooltip: ""
-			}
-
 			RedWhiteRibbons: {
-				DisplayName: Red & White Ribbons
-				Tooltip: ""
-			}
-
-			RosePetalsItem: {
-				DisplayName: Rose Petals
-				Tooltip: Try right clicking!
-			}
-
-			SmallGoldHeartDecal: {
-				DisplayName: Small Gold Heart Decal
-				Tooltip: ""
-			}
-
-			SmallHeartDecal: {
-				DisplayName: Small Heart Decal
-				Tooltip: ""
-			}
-
-			SmallRoseVase: {
-				DisplayName: Small Rose Vase
-				Tooltip: ""
-			}
-
-			TallRoseVase: {
-				DisplayName: Tall Rose Vase
-				Tooltip: ""
-			}
-
-			WhiteBundledHeartBalloons: {
-				DisplayName: White Bundled Heart Balloons
-				Tooltip: ""
-			}
-
-			WhiteHeartBalloon: {
-				DisplayName: White Heart Balloons
+				DisplayName: Red White Ribbons
 				Tooltip: ""
 			}
 
 			WhiteRedRibbons: {
-				DisplayName: White & Red Ribbons
+				DisplayName: White Red Ribbons
 				Tooltip: ""
 			}
 
@@ -1111,1805 +1196,43 @@ Mods: {
 				Tooltip: ""
 			}
 
-			BrokenObeliskItem: {
-				DisplayName: Broken Obelisk
+			BigHeartBear: {
+				DisplayName: Big Heart Bear
 				Tooltip: ""
 			}
 
-			DecorativeRope: {
-				DisplayName: Decorative Rope
+			BigWhiteBear: {
+				DisplayName: Big White Bear
 				Tooltip: ""
 			}
 
-			DecorativeSilkRope: {
-				DisplayName: Decorative Silk Rope
+			HeartBear: {
+				DisplayName: Heart Bear
 				Tooltip: ""
-			}
-
-			DecorativeVineRope: {
-				DisplayName: Decorative Vine Rope
-				Tooltip: ""
-			}
-
-			DecorativeWebItem: {
-				DisplayName: Decorative Web
-				Tooltip: ""
-			}
-
-			DecorativeWebRope: {
-				DisplayName: Decorative Web Rope
-				Tooltip: ""
-			}
-
-			ObeliskItem: {
-				DisplayName: Obelisk
-				Tooltip: ""
-			}
-
-			BlueSilkFlowers: {
-				DisplayName: Blue Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			PinkSilkFlowers: {
-				DisplayName: Pink Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			PurpleSilkFlowers: {
-				DisplayName: Purple Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			RedSilkFlowers: {
-				DisplayName: Red Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			SilkCorruptionPlants: {
-				DisplayName: Silk Corruption Plants
-				Tooltip: Try right clicking!
-			}
-
-			SilkCrimsonPlants: {
-				DisplayName: Silk Crimson Plants
-				Tooltip: Try right clicking!
-			}
-
-			SilkGrass: {
-				DisplayName: Silk Grass
-				Tooltip: Try right clicking!
-			}
-
-			SilkHallowPlants: {
-				DisplayName: Silk Hallow Plants
-				Tooltip: Try right clicking!
-			}
-
-			SilkJungleFlowers: {
-				DisplayName: Silk Jungle Flowers
-				Tooltip: Try right clicking!
-			}
-
-			SilkJunglePlants: {
-				DisplayName: Silk Jungle Plants
-				Tooltip: Try right clicking!
-			}
-
-			SilkWildflowers: {
-				DisplayName: Silk Wildflowers
-				Tooltip: Try right clicking!
-			}
-
-			WhiteSilkFlowers: {
-				DisplayName: White Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			YellowSilkFlowers: {
-				DisplayName: Yellow Silk Flowers
-				Tooltip: Try right clicking!
-			}
-
-			FishBarrel: {
-				DisplayName: Fish Barrel
-				Tooltip: ""
-			}
-
-			FoodBarrel: {
-				DisplayName: Food Barrel
-				Tooltip: ""
-			}
-
-			FestiveArmchairItem: {
-				DisplayName: Festive Armchair
-				Tooltip: ""
-			}
-
-			FestiveBathtubItem: {
-				DisplayName: Festive Bathtub
-				Tooltip: ""
-			}
-
-			FestiveBedItem: {
-				DisplayName: Festive Bed
-				Tooltip: ""
-			}
-
-			FestiveBookcaseItem: {
-				DisplayName: Festive Bookcase
-				Tooltip: ""
-			}
-
-			FestiveCandelabraItem: {
-				DisplayName: Festive Candelabra
-				Tooltip: ""
-			}
-
-			FestiveCandleItem: {
-				DisplayName: Festive Candle
-				Tooltip: ""
-			}
-
-			FestiveCeilingLampItem: {
-				DisplayName: Festive Ceiling Lamp
-				Tooltip: ""
-			}
-
-			FestiveChairItem: {
-				DisplayName: Festive Chair
-				Tooltip: ""
-			}
-
-			FestiveChandelierItem: {
-				DisplayName: Festive Chandelier
-				Tooltip: ""
-			}
-
-			FestiveChestItem: {
-				DisplayName: Festive Chest
-				Tooltip: ""
-			}
-
-			FestiveClockItem: {
-				DisplayName: Festive Clock
-				Tooltip: ""
-			}
-
-			FestiveDoorItem: {
-				DisplayName: Festive Door
-				Tooltip: ""
-			}
-
-			FestiveDresserItem: {
-				DisplayName: Festive Dresser
-				Tooltip: ""
-			}
-
-			FestiveLampItem: {
-				DisplayName: Festive Lamp
-				Tooltip: ""
-			}
-
-			FestiveLamppostItem: {
-				DisplayName: Festive Lamppost
-				Tooltip: ""
-			}
-
-			FestiveLanternItem: {
-				DisplayName: Festive Lantern
-				Tooltip: ""
-			}
-
-			FestivePianoItem: {
-				DisplayName: Festive Piano
-				Tooltip: ""
-			}
-
-			FestivePlatformItem: {
-				DisplayName: Festive Platform
-				Tooltip: ""
-			}
-
-			FestiveSinkItem: {
-				DisplayName: Festive Sink
-				Tooltip: ""
-			}
-
-			FestiveSofaItem: {
-				DisplayName: Festive Sofa
-				Tooltip: ""
-			}
-
-			FestiveTableItem: {
-				DisplayName: Festive Table
-				Tooltip: ""
-			}
-
-			FestiveToiletItem: {
-				DisplayName: Festive Toilet
-				Tooltip: ""
-			}
-
-			FestiveWorkbenchItem: {
-				DisplayName: Festive Work Bench
-				Tooltip: ""
-			}
-
-			BigHeartfeltPlatform: {
-				DisplayName: Heartfelt Platform
-				Tooltip: ""
-			}
-
-			HeartfeltArmchair: {
-				DisplayName: Heartfelt Armchair
-				Tooltip: ""
-			}
-
-			HeartfeltBathtub: {
-				DisplayName: Heartfelt Bathtub
-				Tooltip: ""
-			}
-
-			HeartfeltBed.DisplayName: Heartfelt Bed
-
-			HeartfeltBookcase: {
-				DisplayName: Heartfelt Bookcase
-				Tooltip: ""
-			}
-
-			HeartfeltCandelabra: {
-				DisplayName: Heartfelt Candelabra
-				Tooltip: ""
-			}
-
-			HeartfeltCandle: {
-				DisplayName: Heartfelt Candle
-				Tooltip: ""
-			}
-
-			HeartfeltCeilingLamp: {
-				DisplayName: Heartfelt Ceiling Lamp
-				Tooltip: ""
-			}
-
-			HeartfeltChair: {
-				DisplayName: Heartfelt Chair
-				Tooltip: ""
-			}
-
-			HeartfeltChandelier: {
-				DisplayName: Heartfelt Chandelier
-				Tooltip: ""
-			}
-
-			HeartfeltChest: {
-				DisplayName: Heartfelt Chest
-				Tooltip: ""
-			}
-
-			HeartfeltClock: {
-				DisplayName: Heartfelt Clock
-				Tooltip: ""
-			}
-
-			HeartfeltCoveredTable: {
-				DisplayName: Covered Heartfelt Table
-				Tooltip: ""
-			}
-
-			HeartfeltCoveredWorkBench: {
-				DisplayName: Covered Heartfelt Work Bench
-				Tooltip: ""
-			}
-
-			HeartfeltCraftingTable: {
-				DisplayName: Heartfelt Crafting Table
-				Tooltip: Used for special crafting
-			}
-
-			HeartfeltDecoratedTable: {
-				DisplayName: Decorated Heartfelt Table
-				Tooltip: ""
-			}
-
-			HeartfeltDoor: {
-				DisplayName: Heartfelt Door
-				Tooltip: ""
-			}
-
-			HeartfeltDresser: {
-				DisplayName: Heartfelt Dresser
-				Tooltip: ""
-			}
-
-			HeartfeltKingBed: {
-				DisplayName: Heartfelt Royal Bed
-				Tooltip: ""
-			}
-
-			HeartfeltLamp: {
-				DisplayName: Heartfelt Lamp
-				Tooltip: ""
-			}
-
-			HeartfeltLantern: {
-				DisplayName: Heartfelt Lantern
-				Tooltip: ""
-			}
-
-			HeartfeltOttoman: {
-				DisplayName: Heartfelt Ottoman
-				Tooltip: ""
-			}
-
-			HeartfeltPiano: {
-				DisplayName: Heartfelt Piano
-				Tooltip: ""
-			}
-
-			HeartfeltPlatform: {
-				DisplayName: Heartfelt Platform
-				Tooltip: ""
-			}
-
-			HeartfeltSink: {
-				DisplayName: Heartfelt Sink
-				Tooltip: ""
-			}
-
-			HeartfeltSofa: {
-				DisplayName: Heartfelt Sofa
-				Tooltip: ""
-			}
-
-			HeartfeltTable: {
-				DisplayName: Heartfelt Table
-				Tooltip: ""
-			}
-
-			HeartfeltToilet: {
-				DisplayName: Heartfelt Toilet
-				Tooltip: ""
-			}
-
-			HeartfeltWorkBench: {
-				DisplayName: Heartfelt Work Bench
-				Tooltip: ""
-			}
-
-			BambooArmchair: {
-				DisplayName: Bamboo Armchair
-				Tooltip: ""
-			}
-
-			BeanbagArmchair: {
-				DisplayName: Beanbag
-				Tooltip: ""
-			}
-
-			BlueDungeonArmchair: {
-				DisplayName: Blue Dungeon Armchair
-				Tooltip: ""
-			}
-
-			BoneArmchair: {
-				DisplayName: Bone Armchair
-				Tooltip: ""
-			}
-
-			BorealArmchair: {
-				DisplayName: Boreal Armchair
-				Tooltip: ""
-			}
-
-			CactusArmchair: {
-				DisplayName: Cactus Armchair
-				Tooltip: ""
-			}
-
-			CrystalArmchair: {
-				DisplayName: Crystal Armchair
-				Tooltip: ""
-			}
-
-			DynastyArmchair: {
-				DisplayName: Dynasty Armchair
-				Tooltip: ""
-			}
-
-			EbonwoodArmchair: {
-				DisplayName: Ebonwood Armchair
-				Tooltip: ""
-			}
-
-			FleshArmchair: {
-				DisplayName: Flesh Armchair
-				Tooltip: ""
-			}
-
-			FrozenArmchair: {
-				DisplayName: Frozen Armchair
-				Tooltip: ""
-			}
-
-			GlassArmchair: {
-				DisplayName: Glass Armchair
-				Tooltip: ""
-			}
-
-			GoldenArmchair: {
-				DisplayName: Golden Armchair
-				Tooltip: ""
-			}
-
-			GraniteArmchair: {
-				DisplayName: Granite Armchair
-				Tooltip: ""
-			}
-
-			GreenDungeonArmchair: {
-				DisplayName: Green Dungeon Armchair
-				Tooltip: ""
-			}
-
-			HoneyArmchair: {
-				DisplayName: Honey Armchair
-				Tooltip: ""
-			}
-
-			LesionArmchair: {
-				DisplayName: Lesion Armchair
-				Tooltip: ""
-			}
-
-			LihzahrdArmchair: {
-				DisplayName: Lihzahrd Armchair
-				Tooltip: ""
-			}
-
-			LivingwoodArmchair: {
-				DisplayName: Livingwood Armchair
-				Tooltip: ""
-			}
-
-			MahoganyArmchair: {
-				DisplayName: Rich Mahogany Armchair
-				Tooltip: ""
-			}
-
-			MarbleArmchair: {
-				DisplayName: Marble Armchair
-				Tooltip: ""
-			}
-
-			MartianArmchair: {
-				DisplayName: Martian Armchair
-				Tooltip: ""
-			}
-
-			MeteorArmchair: {
-				DisplayName: Meteorite Armchair
-				Tooltip: ""
-			}
-
-			MushroomArmchair: {
-				DisplayName: Mushroom Armchair
-				Tooltip: ""
-			}
-
-			MushroomLawnchair: {
-				DisplayName: Mushroom Lawnchair
-				Tooltip: ""
-			}
-
-			NebulaArmchair: {
-				DisplayName: Nebula Armchair
-				Tooltip: ""
-			}
-
-			ObsidianArmchair: {
-				DisplayName: Obsidian Armchair
-				Tooltip: ""
-			}
-
-			PalmwoodArmchair: {
-				DisplayName: Palmwood Armchair
-				Tooltip: ""
-			}
-
-			PalmwoodLawnchair: {
-				DisplayName: Palmwood Lawnchair
-				Tooltip: ""
-			}
-
-			PearlwoodArmchair: {
-				DisplayName: Pearlwood Armchair
-				Tooltip: ""
-			}
-
-			PinkDungeonArmchair: {
-				DisplayName: Pink Dungeon Armchair
-				Tooltip: ""
-			}
-
-			PumpkinArmchair: {
-				DisplayName: Pumpkin Armchair
-				Tooltip: ""
-			}
-
-			SandstoneArmchair: {
-				DisplayName: Sandstone Armchair
-				Tooltip: ""
-			}
-
-			ShadewoodArmchair: {
-				DisplayName: Shadewood Armchair
-				Tooltip: ""
-			}
-
-			SkywareArmchair: {
-				DisplayName: Skyware Armchair
-				Tooltip: ""
-			}
-
-			SlimeArmchair: {
-				DisplayName: Slime Armchair
-				Tooltip: ""
-			}
-
-			SolarArmchair: {
-				DisplayName: Solar Armchair
-				Tooltip: ""
-			}
-
-			SpiderArmchair: {
-				DisplayName: Spider Armchair
-				Tooltip: ""
-			}
-
-			SpookyArmchair: {
-				DisplayName: Spooky Armchair
-				Tooltip: ""
-			}
-
-			StardustArmchair: {
-				DisplayName: Stardust Armchair
-				Tooltip: ""
-			}
-
-			SteampunkArmchair: {
-				DisplayName: Steampunk Armchair
-				Tooltip: ""
-			}
-
-			VortexArmchair: {
-				DisplayName: Vortex Armchair
-				Tooltip: ""
-			}
-
-			WoodenArmchair: {
-				DisplayName: Wooden Armchair
-				Tooltip: ""
-			}
-
-			WoodenLawnchair: {
-				DisplayName: Wooden Lawnchair
-				Tooltip: ""
-			}
-
-			AshWoodArmchair: {
-				DisplayName: Ash Wood Armchair
-				Tooltip: ""
-			}
-
-			BalloonArmchair: {
-				DisplayName: Balloon Armchair
-				Tooltip: ""
-			}
-
-			ReefArmchair: {
-				DisplayName: Reef Armchair
-				Tooltip: ""
-			}
-
-			ConchArmchair: {
-				DisplayName: Conch Armchair
-				Tooltip: ""
-			}
-
-			AlchemyCeilingLamp: {
-				DisplayName: Alchemy Ceiling Lamp
-				Tooltip: ""
-			}
-
-			BambooCeilingLamp: {
-				DisplayName: Bamboo Ceiling Lamp
-				Tooltip: ""
-			}
-
-			BlueDungeonCeilingLamp: {
-				DisplayName: Blue Dungeon Ceiling Lamp
-				Tooltip: ""
-			}
-
-			BorealCeilingLamp: {
-				DisplayName: Boreal Ceiling Lamp
-				Tooltip: ""
-			}
-
-			BrassCeilingLamp: {
-				DisplayName: Brass Ceiling Lamp
-				Tooltip: ""
-			}
-
-			CactusCeilingLamp: {
-				DisplayName: Cactus Ceiling Lamp
-				Tooltip: ""
-			}
-
-			CagedCeilingLamp: {
-				DisplayName: Caged Ceiling Lamp
-				Tooltip: ""
-			}
-
-			CarriageCeilingLamp: {
-				DisplayName: Carriage Ceiling Lamp
-				Tooltip: ""
-			}
-
-			CeilingLamp: {
-				DisplayName: Ceiling Lamp
-				Tooltip: ""
-			}
-
-			ChainedCeilingLamp: {
-				DisplayName: Chained Ceiling Lamp
-				Tooltip: ""
-			}
-
-			CrystalCeilingLamp: {
-				DisplayName: Crystal Ceiling Lamp
-				Tooltip: ""
-			}
-
-			DiabolistCeilingLamp: {
-				DisplayName: Diabolist Ceiling Lamp
-				Tooltip: ""
-			}
-
-			DynastyCeilingLamp: {
-				DisplayName: Dynasty Ceiling Lamp
-				Tooltip: ""
-			}
-
-			DynastyCeilingLampThin: {
-				DisplayName: Thin Dynasty Ceiling Lamp
-				Tooltip: ""
-			}
-
-			EbonwoodCeilingLamp: {
-				DisplayName: Ebonwood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			FleshCeilingLamp1: {
-				DisplayName: Pustulant Ceiling Lamp
-				Tooltip: ""
-			}
-
-			FleshCeilingLamp2: {
-				DisplayName: Flesh Ceiling Lamp
-				Tooltip: ""
-			}
-
-			FrozenCeilingLamp: {
-				DisplayName: Frozen Ceiling Lamp
-				Tooltip: ""
-			}
-
-			GlassCeilingLamp: {
-				DisplayName: Glass Ceiling Lamp
-				Tooltip: ""
-			}
-
-			Glass: {
-				DisplayName: Glass
-				Tooltip: Try right clicking!
-			}
-
-			GoldenCeilingLamp: {
-				DisplayName: Golden Ceiling Lamp
-				Tooltip: ""
-			}
-
-			GraniteCeilingLamp: {
-				DisplayName: Granite Ceiling Lamp
-				Tooltip: ""
-			}
-
-			GreenDungeonCeilingLamp: {
-				DisplayName: Green Dungeon Ceiling Lamp
-				Tooltip: ""
-			}
-
-			HoneyCeilingLamp: {
-				DisplayName: Honey Ceiling Lamp
-				Tooltip: ""
-			}
-
-			LesionCeilingLamp: {
-				DisplayName: Lesion Ceiling Lamp
-				Tooltip: ""
-			}
-
-			LihzahrdCeilingLamp: {
-				DisplayName: Lihzard Ceiling Lamp
-				Tooltip: ""
-			}
-
-			LivingwoodCeilingLamp: {
-				DisplayName: Livingwood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			MahoganyCeilingLamp: {
-				DisplayName: Rich Mahogany Ceiling Lamp
-				Tooltip: ""
-			}
-
-			MarbleCeilingLamp: {
-				DisplayName: Marble Ceiling Lamp
-				Tooltip: ""
-			}
-
-			MartianCeilingLamp: {
-				DisplayName: Martian Ceiling Lamp
-				Tooltip: ""
-			}
-
-			MeteorCeilingLamp: {
-				DisplayName: Meteorite Ceiling Lamp
-				Tooltip: ""
-			}
-
-			MushroomCeilingLamp: {
-				DisplayName: Mushroom Ceiling Lamp
-				Tooltip: ""
-			}
-
-			NebulaCeilingLamp: {
-				DisplayName: Nebula Ceiling Lamp
-				Tooltip: ""
-			}
-
-			ObsidianCeilingLamp: {
-				DisplayName: Obsidian Ceiling Lamp
-				Tooltip: ""
-			}
-
-			PalmwoodCeilingLamp: {
-				DisplayName: Palm Wood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			PaperCeilingLamp: {
-				DisplayName: Chinese Ceiling Lamp
-				Tooltip: ""
-			}
-
-			PearlwoodCeilingLamp: {
-				DisplayName: Pearlwood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			Pear: {
-				DisplayName: Pear
-				Tooltip: Try right clicking!
-			}
-
-			PinkDungeonCeilingLamp: {
-				DisplayName: Pink Dungeon Ceiling Lamp
-				Tooltip: ""
-			}
-
-			PumpkinCeilingLamp: {
-				DisplayName: Pumpkin Ceiling Lamp
-				Tooltip: ""
-			}
-
-			RagSconceCeilingLamp: {
-				DisplayName: Rag Sconce Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SandstoneCeilingLamp: {
-				DisplayName: Sandstone Ceiling Lamp
-				Tooltip: ""
-			}
-
-			ShadewoodCeilingLamp: {
-				DisplayName: Shadewood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SkywareCeilingLamp: {
-				DisplayName: Skyware Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SlimeCeilingLamp: {
-				DisplayName: Slime Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SolarCeilingLamp: {
-				DisplayName: Solar Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpiderCeilingLamp: {
-				DisplayName: Spider Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpookyCeilingLamp: {
-				DisplayName: Spooky Ceiling Lamp
-				Tooltip: ""
-			}
-
-			StardustCeilingLamp: {
-				DisplayName: Stardust Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SteampunkCeilingLamp: {
-				DisplayName: Steampunk Ceiling Lamp
-				Tooltip: ""
-			}
-
-			VortexCeilingLamp: {
-				DisplayName: Vortex Ceiling Lamp
-				Tooltip: ""
-			}
-
-			AshWoodCeilingLamp: {
-				DisplayName: Ash Wood Ceiling Lamp
-				Tooltip: ""
-			}
-
-			BallonCeilingLamp: {
-				DisplayName: Balloon Ceiling Lamp
-				Tooltip: ""
-			}
-
-			ReefCeilingLamp: {
-				DisplayName: Reef Ceiling Lamp
-				Tooltip: ""
-			}
-
-			ChocolateWallItem: {
-				DisplayName: Chocolate Wall
-				Tooltip: ""
-			}
-
-			FadedHieroWall1Item: {
-				DisplayName: Faded Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			FadedHieroWall2Item: {
-				DisplayName: Faded Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			FadedHieroWall3Item: {
-				DisplayName: Faded Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			FadedHieroWall4Item: {
-				DisplayName: Faded Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			FadedHieroWallSmallItem: {
-				DisplayName: Faded Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			FrostedGlassItem: {
-				DisplayName: Frosted Glass
-				Tooltip: ""
-			}
-
-			HeartfeltWallItem: {
-				DisplayName: Heartfelt Wall
-				Tooltip: ""
-			}
-
-			HieroWall1Item: {
-				DisplayName: Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			HieroWall2Item: {
-				DisplayName: Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			HieroWall3Item: {
-				DisplayName: Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			HieroWall4Item: {
-				DisplayName: Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			HieroWallSmallItem: {
-				DisplayName: Hieroglyphic Wall
-				Tooltip: ""
-			}
-
-			LotusWallItem: {
-				DisplayName: Lotus Wall
-				Tooltip: ""
-			}
-
-			PolishedSandstoneBrickWallItem: {
-				DisplayName: Polished Sandstone Brick Wall
-				Tooltip: ""
-			}
-
-			SandstonePillarWallItem: {
-				DisplayName: Sandstone Pillar Wall
-				Tooltip: ""
-			}
-
-			HeartfeltBedItem: {
-				DisplayName: Heartfelt Bed
-				Tooltip: ""
-			}
-
-			HeartfeltDresserItem: {
-				DisplayName: Heartfelt Dresser
-				Tooltip: ""
-			}
-
-			BalloonCeilingLamp: {
-				DisplayName: Balloon Ceiling Lamp
-				Tooltip: ""
-			}
-
-			Ball: {
-				DisplayName: Ball
-				Tooltip: Try right clicking!
-			}
-
-			HeartfeltChestItem: {
-				Tooltip: ""
-				DisplayName: Heartfelt Chest
-			}
-
-			BasketItem: {
-				DisplayName: Basket
-				Tooltip: ""
-			}
-
-			DecoSpikeItem: {
-				DisplayName: Decorative Spike
-				Tooltip: ""
-			}
-
-			DecoWoodenSpikeItem: {
-				DisplayName: Decorative Wooden Spike
-				Tooltip: ""
-			}
-
-			WetBasketItem: {
-				DisplayName: Wet Basket
-				Tooltip: ""
-			}
-
-			AshVineBasket: {
-				DisplayName: Ash Vine Basket
-				Tooltip: ""
-			}
-
-			CorruptReedBasket: {
-				DisplayName: Corrupt Reed Basket
-				Tooltip: ""
-			}
-
-			CorruptThornBasket: {
-				DisplayName: Corrupt Thorn Basket
-				Tooltip: ""
-			}
-
-			CorruptVineBasket: {
-				DisplayName: Corrupt Vine Basket
-				Tooltip: ""
-			}
-
-			CrimsonReedBasket: {
-				DisplayName: Crimson Reed Basket
-				Tooltip: ""
-			}
-
-			CrimsonThornBasket: {
-				DisplayName: Crimson Thorn Basket
-				Tooltip: ""
-			}
-
-			CrimsonVineBasket: {
-				DisplayName: Crimson Vine Basket
-				Tooltip: ""
-			}
-
-			FloweringVineBasket: {
-				DisplayName: Flowering Vine Basket
-				Tooltip: ""
-			}
-
-			HallowReedBasket: {
-				DisplayName: Hallow Reed Basket
-				Tooltip: ""
-			}
-
-			HallowVineBasket: {
-				DisplayName: Hallow Vine Basket
-				Tooltip: ""
-			}
-
-			JungleReedBasket: {
-				DisplayName: Jungle Reed Basket
-				Tooltip: ""
-			}
-
-			JungleThornBasket: {
-				DisplayName: Jungle Thorn Basket
-				Tooltip: ""
-			}
-
-			JungleVineBasket: {
-				DisplayName: Jungle Vine Basket
-				Tooltip: ""
-			}
-
-			MushroomReedBasket: {
-				DisplayName: Mushroom Reed Basket
-				Tooltip: ""
-			}
-
-			MushroomVineBasket: {
-				DisplayName: Mushroom Vine Basket
-				Tooltip: ""
-			}
-
-			SilkAshPlantsItem: {
-				DisplayName: Silk Ash Plants
-				Tooltip: Try right clicking!
-			}
-
-			SilkMushroomsItem: {
-				DisplayName: Silk Mushrooms
-				Tooltip: Try right clicking!
-			}
-
-			SilkOatsBouquet: {
-				DisplayName: Silk Oats
-				Tooltip: Try right clicking!
-			}
-
-			SilkOatsCorruptBouquet: {
-				DisplayName: Corrupt Silk Oats
-				Tooltip: Try right clicking!
-			}
-
-			SilkOatsCrimsonBouquet: {
-				DisplayName: Crimson Silk Oats
-				Tooltip: Try right clicking!
-			}
-
-			SilkOatsDesertBouquet: {
-				DisplayName: Desert Silk Oats
-				Tooltip: Try right clicking!
-			}
-
-			SilkOatsHallowBouquet: {
-				DisplayName: Hallow Silk Oats
-				Tooltip: Try right clicking!
-			}
-
-			VineBasket: {
-				DisplayName: Vine Basket
-				Tooltip: ""
-			}
-
-			ReedBasket: {
-				DisplayName: Reed Basket
-				Tooltip: ""
-			}
-
-			SeaweedBasket: {
-				DisplayName: Seaweed Basket
-				Tooltip: ""
-			}
-
-			CrystalTable: {
-				DisplayName: Crystal Table
-				Tooltip: ""
-			}
-
-			KingBedAsh: {
-				DisplayName: Ash Wood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBalloonItem: {
-				DisplayName: Balloon Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBalloonLarge: {
-				DisplayName: Big Balloon Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBamboo: {
-				DisplayName: Bamboo Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBlueDungeon: {
-				DisplayName: Blue Dungeon Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBone: {
-				DisplayName: Bone Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedBoreal: {
-				DisplayName: Boreal Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedCactus: {
-				DisplayName: Cactus Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedCrystal: {
-				DisplayName: Crystal Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedDynasty: {
-				DisplayName: Dynasty Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedEbonwood: {
-				DisplayName: Ebonwood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedFlesh: {
-				DisplayName: Flesh Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedGlass: {
-				DisplayName: Glass Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedGold: {
-				DisplayName: Golden Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedGreenDungeon: {
-				DisplayName: Green Dungeon Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedHoney: {
-				DisplayName: Honey Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedIce: {
-				DisplayName: Frozen Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedIceCanopy: {
-				DisplayName: Frozen Canopy Bed
-				Tooltip: ""
-			}
-
-			KingBedJack: {
-				DisplayName: Spooky Jack O' Lantern Bed
-				Tooltip: ""
-			}
-
-			KingBedLihzahrd: {
-				DisplayName: Lihzahrd Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedLihzahrdArch: {
-				DisplayName: Fancy Lihzahrd Arch Bed
-				Tooltip: ""
-			}
-
-			KingBedLihzahrdArch2: {
-				DisplayName: Arched Lihzahrd Bed
-				Tooltip: ""
-			}
-
-			KingBedLivingwood: {
-				DisplayName: Livingwood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedMahogany: {
-				DisplayName: Rich Mahogany Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedMarble: {
-				DisplayName: Marble Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedMarble2: {
-				DisplayName: Fancy Marble Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedMushroom: {
-				DisplayName: Mushroom Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedNebula: {
-				DisplayName: Nebula Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedObsidian: {
-				DisplayName: Obsidian Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedPalm: {
-				DisplayName: Palm Wood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedPearlwood: {
-				DisplayName: Pearlwood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedPinkDungeon: {
-				DisplayName: Pink Dungeon Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedReef: {
-				DisplayName: Reef Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedShadewood: {
-				DisplayName: Shadewood Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSky: {
-				DisplayName: Skyware Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSkyCanopy: {
-				DisplayName: Skyware Canopy Bed
-				Tooltip: ""
-			}
-
-			KingBedSlime: {
-				DisplayName: Slime Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSolar: {
-				DisplayName: Solar Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSpooky: {
-				DisplayName: Spooky Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedStardust: {
-				DisplayName: Stardust Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSteampunk: {
-				DisplayName: Steampunk Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedTattered: {
-				DisplayName: Tattered Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedVortex: {
-				DisplayName: Vortex Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedWooden: {
-				DisplayName: Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedFestiveItem: {
-				DisplayName: Festive Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedGranite: {
-				DisplayName: Granite Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedLesion: {
-				DisplayName: Lesion Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedLivingwoodArch: {
-				DisplayName: Arched Livingwood Bed
-				Tooltip: ""
-			}
-
-			KingBedMartianItem: {
-				DisplayName: Martian Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedMeteorItem: {
-				DisplayName: Meteorite Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedPumpkin: {
-				DisplayName: Pumpkin Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSandstone: {
-				DisplayName: Sandstone Royal Bed
-				Tooltip: ""
-			}
-
-			KingBedSpider: {
-				DisplayName: Spider Royal Bed
-				Tooltip: ""
-			}
-
-			DecalSheet: {
-				Tooltip: ""
-				DisplayName: Decal Sheet
-			}
-
-			WitchHatItem: {
-				Tooltip: ""
-				DisplayName: Witch Hat
-			}
-
-			Vials: {
-				Tooltip: Try right clicking!
-				DisplayName: Vials
-			}
-
-			TinyJarWhite: {
-				Tooltip: Try right clicking!
-				DisplayName: Little White Jar
-			}
-
-			TinyJarBlack: {
-				Tooltip: Try right clicking!
-				DisplayName: Little Black Jar
-			}
-
-			TinyCauldronItem: {
-				Tooltip: ""
-				DisplayName: Tiny Cauldron
-			}
-
-			StreamerSpiderItem: {
-				Tooltip: ""
-				DisplayName: Spider Streamer
-			}
-
-			StreamerPumpkinItem: {
-				Tooltip: ""
-				DisplayName: Pumpkin Streamer
-			}
-
-			StreamerGhostItem: {
-				Tooltip: ""
-				DisplayName: Ghost Streamer
-			}
-
-			StreamerCatItem: {
-				Tooltip: ""
-				DisplayName: Cat Streamer
-			}
-
-			StreamerBatItem: {
-				Tooltip: ""
-				DisplayName: Bat Streamer
-			}
-
-			SpookyMeltedCandleWhite: {
-				Tooltip: ""
-				DisplayName: Melted Candles
-			}
-
-			SpookyMeltedCandleRed: {
-				Tooltip: ""
-				DisplayName: Melted Red Candles
-			}
-
-			SpookyMeltedCandleBlack: {
-				Tooltip: ""
-				DisplayName: Melted Black Candles
-			}
-
-			SpookyLanternItem: {
-				Tooltip: ""
-				DisplayName: Spooky Lantern
-			}
-
-			SpookyCandleWhite: {
-				Tooltip: ""
-				DisplayName: Slender Candle
-			}
-
-			SpookyCandlesTallWhiteItem: {
-				Tooltip: ""
-				DisplayName: Tall Candles
-			}
-
-			SpookyCandlesTallRedItem: {
-				Tooltip: ""
-				DisplayName: Tall Red Candles
-			}
-
-			SpookyCandlesTallBlackItem: {
-				Tooltip: ""
-				DisplayName: Tall Black Candles
-			}
-
-			SpookyCandleRed: {
-				Tooltip: ""
-				DisplayName: Slender Red Candles
-			}
-
-			SpookyCandleHolderWhite: {
-				Tooltip: ""
-				DisplayName: Candle Holder
-			}
-
-			SpookyCandleHolderRed: {
-				Tooltip: ""
-				DisplayName: Red Candle Holder
-			}
-
-			SpookyCandleHolderBlack: {
-				Tooltip: ""
-				DisplayName: Black Candle Holder
-			}
-
-			SpookyCandleBlack: {
-				Tooltip: ""
-				DisplayName: Slender Black Candle
-			}
-
-			SparklyBottlePurple: {
-				Tooltip: ""
-				DisplayName: Purple Brew
-			}
-
-			SparklyBottleOrange: {
-				Tooltip: ""
-				DisplayName: Orange Brew
-			}
-
-			SparklyBottleGreen: {
-				Tooltip: ""
-				DisplayName: Green Brew
-			}
-
-			Scales: {
-				Tooltip: Try right clicking!
-				DisplayName: Scales
-			}
-
-			PumpkinTallItem: {
-				Tooltip: ""
-				DisplayName: Tall Pumpkin
-			}
-
-			PumpkinSmallItem: {
-				Tooltip: ""
-				DisplayName: Little Pumpkin
-			}
-
-			PumpkinBigItem: {
-				Tooltip: ""
-				DisplayName: Big Pumpkin
-			}
-
-			MortarItem: {
-				Tooltip: Try right clicking!
-				DisplayName: Mortar & Pestle
-			}
-
-			JarWormItem: {
-				Tooltip: ""
-				DisplayName: Jar of Worms
-			}
-
-			JarEyeItem: {
-				Tooltip: ""
-				DisplayName: Jar of Eyeballs
-			}
-
-			JarBrainItem: {
-				Tooltip: ""
-				DisplayName: Jar of Brains
-			}
-
-			HalloweenDecalsWebItem: {
-				Tooltip: ""
-				DisplayName: Web Decal
-			}
-
-			HalloweenDecalsSkullItem: {
-				Tooltip: ""
-				DisplayName: Skull Decal
-			}
-
-			HalloweenDecalsPumpkinItem: {
-				Tooltip: ""
-				DisplayName: Pumpkin Decal
-			}
-
-			HalloweenDecalsMiscItem: {
-				Tooltip: ""
-				DisplayName: Spooky Decal
-			}
-
-			HalloweenDecalsGhostItem: {
-				Tooltip: ""
-				DisplayName: Ghost Decal
-			}
-
-			HalloweenDecalsCrowItem: {
-				Tooltip: ""
-				DisplayName: Crow Decal
-			}
-
-			HalloweenDecalsCatItem: {
-				Tooltip: ""
-				DisplayName: Cat Decal
-			}
-
-			HalloweenDecalsCandyItem: {
-				Tooltip: ""
-				DisplayName: Candy Decal
-			}
-
-			HalloweenDecalsBatItem: {
-				Tooltip: ""
-				DisplayName: Bat Decal
-			}
-
-			GobletItem: {
-				Tooltip: Try right clicking!
-				DisplayName: Goblet
-			}
-
-			FlaskTall: {
-				Tooltip: Try right clicking!
-				DisplayName: Tall Flask
-			}
-
-			FlaskSmall: {
-				Tooltip: Try right clicking!
-				DisplayName: Flask
-			}
-
-			FlaskMounted: {
-				Tooltip: Try right clicking!
-				DisplayName: Mounted Flask
-			}
-
-			BubblingJarPurple: {
-				Tooltip: ""
-				DisplayName: Bubbling Purple Brew
-			}
-
-			BubblingJarOrange: {
-				Tooltip: ""
-				DisplayName: Bubbling Orange Brew
-			}
-
-			BubblingJarGreen: {
-				Tooltip: ""
-				DisplayName: Bubbling Green Brew
-			}
-
-			BrassAlembicSmall: {
-				Tooltip: ""
-				DisplayName: Brass Alembic
-			}
-
-			BrassAlembic: {
-				Tooltip: ""
-				DisplayName: Brass Alembic
-			}
-
-			BottleSmallBlack: {
-				Tooltip: ""
-				DisplayName: Small Black Bottle
-			}
-
-			BottleGreenSmall: {
-				Tooltip: Try right clicking!
-				DisplayName: Small Green Bottle
-			}
-
-			BottleGreen: {
-				Tooltip: Try right clicking!
-				DisplayName: Green Bottle
-			}
-
-			BottleGlass: {
-				Tooltip: Try right clicking!
-				DisplayName: Glass Bottle
-			}
-
-			BottleFancy: {
-				Tooltip: Try right clicking!
-				DisplayName: Fancy Bottle
-			}
-
-			BottleBronze: {
-				Tooltip: ""
-				DisplayName: Bronze Bottle
-			}
-
-			BottleBlack: {
-				Tooltip: Try right clicking!
-				DisplayName: Black Bottle
-			}
-
-			BellJarTall: {
-				Tooltip: Try right-clicking!
-				DisplayName: Bell Jar
-			}
-
-			BellJarItemWorm: {
-				Tooltip: ""
-				DisplayName: Lesioned Bell Jar
-			}
-
-			BellJarItemMaggot: {
-				Tooltip: ""
-				DisplayName: Infested Bell Jar
-			}
-
-			BellJarItem: {
-				Tooltip: Try right-clicking!
-				DisplayName: Small Bell Jar
-			}
-
-			AlembicMounted: {
-				Tooltip: Try right clicking!
-				DisplayName: Mounted Alembic
-			}
-
-			AlembicHorizontal: {
-				Tooltip: ""
-				DisplayName: Alembic Horizontal
-			}
-
-			AlembicGlassSmall: {
-				Tooltip: Try right clicking!
-				DisplayName: Glass Alembic
-			}
-
-			AlembicGlass: {
-				Tooltip: Try right clicking!
-				DisplayName: Glass Alembic
-			}
-
-			AlchemyChestItem: {
-				Tooltip: For decorative purposes only. It sounds like there's something inside. Try right clicking!
-				DisplayName: Alchemy Chest
-			}
-
-			Scarecrow: {
-				DisplayName: Scarecrow
-				Tooltip: ""
-			}
-
-			BigCauldronItem: {
-				DisplayName: Big Cauldron
-				Tooltip: ""
-			}
-
-			AutumnalWreath: {
-				DisplayName: Autumnal Wreath
-				Tooltip: ""
-			}
-
-			HangingSpoons: {
-				DisplayName: Hanging Spoons
-				Tooltip: ""
-			}
-
-			SpookyWreath: {
-				DisplayName: Spooky Wreath
-				Tooltip: ""
-			}
-
-			DecorativeWebDarkItem: {
-				DisplayName: Decorative Dark Web
-				Tooltip: ""
-			}
-
-			PrintingPress: {
-				DisplayName: Printing Press
-				Tooltip: Used for special crafting
 			}
 
 			PaintingTinyBlack: {
-				DisplayName: Tiny Painting
+				DisplayName: Tiny Black-Framed Painting
 				Tooltip: Try right-clicking!
 			}
 
 			PaintingTinyBrown: {
-				DisplayName: Tiny Painting
+				DisplayName: Tiny Brown-Framed Painting
 				Tooltip: Try right-clicking!
 			}
 
 			PaintingTinyGold: {
-				DisplayName: Tiny Painting
+				DisplayName: Tiny Gold-Framed Painting
 				Tooltip: Try right-clicking!
 			}
 
 			PaintingTinyMetal: {
-				DisplayName: Tiny Painting
+				DisplayName: Tiny Metal-Framed Painting
 				Tooltip: Try right-clicking!
 			}
 
 			PaintingTinyWhite: {
-				DisplayName: Tiny Painting
+				DisplayName: Tiny White-Framed Painting
 				Tooltip: Try right-clicking!
 			}
 
@@ -2960,7 +1283,72 @@ Mods: {
 
 			Tome: {
 				DisplayName: Tome
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
+			}
+
+			Ball: {
+				DisplayName: Ball
+				Tooltip: ""
+			}
+
+			BlocksItem: {
+				DisplayName: Blocks
+				Tooltip: ""
+			}
+
+			JackInTheBox: {
+				DisplayName: Jack In The Box
+				Tooltip: ""
+			}
+
+			RockingHorseItem: {
+				DisplayName: Rocking Horse
+				Tooltip: ""
+			}
+
+			BigSanta: {
+				DisplayName: Big Santa
+				Tooltip: ""
+			}
+
+			BigTeddy: {
+				DisplayName: Big Teddy
+				Tooltip: ""
+			}
+
+			SmallTeddy: {
+				DisplayName: Small Teddy
+				Tooltip: ""
+			}
+
+			SpringChick: {
+				DisplayName: Spring Chick
+				Tooltip: Try right-clicking!
+			}
+
+			SpringRabbitBig: {
+				DisplayName: Big Rabbit
+				Tooltip: Try right-clicking!
+			}
+
+			SpringRabbitSmall: {
+				DisplayName: Small Rabbit
+				Tooltip: Try right-clicking!
+			}
+
+			ToyTrainItem: {
+				DisplayName: Toy Train
+				Tooltip: ""
+			}
+
+			TrainSetItem: {
+				DisplayName: Train Set
+				Tooltip: ""
+			}
+
+			Bucket: {
+				DisplayName: Bucket
+				Tooltip: Try right-clicking!
 			}
 
 			Detergent: {
@@ -2973,18 +1361,28 @@ Mods: {
 				Tooltip: ""
 			}
 
+			Spraybottle: {
+				DisplayName: Spraybottle
+				Tooltip: Try right-clicking!
+			}
+
+			WoodenBucket: {
+				DisplayName: Wooden Bucket
+				Tooltip: ""
+			}
+
 			SoapBottles: {
-				DisplayName: Soap Bottle
+				DisplayName: Soap Bottles
 				Tooltip: Try right-clicking!
 			}
 
 			ToiletriesItem: {
-				DisplayName: Toiletries
+				DisplayName: Toiletries Item
 				Tooltip: Try right-clicking!
 			}
 
 			ToothpasteItem: {
-				DisplayName: Toothpaste
+				DisplayName: Toothpaste Item
 				Tooltip: Try right-clicking!
 			}
 
@@ -3000,7 +1398,7 @@ Mods: {
 
 			Binder: {
 				DisplayName: Binder
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			PaperStack: {
@@ -3013,14 +1411,9 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Paper: {
-				DisplayName: Paper
-				Tooltip: ""
-			}
-
 			Scroll: {
 				DisplayName: Scroll
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			ScrollStack: {
@@ -3039,8 +1432,13 @@ Mods: {
 			}
 
 			InkwellItem: {
-				DisplayName: Inkwell
-				Tooltip: Try right clicking!
+				DisplayName: Inkwell Item
+				Tooltip: Try right-clicking!
+			}
+
+			Bolster: {
+				DisplayName: Bolster
+				Tooltip: ""
 			}
 
 			TowelLarge: {
@@ -3063,1409 +1461,34 @@ Mods: {
 				Tooltip: Try right-clicking!
 			}
 
-			TowelFoldedBlue: {
-				DisplayName: Folded Blue Towel
-				Tooltip: ""
+			FoldedTowel: {
+				DisplayName: Folded Towel
+				Tooltip: Try right-clicking!
 			}
 
-			TowelFoldedGreen: {
-				DisplayName: Folded Green Towel
-				Tooltip: ""
+			RolledStackedTowels: {
+				DisplayName: Rolled Stacked Towels
+				Tooltip: Try right-clicking!
 			}
 
-			TowelFoldedRed: {
-				DisplayName: Folded Red Towel
-				Tooltip: ""
-			}
-
-			TowelFoldedWhite: {
-				DisplayName: Folded White Towel
-				Tooltip: ""
-			}
-
-			TowelRolled: {
+			RolledTowel: {
 				DisplayName: Rolled Towel
-				Tooltip: Try right clicking!
-			}
-
-			TowelStackedBlue: {
-				DisplayName: Stacked Blue Towel
-				Tooltip: ""
-			}
-
-			TowelStackedGreen: {
-				DisplayName: Stacked Green Towel
-				Tooltip: ""
-			}
-
-			TowelStackedRed: {
-				DisplayName: Stacked Red Towel
-				Tooltip: ""
-			}
-
-			TowelStackedWhite: {
-				DisplayName: Stacked White Towel
-				Tooltip: ""
-			}
-
-			GroceryBasketBlack: {
-				DisplayName: Black Grocery Basket
 				Tooltip: Try right-clicking!
 			}
 
-			GroceryBasketPlastic: {
-				DisplayName: Plastic Grocery Basket
+			RolledTowels: {
+				DisplayName: Rolled Towels
 				Tooltip: Try right-clicking!
-			}
-
-			GroceryBasketWicker: {
-				DisplayName: Wicker Grocery Basket
-				Tooltip: Try right-clicking!
-			}
-
-			BabyBottle: {
-				DisplayName: Baby Bottle
-				Tooltip: ""
-			}
-
-			WaterBottleBig: {
-				DisplayName: Big Water Bottle
-				Tooltip: ""
-			}
-
-			WaterBottleSmall: {
-				DisplayName: Small Water Bottle
-				Tooltip: ""
-			}
-
-			TablePhoneBlack: {
-				DisplayName: Black Table Phone
-				Tooltip: ""
-			}
-
-			TablePhoneGreen: {
-				DisplayName: Green Table Phone
-				Tooltip: ""
-			}
-
-			TablePhoneOld: {
-				DisplayName: Old-Fashioned Table Phone
-				Tooltip: ""
-			}
-
-			TablePhoneRed: {
-				DisplayName: Red Table Phone
-				Tooltip: ""
-			}
-
-			WallPhoneBlack: {
-				DisplayName: Black Wall Phone
-				Tooltip: ""
-			}
-
-			WallPhoneGreen: {
-				DisplayName: Green Wall Phone
-				Tooltip: ""
-			}
-
-			WallPhoneOldItem: {
-				DisplayName: Old-Fashioned Wall Phone
-				Tooltip: ""
-			}
-
-			WallPhoneRed: {
-				DisplayName: Red Wall Phone
-				Tooltip: ""
-			}
-
-			RedTap: {
-				DisplayName: Red Tap
-				Tooltip: ""
-			}
-
-			Tap: {
-				DisplayName: Tap
-				Tooltip: ""
-			}
-
-			TatteredKingBedItem: {
-				DisplayName: Tattered Royal Bed
-				Tooltip: ""
-			}
-
-			Plastic: {
-				DisplayName: Plastic
-				Tooltip: ""
-			}
-
-			HangingSausageSmall: {
-				Tooltip: Try right clicking!
-				DisplayName: Small Hanging Sausage
-			}
-
-			HangingSausage: {
-				Tooltip: Try right clicking!
-				DisplayName: Large Hanging Sausage
-			}
-
-			HangingRibsItem: {
-				Tooltip: ""
-				DisplayName: Hanging Ribs
-			}
-
-			HangingRabbit: {
-				Tooltip: ""
-				DisplayName: Hanging Rabbit
-			}
-
-			HangingPheasant: {
-				Tooltip: ""
-				DisplayName: Hanging Pheasant
-			}
-
-			HangingMegaChicken: {
-				Tooltip: Try right clicking!
-				DisplayName: Hanging Mega Chicken
-			}
-
-			HangingMeat: {
-				Tooltip: Try right clicking!
-				DisplayName: Hanging Meat
-			}
-
-			HangingGoose: {
-				Tooltip: ""
-				DisplayName: Hanging Goose
-			}
-
-			HangingDuck: {
-				Tooltip: ""
-				DisplayName: Hanging Duck
-			}
-
-			HangingChicken: {
-				Tooltip: Try right clicking!
-				DisplayName: Hanging Chicken
-			}
-
-			TeakBeamItem: {
-				DisplayName: Teak Beam
-				Tooltip: ""
-			}
-
-			TeakShinglesItem: {
-				DisplayName: Teak Shingles
-				Tooltip: ""
-			}
-
-			TeakSlatsItem: {
-				DisplayName: Teak Slats
-				Tooltip: ""
-			}
-
-			TeakWood: {
-				DisplayName: Teak Wood
-				Tooltip: ""
-			}
-
-			TeakArmchairGreenItem: {
-				DisplayName: Green Teak Armchair
-				Tooltip: ""
-			}
-
-			TeakArmchairItem: {
-				DisplayName: Teak Armchair
-				Tooltip: ""
-			}
-
-			TeakArmchairRedItem: {
-				DisplayName: Red Teak Armchair
-				Tooltip: ""
-			}
-
-			TeakBathtubItem: {
-				DisplayName: Teak Bathtub
-				Tooltip: ""
-			}
-
-			TeakBedBlackItem: {
-				DisplayName: Black Teak Bed
-				Tooltip: ""
-			}
-
-			TeakBedCreamItem: {
-				DisplayName: Teak Bed
-				Tooltip: ""
-			}
-
-			TeakBedItem: {
-				DisplayName: Green Teak Bed
-				Tooltip: ""
-			}
-
-			TeakBedRedItem: {
-				DisplayName: Red Teak Bed
-				Tooltip: ""
-			}
-
-			TeakBookcaseItem: {
-				DisplayName: Teak Bookcase
-				Tooltip: ""
-			}
-
-			TeakCandelabraGreenItem: {
-				DisplayName: Green Teak Candelabra
-				Tooltip: ""
-			}
-
-			TeakCandelabraItem: {
-				DisplayName: Teak Candelabra
-				Tooltip: ""
-			}
-
-			TeakCandleGreenItem: {
-				DisplayName: Green Teak Candle
-				Tooltip: ""
-			}
-
-			TeakCandleItem: {
-				DisplayName: Teak Candle
-				Tooltip: ""
-			}
-
-			TeakCeilingLampGreenItem: {
-				DisplayName: Green Teak Ceiling Lamp
-				Tooltip: ""
-			}
-
-			TeakCeilingLampItem: {
-				DisplayName: Teak Ceiling Lamp
-				Tooltip: ""
-			}
-
-			TeakChairGreenItem: {
-				DisplayName: Green Teak Chair
-				Tooltip: ""
-			}
-
-			TeakChairItem: {
-				DisplayName: Teak Chair
-				Tooltip: ""
-			}
-
-			TeakChairRedItem: {
-				DisplayName: Red Teak Chair
-				Tooltip: ""
-			}
-
-			TeakChairWoodItem: {
-				DisplayName: Bare Teak Chair
-				Tooltip: ""
-			}
-
-			TeakChandelierItem: {
-				DisplayName: Teak Chandelier
-				Tooltip: ""
-			}
-
-			TeakChestItem: {
-				DisplayName: Teak Chest
-				Tooltip: ""
-			}
-
-			TeakClockItem: {
-				DisplayName: Teak Clock
-				Tooltip: ""
-			}
-
-			TeakDoorGlassItem: {
-				DisplayName: Glass Teak Door
-				Tooltip: ""
-			}
-
-			TeakDoorItem: {
-				DisplayName: Teak Door
-				Tooltip: ""
-			}
-
-			TeakDoorNarrowItem: {
-				DisplayName: Slatted Teak Door
-				Tooltip: ""
-			}
-
-			TeakDoorSolidItem: {
-				DisplayName: Solid Teak Door
-				Tooltip: ""
-			}
-
-			TeakDoorWindowedItem: {
-				DisplayName: Windowed Teak Door
-				Tooltip: ""
-			}
-
-			TeakDresserItem: {
-				DisplayName: Teak Dresser
-				Tooltip: ""
-			}
-
-			TeakKingBedBlackItem: {
-				DisplayName: Black Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedGreenItem: {
-				DisplayName: Green Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedItem: {
-				DisplayName: Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedRedItem: {
-				DisplayName: Red Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedSmallBlackItem: {
-				DisplayName: Small Black Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedSmallGreenItem: {
-				DisplayName: Small Green Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedSmallItem: {
-				DisplayName: Small Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakKingBedSmallRedItem: {
-				DisplayName: Small Red Teak Royal Bed
-				Tooltip: ""
-			}
-
-			TeakLampGreenItem: {
-				DisplayName: Green Teak Lamp
-				Tooltip: ""
-			}
-
-			TeakLampItem: {
-				DisplayName: Teak Lamp
-				Tooltip: ""
-			}
-
-			TeakLanternItem: {
-				DisplayName: Teak Lantern
-				Tooltip: ""
-			}
-
-			TeakNightstandItem: {
-				DisplayName: Teak Nightstand
-				Tooltip: ""
-			}
-
-			TeakOttomanGreenItem: {
-				DisplayName: Green Teak Ottoman
-				Tooltip: ""
-			}
-
-			TeakOttomanItem: {
-				DisplayName: Teak Ottoman
-				Tooltip: ""
-			}
-
-			TeakOttomanRedItem: {
-				DisplayName: Red Teak Ottoman
-				Tooltip: ""
-			}
-
-			TeakPianoItem: {
-				DisplayName: Teak Piano
-				Tooltip: ""
-			}
-
-			TeakPlatformItem: {
-				DisplayName: Teak Platform
-				Tooltip: ""
-			}
-
-			TeakSconceItem: {
-				DisplayName: Teak Sconce
-				Tooltip: ""
-			}
-
-			TeakShelfItem: {
-				DisplayName: Teak Shelf
-				Tooltip: ""
-			}
-
-			TeakSinkItem: {
-				DisplayName: Teak Sink
-				Tooltip: ""
-			}
-
-			TeakSofaGreenItem: {
-				DisplayName: Green Teak Sofa
-				Tooltip: ""
-			}
-
-			TeakSofaItem: {
-				DisplayName: Teak Sofa
-				Tooltip: ""
-			}
-
-			TeakSofaRedItem: {
-				DisplayName: Red Teak Sofa
-				Tooltip: ""
-			}
-
-			TeakSpotlightItem: {
-				DisplayName: Teak Spotlight
-				Tooltip: ""
-			}
-
-			TeakStoolGreenItem: {
-				DisplayName: Green Teak Stool
-				Tooltip: ""
-			}
-
-			TeakStoolItem: {
-				DisplayName: Teak Stool
-				Tooltip: ""
-			}
-
-			TeakStoolRedItem: {
-				DisplayName: Red Teak Stool
-				Tooltip: ""
-			}
-
-			TeakStoolWoodItem: {
-				DisplayName: Bare Teak Stool
-				Tooltip: ""
-			}
-
-			TeakTableFancyItem: {
-				DisplayName: Fancy Teak Table
-				Tooltip: ""
-			}
-
-			TeakTableItem: {
-				DisplayName: Teak Table
-				Tooltip: ""
-			}
-
-			TeakToiletItem: {
-				DisplayName: Teak Toilet
-				Tooltip: ""
-			}
-
-			TeakWorkbenchItem: {
-				DisplayName: Teak Work Bench
-				Tooltip: ""
-			}
-
-			TeakFenceItem: {
-				DisplayName: Teak Fence
-				Tooltip: ""
-			}
-
-			TeakFenceSlatItem: {
-				DisplayName: Teak Slat Fence
-				Tooltip: ""
-			}
-
-			TeakFenceSolidItem: {
-				DisplayName: Solid Teak Fence
-				Tooltip: ""
-			}
-
-			TeakShingleWallItem: {
-				DisplayName: Teak Shingle Wall
-				Tooltip: ""
-			}
-
-			TeakSlatsWallItem: {
-				DisplayName: Teak Slat Wall
-				Tooltip: ""
-			}
-
-			TeakWallItem: {
-				DisplayName: Teak Wall
-				Tooltip: ""
-			}
-
-			TeakFenceLatticeItem: {
-				DisplayName: Teak Lattice Fence
-				Tooltip: ""
-			}
-
-			TeakPoleItem: {
-				DisplayName: Teak Pole
-				Tooltip: ""
-			}
-
-			TeakBarItem: {
-				DisplayName: Teak Bar
-				Tooltip: ""
-			}
-
-			FloralWorktableItem: {
-				DisplayName: Floral Crafting Table
-				Tooltip: Used for special crafting
-			}
-
-			BasketHandle: {
-				DisplayName: Handled Basket
-				Tooltip: Try right clicking!
-			}
-
-			EasterBasket: {
-				DisplayName: Simple Basket
-				Tooltip: Try right clicking!
-			}
-
-			EmptyBasketItem: {
-				DisplayName: Empty Basket
-				Tooltip: ""
-			}
-
-			PlanterFloral: {
-				DisplayName: Floral Planter
-				Tooltip: Try right clicking!
-			}
-
-			PlanterItem: {
-				DisplayName: Planter
-				Tooltip: ""
-			}
-
-			SpringBasket: {
-				DisplayName: Spring Basket
-				Tooltip: Try right clicking!
 			}
 
 			VaseFloral: {
 				DisplayName: Floral Vase
-				Tooltip: Try right clicking!
-			}
-
-			BigCarrot: {
-				DisplayName: Big Carrot
-				Tooltip: Try right clicking!
-			}
-
-			CarrotPennant: {
-				DisplayName: Carrot Pennant
-				Tooltip: Try right clicking!
-			}
-
-			Carrot: {
-				DisplayName: Carrot
-				Tooltip: Try right clicking!
-			}
-
-			EggCup: {
-				DisplayName: Egg Cup
-				Tooltip: ""
-			}
-
-			EggCupLight: {
-				DisplayName: Egg Cup Light
-				Tooltip: ""
-			}
-
-			EggLight: {
-				DisplayName: Egg Light
-				Tooltip: ""
-			}
-
-			Egg: {
-				DisplayName: Egg
-				Tooltip: Try right clicking!
-			}
-
-			FloralDecal: {
-				DisplayName: Floral Decal
-				Tooltip: Try right clicking!
-			}
-
-			RabbitStandee: {
-				DisplayName: Rabbit Standee
-				Tooltip: ""
-			}
-
-			SpringPennant: {
-				DisplayName: Spring Pennant
-				Tooltip: Try right clicking!
-			}
-
-			ChocolateSpringEgg: {
-				DisplayName: Chocolate Egg
-				Tooltip: Try right clicking!
-			}
-
-			SpringEgg: {
-				DisplayName: Spring Egg
-				Tooltip: Try right clicking!
-			}
-
-			SpringChick: {
-				DisplayName: Spring Chick
-				Tooltip: Try right clicking!
-			}
-
-			SpringtimeBarstool: {
-				DisplayName: Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBarstoolCover: {
-				DisplayName: Covered Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBarstoolDraped: {
-				DisplayName: Draped Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBarstoolPatterned: {
-				DisplayName: Patterned Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBarstoolPatternedCover: {
-				DisplayName: Patterned Covered Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBarstoolPatternedDraped: {
-				DisplayName: Patterned Draped Springtime Barstool
-				Tooltip: ""
-			}
-
-			SpringtimeBar: {
-				DisplayName: Springtime Bar
-				Tooltip: ""
-			}
-
-			SpringtimeChair: {
-				DisplayName: Springtime Chair
-				Tooltip: ""
-			}
-
-			SpringtimeChairDraped: {
-				DisplayName: Draped Springtime Chair
-				Tooltip: ""
-			}
-
-			SpringtimeChairDrapedPatterned: {
-				DisplayName: Patterned Draped Springtime Chair
-				Tooltip: ""
-			}
-
-			SpringtimeChairPatterned: {
-				DisplayName: Patterned Springtime Chair
-				Tooltip: ""
-			}
-
-			SpringtimeStoolItem: {
-				DisplayName: Springtime Stool
-				Tooltip: ""
-			}
-
-			SpringtimeStoolItemPatterned: {
-				DisplayName: Patterned Springtime Stool
-				Tooltip: ""
-			}
-
-			SpringtimeCandelabraBlue: {
-				DisplayName: Blue Springtime Candelabra
-				Tooltip: ""
-			}
-
-			SpringtimeCandelabraGreen: {
-				DisplayName: Green Springtime Candelabra
-				Tooltip: ""
-			}
-
-			SpringtimeCandelabraPink: {
-				DisplayName: Pink Springtime Candelabra
-				Tooltip: ""
-			}
-
-			SpringtimeCandelabraWhite: {
-				DisplayName: Springtime Candelabra
-				Tooltip: ""
-			}
-
-			SpringtimeCandleItem: {
-				DisplayName: Springtime Candle
-				Tooltip: ""
-			}
-
-			SpringtimeCeilingLampBlue: {
-				DisplayName: Blue Springtime Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeCeilingLampGreen: {
-				DisplayName: Green Springtime Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeCeilingLampPink: {
-				DisplayName: Pink Springtime Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeCeilingLampWhite: {
-				DisplayName: Springtime Ceiling Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierBlueCrystalItem: {
-				DisplayName: Blue Crystal Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierBlueItem: {
-				DisplayName: Blue Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierGreenCrystalItem: {
-				DisplayName: Green Crystal Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierGreenItem: {
-				DisplayName: Green Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierPinkCrystalItem: {
-				DisplayName: Pink Crystal  Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierPinkItem: {
-				DisplayName: Pink Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierWhiteCrystalItem: {
-				DisplayName: Crystal Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelierWhiteItem: {
-				DisplayName: Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeChandelier: {
-				DisplayName: Springtime Chandelier
-				Tooltip: ""
-			}
-
-			SpringtimeLampBlue: {
-				DisplayName: Blue Springtime Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeLampGreen: {
-				DisplayName: Green Springtime Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeLampPink: {
-				DisplayName: Pink Springtime Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeLampWhite: {
-				DisplayName: Springtime Lamp
-				Tooltip: ""
-			}
-
-			SpringtimeLantern: {
-				DisplayName: Springtime Lantern
-				Tooltip: ""
-			}
-
-			SpringtimeSconceBlue: {
-				DisplayName: Blue Springtime Sconce
-				Tooltip: ""
-			}
-
-			SpringtimeSconceGreen: {
-				DisplayName: Green Springtime Sconce
-				Tooltip: ""
-			}
-
-			SpringtimeSconcePink: {
-				DisplayName: Pink Springtime Sconce
-				Tooltip: ""
-			}
-
-			SpringtimeSconceWhite: {
-				DisplayName: Springtime Sconce
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlight: {
-				DisplayName: Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeSpotlightCrystal: {
-				DisplayName: Crystal Springtime Spotlight
-				Tooltip: ""
-			}
-
-			SpringtimeTorchiereBlue: {
-				DisplayName: Blue Springtime Torchiere
-				Tooltip: ""
-			}
-
-			SpringtimeTorchiereGreen: {
-				DisplayName: Green Springtime Torchiere
-				Tooltip: ""
-			}
-
-			SpringtimeTorchierePink: {
-				DisplayName: Pink Springtime Torchiere
-				Tooltip: ""
-			}
-
-			SpringtimeTorchiereWhite: {
-				DisplayName: Springtime Torchiere
-				Tooltip: ""
-			}
-
-			SpringtimeArmchair: {
-				DisplayName: Springtime Armchair
-				Tooltip: ""
-			}
-
-			SpringtimeBathtubItem: {
-				DisplayName: Springtime Bathtub
-				Tooltip: ""
-			}
-
-			SpringtimeBedItem: {
-				DisplayName: Springtime Bed
-				Tooltip: ""
-			}
-
-			SpringtimeBookcaseItem: {
-				DisplayName: Springtime Bookcase
-				Tooltip: ""
-			}
-
-			SpringtimeChestItem: {
-				DisplayName: Springtime Chest
-				Tooltip: ""
-			}
-
-			SpringtimeClockItem: {
-				DisplayName: Springtime Clock
-				Tooltip: ""
-			}
-
-			SpringtimeConsoleItem: {
-				DisplayName: Springtime Console
-				Tooltip: ""
-			}
-
-			SpringtimeDoorItem: {
-				DisplayName: Springtime Door
-				Tooltip: ""
-			}
-
-			SpringtimeDoorRectangleItem: {
-				DisplayName: Rectanglular Springtime Door
-				Tooltip: ""
-			}
-
-			SpringtimeDoorRoundItem: {
-				DisplayName: Round Springtime Door
-				Tooltip: ""
-			}
-
-			SpringtimeDoorSquareItem: {
-				DisplayName: Square Springtime Door
-				Tooltip: ""
-			}
-
-			SpringtimeDresserItem: {
-				DisplayName: Springtime Dresser
-				Tooltip: ""
-			}
-
-			SpringtimeEggChair: {
-				DisplayName: Springtime Egg Chair
-				Tooltip: ""
-			}
-
-			SpringtimeKingBedItem: {
-				DisplayName: Springtime Royal Bed
-				Tooltip: ""
-			}
-
-			SpringtimeNightstandItem: {
-				DisplayName: Springtime Nightstand
-				Tooltip: ""
-			}
-
-			SpringtimeOttoman: {
-				DisplayName: Springtime Ottoman
-				Tooltip: ""
-			}
-
-			SpringtimePianoItem: {
-				DisplayName: Springtime Piano
-				Tooltip: ""
-			}
-
-			SpringtimePlatformFloralItem: {
-				DisplayName: Floral Springtime Platform
-				Tooltip: ""
-			}
-
-			SpringtimePlatformItem: {
-				DisplayName: Springtime Platform
-				Tooltip: ""
-			}
-
-			SpringtimeShelfItem: {
-				DisplayName: Springtime Shelf
-				Tooltip: ""
-			}
-
-			SpringtimeSinkItem: {
-				DisplayName: Springtime Sink
-				Tooltip: ""
-			}
-
-			SpringtimeSofaBlue: {
-				DisplayName: Blue Springtime Sofa
-				Tooltip: ""
-			}
-
-			SpringtimeSofaPatterns: {
-				DisplayName: Patterned Springtime Sofa
-				Tooltip: ""
-			}
-
-			SpringtimeSofaWhite: {
-				DisplayName: Springtime Sofa
-				Tooltip: ""
-			}
-
-			SpringtimeTable: {
-				DisplayName: Springtime Table
-				Tooltip: ""
-			}
-
-			SpringtimeToiletItem: {
-				DisplayName: Springtime Toilet
-				Tooltip: ""
-			}
-
-			SpringtimeWorkbench: {
-				DisplayName: Springtime Work Bench
-				Tooltip: ""
-			}
-
-			SpringyWood: {
-				DisplayName: Springy Wood
-				Tooltip: ""
-			}
-
-			SpringyWoodWallItem: {
-				DisplayName: Springy Wood Wall
-				Tooltip: ""
-			}
-
-			SpringtimeArmchairFancy: {
-				DisplayName: Fancy Springtime Armchair
-				Tooltip: ""
-			}
-
-			SpringtimeArmchairFancyPattern: {
-				DisplayName: Fancy Patterned Springtime Armchair
-				Tooltip: ""
-			}
-
-			SpringtimeArmchairPattern: {
-				DisplayName: Patterned Springtime Armchair
-				Tooltip: ""
-			}
-
-			SpringtimeOttomanPattern: {
-				DisplayName: Patterned Springtime Ottoman
-				Tooltip: ""
-			}
-
-			SpringtimeSinkFancy: {
-				DisplayName: Springtime Sink
-				Tooltip: ""
-			}
-
-			SpringtimeSinkPattern: {
-				DisplayName: Patterned Springtime Sink
-				Tooltip: ""
-			}
-
-			SpringtimeTableFancy: {
-				DisplayName: Fancy Springtime Table
-				Tooltip: ""
-			}
-
-			SpringtimeTablePattern: {
-				DisplayName: Patterned Springtime Table
-				Tooltip: ""
-			}
-
-			SpringtimeBathtubColor: {
-				DisplayName: Springtime Bathtub
-				Tooltip: ""
-			}
-
-			SpringtimeBathtubPattern: {
-				DisplayName: Patterned Springtime Bathtub
-				Tooltip: ""
-			}
-
-			SpringtimeBathtubStripe: {
-				DisplayName: Striped Springtime Bathtub
-				Tooltip: ""
-			}
-
-			SpringtimeBedItemPatterned: {
-				Tooltip: ""
-				DisplayName: Patterned Springtime Bed
-			}
-
-			CookedCarrot: {
-				Tooltip: ""
-				DisplayName: Cooked Carrot
-			}
-
-			EdibleChocEgg: {
-				DisplayName: Tasty Chococolate Egg
-				Tooltip: ""
-			}
-
-			ColumnCorinthianItem: {
-				DisplayName: Corinthian Column
-				Tooltip: ""
-			}
-
-			ColumnDoricItem: {
-				DisplayName: Doric Column
-				Tooltip: ""
-			}
-
-			ColumnIonicItem: {
-				DisplayName: Ionic Column
-				Tooltip: ""
-			}
-
-			PlasterBlueItem: {
-				DisplayName: Blue Plaster
-				Tooltip: ""
-			}
-
-			PlasterBlueWornItem: {
-				DisplayName: Worn Blue Plaster
-				Tooltip: ""
-			}
-
-			PlasterItem: {
-				DisplayName: Plaster
-				Tooltip: ""
-			}
-
-			PlasterWornItem: {
-				DisplayName: Worn Plaster
-				Tooltip: ""
-			}
-
-			SpringyBeamDecoratedItem: {
-				DisplayName: Decorated Springy Beam
-				Tooltip: ""
-			}
-
-			SpringyBeamFloralItem: {
-				DisplayName: Floral Springy Beam
-				Tooltip: ""
-			}
-
-			SpringyBeamItem: {
-				DisplayName: Springy Beam
-				Tooltip: ""
-			}
-
-			SpringyWoodBlueItem: {
-				DisplayName: Blue Springy Wood
-				Tooltip: ""
-			}
-
-			SpringyWoodGreenItem: {
-				DisplayName: Green Springy Wood
-				Tooltip: ""
-			}
-
-			TileBlueItem: {
-				DisplayName: Blue Tile
-				Tooltip: ""
-			}
-
-			TileCheckeredBlueItem: {
-				DisplayName: Checkered Blue Tile
-				Tooltip: ""
-			}
-
-			TileCheckeredItem: {
-				DisplayName: Checkered Tile
-				Tooltip: ""
-			}
-
-			TileCheckeredSmallBlueItem: {
-				DisplayName: Small Blue Checkered Tile
-				Tooltip: ""
-			}
-
-			TileCheckeredSmallItem: {
-				DisplayName: Small Checkered Tile
-				Tooltip: ""
-			}
-
-			TileFloralBlueItem: {
-				DisplayName: Floral Blue Tile
-				Tooltip: ""
-			}
-
-			TileFloralPinkItem: {
-				DisplayName: Floral Pink Tile
-				Tooltip: ""
-			}
-
-			TileFloralYellowItem: {
-				DisplayName: Floral Yellow Tile
-				Tooltip: ""
-			}
-
-			TileMediterraneanItem: {
-				DisplayName: Mediterranean Tile
-				Tooltip: ""
-			}
-
-			TilePinkItem: {
-				DisplayName: Pink Tile
-				Tooltip: ""
-			}
-
-			TileSmallBlueItem: {
-				DisplayName: Small Blue Tile
-				Tooltip: ""
-			}
-
-			TileSmallPinkItem: {
-				DisplayName: Small Pink Tile
-				Tooltip: ""
-			}
-
-			TileSmallWhiteItem: {
-				DisplayName: Small White Tile
-				Tooltip: ""
-			}
-
-			TileWhiteItem: {
-				DisplayName: White Tile
-				Tooltip: ""
-			}
-
-			PlasterBlueWallItem: {
-				DisplayName: Blue Plaster Wall
-				Tooltip: ""
-			}
-
-			PlasterBlueWornWallItem: {
-				DisplayName: Worn Blue Plaster Wall
-				Tooltip: ""
-			}
-
-			PlasterWallItem: {
-				DisplayName: Plaster Wall
-				Tooltip: ""
-			}
-
-			PlasterWornWallItem: {
-				DisplayName: Worn Plaster Wall
-				Tooltip: ""
-			}
-
-			SpringFenceFloralItem: {
-				DisplayName: Floral Springtime Fence
-				Tooltip: ""
-			}
-
-			SpringFenceMetalItem: {
-				DisplayName: Springtime Fence
-				Tooltip: ""
-			}
-
-			SpringyWoodBlueWallItem: {
-				DisplayName: Blue Springy Wood Wall
-				Tooltip: ""
-			}
-
-			SpringyWoodGreenWallItem: {
-				DisplayName: Green Springy Wood Wall
-				Tooltip: ""
-			}
-
-			SpringyWoodPoleBlueItem: {
-				DisplayName: Blue Springy Wood Pole
-				Tooltip: ""
-			}
-
-			SpringyWoodPoleGreenItem: {
-				DisplayName: Green Springy Wood Pole
-				Tooltip: ""
-			}
-
-			SpringyWoodPoleWhiteItem: {
-				DisplayName: Springy Wood Pole
-				Tooltip: ""
-			}
-
-			TileBlueWallItem: {
-				DisplayName: Blue Tile Wall
-				Tooltip: ""
-			}
-
-			TileCheckeredBlueWallItem: {
-				DisplayName: Blue Checkered Tile Wall
-				Tooltip: ""
-			}
-
-			TileCheckeredSmallBlueWallItem: {
-				DisplayName: Small Blue Checkered Tile Wall
-				Tooltip: ""
-			}
-
-			TileCheckeredSmallWallItem: {
-				DisplayName: Small Checkered Tile Wall
-				Tooltip: ""
-			}
-
-			TileCheckeredWallItem: {
-				DisplayName: Checkered Tile Wall
-				Tooltip: ""
-			}
-
-			TileFloralBlueWallItem: {
-				DisplayName: Floral Blue Tile Wall
-				Tooltip: ""
-			}
-
-			TileFloralPinkWallItem: {
-				DisplayName: Floral Pink Tile Wall
-				Tooltip: ""
-			}
-
-			TileFloralYellowWallItem: {
-				DisplayName: Floral Yellow Tile Wall
-				Tooltip: ""
-			}
-
-			TileMediterraneanWallItem: {
-				DisplayName: Mediterranean Tile Wall
-				Tooltip: ""
-			}
-
-			TilePinkWallItem: {
-				DisplayName: Pink Tile Wall
-				Tooltip: ""
-			}
-
-			TileSmallBlueWallItem: {
-				DisplayName: Small Blue Tile Wall
-				Tooltip: ""
-			}
-
-			TileSmallPinkWallItem: {
-				DisplayName: Small Pink Tile Wall
-				Tooltip: ""
-			}
-
-			TileSmallWhiteWallItem: {
-				DisplayName: Small White Tile Wall
-				Tooltip: ""
-			}
-
-			TileWhiteWallItem: {
-				DisplayName: White Tile Wall
-				Tooltip: ""
-			}
-
-			FestiveDecor: {
-				DisplayName: Festive Decor
-				Tooltip: Try right clicking!
-			}
-
-			ChristmasCards: {
-				DisplayName: Festive Cards
-				Tooltip: Try right clicking!
-			}
-
-			Cauldrons: {
-				DisplayName: Cauldrons
-				Tooltip: Try right clicking!
-			}
-
-			Crackers: {
-				DisplayName: Crackers
-				Tooltip: Try right clicking!
-			}
-
-			HeartfeltCards: {
-				DisplayName: Heartfelt Cards
-				Tooltip: Try right clicking!
-			}
-
-			SpringRabbitBig: {
-				DisplayName: Spring Rabbit Plush
-				Tooltip: Try right clicking!
-			}
-
-			SpringRabbitSmall: {
-				DisplayName: Spring Rabbit Stuffie
-				Tooltip: Try right clicking!
-			}
-
-			Bucket: {
-				DisplayName: Bucket
-				Tooltip: Try right clicking!
-			}
-
-			Spraybottle: {
-				DisplayName: Spray Bottle
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			CreamandSugar: {
 				DisplayName: Cream and Sugar
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			PepperMill: {
@@ -4475,22 +1498,22 @@ Mods: {
 
 			Pepper: {
 				DisplayName: Pepper
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			Pitcher: {
 				DisplayName: Pitcher
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			SaltandPepper: {
 				DisplayName: Salt and Pepper
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			SaltandPepperGlass: {
-				DisplayName: Salt and Pepper Glass
-				Tooltip: Try right clicking!
+				DisplayName: Salt and Pepper
+				Tooltip: Try right-clicking!
 			}
 
 			Salt: {
@@ -4500,17 +1523,17 @@ Mods: {
 
 			Scoop: {
 				DisplayName: Scoop
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			BigCake: {
 				DisplayName: Big Cake
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			BigCakeSlice: {
 				DisplayName: Big Cake Slice
-				Tooltip: Try right clicking!
+				Tooltip: Try right-clicking!
 			}
 
 			BirthdayCakeBlue: {
@@ -4594,17 +1617,52 @@ Mods: {
 			}
 
 			SmallBaguette: {
-				DisplayName: Baguette
+				DisplayName: Small Baguette
 				Tooltip: Try right clicking!
 			}
 
 			BreadbasketEmpty: {
 				DisplayName: Empty Breadbasket
+				Tooltip: Try right clicking!
+			}
+
+			GroceryBasketBlack: {
+				DisplayName: Black Grocery Basket
+				Tooltip: Try right clicking!
+			}
+
+			GroceryBasketPlastic: {
+				DisplayName: Plastic Grocery Basket
+				Tooltip: Try right clicking!
+			}
+
+			GroceryBasketWicker: {
+				DisplayName: Wicker Grocery Basket
+				Tooltip: Try right clicking!
+			}
+
+			BabyBottle: {
+				DisplayName: Baby Bottle
+				Tooltip: ""
+			}
+
+			WaterBottleBig: {
+				DisplayName: Big Water Bottle
+				Tooltip: ""
+			}
+
+			WaterBottleSmall: {
+				DisplayName: Small Water Bottle
 				Tooltip: ""
 			}
 
 			BerryBowl: {
 				DisplayName: Berry Bowl
+				Tooltip: Try right clicking!
+			}
+
+			CandyBowl: {
+				DisplayName: Candy Bowl
 				Tooltip: Try right clicking!
 			}
 
@@ -4703,6 +1761,11 @@ Mods: {
 				Tooltip: Try right clicking!
 			}
 
+			Orange: {
+				DisplayName: Orange
+				Tooltip: Try right clicking!
+			}
+
 			Papaya: {
 				DisplayName: Papaya
 				Tooltip: Try right clicking!
@@ -4715,6 +1778,11 @@ Mods: {
 
 			Peach: {
 				DisplayName: Peach
+				Tooltip: Try right clicking!
+			}
+
+			Pear: {
+				DisplayName: Pear
 				Tooltip: Try right clicking!
 			}
 
@@ -4838,6 +1906,76 @@ Mods: {
 				Tooltip: ""
 			}
 
+			HangingChicken: {
+				DisplayName: Hanging Chicken
+				Tooltip: ""
+			}
+
+			HangingGameAnimals: {
+				DisplayName: Hanging Game Animal
+				Tooltip: ""
+			}
+
+			HangingGoose: {
+				DisplayName: Hanging Goose
+				Tooltip: ""
+			}
+
+			HangingMeat: {
+				DisplayName: Hanging Meat
+				Tooltip: ""
+			}
+
+			HangingMegaChicken: {
+				DisplayName: Hanging Mega-Chicken
+				Tooltip: ""
+			}
+
+			HangingRibsItem: {
+				DisplayName: Hanging Ribs
+				Tooltip: ""
+			}
+
+			HangingSausage: {
+				DisplayName: Hanging Sausage
+				Tooltip: ""
+			}
+
+			HangingSausageSmall: {
+				DisplayName: Small Hanging Sausage
+				Tooltip: ""
+			}
+
+			BlackChocolates: {
+				DisplayName: Black Chocolates
+				Tooltip: ""
+			}
+
+			ChocolateSpringEgg: {
+				DisplayName: Chocolate Spring Egg
+				Tooltip: ""
+			}
+
+			EdibleChocEgg: {
+				DisplayName: Edible Chocolate Egg
+				Tooltip: ""
+			}
+
+			RedChocolates: {
+				DisplayName: Red Chocolates
+				Tooltip: ""
+			}
+
+			CookedCarrot: {
+				DisplayName: Cooked Carrot
+				Tooltip: ""
+			}
+
+			BigCarrot: {
+				DisplayName: Big Carrot
+				Tooltip: ""
+			}
+
 			WheatBushel: {
 				DisplayName: Wheat Bushel
 				Tooltip: ""
@@ -4848,433 +1986,1438 @@ Mods: {
 				Tooltip: ""
 			}
 
+			FutureExplosive: {
+				DisplayName: High-Tech Explosive
+				Tooltip: ""
+			}
+
+			GrenadeFuture: {
+				DisplayName: High-Tech Grenade
+				Tooltip: ""
+			}
+
+			FutureGun: {
+				DisplayName: Mounted High-Tech Gun
+				Tooltip: Try right clicking!
+			}
+
+			FutureGunRackWall: {
+				DisplayName: High-Tech Gun Rack
+				Tooltip: Try right clicking!
+			}
+
+			FutureGunRackWallLarge: {
+				DisplayName: Large High-Tech Gun Rack
+				Tooltip: Try right clicking!
+			}
+
+			FutureGunStand: {
+				DisplayName: High-Tech Gun Stand
+				Tooltip: Try right clicking!
+			}
+
+			FutureGunStanding: {
+				DisplayName: High-Tech Gun
+				Tooltip: Try right clicking!
+			}
+
+			GunRackEmpty: {
+				DisplayName: Empty Gun Rack
+				Tooltip: ""
+			}
+
+			GunRackEmptyLarge: {
+				DisplayName: Large Empty Gun Rack
+				Tooltip: ""
+			}
+
+			Axe: {
+				DisplayName: Axe
+				Tooltip: Try right clicking!
+			}
+
+			AxeLong: {
+				DisplayName: Long Axe
+				Tooltip: Try right clicking!
+			}
+
+			AxePlaque: {
+				DisplayName: Axe Plaque
+				Tooltip: Try right clicking!
+			}
+
+			AxeRack: {
+				DisplayName: Axe Rack
+				Tooltip: Try right clicking!
+			}
+
+			AxeRackLong: {
+				DisplayName: Long Axe Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedAxe: {
+				DisplayName: Mounted Axe
+				Tooltip: Try right clicking!
+			}
+
+			MountedAxeLong: {
+				DisplayName: Long Mounted Axe
+				Tooltip: Try right clicking!
+			}
+
+			MountedAxes: {
+				DisplayName: Mounted Axes
+				Tooltip: Try right clicking!
+			}
+
+			WallAxe: {
+				DisplayName: Wall Axe
+				Tooltip: Try right clicking!
+			}
+
+			GuanDao: {
+				DisplayName: Guan Dao
+				Tooltip: Try right clicking!
+			}
+
+			GuanDaoLong: {
+				DisplayName: Long Guan Dao
+				Tooltip: Try right clicking!
+			}
+
+			GuanDaoRack: {
+				DisplayName: Guan Dao Rack
+				Tooltip: Try right clicking!
+			}
+
+			GuanDaoRackLong: {
+				DisplayName: Long Guan Dao Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedGuanDao: {
+				DisplayName: Mounted Guan Dao
+				Tooltip: Try right clicking!
+			}
+
+			MountedGuanDaoLong: {
+				DisplayName: Mounted Long Guan Dao
+				Tooltip: Try right clicking!
+			}
+
+			Hammer: {
+				DisplayName: Hammer
+				Tooltip: Try right clicking!
+			}
+
+			HammerLong: {
+				DisplayName: Long Hammer
+				Tooltip: Try right clicking!
+			}
+
+			HammerPlaque: {
+				DisplayName: Hammer Plaque
+				Tooltip: Try right clicking!
+			}
+
+			HammerPlaqueSmall: {
+				DisplayName: Small Hammer Plaque
+				Tooltip: Try right clicking!
+			}
+
+			HammerRack: {
+				DisplayName: Hammer Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedHammer: {
+				DisplayName: Mounted Hammer
+				Tooltip: Try right clicking!
+			}
+
+			MountedHammerLong: {
+				DisplayName: Mounted Long Hammer
+				Tooltip: Try right clicking!
+			}
+
+			MixedRack: {
+				DisplayName: Mixed Rack
+				Tooltip: Try right clicking!
+			}
+
+			MixedRackLong: {
+				DisplayName: Long Mixed Rack
+				Tooltip: Try right clicking!
+			}
+
+			MixedRackSmall: {
+				DisplayName: Small Mixed Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedPick: {
+				DisplayName: Mounted Pick
+				Tooltip: Try right clicking!
+			}
+
+			MountedPickLong: {
+				DisplayName: Mounted Long Pick
+				Tooltip: Try right clicking!
+			}
+
+			MountedPicks: {
+				DisplayName: Mounted Picks
+				Tooltip: Try right clicking!
+			}
+
+			Pickaxe: {
+				DisplayName: Pickaxe
+				Tooltip: Try right clicking!
+			}
+
+			PickaxeLong: {
+				DisplayName: Long Pickaxe
+				Tooltip: Try right clicking!
+			}
+
+			PickPlaque: {
+				DisplayName: Pick Plaque
+				Tooltip: Try right clicking!
+			}
+
+			PickPlaqueSmall: {
+				DisplayName: Small Pick Plaque
+				Tooltip: Try right clicking!
+			}
+
+			PickRack: {
+				DisplayName: Pick Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedPole: {
+				DisplayName: Mounted Polearm
+				Tooltip: Try right clicking!
+			}
+
+			MountedPoleLong: {
+				DisplayName: Mounted Polearm
+				Tooltip: Try right clicking!
+			}
+
+			Pole: {
+				DisplayName: Polearm
+				Tooltip: Try right clicking!
+			}
+
+			PoleLong: {
+				DisplayName: Long Polearm
+				Tooltip: Try right clicking!
+			}
+
+			PoleRack: {
+				DisplayName: Polearm Rack
+				Tooltip: Try right clicking!
+			}
+
+			PoleRackLong: {
+				DisplayName: Long Polearm Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedSpear: {
+				DisplayName: Mounted Spear
+				Tooltip: Try right clicking!
+			}
+
+			MountedSpearLong: {
+				DisplayName: Mounted Long Spear
+				Tooltip: Try right clicking!
+			}
+
+			MountedSpears: {
+				DisplayName: Mounted Spears
+				Tooltip: Try right clicking!
+			}
+
+			MountedSpearsSmall: {
+				DisplayName: Mounted Small Spears
+				Tooltip: Try right clicking!
+			}
+
+			Spear: {
+				DisplayName: Spear
+				Tooltip: Try right clicking!
+			}
+
+			SpearLong: {
+				DisplayName: Long Spear
+				Tooltip: Try right clicking!
+			}
+
+			SpearPlaque: {
+				DisplayName: Spear Plaque
+				Tooltip: Try right clicking!
+			}
+
+			SpearRack: {
+				DisplayName: Spear Rack
+				Tooltip: Try right clicking!
+			}
+
+			SpearRackLong: {
+				DisplayName: Long Spear Rack
+				Tooltip: Try right clicking!
+			}
+
+			MountedCutlasses: {
+				DisplayName: Mounted Cutlasses
+				Tooltip: Try right clicking!
+			}
+
+			MountedCutlassesLarge: {
+				DisplayName: Large Mounted Cutlasses
+				Tooltip: Try right clicking!
+			}
+
+			MountedSabers: {
+				DisplayName: Mounted Sabers
+				Tooltip: Try right clicking!
+			}
+
+			MountedSwords: {
+				DisplayName: Mounted Swords
+				Tooltip: Try right clicking!
+			}
+
+			Sword: {
+				DisplayName: Sword
+				Tooltip: Try right clicking!
+			}
+
+			SwordMounted: {
+				DisplayName: Mounted Sword
+				Tooltip: Try right clicking!
+			}
+
+			SwordMountedScabbard: {
+				DisplayName: Mounted Sword with Scabbard
+				Tooltip: Try right clicking!
+			}
+
+			SwordMountedThin: {
+				DisplayName: Mounted Sword
+				Tooltip: Try right clicking!
+			}
+
+			SwordPlaque: {
+				DisplayName: Sword Plaque
+				Tooltip: Try right clicking!
+			}
+
+			SwordRackDynasty: {
+				DisplayName: Dynasty Sword Stand
+				Tooltip: ""
+			}
+
+			SwordRackWall: {
+				DisplayName: Sword Rack
+				Tooltip: Try right clicking!
+			}
+
+			SwordRackWallDynasty: {
+				DisplayName: Dynasty Sword Rack
+				Tooltip: ""
+			}
+
+			SwordScabbard: {
+				DisplayName: Sword with Scabbard
+				Tooltip: Try right clicking!
+			}
+
+			SwordStand: {
+				DisplayName: Sword Stand
+				Tooltip: Try right clicking!
+			}
+
+			SwordStandDynasty: {
+				DisplayName: Dynasty Sword Stand
+				Tooltip: ""
+			}
+
+			SwordStanding: {
+				DisplayName: Sword
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeBlack: {
+				DisplayName: Modern Grenade
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeBrown: {
+				DisplayName: Old Grenade
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeGreen: {
+				DisplayName: Classic Green
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeLauncher: {
+				DisplayName: Mounted Grenade Launcher
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeLauncherSmall: {
+				DisplayName: Small Mounted Grenade Launcher
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeLauncherSmallStanding: {
+				DisplayName: Small Grenade Launcher
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeLauncherStanding: {
+				DisplayName: Grenade Launcher
+				Tooltip: Try right clicking!
+			}
+
+			GrenadeRed: {
+				DisplayName: Red Grenade
+				Tooltip: Try right clicking!
+			}
+
+			GunMounted: {
+				DisplayName: Mounted Gun
+				Tooltip: Try right clicking!
+			}
+
+			GunRackWall: {
+				DisplayName: Gun Rack
+				Tooltip: Try right clicking!
+			}
+
+			GunRackWallLarge: {
+				DisplayName: Large Gun Rack
+				Tooltip: Try right clicking!
+			}
+
+			GunStand: {
+				DisplayName: Gun Stand
+				Tooltip: Try right clicking!
+			}
+
+			GunStanding: {
+				DisplayName: Gun
+				Tooltip: Try right clicking!
+			}
+
+			ModernWeaponRack: {
+				DisplayName: Modern Weapon Rack
+				Tooltip: Try right clicking!
+			}
+
+			ModernWeaponRackLarge: {
+				DisplayName: Large Modern Weapon Rack
+				Tooltip: Try right clicking!
+			}
+
+			ModernWeaponStand: {
+				DisplayName: Modern Weapon Stand
+				Tooltip: Try right clicking!
+			}
+
+			WeaponStandEmpty: {
+				DisplayName: Empty Weapon Stand
+				Tooltip: Try right clicking!
+			}
+
 			BasketEmpty: {
 				DisplayName: Empty Basket
 				Tooltip: ""
 			}
 
+			BasketHandle: {
+				DisplayName: Basket with Handle
+				Tooltip: Try right clicking!
+			}
+
 			BasketWicker: {
 				DisplayName: Wicker Basket
-				Tooltip: ""
-			}
-
-			HeartfeltCardsItem: {
 				Tooltip: Try right clicking!
-				DisplayName: Heartfelt Cards
 			}
 
-			ColumnTuscanItem: {
-				DisplayName: Tuscan Column
+			BasketItem: {
+				DisplayName: Basket
 				Tooltip: ""
 			}
 
-			ImperialWallpaperItem: {
-				Tooltip: ""
-				DisplayName: Imperial Wallpaper
-			}
-
-			ImperialWallpaperFancyItem: {
-				Tooltip: ""
-				DisplayName: Fancy Imperial Wallpaper
-			}
-
-			ImperialPanellingItem: {
-				Tooltip: ""
-				DisplayName: Imperial Panelling
-			}
-
-			ImperialWorkBench: {
-				Tooltip: ""
-				DisplayName: Imperial Work Bench
-			}
-
-			ImperialTable: {
-				Tooltip: ""
-				DisplayName: Imperial Table
-			}
-
-			ImperialCoveredTable: {
-				Tooltip: ""
-				DisplayName: Imperial Covered Table
-			}
-
-			ImperialConsole: {
-				Tooltip: ""
-				DisplayName: Imperial Console
-			}
-
-			ImperialBar: {
-				Tooltip: ""
-				DisplayName: Imperial Bar
-			}
-
-			ImperialChest: {
-				Tooltip: ""
-				DisplayName: Imperial Chest
-			}
-
-			ImperialCabinet: {
-				Tooltip: ""
-				DisplayName: Imperial Cabinet
-			}
-
-			ImperialWoodenChair: {
-				Tooltip: ""
-				DisplayName: Imperial Wooden Chair
-			}
-
-			ImperialWoodenBarstool: {
-				Tooltip: ""
-				DisplayName: Imperial Wooden Barstool
-			}
-
-			ImperialSofa: {
-				Tooltip: ""
-				DisplayName: Imperial Sofa
-			}
-
-			ImperialOttoman: {
-				Tooltip: ""
-				DisplayName: Imperial Ottoman
-			}
-
-			ImperialGoldenChair: {
-				Tooltip: ""
-				DisplayName: Imperial Golden Chair
-			}
-
-			ImperialGoldenBarstool: {
-				Tooltip: ""
-				DisplayName: Imperial Golden Barstool
-			}
-
-			ImperialChesterfield: {
-				Tooltip: ""
-				DisplayName: Imperial Chesterfield
-			}
-
-			ImperialArmchair: {
-				Tooltip: ""
-				DisplayName: Imperial Armchair
-			}
-
-			ImperialShelf: {
-				Tooltip: ""
-				DisplayName: Imperial Shelf
-			}
-
-			ImperialPlatformFancy: {
-				Tooltip: ""
-				DisplayName: Fancy Imperial Platform
-			}
-
-			ImperialPlatform: {
-				Tooltip: ""
-				DisplayName: Imperial Platform
-			}
-
-			ImperialMirror: {
-				Tooltip: ""
-				DisplayName: Imperial Mirror
-			}
-
-			ImperialHarpsichord: {
-				Tooltip: ""
-				DisplayName: Imperial Harpsichord
-			}
-
-			ImperialDoor: {
-				Tooltip: ""
-				DisplayName: Imperial Door
-			}
-
-			ImperialClock: {
-				Tooltip: ""
-				DisplayName: Imperial Clock
-			}
-
-			ImperialBookcase: {
-				Tooltip: ""
-				DisplayName: Imperial Bookcase
-			}
-
-			ImperialTorchiere: {
-				Tooltip: ""
-				DisplayName: Imperial Torchiere
-			}
-
-			ImperialSpotlight: {
-				Tooltip: ""
-				DisplayName: Imperial Spotlight
-			}
-
-			ImperialSconce: {
-				Tooltip: ""
-				DisplayName: Imperial Sconce
-			}
-
-			ImperialLantern: {
-				Tooltip: ""
-				DisplayName: Imperial Lantern
-			}
-
-			ImperialLamp: {
-				Tooltip: ""
-				DisplayName: Imperial Lamp
-			}
-
-			ImperialChandelier: {
-				Tooltip: ""
-				DisplayName: Imperial Chandelier
-			}
-
-			ImperialCeilingLamp: {
-				Tooltip: ""
-				DisplayName: Imperial Ceiling Lamp
-			}
-
-			ImperialCandle: {
-				Tooltip: ""
-				DisplayName: Imperial Candle
-			}
-
-			ImperialCandelabra: {
-				Tooltip: ""
-				DisplayName: Imperial Candelabra
-			}
-
-			ImperialWoodItem: {
-				Tooltip: ""
-				DisplayName: Imperial Wood
-			}
-
-			ImperialWoodInlayItem: {
-				Tooltip: ""
-				DisplayName: Imperial Wood Inlay
-			}
-
-			ImperialWoodFancyItem: {
-				Tooltip: ""
-				DisplayName: Fancy Imperial Wood
-			}
-
-			ImperialBeamItem: {
-				Tooltip: ""
-				DisplayName: Imperial Beam
-			}
-
-			ImperialRoyalBed: {
-				Tooltip: ""
-				DisplayName: Imperial Royal Bed
-			}
-
-			ImperialNightstand: {
-				Tooltip: ""
-				DisplayName: Imperial Nightstand
-			}
-
-			ImperialDresser: {
-				Tooltip: ""
-				DisplayName: Imperial Dresser
-			}
-
-			ImperialBed: {
-				Tooltip: ""
-				DisplayName: Imperial Bed
-			}
-
-			ImperialWoodenBathtub: {
-				Tooltip: ""
-				DisplayName: Imperial Wooden Bathtub
-			}
-
-			ImperialToilet: {
-				Tooltip: ""
-				DisplayName: Imperial Toilet
-			}
-
-			ImperialSink: {
-				Tooltip: ""
-				DisplayName: Imperial Sink
-			}
-
-			ImperialCommode: {
-				Tooltip: ""
-				DisplayName: Imperial Commode
-			}
-
-			ImperialBathtubFancy: {
-				Tooltip: ""
-				DisplayName: Fancy Imperial Bathtub
-			}
-
-			ImperialBathtub: {
-				Tooltip: ""
-				DisplayName: Imperial Bathtub
-			}
-
-			ConfusinglyLargeBathtubItem: {
-				Tooltip: ""
-				DisplayName: Confusingly Large Bathtub
-			}
-
-			RolledTowels: {
-				Tooltip: ""
-				DisplayName: Rolled Towels
-			}
-
-			RolledTowel: {
-				Tooltip: ""
-				DisplayName: Rolled Towel
-			}
-
-			RolledStackedTowels: {
-				Tooltip: ""
-				DisplayName: Rolled Stacked Towels
-			}
-
-			FoldedTowel: {
-				Tooltip: ""
-				DisplayName: Folded Towel
-			}
-
-			Bolster: {
-				Tooltip: ""
-				DisplayName: Bolster
-			}
-
-			WoodenBucket: {
-				Tooltip: ""
-				DisplayName: Wooden Bucket
-			}
-
-			ImperialFenceItem: {
-				DisplayName: Imperial Fence
+			WetBasketItem: {
+				DisplayName: Wet Basket
 				Tooltip: ""
 			}
 
-			ImperialDoorRounded: {
-				DisplayName: Imperial Door
+			TablePhoneBlack: {
+				DisplayName: Black Table Phone
 				Tooltip: ""
 			}
 
-			ImperialDoorRoundedWindow: {
-				DisplayName: Imperial Door
+			TablePhoneGreen: {
+				DisplayName: Green Table Phone
 				Tooltip: ""
 			}
 
-			ImperialDoorWindow: {
-				DisplayName: Imperial Door
+			TablePhoneOld: {
+				DisplayName: Old Table Phone
 				Tooltip: ""
 			}
 
-			ImperialSconceCandle: {
-				DisplayName: Imperial Sconce
+			TablePhoneRed: {
+				DisplayName: Red Table Phone
 				Tooltip: ""
 			}
 
-			ImperialSconceGlass: {
-				DisplayName: Glass Imperial Sconce
+			WallPhone: {
+				DisplayName: Wall Phone
+				Tooltip: Try right clicking!
+			}
+
+			WallPhoneOldItem: {
+				DisplayName: Old Wall Phone
+				Tooltip: ""
+			}
+
+			RedTap: {
+				DisplayName: Red Tap
+				Tooltip: ""
+			}
+
+			Tap: {
+				DisplayName: Tap
 				Tooltip: ""
 			}
 
 			WebsDarkItem: {
-				DisplayName: Fancy Dark Webs
-				Tooltip: Clings to ceilings and corners
+				DisplayName: Dark Webs
+				Tooltip: ""
 			}
 
 			WebsItem: {
-				DisplayName: Fancy Webs
-				Tooltip: Clings to ceilings and corners
-			}
-
-			RepairedToilet: {
-				DisplayName: Repaired Toilet
+				DisplayName: Webs
 				Tooltip: ""
 			}
 
-			RepairedTable: {
-				DisplayName: Repaired Table
+			BrokenObeliskItem: {
+				DisplayName: Broken Obelisk
 				Tooltip: ""
 			}
 
-			RepairedSofa: {
-				DisplayName: Repaired Sofa
+			ObeliskItem: {
+				DisplayName: Obelisk
 				Tooltip: ""
 			}
 
-			RepairedSink: {
-				DisplayName: Repaired Sink
+			LargeHangingBass: {
+				DisplayName: Large Hanging Bass
 				Tooltip: ""
 			}
 
-			RepairedPlatform: {
-				DisplayName: Repaired Platform
+			LargeHangingCod: {
+				DisplayName: Large Hanging Cod
 				Tooltip: ""
 			}
 
-			RepairedPiano: {
-				DisplayName: Repaired Piano
+			LargeHangingFlounder: {
+				DisplayName: Large Hanging Flounder
 				Tooltip: ""
 			}
 
-			RepairedLantern: {
-				DisplayName: Repaired Lantern
+			LargeHangingSalmon: {
+				DisplayName: Large Hanging Salmon
 				Tooltip: ""
 			}
 
-			RepairedLamp: {
-				DisplayName: Repaired Lamp
+			LargeHangingSnapper: {
+				DisplayName: Large Hanging Snapper
 				Tooltip: ""
 			}
 
-			RepairedDresser: {
-				DisplayName: Repaired Dresser
+			LargeHangingTrout: {
+				DisplayName: Large Hanging Trout
 				Tooltip: ""
 			}
 
-			RepairedDoor: {
-				DisplayName: Repaired Door
+			LargeHangingTuna: {
+				DisplayName: Large Hanging Tuna
 				Tooltip: ""
 			}
 
-			RepairedClock: {
-				DisplayName: Repaired Clock
+			SmallHangingFish: {
+				DisplayName: Small Hanging Fish
 				Tooltip: ""
 			}
 
-			RepairedChandelier: {
-				DisplayName: Repaired Chandelier
+			TinyHangingFish: {
+				DisplayName: Tiny Hanging Fish
 				Tooltip: ""
 			}
 
-			RepairedChair: {
-				DisplayName: Repaired Chair
+			DecorativeRope: {
+				DisplayName: Decorative Rope
 				Tooltip: ""
 			}
 
-			RepairedCeilingLamp: {
-				DisplayName: Repaired Ceiling Lamp
+			DecorativeSilkRope: {
+				DisplayName: Decorative Silk Rope
 				Tooltip: ""
 			}
 
-			RepairedCandle: {
-				DisplayName: Repaired Candle
+			DecorativeVineRope: {
+				DisplayName: Decorative Vine Rope
 				Tooltip: ""
 			}
 
-			RepairedCandelabra: {
-				DisplayName: Repaired Candelabra
+			DecorativeWebRope: {
+				DisplayName: Decorative Web Rope
 				Tooltip: ""
 			}
 
-			RepairedBookcase: {
-				DisplayName: Repaired Bookcase
+			BlueSilkFlowers: {
+				DisplayName: Blue Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			PinkSilkFlowers: {
+				DisplayName: Pink Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			PurpleSilkFlowers: {
+				DisplayName: Purple Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			RedSilkFlowers: {
+				DisplayName: Red Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			SilkJungleFlowers: {
+				DisplayName: Silk Jungle Flowers
+				Tooltip: Try right clicking!
+			}
+
+			SilkWildflowers: {
+				DisplayName: Silk Wildflowers
+				Tooltip: Try right clicking!
+			}
+
+			WhiteSilkFlowers: {
+				DisplayName: White Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			YellowSilkFlowers: {
+				DisplayName: Yellow Silk Flowers
+				Tooltip: Try right clicking!
+			}
+
+			SilkAshPlantsItem: {
+				DisplayName: Silk Ash Plants
+				Tooltip: Try right clicking!
+			}
+
+			SilkCorruptionPlants: {
+				DisplayName: Silk Corruption Plants
+				Tooltip: Try right clicking!
+			}
+
+			SilkCrimsonPlants: {
+				DisplayName: Silk Crimson Plants
+				Tooltip: Try right clicking!
+			}
+
+			SilkGrass: {
+				DisplayName: Silk Grass
+				Tooltip: Try right clicking!
+			}
+
+			SilkHallowPlants: {
+				DisplayName: Silk Hallow Plants
+				Tooltip: Try right clicking!
+			}
+
+			SilkJunglePlants: {
+				DisplayName: Silk Jungle Plants
+				Tooltip: Try right clicking!
+			}
+
+			SilkOatsBouquet: {
+				DisplayName: Silk Oats
+				Tooltip: Try right clicking!
+			}
+
+			SilkOatsCorruptBouquet: {
+				DisplayName: Silk Corrupt Oats
+				Tooltip: Try right clicking!
+			}
+
+			SilkOatsCrimsonBouquet: {
+				DisplayName: Silk Crimson Oats Crimson
+				Tooltip: Try right clicking!
+			}
+
+			SilkOatsDesertBouquet: {
+				DisplayName: Silk Desert Oats
+				Tooltip: Try right clicking!
+			}
+
+			SilkOatsHallowBouquet: {
+				DisplayName: Silk Hallow Oats
+				Tooltip: Try right clicking!
+			}
+
+			CorruptReedBasket: {
+				DisplayName: Silk Corrupt Reeds
 				Tooltip: ""
 			}
 
-			RepairedBed: {
-				DisplayName: Repaired Bed
+			CrimsonReedBasket: {
+				DisplayName: Silk Crimson Reeds
+				Tooltip: ""
+			}
+
+			HallowReedBasket: {
+				DisplayName: Silk Hallow Reeds
+				Tooltip: ""
+			}
+
+			JungleReedBasket: {
+				DisplayName: Silk Jungle Reeds
+				Tooltip: ""
+			}
+
+			MushroomReedBasket: {
+				DisplayName: Silk Mushroom Reeds
+				Tooltip: ""
+			}
+
+			ReedBasket: {
+				DisplayName: Silk Reeds
+				Tooltip: ""
+			}
+
+			SeaweedBasket: {
+				DisplayName: Silk Seaweed
+				Tooltip: ""
+			}
+
+			SilkMushroomsItem: {
+				DisplayName: Silk Mushrooms
+				Tooltip: ""
+			}
+
+			CorruptThornBasket: {
+				DisplayName: Silk Corrupt Thorns
+				Tooltip: ""
+			}
+
+			CrimsonThornBasket: {
+				DisplayName: Silk Crimson Thorns
+				Tooltip: ""
+			}
+
+			JungleThornBasket: {
+				DisplayName: Silk Jungle Thorns
+				Tooltip: ""
+			}
+
+			SmallLeopardSkin: {
+				DisplayName: Small Leopard Skin
+				Tooltip: ""
+			}
+
+			SmallTigerSkin: {
+				DisplayName: Small Tiger Skin
+				Tooltip: ""
+			}
+
+			SmallTreasureMap: {
+				DisplayName: Small Treasure Map
+				Tooltip: ""
+			}
+
+			SmallZebraSkin: {
+				DisplayName: Small Zebra Skin
+				Tooltip: ""
+			}
+
+			DecorativeWebDarkItem: {
+				DisplayName: Decorative Dark Web
+				Tooltip: Try right clicking!
+			}
+
+			DecorativeWebItem: {
+				DisplayName: Decorative Web
+				Tooltip: Try right clicking!
+			}
+
+			DecoSpikeItem: {
+				DisplayName: Decorative Spike
+				Tooltip: ""
+			}
+
+			DecoSpike: {
+				Tooltip: ""
+				DisplayName: Deco Spike
+			}
+
+			DecoWoodenSpikeItem: {
+				DisplayName: Decorative Wooden Spike
+				Tooltip: ""
+			}
+
+			FestiveArmchairItem: {
+				DisplayName: Festive Armchair
+				Tooltip: ""
+			}
+
+			FestiveBathtubItem: {
+				DisplayName: Festive Bathtub
+				Tooltip: ""
+			}
+
+			FestiveBedItem: {
+				DisplayName: Festive Bed
+				Tooltip: ""
+			}
+
+			FestiveBookcaseItem: {
+				DisplayName: Festive Bookcase
+				Tooltip: ""
+			}
+
+			FestiveCandelabraItem: {
+				DisplayName: Festive Candelabra
+				Tooltip: ""
+			}
+
+			FestiveCandleItem: {
+				DisplayName: Festive Candle
+				Tooltip: ""
+			}
+
+			FestiveCeilingLampItem: {
+				DisplayName: Festive Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FestiveChairItem: {
+				DisplayName: Festive Chair
+				Tooltip: ""
+			}
+
+			FestiveChandelierItem: {
+				DisplayName: Festive Chandelier
+				Tooltip: ""
+			}
+
+			FestiveChestItem: {
+				DisplayName: Festive Chest
+				Tooltip: ""
+			}
+
+			FestiveClockItem: {
+				DisplayName: Festive Clock
+				Tooltip: ""
+			}
+
+			FestiveDoorItem: {
+				DisplayName: Festive Door
+				Tooltip: ""
+			}
+
+			FestiveDresserItem: {
+				DisplayName: Festive Dresser
+				Tooltip: ""
+			}
+
+			FestiveLampItem: {
+				DisplayName: Festive Lamp
+				Tooltip: ""
+			}
+
+			FestiveLamppostItem: {
+				DisplayName: Festive Lamppost
+				Tooltip: ""
+			}
+
+			FestiveLanternItem: {
+				DisplayName: Festive Lantern
+				Tooltip: ""
+			}
+
+			FestivePianoItem: {
+				DisplayName: Festive Piano
+				Tooltip: ""
+			}
+
+			FestivePlatformItem: {
+				DisplayName: Festive Platform
+				Tooltip: ""
+			}
+
+			FestiveSinkItem: {
+				DisplayName: Festive Sink
+				Tooltip: ""
+			}
+
+			FestiveSofaItem: {
+				DisplayName: Festive Sofa
+				Tooltip: ""
+			}
+
+			FestiveTableItem: {
+				DisplayName: Festive Table
+				Tooltip: ""
+			}
+
+			FestiveToiletItem: {
+				DisplayName: Festive Toilet
+				Tooltip: ""
+			}
+
+			FestiveWorkbenchItem: {
+				DisplayName: Festive Work Bench
+				Tooltip: ""
+			}
+
+			KingBedFestiveItem: {
+				DisplayName: Festive Royal Bed
+				Tooltip: ""
+			}
+
+			BigHeartfeltPlatform: {
+				DisplayName: Big Heartfelt Platform
+				Tooltip: ""
+			}
+
+			HeartfeltArmchair: {
+				DisplayName: Heartfelt Armchair
+				Tooltip: ""
+			}
+
+			HeartfeltBathtub: {
+				DisplayName: Heartfelt Bathtub
+				Tooltip: ""
+			}
+
+			HeartfeltBedItem: {
+				DisplayName: Heartfelt Bed Item
+				Tooltip: ""
+			}
+
+			HeartfeltBookcase: {
+				DisplayName: Heartfelt Bookcase
+				Tooltip: ""
+			}
+
+			HeartfeltCandelabra: {
+				DisplayName: Heartfelt Candelabra
+				Tooltip: ""
+			}
+
+			HeartfeltCandle: {
+				DisplayName: Heartfelt Candle
+				Tooltip: ""
+			}
+
+			HeartfeltCeilingLamp: {
+				DisplayName: Heartfelt Ceiling Lamp
+				Tooltip: ""
+			}
+
+			HeartfeltChair: {
+				DisplayName: Heartfelt Chair
+				Tooltip: ""
+			}
+
+			HeartfeltChandelier: {
+				DisplayName: Heartfelt Chandelier
+				Tooltip: ""
+			}
+
+			HeartfeltChestItem: {
+				DisplayName: Heartfelt Chest
+				Tooltip: ""
+			}
+
+			HeartfeltClock: {
+				DisplayName: Heartfelt Clock
+				Tooltip: ""
+			}
+
+			HeartfeltCoveredTable: {
+				DisplayName: Heartfelt Covered Table
+				Tooltip: ""
+			}
+
+			HeartfeltCoveredWorkBench: {
+				DisplayName: Heartfelt Covered Work Bench
+				Tooltip: ""
+			}
+
+			HeartfeltDecoratedTable: {
+				DisplayName: Heartfelt Decorated Table
+				Tooltip: ""
+			}
+
+			HeartfeltDoor: {
+				DisplayName: Heartfelt Door
+				Tooltip: ""
+			}
+
+			HeartfeltDresserItem: {
+				DisplayName: Heartfelt Dresser
+				Tooltip: ""
+			}
+
+			HeartfeltKingBed: {
+				DisplayName: Heartfelt Royal Bed
+				Tooltip: ""
+			}
+
+			HeartfeltLamp: {
+				DisplayName: Heartfelt Lamp
+				Tooltip: ""
+			}
+
+			HeartfeltLantern: {
+				DisplayName: Heartfelt Lantern
+				Tooltip: ""
+			}
+
+			HeartfeltOttoman: {
+				DisplayName: Heartfelt Ottoman
+				Tooltip: ""
+			}
+
+			HeartfeltPiano: {
+				DisplayName: Heartfelt Piano
+				Tooltip: ""
+			}
+
+			HeartfeltPlatform: {
+				DisplayName: Heartfelt Platform
+				Tooltip: ""
+			}
+
+			HeartfeltSink: {
+				DisplayName: Heartfelt Sink
+				Tooltip: ""
+			}
+
+			HeartfeltSofa: {
+				DisplayName: Heartfelt Sofa
+				Tooltip: ""
+			}
+
+			HeartfeltTable: {
+				DisplayName: Heartfelt Table
+				Tooltip: ""
+			}
+
+			HeartfeltToilet: {
+				DisplayName: Heartfelt Toilet
+				Tooltip: ""
+			}
+
+			HeartfeltWorkBench: {
+				DisplayName: Heartfelt Work Bench
+				Tooltip: ""
+			}
+
+			SpringtimeArmchair: {
+				DisplayName: Vernal Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairFancy: {
+				DisplayName: Fancy Vernal Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairFancyPattern: {
+				DisplayName: Fancy Patterned Vernal Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeArmchairPattern: {
+				DisplayName: Patterned Vernal Armchair
+				Tooltip: ""
+			}
+
+			SpringtimeBarstool: {
+				DisplayName: Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolCover: {
+				DisplayName: Covered Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolDraped: {
+				DisplayName: Draped Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatterned: {
+				DisplayName: Patterned Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatternedCover: {
+				DisplayName: Covered Patterned Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBarstoolPatternedDraped: {
+				DisplayName: Draped Patterned Vernal Barstool
+				Tooltip: ""
+			}
+
+			SpringtimeBar: {
+				DisplayName: Vernal Bar
+				Tooltip: ""
+			}
+
+			SpringtimeChair: {
+				DisplayName: Vernal Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairDraped: {
+				DisplayName: Draped Vernal Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairDrapedPatterned: {
+				DisplayName: Draped Patterned Vernal Chair
+				Tooltip: ""
+			}
+
+			SpringtimeChairPatterned: {
+				DisplayName: Patterned Vernal Chair
+				Tooltip: ""
+			}
+
+			SpringtimeOttoman: {
+				DisplayName: Vernal Ottoman
+				Tooltip: ""
+			}
+
+			SpringtimeOttomanPattern: {
+				DisplayName: Patterned Vernal Ottoman
+				Tooltip: ""
+			}
+
+			SpringtimeSofa: {
+				DisplayName: Springtime Sofa
+				Tooltip: ""
+			}
+
+			SpringtimeStoolItem: {
+				DisplayName: Vernal Stool
+				Tooltip: ""
+			}
+
+			SpringtimeStoolItemPatterned: {
+				DisplayName: Patterned Vernal Stool
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraBlue: {
+				DisplayName: Blue Vernal Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraGreen: {
+				DisplayName: Green Vernal Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraPink: {
+				DisplayName: Pink Vernal Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandelabraWhite: {
+				DisplayName: White Vernal Candelabra
+				Tooltip: ""
+			}
+
+			SpringtimeCandleItem: {
+				DisplayName: Vernal Candle
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampBlue: {
+				DisplayName: Blue Vernal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampGreen: {
+				DisplayName: Green Vernal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampPink: {
+				DisplayName: Pink Vernal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeCeilingLampWhite: {
+				DisplayName: White Vernal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeChandelier: {
+				DisplayName: Vernal Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeChandelierCrystal: {
+				DisplayName: Vernal Crystal Chandelier
+				Tooltip: ""
+			}
+
+			SpringtimeLampBlue: {
+				DisplayName: Blue Vernal Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampGreen: {
+				DisplayName: Green Vernal Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampPink: {
+				DisplayName: Pink Vernal Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLampWhite: {
+				DisplayName: White Vernal Lamp
+				Tooltip: ""
+			}
+
+			SpringtimeLantern: {
+				DisplayName: Vernal Lantern
+				Tooltip: ""
+			}
+
+			SpringtimeSconceBlue: {
+				DisplayName: Blue Vernal Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconceGreen: {
+				DisplayName: Green Vernal Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconcePink: {
+				DisplayName: Pink Vernal Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSconceWhite: {
+				DisplayName: White Vernal Sconce
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlight: {
+				DisplayName: Vernal Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeSpotlightCrystal: {
+				DisplayName: Vernal Crystal Spotlight
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereBlue: {
+				DisplayName: Blue Vernal Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereGreen: {
+				DisplayName: Green Vernal Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchierePink: {
+				DisplayName: Pink Vernal Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeTorchiereWhite: {
+				DisplayName: White Vernal Torchiere
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubColor: {
+				DisplayName: Colorful Vernal Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubItem: {
+				DisplayName: Vernal Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubPattern: {
+				DisplayName: Patterned Vernal Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBathtubStripe: {
+				DisplayName: Striped Vernal Bathtub
+				Tooltip: ""
+			}
+
+			SpringtimeBedItem: {
+				DisplayName: Vernal Bed
+				Tooltip: ""
+			}
+
+			SpringtimeBedItemPatterned: {
+				DisplayName: Patterned Vernal Bed
+				Tooltip: ""
+			}
+
+			SpringtimeBookcaseItem: {
+				DisplayName: Vernal Bookcase
+				Tooltip: ""
+			}
+
+			SpringtimeChestItem: {
+				DisplayName: Vernal Chest
+				Tooltip: ""
+			}
+
+			SpringtimeClockItem: {
+				DisplayName: Vernal Clock
+				Tooltip: ""
+			}
+
+			SpringtimeConsoleItem: {
+				DisplayName: Vernal Console Table
+				Tooltip: ""
+			}
+
+			SpringtimeDoorItem: {
+				DisplayName: Vernal Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorRectangleItem: {
+				DisplayName: Rectangular Vernal Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorRoundItem: {
+				DisplayName: Round Vernal Door
+				Tooltip: ""
+			}
+
+			SpringtimeDoorSquareItem: {
+				DisplayName: Square Vernal Door
+				Tooltip: ""
+			}
+
+			SpringtimeDresserItem: {
+				DisplayName: Vernal Dresser
+				Tooltip: ""
+			}
+
+			SpringtimeEggChair: {
+				DisplayName: Vernal Egg Chair
+				Tooltip: ""
+			}
+
+			SpringtimeKingBedItem: {
+				DisplayName: Vernal Royal Bed
+				Tooltip: ""
+			}
+
+			SpringtimeNightstandItem: {
+				DisplayName: Vernal Nightstand
+				Tooltip: ""
+			}
+
+			SpringtimePianoItem: {
+				DisplayName: Vernal Piano
+				Tooltip: ""
+			}
+
+			SpringtimePlatformFloralItem: {
+				DisplayName: Floral Vernal Platform Floral
+				Tooltip: ""
+			}
+
+			SpringtimePlatformItem: {
+				DisplayName: Vernal Platform
+				Tooltip: ""
+			}
+
+			SpringtimeShelfItem: {
+				DisplayName: Vernal Shelf
+				Tooltip: ""
+			}
+
+			SpringtimeSinkFancy: {
+				DisplayName: Fancy Vernal Sink
+				Tooltip: ""
+			}
+
+			SpringtimeSinkItem: {
+				DisplayName: Vernal Sink
+				Tooltip: ""
+			}
+
+			SpringtimeSinkPattern: {
+				DisplayName: Patterned Vernal Sink
+				Tooltip: ""
+			}
+
+			SpringtimeTable: {
+				DisplayName: Vernal Table
+				Tooltip: ""
+			}
+
+			SpringtimeTableFancy: {
+				DisplayName: Fancy Vernal Table
+				Tooltip: ""
+			}
+
+			SpringtimeTablePattern: {
+				DisplayName: Patterned Vernal Table
+				Tooltip: ""
+			}
+
+			SpringtimeToiletItem: {
+				DisplayName: Vernal Toilet
+				Tooltip: ""
+			}
+
+			SpringtimeWorkbench: {
+				DisplayName: Vernal Work Bench
 				Tooltip: ""
 			}
 
@@ -5283,13 +3426,28 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RepairedArmchair: {
-				DisplayName: Repaired Armchair
+			RepairedSink: {
+				DisplayName: Repaired Sink
+				Tooltip: ""
+			}
+
+			RepairedToilet: {
+				DisplayName: Repaired Toilet
+				Tooltip: ""
+			}
+
+			RepairedBed: {
+				DisplayName: Repaired Bed
 				Tooltip: ""
 			}
 
 			RepairedCanopyBed: {
 				DisplayName: Repaired Canopy Bed
+				Tooltip: ""
+			}
+
+			RepairedDresser: {
+				DisplayName: Repaired Dresser
 				Tooltip: ""
 			}
 
@@ -5323,13 +3481,43 @@ Mods: {
 				Tooltip: ""
 			}
 
+			RepairedCeilingLamp: {
+				DisplayName: Repaired Ceiling Lamp
+				Tooltip: ""
+			}
+
+			RepairedChandelier: {
+				DisplayName: Repaired Chandelier
+				Tooltip: ""
+			}
+
+			RepairedLantern: {
+				DisplayName: Repaired Lantern
+				Tooltip: ""
+			}
+
 			RepairedSpotlight: {
 				DisplayName: Repaired Spotlight
 				Tooltip: ""
 			}
 
+			RepairedCandelabra: {
+				DisplayName: Repaired Candelabra
+				Tooltip: ""
+			}
+
+			RepairedCandle: {
+				DisplayName: Repaired Candle
+				Tooltip: ""
+			}
+
 			RepairedCandleSilver: {
-				DisplayName: Repaired Candle Silver
+				DisplayName: Repaired Silver Candle
+				Tooltip: ""
+			}
+
+			RepairedLamp: {
+				DisplayName: Repaired Lamp
 				Tooltip: ""
 			}
 
@@ -5339,32 +3527,37 @@ Mods: {
 			}
 
 			RepairedSconceCandle: {
-				DisplayName: Repaired Sconce Candle
+				DisplayName: Repaired Candle Sconce
 				Tooltip: ""
 			}
 
 			RepairedSconceGlass: {
-				DisplayName: Repaired Sconce Glass
+				DisplayName: Repaired Glass Sconce
 				Tooltip: ""
 			}
 
 			RepairedSconceSilverCandle: {
-				DisplayName: Repaired Silver Sconce
+				DisplayName: Repaired Silver Candle Sconce
 				Tooltip: ""
 			}
 
 			RepairedSconceSilverGlass: {
-				DisplayName: Repaired Silver Sconce
+				DisplayName: Repaired Silver Glass Sconce
 				Tooltip: ""
 			}
 
 			RepairedSconceSilverThick: {
-				DisplayName: Repaired Silver Sconce
+				DisplayName: Repaired Thick Silver Sconce
 				Tooltip: ""
 			}
 
 			RepairedSconceThick: {
-				DisplayName: Repaired Sconce
+				DisplayName: Repaired Thick Sconce
+				Tooltip: ""
+			}
+
+			RepairedBookcase: {
+				DisplayName: Repaired Bookcase
 				Tooltip: ""
 			}
 
@@ -5373,8 +3566,18 @@ Mods: {
 				Tooltip: ""
 			}
 
+			RepairedClock: {
+				DisplayName: Repaired Clock
+				Tooltip: ""
+			}
+
+			RepairedDoor: {
+				DisplayName: Repaired Door
+				Tooltip: ""
+			}
+
 			RepairedDoorRound: {
-				DisplayName: Repaired Round Door
+				DisplayName: Repaired Door Round
 				Tooltip: ""
 			}
 
@@ -5393,6 +3596,16 @@ Mods: {
 				Tooltip: ""
 			}
 
+			RepairedPiano: {
+				DisplayName: Repaired Piano
+				Tooltip: ""
+			}
+
+			RepairedPlatform: {
+				DisplayName: Repaired Platform
+				Tooltip: ""
+			}
+
 			RepairedPlayerPiano: {
 				DisplayName: Repaired Player Piano
 				Tooltip: ""
@@ -5400,6 +3613,16 @@ Mods: {
 
 			RepairedShelf: {
 				DisplayName: Repaired Shelf
+				Tooltip: ""
+			}
+
+			RepairedTallMirror: {
+				DisplayName: Repaired Tall Mirror
+				Tooltip: ""
+			}
+
+			RepairedWideMirror: {
+				DisplayName: Repaired Wide Mirror
 				Tooltip: ""
 			}
 
@@ -5413,8 +3636,18 @@ Mods: {
 				Tooltip: ""
 			}
 
+			RepairedChair: {
+				DisplayName: Repaired Chair
+				Tooltip: ""
+			}
+
 			RepairedStool: {
 				DisplayName: Repaired Stool
+				Tooltip: ""
+			}
+
+			RepairedArmchair: {
+				DisplayName: Repaired Armchair
 				Tooltip: ""
 			}
 
@@ -5443,18 +3676,28 @@ Mods: {
 				Tooltip: ""
 			}
 
+			RepairedSofa: {
+				DisplayName: Repaired Sofa
+				Tooltip: ""
+			}
+
 			RepairedCabinet: {
 				DisplayName: Repaired Cabinet
 				Tooltip: ""
 			}
 
 			RepairedConsole: {
-				DisplayName: Repaired Console
+				DisplayName: Repaired Console Table
 				Tooltip: ""
 			}
 
 			RepairedCoveredTable: {
 				DisplayName: Repaired Covered Table
+				Tooltip: ""
+			}
+
+			RepairedTable: {
+				DisplayName: Repaired Table
 				Tooltip: ""
 			}
 
@@ -5468,11 +3711,6 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RepairedFencePillarItem: {
-				DisplayName: Repaired Pillared Fence
-				Tooltip: ""
-			}
-
 			RepairedWoodPoleItem: {
 				DisplayName: Repaired Wood Pole
 				Tooltip: ""
@@ -5483,83 +3721,8 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TatteredArmchair: {
-				DisplayName: Tattered Armchair
-				Tooltip: ""
-			}
-
 			TatteredBathtub: {
 				DisplayName: Tattered Bathtub
-				Tooltip: ""
-			}
-
-			TatteredBed: {
-				DisplayName: Tattered Bed
-				Tooltip: ""
-			}
-
-			TatteredBookcase: {
-				DisplayName: Tattered Bookcase
-				Tooltip: ""
-			}
-
-			TatteredCandelabra: {
-				DisplayName: Tattered Candelabra
-				Tooltip: ""
-			}
-
-			TatteredCandle: {
-				DisplayName: Tattered Candle
-				Tooltip: ""
-			}
-
-			TatteredCeilingLamp: {
-				DisplayName: Tattered Ceiling Lamp
-				Tooltip: ""
-			}
-
-			TatteredChair: {
-				DisplayName: Tattered Chair
-				Tooltip: ""
-			}
-
-			TatteredChandelier: {
-				DisplayName: Tattered Chandelier
-				Tooltip: ""
-			}
-
-			TatteredClock: {
-				DisplayName: Tattered Clock
-				Tooltip: ""
-			}
-
-			TatteredDoor: {
-				DisplayName: Tattered Door
-				Tooltip: ""
-			}
-
-			TatteredDresser: {
-				DisplayName: Tattered Dresser
-				Tooltip: ""
-			}
-
-			TatteredLamp: {
-				DisplayName: Tattered Lamp
-				Tooltip: ""
-			}
-
-			TatteredLantern: {
-				DisplayName: Tattered Lantern
-				Tooltip: ""
-			}
-
-			TatteredPiano: {
-				DisplayName: Tattered Piano
-				Tooltip: ""
-			}
-
-			TatteredPlatform: {
-				DisplayName: Tattered Platform
 				Tooltip: ""
 			}
 
@@ -5568,23 +3731,23 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TatteredSofa: {
-				DisplayName: Tattered Sofa
-				Tooltip: ""
-			}
-
-			TatteredTable: {
-				DisplayName: Tattered Table
-				Tooltip: ""
-			}
-
 			TatteredToilet: {
 				DisplayName: Tattered Toilet
 				Tooltip: ""
 			}
 
+			TatteredBed: {
+				DisplayName: Tattered Bed
+				Tooltip: ""
+			}
+
 			TatteredCanopyBed: {
 				DisplayName: Tattered Canopy Bed
+				Tooltip: ""
+			}
+
+			TatteredDresser: {
+				DisplayName: Tattered Dresser
 				Tooltip: ""
 			}
 
@@ -5618,13 +3781,43 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TatteredCeilingLamp: {
+				DisplayName: Tattered Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TatteredChandelier: {
+				DisplayName: Tattered Chandelier
+				Tooltip: ""
+			}
+
+			TatteredLantern: {
+				DisplayName: Tattered Lantern
+				Tooltip: ""
+			}
+
 			TatteredSpotlight: {
 				DisplayName: Tattered Spotlight
 				Tooltip: ""
 			}
 
+			TatteredCandelabra: {
+				DisplayName: Tattered Candelabra
+				Tooltip: ""
+			}
+
+			TatteredCandle: {
+				DisplayName: Tattered Candle
+				Tooltip: ""
+			}
+
 			TatteredCandleSilver: {
 				DisplayName: Tattered Silver Candle
+				Tooltip: ""
+			}
+
+			TatteredLamp: {
+				DisplayName: Tattered Lamp
 				Tooltip: ""
 			}
 
@@ -5634,37 +3827,52 @@ Mods: {
 			}
 
 			TatteredSconceCandle: {
-				DisplayName: Tattered Sconce
+				DisplayName: Tattered Candle Sconce
 				Tooltip: ""
 			}
 
 			TatteredSconceCandleSilver: {
-				DisplayName: Tattered Silver Sconce
+				DisplayName: Tattered Candle Silver Sconce
 				Tooltip: ""
 			}
 
 			TatteredSconceGlass: {
-				DisplayName: Tattered Sconce
+				DisplayName: Tattered Glass Sconce
 				Tooltip: ""
 			}
 
 			TatteredSconceGlassSilver: {
-				DisplayName: Tattered Silver Sconce
+				DisplayName: Tattered Glass Silver Sconce
 				Tooltip: ""
 			}
 
 			TatteredSconceThick: {
-				DisplayName: Tattered Sconce
+				DisplayName: Tattered Thick Sconce
 				Tooltip: ""
 			}
 
 			TatteredSconceThickSilver: {
-				DisplayName: Tattered Silver Sconce
+				DisplayName: Tattered Thick Silver Sconce
+				Tooltip: ""
+			}
+
+			TatteredBookcase: {
+				DisplayName: Tattered Bookcase
 				Tooltip: ""
 			}
 
 			TatteredCarpet: {
 				DisplayName: Tattered Carpet
+				Tooltip: ""
+			}
+
+			TatteredClock: {
+				DisplayName: Tattered Clock
+				Tooltip: ""
+			}
+
+			TatteredDoor: {
+				DisplayName: Tattered Door
 				Tooltip: ""
 			}
 
@@ -5688,6 +3896,16 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TatteredPiano: {
+				DisplayName: Tattered Piano
+				Tooltip: ""
+			}
+
+			TatteredPlatform: {
+				DisplayName: Tattered Platform
+				Tooltip: ""
+			}
+
 			TatteredPlayerPiano: {
 				DisplayName: Tattered Player Piano
 				Tooltip: ""
@@ -5695,6 +3913,16 @@ Mods: {
 
 			TatteredShelf: {
 				DisplayName: Tattered Shelf
+				Tooltip: ""
+			}
+
+			TatteredTallMirror: {
+				DisplayName: Tattered Tall Mirror
+				Tooltip: ""
+			}
+
+			TatteredWideMirror: {
+				DisplayName: Tattered Wide Mirror
 				Tooltip: ""
 			}
 
@@ -5708,8 +3936,18 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TatteredChair: {
+				DisplayName: Tattered Chair
+				Tooltip: ""
+			}
+
 			TatteredStool: {
 				DisplayName: Tattered Stool
+				Tooltip: ""
+			}
+
+			TatteredArmchair: {
+				DisplayName: Tattered Armchair
 				Tooltip: ""
 			}
 
@@ -5738,6 +3976,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TatteredSofa: {
+				DisplayName: Tattered Sofa
+				Tooltip: ""
+			}
+
 			TatteredCabinet: {
 				DisplayName: Tattered Cabinet
 				Tooltip: ""
@@ -5753,6 +3996,11 @@ Mods: {
 				Tooltip: ""
 			}
 
+			TatteredTable: {
+				DisplayName: Tattered Table
+				Tooltip: ""
+			}
+
 			TatteredWorkBench: {
 				DisplayName: Tattered Work Bench
 				Tooltip: ""
@@ -5760,11 +4008,6 @@ Mods: {
 
 			TatteredFenceItem: {
 				DisplayName: Tattered Fence
-				Tooltip: ""
-			}
-
-			TatteredFencePillarItem: {
-				DisplayName: Tattered Pillared Fence
 				Tooltip: ""
 			}
 
@@ -5778,33 +4021,43 @@ Mods: {
 				Tooltip: ""
 			}
 
-			RepairedLibraryShelf: {
-				DisplayName: Repaired Library Shelf
+			ConfusinglyLargeBathtubItem: {
+				DisplayName: Confusingly Large Bathtub
 				Tooltip: ""
 			}
 
-			TatteredLibraryShelf: {
-				DisplayName: Tattered Library Shelf
+			ImperialBathtub: {
+				DisplayName: Imperial Bathtub
 				Tooltip: ""
 			}
 
-			RepairedTallMirror: {
-				DisplayName: Repaired Tall Mirror
+			ImperialBathtubFancy: {
+				DisplayName: Fancy Imperial Bathtub
 				Tooltip: ""
 			}
 
-			RepairedWideMirror: {
-				DisplayName: Repaired Wide Mirror
+			ImperialCommode: {
+				DisplayName: Imperial Commode
 				Tooltip: ""
 			}
 
-			TatteredTallMirror: {
-				DisplayName: Tattered Tall Mirror
+			ImperialSink: {
+				DisplayName: Imperial Sink
 				Tooltip: ""
 			}
 
-			TatteredWideMirror: {
-				DisplayName: Tattered Wide Mirror
+			ImperialToilet: {
+				DisplayName: Imperial Toilet
+				Tooltip: ""
+			}
+
+			ImperialWoodenBathtub: {
+				DisplayName: Imperial Wooden Bathtub
+				Tooltip: ""
+			}
+
+			ImperialBed: {
+				DisplayName: Imperial Bed
 				Tooltip: ""
 			}
 
@@ -5813,8 +4066,153 @@ Mods: {
 				Tooltip: ""
 			}
 
+			ImperialDresser: {
+				DisplayName: Imperial Dresser
+				Tooltip: ""
+			}
+
 			ImperialFourPoster: {
 				DisplayName: Imperial Four Poster
+				Tooltip: ""
+			}
+
+			ImperialNightstand: {
+				DisplayName: Imperial Nightstand
+				Tooltip: ""
+			}
+
+			ImperialRoyalBed: {
+				DisplayName: Imperial Royal Bed
+				Tooltip: ""
+			}
+
+			ImperialBeamItem: {
+				DisplayName: Imperial Beam
+				Tooltip: ""
+			}
+
+			ImperialWoodFancyItem: {
+				DisplayName: Fancy Imperial Wood
+				Tooltip: ""
+			}
+
+			ImperialWoodInlayItem: {
+				DisplayName: Imperial Wood Inlay
+				Tooltip: ""
+			}
+
+			ImperialWoodItem: {
+				DisplayName: Imperial Wood
+				Tooltip: ""
+			}
+
+			ImperialCandelabra: {
+				DisplayName: Imperial Candelabra
+				Tooltip: ""
+			}
+
+			ImperialCandle: {
+				DisplayName: Imperial Candle
+				Tooltip: ""
+			}
+
+			ImperialCeilingLamp: {
+				DisplayName: Imperial Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ImperialChandelier: {
+				DisplayName: Imperial Chandelier
+				Tooltip: ""
+			}
+
+			ImperialLamp: {
+				DisplayName: Imperial Lamp
+				Tooltip: ""
+			}
+
+			ImperialLantern: {
+				DisplayName: Imperial Lantern
+				Tooltip: ""
+			}
+
+			ImperialSconce: {
+				DisplayName: Imperial Sconce
+				Tooltip: ""
+			}
+
+			ImperialSconceCandle: {
+				DisplayName: Imperial Candle Sconce
+				Tooltip: ""
+			}
+
+			ImperialSconceGlass: {
+				DisplayName: Imperial Glass Sconce
+				Tooltip: ""
+			}
+
+			ImperialSpotlight: {
+				DisplayName: Imperial Spotlight
+				Tooltip: ""
+			}
+
+			ImperialTorchiere: {
+				DisplayName: Imperial Torchiere
+				Tooltip: ""
+			}
+
+			ImperialBookcase: {
+				DisplayName: Imperial Bookcase
+				Tooltip: ""
+			}
+
+			ImperialClock: {
+				DisplayName: Imperial Clock
+				Tooltip: ""
+			}
+
+			ImperialDoor: {
+				DisplayName: Imperial Door
+				Tooltip: ""
+			}
+
+			ImperialDoorRounded: {
+				DisplayName: Imperial Round Door
+				Tooltip: ""
+			}
+
+			ImperialDoorRoundedWindow: {
+				DisplayName: Imperial Windowed Round Door
+				Tooltip: ""
+			}
+
+			ImperialDoorWindow: {
+				DisplayName: Imperial Windowed Door
+				Tooltip: ""
+			}
+
+			ImperialHarpsichord: {
+				DisplayName: Imperial Harpsichord
+				Tooltip: ""
+			}
+
+			ImperialMirror: {
+				DisplayName: Imperial Mirror
+				Tooltip: ""
+			}
+
+			ImperialPlatform: {
+				DisplayName: Imperial Platform
+				Tooltip: ""
+			}
+
+			ImperialPlatformFancy: {
+				DisplayName: Fancy Imperial Platform
+				Tooltip: ""
+			}
+
+			ImperialShelf: {
+				DisplayName: Imperial Shelf
 				Tooltip: ""
 			}
 
@@ -5828,8 +4226,1163 @@ Mods: {
 				Tooltip: ""
 			}
 
+			ImperialArmchair: {
+				DisplayName: Imperial Armchair
+				Tooltip: ""
+			}
+
+			ImperialChesterfield: {
+				DisplayName: Imperial Chesterfield
+				Tooltip: ""
+			}
+
+			ImperialChest: {
+				DisplayName: Imperial Chest
+				Tooltip: ""
+			}
+
+			ImperialGoldenBarstool: {
+				DisplayName: Imperial Golden Barstool
+				Tooltip: ""
+			}
+
+			ImperialGoldenChair: {
+				DisplayName: Imperial Golden Chair
+				Tooltip: ""
+			}
+
+			ImperialOttoman: {
+				DisplayName: Imperial Ottoman
+				Tooltip: ""
+			}
+
+			ImperialSofa: {
+				DisplayName: Imperial Sofa
+				Tooltip: ""
+			}
+
 			ImperialStool: {
 				DisplayName: Imperial Stool
+				Tooltip: ""
+			}
+
+			ImperialWoodenBarstool: {
+				DisplayName: Imperial Wooden Barstool
+				Tooltip: ""
+			}
+
+			ImperialWoodenChair: {
+				DisplayName: Imperial Wooden Chair
+				Tooltip: ""
+			}
+
+			ImperialCabinet: {
+				DisplayName: Imperial Cabinet
+				Tooltip: ""
+			}
+
+			ImperialBar: {
+				DisplayName: Imperial Bar
+				Tooltip: ""
+			}
+
+			ImperialConsole: {
+				DisplayName: Imperial Console Table
+				Tooltip: ""
+			}
+
+			ImperialCoveredTable: {
+				DisplayName: Imperial Covered Table
+				Tooltip: ""
+			}
+
+			ImperialTable: {
+				DisplayName: Imperial Table
+				Tooltip: ""
+			}
+
+			ImperialWorkBench: {
+				DisplayName: Imperial Work Bench
+				Tooltip: ""
+			}
+
+			ImperialFenceItem: {
+				DisplayName: Imperial Fence
+				Tooltip: ""
+			}
+
+			ImperialPanellingItem: {
+				DisplayName: Imperial Panelling
+				Tooltip: ""
+			}
+
+			ImperialWallpaperFancyItem: {
+				DisplayName: Fancy Imperial Wallpaper
+				Tooltip: ""
+			}
+
+			ImperialWallpaperItem: {
+				DisplayName: Imperial Wallpaper
+				Tooltip: ""
+			}
+
+			TeakArmchairGreenItem: {
+				DisplayName: Green Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakArmchairItem: {
+				DisplayName: Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakArmchairRedItem: {
+				DisplayName: Red Teak Armchair
+				Tooltip: ""
+			}
+
+			TeakBarItem: {
+				DisplayName: Teak Bar
+				Tooltip: ""
+			}
+
+			TeakBathtubItem: {
+				DisplayName: Teak Bathtub
+				Tooltip: ""
+			}
+
+			TeakBedBlackItem: {
+				DisplayName: Black Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedCreamItem: {
+				DisplayName: Cream Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedItem: {
+				DisplayName: Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBedRedItem: {
+				DisplayName: Red Teak Bed
+				Tooltip: ""
+			}
+
+			TeakBookcaseItem: {
+				DisplayName: Teak Bookcase
+				Tooltip: ""
+			}
+
+			TeakCandelabraGreenItem: {
+				DisplayName: Green Teak Candelabra
+				Tooltip: ""
+			}
+
+			TeakCandelabraItem: {
+				DisplayName: Teak Candelabra
+				Tooltip: ""
+			}
+
+			TeakCandleGreenItem: {
+				DisplayName: Green Teak Candle
+				Tooltip: ""
+			}
+
+			TeakCandleItem: {
+				DisplayName: Teak Candle
+				Tooltip: ""
+			}
+
+			TeakCeilingLampGreenItem: {
+				DisplayName: Green Teak Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TeakCeilingLampItem: {
+				DisplayName: Teak Ceiling Lamp
+				Tooltip: ""
+			}
+
+			TeakChairGreenItem: {
+				DisplayName: Green Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairItem: {
+				DisplayName: Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairRedItem: {
+				DisplayName: Red Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChairWoodItem: {
+				DisplayName: Wooden Teak Chair
+				Tooltip: ""
+			}
+
+			TeakChandelierItem: {
+				DisplayName: Teak Chandelier
+				Tooltip: ""
+			}
+
+			TeakChestItem: {
+				DisplayName: Teak Chest
+				Tooltip: ""
+			}
+
+			TeakClockItem: {
+				DisplayName: Teak Clock
+				Tooltip: ""
+			}
+
+			TeakDoorGlassItem: {
+				DisplayName: Glass Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorItem: {
+				DisplayName: Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorNarrowItem: {
+				DisplayName: Narrow Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorSolidItem: {
+				DisplayName: Solid Teak Door
+				Tooltip: ""
+			}
+
+			TeakDoorWindowedItem: {
+				DisplayName: Windowed Teak Door
+				Tooltip: ""
+			}
+
+			TeakDresserItem: {
+				DisplayName: Teak Dresser
+				Tooltip: ""
+			}
+
+			TeakKingBedBlackItem: {
+				DisplayName: Black Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedGreenItem: {
+				DisplayName: Green Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedItem: {
+				DisplayName: Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedRedItem: {
+				DisplayName: Red Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallBlackItem: {
+				DisplayName: Black Small Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallGreenItem: {
+				DisplayName: Small Green Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallItem: {
+				DisplayName: Small Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakKingBedSmallRedItem: {
+				DisplayName: Small Red Teak Royal Bed
+				Tooltip: ""
+			}
+
+			TeakLampGreenItem: {
+				DisplayName: Green Teak Lamp
+				Tooltip: ""
+			}
+
+			TeakLampItem: {
+				DisplayName: Teak Lamp
+				Tooltip: ""
+			}
+
+			TeakLanternItem: {
+				DisplayName: Teak Lantern
+				Tooltip: ""
+			}
+
+			TeakNightstandItem: {
+				DisplayName: Teak Nightstand
+				Tooltip: ""
+			}
+
+			TeakOttomanGreenItem: {
+				DisplayName: Green Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakOttomanItem: {
+				DisplayName: Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakOttomanRedItem: {
+				DisplayName: Red Teak Ottoman
+				Tooltip: ""
+			}
+
+			TeakPianoItem: {
+				DisplayName: Teak Piano
+				Tooltip: ""
+			}
+
+			TeakPlatformItem: {
+				DisplayName: Teak Platform
+				Tooltip: ""
+			}
+
+			TeakSconceItem: {
+				DisplayName: Teak Sconce
+				Tooltip: ""
+			}
+
+			TeakShelfItem: {
+				DisplayName: Teak Shelf
+				Tooltip: ""
+			}
+
+			TeakSinkItem: {
+				DisplayName: Teak Sink
+				Tooltip: ""
+			}
+
+			TeakSofaItem: {
+				DisplayName: Teak Sofa
+				Tooltip: ""
+			}
+
+			TeakSpotlightItem: {
+				DisplayName: Teak Spotlight
+				Tooltip: ""
+			}
+
+			TeakStoolGreenItem: {
+				DisplayName: Green Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolItem: {
+				DisplayName: Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolRedItem: {
+				DisplayName: Red Teak Stool
+				Tooltip: ""
+			}
+
+			TeakStoolWoodItem: {
+				DisplayName: Wooden Teak Stool
+				Tooltip: ""
+			}
+
+			TeakTableFancyItem: {
+				DisplayName: Fancy Teak Table
+				Tooltip: ""
+			}
+
+			TeakTableItem: {
+				DisplayName: Teak Table
+				Tooltip: ""
+			}
+
+			TeakToiletItem: {
+				DisplayName: Teak Toilet
+				Tooltip: ""
+			}
+
+			TeakWorkbenchItem: {
+				DisplayName: Teak Work Bench
+				Tooltip: ""
+			}
+
+			AshWoodArmchair: {
+				DisplayName: Ash Wood Armchair
+				Tooltip: ""
+			}
+
+			BalloonArmchair: {
+				DisplayName: Balloon Armchair
+				Tooltip: ""
+			}
+
+			BambooArmchair: {
+				DisplayName: Bamboo Armchair
+				Tooltip: ""
+			}
+
+			BeanbagArmchair: {
+				DisplayName: Beanbag Armchair
+				Tooltip: ""
+			}
+
+			BlueDungeonArmchair: {
+				DisplayName: Blue Dungeon Armchair
+				Tooltip: ""
+			}
+
+			BoneArmchair: {
+				DisplayName: Bone Armchair
+				Tooltip: ""
+			}
+
+			BorealArmchair: {
+				DisplayName: Boreal Armchair
+				Tooltip: ""
+			}
+
+			CactusArmchair: {
+				DisplayName: Cactus Armchair
+				Tooltip: ""
+			}
+
+			ConchArmchair: {
+				DisplayName: Conch Armchair
+				Tooltip: ""
+			}
+
+			CrystalArmchair: {
+				DisplayName: Crystal Armchair
+				Tooltip: ""
+			}
+
+			DynastyArmchair: {
+				DisplayName: Dynasty Armchair
+				Tooltip: ""
+			}
+
+			EbonwoodArmchair: {
+				DisplayName: Ebonwood Armchair
+				Tooltip: ""
+			}
+
+			FleshArmchair: {
+				DisplayName: Flesh Armchair
+				Tooltip: ""
+			}
+
+			FrozenArmchair: {
+				DisplayName: Frozen Armchair
+				Tooltip: ""
+			}
+
+			GlassArmchair: {
+				DisplayName: Glass Armchair
+				Tooltip: ""
+			}
+
+			GoldenArmchair: {
+				DisplayName: Golden Armchair
+				Tooltip: ""
+			}
+
+			GraniteArmchair: {
+				DisplayName: Granite Armchair
+				Tooltip: ""
+			}
+
+			GreenDungeonArmchair: {
+				DisplayName: Green Dungeon Armchair
+				Tooltip: ""
+			}
+
+			HoneyArmchair: {
+				DisplayName: Honey Armchair
+				Tooltip: ""
+			}
+
+			LesionArmchair: {
+				DisplayName: Lesion Armchair
+				Tooltip: ""
+			}
+
+			LihzahrdArmchair: {
+				DisplayName: Lihzahrd Armchair
+				Tooltip: ""
+			}
+
+			LivingwoodArmchair: {
+				DisplayName: Livingwood Armchair
+				Tooltip: ""
+			}
+
+			MahoganyArmchair: {
+				DisplayName: Rich Mahogany Armchair
+				Tooltip: ""
+			}
+
+			MarbleArmchair: {
+				DisplayName: Marble Armchair
+				Tooltip: ""
+			}
+
+			MartianArmchair: {
+				DisplayName: Martian Armchair
+				Tooltip: ""
+			}
+
+			MeteorArmchair: {
+				DisplayName: Meteor Armchair
+				Tooltip: ""
+			}
+
+			MushroomArmchair: {
+				DisplayName: Mushroom Armchair
+				Tooltip: ""
+			}
+
+			MushroomLawnchair: {
+				DisplayName: Mushroom Lawnchair
+				Tooltip: ""
+			}
+
+			NebulaArmchair: {
+				DisplayName: Nebula Armchair
+				Tooltip: ""
+			}
+
+			ObsidianArmchair: {
+				DisplayName: Obsidian Armchair
+				Tooltip: ""
+			}
+
+			PalmwoodArmchair: {
+				DisplayName: Palmwood Armchair
+				Tooltip: ""
+			}
+
+			PalmwoodLawnchair: {
+				DisplayName: Palmwood Lawnchair
+				Tooltip: ""
+			}
+
+			PearlwoodArmchair: {
+				DisplayName: Pearlwood Armchair
+				Tooltip: ""
+			}
+
+			PinkDungeonArmchair: {
+				DisplayName: Pink Dungeon Armchair
+				Tooltip: ""
+			}
+
+			PumpkinArmchair: {
+				DisplayName: Pumpkin Armchair
+				Tooltip: ""
+			}
+
+			ReefArmchair: {
+				DisplayName: Reef Armchair
+				Tooltip: ""
+			}
+
+			SandstoneArmchair: {
+				DisplayName: Sandstone Armchair
+				Tooltip: ""
+			}
+
+			ShadewoodArmchair: {
+				DisplayName: Shadewood Armchair
+				Tooltip: ""
+			}
+
+			SkywareArmchair: {
+				DisplayName: Skyware Armchair
+				Tooltip: ""
+			}
+
+			SlimeArmchair: {
+				DisplayName: Slime Armchair
+				Tooltip: ""
+			}
+
+			SolarArmchair: {
+				DisplayName: Solar Armchair
+				Tooltip: ""
+			}
+
+			SpiderArmchair: {
+				DisplayName: Spider Armchair
+				Tooltip: ""
+			}
+
+			SpookyArmchair: {
+				DisplayName: Spooky Armchair
+				Tooltip: ""
+			}
+
+			StardustArmchair: {
+				DisplayName: Stardust Armchair
+				Tooltip: ""
+			}
+
+			SteampunkArmchair: {
+				DisplayName: Steampunk Armchair
+				Tooltip: ""
+			}
+
+			VortexArmchair: {
+				DisplayName: Vortex Armchair
+				Tooltip: ""
+			}
+
+			WoodenArmchair: {
+				DisplayName: Wooden Armchair
+				Tooltip: ""
+			}
+
+			WoodenLawnchair: {
+				DisplayName: Wooden Lawnchair
+				Tooltip: ""
+			}
+
+			AlchemyCeilingLamp: {
+				DisplayName: Alchemy Ceiling Lamp
+				Tooltip: ""
+			}
+
+			AshWoodCeilingLamp: {
+				DisplayName: Ash Wood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BalloonCeilingLamp: {
+				DisplayName: Balloon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BambooCeilingLamp: {
+				DisplayName: Bamboo Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BlueDungeonCeilingLamp: {
+				DisplayName: Blue Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BorealCeilingLamp: {
+				DisplayName: Boreal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			BrassCeilingLamp: {
+				DisplayName: Brass Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CactusCeilingLamp: {
+				DisplayName: Cactus Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CagedCeilingLamp: {
+				DisplayName: Caged Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CarriageCeilingLamp: {
+				DisplayName: Carriage Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CeilingLamp: {
+				DisplayName: Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ChainedCeilingLamp: {
+				DisplayName: Chained Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CrystalCeilingLamp: {
+				DisplayName: Crystal Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DiabolistCeilingLamp: {
+				DisplayName: Diabolist Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DynastyCeilingLamp: {
+				DisplayName: Dynasty Ceiling Lamp
+				Tooltip: ""
+			}
+
+			DynastyCeilingLampThin: {
+				DisplayName: Thin Dynasty Ceiling Lamp
+				Tooltip: ""
+			}
+
+			EbonwoodCeilingLamp: {
+				DisplayName: Ebonwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FleshCeilingLamp1: {
+				DisplayName: Flesh Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FleshCeilingLamp2: {
+				DisplayName: Flesh Ceiling Lamp
+				Tooltip: ""
+			}
+
+			FrozenCeilingLamp: {
+				DisplayName: Frozen Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GlassCeilingLamp: {
+				DisplayName: Glass Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GoldenCeilingLamp: {
+				DisplayName: Golden Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GraniteCeilingLamp: {
+				DisplayName: Granite Ceiling Lamp
+				Tooltip: ""
+			}
+
+			GreenDungeonCeilingLamp: {
+				DisplayName: Green Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			HoneyCeilingLamp: {
+				DisplayName: Honey Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LesionCeilingLamp: {
+				DisplayName: Lesion Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LihzahrdCeilingLamp: {
+				DisplayName: Lihzahrd Ceiling Lamp
+				Tooltip: ""
+			}
+
+			LivingwoodCeilingLamp: {
+				DisplayName: Livingwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MahoganyCeilingLamp: {
+				DisplayName: Rich Mahogany Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MarbleCeilingLamp: {
+				DisplayName: Marble Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MartianCeilingLamp: {
+				DisplayName: Martian Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MeteorCeilingLamp: {
+				DisplayName: Meteor Ceiling Lamp
+				Tooltip: ""
+			}
+
+			MushroomCeilingLamp: {
+				DisplayName: Mushroom Ceiling Lamp
+				Tooltip: ""
+			}
+
+			NebulaCeilingLamp: {
+				DisplayName: Nebula Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ObsidianCeilingLamp: {
+				DisplayName: Obsidian Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PalmwoodCeilingLamp: {
+				DisplayName: Palmwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PaperCeilingLamp: {
+				DisplayName: Paper Ceiling Lamp
+				Tooltip: ""
+			}
+
+			Paper: {
+				DisplayName: Paper
+				Tooltip: ""
+			}
+
+			PearlwoodCeilingLamp: {
+				DisplayName: Pearlwood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PinkDungeonCeilingLamp: {
+				DisplayName: Pink Dungeon Ceiling Lamp
+				Tooltip: ""
+			}
+
+			PumpkinCeilingLamp: {
+				DisplayName: Pumpkin Ceiling Lamp
+				Tooltip: ""
+			}
+
+			RagSconceCeilingLamp: {
+				DisplayName: Rag Sconce Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ReefCeilingLamp: {
+				DisplayName: Reef Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SandstoneCeilingLamp: {
+				DisplayName: Sandstone Ceiling Lamp
+				Tooltip: ""
+			}
+
+			ShadewoodCeilingLamp: {
+				DisplayName: Shadewood Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SkywareCeilingLamp: {
+				DisplayName: Skyware Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SlimeCeilingLamp: {
+				DisplayName: Slime Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SolarCeilingLamp: {
+				DisplayName: Solar Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpiderCeilingLamp: {
+				DisplayName: Spider Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SpookyCeilingLamp: {
+				DisplayName: Spooky Ceiling Lamp
+				Tooltip: ""
+			}
+
+			StardustCeilingLamp: {
+				DisplayName: Stardust Ceiling Lamp
+				Tooltip: ""
+			}
+
+			SteampunkCeilingLamp: {
+				DisplayName: Steampunk Ceiling Lamp
+				Tooltip: ""
+			}
+
+			VortexCeilingLamp: {
+				DisplayName: Vortex Ceiling Lamp
+				Tooltip: ""
+			}
+
+			CrystalTable: {
+				DisplayName: Crystal Table
+				Tooltip: ""
+			}
+
+			KingBedAsh: {
+				DisplayName: Ash Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBalloonItem: {
+				DisplayName: Balloon Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBalloonLarge: {
+				DisplayName: Large Balloon Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBamboo: {
+				DisplayName: Bamboo Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBlueDungeon: {
+				DisplayName: Blue Dungeon Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBone: {
+				DisplayName: Bone Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedBoreal: {
+				DisplayName: Boreal Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedCactus: {
+				DisplayName: Cactus Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedCrystal: {
+				DisplayName: Crystal Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedDynasty: {
+				DisplayName: Dynasty Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedEbonwood: {
+				DisplayName: Ebonwood Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedFlesh: {
+				DisplayName: Flesh Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedGlass: {
+				DisplayName: Glass Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedGold: {
+				DisplayName: Gold Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedGranite: {
+				DisplayName: Granite Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedGreenDungeon: {
+				DisplayName: Green Dungeon Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedHoney: {
+				DisplayName: Honey Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedIce: {
+				DisplayName: Ice Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedIceCanopy: {
+				DisplayName: Ice Canopy Bed
+				Tooltip: ""
+			}
+
+			KingBedJack: {
+				DisplayName: Jack O' Lantern Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedLesion: {
+				DisplayName: Lesion Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedLihzahrd: {
+				DisplayName: Lihzahrd Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedLihzahrdArch: {
+				DisplayName: Lihzahrd Canopy Bed
+				Tooltip: ""
+			}
+
+			KingBedLihzahrdArch2: {
+				DisplayName: Lihzahrd Canopy Bed
+				Tooltip: ""
+			}
+
+			KingBedLivingwood: {
+				DisplayName: Livingwood Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedLivingwoodArch: {
+				DisplayName: Livingwood Canopy Bed
+				Tooltip: ""
+			}
+
+			KingBedMahogany: {
+				DisplayName: Rich Mahogany Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedMarble: {
+				DisplayName: Marble Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedMarble2: {
+				DisplayName: Fancy Marble Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedMartianItem: {
+				DisplayName: Martian Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedMeteorItem: {
+				DisplayName: Meteor Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedMushroom: {
+				DisplayName: Mushroom Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedNebula: {
+				DisplayName: Nebula Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedObsidian: {
+				DisplayName: Obsidian Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedPalm: {
+				DisplayName: Palm Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedPearlwood: {
+				DisplayName: Pearlwood Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedPinkDungeon: {
+				DisplayName: Pink Dungeon Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedPumpkin: {
+				DisplayName: Pumpkin Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedReef: {
+				DisplayName: Reef Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSandstone: {
+				DisplayName: Sandstone Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedShadewood: {
+				DisplayName: Shadewood Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSky: {
+				DisplayName: Skyware Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSkyCanopy: {
+				DisplayName: Skyware Canopy Bed
+				Tooltip: ""
+			}
+
+			KingBedSlime: {
+				DisplayName: Slime Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSolar: {
+				DisplayName: Solar Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSpider: {
+				DisplayName: Spider Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSpooky: {
+				DisplayName: Spooky Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedStardust: {
+				DisplayName: Stardust Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedSteampunk: {
+				DisplayName: Steampunk Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedVortex: {
+				DisplayName: Vortex Royal Bed
+				Tooltip: ""
+			}
+
+			KingBedWooden: {
+				DisplayName: Wooden Royal Bed
 				Tooltip: ""
 			}
 
@@ -5934,7 +5487,7 @@ Mods: {
 			}
 
 			MahoganyStool: {
-				DisplayName: Mahogany Stool
+				DisplayName: Rich Mahogany Stool
 				Tooltip: ""
 			}
 
@@ -6048,616 +5601,787 @@ Mods: {
 				Tooltip: ""
 			}
 
-			FutureExplosive: {
-				DisplayName: High-Tech Explosive
+			FishBarrel: {
+				DisplayName: Fish Barrel
 				Tooltip: ""
 			}
 
-			GrenadeFuture: {
-				DisplayName: High-Tech Grenade
+			FoodBarrel: {
+				DisplayName: Food Barrel
 				Tooltip: ""
 			}
 
-			FutureGun: {
-				DisplayName: Mounted High-Tech Gun
+			DecalSheet: {
+				DisplayName: Decal Sheet
 				Tooltip: ""
 			}
 
-			FutureGunRackWall: {
-				DisplayName: High-Tech Gun Rack
+			Plastic: {
+				DisplayName: Plastic
 				Tooltip: ""
 			}
 
-			FutureGunRackWallLarge: {
-				DisplayName: Large High-Tech Gun Rack
+			ChocolateWallItem: {
+				DisplayName: Chocolate Wall
 				Tooltip: ""
 			}
 
-			FutureGunStand: {
-				DisplayName: High-Tech Gun Stand
+			HeartfeltWallItem: {
+				DisplayName: Heartfelt Wall
 				Tooltip: ""
 			}
 
-			FutureGunStanding: {
-				DisplayName: High-Tech Gun
+			PlasterBlueWallItem: {
+				DisplayName: Blue Plaster Wall
 				Tooltip: ""
 			}
 
-			GunRackEmpty: {
-				DisplayName: Empty Weapon Rack
+			PlasterBlueWornWallItem: {
+				DisplayName: Worn Blue Plaster Wall
 				Tooltip: ""
 			}
 
-			GunRackEmptyLarge: {
-				DisplayName: Large Empty Weapon Rack
+			PlasterWallItem: {
+				DisplayName: Plaster Wall
 				Tooltip: ""
 			}
 
-			Axe: {
-				DisplayName: Axe
+			PlasterWornWallItem: {
+				DisplayName: Worn Plaster Wall
 				Tooltip: ""
 			}
 
-			AxeLong: {
-				DisplayName: Long Axe
+			SpringFenceFloralItem: {
+				DisplayName: Floral Vernal Fence
 				Tooltip: ""
 			}
 
-			AxePlaque: {
-				DisplayName: Axe Plaque
+			SpringFenceMetalItem: {
+				DisplayName: Metal Vernal Fence
 				Tooltip: ""
 			}
 
-			AxeRack: {
-				DisplayName: Axe Stand
+			SpringyWoodBlueWallItem: {
+				DisplayName: Blue Vernal Wood Wall
 				Tooltip: ""
 			}
 
-			AxeRackLong: {
-				DisplayName: Long Axe Stand
+			SpringyWoodGreenWallItem: {
+				DisplayName: Green Vernal Wood Wall
 				Tooltip: ""
 			}
 
-			MountedAxe: {
-				DisplayName: Mounted Axe
+			SpringyWoodPoleBlueItem: {
+				DisplayName: Blue Vernal Wood Pole
 				Tooltip: ""
 			}
 
-			MountedAxeLong: {
-				DisplayName: Mounted Long Axe
+			SpringyWoodPoleGreenItem: {
+				DisplayName: Green Vernal Wood Pole
 				Tooltip: ""
 			}
 
-			MountedAxes: {
-				DisplayName: Mounted Axes
+			SpringyWoodPoleWhiteItem: {
+				DisplayName: White Vernal Wood Pole
 				Tooltip: ""
 			}
 
-			WallAxe: {
-				DisplayName: Mounted Hatchet
+			TileBlueWallItem: {
+				DisplayName: Blue Tile Wall
 				Tooltip: ""
 			}
 
-			GuanDao: {
-				DisplayName: Guan Dao
+			TileCheckeredBlueWallItem: {
+				DisplayName: Checkered Blue Tile Wall
 				Tooltip: ""
 			}
 
-			GuanDaoLong: {
-				DisplayName: Long Guan Dao
+			TileCheckeredSmallBlueWallItem: {
+				DisplayName: Small Checkered Blue Tile Wall
 				Tooltip: ""
 			}
 
-			GuanDaoRack: {
-				DisplayName: Guan Dao Stand
+			TileCheckeredSmallWallItem: {
+				DisplayName: Small Checkered Tile Wall
 				Tooltip: ""
 			}
 
-			GuanDaoRackLong: {
-				DisplayName: Long Guan Dao Stand
+			TileCheckeredWallItem: {
+				DisplayName: Checkered Tile Wall
 				Tooltip: ""
 			}
 
-			MountedGuanDao: {
-				DisplayName: Mounted Guan Dao
+			TileFloralBlueWallItem: {
+				DisplayName: Floral Blue Tile Wall
 				Tooltip: ""
 			}
 
-			MountedGuanDaoLong: {
-				DisplayName: Mounted Long Guan Dao
+			TileFloralPinkWallItem: {
+				DisplayName: Floral Pink Tile Wall
 				Tooltip: ""
 			}
 
-			Hammer: {
-				DisplayName: Hammer
+			TileFloralYellowWallItem: {
+				DisplayName: Floral Yellow Tile Wall
 				Tooltip: ""
 			}
 
-			HammerLong: {
-				DisplayName: Long Hammer
+			TileMediterraneanWallItem: {
+				DisplayName: Mediterranean Tile Wall
 				Tooltip: ""
 			}
 
-			HammerPlaque: {
-				DisplayName: Hammer Plaque
+			TilePinkWallItem: {
+				DisplayName: Pink Tile Wall
 				Tooltip: ""
 			}
 
-			HammerPlaqueSmall: {
-				DisplayName: Small Hammer Plaque
+			TileSmallBlueWallItem: {
+				DisplayName: Small Blue Tile Wall
 				Tooltip: ""
 			}
 
-			HammerRack: {
-				DisplayName: Hammer Stand
+			TileSmallPinkWallItem: {
+				DisplayName: Small Pink Tile Wall
 				Tooltip: ""
 			}
 
-			MountedHammer: {
-				DisplayName: Mounted Hammer
+			TileSmallWhiteWallItem: {
+				DisplayName: Small White Tile Wall
 				Tooltip: ""
 			}
 
-			MountedHammerLong: {
-				DisplayName: Mounted Long Hammer
+			TileWhiteWallItem: {
+				DisplayName: White Tile Wall
 				Tooltip: ""
 			}
 
-			MixedRack: {
-				DisplayName: Mixed Weapon Stand
+			SpringyWoodWallItem: {
+				DisplayName: Vernal Wood Wall
 				Tooltip: ""
 			}
 
-			MixedRackLong: {
-				DisplayName: Large Mixed Weapon Stand
+			FrostedGlassItem: {
+				DisplayName: Frosted Glass
 				Tooltip: ""
 			}
 
-			MixedRackSmall: {
-				DisplayName: Small Mixed Weapon Stand
+			FadedHieroWall1Item: {
+				DisplayName: Faded Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			MountedPick: {
-				DisplayName: Short Mounted Pick
+			FadedHieroWall2Item: {
+				DisplayName: Faded Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			MountedPickLong: {
-				DisplayName: Mounted Pick
+			FadedHieroWall3Item: {
+				DisplayName: Faded Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			MountedPicks: {
-				DisplayName: Mounted Pickaxes
+			FadedHieroWall4Item: {
+				DisplayName: Faded Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			Pickaxe: {
-				DisplayName: Short Pickaxe
+			FadedHieroWallSmallItem: {
+				DisplayName: Faded Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			PickaxeLong: {
-				DisplayName: Pickaxe
+			HieroWall1Item: {
+				DisplayName: Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			PickPlaque: {
-				DisplayName: Pick Plaque
+			HieroWall2Item: {
+				DisplayName: Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			PickPlaqueSmall: {
-				DisplayName: Small Pick Plaque
+			HieroWall3Item: {
+				DisplayName: Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			PickRack: {
-				DisplayName: Pick Stand
+			HieroWall4Item: {
+				DisplayName: Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			MountedPole: {
-				DisplayName: Mounted Polearm
+			HieroWallSmallItem: {
+				DisplayName: Hieroglyphic Wall
 				Tooltip: ""
 			}
 
-			MountedPoleLong: {
-				DisplayName: Mounted Long Polearm
+			LotusWallItem: {
+				DisplayName: Lotus Wall
 				Tooltip: ""
 			}
 
-			Pole: {
-				DisplayName: Polearm
+			SandstonePillarWallItem: {
+				DisplayName: Sandstone Pillar Wall
 				Tooltip: ""
 			}
 
-			PoleLong: {
-				DisplayName: Long Polearm
+			PolishedSandstoneBrickWallItem: {
+				DisplayName: Polished Sandstone Brick Wall
 				Tooltip: ""
 			}
 
-			PoleRack: {
-				DisplayName: Polearm Stand
+			TeakFenceItem: {
+				DisplayName: Teak Fence
 				Tooltip: ""
 			}
 
-			PoleRackLong: {
-				DisplayName: Long Polearm Stand
+			TeakFenceLatticeItem: {
+				DisplayName: Teak Fence Lattice
 				Tooltip: ""
 			}
 
-			MountedSpear: {
-				DisplayName: Mounted Spear
+			TeakFenceSlatItem: {
+				DisplayName: Teak Fence Slat
 				Tooltip: ""
 			}
 
-			MountedSpearLong: {
-				DisplayName: Mounted Long Spear
+			TeakFenceSolidItem: {
+				DisplayName: Teak Fence Solid
 				Tooltip: ""
 			}
 
-			MountedSpears: {
-				DisplayName: Mounted Spears
+			TeakPoleItem: {
+				DisplayName: Teak Pole
 				Tooltip: ""
 			}
 
-			MountedSpearsSmall: {
-				DisplayName: Mounted Small Spears
+			TeakShingleWallItem: {
+				DisplayName: Teak Shingle Wall
 				Tooltip: ""
 			}
 
-			Spear: {
-				DisplayName: Spear
+			TeakSlatsWallItem: {
+				DisplayName: Teak Slats Wall
 				Tooltip: ""
 			}
 
-			SpearLong: {
-				DisplayName: Long Spear
+			TeakWallItem: {
+				DisplayName: Teak Wall
 				Tooltip: ""
 			}
 
-			SpearPlaque: {
-				DisplayName: Spear Plaque
+			FloweringVinesBasket: {
+				DisplayName: Silk Flowering Vines
 				Tooltip: ""
 			}
 
-			SpearRack: {
-				DisplayName: Spear Stand
+			CrimsonVinesBasket: {
 				Tooltip: ""
+				DisplayName: Silk Crimson Vines
 			}
 
-			SpearRackLong: {
-				DisplayName: Long Spear Stand
+			CorruptVinesBasket: {
 				Tooltip: ""
+				DisplayName: Silk Corrupt Vines
 			}
 
-			MountedCutlasses: {
-				DisplayName: Mounted Cutlasses
+			AshVinesBasket: {
 				Tooltip: ""
+				DisplayName: Silk Ash Vines
 			}
 
-			MountedCutlassesLarge: {
-				DisplayName: Large Mounted Cutlasses
+			HallowVinesBasket: {
+				DisplayName: Silk Hallow Vines
 				Tooltip: ""
 			}
 
-			MountedSabers: {
-				DisplayName: Mounted Sabers
+			JungleVinesBasket: {
+				DisplayName: Silk Jungle Vines
 				Tooltip: ""
 			}
 
-			MountedSwords: {
-				DisplayName: Mounted Swords
+			MushroomVinesBasket: {
+				DisplayName: Silk Mushroom Vines
 				Tooltip: ""
 			}
 
-			Sword: {
-				DisplayName: Sword
+			NormalVinesBasket: {
+				DisplayName: Silk Vines
 				Tooltip: ""
 			}
 
-			SwordMounted: {
-				DisplayName: Mounted Sword
+			DecoWoodSpike: {
 				Tooltip: ""
+				DisplayName: Decorative Wooden Spike
 			}
 
-			SwordMountedScabbard: {
-				DisplayName: Mounted Sword with Scabbard
+			DecoReedBasket: {
+				DisplayName: Decorative Reed Basket
 				Tooltip: ""
 			}
 
-			SwordMountedThin: {
-				DisplayName: Mounted Sword
+			DecoThornBasket: {
+				DisplayName: Decorative Thorn Basket
 				Tooltip: ""
 			}
 
-			SwordPlaque: {
-				DisplayName: Sword Plaque
+			DecoVineBasket: {
+				DisplayName: Decorative Vine Basket
 				Tooltip: ""
 			}
 
-			SwordRackDynasty: {
-				DisplayName: Dynasty Sword Stand
+			BannerWhiteFlatItem: {
+				DisplayName: White Flat Banner
 				Tooltip: ""
 			}
 
-			SwordRackWall: {
-				DisplayName: Sword Rack
+			BannerWhitePointItem: {
+				DisplayName: White Pointed Banner
 				Tooltip: ""
 			}
 
-			SwordRackWallDynasty: {
-				DisplayName: Dynasty Sword Rack
+			BannerGrayFlatItem: {
+				DisplayName: Gray Flat Banner
 				Tooltip: ""
 			}
 
-			SwordScabbard: {
-				DisplayName: Sword with Scabbard
+			BannerGrayPointItem: {
+				DisplayName: Gray Pointed Banner
 				Tooltip: ""
 			}
 
-			SwordStand: {
-				DisplayName: Sword Stand
+			BannerBlackFlatItem: {
+				DisplayName: Black Flat Banner
 				Tooltip: ""
 			}
 
-			SwordStandDynasty: {
-				DisplayName: Dynasty Sword Stand
+			BannerBlackPointItem: {
+				DisplayName: Black Pointed Banner
 				Tooltip: ""
 			}
 
-			SwordStanding: {
-				DisplayName: Sword
+			BannerPastelFlatItem: {
+				DisplayName: Pastel Flat Banner
 				Tooltip: ""
 			}
 
-			GrenadeBlack: {
-				DisplayName: Black Grenade
+			BannerPastelPointItem: {
+				DisplayName: Pastel Pointed Banner
 				Tooltip: ""
 			}
 
-			GrenadeBrown: {
-				DisplayName: Brown Grenade
+			BannerBrightFlatItem: {
+				DisplayName: Bright Flat Banner
 				Tooltip: ""
 			}
 
-			GrenadeGreen: {
-				DisplayName: Green Grenade
+			BannerBrightPointItem: {
+				DisplayName: Bright Pointed Banner
 				Tooltip: ""
 			}
 
-			GrenadeLauncher: {
-				DisplayName: Mounted Grenade Launcher
+			BannerNavyFlatItem: {
+				DisplayName: Navy Flat Banner
 				Tooltip: ""
 			}
 
-			GrenadeLauncherSmall: {
-				DisplayName: Small Mounted Grenade Launcher
+			BannerNavyPointItem: {
+				DisplayName: Navy Pointed Banner
 				Tooltip: ""
 			}
 
-			GrenadeLauncherSmallStanding: {
-				DisplayName: Small Grenade Launcher
+			BannerPaleFlatItem: {
+				DisplayName: Pale Flat Banner
 				Tooltip: ""
 			}
 
-			GrenadeLauncherStanding: {
-				DisplayName: Grenade Launcher
+			BannerPalePointItem: {
+				DisplayName: Pale Pointed Banner
 				Tooltip: ""
 			}
 
-			GrenadeRed: {
-				DisplayName: Red Grenade
+			BannerDullFlatItem: {
+				DisplayName: Dull Flat Banner
 				Tooltip: ""
 			}
 
-			GunMounted: {
-				DisplayName: Mounted Gun
+			BannerDullPointItem: {
+				DisplayName: Dull Pointed Banner
 				Tooltip: ""
 			}
 
-			GunRackWall: {
-				DisplayName: Gun Rack
+			BannerDimFlatItem: {
+				DisplayName: Dim Flat Banner
 				Tooltip: ""
 			}
 
-			GunRackWallLarge: {
-				DisplayName: Large Gun Rack
+			BannerDimPointItem: {
+				DisplayName: Dim Pointed Banner
 				Tooltip: ""
 			}
 
-			GunStand: {
-				DisplayName: Gun Stand
+			BannerWhiteFlatShortItem: {
+				DisplayName: Short White Flat Banner
 				Tooltip: ""
 			}
 
-			GunStanding: {
-				DisplayName: Gun
+			BannerWhitePointShortItem: {
+				DisplayName: Short White Pointed Banner
 				Tooltip: ""
 			}
 
-			ModernWeaponRack: {
-				DisplayName: Modern Weapon Rack
+			BannerGrayFlatShortItem: {
+				DisplayName: Short Gray Flat Short Banner
 				Tooltip: ""
 			}
 
-			ModernWeaponRackLarge: {
-				DisplayName: Large Modern Weapon Rack
+			BannerGrayPointShortItem: {
+				DisplayName: Short Gray Point Banner
 				Tooltip: ""
 			}
 
-			ModernWeaponStand: {
-				DisplayName: Modern Weapon Stand
+			BannerBlackFlatShortItem: {
+				DisplayName: Short Black Flat Banner
 				Tooltip: ""
 			}
 
-			WeaponStandEmpty: {
-				DisplayName: Empty Weapon Stand
+			BannerBlackPointShortItem: {
+				DisplayName: Short Black Point Banner
 				Tooltip: ""
 			}
 
-			SpringtimeChandelierCrystal: {
+			BannerPastelFlatShortItem: {
+				DisplayName: Short Pastel Flat Banner
 				Tooltip: ""
-				DisplayName: Springtime Chandelier Crystal
+			}
+
+			BannerPastelPointShortItem: {
+				DisplayName: Short Pastel Point Banner
+				Tooltip: ""
+			}
+
+			BannerBrightFlatShortItem: {
+				DisplayName: Short Bright Flat Banner
+				Tooltip: ""
+			}
+
+			BannerBrightPointShortItem: {
+				DisplayName: Short Bright Point Banner
+				Tooltip: ""
+			}
+
+			BannerNavyFlatShortItem: {
+				DisplayName: Short Navy Flat Banner
+				Tooltip: ""
+			}
+
+			BannerNavyPointShortItem: {
+				DisplayName: Short Navy Point Banner
+				Tooltip: ""
+			}
+
+			BannerPaleFlatShortItem: {
+				DisplayName: Short Pale Flat Banner
+				Tooltip: ""
+			}
+
+			BannerPalePointShortItem: {
+				DisplayName: Short Pale Point Banner
+				Tooltip: ""
+			}
+
+			BannerDullFlatShortItem: {
+				DisplayName: Short Dull Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDullPointShortItem: {
+				DisplayName: Short Dull Point Banner
+				Tooltip: ""
+			}
+
+			BannerDimFlatShortItem: {
+				DisplayName: Short Dim Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDimPointShortItem: {
+				DisplayName: Short Dim Point Banner
+				Tooltip: ""
+			}
+
+			BannerWhiteFlatWideItem: {
+				DisplayName: Wide White Flat Banner
+				Tooltip: ""
+			}
+
+			BannerWhitePointWideItem: {
+				DisplayName: Wide White Point Banner
+				Tooltip: ""
+			}
+
+			BannerWhiteRoundWideItem: {
+				DisplayName: Wide White Round Banner
+				Tooltip: ""
+			}
+
+			BannerGrayFlatWideItem: {
+				DisplayName: Wide Gray Flat Banner
+				Tooltip: ""
+			}
+
+			BannerGrayPointWideItem: {
+				DisplayName: Wide Gray Point Banner
+				Tooltip: ""
+			}
+
+			BannerGrayRoundWideItem: {
+				DisplayName: Wide Gray Round Banner
+				Tooltip: ""
+			}
+
+			BannerBlackFlatWideItem: {
+				DisplayName: Wide Black Flat Banner
+				Tooltip: ""
+			}
+
+			BannerBlackPointWideItem: {
+				DisplayName: Wide Black Point Banner
+				Tooltip: ""
+			}
+
+			BannerBlackRoundWideItem: {
+				DisplayName: Wide Black Round Banner
+				Tooltip: ""
+			}
+
+			BannerPastelFlatWideItem: {
+				DisplayName: Wide Pastel Flat Banner
+				Tooltip: ""
+			}
+
+			BannerPastelPointWideItem: {
+				DisplayName: Wide Pastel Point Banner
+				Tooltip: ""
+			}
+
+			BannerPastelRoundWideItem: {
+				DisplayName: Wide Pastel Round Banner
+				Tooltip: ""
+			}
+
+			BannerBrightFlatWideItem: {
+				DisplayName: Wide Bright Flat Banner
+				Tooltip: ""
+			}
+
+			BannerBrightPointWideItem: {
+				DisplayName: Wide Bright Point Banner
+				Tooltip: ""
+			}
+
+			BannerBrightRoundWideItem: {
+				DisplayName: Wide Bright Round Banner
+				Tooltip: ""
+			}
+
+			BannerNavyFlatWideItem: {
+				DisplayName: Wide Navy Flat Banner
+				Tooltip: ""
+			}
+
+			BannerNavyPointWideItem: {
+				DisplayName: Wide Navy Point Banner
+				Tooltip: ""
+			}
+
+			BannerNavyRoundWideItem: {
+				DisplayName: Wide Navy Round Banner
+				Tooltip: ""
+			}
+
+			BannerPaleFlatWideItem: {
+				DisplayName: Wide Pale Flat Banner
+				Tooltip: ""
+			}
+
+			BannerPalePointWideItem: {
+				DisplayName: Wide Pale Point Banner
+				Tooltip: ""
+			}
+
+			BannerPaleRoundWideItem: {
+				DisplayName: Wide Pale Round Banner
+				Tooltip: ""
+			}
+
+			BannerDullFlatWideItem: {
+				DisplayName: Wide Dull Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDullPointWideItem: {
+				DisplayName: Wide Dull Point Banner
+				Tooltip: ""
+			}
+
+			BannerDullRoundWideItem: {
+				DisplayName: Wide Dull Round Banner
+				Tooltip: ""
+			}
+
+			BannerDimFlatWideItem: {
+				DisplayName: Wide Dim Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDimPointWideItem: {
+				DisplayName: Wide Dim Point Banner
+				Tooltip: ""
+			}
+
+			BannerDimRoundWideItem: {
+				DisplayName: Wide Dim Round Banner
+				Tooltip: ""
+			}
+
+			BannerWhiteFlatWideShortItem: {
+				DisplayName: Wide Short White Flat Banner
+				Tooltip: ""
+			}
+
+			BannerWhitePointWideShortItem: {
+				DisplayName: Wide Short White Point Banner
+				Tooltip: ""
+			}
+
+			BannerWhiteRoundWideShortItem: {
+				DisplayName: Wide Short White Round Banner
+				Tooltip: ""
+			}
+
+			BannerGrayFlatWideShortItem: {
+				DisplayName: Wide Short Gray Flat Banner
+				Tooltip: ""
+			}
+
+			BannerGrayPointWideShortItem: {
+				DisplayName: Wide Short Gray Point Banner
+				Tooltip: ""
+			}
+
+			BannerGrayRoundWideShortItem: {
+				DisplayName: Wide Short Gray Round Banner
+				Tooltip: ""
+			}
+
+			BannerBlackFlatWideShortItem: {
+				DisplayName: Wide Short Black Flat Banner
+				Tooltip: ""
+			}
+
+			BannerBlackPointWideShortItem: {
+				DisplayName: Wide Short Black Point Banner
+				Tooltip: ""
+			}
+
+			BannerBlackRoundWideShortItem: {
+				DisplayName: Wide Short Black Round Banner
+				Tooltip: ""
+			}
+
+			BannerPastelFlatWideShortItem: {
+				DisplayName: Wide Short Pastel Flat Banner
+				Tooltip: ""
+			}
+
+			BannerPastelPointWideShortItem: {
+				DisplayName: Wide Short Pastel Point Banner
+				Tooltip: ""
+			}
+
+			BannerPastelRoundWideShortItem: {
+				DisplayName: Wide Short Pastel Round Banner
+				Tooltip: ""
+			}
+
+			BannerBrightFlatWideShortItem: {
+				DisplayName: Wide Short Bright Flat Banner
+				Tooltip: ""
+			}
+
+			BannerBrightPointWideShortItem: {
+				DisplayName: Wide Short Bright Point Banner
+				Tooltip: ""
+			}
+
+			BannerBrightRoundWideShortItem: {
+				DisplayName: Wide Short Bright Round Banner
+				Tooltip: ""
+			}
+
+			BannerNavyFlatWideShortItem: {
+				DisplayName: Wide Short Navy Flat Banner
+				Tooltip: ""
+			}
+
+			BannerNavyPointWideShortItem: {
+				DisplayName: Wide Short Navy Point Banner
+				Tooltip: ""
+			}
+
+			BannerNavyRoundWideShortItem: {
+				DisplayName: Wide Short Navy Round Banner
+				Tooltip: ""
+			}
+
+			BannerPaleFlatWideShortItem: {
+				DisplayName: Wide Short Pale Flat Banner
+				Tooltip: ""
+			}
+
+			BannerPalePointWideShortItem: {
+				DisplayName: Wide Short Pale Point Banner
+				Tooltip: ""
+			}
+
+			BannerPaleRoundWideShortItem: {
+				DisplayName: Wide Short Pale Round Banner
+				Tooltip: ""
+			}
+
+			BannerDullFlatWideShortItem: {
+				DisplayName: Wide Short Dull Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDullPointWideShortItem: {
+				DisplayName: Wide Short Dull Point Banner
+				Tooltip: ""
+			}
+
+			BannerDullRoundWideShortItem: {
+				DisplayName: Wide Short Dull Round Banner
+				Tooltip: ""
+			}
+
+			BannerDimFlatWideShortItem: {
+				DisplayName: Wide Short Dim Flat Banner
+				Tooltip: ""
+			}
+
+			BannerDimPointWideShortItem: {
+				DisplayName: Wide Short Dim Point Banner
+				Tooltip: ""
+			}
+
+			BannerDimRoundWideShortItem: {
+				DisplayName: Wide Short Dim Round Banner
+				Tooltip: ""
 			}
 		}
 
-		Tiles: {
-			FishBarrelTile: {
-				ContainerName: Fish Barrel
-				MapEntry: Fish Barrel
-				MapEntry0: Fish Barrel
-			}
-
-			FoodBarrelTile: {
-				ContainerName: Food Barrel
-				MapEntry: Food Barrel
-				MapEntry0: Food Barrel
-			}
-
-			TatteredChest: {
-				ContainerName: Tattered Chest
-				MapEntry0: Tattered Chest
-			}
-
-			RepairedChest: {
-				ContainerName: Repaired Chest
-				MapEntry0: Repaired Chest
-			}
-
-			FestiveChest: {
-				ContainerName: Festive Chest
-				MapEntry0: Festive Chest
-			}
-
-			HeartfeltChest: {
-				ContainerName: Heartfelt Chest
-				MapEntry0: Heartfelt Chest
-			}
-
-			TeakChest: {
-				ContainerName: Teak Chest
-				MapEntry0: Teak Chest
-			}
-
-			TeakNightstand: {
-				ContainerName: Teak Nightstand
-				MapEntry0: Teak Nightstand
-			}
-
-			SpringtimeChest: {
-				ContainerName: Springtime Chest
-				MapEntry0: Springtime Chest
-			}
-
-			SpringtimeNightstand: {
-				ContainerName: Springtime Nightstand
-				MapEntry0: Springtime Nightstand
-			}
-
-			Nightstands: {
-				ContainerName: Nightstands
-				MapEntry0: Imperial Nightstand
-				MapEntry1: Tattered Nightstand
-				MapEntry2: Repaired Nightstand
-				MapEntry3: Mods.SquintlysFurnitureMod.Tiles.Nightstands.MapEntry3
-			}
-
-			Chests: {
-				ContainerName: Chests
-				MapEntry0: Imperial Chest
-				MapEntry1: Tattered Chest
-				MapEntry2: Repaired Chest
-			}
-
-			Dressers: {
-				ContainerName: Dressers
-				MapEntry0: Imperial Dresser
-				MapEntry1: Repaired Dresser
-			}
-
-			Dressers_Animated: {
-				ContainerName: Dressers_Animated
-				MapEntry0: Tattered Dresser
-			}
-
-			TatteredDresser.MapEntry: Tattered Dresser
-			RepairedDresser.MapEntry: Repaired Dresser
-			FestiveDresser.ContainerName: Festive Dresser
-			HeartfeltDresser.ContainerName: Heartfelt Dresser
-			TeakDresser.MapEntry: Teak Dresser
-			SpringtimeDresser.MapEntry: Springtime Dresser
-			Chocolate_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Chocolate_Block
-			Faded_Hieroglyphic_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Faded_Hieroglyphic_Block
-			Festive_Column.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Column
-			Heartfelt_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Block
-			Lotus_Block.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Lotus_Block
-			Sandstone_Column.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Column
-			Polished_Sandstone_Brick.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Polished_Sandstone_Brick
-			Sandstone_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Platform
-			Sandstone_Pillar.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Sandstone_Pillar
-			Deco_Box.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Deco_Box
-			Large_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Large_Hanging_Fish
-			Small_Animal_Skin.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Animal_Skin
-			Small_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Hanging_Fish
-			Small_Treasure_Map.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Small_Treasure_Map
-			Tiny_Hanging_Fish.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Tiny_Hanging_Fish
-			Festive_Decoration.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Decoration
-			Festive_Clutter.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Clutter
-			Festive_Worktable.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Worktable
-			Festive_Mug.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Mug
-			Heartfelt_Ribbon.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ribbon
-			Heartfelt_Decoration.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Decoration
-			Heart_Balloons.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heart_Balloons
-			Broken_Obelisk.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Broken_Obelisk
-			Decorative_Rope.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Decorative_Rope
-			Decorative_Webs.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Decorative_Webs
-			Obelisk.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Obelisk
-			Flowers.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Flowers
-			Festive_Armchair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Armchair
-			Festive_Bathtub.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bathtub
-			Festive_Bed.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bed
-			Festive_Bookcase.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Bookcase
-			Festive_Candle.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Candle
-			Festive_Ceiling_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Ceiling_Lamp
-			Festive_Chair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Chair
-			Festive_Chandelier.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Chandelier
-			Festive_Clock.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Clock
-			Festive_Door.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Door
-			Festive_Dresser.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Dresser
-			Festive_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lamp
-			Festive_Lamppost.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lamppost
-			Festive_Lantern.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Lantern
-			Festive_Piano.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Piano
-			Festive_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Platform
-			Festive_Sink.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Sink
-			Festive_Sofa.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Sofa
-			Festive_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Table
-			Festive_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Toilet
-			Festive_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Festive_Work_Bench
-			Heartfelt_Platform.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Platform
-			Heartfelt_Armchair.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Armchair
-			Heartfelt_Bathtub.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bathtub
-			Heartfelt_Bed.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bed
-			Heartfelt_Bookcase.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Bookcase
-			Heartfelt_Candle.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Candle
-			Heartfelt_Ceiling_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ceiling_Lamp
-			Heartfelt_Chandelier.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Chandelier
-			Heartfelt_Clock.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Clock
-			Heartfelt_Crafting_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Crafting_Table
-			Heartfelt_Door.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Door
-			Heartfelt_Dresser.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Dresser
-			Heartfelt_Lamp.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Lamp
-			Heartfelt_Lantern.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Lantern
-			Heartfelt_Ottoman.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Ottoman
-			Heartfelt_Piano.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Piano
-			Heartfelt_Sink.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Sink
-			Heartfelt_Sofa.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Sofa
-			Heartfelt_Table.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Table
-			Heartfelt_Toilet.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Toilet
-			Heartfelt_Work_Bench.MapEntry: Mods.SquintlysFurnitureMod.MapObject.Heartfelt_Work_Bench
-		}
+		Projectiles.CorruptReedProjectile.DisplayName: Corrupt Reed Projectile
 	}
 }

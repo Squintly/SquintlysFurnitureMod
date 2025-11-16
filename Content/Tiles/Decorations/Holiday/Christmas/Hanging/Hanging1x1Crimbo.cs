@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas.Decorations.Hanging;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -31,6 +32,10 @@ public class Hanging1x1Crimbo : ModTile
         TileObjectData.newTile.StyleWrapLimit = 111;
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+
+        RegisterItemDrop(ModContent.ItemType<Mistletoe>(), 1 | 0);
+        RegisterItemDrop(ModContent.ItemType<FestiveBells>(), 2 | 3);
+        RegisterItemDrop(ModContent.ItemType<FestiveBauble>(), 5 | 6 | 7 | 8 | 9);
 
         TileObjectData.addTile(Type);
     }

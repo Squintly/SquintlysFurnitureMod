@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Decor.Towels;
+using SquintlysFurnitureMod.Content.Tiles.Wall.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,7 +30,8 @@ internal class TowelNarrow : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<TowelsNarrow>();
+        Item.createTile = ModContent.TileType<W_1x2_N_19>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

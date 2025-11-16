@@ -20,7 +20,7 @@ internal class GunStanding : ModItem
 
         Item.value = Item.buyPrice(silver: 2);
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<MP_1x3_B_LR_4>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<MP_SW_1x3_B_LR_4>());
         Item.placeStyle = 0;
     }
 

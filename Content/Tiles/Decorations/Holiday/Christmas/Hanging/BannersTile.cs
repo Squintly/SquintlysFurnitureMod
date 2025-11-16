@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework.Graphics;
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas.Decorations.Hanging;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
@@ -27,6 +28,8 @@ public class BannersTile : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<FestiveBanners>());
     }
 
     public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)

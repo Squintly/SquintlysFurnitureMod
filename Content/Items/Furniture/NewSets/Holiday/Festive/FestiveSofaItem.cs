@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive;
 using Terraria;
@@ -21,17 +22,7 @@ internal class FestiveSofaItem : ModItem
 
         Item.value = Item.buyPrice(copper: 60);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
-
-        Item.autoReuse = true;
-        Item.consumable = true;
-
-        Item.maxStack = 9999;
-
-        Item.createTile = ModContent.TileType<FestiveSofa>();
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas>(), (int)Sofas.StyleID.Festive);
     }
 
     public override void AddRecipes()

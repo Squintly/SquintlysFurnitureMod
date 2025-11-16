@@ -20,7 +20,7 @@ internal class GrenadeLauncherSmallStanding : ModItem
 
         Item.value = Item.buyPrice(silver: 2);
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<MP_1x3_B_LR_3>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<MP_SW_1x3_B_LR_3>());
         Item.placeStyle = 0;
     }
 

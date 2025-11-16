@@ -21,8 +21,7 @@ internal class TatteredBench : ModItem
         Item.value = Item.buyPrice(copper: 60);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>());
-        Item.placeStyle = 1;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>(), (int)Sofas_6.StyleID.TatteredBench);
     }
 
     public override void AddRecipes()

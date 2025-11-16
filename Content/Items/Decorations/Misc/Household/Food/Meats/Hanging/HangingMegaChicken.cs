@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Meat.Hanging;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneThree.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,6 +30,7 @@ internal class HangingMegaChicken : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HangingMegaChickens>();
+        Item.createTile = ModContent.TileType<T_1x3_N_3>();
+        Item.placeStyle = 0;
     }
 }

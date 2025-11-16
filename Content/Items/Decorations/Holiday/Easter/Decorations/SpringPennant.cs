@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Decorations;
+using SquintlysFurnitureMod.Content.Tiles.Multi.TopWall.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -31,7 +31,8 @@ internal class SpringPennant : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<SpringPennants>();
+        Item.createTile = ModContent.TileType<MP_TW_SS_1x1_N_11>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

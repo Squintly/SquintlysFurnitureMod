@@ -1,5 +1,4 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
@@ -44,7 +43,6 @@ public class S_1x1_N_2FA : ModTile
         }
     }
 }
-
 
 /*STYLES
 0- Future Grenades

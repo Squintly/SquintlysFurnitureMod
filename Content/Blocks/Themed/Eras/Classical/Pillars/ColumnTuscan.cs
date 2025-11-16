@@ -20,7 +20,7 @@ public class ColumnTuscan : BigUnsolid
     }
 }
 
-internal class ColumnTuscanItem : ModItem
+public class ColumnTuscanItem : ModItem
 {
     public override void SetStaticDefaults()
     {

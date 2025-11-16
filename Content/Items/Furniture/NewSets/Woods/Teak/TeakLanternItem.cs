@@ -1,6 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

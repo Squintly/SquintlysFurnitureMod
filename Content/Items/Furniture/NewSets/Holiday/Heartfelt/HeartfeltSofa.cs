@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
@@ -22,17 +23,7 @@ internal class HeartfeltSofa : ModItem
 
         Item.value = Item.buyPrice(silver: 1);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
-
-        Item.autoReuse = true;
-        Item.consumable = true;
-
-        Item.maxStack = 9999;
-
-        Item.createTile = ModContent.TileType<HeartfeltSofaTile>();
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_LR>(), (int)Sofas_LR.StyleID.Heartfelt);
     }
 
     public override void AddRecipes()

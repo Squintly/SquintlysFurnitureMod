@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Hammers;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -56,6 +57,8 @@ public class MP_1x2_B_LR_4 : ModTile
         TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<Hammer>(), 0);
     }
 
     public override bool RightClick(int i, int j)
@@ -93,7 +96,6 @@ public class MP_1x2_B_LR_4 : ModTile
                 }
             }
         }
-
         else
         {
             short frameAdjustment = (short)(tile.TileFrameX >= 96 ? -96 : 32); //change first two by total size - one style, last by style size

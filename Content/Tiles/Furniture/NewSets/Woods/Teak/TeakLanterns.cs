@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Heartfelt;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.Audio;

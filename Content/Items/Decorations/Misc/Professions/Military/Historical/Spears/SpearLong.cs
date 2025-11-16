@@ -20,7 +20,7 @@ internal class SpearLong : ModItem
 
         Item.value = Item.buyPrice(silver: 2);
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<MP_1x4_B_6>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<MP_SW_1x4_B_6>());
         Item.placeStyle = 0;
     }
 

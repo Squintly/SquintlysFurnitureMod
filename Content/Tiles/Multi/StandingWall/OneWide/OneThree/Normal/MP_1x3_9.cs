@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Swords;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -43,6 +44,8 @@ public class MP_1x3_9 : ModTile
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<SwordScabbard>(), 0);
     }
 
     public override bool RightClick(int i, int j)

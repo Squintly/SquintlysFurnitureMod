@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Technology.Communication.Phones;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -34,5 +35,7 @@ public class WallPhonesClassic : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<WallPhone>());
     }
 }

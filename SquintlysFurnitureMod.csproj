@@ -686,12 +686,9 @@
     <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelStackedWhite.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Decor\Towels\TowelWide.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingChicken.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingDuck.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingGoose.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingMeat.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingMegaChicken.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingPheasant.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingRabbit.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingRibsItem.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingSausage.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Meats\Hanging\HangingSausageSmall.png" />
@@ -699,10 +696,7 @@
     <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneGreen.png" />
     <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneOld.png" />
     <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\TablePhoneRed.png" />
-    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneBlack.png" />
-    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneGreen.png" />
     <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneOldItem.png" />
-    <None Remove="Content\Items\Decorations\Misc\Technology\Communication\Phones\WallPhoneRed.png" />
     <None Remove="Content\Items\Decorations\Misc\Utilities\RedTap.png" />
     <None Remove="Content\Items\Decorations\Misc\Utilities\Tap.png" />
     <None Remove="Content\Items\Furniture\NewSets\Holiday\Vernal\Chairs\SpringtimeBarstool.png" />
@@ -833,9 +827,7 @@
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSconceItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakShelfItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSinkItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaItem.png" />
-    <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSofaRedItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakSpotlightItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakStoolGreenItem.png" />
     <None Remove="Content\Items\Furniture\NewSets\Woods\Teak\TeakStoolItem.png" />
@@ -1189,7 +1181,6 @@
   <ItemGroup>
     <Folder Include="Content\Blocks\General\" />
     <Folder Include="Content\Blocks\Themed\Holiday\" />
-    <Folder Include="Content\Blocks\VanillaPlus\" />
     <Folder Include="Content\Furniture\Lights\Surface\Lampposts\" />
     <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />

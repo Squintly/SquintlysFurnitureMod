@@ -21,8 +21,7 @@ internal class TatteredSofa : ModItem
         Item.value = Item.buyPrice(copper: 60);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>(), (int)Sofas_6.StyleID.Tattered);
     }
 
     public override void AddRecipes()

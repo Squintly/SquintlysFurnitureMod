@@ -22,8 +22,7 @@ internal class ImperialSofa : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_3>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_3>(), (int)Sofas_3.StyleID.Imperial);
     }
 
     public override void AddRecipes()

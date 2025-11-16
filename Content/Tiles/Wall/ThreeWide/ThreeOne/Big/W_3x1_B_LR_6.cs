@@ -78,7 +78,6 @@ public class W_3x1_B_LR_6 : ModTile
                 }
             }
         }//change first two by total size - one style, last by style size
-
         else
         {
             short frameAdjustment = (short)(tile.TileFrameX >= 270 ? -270 : 54);

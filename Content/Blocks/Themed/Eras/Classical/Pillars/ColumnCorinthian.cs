@@ -20,7 +20,7 @@ public class ColumnCorinthian : BigUnsolid
     }
 }
 
-internal class ColumnCorinthianItem : ModItem
+public class ColumnCorinthianItem : ModItem
 {
     public override void SetStaticDefaults()
     {

@@ -10,6 +10,14 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
 
 public class S_2x2_3 : ModTile
 {
+    public enum StyleID
+    {
+        FestiveDecorations, //0
+        Poinsettas, //1
+        Baskets, //2
+        Cauldrons, //3
+        ThornBaskets //4
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -23,8 +31,6 @@ public class S_2x2_3 : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 
         TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
-
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -77,10 +83,3 @@ public class S_2x2_3 : ModTile
         }
     }
 }
-
-/*STYLES
-0- Christmas Decorations X
-1- Poinsettas X
-2- Basket X
-3- Cauldron X
-*/

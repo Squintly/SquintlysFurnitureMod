@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Decorations.Hanging;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -27,5 +28,7 @@ public class HeartMobileTile : ModTile
         TileObjectData.newTile.Origin = new Point16(0, 0);
 
         TileObjectData.addTile(Type);
+
+        RegisterItemDrop(ModContent.ItemType<HeartMobile>());
     }
 }

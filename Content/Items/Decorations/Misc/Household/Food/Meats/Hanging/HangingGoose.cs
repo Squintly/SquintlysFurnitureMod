@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Meat.Hanging;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneThree.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,6 +30,7 @@ internal class HangingGoose : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HangingGooseTile>();
+        Item.createTile = ModContent.TileType<T_1x3_N>();
+        Item.placeStyle = 0;
     }
 }

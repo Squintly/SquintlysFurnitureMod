@@ -203,16 +203,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
                 case StyleID.Vernal: //Default
                     break;
 
-                //case StyleID.Teak:
-                //    overrideWindCycle = null;
-                //    dontRotateTopTiles = true;
-                //    windPushPowerY = -1f;
-                //    totalWindMultiplier *= 0.5f;
-                //    break;
+                    //case StyleID.Teak:
+                    //    overrideWindCycle = null;
+                    //    dontRotateTopTiles = true;
+                    //    windPushPowerY = -1f;
+                    //    totalWindMultiplier *= 0.5f;
+                    //    break;
 
-                //case StyleID.Heartfelt: //Mildy Stiff/Heavy
-                //    totalWindMultiplier *= 0.8f;
-                //    break;
+                    //case StyleID.Heartfelt: //Mildy Stiff/Heavy
+                    //    totalWindMultiplier *= 0.8f;
+                    //    break;
             }
         }
 

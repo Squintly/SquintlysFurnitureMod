@@ -10,6 +10,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
 
 public class S_2x2_2 : ModTile
 {
+    public enum StyleID
+    {
+        BreadBaskets, //0
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -23,7 +27,6 @@ public class S_2x2_2 : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 
         TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
@@ -77,7 +80,3 @@ public class S_2x2_2 : ModTile
         }
     }
 }
-
-/*STYLES
-0- Bread Basket
-*/

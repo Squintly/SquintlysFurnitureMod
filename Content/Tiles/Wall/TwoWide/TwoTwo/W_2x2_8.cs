@@ -1,7 +1,9 @@
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
-using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -10,10 +12,19 @@ namespace SquintlysFurnitureMod.Content.Tiles.Wall.TwoWide.TwoTwo;
 
 public class W_2x2_8 : ModTile
 {
+    public enum StyleID
+    {
+        MountedSpears, //0
+        Rosettes, //1
+        Bows //2
+    }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
         TileID.Sets.DisableSmartCursor[Type] = true;
+
+        TileID.Sets.MultiTileSway[Type] = true;
 
         Main.tileLavaDeath[Type] = false;
 
@@ -75,8 +86,41 @@ public class W_2x2_8 : ModTile
             NetMessage.SendTileSquare(-1, topX, topY, 2, 2); //change for width, height
         }
     }
-}
 
-/*STYLES
-0- Mounted Spears
-*/
+    public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+    {
+        Tile tile = Main.tile[i, j];
+
+        if (TileObjectData.IsTopLeft(tile))
+        {
+            // Makes this tile sway in the wind and with player interaction when used with TileID.Sets.MultiTileSway
+            Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
+        }
+
+        // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
+        return false;
+    }
+
+    public override void AdjustMultiTileVineParameters(int i, int j, ref float? overrideWindCycle, ref float windPushPowerX, ref float windPushPowerY, ref bool dontRotateTopTiles, ref float totalWindMultiplier, ref Texture2D glowTexture, ref Color glowColor)
+    {
+        StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
+
+        switch (style)
+        {
+            case StyleID.MountedSpears: //None
+                overrideWindCycle = 0f;
+                break;
+
+            case StyleID.Rosettes: //Stiff
+                windPushPowerY = 0;
+                totalWindMultiplier *= 0.5f;
+                break;
+
+            case StyleID.Bows: //Stiff, no top
+                dontRotateTopTiles = true;
+                totalWindMultiplier *= 0.5f;
+                windPushPowerY = -1f;
+                break;
+        }
+    }
+}

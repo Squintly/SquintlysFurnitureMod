@@ -5,7 +5,6 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
@@ -209,7 +208,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
         //        Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
         //}
 
-
         public override void AdjustMultiTileVineParameters(int i, int j, ref float? overrideWindCycle, ref float windPushPowerX, ref float windPushPowerY, ref bool dontRotateTopTiles, ref float totalWindMultiplier, ref Texture2D glowTexture, ref Color glowColor)
         {
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
@@ -218,21 +216,21 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
             windPushPowerY = 0;
 
             switch (style)
-            { 
+            {
                 case StyleID.Festive: //Default
                 case StyleID.Heartfelt:
                     break;
 
-                //case StyleID.Teak:
-                //    overrideWindCycle = null;
-                //    dontRotateTopTiles = true;
-                //    windPushPowerY = -1f;
-                //    totalWindMultiplier *= 0.5f;
-                //    break;
+                    //case StyleID.Teak:
+                    //    overrideWindCycle = null;
+                    //    dontRotateTopTiles = true;
+                    //    windPushPowerY = -1f;
+                    //    totalWindMultiplier *= 0.5f;
+                    //    break;
 
-                //case StyleID.Heartfelt: //Mildy Stiff/Heavy
-                //    totalWindMultiplier *= 0.8f;
-                //    break;
+                    //case StyleID.Heartfelt: //Mildy Stiff/Heavy
+                    //    totalWindMultiplier *= 0.8f;
+                    //    break;
             }
         }
 

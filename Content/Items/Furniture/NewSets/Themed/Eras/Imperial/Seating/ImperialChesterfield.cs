@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields;
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Blocks;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -22,8 +23,7 @@ internal class ImperialChesterfield : ModItem
         Item.value = Item.buyPrice(silver: 1);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Chesterfields_3>());
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Chesterfields_3>(), (int)Chesterfields_3.StyleID.Imperial);
     }
 
     public override void AddRecipes()

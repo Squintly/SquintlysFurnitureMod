@@ -11,7 +11,7 @@ public class Shops : GlobalNPC
 {
     public override void SetupTravelShop(int[] shop, ref int nextSlot)
     {
-        shop[nextSlot] = ModContent.ItemType<HangingPheasant>();
+        shop[nextSlot] = ModContent.ItemType<HangingGameAnimals>();
         nextSlot++;
 
         shop[nextSlot] = ModContent.ItemType<HangingGoose>();

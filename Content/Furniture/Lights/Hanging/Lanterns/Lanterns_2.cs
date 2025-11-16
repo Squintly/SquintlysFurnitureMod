@@ -5,7 +5,6 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
@@ -185,7 +184,6 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
                 // Makes this tile sway in the wind and with player interaction when used with TileID.Sets.MultiTileSway
                 Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
             }
-           
 
             // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
             return false;
@@ -203,16 +201,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns
                 case StyleID.Teak: //Default
                     break;
 
-                //case StyleID.Teak:
-                //    overrideWindCycle = null;
-                //    dontRotateTopTiles = true;
-                //    windPushPowerY = -1f;
-                //    totalWindMultiplier *= 0.5f;
-                //    break;
+                    //case StyleID.Teak:
+                    //    overrideWindCycle = null;
+                    //    dontRotateTopTiles = true;
+                    //    windPushPowerY = -1f;
+                    //    totalWindMultiplier *= 0.5f;
+                    //    break;
 
-                //case StyleID.Heartfelt: //Mildy Stiff/Heavy
-                //    totalWindMultiplier *= 0.8f;
-                //    break;
+                    //case StyleID.Heartfelt: //Mildy Stiff/Heavy
+                    //    totalWindMultiplier *= 0.8f;
+                    //    break;
             }
         }
 

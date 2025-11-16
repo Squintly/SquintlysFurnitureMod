@@ -20,7 +20,7 @@ public class ColumnDoric : BigUnsolid
     }
 }
 
-internal class ColumnDoricItem : ModItem
+public class ColumnDoricItem : ModItem
 {
     public override void SetStaticDefaults()
     {

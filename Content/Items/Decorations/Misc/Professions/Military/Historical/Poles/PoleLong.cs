@@ -20,7 +20,7 @@ internal class PoleLong : ModItem
 
         Item.value = Item.buyPrice(silver: 2);
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<MP_1x5_B_LR_2>());
+        Item.DefaultToPlaceableTile(ModContent.TileType<MP_SW_1x5_B_LR_2>());
         Item.placeStyle = 0;
     }
 

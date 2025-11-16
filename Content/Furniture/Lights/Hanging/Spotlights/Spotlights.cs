@@ -202,16 +202,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                 case StyleID.Imperial: //Default
                     break;
 
-                //case StyleID.Teak:
-                //    overrideWindCycle = null;
-                //    dontRotateTopTiles = true;
-                //    windPushPowerY = -1f;
-                //    totalWindMultiplier *= 0.5f;
-                //    break;
+                    //case StyleID.Teak:
+                    //    overrideWindCycle = null;
+                    //    dontRotateTopTiles = true;
+                    //    windPushPowerY = -1f;
+                    //    totalWindMultiplier *= 0.5f;
+                    //    break;
 
-                //case StyleID.Heartfelt: //Mildy Stiff/Heavy
-                //    totalWindMultiplier *= 0.8f;
-                //    break;
+                    //case StyleID.Heartfelt: //Mildy Stiff/Heavy
+                    //    totalWindMultiplier *= 0.8f;
+                    //    break;
             }
         }
 
@@ -234,7 +234,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights
                 //    tileFlameData.flameRangeYMax = 1;
                 //    tileFlameData.flameRangeMultX = 0.08f;
                 //    tileFlameData.flameRangeMultY = 0.08f;
-                    //break;
+                //break;
 
                 default:
                     tileFlameData.flameCount = 7;

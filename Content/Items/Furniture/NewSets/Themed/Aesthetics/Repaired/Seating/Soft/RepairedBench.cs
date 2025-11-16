@@ -22,8 +22,7 @@ internal class RepairedBench : ModItem
         Item.value = Item.buyPrice(copper: 60);
         Item.maxStack = Item.CommonMaxStack;
 
-        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>());
-        Item.placeStyle = 3;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_6>(), (int)Sofas_6.StyleID.RepairedBench);
     }
 
     public override void AddRecipes()
