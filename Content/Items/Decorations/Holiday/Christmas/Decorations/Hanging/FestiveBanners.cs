@@ -1,5 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Multi.All.OneWide.OneTwo;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Multi.TopWall.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

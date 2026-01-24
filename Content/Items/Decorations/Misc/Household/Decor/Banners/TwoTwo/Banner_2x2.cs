@@ -1,9 +1,6 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Decor.Banners.TwoThree;
-using SquintlysFurnitureMod.Content.Tiles.Multi.All.OneWide.OneThree;
 using SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoTwo;
 using System;
 using Terraria;
-using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -43,10 +40,12 @@ internal class Banner_2x2 : ModItem
             mod.AddContent(new Banner_2x2(25));
             mod.AddContent(new Banner_2x2(26));
         }
+
         public void Unload()
         {
         }
     }
+
     protected override bool CloneNewInstances => true;
     private readonly int placeStyle;
 

@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using SquintlysFurnitureMod.Content.Tiles.Wall.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

@@ -18,6 +18,7 @@ public class S_2x2_3 : ModTile
         Cauldrons, //3
         ThornBaskets //4
     }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

@@ -15,6 +15,7 @@ public class Seaweed : ReedsSilk
         AddMapEntry(new Color(255, 153, 0));
     }
 }
+
 public class SeaweedBasket : ModItem
 {
     public override void SetStaticDefaults()

@@ -1,5 +1,3 @@
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Abstracts.Plants;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -7,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.VanillaPlus.Plants;
+
 public class DecoVineBasket : ModItem
 {
     public override void SetStaticDefaults()

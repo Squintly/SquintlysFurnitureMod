@@ -16,7 +16,7 @@ public class AshVines : VinesSilk
     }
 }
 
-public  class AshVinesBasket : ModItem
+public class AshVinesBasket : ModItem
 {
     public override void SetStaticDefaults()
     {

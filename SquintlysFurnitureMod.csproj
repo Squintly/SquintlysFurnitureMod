@@ -7,18 +7,22 @@
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Remove="Content\Items\Blocks\Other\**" />
+    <AdditionalFiles Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <AdditionalFiles Remove="Content\Items\Walls\**" />
     <AdditionalFiles Remove="Content\Tiles\Blocks\Other\**" />
     <AdditionalFiles Remove="Content\Tiles\Surface\1x2\**" />
     <Compile Remove="Content\Items\Blocks\Other\**" />
+    <Compile Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <Compile Remove="Content\Items\Walls\**" />
     <Compile Remove="Content\Tiles\Blocks\Other\**" />
     <Compile Remove="Content\Tiles\Surface\1x2\**" />
     <EmbeddedResource Remove="Content\Items\Blocks\Other\**" />
+    <EmbeddedResource Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <EmbeddedResource Remove="Content\Items\Walls\**" />
     <EmbeddedResource Remove="Content\Tiles\Blocks\Other\**" />
     <EmbeddedResource Remove="Content\Tiles\Surface\1x2\**" />
     <None Remove="Content\Items\Blocks\Other\**" />
+    <None Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <None Remove="Content\Items\Walls\**" />
     <None Remove="Content\Tiles\Blocks\Other\**" />
     <None Remove="Content\Tiles\Surface\1x2\**" />
@@ -44,10 +48,7 @@
     <None Remove="Content\Furniture\Bathroom\Baths\ConfusinglyLargeBathtub.png" />
     <None Remove="Content\Furniture\Bathroom\Baths_3Wide_2.png" />
     <None Remove="Content\Furniture\Bathroom\Baths_Tall.png" />
-    <None Remove="Content\Furniture\Bathroom\Sinks\Sinks.png" />
     <None Remove="Content\Furniture\Bathroom\Sinks_2.png" />
-    <None Remove="Content\Furniture\Bathroom\Toilets\Toilets.png" />
-    <None Remove="Content\Furniture\Bathroom\Toilets\Toilets_Highlight.png" />
     <None Remove="Content\Furniture\Bathroom\Toilets_3Tall.png" />
     <None Remove="Content\Furniture\Bathroom\Toilets_3Tall_Highlight.png" />
     <None Remove="Content\Furniture\Bathroom\Toilets_4.png" />
@@ -60,8 +61,6 @@
     <None Remove="Content\Furniture\Bedroom\Beds\Beds_3_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\Beds_4Tall.png" />
     <None Remove="Content\Furniture\Bedroom\Beds_4Tall_Highlight.png" />
-    <None Remove="Content\Furniture\Bedroom\Dressers\Dressers_Animated.png" />
-    <None Remove="Content\Furniture\Bedroom\Dressers\Dressers_Animated_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_3Tall_12.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_3Tall_12_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_3Tall_6.png" />
@@ -70,24 +69,18 @@
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_4Tall_6_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall_Highlight.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps.png" />
     <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps_4.png" />
     <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps_4_Flame.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps_Flame.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Chandeliers.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Chandeliers\Chandeliers_4.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Chandeliers\Chandeliers_4_Flame.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Chandeliers_Flame.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Lanterns.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\Lanterns\Lanterns.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Lanterns\Lanterns_11.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Lanterns\Lanterns_11_Flame.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\Lanterns\Lanterns_Flame.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Lanterns_Flame.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\Spotlights\Spotlights.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Spotlights\Spotlights_9.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Spotlights\Spotlights_9_Flame.png" />
-    <None Remove="Content\Furniture\Lights\Hanging\Spotlights\Spotlights_Flame.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candelabras\Candelabras_11.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candelabras\Candelabras_11_Flame.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candelabras\Candelabras_2.png" />
@@ -97,8 +90,6 @@
     <None Remove="Content\Furniture\Lights\Surface\Candles.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candles\Candles_3.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candles\Candles_3_Flame.png" />
-    <None Remove="Content\Furniture\Lights\Surface\Candles\Candles_8.png" />
-    <None Remove="Content\Furniture\Lights\Surface\Candles\Candles_8_Flame.png" />
     <None Remove="Content\Furniture\Lights\Surface\Candles_Flame.png" />
     <None Remove="Content\Furniture\Lights\Surface\Lamps.png" />
     <None Remove="Content\Furniture\Lights\Surface\Lamps\Lamps - Copy.png" />
@@ -135,11 +126,8 @@
     <None Remove="Content\Furniture\Misc\Doors_4.png" />
     <None Remove="Content\Furniture\Misc\Doors_4_Highlight.png" />
     <None Remove="Content\Furniture\Misc\LibraryShelves\LibraryShelves_3.png" />
-    <None Remove="Content\Furniture\Misc\Mirrors\Mirrors.png" />
-    <None Remove="Content\Furniture\Misc\Mirrors\Mirrors_Tall.png" />
     <None Remove="Content\Furniture\Misc\Mirrors\Mirrors_Tall_2.png" />
     <None Remove="Content\Furniture\Misc\Mirrors_Wide.png" />
-    <None Remove="Content\Furniture\Misc\Pianos\Pianos.png" />
     <None Remove="Content\Furniture\Misc\Pianos\Pianos_3Tall_Animated.png" />
     <None Remove="Content\Furniture\Misc\Pianos\Pianos_3Tall_NoTop.png" />
     <None Remove="Content\Furniture\Misc\Platforms.png" />
@@ -978,7 +966,6 @@
     <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Gold.png" />
     <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1Metal.png" />
     <None Remove="Content\Tiles\Decorations\Misc\Artwork\Paintings\Paintings1x1White.png" />
-    <None Remove="Content\Tiles\Decorations\Crafting\PrintingPressTile.png" />
     <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Outdoors\BeachBallTile.png" />
     <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Outdoors\Paddles.png" />
     <None Remove="Content\Tiles\Decorations\Misc\Hobbies\Sports\BaseballBatTile.png" />
@@ -1134,7 +1121,6 @@
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_4.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_5.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoTwo\S_2x2_8.png" />
-    <None Remove="Content\Walls\Unsolids\ColumnTuscanWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnCorinthianWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnDoricWall.png" />
     <None Remove="Content\WallTiles\Holiday\Spring\ColumnIonicWall.png" />
@@ -1179,16 +1165,12 @@
     <None Remove="Reference\TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Blocks\General\" />
     <Folder Include="Content\Blocks\Themed\Holiday\" />
     <Folder Include="Content\Furniture\Lights\Surface\Lampposts\" />
     <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />
     <Folder Include="Content\Tiles\Wall\FiveWide\FiveOne\Normal\" />
     <Folder Include="Content\Tiles\Wall\FourWide\FourOne\Normal\" />
-    <Folder Include="Content\Walls\Unsolids\Columns\" />
-    <Folder Include="Content\Walls\Unsolids\Fences\" />
-    <Folder Include="Content\Walls\Unsolids\Poles\" />
     <Folder Include="Content\Items\Decorations\Misc\Hobbies\Music\" />
     <Folder Include="Content\Items\Decorations\Misc\Technology\Medical\" />
     <Folder Include="Content\Items\Decorations\Misc\Technology\Appliances\" />

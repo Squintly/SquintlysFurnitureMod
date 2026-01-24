@@ -31,7 +31,7 @@ internal class Flour : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B>();
-        Item.placeStyle = 6;
+        Item.placeStyle = 7;
     }
 
     public override void AddRecipes()

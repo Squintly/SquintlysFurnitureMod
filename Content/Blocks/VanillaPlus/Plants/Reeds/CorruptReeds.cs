@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Abstracts.Plants;
 using Terraria;
 using Terraria.GameContent.Creative;

@@ -16,6 +16,7 @@ public class S_2x2_4 : ModTile
         SugarSacks, //1
         FlourSacks //2
     }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

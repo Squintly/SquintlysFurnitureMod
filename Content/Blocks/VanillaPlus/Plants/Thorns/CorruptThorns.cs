@@ -15,6 +15,7 @@ public class CorruptThorns : Unsolid
         AddMapEntry(new Color(153, 51, 153));
     }
 }
+
 public class CorruptThornBasket : ModItem
 {
     public override void SetStaticDefaults()

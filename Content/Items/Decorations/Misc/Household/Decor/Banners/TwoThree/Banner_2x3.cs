@@ -1,7 +1,6 @@
 using SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree;
 using System;
 using Terraria;
-using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -41,10 +40,12 @@ internal class Banner_2x3 : ModItem
             mod.AddContent(new Banner_2x3(25));
             mod.AddContent(new Banner_2x3(26));
         }
+
         public void Unload()
         {
         }
     }
+
     protected override bool CloneNewInstances => true;
     private readonly int placeStyle;
 
@@ -226,7 +227,7 @@ internal class Banner_2x3 : ModItem
             .AddTile(TileID.Loom)
             .Register();
         }
-        
+
         if (placeStyle == 15 | placeStyle == 16 | placeStyle == 17)
         {
             CreateRecipe()

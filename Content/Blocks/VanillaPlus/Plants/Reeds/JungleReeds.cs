@@ -15,6 +15,7 @@ public class JungleReeds : ReedsSilk
         AddMapEntry(new Color(255, 153, 0));
     }
 }
+
 public class JungleReedBasket : ModItem
 {
     public override void SetStaticDefaults()

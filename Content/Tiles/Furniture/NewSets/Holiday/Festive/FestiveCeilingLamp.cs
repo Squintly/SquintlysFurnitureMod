@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Festive;
+using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

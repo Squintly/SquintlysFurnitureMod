@@ -119,6 +119,7 @@ public class W_1x1_N_8 : ModTile
                 overrideWindCycle = .5f;
                 windPushPowerY = -4f;
                 break;
+
             case StyleID.SmallBows:
             case StyleID.SmallRosettes:
                 windPushPowerY = 0f;

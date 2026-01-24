@@ -15,6 +15,7 @@ public class CrimsonThorns : Unsolid
         AddMapEntry(new Color(204, 0, 0));
     }
 }
+
 public class CrimsonThornBasket : ModItem
 {
     public override void SetStaticDefaults()

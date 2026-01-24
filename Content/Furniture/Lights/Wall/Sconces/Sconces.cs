@@ -16,6 +16,30 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
 {
     internal class Sconces : ModTile
     {
+        public enum StyleID
+        {
+            ImperialSconceCandle, //0
+            ImperialSconce, //1
+            ImperialSconceGlass, //2
+            TatteredSconceCandle, //3
+            TatteredSconceGlass, //4
+            TatteredSconceThick, //5
+            TatteredSconceCandleSilver, //6
+            TatteredSconceGlassSilver, //7
+            TatteredSconceThickSilver, //8
+            RepairedSconceCandle, //9
+            RepairedSconceGlass, //10
+            RepairedSconceThick, //11
+            RepairedSconceCandleSilver, //12
+            RepairedSconceGlassSilver, //13
+            RepairedSconceThickSilver, //14
+            StoneBrickSconce, //15
+            StoneBrickSconceSmall, //16
+            RedBrickSconce, //17
+            RedBrickSconceSmall, //18
+            CinderblockSconce //19
+        }
+
         private Asset<Texture2D> flameTexture;
 
         public override void SetStaticDefaults()
@@ -31,8 +55,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             TileID.Sets.FramesOnKillWall[Type] = true;
 
             TileID.Sets.DisableSmartCursor[Type] = true;
+            TileID.Sets.IsAMechanism[Type] = true;
 
             Main.tileLighted[Type] = true;
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
+            AdjTiles = new int[] { TileID.Torches };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.StyleTorch);
 
@@ -40,10 +67,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
             TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = new[] { 124, 561, 574, 575, 576, 577, 578 };
+            TileObjectData.newAlternate.DrawXOffset = -2;
             TileObjectData.addAlternate(1);
             TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
             TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = new[] { 124, 561, 574, 575, 576, 577, 578 };
+            TileObjectData.newAlternate.DrawXOffset = 2;
             TileObjectData.addAlternate(2);
             TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
             TileObjectData.newAlternate.AnchorWall = true;
@@ -114,49 +143,60 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX < 66)
+            if (Main.tile[i, j].TileFrameX / 66 != 0)
             {
-                switch (tile.TileFrameY / 22)
-                {
-                    //warm/flame
-                    case 0: //Imperial Candle
-                    case 1: //Imperial
-                    case 2: //Imperial Glass
-                    case 9: //Repaired Candle
-                    case 10: //Repaired Glass
-                    case 11: //Repaired Thick
-                    case 12: //Repaired Candle Silver
-                    case 13: //Repaired Glass Silver
-                    case 14: //Repaired Thick Silver
-                        r = 1f;
-                        g = .95f;
-                        b = .95f;
-                        break;
+                return;
+            }
 
-                    case 3: //Tattered Candle
-                    case 4: //Tattered Glass
-                    case 5: //Tattered Thick
-                    case 6: //Tattered Candle Silver
-                    case 7: //Tattered Glass Silver
-                    case 8: //Tattered Thick Silver
-                        r = 1f;
-                        g = .75f;
-                        b = .75f;
-                        break;
+            StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
+            switch (style)
+            {
+                case StyleID.ImperialSconceCandle:
+                case StyleID.ImperialSconce:
+                case StyleID.ImperialSconceGlass:
+                case StyleID.RepairedSconceCandle:
+                case StyleID.RepairedSconceGlass:
+                case StyleID.RepairedSconceThick:
+                case StyleID.RepairedSconceCandleSilver:
+                case StyleID.RepairedSconceGlassSilver:
+                case StyleID.RepairedSconceThickSilver:
+                    r = 1f;
+                    g = .95f;
+                    b = .9f;
+                    break; //warm bright
 
-                    default:
-                        r = 1f;
-                        g = 1f;
-                        b = 1f;
-                        break;
-                }
+                case StyleID.StoneBrickSconce:
+                case StyleID.StoneBrickSconceSmall:
+                case StyleID.RedBrickSconce:
+                case StyleID.RedBrickSconceSmall:
+                case StyleID.CinderblockSconce:
+                    r = 1f;
+                    g = .85f;
+                    b = .70f;
+                    break; //yellow bright
+
+                case StyleID.TatteredSconceCandle:
+                case StyleID.TatteredSconceGlass:
+                case StyleID.TatteredSconceThick:
+                case StyleID.TatteredSconceCandleSilver:
+                case StyleID.TatteredSconceGlassSilver:
+                case StyleID.TatteredSconceThickSilver:
+                    r = 1f;
+                    g = .75f;
+                    b = .75f;
+                    break; //warm dim
+
+                default:
+                    r = 1f;
+                    g = 0.95f;
+                    b = 0.8f;
+                    break;
             }
         }
 
-        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        public override void EmitParticles(int i, int j, Tile tileCache, short tileFrameX, short tileFrameY, Color tileLight, bool visible)
         {
-            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            if (!visible)
             {
                 return;
             }
@@ -166,13 +206,50 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
-            // Return if the lamp is off (when frameX is 0), or if a random check failed.
-            if (frameX != 0 || !Main.rand.NextBool(40))
+            if (Main.rand.NextBool(40) && tileFrameX < 66)
             {
-                return;
-            }
+                StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
 
-            int style = frameY / 1;
+                int dustChoice = -1;
+
+                switch (style)
+                {
+                    case StyleID.TatteredSconceCandle:
+                    case StyleID.TatteredSconceGlass:
+                    case StyleID.TatteredSconceThick:
+                    case StyleID.TatteredSconceCandleSilver:
+                    case StyleID.TatteredSconceGlassSilver:
+                    case StyleID.TatteredSconceThickSilver:
+                        dustChoice = DustID.Torch;
+                        break;
+
+                    default:
+                        dustChoice = -1;
+                        break;
+                }
+
+                if (dustChoice != -1)
+                {
+                    switch (style)
+                    {
+                        case StyleID.TatteredSconceCandle:
+                        case StyleID.TatteredSconceGlass:
+                        case StyleID.TatteredSconceThick:
+                        case StyleID.TatteredSconceCandleSilver:
+                        case StyleID.TatteredSconceGlassSilver:
+                        case StyleID.TatteredSconceThickSilver:
+                            Dust dust = Dust.NewDustDirect(new Vector2(i * 16, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100);
+                            if (Main.rand.NextBool(40))
+                            {
+                                dust.noGravity = true;
+                            }
+
+                            dust.velocity *= 0.3f;
+                            dust.velocity.Y -= 1.5f;
+                            break;
+                    }
+                }
+            }
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
@@ -203,35 +280,38 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
 
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
 
-            switch (tile.TileFrameY / 22)
+            StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
+            switch (style)
             {
                 //Flame
-                case 0: //Imperial Candle
-                case 2: //Imperial Glass
-                case 3: //Tattered Candle
-                case 4: //Tattered Glass
-                case 5: //Tattered Thick
-                case 6: //Tattered Candle Silver
-                case 7: //Tattered Glass Silver
-                case 8: //Tattered Thick Silver
-                case 9: //Repaired Candle
-                case 10: //Repaired Glass
-                case 11: //Repaired Thick
-                case 12: //Repaired Candle Silver
-                case 13: //Repaired Glass Silver
-                case 14: //Repaired Thick Silver
+                case StyleID.TatteredSconceCandle:
+                case StyleID.TatteredSconceThick:
+                case StyleID.TatteredSconceCandleSilver:
+                case StyleID.TatteredSconceThickSilver:
                     for (int c = 0; c < 7; c++)
                     {
-                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+                        float shakeX = Utils.RandomInt(ref randSeed, -12, 11) * 0.2f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -12, 1) * 0.4f;
 
-                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 20, 20, 0), 0f, default, 1f, effects, 0f);
+                    }
+                    break;
+                    
+                case StyleID.TatteredSconceGlass:
+                case StyleID.TatteredSconceGlassSilver:
+                    for (int c = 0; c < 7; c++)
+                    {
+                        float shakeX = Utils.RandomInt(ref randSeed, -12, 11) * 0.2f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -12, 1) * 0.4f;
+
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 60, 60, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
 
-                //Non-flame
-                case 1: //Imperial
-                    for (int c = 0; c < 4; c++)
+                //Low Flicker
+                case StyleID.ImperialSconce:
+                case StyleID.CinderblockSconce:
+                    for (int c = 0; c < 1; c++)
                     {
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
                         float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
@@ -239,25 +319,95 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
+
+                //No Flicker
+                case StyleID.StoneBrickSconce:
+                case StyleID.StoneBrickSconceSmall:
+                case StyleID.RedBrickSconce:
+                case StyleID.RedBrickSconceSmall:
+                    for (int c = 0; c < 1; c++)
+                    {
+                        float shakeX = Utils.RandomInt(ref randSeed, -5, 5) * 0.01f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -5, 1) * 0.01f;
+
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+                    }
+                    break;
+
+                default:
+                    for (int c = 0; c < 7; c++)
+                    {
+                        float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+                        float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 50, 50, 0), 0f, default, 1f, effects, 0f);
+                    }
+                    break;
             }
+
+            //public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
+            //{
+            //    ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);
+
+            //    tileFlameData.flameTexture = flameTexture.Value;
+            //    tileFlameData.flameSeed = flameSeed;
+
+            //    StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
+            //    switch (style)
+            //    {
+            //        case StyleID.ImperialSconce:
+            //        case StyleID.CinderblockSconce:
+            //            tileFlameData.flameCount = 1;
+            //            tileFlameData.flameColor = new Color(100, 100, 100, 0);
+            //            tileFlameData.flameRangeXMin = -5;
+            //            tileFlameData.flameRangeXMax = 5;
+            //            tileFlameData.flameRangeYMin = -5;
+            //            tileFlameData.flameRangeYMax = 1;
+            //            tileFlameData.flameRangeMultX = 0.05f;
+            //            tileFlameData.flameRangeMultY = 0.05f;
+            //            break; //tiny flicker
+
+            //        case StyleID.StoneBrickSconce:
+            //        case StyleID.StoneBrickSconceSmall:
+            //        case StyleID.RedBrickSconce:
+            //        case StyleID.RedBrickSconceSmall:
+            //            tileFlameData.flameCount = 1;
+            //            tileFlameData.flameColor = new Color(100, 100, 100, 0);
+            //            tileFlameData.flameRangeXMin = -5;
+            //            tileFlameData.flameRangeXMax = 5;
+            //            tileFlameData.flameRangeYMin = -5;
+            //            tileFlameData.flameRangeYMax = 1;
+            //            tileFlameData.flameRangeMultX = 0.01f;
+            //            tileFlameData.flameRangeMultY = 0.01f;
+            //            break; //No flicker
+
+            //        case StyleID.TatteredSconceCandle:
+            //        case StyleID.TatteredSconceGlass:
+            //        case StyleID.TatteredSconceThick:
+            //        case StyleID.TatteredSconceCandleSilver:
+            //        case StyleID.TatteredSconceGlassSilver:
+            //        case StyleID.TatteredSconceThickSilver:
+            //            tileFlameData.flameCount = 7;
+            //            tileFlameData.flameColor = new Color(100, 100, 100, 0);
+            //            tileFlameData.flameRangeXMin = -15;
+            //            tileFlameData.flameRangeXMax = 15;
+            //            tileFlameData.flameRangeYMin = -15;
+            //            tileFlameData.flameRangeYMax = 1;
+            //            tileFlameData.flameRangeMultX = 0.20f;
+            //            tileFlameData.flameRangeMultY = 0.40f;
+            //            break; //flickery flame
+
+            //        default:
+            //            tileFlameData.flameCount = 7;
+            //            tileFlameData.flameColor = new Color(100, 100, 100, 0);
+            //            tileFlameData.flameRangeXMin = -10;
+            //            tileFlameData.flameRangeXMax = 11;
+            //            tileFlameData.flameRangeYMin = -10;
+            //            tileFlameData.flameRangeYMax = 1;
+            //            tileFlameData.flameRangeMultX = 0.15f;
+            //            tileFlameData.flameRangeMultY = 0.35f;
+            //            break;
+            //    }
         }
     }
 }
-
-/* STYLES
-0- Imperial Candle
-1- Imperial
-2- Imperial Glass
-3- Tattered Candle
-4- Tattered Glass
-5- Tattered Thick
-6- Tattered Candle Silver
-7- Tattered Glass Silver
-8- Tattered Thick Silver
-9- Repaired Candle
-10- Repaired Glass
-11- Repaired Thick
-12- Repaired Candle Silver
-13- Repaired Glass Silver
-14- Repaired Thick Silver
-*/

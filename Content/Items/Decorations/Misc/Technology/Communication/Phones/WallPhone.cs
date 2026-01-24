@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Technology.Communication.Phones;
 using SquintlysFurnitureMod.Content.Tiles.Wall.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

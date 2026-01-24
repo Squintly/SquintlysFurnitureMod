@@ -15,6 +15,7 @@ public class MushroomReeds : ReedsSilk
         AddMapEntry(new Color(255, 153, 0));
     }
 }
+
 public class MushroomReedBasket : ModItem
 {
     public override void SetStaticDefaults()

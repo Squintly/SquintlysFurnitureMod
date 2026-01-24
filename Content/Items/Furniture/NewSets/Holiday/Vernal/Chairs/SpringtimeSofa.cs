@@ -1,8 +1,6 @@
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chesterfields;
-using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas;
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas.Sofas_3;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

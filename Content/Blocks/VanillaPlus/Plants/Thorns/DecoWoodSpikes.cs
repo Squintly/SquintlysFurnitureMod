@@ -13,6 +13,7 @@ public class DecoWoodSpikes : Unsolid
         RegisterItemDrop(ModContent.ItemType<DecoWoodSpike>());
     }
 }
+
 public class DecoWoodSpike : ModItem
 {
     public override void SetStaticDefaults()

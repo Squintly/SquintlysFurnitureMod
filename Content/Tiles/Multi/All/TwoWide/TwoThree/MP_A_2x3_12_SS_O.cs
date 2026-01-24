@@ -1,12 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
-using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -85,11 +82,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree
             TileObjectData.addAlternate(0);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.Origin = new Point16(0, 1); 
+            TileObjectData.newAlternate.Origin = new Point16(0, 1);
             TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 3, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = [124, 561, 574, 575, 576, 577, 578];
             TileObjectData.addAlternate(12);
-            
+
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Origin = new Point16(0, 0);
             TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 3, 0);
@@ -146,7 +143,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree
                     }
                 }
             }
-            
+
             if (tile.TileFrameX >= 432 && tile.TileFrameX < 864)
             {
                 short frameAdjustment = (short)(tile.TileFrameX >= 828 ? -396 : 36);
@@ -164,7 +161,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree
                     }
                 }
             }
-            
+
             if (tile.TileFrameX >= 864 && tile.TileFrameX < 1296)
             {
                 short frameAdjustment = (short)(tile.TileFrameX >= 1260 ? -396 : 36);
@@ -221,6 +218,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree
         //    return false;
         //}
         public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
+
         public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
@@ -236,7 +234,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree
             //    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
             //    new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, height),
             //    Lighting.GetColor(i, j));
-            
+
             spriteBatch.Draw(
                  ModContent.Request<Texture2D>(Texture + "_Overlay").Value,
                  new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,

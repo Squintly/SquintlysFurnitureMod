@@ -7,6 +7,27 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Platforms
 {
     public class Platforms : ModTile
     {
+        public enum StyleID
+        {
+            ImperialPlatform, //0
+            ImperialCarpet, //1
+            ImperialShelf, //2
+            TatteredPlatform, //3
+            TatteredCarpet, //4
+            TatteredShelf, //5
+            RepairedPlatform, //6
+            RepairedCarpet, //7
+            RepairedShelf, //8
+            RedBrickPlatform, //9
+            CinderblockPlatform, //10
+            StoneBrickCarpet, //11
+            RedBrickCarpet, //12
+            CinderblockCarpet, //13
+            StoneBrickShelf, //14
+            RedBrickShelf, //15
+            CinderblockShelf //16
+        }
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -45,15 +66,3 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.Platforms
         }
     }
 }
-
-/*STYLES
-0- Imperial
-1- Imperial Fancy
-2- Imperial Shelf
-3- Tattered
-4- Tattered Carpet
-5- Tattered Shelf
-6- Repaired
-7- Repaired Carpet
-8- Repaired Shelf
-*/

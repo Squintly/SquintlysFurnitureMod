@@ -15,6 +15,7 @@ public class S_2x2_8 : ModTile
         BigCakes, //0
         VineBaskets //1
     }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

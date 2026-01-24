@@ -14,6 +14,7 @@ public class S_2x2_7 : ModTile
     {
         DecoReedBaskets, //0
     }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

@@ -8,6 +8,7 @@ using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.Multi.StandingWall.OneWide.OneFour.Big;
 
+[LegacyName(new string[] { "MP_1x4_B_6" })]
 public class MP_SW_1x4_B_6 : ModTile
 {
     public override void SetStaticDefaults()

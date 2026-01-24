@@ -1,7 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns.Lanterns_4.Items;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights.Spotlights_2.Items;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -53,8 +56,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
             }
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
-
-            RegisterItemDrop(ModContent.ItemType<SpringtimeLantern>());
+        }
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            Tile t = Main.tile[i, j];
+            int style = t.TileFrameY / 34;
+            yield return new Item(Mod.Find<ModItem>(Lanterns_4_Items.GetInternalNameFromStyle(0)).Type);
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

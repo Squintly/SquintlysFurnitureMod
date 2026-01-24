@@ -15,6 +15,7 @@ public class JungleThorns : Unsolid
         AddMapEntry(new Color(102, 153, 0));
     }
 }
+
 public class JungleThornBasket : ModItem
 {
     public override void SetStaticDefaults()

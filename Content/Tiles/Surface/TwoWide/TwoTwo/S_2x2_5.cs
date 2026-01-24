@@ -15,6 +15,7 @@ public class S_2x2_5 : ModTile
         VernalBaskets, //0
         HandleBaskets //1
     }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

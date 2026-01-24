@@ -1,17 +1,18 @@
-﻿using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
+﻿using SquintlysFurnitureMod.Content.Furniture.Misc.Platforms.Items;
+using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Blocks.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Fruit;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Misc;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Eras.Imperial.Walls;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.WallItems.Woods.Teak;
+using SquintlysFurnitureMod.Content.Walls.General.Bricks.Cinderblock;
+using SquintlysFurnitureMod.Content.Walls.General.Bricks.Red;
+using SquintlysFurnitureMod.Content.Walls.General.Bricks.Stone;
+using SquintlysFurnitureMod.Content.Walls.Themed.Eras.Imperial;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -85,14 +86,23 @@ namespace SquintlysFurnitureMod.Content
                 ModContent.ItemType<ImperialPanellingItem>(), ModContent.ItemType<ImperialFenceItem>());
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialWalls", ImperialWalls);
 
-            RecipeGroup ImperialPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Platforms", ModContent.ItemType<ImperialPlatform>(), ModContent.ItemType<ImperialPlatformFancy>(), ModContent.ItemType<ImperialShelf>());
+            RecipeGroup ImperialPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Platforms", Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(0)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(1)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(2)).Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialPlatforms", ImperialPlatforms);
 
-            RecipeGroup TatteredPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Tattered Platforms", ModContent.ItemType<TatteredPlatform>(), ModContent.ItemType<TatteredCarpet>(), ModContent.ItemType<TatteredShelf>());
+            RecipeGroup TatteredPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Tattered Platforms", Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(3)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(4)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(5)).Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TatteredPlatforms", TatteredPlatforms);
 
-            RecipeGroup RepairedPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Repaired Platforms", ModContent.ItemType<RepairedPlatform>(), ModContent.ItemType<RepairedCarpet>(), ModContent.ItemType<RepairedShelf>());
+            RecipeGroup RepairedPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Repaired Platforms", Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(6)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(7)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(8)).Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:RepairedPlatforms", RepairedPlatforms);
+
+            RecipeGroup CinderblockWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Cinderblock Walls", ModContent.ItemType<CinderblockWallItem>(), ModContent.ItemType<CinderblockFenceItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:CinderblockWalls", CinderblockWalls);
+
+            RecipeGroup RedBrickWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Red Brick Walls", ItemID.RedBrickWall, ModContent.ItemType<RedBrickFenceItem>(), ModContent.ItemType<RedBrickFenceFancyItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:RedBrickWalls", RedBrickWalls);
+
+            RecipeGroup StoneBrickWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Stone Brick Walls", ItemID.GrayBrickWall, ModContent.ItemType<StoneBrickFenceItem>(), ModContent.ItemType<StoneBrickFenceFancyItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:StoneBrickWalls", StoneBrickWalls);
         }
     }
 

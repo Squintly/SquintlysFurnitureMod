@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;

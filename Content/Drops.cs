@@ -1,10 +1,10 @@
-﻿using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
+﻿using SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools.Stools_2.Items;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Veggies;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Farming.Crops;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Armchairs;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.CeilingLamps;
 using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.KingBeds;
-using SquintlysFurnitureMod.Content.Items.Furniture.SetExtras.Stools;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;

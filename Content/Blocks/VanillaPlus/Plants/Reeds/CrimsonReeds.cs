@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Plants;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -16,6 +15,7 @@ public class CrimsonReeds : ReedsSilk
         AddMapEntry(new Color(255, 153, 0));
     }
 }
+
 public class CrimsonReedBasket : ModItem
 {
     public override void SetStaticDefaults()

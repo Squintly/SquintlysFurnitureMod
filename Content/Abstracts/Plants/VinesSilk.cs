@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 namespace SquintlysFurnitureMod.Content.Abstracts.Plants;
 
 public abstract class VinesSilk : ModTile
-{   
+{
     public override void SetStaticDefaults()
     {
         Main.tileNoSunLight[Type] = true;
@@ -22,9 +22,11 @@ public abstract class VinesSilk : ModTile
 
         SafeSetStaticDefaults();
     }
+
     public virtual void SafeSetStaticDefaults()
     {
     }
+
     public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
     {
         // This method is used to make a vine tile draw in the wind. Note that i and j are reversed for this method, this is not a typo.
@@ -33,6 +35,7 @@ public abstract class VinesSilk : ModTile
         // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
         return false;
     }
+
     public override void SetDrawPositions(int i, int j, ref int width, ref int offsetY, ref int height, ref short tileFrameX, ref short tileFrameY)
     {
         offsetY = -2;

@@ -1,8 +1,6 @@
-using SquintlysFurnitureMod.Content.Tiles.Multi.All.OneWide.OneThree;
 using SquintlysFurnitureMod.Content.Tiles.Multi.All.OneWide.OneTwo;
 using System;
 using Terraria;
-using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -32,11 +30,13 @@ internal class Banner_1x2 : ModItem
             mod.AddContent(new Banner_1x2(15));
             mod.AddContent(new Banner_1x2(16));
             mod.AddContent(new Banner_1x2(17));
-        }   
+        }
+
         public void Unload()
         {
         }
     }
+
     protected override bool CloneNewInstances => true;
     private readonly int placeStyle;
 
@@ -138,7 +138,6 @@ internal class Banner_1x2 : ModItem
 
     public override void AddRecipes()
     {
-
         if (placeStyle == 0 | placeStyle == 1)
         {
             CreateRecipe()
@@ -183,7 +182,7 @@ internal class Banner_1x2 : ModItem
             .AddTile(TileID.Loom)
             .Register();
         }
-        
+
         if (placeStyle == 10 | placeStyle == 11)
         {
             CreateRecipe()

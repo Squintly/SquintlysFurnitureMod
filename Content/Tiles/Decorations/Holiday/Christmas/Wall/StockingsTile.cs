@@ -35,6 +35,6 @@ public class StockingsTile : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<Stocking>()); 
+        RegisterItemDrop(ModContent.ItemType<Stocking>());
     }
 }
