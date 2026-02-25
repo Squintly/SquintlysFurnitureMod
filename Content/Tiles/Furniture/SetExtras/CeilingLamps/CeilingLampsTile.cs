@@ -97,7 +97,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
             Tile tile = Main.tile[i, j];
             if (tile.TileFrameX == 0)
             {
-                switch (tile.TileFrameY / 16)
+                switch (tile.TileFrameY / 18)
                 {
                     case 1: // blue dungeon
                         r = 0.55f;
@@ -195,6 +195,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
                         b = 1f;
                         break;
 
+                    case 24: // Honey
+                        r = 1f;
+                        g = 1f;
+                        b = 1f;
+                        break;
+
                     case 25: // steampunk
                         r = 1f;
                         g = 0.95f;
@@ -276,8 +282,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
 
                     case 40: // bamboo
                         r = 1f;
-                        g = 0.95f;
-                        b = 0.65f;
+                        g = 1f;
+                        b = 1f;
                         break;
 
                     case 41: // paper
@@ -447,7 +453,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 5
             int frame = frameY / 18;
 
-            if (frame == 0) // normal - not yet set!
+            if (frame == 0) // normal
             {
                 for (int c = 0; c < 7; c++)
                 {
@@ -507,7 +513,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(50, 50, 50, 0), 0f, default, 1f, effects, 0f);
                 }
             }
-            else if (frame == 13) // shyware
+            else if (frame == 13) // skyware
             {
                 for (int c = 0; c < 7; c++)
                 {
@@ -591,10 +597,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.CeilingLamps
             }
             else
             {
-                for (int c = 0; c < 0; c++)
+                for (int c = 0; c < 1; c++)
                 {
-                    float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-                    float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+                    float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.0f;
+                    float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.0f;
 
                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                 }

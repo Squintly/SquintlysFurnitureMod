@@ -56,7 +56,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
             return true;
         }
 
-
         public override bool RightClick(int i, int j)
         {
             SoundEngine.PlaySound(SoundID.Mech, new Vector2(i * 16, j * 16));

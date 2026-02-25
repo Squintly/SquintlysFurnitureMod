@@ -40,7 +40,7 @@ internal class ObsidianArmchair : ModItem
             .AddIngredient(ItemID.Obsidian, 3)
             .AddIngredient(ItemID.Hellstone)
             .AddIngredient(ItemID.Silk)
-            .AddTile(TileID.WorkBenches)
+            .AddTile(TileID.Hellforge)
             .Register();
     }
 }

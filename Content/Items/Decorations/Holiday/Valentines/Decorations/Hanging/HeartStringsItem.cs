@@ -1,6 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines.Decorations;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -32,7 +32,8 @@ internal class HeartStringsItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HeartStrings>();
+        Item.createTile = ModContent.TileType<T_1x1_N_10>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

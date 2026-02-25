@@ -19,7 +19,7 @@ internal class TeakWood : ModItem
         Item.width = 28;
         Item.height = 22;
 
-        Item.value = Item.buyPrice(copper: 50);
+        Item.value = Item.buyPrice(copper: 20);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -33,11 +33,16 @@ internal class TeakWood : ModItem
 
         Item.createTile = ModContent.TileType<TeakBlock>();
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)
            .AddRecipeGroup("SquintlyFurnitureMod:TeakWalls", 4)
            .AddTile(TileID.WorkBenches)
            .Register();
+
+        CreateRecipe(1)
+            .AddRecipeGroup("SquintlyFurnitureMod:TeakPlatforms", 2)
+            .Register();
     }
 }

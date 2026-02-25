@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Lights;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -39,7 +39,7 @@ internal class BigWhiteCandle : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Torch)
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -33,5 +34,6 @@ public class HeartfeltCards : ModTile
         TileObjectData.newTile.StyleWrapLimit = 111;
 
         TileObjectData.addTile(Type);
+        RegisterItemDrop(ModContent.ItemType<HeartfeltCardsItem>());
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns.Lanterns_1.Items;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Festive;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Enums;
@@ -51,6 +53,8 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive
             }
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
+
+            RegisterItemDrop(ModContent.ItemType<FestiveLanternItem>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

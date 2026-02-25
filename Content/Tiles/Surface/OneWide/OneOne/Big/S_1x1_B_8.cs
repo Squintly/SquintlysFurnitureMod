@@ -2,7 +2,6 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -40,21 +39,24 @@ public class S_1x1_B_8 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 18; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 18;
+        int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
+        int topY = j - tile.TileFrameY % 32 / 32;
 
         short frameAdjustment = (short)(tile.TileFrameX >= 224 ? -224 : 32); //change first two by total size, last by style size
 

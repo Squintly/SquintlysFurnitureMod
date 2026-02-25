@@ -1,7 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Baskets;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Other;
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
@@ -36,5 +34,6 @@ public class Planter : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
+        RegisterItemDrop(ModContent.ItemType<PlanterItem>());
     }
 }

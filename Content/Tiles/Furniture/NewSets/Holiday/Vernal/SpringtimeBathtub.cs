@@ -1,13 +1,7 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Baskets;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal;
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -18,6 +12,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal;
 public class SpringtimeBathtub : ModTile
 {
     public const int NextStyleHeight = 54;
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -47,8 +42,7 @@ public class SpringtimeBathtub : ModTile
         TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
         TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
         TileObjectData.addAlternate(1);
-              
-        
+
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Bathtub"));

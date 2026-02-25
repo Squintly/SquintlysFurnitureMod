@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -35,6 +35,7 @@ internal class Crackers : ModItem
         Item.createTile = ModContent.TileType<S_1x1_N_9>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

@@ -1,8 +1,6 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -24,7 +22,8 @@ public class S_3x4 : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
 
         TileObjectData.newTile.Height = 4;
-        TileObjectData.newTile.CoordinateHeights = new[] {16, 16, 16, 18};
+        TileObjectData.newTile.CoordinateHeights = new[] { 16, 16, 16, 18 };
+        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
@@ -35,6 +34,7 @@ public class S_3x4 : ModTile
         TileObjectData.addTile(Type);
     }
 }
+
 /*STYLES
 0- Bunny Standee X
 */

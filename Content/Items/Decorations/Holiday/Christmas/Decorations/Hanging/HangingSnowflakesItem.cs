@@ -1,6 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Hanging;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -32,7 +32,8 @@ internal class HangingSnowflakesItem : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HangingSnowflakes>();
+        Item.createTile = ModContent.TileType<T_1x1_N_4>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

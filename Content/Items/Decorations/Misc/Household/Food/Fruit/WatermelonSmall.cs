@@ -1,7 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneTwo.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -34,8 +31,9 @@ internal class WatermelonSmall : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B_2>();
-        Item.placeStyle = 18;
+        Item.placeStyle = 14;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

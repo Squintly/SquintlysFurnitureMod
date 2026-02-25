@@ -1,0 +1,320 @@
+﻿public static Color paintColor(int color)
+	{
+		Color white = Color.White;
+		if (color == 1 || color == 13)
+		{
+			white.R = byte.MaxValue;
+			white.G = 0;
+			white.B = 0;
+		}
+		if (color == 2 || color == 14)
+		{
+			white.R = byte.MaxValue;
+			white.G = 127;
+			white.B = 0;
+		}
+		if (color == 3 || color == 15)
+		{
+			white.R = byte.MaxValue;
+			white.G = byte.MaxValue;
+			white.B = 0;
+		}
+		if (color == 4 || color == 16)
+		{
+			white.R = 127;
+			white.G = byte.MaxValue;
+			white.B = 0;
+		}
+		if (color == 5 || color == 17)
+		{
+			white.R = 0;
+			white.G = byte.MaxValue;
+			white.B = 0;
+		}
+		if (color == 6 || color == 18)
+		{
+			white.R = 0;
+			white.G = byte.MaxValue;
+			white.B = 127;
+		}
+		if (color == 7 || color == 19)
+		{
+			white.R = 0;
+			white.G = byte.MaxValue;
+			white.B = byte.MaxValue;
+		}
+		if (color == 8 || color == 20)
+		{
+			white.R = 0;
+			white.G = 127;
+			white.B = byte.MaxValue;
+		}
+		if (color == 9 || color == 21)
+		{
+			white.R = 0;
+			white.G = 0;
+			white.B = byte.MaxValue;
+		}
+		if (color == 10 || color == 22)
+		{
+			white.R = 127;
+			white.G = 0;
+			white.B = byte.MaxValue;
+		}
+		if (color == 11 || color == 23)
+		{
+			white.R = byte.MaxValue;
+			white.G = 0;
+			white.B = byte.MaxValue;
+		}
+		if (color == 12 || color == 24)
+		{
+			white.R = byte.MaxValue;
+			white.G = 0;
+			white.B = 127;
+		}
+		if (color == 25)
+		{
+			white.R = 75;
+			white.G = 75;
+			white.B = 75;
+		}
+		if (color == 26)
+		{
+			white.R = byte.MaxValue;
+			white.G = byte.MaxValue;
+			white.B = byte.MaxValue;
+		}
+		if (color == 27)
+		{
+			white.R = 175;
+			white.G = 175;
+			white.B = 175;
+		}
+		if (color == 28)
+		{
+			white.R = byte.MaxValue;
+			white.G = 178;
+			white.B = 125;
+		}
+		if (color == 29)
+		{
+			white.R = 25;
+			white.G = 25;
+			white.B = 25;
+		}
+		if (color == 30)
+		{
+			white.R = 200;
+			white.G = 200;
+			white.B = 200;
+			white.A = 150;
+		}
+		return white;
+	}
+
+	public static Color coatingColor(int coating)
+	{
+		return coating switch
+		{
+			1 => new Color(235, 170, 255, 255), 
+			2 => new Color(180, 245, 255, 255), 
+			_ => Color.Transparent, 
+		};
+	}
+
+	public static List<Color> coatingColors(Tile tile, bool block)
+	{
+		_coatingColors.Clear();
+		if (tile == null)
+		{
+			return _coatingColors;
+		}
+		if ((block && tile.fullbrightBlock()) || (!block && tile.fullbrightWall()))
+		{
+			_coatingColors.Add(coatingColor(1));
+		}
+		if ((block && tile.invisibleBlock()) || (!block && tile.invisibleWall()))
+		{
+			_coatingColors.Add(coatingColor(2));
+		}
+		return _coatingColors;
+	}
+
+	public static void paintEffect(int x, int y, byte color, byte oldColor)
+	{
+		int color2 = color;
+		if (color == 0)
+		{
+			color2 = oldColor;
+		}
+		Color newColor = paintColor(color2);
+		for (int i = 0; i < 10; i++)
+		{
+			int num = Dust.NewDust(new Vector2(x * 16, y * 16), 16, 16, 143, 0f, 0f, 50, newColor);
+			if (genRand.Next(2) == 0)
+			{
+				Main.dust[num].noGravity = true;
+				Main.dust[num].scale *= 1.2f;
+			}
+			else
+			{
+				Main.dust[num].scale *= 0.5f;
+			}
+		}
+	}
+
+	public static void paintCoatEffect(int x, int y, byte paintCoatId, List<Color> oldColors)
+	{
+		Color color = coatingColor(paintCoatId);
+		for (int i = 0; i < 10; i++)
+		{
+			Color newColor = color;
+			if (paintCoatId == 0 && oldColors.Count > 0)
+			{
+				newColor = oldColors[Main.rand.Next(oldColors.Count)];
+			}
+			int num = Dust.NewDust(new Vector2(x * 16, y * 16), 16, 16, 143, 0f, 0f, 50, newColor);
+			if (genRand.Next(2) == 0)
+			{
+				Main.dust[num].noGravity = true;
+				Main.dust[num].scale *= 1.2f;
+			}
+			else
+			{
+				Main.dust[num].scale *= 0.5f;
+			}
+		}
+	}
+
+	public static bool paintTile(int x, int y, byte color, bool broadCast = false)
+	{
+		Tile tile = Main.tile[x, y];
+		if (tile == null || !tile.active())
+		{
+			return false;
+		}
+		byte b = tile.color();
+		if (b == color)
+		{
+			return false;
+		}
+		paintEffect(x, y, color, b);
+		tile.color(color);
+		if (broadCast)
+		{
+			NetMessage.SendData(63, -1, -1, null, x, y, (int)color);
+		}
+		return true;
+	}
+
+	public static bool paintCoatTile(int x, int y, byte paintCoatId, bool broadcast = false)
+	{
+		Tile tile = Main.tile[x, y];
+		if (tile == null || !tile.active())
+		{
+			return false;
+		}
+		List<Color> oldColors = coatingColors(tile, block: true);
+		switch (paintCoatId)
+		{
+		default:
+			return false;
+		case 0:
+			if (!tile.fullbrightBlock() && !tile.invisibleBlock())
+			{
+				return false;
+			}
+			tile.fullbrightBlock(fullbrightBlock: false);
+			tile.invisibleBlock(invisibleBlock: false);
+			SquareTileFrame(x, y, resetFrame: false);
+			break;
+		case 1:
+			if (tile.fullbrightBlock())
+			{
+				return false;
+			}
+			tile.fullbrightBlock(fullbrightBlock: true);
+			break;
+		case 2:
+			if (tile.invisibleBlock())
+			{
+				return false;
+			}
+			tile.invisibleBlock(invisibleBlock: true);
+			SquareTileFrame(x, y, resetFrame: false);
+			break;
+		}
+		if (broadcast)
+		{
+			NetMessage.SendData(63, -1, -1, null, x, y, (int)paintCoatId, 1f);
+		}
+		paintCoatEffect(x, y, paintCoatId, oldColors);
+		return true;
+	}
+
+	public static bool paintCoatWall(int x, int y, byte paintCoatId, bool broadcast = false)
+	{
+		Tile tile = Main.tile[x, y];
+		if (tile == null || tile.wall == 0)
+		{
+			return false;
+		}
+		List<Color> oldColors = coatingColors(tile, block: false);
+		switch (paintCoatId)
+		{
+		default:
+			return false;
+		case 0:
+			if (!tile.fullbrightWall() && !tile.invisibleWall())
+			{
+				return false;
+			}
+			tile.fullbrightWall(fullbrightWall: false);
+			tile.invisibleWall(invisibleWall: false);
+			SquareWallFrame(x, y, resetFrame: false);
+			break;
+		case 1:
+			if (tile.fullbrightWall())
+			{
+				return false;
+			}
+			tile.fullbrightWall(fullbrightWall: true);
+			break;
+		case 2:
+			if (tile.invisibleWall())
+			{
+				return false;
+			}
+			tile.invisibleWall(invisibleWall: true);
+			SquareWallFrame(x, y, resetFrame: false);
+			break;
+		}
+		if (broadcast)
+		{
+			NetMessage.SendData(64, -1, -1, null, x, y, (int)paintCoatId, 1f);
+		}
+		paintCoatEffect(x, y, paintCoatId, oldColors);
+		return true;
+	}
+
+	public static bool paintWall(int x, int y, byte color, bool broadCast = false)
+	{
+		Tile tile = Main.tile[x, y];
+		if (tile == null || tile.wall == 0)
+		{
+			return false;
+		}
+		byte b = tile.wallColor();
+		if (b == color)
+		{
+			return false;
+		}
+		tile.wallColor(color);
+		if (broadCast)
+		{
+			NetMessage.SendData(64, -1, -1, null, x, y, (int)color);
+		}
+		paintEffect(x, y, color, b);
+		return true;
+	}

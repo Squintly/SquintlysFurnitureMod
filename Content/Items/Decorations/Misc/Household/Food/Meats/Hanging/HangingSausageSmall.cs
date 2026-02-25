@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Meat.Hanging;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -30,7 +30,8 @@ internal class HangingSausageSmall : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HangingSausagesSmall>();
+        Item.createTile = ModContent.TileType<T_1x1_N_6>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()
@@ -39,8 +40,5 @@ internal class HangingSausageSmall : ModItem
             .AddRecipeGroup("SquintlyFurnitureMod:Meat")
             .AddTile(TileID.CookingPots)
             .Register();
-        
     }
-
-
 }

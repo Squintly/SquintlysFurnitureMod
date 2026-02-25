@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Wall;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,7 +38,7 @@ internal class Sun : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar), 4)
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 4)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

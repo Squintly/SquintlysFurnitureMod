@@ -1,12 +1,11 @@
+using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Sweets.Edible;
 
@@ -34,6 +33,7 @@ internal class EdibleChocEgg : ModItem
         Item.value = Item.buyPrice(0, 3);
         Item.rare = ItemRarityID.Blue;
     }
+
     public override void OnConsumeItem(Player player)
     {
         player.AddBuff(BuffID.SugarRush, 3600);

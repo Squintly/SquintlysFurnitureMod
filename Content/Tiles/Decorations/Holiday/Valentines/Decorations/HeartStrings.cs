@@ -1,6 +1,6 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Decorations.Hanging;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
@@ -37,5 +37,44 @@ public class HeartStrings : ModTile
         TileObjectData.addTile(Type);
 
         RegisterItemDrop(ModContent.ItemType<HeartStringsItem>());
+    }
+
+    public override bool RightClick(int i, int j)
+    {
+        SoundEngine.PlaySound(SoundID.Grass);
+        ToggleTile(i, j);
+        return true;
+    }
+
+    public override void HitWire(int i, int j)
+    {
+        ToggleTile(i, j);
+    }
+
+    public void ToggleTile(int i, int j)
+    {
+        Tile tile = Main.tile[i, j];
+        int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
+        int topY = j - tile.TileFrameY % 18 / 18;
+
+        short frameAdjustment = (short)(tile.TileFrameX >= 144 ? -144 : 18); //change last two depending on size
+
+        for (int x = topX; x < topX + 1; x++) // change depending on width
+        {
+            for (int y = topY; y < topY + 1; y++)
+            {
+                Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                if (Wiring.running)
+                {
+                    Wiring.SkipWire(x, y);
+                }
+            }
+        }
+
+        if (Main.netMode != NetmodeID.SinglePlayer)
+        {
+            NetMessage.SendTileSquare(-1, topX, topY, 1, 1); //width, height
+        }
     }
 }

@@ -1,5 +1,5 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas.Sofas_3;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -21,18 +21,7 @@ internal class TeakSofaItem : ModItem
 
         Item.value = Item.buyPrice(silver: 1);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
-
-        Item.autoReuse = true;
-        Item.consumable = true;
-
-        Item.maxStack = 9999;
-
-        Item.createTile = ModContent.TileType<TeakSofas>();
-        Item.placeStyle = 0;
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_3>(), (int)Sofas_3.StyleID.Teak);
     }
 
     public override void AddRecipes()

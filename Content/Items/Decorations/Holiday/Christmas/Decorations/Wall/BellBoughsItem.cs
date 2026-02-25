@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Wall;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,7 +38,7 @@ internal class BellBoughsItem : ModItem
     {
         CreateRecipe(1)
             .AddIngredient(ItemID.PineTreeBlock, 4)
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
     }

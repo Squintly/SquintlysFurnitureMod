@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -35,6 +34,7 @@ internal class Egg : ModItem
         Item.placeStyle = 5;
     }
 }
+
 public class EggRecipes : ModSystem
 {
     public override void AddRecipes()

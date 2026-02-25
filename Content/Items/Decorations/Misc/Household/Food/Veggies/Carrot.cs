@@ -1,13 +1,8 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Veggies;
 
@@ -38,5 +33,4 @@ internal class Carrot : ModItem
         Item.createTile = ModContent.TileType<S_1x1_N_2>();
         Item.placeStyle = 1;
     }
-
 }

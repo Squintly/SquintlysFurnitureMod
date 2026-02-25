@@ -1,7 +1,7 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Valentines.Decorations;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,7 +33,8 @@ internal class HeartMobile : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<HeartMobileTile>();
+        Item.createTile = ModContent.TileType<T_1x2_N>();
+        Item.placeStyle = 0;
     }
 
     public override void AddRecipes()

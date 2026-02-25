@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.Enums;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -23,6 +22,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
             Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
+
+            Main.tileSolidTop[Type] = true;
+            Main.tileTable[Type] = true;
+            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             TileID.Sets.DisableSmartCursor[Type] = true;
 

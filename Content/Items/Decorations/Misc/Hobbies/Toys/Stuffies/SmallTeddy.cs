@@ -1,5 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Christmas.Surface;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -32,7 +31,7 @@ internal class SmallTeddy : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_1x1_N> ();
+        Item.createTile = ModContent.TileType<S_1x1_N>();
         Item.placeStyle = 5;
     }
 

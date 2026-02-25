@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers.Chandeliers_4.Items;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -52,6 +54,9 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
             }
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chandelier"));
+
+            RegisterItemDrop(ModContent.ItemType<SpringtimeChandelier>());
+            RegisterItemDrop(ModContent.ItemType<SpringtimeChandelierCrystal>());
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -101,9 +106,12 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
-            r = 1f;
-            g = 0.95f;
-            b = 0.95f;
+            if (tile.TileFrameX == 0)
+            {
+                r = 1f;
+                g = 0.95f;
+                b = 0.95f;
+            }
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

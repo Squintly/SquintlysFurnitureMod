@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Festive;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -40,15 +40,23 @@ internal class FestivePlatformItem : ModItem
             .AddRecipeGroup("SquintlyFurnitureMod:Festive")
             .AddTile(ModContent.TileType<FestiveWorktable>())
             .Register();
+    }
 
-        //CreateRecipe(4)
-        //    .AddIngredient(ItemID.GreenCandyCaneBlock)
-        //    .AddTile(ModContent.TileType<FestiveWorktable>())
-        //    .Register();
+    public class FestivePlatformRecipe : ModSystem
+    {
+        public override void AddRecipes()
+        {
+            Recipe candycanerecipe = Recipe.Create(ItemID.CandyCaneBlock);
+            candycanerecipe.AddIngredient(ModContent.ItemType<FestivePlatformItem>(), 2);
+            candycanerecipe.Register();
 
-        //CreateRecipe(4)
-        //    .AddIngredient(ItemID.PineTreeBlock)
-        //    .AddTile(ModContent.TileType<FestiveWorktable>())
-        //    .Register();
+            Recipe greencandycanerecipe = Recipe.Create(ItemID.GreenCandyCaneBlock);
+            greencandycanerecipe.AddIngredient(ModContent.ItemType<FestivePlatformItem>(), 2);
+            greencandycanerecipe.Register();
+
+            Recipe recipe = Recipe.Create(ItemID.PineTreeBlock);
+            recipe.AddIngredient(ModContent.ItemType<FestivePlatformItem>(), 2);
+            recipe.Register();
+        }
     }
 }

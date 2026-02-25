@@ -1,7 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,9 +31,10 @@ internal class CupcakeBirthday : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_1x1_B_2>();
-        Item.placeStyle = 13;
+        Item.createTile = ModContent.TileType<S_1x1_B_2_Lighted>();
+        Item.placeStyle = 3;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

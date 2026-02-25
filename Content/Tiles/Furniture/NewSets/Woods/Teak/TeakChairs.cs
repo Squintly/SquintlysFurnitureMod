@@ -50,7 +50,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
 
             TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            
+
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chair"));

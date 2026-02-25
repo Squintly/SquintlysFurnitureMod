@@ -31,7 +31,7 @@ internal class Scoop : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B_2>();
-        Item.placeStyle = 15;
+        Item.placeStyle = 11;
     }
 
     public override void AddRecipes()

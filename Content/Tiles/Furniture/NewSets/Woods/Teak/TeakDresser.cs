@@ -36,7 +36,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
             TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsAContainer[Type] = true;
 
-            AdjTiles = new int[] { TileID.Dressers }; 
+            AdjTiles = new int[] { TileID.Dressers };
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);

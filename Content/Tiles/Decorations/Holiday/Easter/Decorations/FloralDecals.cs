@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Christmas.Decorations.Wall;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Easter.Decorations;
 using Terraria;
 using Terraria.Audio;

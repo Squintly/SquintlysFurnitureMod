@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.WallTiles.Other;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -40,5 +39,15 @@ internal class FrostedGlassItem : ModItem
            .AddIngredient(ItemID.Glass)
            .AddTile(TileID.WorkBenches)
            .Register();
+    }
+}
+
+public class FrostedRecipes : ModSystem
+{
+    public override void AddRecipes()
+    {
+        Recipe recipe = Recipe.Create(ItemID.Glass);
+        recipe.AddIngredient(ModContent.ItemType<FrostedGlassItem>(), 4);
+        recipe.Register();
     }
 }

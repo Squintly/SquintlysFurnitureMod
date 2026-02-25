@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Candles;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -37,7 +37,7 @@ internal class SpookyMeltedCandleWhite : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.GoldBar))
+            .AddRecipeGroup("SquintlyFurnitureMod:GoldBar", 2)
             .AddIngredient(ItemID.Torch)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();

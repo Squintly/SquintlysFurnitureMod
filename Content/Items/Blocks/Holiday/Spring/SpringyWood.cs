@@ -21,7 +21,7 @@ internal class SpringyWood : ModItem
         Item.width = 16;
         Item.height = 16;
 
-        Item.value = Item.buyPrice(copper: 0);
+        Item.value = Item.buyPrice(copper: 20);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;

@@ -1,8 +1,6 @@
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -23,6 +21,9 @@ public class S_2x1_N : ModTile
 
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
 
+        TileObjectData.newTile.CoordinateHeights = new[] { 18 };
+        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
+
         TileObjectData.newTile.Width = 2;
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
@@ -34,10 +35,10 @@ public class S_2x1_N : ModTile
         TileObjectData.addTile(Type);
     }
 }
+
 /*STYLES
 0- Empty Basket X
-1- Planter X 
+1- Planter X
 2- Empty Bread Basket X
-3- Empty Bun Basket X
-4- Rolling Pin 
+3- Rolling Pin X
 */

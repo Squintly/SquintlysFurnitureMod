@@ -1,6 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,8 +31,9 @@ internal class Flour : ModItem
         Item.maxStack = 9999;
 
         Item.createTile = ModContent.TileType<S_1x1_B>();
-        Item.placeStyle = 6;
+        Item.placeStyle = 7;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe(4)

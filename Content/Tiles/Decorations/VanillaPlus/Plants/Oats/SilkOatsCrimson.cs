@@ -79,7 +79,7 @@ public class SilkOatsCrimson : ModTile
             for (int y = topY; y < topY + 1; y++)
             {
                 Main.tile[x, y].TileFrameX += frameAdjustment;
-                 
+
                 if (Wiring.running)
                 {
                     Wiring.SkipWire(x, y);

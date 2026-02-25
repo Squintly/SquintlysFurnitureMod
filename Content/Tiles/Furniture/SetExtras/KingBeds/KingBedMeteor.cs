@@ -39,8 +39,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.SetExtras.KingBeds
 
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsChair);
             AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-            AdjTiles = new int[] { TileID.Torches };
-            AdjTiles = new int[] { TileID.Beds };
+            AdjTiles = new int[] { TileID.Torches | TileID.Beds };
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3); // this style already takes care of direction for us
             TileObjectData.newTile.Height = 6;

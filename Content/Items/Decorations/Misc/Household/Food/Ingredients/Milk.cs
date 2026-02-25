@@ -1,6 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -36,6 +33,7 @@ internal class Milk : ModItem
         Item.createTile = ModContent.TileType<S_1x1_B_6>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()

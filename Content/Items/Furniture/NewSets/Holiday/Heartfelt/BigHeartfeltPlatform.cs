@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -42,5 +42,15 @@ internal class BigHeartfeltPlatform : ModItem
             //.AddIngredient(ItemID.Silk)
             .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
             .Register();
+    }
+
+    public class HeartfeltPlatformRecipe : ModSystem
+    {
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ModContent.ItemType<HeartfeltBlockItem>(), 2);
+            recipe.AddIngredient(ModContent.ItemType<HeartfeltPlatform>(), 2);
+            recipe.Register();
+        }
     }
 }

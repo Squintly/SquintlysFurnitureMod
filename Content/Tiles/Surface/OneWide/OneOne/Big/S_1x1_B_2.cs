@@ -2,7 +2,6 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -40,21 +39,24 @@ public class S_1x1_B_2 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 18; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 18;
+        int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
+        int topY = j - tile.TileFrameY % 32 / 32;
 
         short frameAdjustment = (short)(tile.TileFrameX >= 32 ? -32 : 32); //change first two by total size, last by style size
 
@@ -79,23 +81,19 @@ public class S_1x1_B_2 : ModTile
 }
 
 /* STYLES
-0- Blue Birthday Cake Slice X
-1- Pink Birthday Cake Slice X
-2- Green Birthday Cake Slice X
-3- Avocado X
-4- Pear X
-5- Pomegranate X
-6- Sugar Apple X
-7- Strawberry X
-8- Passionfruit X
-9- Grapefruit X 
-10- Mango X
-11- Cheese Slice X
-12- Toothpaste X
-13- Birthday Cupcake X
-14- Bunny Plushes X
-15- Scoops X
-16- Starfruit X
-17- Pepper X
-18- Small Watermelon X
+0- Avocado
+1- Pear
+2- Pomegranate
+3- Sugar Apple
+4- Strawberry
+5- Passionfruit
+6- Grapefruit
+7- Mango
+8- Cheese Slice
+9- Toothpaste
+10- Bunny Plushes
+11- Scoops
+12- Starfruit
+13- Pepper
+14- Small Watermelon
 */

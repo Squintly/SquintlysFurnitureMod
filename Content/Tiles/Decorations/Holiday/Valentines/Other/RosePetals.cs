@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines;
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other.Clutter;
 using Terraria;
 using Terraria.Audio;

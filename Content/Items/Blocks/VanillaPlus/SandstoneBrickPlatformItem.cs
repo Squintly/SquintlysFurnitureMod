@@ -42,3 +42,13 @@ public class SandstoneBrickPlatformItem : ModItem
             .Register();
     }
 }
+
+public class SandstonePlatformRecipe : ModSystem
+{
+    public override void AddRecipes()
+    {
+        Recipe recipe = Recipe.Create(ItemID.SandstoneBrick);
+        recipe.AddIngredient(ModContent.ItemType<SandstoneBrickPlatformItem>(), 2);
+        recipe.Register();
+    }
+}

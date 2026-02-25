@@ -1,8 +1,4 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Other;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -37,12 +33,13 @@ internal class Pie : ModItem
         Item.createTile = ModContent.TileType<S_2x1_N_6>();
         Item.placeStyle = 0;
     }
+
     public override void AddRecipes()
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours", 2)
             .AddRecipeGroup("SquintlyFurnitureMod:Sugars", 4)
-            .AddRecipeGroup("SquintlyFurnitureMod:AllFruit",4)
+            .AddRecipeGroup("SquintlyFurnitureMod:AllFruit", 4)
             .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddTile(TileID.CookingPots)
             .Register();

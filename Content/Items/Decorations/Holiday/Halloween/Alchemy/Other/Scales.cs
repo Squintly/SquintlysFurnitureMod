@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Halloween.Alchemy;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,7 +38,7 @@ internal class Scales : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddRecipeGroup(nameof(ItemID.CopperBar), 6)
+            .AddRecipeGroup("SquintlyFurnitureMod:CopperBar", 6)
             .AddTile(ModContent.TileType<DecoBoxTile>())
             .Register();
     }

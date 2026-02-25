@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.WallTiles.Holiday.Spring;
 using Terraria;
 using Terraria.GameContent.Creative;

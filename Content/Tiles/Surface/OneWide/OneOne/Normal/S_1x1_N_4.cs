@@ -35,20 +35,24 @@ public class S_1x1_N_4 : ModTile
 
         TileObjectData.addTile(Type);
     }
+
     public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
     {
         return true;
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
@@ -76,6 +80,7 @@ public class S_1x1_N_4 : ModTile
         }
     }
 }
+
 /*STYLES
 0- Cream & Sugar Pots X
 1- Christmas Cards X

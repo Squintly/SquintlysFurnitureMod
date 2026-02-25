@@ -1,6 +1,6 @@
+using SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Sofas.Sofas_1;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Heartfelt;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -22,17 +22,7 @@ internal class HeartfeltSofa : ModItem
 
         Item.value = Item.buyPrice(silver: 1);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
-
-        Item.autoReuse = true;
-        Item.consumable = true;
-
-        Item.maxStack = 9999;
-
-        Item.createTile = ModContent.TileType<HeartfeltSofaTile>();
+        Item.DefaultToPlaceableTile(ModContent.TileType<Sofas_LR_1>(), (int)Sofas_LR_1.StyleID.Heartfelt);
     }
 
     public override void AddRecipes()

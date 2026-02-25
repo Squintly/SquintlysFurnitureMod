@@ -1,7 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Blocks.Themed.Egypt;
-using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
-using SquintlysFurnitureMod.Content.Items.WallItems.Other;
-using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.VanillaPlus;
 using Terraria;
 using Terraria.GameContent.Creative;

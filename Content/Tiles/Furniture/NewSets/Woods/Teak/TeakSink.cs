@@ -1,12 +1,7 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using Terraria;
-using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -16,7 +11,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
 {
     public class TeakSink : ModTile
     {
-
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

@@ -62,7 +62,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Chest"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
 
         public override ushort GetMapOption(int i, int j)

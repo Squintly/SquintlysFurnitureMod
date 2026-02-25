@@ -2,15 +2,20 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Normal;
+namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
 
 public class S_2x2_8 : ModTile
 {
+    public enum StyleID
+    {
+        BigCakes, //0
+        VineBaskets //1
+    }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -23,35 +28,40 @@ public class S_2x2_8 : ModTile
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 
+        TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.newTile.StyleHorizontal = true;
 
-        TileObjectData.newTile.StyleMultiplier = 5;
-        TileObjectData.newTile.StyleWrapLimit = 5;
-        TileObjectData.newTile.RandomStyleRange = 5;
+        TileObjectData.newTile.StyleMultiplier = 8;
+        TileObjectData.newTile.StyleWrapLimit = 8;
+        TileObjectData.newTile.RandomStyleRange = 8;
 
         TileObjectData.addTile(Type);
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
         ToggleTile(i, j);
         return true;
     }
+
     public override void HitWire(int i, int j)
     {
         ToggleTile(i, j);
     }
+
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 18; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 18;
+        int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
+        int topY = j - tile.TileFrameY % 36 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 224 ? -224 : 32); //change first two by total size, last by style size
+        short frameAdjustment = (short)(tile.TileFrameX >= 252 ? -252 : 36); //change first two by total size, last by style size
 
         for (int x = topX; x < topX + 2; x++) // change depending on width
         {
@@ -72,6 +82,3 @@ public class S_2x2_8 : ModTile
         }
     }
 }
-/*STYLES
-0- Big Cakes
-*/

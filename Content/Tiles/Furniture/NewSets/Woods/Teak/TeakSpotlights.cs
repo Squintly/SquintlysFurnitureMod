@@ -1,6 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights.Spotlights_2.Items;
+using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles_3.Items;
+using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -51,7 +55,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
                 flameTexture = ModContent.Request<Texture2D>("SquintlysFurnitureMod/Content/Tiles/Furniture/NewSets/Woods/Teak/TeakSpotlights_Flame");
             }
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Candelabra"));
+            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
+        }
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            Tile t = Main.tile[i, j];
+            int style = t.TileFrameY / 34;
+            yield return new Item(Mod.Find<ModItem>(Spotlights_2_Items.GetInternalNameFromStyle(0)).Type);
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

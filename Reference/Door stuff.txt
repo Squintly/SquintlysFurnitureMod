@@ -1,0 +1,1217 @@
+﻿public static bool ShiftTrapdoor(int x, int y, bool playerAbove, int onlyCloseOrOpen = -1)
+	{
+		Tile tileSafely = Framing.GetTileSafely(x, y);
+		if (tileSafely.type == 386 && onlyCloseOrOpen != 1)
+		{
+			Point topLeftAndStyles = GetTopLeftAndStyles(ref x, ref y, 2, 2, 18, 18);
+			if (topLeftAndStyles.X == 0)
+			{
+				if (Main.netMode != 1 && Wiring.running)
+				{
+					Wiring.SkipWire(x, y);
+					Wiring.SkipWire(x, y + 1);
+					Wiring.SkipWire(x + 1, y);
+					Wiring.SkipWire(x + 1, y + 1);
+				}
+				if (!Collision.EmptyTile(x, y + 1, ignoreTiles: true) || !Collision.EmptyTile(x + 1, y + 1, ignoreTiles: true))
+				{
+					return false;
+				}
+				SoundEngine.PlaySound(8, x * 16 + 16, y * 16 + 16);
+				for (int i = 0; i < 2; i++)
+				{
+					tileSafely = Framing.GetTileSafely(x + i, y);
+					tileSafely.ClearTile();
+				}
+				for (int j = 0; j < 2; j++)
+				{
+					tileSafely = Framing.GetTileSafely(x + j, y + 1);
+					tileSafely.type = 387;
+					tileSafely.frameX = (short)(j * 18);
+					tileSafely.frameY = (short)(topLeftAndStyles.Y * 18);
+				}
+				for (int k = -1; k < 3; k++)
+				{
+					for (int l = 0; l < 3; l++)
+					{
+						TileFrame(x + k, y + l);
+					}
+				}
+				return true;
+			}
+			if (topLeftAndStyles.X == 1)
+			{
+				if (Main.netMode != 1 && Wiring.running)
+				{
+					Wiring.SkipWire(x, y - 1);
+					Wiring.SkipWire(x, y);
+					Wiring.SkipWire(x + 1, y - 1);
+					Wiring.SkipWire(x + 1, y);
+				}
+				if (!Collision.EmptyTile(x, y, ignoreTiles: true) || !Collision.EmptyTile(x + 1, y, ignoreTiles: true))
+				{
+					return false;
+				}
+				SoundEngine.PlaySound(8, x * 16 + 16, y * 16);
+				for (int m = 0; m < 2; m++)
+				{
+					tileSafely = Framing.GetTileSafely(x + m, y + 1);
+					tileSafely.ClearTile();
+				}
+				for (int n = 0; n < 2; n++)
+				{
+					tileSafely = Framing.GetTileSafely(x + n, y);
+					tileSafely.type = 387;
+					tileSafely.frameX = (short)(n * 18);
+					tileSafely.frameY = (short)(topLeftAndStyles.Y * 18);
+				}
+				for (int num = -1; num < 3; num++)
+				{
+					for (int num2 = -1; num2 < 2; num2++)
+					{
+						TileFrame(x + num, y + num2);
+					}
+				}
+				return true;
+			}
+		}
+		if (tileSafely.type == 387 && onlyCloseOrOpen != 0)
+		{
+			GetTopLeftAndStyles(ref x, ref y, 2, 1, 18, 18);
+			int num3 = playerAbove.ToDirectionInt();
+			for (int num4 = 0; num4 < 2; num4++)
+			{
+				tileSafely = Framing.GetTileSafely(x + num4, y + num3);
+				if (tileSafely.active() && !Main.tileCut[tileSafely.type])
+				{
+					return false;
+				}
+			}
+			if (Main.netMode != 1 && Wiring.running)
+			{
+				Wiring.SkipWire(x, y);
+				Wiring.SkipWire(x, y + num3);
+				Wiring.SkipWire(x + 1, y);
+				Wiring.SkipWire(x + 1, y + num3);
+			}
+			SoundEngine.PlaySound(8, x * 16 + 16, y * 16);
+			for (int num5 = 0; num5 < 2; num5++)
+			{
+				tileSafely = Framing.GetTileSafely(x + num5, y + num3);
+				if (tileSafely.active() && Main.tileCut[tileSafely.type])
+				{
+					KillTile(x + num5, y + num3);
+				}
+			}
+			for (int num6 = 0; num6 < 2; num6++)
+			{
+				tileSafely = Framing.GetTileSafely(x + num6, y);
+				TileColorCache cache = tileSafely.BlockColorAndCoating();
+				for (int num7 = 0; num7 < 2; num7++)
+				{
+					tileSafely = Framing.GetTileSafely(x + num6, y + num7 - (!playerAbove).ToInt());
+					tileSafely.type = 386;
+					tileSafely.frameX = (short)(num6 * 18 + playerAbove.ToInt() * 36);
+					tileSafely.frameY = (short)(num7 * 18);
+					tileSafely.UseBlockColors(cache);
+					tileSafely.active(active: true);
+				}
+			}
+			for (int num8 = -1; num8 < 3; num8++)
+			{
+				for (int num9 = -1; num9 < 3; num9++)
+				{
+					TileFrame(x + num8, y + num9 - (!playerAbove).ToInt() * 2);
+				}
+			}
+			return true;
+		}
+		SoundEngine.PlaySound(9, x * 16, y * 16);
+		return false;
+	}
+
+	public static void CheckTrapDoor(int x, int y, int type)
+	{
+		if (destroyObject)
+		{
+			return;
+		}
+		bool flag = false;
+		int num = 0;
+		int num2 = 0;
+		Point point = default(Point);
+		if (type == 387)
+		{
+			num = 2;
+			num2 = 1;
+			point = GetTopLeftAndStyles(ref x, ref y, num, num2, 18, 18);
+			flag = flag || !CheckTileFrames(type, x, y, num, num2, point.X, 18, point.Y, 18) || !CheckTileAnchors(x, y, num, num2, 1, AnchorType.SolidTile);
+		}
+		if (type == 386)
+		{
+			num = 2;
+			num2 = 2;
+			point = GetTopLeftAndStyles(ref x, ref y, num, num2, 18, 18);
+			flag = flag || !CheckTileFrames(type, x, y, num, num2, point.X, 18, point.Y, 18);
+			if (point.X == 0)
+			{
+				flag = flag || !CheckTileAnchors(x, y + 1, num, 1, 1, AnchorType.SolidTile);
+			}
+			else if (point.X == 1)
+			{
+				flag = flag || !CheckTileAnchors(x, y, num, 1, 1, AnchorType.SolidTile);
+			}
+		}
+		if (!flag)
+		{
+			return;
+		}
+		destroyObject = true;
+		for (int i = x; i < x + num; i++)
+		{
+			for (int j = y; j < y + num2; j++)
+			{
+				KillTile(i, j);
+			}
+		}
+		int type2 = 3239;
+		if (point.Y == 0)
+		{
+			type2 = 3239;
+		}
+		Item.NewItem(GetItemSource_FromTileBreak(x, y), x * 16, y * 16, num * 16, num2 * 16, type2);
+		for (int k = x - 1; k < x + num + 1; k++)
+		{
+			for (int l = y - 1; l < y + num2 + 1; l++)
+			{
+				TileFrame(k, l);
+			}
+		}
+		destroyObject = false;
+	}
+
+	public static void CheckTallGate(int x, int y, int type)
+	{
+		if (destroyObject)
+		{
+			return;
+		}
+		bool flag = false;
+		Tile tileSafely = Framing.GetTileSafely(x, y);
+		Point point = new Point(tileSafely.frameX / 18, 0);
+		TileObjectData tileData = TileObjectData.GetTileData(type, point.X);
+		point.Y = tileSafely.frameY / tileData.CoordinateFullHeight;
+		int width = tileData.Width;
+		int height = tileData.Height;
+		int i = 0;
+		for (int num = tileSafely.frameY % tileData.CoordinateFullHeight; i < height && num - tileData.CoordinateHeights[i] >= 0; i++)
+		{
+			num -= tileData.CoordinateHeights[i];
+		}
+		_ = tileData.CoordinateFullHeight;
+		y -= i;
+		int num2 = point.Y * tileData.CoordinateFullHeight;
+		for (int j = 0; j < height; j++)
+		{
+			tileSafely = Framing.GetTileSafely(x, y + j);
+			if (tileSafely.frameX != point.X * tileData.CoordinateFullWidth || tileSafely.frameY != num2)
+			{
+				flag = true;
+				break;
+			}
+			num2 += tileData.CoordinateHeights[j] + tileData.CoordinatePadding;
+		}
+		if (!flag && CheckTileAnchors(x, y, width, height, 2, AnchorType.SolidTile))
+		{
+			return;
+		}
+		destroyObject = true;
+		for (int k = x; k < x + width; k++)
+		{
+			for (int l = y; l < y + height; l++)
+			{
+				KillTile(k, l);
+			}
+		}
+		int type2 = 3240;
+		if (point.Y == 0)
+		{
+			type2 = 3240;
+		}
+		Item.NewItem(GetItemSource_FromTileBreak(x, y), x * 16, y * 16, width * 16, height * 16, type2);
+		for (int m = x - 1; m < x + width + 1; m++)
+		{
+			for (int n = y - 1; n < y + height + 1; n++)
+			{
+				TileFrame(m, n);
+			}
+		}
+		destroyObject = false;
+	}
+
+	public static bool ShiftTallGate(int x, int y, bool closing, bool forced = false)
+	{
+		ushort type = (ushort)(closing ? 388 : 389);
+		ushort num = (ushort)(closing ? 389 : 388);
+		Tile tileSafely = Framing.GetTileSafely(x, y);
+		if (tileSafely.type != num)
+		{
+			return false;
+		}
+		Point point = new Point(tileSafely.frameX / 18, 0);
+		TileObjectData tileData = TileObjectData.GetTileData(388, point.X);
+		point.Y = tileSafely.frameY / tileData.CoordinateFullHeight;
+		_ = tileData.Width;
+		int height = tileData.Height;
+		int i = 0;
+		for (int num2 = tileSafely.frameY % tileData.CoordinateFullHeight; i < height && num2 - tileData.CoordinateHeights[i] >= 0; i++)
+		{
+			num2 -= tileData.CoordinateHeights[i];
+		}
+		_ = tileData.CoordinateFullHeight;
+		y -= i;
+		if (Main.netMode != 1 && Wiring.running)
+		{
+			for (int j = 0; j < height; j++)
+			{
+				Wiring.SkipWire(x, y + j);
+			}
+		}
+		for (int k = 0; k < height; k++)
+		{
+			if (!forced && !Collision.EmptyTile(x, y + k, ignoreTiles: true))
+			{
+				return false;
+			}
+		}
+		SoundEngine.PlaySound(8, x * 16 + 16, y * 16 + 16);
+		for (int l = 0; l < height; l++)
+		{
+			tileSafely = Framing.GetTileSafely(x, y + l);
+			tileSafely.type = type;
+		}
+		for (int m = -1; m < 2; m++)
+		{
+			for (int n = -1; n < height + 1; n++)
+			{
+				TileFrame(x + m, y + n);
+			}
+		}
+		return true;
+	}
+
+
+
+	public static bool PlaceDoor(int i, int j, int type, int style = 0)
+	{
+		int num = style / 36;
+		int num2 = style % 36;
+		int num3 = 54 * num;
+		int num4 = 54 * num2;
+		try
+		{
+			if (Main.tile[i, j - 2].nactive() && Main.tileSolid[Main.tile[i, j - 2].type] && SolidTile(i, j + 2))
+			{
+				Main.tile[i, j - 1].active(active: true);
+				Main.tile[i, j - 1].type = 10;
+				Main.tile[i, j - 1].frameY = (short)num4;
+				Main.tile[i, j - 1].frameX = (short)(num3 + genRand.Next(3) * 18);
+				Main.tile[i, j].active(active: true);
+				Main.tile[i, j].type = 10;
+				Main.tile[i, j].frameY = (short)(num4 + 18);
+				Main.tile[i, j].frameX = (short)(num3 + genRand.Next(3) * 18);
+				Main.tile[i, j + 1].active(active: true);
+				Main.tile[i, j + 1].type = 10;
+				Main.tile[i, j + 1].frameY = (short)(num4 + 36);
+				Main.tile[i, j + 1].frameX = (short)(num3 + genRand.Next(3) * 18);
+				return true;
+			}
+			return false;
+		}
+		catch
+		{
+			return false;
+		}
+	}
+
+	public static bool CloseDoor(int i, int j, bool forced = false)
+	{
+		int num = 0;
+		int num2 = i;
+		int num3 = j;
+		if (Main.tile[i, j] == null)
+		{
+			Main.tile[i, j] = new Tile();
+		}
+		int frameX = Main.tile[i, j].frameX;
+		Tile tile = Main.tile[i, j];
+		if (tile.type != 11)
+		{
+			return false;
+		}
+		int num4 = tile.frameY;
+		int num5 = 0;
+		int num6 = 0;
+		while (num4 >= 54)
+		{
+			num4 -= 54;
+			num5++;
+		}
+		if (frameX >= 72)
+		{
+			num5 += 36 * (frameX / 72);
+			num6 += 54 * (frameX / 72);
+		}
+		num3 = j - num4 / 18;
+		switch (frameX % 72)
+		{
+		case 0:
+			num2 = i;
+			num = 1;
+			break;
+		case 18:
+			num2 = i - 1;
+			num = 1;
+			break;
+		case 36:
+			num2 = i + 1;
+			num = -1;
+			break;
+		case 54:
+			num2 = i;
+			num = -1;
+			break;
+		}
+		int num7 = num2;
+		if (num == -1)
+		{
+			num7 = num2 - 1;
+		}
+		if (!forced)
+		{
+			for (int k = num3; k < num3 + 3; k++)
+			{
+				if (!Collision.EmptyTile(num2, k, ignoreTiles: true))
+				{
+					return false;
+				}
+			}
+		}
+		for (int l = num7; l < num7 + 2; l++)
+		{
+			for (int m = num3; m < num3 + 3; m++)
+			{
+				if (l == num2)
+				{
+					if (Main.tile[l, m] == null)
+					{
+						Main.tile[l, m] = new Tile();
+					}
+					Main.tile[l, m].type = 10;
+					Main.tile[l, m].frameX = (short)(genRand.Next(3) * 18 + num6);
+				}
+				else
+				{
+					if (Main.tile[l, m] == null)
+					{
+						Main.tile[l, m] = new Tile();
+					}
+					Main.tile[l, m].active(active: false);
+				}
+			}
+		}
+		if (Main.netMode != 1 && Wiring.running)
+		{
+			Wiring.SkipWire(num2, num3);
+			Wiring.SkipWire(num2, num3 + 1);
+			Wiring.SkipWire(num2, num3 + 2);
+		}
+		for (int n = num2 - 1; n <= num2 + 1; n++)
+		{
+			for (int num8 = num3 - 1; num8 <= num3 + 2; num8++)
+			{
+				TileFrame(n, num8);
+			}
+		}
+		SoundEngine.PlaySound(9, i * 16, j * 16);
+		return true;
+	}
+
+
+	public static bool OpenDoor(int i, int j, int direction)
+	{
+		int num = 0;
+		if (Main.tile[i, j - 1] == null)
+		{
+			Main.tile[i, j - 1] = new Tile();
+		}
+		if (Main.tile[i, j - 2] == null)
+		{
+			Main.tile[i, j - 2] = new Tile();
+		}
+		if (Main.tile[i, j + 1] == null)
+		{
+			Main.tile[i, j + 1] = new Tile();
+		}
+		if (Main.tile[i, j] == null)
+		{
+			Main.tile[i, j] = new Tile();
+		}
+		Tile tile = Main.tile[i, j];
+		if (tile.type != 10)
+		{
+			return false;
+		}
+		if (IsLockedDoor(tile))
+		{
+			return false;
+		}
+		short num2 = 0;
+		int num3 = tile.frameY;
+		int num4 = 0;
+		while (num3 >= 54)
+		{
+			num3 -= 54;
+			num4++;
+		}
+		if (tile.frameX >= 54)
+		{
+			int num5 = tile.frameX / 54;
+			num4 += 36 * num5;
+			num2 += (short)(72 * num5);
+		}
+		num = j - num3 / 18;
+		int num6 = i;
+		TileColorCache cache = Main.tile[num6, num].BlockColorAndCoating();
+		if (Main.tile[num6, num + 1] == null)
+		{
+			Main.tile[num6, num + 1] = new Tile();
+		}
+		TileColorCache cache2 = Main.tile[num6, num + 1].BlockColorAndCoating();
+		if (Main.tile[num6, num + 2] == null)
+		{
+			Main.tile[num6, num + 2] = new Tile();
+		}
+		TileColorCache cache3 = Main.tile[num6, num + 2].BlockColorAndCoating();
+		int num7;
+		if (direction == -1)
+		{
+			num6 = i - 1;
+			num2 += 36;
+			num7 = i - 1;
+		}
+		else
+		{
+			num6 = i;
+			num7 = i + 1;
+		}
+		for (int k = num; k < num + 3; k++)
+		{
+			if (Main.tile[num7, k] == null)
+			{
+				Main.tile[num7, k] = new Tile();
+			}
+			if (Main.tile[num7, k].active())
+			{
+				if (!Main.tileCut[Main.tile[num7, k].type] && Main.tile[num7, k].type != 3 && Main.tile[num7, k].type != 24 && Main.tile[num7, k].type != 52 && Main.tile[num7, k].type != 61 && Main.tile[num7, k].type != 62 && Main.tile[num7, k].type != 69 && Main.tile[num7, k].type != 655 && Main.tile[num7, k].type != 71 && Main.tile[num7, k].type != 73 && Main.tile[num7, k].type != 74 && Main.tile[num7, k].type != 110 && Main.tile[num7, k].type != 113 && Main.tile[num7, k].type != 115 && Main.tile[num7, k].type != 165)
+				{
+					return false;
+				}
+				KillTile(num7, k);
+			}
+		}
+		if (Main.netMode != 1 && Wiring.running)
+		{
+			Wiring.SkipWire(num6, num);
+			Wiring.SkipWire(num6, num + 1);
+			Wiring.SkipWire(num6, num + 2);
+			Wiring.SkipWire(num6 + 1, num);
+			Wiring.SkipWire(num6 + 1, num + 1);
+			Wiring.SkipWire(num6 + 1, num + 2);
+		}
+		int num8 = num4 % 36 * 54;
+		SoundEngine.PlaySound(8, i * 16, j * 16);
+		Main.tile[num6, num].active(active: true);
+		Main.tile[num6, num].type = 11;
+		Main.tile[num6, num].frameY = (short)num8;
+		Main.tile[num6, num].frameX = num2;
+		Main.tile[num6, num].UseBlockColors(cache);
+		if (Main.tile[num6 + 1, num] == null)
+		{
+			Main.tile[num6 + 1, num] = new Tile();
+		}
+		Main.tile[num6 + 1, num].active(active: true);
+		Main.tile[num6 + 1, num].type = 11;
+		Main.tile[num6 + 1, num].frameY = (short)num8;
+		Main.tile[num6 + 1, num].frameX = (short)(num2 + 18);
+		Main.tile[num6 + 1, num].UseBlockColors(cache);
+		if (Main.tile[num6, num + 1] == null)
+		{
+			Main.tile[num6, num + 1] = new Tile();
+		}
+		Main.tile[num6, num + 1].active(active: true);
+		Main.tile[num6, num + 1].type = 11;
+		Main.tile[num6, num + 1].frameY = (short)(num8 + 18);
+		Main.tile[num6, num + 1].frameX = num2;
+		Main.tile[num6, num + 1].UseBlockColors(cache2);
+		if (Main.tile[num6 + 1, num + 1] == null)
+		{
+			Main.tile[num6 + 1, num + 1] = new Tile();
+		}
+		Main.tile[num6 + 1, num + 1].active(active: true);
+		Main.tile[num6 + 1, num + 1].type = 11;
+		Main.tile[num6 + 1, num + 1].frameY = (short)(num8 + 18);
+		Main.tile[num6 + 1, num + 1].frameX = (short)(num2 + 18);
+		Main.tile[num6 + 1, num + 1].UseBlockColors(cache2);
+		if (Main.tile[num6, num + 2] == null)
+		{
+			Main.tile[num6, num + 2] = new Tile();
+		}
+		Main.tile[num6, num + 2].active(active: true);
+		Main.tile[num6, num + 2].type = 11;
+		Main.tile[num6, num + 2].frameY = (short)(num8 + 36);
+		Main.tile[num6, num + 2].frameX = num2;
+		Main.tile[num6, num + 2].UseBlockColors(cache3);
+		if (Main.tile[num6 + 1, num + 2] == null)
+		{
+			Main.tile[num6 + 1, num + 2] = new Tile();
+		}
+		Main.tile[num6 + 1, num + 2].active(active: true);
+		Main.tile[num6 + 1, num + 2].type = 11;
+		Main.tile[num6 + 1, num + 2].frameY = (short)(num8 + 36);
+		Main.tile[num6 + 1, num + 2].frameX = (short)(num2 + 18);
+		Main.tile[num6 + 1, num + 2].UseBlockColors(cache3);
+		for (int l = num6 - 1; l <= num6 + 2; l++)
+		{
+			for (int m = num - 1; m <= num + 2; m++)
+			{
+				TileFrame(l, m);
+			}
+		}
+		return true;
+	}
+
+
+	public static bool IsOpenDoorAnchorFrame(int x, int y)
+	{
+		Tile tile = Main.tile[x, y];
+		if (!tile.active() || tile.type != 11)
+		{
+			return false;
+		}
+		int num = tile.frameX % 72;
+		if (num >= 18)
+		{
+			return num >= 54;
+		}
+		return true;
+	}
+
+
+	private static void CheckDoorOpen(int i, int j, Tile tileCache)
+	{
+		if (destroyObject)
+		{
+			return;
+		}
+		int num = 0;
+		int num2 = i;
+		int num3 = j;
+		short frameX = tileCache.frameX;
+		int frameY = tileCache.frameY;
+		int num4 = frameY / 54;
+		num4 += tileCache.frameX / 72 * 36;
+		num3 = j - frameY % 54 / 18;
+		bool flag = false;
+		switch (frameX % 72)
+		{
+		case 0:
+			num2 = i;
+			num = 1;
+			break;
+		case 18:
+			num2 = i - 1;
+			num = 1;
+			break;
+		case 36:
+			num2 = i + 1;
+			num = -1;
+			break;
+		case 54:
+			num2 = i;
+			num = -1;
+			break;
+		}
+		Tile tile = Main.tile[num2, num3 - 1];
+		Tile tile2 = Main.tile[num2, num3 + 3];
+		if (tile == null)
+		{
+			tile = new Tile();
+			Main.tile[num2, num3 - 1] = tile;
+		}
+		if (tile2 == null)
+		{
+			tile2 = new Tile();
+			Main.tile[num2, num3 + 3] = tile2;
+		}
+		if (!SolidTile(tile) || !SolidTile(tile2))
+		{
+			flag = true;
+			destroyObject = true;
+			DropDoorItem(i, j, num4);
+		}
+		int num5 = num2;
+		if (num == -1)
+		{
+			num5 = num2 - 1;
+		}
+		for (int k = num5; k < num5 + 2; k++)
+		{
+			for (int l = num3; l < num3 + 3; l++)
+			{
+				if (!flag)
+				{
+					Tile tile3 = Main.tile[k, l];
+					if (!tile3.active() || tile3.type != 11)
+					{
+						destroyObject = true;
+						DropDoorItem(i, j, num4);
+						flag = true;
+						k = num5;
+						l = num3;
+					}
+				}
+				if (flag)
+				{
+					KillTile(k, l);
+				}
+			}
+		}
+		destroyObject = false;
+	}
+
+	private static void CheckDoorClosed(int i, int j, Tile tileCache, int type)
+	{
+		if (!destroyObject)
+		{
+			int num = j;
+			bool flag = false;
+			int frameY = tileCache.frameY;
+			int num2 = frameY / 54;
+			num2 += tileCache.frameX / 54 * 36;
+			num = j - frameY % 54 / 18;
+			Tile tile = Main.tile[i, num - 1];
+			Tile tile2 = Main.tile[i, num];
+			Tile tile3 = Main.tile[i, num + 1];
+			Tile tile4 = Main.tile[i, num + 2];
+			Tile tile5 = Main.tile[i, num + 3];
+			if (tile == null)
+			{
+				tile = new Tile();
+				Main.tile[i, num - 1] = tile;
+			}
+			if (tile2 == null)
+			{
+				tile2 = new Tile();
+				Main.tile[i, num] = tile2;
+			}
+			if (tile3 == null)
+			{
+				tile3 = new Tile();
+				Main.tile[i, num + 1] = tile3;
+			}
+			if (tile4 == null)
+			{
+				tile4 = new Tile();
+				Main.tile[i, num + 2] = tile4;
+			}
+			if (tile5 == null)
+			{
+				tile5 = new Tile();
+				Main.tile[i, num + 3] = tile5;
+			}
+			if (!SolidTile(tile))
+			{
+				flag = true;
+			}
+			if (!SolidTile(tile5))
+			{
+				flag = true;
+			}
+			if (!tile2.active() || tile2.type != type)
+			{
+				flag = true;
+			}
+			if (!tile3.active() || tile3.type != type)
+			{
+				flag = true;
+			}
+			if (!tile4.active() || tile4.type != type)
+			{
+				flag = true;
+			}
+			if (flag)
+			{
+				destroyObject = true;
+				KillTile(i, num);
+				KillTile(i, num + 1);
+				KillTile(i, num + 2);
+				DropDoorItem(i, j, num2);
+			}
+			destroyObject = false;
+		}
+	}
+
+
+
+
+
+	using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Terraria.GameInput;
+
+namespace Terraria.GameContent;
+
+public class DoorOpeningHelper
+{
+	public enum DoorAutoOpeningPreference
+	{
+		Disabled,
+		EnabledForGamepadOnly,
+		EnabledForEverything
+	}
+
+	private enum DoorCloseAttemptResult
+	{
+		StillInDoorArea,
+		ClosedDoor,
+		FailedToCloseDoor,
+		DoorIsInvalidated
+	}
+
+	private struct DoorOpenCloseTogglingInfo
+	{
+		public Point tileCoordsForToggling;
+
+		public DoorAutoHandler handler;
+	}
+
+	private struct PlayerInfoForOpeningDoors
+	{
+		public Rectangle hitboxToOpenDoor;
+
+		public int intendedOpeningDirection;
+
+		public int playerGravityDirection;
+
+		public Rectangle tileCoordSpaceForCheckingForDoors;
+	}
+
+	private struct PlayerInfoForClosingDoors
+	{
+		public Rectangle hitboxToNotCloseDoor;
+	}
+
+	private interface DoorAutoHandler
+	{
+		DoorOpenCloseTogglingInfo ProvideInfo(Point tileCoords);
+
+		bool TryOpenDoor(DoorOpenCloseTogglingInfo info, PlayerInfoForOpeningDoors playerInfo);
+
+		DoorCloseAttemptResult TryCloseDoor(DoorOpenCloseTogglingInfo info, PlayerInfoForClosingDoors playerInfo);
+	}
+
+	private class CommonDoorOpeningInfoProvider : DoorAutoHandler
+	{
+		public DoorOpenCloseTogglingInfo ProvideInfo(Point tileCoords)
+		{
+			Tile tile = Main.tile[tileCoords.X, tileCoords.Y];
+			Point tileCoordsForToggling = tileCoords;
+			tileCoordsForToggling.Y -= tile.frameY % 54 / 18;
+			DoorOpenCloseTogglingInfo result = default(DoorOpenCloseTogglingInfo);
+			result.handler = this;
+			result.tileCoordsForToggling = tileCoordsForToggling;
+			return result;
+		}
+
+		public bool TryOpenDoor(DoorOpenCloseTogglingInfo doorInfo, PlayerInfoForOpeningDoors playerInfo)
+		{
+			Point tileCoordsForToggling = doorInfo.tileCoordsForToggling;
+			int intendedOpeningDirection = playerInfo.intendedOpeningDirection;
+			Rectangle rectangle = new Rectangle(doorInfo.tileCoordsForToggling.X * 16, doorInfo.tileCoordsForToggling.Y * 16, 16, 48);
+			switch (playerInfo.playerGravityDirection)
+			{
+			case 1:
+				rectangle.Height += 16;
+				break;
+			case -1:
+				rectangle.Y -= 16;
+				rectangle.Height += 16;
+				break;
+			}
+			if (!rectangle.Intersects(playerInfo.hitboxToOpenDoor))
+			{
+				return false;
+			}
+			if (playerInfo.hitboxToOpenDoor.Top < rectangle.Top || playerInfo.hitboxToOpenDoor.Bottom > rectangle.Bottom)
+			{
+				return false;
+			}
+			WorldGen.OpenDoor(tileCoordsForToggling.X, tileCoordsForToggling.Y, intendedOpeningDirection);
+			if (Main.tile[tileCoordsForToggling.X, tileCoordsForToggling.Y].type != 10)
+			{
+				NetMessage.SendData(19, -1, -1, null, 0, tileCoordsForToggling.X, tileCoordsForToggling.Y, intendedOpeningDirection);
+				return true;
+			}
+			WorldGen.OpenDoor(tileCoordsForToggling.X, tileCoordsForToggling.Y, -intendedOpeningDirection);
+			if (Main.tile[tileCoordsForToggling.X, tileCoordsForToggling.Y].type != 10)
+			{
+				NetMessage.SendData(19, -1, -1, null, 0, tileCoordsForToggling.X, tileCoordsForToggling.Y, -intendedOpeningDirection);
+				return true;
+			}
+			return false;
+		}
+
+		public DoorCloseAttemptResult TryCloseDoor(DoorOpenCloseTogglingInfo info, PlayerInfoForClosingDoors playerInfo)
+		{
+			Point tileCoordsForToggling = info.tileCoordsForToggling;
+			Tile tile = Main.tile[tileCoordsForToggling.X, tileCoordsForToggling.Y];
+			if (!tile.active() || tile.type != 11)
+			{
+				return DoorCloseAttemptResult.DoorIsInvalidated;
+			}
+			int num = tile.frameX % 72 / 18;
+			Rectangle value = new Rectangle(tileCoordsForToggling.X * 16, tileCoordsForToggling.Y * 16, 16, 48);
+			switch (num)
+			{
+			case 1:
+				value.X -= 16;
+				break;
+			case 2:
+				value.X += 16;
+				break;
+			}
+			value.Inflate(1, 0);
+			Rectangle rectangle = Rectangle.Intersect(value, playerInfo.hitboxToNotCloseDoor);
+			if (rectangle.Width > 0 || rectangle.Height > 0)
+			{
+				return DoorCloseAttemptResult.StillInDoorArea;
+			}
+			if (WorldGen.CloseDoor(tileCoordsForToggling.X, tileCoordsForToggling.Y))
+			{
+				NetMessage.SendData(13, -1, -1, null, Main.myPlayer);
+				NetMessage.SendData(19, -1, -1, null, 1, tileCoordsForToggling.X, tileCoordsForToggling.Y, 1f);
+				return DoorCloseAttemptResult.ClosedDoor;
+			}
+			return DoorCloseAttemptResult.FailedToCloseDoor;
+		}
+	}
+
+	private class TallGateOpeningInfoProvider : DoorAutoHandler
+	{
+		public DoorOpenCloseTogglingInfo ProvideInfo(Point tileCoords)
+		{
+			Tile tile = Main.tile[tileCoords.X, tileCoords.Y];
+			Point tileCoordsForToggling = tileCoords;
+			tileCoordsForToggling.Y -= tile.frameY % 90 / 18;
+			DoorOpenCloseTogglingInfo result = default(DoorOpenCloseTogglingInfo);
+			result.handler = this;
+			result.tileCoordsForToggling = tileCoordsForToggling;
+			return result;
+		}
+
+		public bool TryOpenDoor(DoorOpenCloseTogglingInfo doorInfo, PlayerInfoForOpeningDoors playerInfo)
+		{
+			Point tileCoordsForToggling = doorInfo.tileCoordsForToggling;
+			Rectangle rectangle = new Rectangle(doorInfo.tileCoordsForToggling.X * 16, doorInfo.tileCoordsForToggling.Y * 16, 16, 80);
+			switch (playerInfo.playerGravityDirection)
+			{
+			case 1:
+				rectangle.Height += 16;
+				break;
+			case -1:
+				rectangle.Y -= 16;
+				rectangle.Height += 16;
+				break;
+			}
+			if (!rectangle.Intersects(playerInfo.hitboxToOpenDoor))
+			{
+				return false;
+			}
+			if (playerInfo.hitboxToOpenDoor.Top < rectangle.Top || playerInfo.hitboxToOpenDoor.Bottom > rectangle.Bottom)
+			{
+				return false;
+			}
+			bool flag = false;
+			if (WorldGen.ShiftTallGate(tileCoordsForToggling.X, tileCoordsForToggling.Y, flag))
+			{
+				NetMessage.SendData(19, -1, -1, null, 4 + flag.ToInt(), tileCoordsForToggling.X, tileCoordsForToggling.Y);
+				return true;
+			}
+			return false;
+		}
+
+		public DoorCloseAttemptResult TryCloseDoor(DoorOpenCloseTogglingInfo info, PlayerInfoForClosingDoors playerInfo)
+		{
+			Point tileCoordsForToggling = info.tileCoordsForToggling;
+			Tile tile = Main.tile[tileCoordsForToggling.X, tileCoordsForToggling.Y];
+			if (!tile.active() || tile.type != 389)
+			{
+				return DoorCloseAttemptResult.DoorIsInvalidated;
+			}
+			_ = tile.frameY % 90 / 18;
+			Rectangle value = new Rectangle(tileCoordsForToggling.X * 16, tileCoordsForToggling.Y * 16, 16, 80);
+			value.Inflate(1, 0);
+			Rectangle rectangle = Rectangle.Intersect(value, playerInfo.hitboxToNotCloseDoor);
+			if (rectangle.Width > 0 || rectangle.Height > 0)
+			{
+				return DoorCloseAttemptResult.StillInDoorArea;
+			}
+			bool flag = true;
+			if (WorldGen.ShiftTallGate(tileCoordsForToggling.X, tileCoordsForToggling.Y, flag))
+			{
+				NetMessage.SendData(13, -1, -1, null, Main.myPlayer);
+				NetMessage.SendData(19, -1, -1, null, 4 + flag.ToInt(), tileCoordsForToggling.X, tileCoordsForToggling.Y);
+				return DoorCloseAttemptResult.ClosedDoor;
+			}
+			return DoorCloseAttemptResult.FailedToCloseDoor;
+		}
+	}
+
+	public static DoorAutoOpeningPreference PreferenceSettings = DoorAutoOpeningPreference.EnabledForEverything;
+
+	private Dictionary<int, DoorAutoHandler> _handlerByTileType = new Dictionary<int, DoorAutoHandler>
+	{
+		{
+			10,
+			new CommonDoorOpeningInfoProvider()
+		},
+		{
+			388,
+			new TallGateOpeningInfoProvider()
+		}
+	};
+
+	private List<DoorOpenCloseTogglingInfo> _ongoingOpenDoors = new List<DoorOpenCloseTogglingInfo>();
+
+	private int _timeWeCanOpenDoorsUsingVelocityAlone;
+
+	public void AllowOpeningDoorsByVelocityAloneForATime(int timeInFramesToAllow)
+	{
+		_timeWeCanOpenDoorsUsingVelocityAlone = timeInFramesToAllow;
+	}
+
+	public void Update(Player player)
+	{
+		LookForDoorsToClose(player);
+		if (ShouldTryOpeningDoors())
+		{
+			LookForDoorsToOpen(player);
+		}
+		if (_timeWeCanOpenDoorsUsingVelocityAlone > 0)
+		{
+			_timeWeCanOpenDoorsUsingVelocityAlone--;
+		}
+	}
+
+	private bool ShouldTryOpeningDoors()
+	{
+		return PreferenceSettings switch
+		{
+			DoorAutoOpeningPreference.EnabledForEverything => true, 
+			DoorAutoOpeningPreference.EnabledForGamepadOnly => PlayerInput.UsingGamepad, 
+			_ => false, 
+		};
+	}
+
+	public static void CyclePreferences()
+	{
+		switch (PreferenceSettings)
+		{
+		case DoorAutoOpeningPreference.Disabled:
+			PreferenceSettings = DoorAutoOpeningPreference.EnabledForEverything;
+			break;
+		case DoorAutoOpeningPreference.EnabledForEverything:
+			PreferenceSettings = DoorAutoOpeningPreference.EnabledForGamepadOnly;
+			break;
+		case DoorAutoOpeningPreference.EnabledForGamepadOnly:
+			PreferenceSettings = DoorAutoOpeningPreference.Disabled;
+			break;
+		}
+	}
+
+	public void LookForDoorsToClose(Player player)
+	{
+		PlayerInfoForClosingDoors playerInfoForClosingDoor = GetPlayerInfoForClosingDoor(player);
+		for (int num = _ongoingOpenDoors.Count - 1; num >= 0; num--)
+		{
+			DoorOpenCloseTogglingInfo info = _ongoingOpenDoors[num];
+			if (info.handler.TryCloseDoor(info, playerInfoForClosingDoor) != 0)
+			{
+				_ongoingOpenDoors.RemoveAt(num);
+			}
+		}
+	}
+
+	private PlayerInfoForClosingDoors GetPlayerInfoForClosingDoor(Player player)
+	{
+		PlayerInfoForClosingDoors result = default(PlayerInfoForClosingDoors);
+		result.hitboxToNotCloseDoor = player.Hitbox;
+		return result;
+	}
+
+	public void LookForDoorsToOpen(Player player)
+	{
+		PlayerInfoForOpeningDoors playerInfoForOpeningDoor = GetPlayerInfoForOpeningDoor(player);
+		if (playerInfoForOpeningDoor.intendedOpeningDirection == 0 && player.velocity.X == 0f)
+		{
+			return;
+		}
+		Point tileCoords = default(Point);
+		for (int i = playerInfoForOpeningDoor.tileCoordSpaceForCheckingForDoors.Left; i <= playerInfoForOpeningDoor.tileCoordSpaceForCheckingForDoors.Right; i++)
+		{
+			for (int j = playerInfoForOpeningDoor.tileCoordSpaceForCheckingForDoors.Top; j <= playerInfoForOpeningDoor.tileCoordSpaceForCheckingForDoors.Bottom; j++)
+			{
+				tileCoords.X = i;
+				tileCoords.Y = j;
+				TryAutoOpeningDoor(tileCoords, playerInfoForOpeningDoor);
+			}
+		}
+	}
+
+	private PlayerInfoForOpeningDoors GetPlayerInfoForOpeningDoor(Player player)
+	{
+		int num = player.controlRight.ToInt() - player.controlLeft.ToInt();
+		int playerGravityDirection = (int)player.gravDir;
+		Rectangle hitbox = player.Hitbox;
+		hitbox.Y -= -1;
+		hitbox.Height += -2;
+		float num2 = player.velocity.X;
+		if (num == 0 && _timeWeCanOpenDoorsUsingVelocityAlone == 0)
+		{
+			num2 = 0f;
+		}
+		float value = (float)num + num2;
+		int num3 = Math.Sign(value) * (int)Math.Ceiling(Math.Abs(value));
+		hitbox.X += num3;
+		if (num == 0)
+		{
+			num = Math.Sign(value);
+		}
+		Rectangle hitbox2;
+		Rectangle value2 = (hitbox2 = player.Hitbox);
+		hitbox2.X += num3;
+		Rectangle r = Rectangle.Union(value2, hitbox2);
+		Point point = r.TopLeft().ToTileCoordinates();
+		Point point2 = r.BottomRight().ToTileCoordinates();
+		Rectangle tileCoordSpaceForCheckingForDoors = new Rectangle(point.X, point.Y, point2.X - point.X, point2.Y - point.Y);
+		PlayerInfoForOpeningDoors result = default(PlayerInfoForOpeningDoors);
+		result.hitboxToOpenDoor = hitbox;
+		result.intendedOpeningDirection = num;
+		result.playerGravityDirection = playerGravityDirection;
+		result.tileCoordSpaceForCheckingForDoors = tileCoordSpaceForCheckingForDoors;
+		return result;
+	}
+
+	private void TryAutoOpeningDoor(Point tileCoords, PlayerInfoForOpeningDoors playerInfo)
+	{
+		if (TryGetHandler(tileCoords, out var infoProvider))
+		{
+			DoorOpenCloseTogglingInfo doorOpenCloseTogglingInfo = infoProvider.ProvideInfo(tileCoords);
+			if (infoProvider.TryOpenDoor(doorOpenCloseTogglingInfo, playerInfo))
+			{
+				_ongoingOpenDoors.Add(doorOpenCloseTogglingInfo);
+			}
+		}
+	}
+
+	private bool TryGetHandler(Point tileCoords, out DoorAutoHandler infoProvider)
+	{
+		infoProvider = null;
+		if (!WorldGen.InWorld(tileCoords.X, tileCoords.Y, 3))
+		{
+			return false;
+		}
+		Tile tile = Main.tile[tileCoords.X, tileCoords.Y];
+		if (tile == null)
+		{
+			return false;
+		}
+		if (!_handlerByTileType.TryGetValue(tile.type, out infoProvider))
+		{
+			return false;
+		}
+		return true;
+	}
+}
+
+
+
+
+
+
+
+public static int OpenDoorID(Tile tile)
+	{
+		ModTile modTile = GetTile(tile.type);
+		if (modTile != null) {
+			return TileID.Sets.OpenDoorID[modTile.Type];
+		}
+		if (tile.type == TileID.ClosedDoor && (tile.frameY < 594 || tile.frameY > 646 || tile.frameX >= 54)) {
+			return TileID.OpenDoor;
+		}
+		return -1;
+	}
+
+
+	
+	//in Terraria.WorldGen.OpenDoor replace bad type check with TileLoader.OpenDoorID(Main.tile[i, j]) < 0
+	//in Terraria.WorldGen.OpenDoor replace 11 with (ushort)TileLoader.OpenDoorID
+	//replace all type checks before WorldGen.OpenDoor
+	public static int OpenDoorID(Tile tile)
+	{
+		ModTile modTile = GetTile(tile.type);
+		if (modTile != null) {
+			return TileID.Sets.OpenDoorID[modTile.Type];
+		}
+		if (tile.type == TileID.ClosedDoor && (tile.frameY < 594 || tile.frameY > 646 || tile.frameX >= 54)) {
+			return TileID.OpenDoor;
+		}
+		return -1;
+	}
+	//in Terraria.WorldGen.CloseDoor replace bad type check with TileLoader.CloseDoorID(Main.tile[i, j]) < 0
+	//in Terraria.WorldGen.CloseDoor replace 10 with (ushort)TileLoader.CloseDoorID
+	//replace all type checks before WorldGen.CloseDoor
+	//replace type check in WorldGen.CheckRoom
+	public static int CloseDoorID(Tile tile)
+	{
+		ModTile modTile = GetTile(tile.type);
+
+		if (modTile != null) {
+			return TileID.Sets.CloseDoorID[modTile.Type];
+		}
+
+		if (tile.type == TileID.OpenDoor) {
+			return TileID.ClosedDoor;
+		}
+
+		return -1;
+	}
+
+	/// <inheritdoc cref="IsClosedDoor(int)"/>
+	public static bool IsClosedDoor(Tile tile) => IsClosedDoor(tile.type);
+
+	/// <summary>
+	/// Returns true if the tile is a vanilla or modded closed door.
+	/// </summary>
+	public static bool IsClosedDoor(int type)
+	{
+		ModTile modTile = GetTile(type);
+
+		if (modTile != null) {
+			return TileID.Sets.OpenDoorID[type] > -1;
+		}
+
+		return type == TileID.ClosedDoor;
+	}

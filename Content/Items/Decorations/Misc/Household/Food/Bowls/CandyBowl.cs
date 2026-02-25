@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Misc.Household.Food.Bowls;
 using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;

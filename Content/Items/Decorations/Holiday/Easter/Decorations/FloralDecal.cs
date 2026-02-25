@@ -1,6 +1,6 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Crafting.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Decorations.Holiday.Easter.Decorations;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.Wall.OneWide.OneOne.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -32,7 +32,8 @@ internal class FloralDecal : ModItem
 
         Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<FloralDecals>();
+        Item.createTile = ModContent.TileType<W_1x1_N_8>();
+        Item.placeStyle = 1;
     }
 
     public override void AddRecipes()
