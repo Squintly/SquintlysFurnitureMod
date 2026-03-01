@@ -1,11 +1,10 @@
 //using SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves;
-//using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
 //using Terraria;
 //using Terraria.GameContent.Creative;
 //using Terraria.ID;
 //using Terraria.ModLoader;
 
-//namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Repaired.Misc;
+//namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves.Items;
 
 //internal class RepairedLibraryShelf : ModItem
 //{
@@ -23,7 +22,7 @@
 //        Item.maxStack = Item.CommonMaxStack;
 
 //        Item.DefaultToPlaceableTile(ModContent.TileType<LibraryShelves_3>());
-//        Item.placeStyle = 0;
+//        Item.placeStyle = 1;
 //    }
 
 //    public override void AddRecipes()

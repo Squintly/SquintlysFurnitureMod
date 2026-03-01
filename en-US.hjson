@@ -7699,6 +7699,16 @@ Mods: {
 				Tooltip: Used for special crafting
 				DisplayName: Brick Oven
 			}
+
+			TatteredLibraryShelf: {
+				Tooltip: ""
+				DisplayName: Tattered Library Shelf
+			}
+
+			RepairedLibraryShelf: {
+				Tooltip: ""
+				DisplayName: Repaired Library Shelf
+			}
 		}
 
 		Projectiles.CorruptReedProjectile.DisplayName: Corrupt Reed Projectile

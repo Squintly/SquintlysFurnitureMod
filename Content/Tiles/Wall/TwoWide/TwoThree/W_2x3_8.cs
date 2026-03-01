@@ -29,6 +29,8 @@ public class W_2x3_8 : ModTile
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
+        TileID.Sets.FramesOnKillWall[Type] = true;
+
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 
         TileObjectData.newTile.Width = 2;
