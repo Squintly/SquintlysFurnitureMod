@@ -5,7 +5,7 @@
 //using Terraria.ID;
 //using Terraria.ModLoader;
 
-//namespace SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Themed.Aesthetics.Tattered.Misc;
+//namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves.Items;
 
 //internal class TatteredLibraryShelf : ModItem
 //{

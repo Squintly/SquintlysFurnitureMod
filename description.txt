@@ -29,6 +29,7 @@ Complete with all vanilla furniture items, as well as my set extras! Lights can 
 [*] Teak: Made with Teak Wood, purchasable from the Travelling Merchant
 [*] Springtime: Made at the Floral Crafting Table with Springy Wood, purchasable from the Travelling Merchant
 [*] Imperial: Made at any work bench with Imperial Wood, crafted with Dynasty Wood and Gold
+[*] Gray Brick, Red Brick and Cinderblock: Made with brick (or cinderblocks) at the Brick Oven
 [/list]
 [h2]Themed Decorations[/h2]
 Not a lot of these yet, but going forward there'll be more!

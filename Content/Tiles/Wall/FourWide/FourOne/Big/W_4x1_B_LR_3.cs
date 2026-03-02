@@ -20,6 +20,8 @@ public class W_4x1_B_LR_3 : ModTile
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
+        TileID.Sets.FramesOnKillWall[Type] = true;
+
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 
         TileObjectData.newTile.Height = 1;

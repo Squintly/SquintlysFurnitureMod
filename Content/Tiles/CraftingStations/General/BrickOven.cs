@@ -49,15 +49,12 @@ public class BrickOven : ModTile
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(195, 112, 87), Language.GetText("Brick Oven"));
+
+        AnimationFrameHeight = 56;
     }
 
     public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
     {
-        if (Main.tile[i, j].TileFrameX / 68 != 0)
-        {
-            return;
-        }
-
         StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
         switch (style)
         {
@@ -94,20 +91,21 @@ public class BrickOven : ModTile
 
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
-        if (++frameCounter >= 4)
+        frameCounter++;
+        if (frameCounter >= 9)
         {
             frameCounter = 0;
-            // We animate through the 1st 8 frames. The 9th frame is manually drawn if in the "off" state so it is not included in the animation logic here.
-            frame = ++frame % 8;
+            frame++;
+            frame %= 8;
         }
     }
 
     public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
     {
         var tile = Main.tile[i, j];
-        if (tile.TileFrameY < 36)
+        if (tile.TileFrameY < 56)
         {
-            frameYOffset = Main.tileFrame[type] * 36;
+            frameYOffset = Main.tileFrame[type] * 56;
         }
     }
 }

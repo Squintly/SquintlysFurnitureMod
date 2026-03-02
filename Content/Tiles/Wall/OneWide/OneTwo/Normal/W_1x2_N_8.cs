@@ -30,6 +30,8 @@ public class W_1x2_N_8 : ModTile
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
+        TileID.Sets.FramesOnKillWall[Type] = true;
+
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 
         TileObjectData.newTile.Origin = Point16.Zero;
