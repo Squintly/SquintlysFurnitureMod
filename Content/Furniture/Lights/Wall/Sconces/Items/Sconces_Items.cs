@@ -233,7 +233,8 @@ internal class Sconces_Items : ModItem
         {
             CreateRecipe(1)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(3)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }
@@ -241,7 +242,8 @@ internal class Sconces_Items : ModItem
         {
             CreateRecipe(1)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(4)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }
@@ -249,7 +251,8 @@ internal class Sconces_Items : ModItem
         {
             CreateRecipe(1)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(5)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }
@@ -257,7 +260,8 @@ internal class Sconces_Items : ModItem
         {
             CreateRecipe(1)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(6)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }
@@ -265,16 +269,17 @@ internal class Sconces_Items : ModItem
         {
             CreateRecipe(1)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>(), 4)
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(7)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }
         if (placeStyle == 14) //RepairedSconceThickSilver
         {
             CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood, 4)
             .AddIngredient(ItemID.Torch, 1)
-            .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+            .AddRecipeGroup(RecipeGroupID.Wood, 2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(8)).Type)
             .AddTile(TileID.WorkBenches)
             .Register();
         }

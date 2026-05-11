@@ -27,8 +27,8 @@ internal class SpearRack : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Spears")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

@@ -27,8 +27,8 @@ internal class MixedRackLong : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Weapons")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

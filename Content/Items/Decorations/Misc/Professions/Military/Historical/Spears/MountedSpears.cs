@@ -27,7 +27,7 @@ internal class MountedSpears : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddRecipeGroup("SquintlyFurnitureMod:Spears", 2)
             .AddRecipeGroup(RecipeGroupID.Wood, 5)
             .AddTile(TileID.HeavyWorkBench)
             .Register();

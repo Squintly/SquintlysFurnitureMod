@@ -27,8 +27,8 @@ internal class PoleRackLong : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 15)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Polearms")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

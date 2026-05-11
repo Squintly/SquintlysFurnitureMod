@@ -1,5 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
 using SquintlysFurnitureMod.Content.Blocks.Themed.Aesthetics.Repaired;
+using SquintlysFurnitureMod.Content.Blocks.Themed.Aesthetics.Tattered;
 using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using System;
@@ -158,45 +159,54 @@ internal class Platforms_Items : ModItem
         if (placeStyle == 3) //TatteredPlatform
         {
             CreateRecipe(2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 1)
+            .AddIngredient(ModContent.ItemType<TatteredWoodItem>())
             .AddCondition(Condition.InGraveyard)
             .Register();
         }
         if (placeStyle == 4) //TatteredCarpet
         {
             CreateRecipe(2)
-        .AddRecipeGroup(RecipeGroupID.Wood, 1)
-        .AddIngredient(ItemID.Silk)
-        .AddCondition(Condition.InGraveyard)
-        .Register();
+            .AddIngredient(ModContent.ItemType<TatteredWoodItem>())
+            .AddIngredient(ItemID.Silk)
+            .AddCondition(Condition.InGraveyard)
+            .Register();
         }
         if (placeStyle == 5) //TatteredShelf
         {
             CreateRecipe(2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 1)
+            .AddIngredient(ModContent.ItemType<TatteredWoodItem>())
             .AddCondition(Condition.InGraveyard)
             .Register();
         }
         if (placeStyle == 6) //RepairedPlatform
         {
             CreateRecipe(2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 1)
             .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+            .Register();
+
+            CreateRecipe(2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(3)).Type)
             .Register();
         }
         if (placeStyle == 7) //RepairedCarpet
         {
             CreateRecipe(2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 1)
             .AddIngredient(ItemID.Silk)
             .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+            .Register();
+
+            CreateRecipe(2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(3)).Type)
             .Register();
         }
         if (placeStyle == 8) //RepairedShelf
         {
             CreateRecipe(2)
-            .AddRecipeGroup(RecipeGroupID.Wood, 1)
             .AddIngredient(ModContent.ItemType<RepairedWoodItem>())
+            .Register();
+
+            CreateRecipe(2)
+            .AddIngredient(Mod.Find<ModItem>(GetInternalNameFromStyle(3)).Type)
             .Register();
         }
         if (placeStyle == 9) //RedBrickPlatform

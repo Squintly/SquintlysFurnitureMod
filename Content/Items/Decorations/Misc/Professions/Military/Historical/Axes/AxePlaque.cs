@@ -27,7 +27,7 @@ internal class AxePlaque : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddRecipeGroup("SquintlyFurnitureMod:Axes")
             .AddRecipeGroup(RecipeGroupID.Wood, 5)
             .AddTile(TileID.HeavyWorkBench)
             .Register();

@@ -69,11 +69,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoTwo
 
             TileObjectData.newTile.AnchorTop = AnchorData.Empty;
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.Origin = Point16.Zero;
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, TileObjectData.newTile.Width, 0);
-            TileObjectData.newAlternate.DrawYOffset = -8;
-            TileObjectData.addAlternate(0);
+            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            //TileObjectData.newAlternate.Origin = Point16.Zero;
+            //TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, TileObjectData.newTile.Width, 0);
+            //TileObjectData.newAlternate.DrawYOffset = -8;
+            //TileObjectData.addAlternate(0);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Origin = Point16.Zero;

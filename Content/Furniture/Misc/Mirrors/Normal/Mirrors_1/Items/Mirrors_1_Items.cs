@@ -14,17 +14,30 @@ internal class Mirrors_1_Items : ModItem
     {
         public void Load(Mod mod) //This tells the game how many new items to make, and what style on the tile those items place. 0 here places the first (0th) style on the Mirrors_1 tile, while 1 places the 2nd, etc. Fun fact: you can skip numbers in order to have an item generated the normal way without making a duplicate. I've done that mostly for items from furniture sets I intend to replace, and for the Golden Stool, because I couldn't figure out how to make it drop from pirates properly.
         {
-            mod.AddContent(new Mirrors_1_Items(0)); //ImperialMirror
-            mod.AddContent(new Mirrors_1_Items(1)); //TatteredMirror
-            mod.AddContent(new Mirrors_1_Items(2)); //RepairedMirror
-            mod.AddContent(new Mirrors_1_Items(3)); //StoneBrickMirror
-            mod.AddContent(new Mirrors_1_Items(4)); //RedBrickMirror
-            mod.AddContent(new Mirrors_1_Items(5)); //CinderblockMirror
+            for (int i = 0; i < 6; i++)
+                {
+                    mod.AddContent(new Mirrors_1_Items(i));
+                }
+            //mod.AddContent(new Mirrors_1_Items(0)); //ImperialMirror
+            //mod.AddContent(new Mirrors_1_Items(1)); //TatteredMirror
+            //mod.AddContent(new Mirrors_1_Items(2)); //RepairedMirror
+            //mod.AddContent(new Mirrors_1_Items(3)); //StoneBrickMirror
+            //mod.AddContent(new Mirrors_1_Items(4)); //RedBrickMirror
+            //mod.AddContent(new Mirrors_1_Items(5)); //CinderblockMirror
         }
 
         public void Unload()
         {
         }
+    }
+    public enum Mirrors_1_Items_Style
+    {
+        ImperialMirror = 0,
+        TatteredMirror = 1,
+        RepairedMirror = 2,
+        StoneBrickMirror = 3,
+        RedBrickMirror = 4,
+        CinderblockMirror = 5
     }
 
     protected override bool CloneNewInstances => true; //This makes the game make a new item for each thing
@@ -34,30 +47,32 @@ internal class Mirrors_1_Items : ModItem
 
     public static string GetInternalNameFromStyle(int style) //This is a list of internal names. There MUST be an internal name for every style listed in the Load, or it'll kick up errors.
     {
-        if (style == 0)
-        {
-            return "ImperialMirror";
-        }
-        if (style == 1)
-        {
-            return "TatteredMirror";
-        }
-        if (style == 2)
-        {
-            return "RepairedMirror";
-        }
-        if (style == 3)
-        {
-            return "StoneBrickMirror";
-        }
-        if (style == 4)
-        {
-            return "RedBrickMirror";
-        }
-        if (style == 5)
-        {
-            return "CinderblockMirror";
-        }
+        return Enum.GetName(typeof(Mirrors_1_Items_Style), style);
+
+        //if (style == 0)
+        //{
+        //    return "ImperialMirror";
+        //}
+        //if (style == 1)
+        //{
+        //    return "TatteredMirror";
+        //}
+        //if (style == 2)
+        //{
+        //    return "RepairedMirror";
+        //}
+        //if (style == 3)
+        //{
+        //    return "StoneBrickMirror";
+        //}
+        //if (style == 4)
+        //{
+        //    return "RedBrickMirror";
+        //}
+        //if (style == 5)
+        //{
+        //    return "CinderblockMirror";
+        //}
 
         throw new Exception("Invalid style");
     }

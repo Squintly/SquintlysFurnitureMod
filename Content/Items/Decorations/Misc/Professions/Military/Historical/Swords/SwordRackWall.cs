@@ -27,8 +27,8 @@ internal class SwordRackWall : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Swords")
+            .AddIngredient(ModContent.ItemType<GunRackEmptyLarge>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

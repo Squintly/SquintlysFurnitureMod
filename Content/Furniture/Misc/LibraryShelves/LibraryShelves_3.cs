@@ -48,16 +48,16 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
             bool draw = false;
             int offsetX, offsetY, x, y;
             offsetX = offsetY = x = y = 0;
-            int frameX = ((Main.tile[i, j].TileFrameX % 216) % 52);
+            int frameX = (Main.tile[i, j].TileFrameX % 54);
             int frameY = Main.tile[i, j].TileFrameY;
-            
+
             //Left
-            //if (frameX == 0)
-            //{
+            if (frameX == 0)
+            {
                 Tile tile = Main.tile[i - ((frameX == 0) ? 1 : 3), j];
                 int type = tile.TileType;
                 //Repaired
-                if (Main.tile[i, j].TileFrameX >= 216 &&
+                if ((Main.tile[i, j].TileFrameX >= 216) &&
                     (type == Type && tile.TileFrameX >= 216))
                 {
                     draw = true;
@@ -74,7 +74,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
                     x = 162;
                     y = frameY;
                 }
-            //}
+            }
 
             //Right
             //else

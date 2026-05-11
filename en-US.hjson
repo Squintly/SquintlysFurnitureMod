@@ -293,17 +293,17 @@ Mods: {
 			}
 
 			FestiveWorktableItem: {
-				DisplayName: Festive Worktable
+				DisplayName: Festive Crafting Station
 				Tooltip: ""
 			}
 
 			FloralWorktableItem: {
-				DisplayName: Floral Worktable
+				DisplayName: Floral Crafting Station
 				Tooltip: ""
 			}
 
 			HeartfeltCraftingTable: {
-				DisplayName: Heartfelt Worktable
+				DisplayName: Heartfelt Crafting Station
 				Tooltip: ""
 			}
 
@@ -516,7 +516,7 @@ Mods: {
 
 			PlanterItem: {
 				DisplayName: Planter
-				Tooltip: ""
+				Tooltip: Purely decorative.
 			}
 
 			SpringBasket: {
@@ -1636,7 +1636,7 @@ Mods: {
 
 			BreadbasketEmpty: {
 				DisplayName: Empty Breadbasket
-				Tooltip: Try right clicking!
+				Tooltip: Purely decorative.
 			}
 
 			GroceryBasketBlack: {
@@ -2036,12 +2036,20 @@ Mods: {
 
 			GunRackEmpty: {
 				DisplayName: Empty Gun Rack
-				Tooltip: ""
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make racks!
+					'''
 			}
 
 			GunRackEmptyLarge: {
 				DisplayName: Large Empty Gun Rack
-				Tooltip: ""
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make racks!
+					'''
 			}
 
 			Axe: {
@@ -2060,12 +2068,12 @@ Mods: {
 			}
 
 			AxeRack: {
-				DisplayName: Axe Rack
+				DisplayName: Axe Stand
 				Tooltip: Try right clicking!
 			}
 
 			AxeRackLong: {
-				DisplayName: Long Axe Rack
+				DisplayName: Long Axe Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2100,12 +2108,12 @@ Mods: {
 			}
 
 			GuanDaoRack: {
-				DisplayName: Guan Dao Rack
+				DisplayName: Guan Dao Stand
 				Tooltip: Try right clicking!
 			}
 
 			GuanDaoRackLong: {
-				DisplayName: Long Guan Dao Rack
+				DisplayName: Long Guan Dao Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2140,7 +2148,7 @@ Mods: {
 			}
 
 			HammerRack: {
-				DisplayName: Hammer Rack
+				DisplayName: Hammer Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2155,17 +2163,17 @@ Mods: {
 			}
 
 			MixedRack: {
-				DisplayName: Mixed Rack
+				DisplayName: Mixed Weapon Stand
 				Tooltip: Try right clicking!
 			}
 
 			MixedRackLong: {
-				DisplayName: Long Mixed Rack
+				DisplayName: Mixed Long Weapon Stand
 				Tooltip: Try right clicking!
 			}
 
 			MixedRackSmall: {
-				DisplayName: Small Mixed Rack
+				DisplayName: Small Mixed Weapon Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2205,7 +2213,7 @@ Mods: {
 			}
 
 			PickRack: {
-				DisplayName: Pick Rack
+				DisplayName: Pick Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2230,12 +2238,12 @@ Mods: {
 			}
 
 			PoleRack: {
-				DisplayName: Polearm Rack
+				DisplayName: Polearm Stand
 				Tooltip: Try right clicking!
 			}
 
 			PoleRackLong: {
-				DisplayName: Long Polearm Rack
+				DisplayName: Long Polearm Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2275,12 +2283,12 @@ Mods: {
 			}
 
 			SpearRack: {
-				DisplayName: Spear Rack
+				DisplayName: Spear Stand
 				Tooltip: Try right clicking!
 			}
 
 			SpearRackLong: {
-				DisplayName: Long Spear Rack
+				DisplayName: Long Spear Stand
 				Tooltip: Try right clicking!
 			}
 
@@ -2431,27 +2439,43 @@ Mods: {
 
 			ModernWeaponRack: {
 				DisplayName: Modern Weapon Rack
-				Tooltip: Try right clicking!
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make racks!
+					'''
 			}
 
 			ModernWeaponRackLarge: {
 				DisplayName: Large Modern Weapon Rack
-				Tooltip: Try right clicking!
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make racks!
+					'''
 			}
 
 			ModernWeaponStand: {
 				DisplayName: Modern Weapon Stand
-				Tooltip: Try right clicking!
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make stands!
+					'''
 			}
 
 			WeaponStandEmpty: {
 				DisplayName: Empty Weapon Stand
-				Tooltip: Try right clicking!
+				Tooltip:
+					'''
+					Purely decorative. 
+					Craft with weapons to make stands!
+					'''
 			}
 
 			BasketEmpty: {
 				DisplayName: Empty Basket
-				Tooltip: ""
+				Tooltip: Purely decorative.
 			}
 
 			BasketHandle: {
@@ -3911,7 +3935,7 @@ Mods: {
 			}
 
 			TatteredSconceCandleSilver: {
-				DisplayName: Tattered Candle Silver Sconce
+				DisplayName: Tattered Silver Candle Sconce
 				Tooltip: ""
 			}
 

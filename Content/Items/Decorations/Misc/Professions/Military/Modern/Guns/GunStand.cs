@@ -27,8 +27,8 @@ internal class GunStand : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.ExplosivePowder, 6)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 12)
+            .AddRecipeGroup("SquintlyFurnitureMod:Guns")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

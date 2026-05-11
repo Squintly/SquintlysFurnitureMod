@@ -27,7 +27,7 @@ internal class HammerPlaque : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddRecipeGroup("SquintlyFurnitureMod:Hammers")
             .AddRecipeGroup(RecipeGroupID.Wood, 5)
             .AddTile(TileID.HeavyWorkBench)
             .Register();
