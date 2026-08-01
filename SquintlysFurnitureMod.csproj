@@ -11,21 +11,25 @@
     <AdditionalFiles Remove="Content\Items\Walls\**" />
     <AdditionalFiles Remove="Content\Tiles\Blocks\Other\**" />
     <AdditionalFiles Remove="Content\Tiles\Surface\1x2\**" />
+    <AdditionalFiles Remove="Content\Tiles\Trees\**" />
     <Compile Remove="Content\Items\Blocks\Other\**" />
     <Compile Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <Compile Remove="Content\Items\Walls\**" />
     <Compile Remove="Content\Tiles\Blocks\Other\**" />
     <Compile Remove="Content\Tiles\Surface\1x2\**" />
+    <Compile Remove="Content\Tiles\Trees\**" />
     <EmbeddedResource Remove="Content\Items\Blocks\Other\**" />
     <EmbeddedResource Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <EmbeddedResource Remove="Content\Items\Walls\**" />
     <EmbeddedResource Remove="Content\Tiles\Blocks\Other\**" />
     <EmbeddedResource Remove="Content\Tiles\Surface\1x2\**" />
+    <EmbeddedResource Remove="Content\Tiles\Trees\**" />
     <None Remove="Content\Items\Blocks\Other\**" />
     <None Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <None Remove="Content\Items\Walls\**" />
     <None Remove="Content\Tiles\Blocks\Other\**" />
     <None Remove="Content\Tiles\Surface\1x2\**" />
+    <None Remove="Content\Tiles\Trees\**" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.png" />
@@ -1165,9 +1169,21 @@
     <None Remove="Reference\TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\TeakBranches.png" Link="Content\Tiles\Plants\Trees\Teak\TeakBranches.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalBranchesFlowering.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalBranchesFlowering.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalBranchesWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalBranchesWithered.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalLeaf.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalLeaf.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreeFlowering.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreeFlowering.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreetopsFlowering.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreetopsFlowering.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreetopsWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreetopsWithered.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreeWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreeWithered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Blocks\General\NewFolder\" />
     <Folder Include="Content\Blocks\Themed\Holiday\" />
     <Folder Include="Content\Furniture\Lights\Surface\Lampposts\" />
     <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
+    <Folder Include="Content\Tiles\Plants\Trees\Vernal\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />
     <Folder Include="Content\Tiles\Wall\FiveWide\FiveOne\Normal\" />
     <Folder Include="Content\Tiles\Wall\FourWide\FourOne\Normal\" />

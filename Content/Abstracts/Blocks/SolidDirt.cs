@@ -10,11 +10,13 @@ public abstract class SolidDirt : ModTile
     {
         Main.tileSolid[Type] = true;
         Main.tileBrick[Type] = true;
-        Main.tileNoAttach[Type] = false;
         Main.tileMergeDirt[Type] = true;
+        Main.tileBlendAll[Type] = true;
         Main.tileBlockLight[Type] = true;
 
-        TileID.Sets.IsBeam[Type] = true;
+        TileID.Sets.ChecksForMerge[Type] = true;
+        TileID.Sets.CanBeDugByShovel[Type] = true;
+        TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
 
         SafeSetStaticDefaults();
     }
