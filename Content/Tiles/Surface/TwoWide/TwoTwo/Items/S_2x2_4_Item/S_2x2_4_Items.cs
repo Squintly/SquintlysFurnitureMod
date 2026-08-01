@@ -1,0 +1,66 @@
+﻿using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_Item;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2_3_Item
+{
+    internal class S_2x2_4_Items : ModItem
+    {
+        public class S_2x2_4_Items_Loader : ILoadable
+        {
+            public void Load(Mod mod)
+            {
+                for (int i = 0; i < 3; i++)
+                {
+                    mod.AddContent(new S_2x2_4_Items(i));
+                }
+            }
+
+            public void Unload()
+            {
+            }
+        }
+        public enum s_2x2_4_Style
+        {
+            SpringRabbitBig = 0,
+            SugarBig = 1,
+            FlourBig = 2
+        }
+
+        protected override bool CloneNewInstances => true;
+        private readonly int placeStyle;
+
+        public override string Name => GetInternalNameFromStyle(placeStyle);
+
+        public static string GetInternalNameFromStyle(int style)
+        {
+
+            return Enum.GetName(typeof(s_2x2_4_Style), style);
+
+            throw new Exception("Invalid style");
+        }
+
+        public S_2x2_4_Items(int placeStyle)
+        {
+            this.placeStyle = placeStyle;
+        }
+
+        public override void SetDefaults()
+        {
+            Item.DefaultToPlaceableTile(ModContent.TileType<S_2x2_4>(), placeStyle);
+
+            Item.width = 32;
+            Item.height = 32;
+
+            Item.value = Item.buyPrice(silver: 2);
+            Item.maxStack = Item.CommonMaxStack;
+        }
+    }
+}

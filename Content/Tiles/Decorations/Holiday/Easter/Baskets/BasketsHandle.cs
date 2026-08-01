@@ -37,7 +37,7 @@ public class BasketsHandle : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<BasketHandle>());
+        RegisterItemDrop(Mod.Find<ModItem>("BasketHandle").Type);
     }
 
     public override bool RightClick(int i, int j)

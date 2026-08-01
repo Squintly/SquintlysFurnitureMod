@@ -37,7 +37,7 @@ public class SpringBaskets : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<SpringBasket>());
+        RegisterItemDrop(Mod.Find<ModItem>("SpringBasket").Type);
     }
 
     public override bool RightClick(int i, int j)

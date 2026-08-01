@@ -37,7 +37,7 @@ public class Toothpaste : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<ToothpasteItem>());
+        RegisterItemDrop(Mod.Find<ModItem>("Toothpaste").Type);
     }
 
     public override bool RightClick(int i, int j)

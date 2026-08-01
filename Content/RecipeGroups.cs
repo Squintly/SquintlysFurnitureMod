@@ -13,6 +13,7 @@ using SquintlysFurnitureMod.Content.Walls.General.Bricks.Cinderblock;
 using SquintlysFurnitureMod.Content.Walls.General.Bricks.Red;
 using SquintlysFurnitureMod.Content.Walls.General.Bricks.Stone;
 using SquintlysFurnitureMod.Content.Walls.Themed.Eras.Imperial;
+
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -110,27 +111,27 @@ namespace SquintlysFurnitureMod.Content
     {
         public override void AddRecipeGroups()
         {
-            RecipeGroup Milks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Milk", ItemID.MilkCarton, ModContent.ItemType<Milk>());
+            RecipeGroup Milks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Milk", ItemID.MilkCarton, Mod.Find<ModItem>("Milk").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Milks", Milks);
 
             RecipeGroup AllFruit = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Fruit", ItemID.Apple, ItemID.Apricot, ItemID.Grapefruit, ItemID.Lemon, ItemID.Peach, ItemID.Cherry, ItemID.Plum, ItemID.BlackCurrant,
-                ItemID.Elderberry, ItemID.BloodOrange, ItemID.Rambutan, ItemID.Mango, ItemID.Pineapple, ItemID.Banana, ItemID.Coconut, ItemID.Dragonfruit, ItemID.Starfruit, ItemID.Pomegranate, ModContent.ItemType<Cherry>(), ModContent.ItemType<Dragonfruit>(), ModContent.ItemType<AppleGreen>(),
-                ModContent.ItemType<AppleRed>(), ModContent.ItemType<Apricot>(), ModContent.ItemType<Avocado>(), ModContent.ItemType<Banana>(), ModContent.ItemType<Berries>(), ModContent.ItemType<Breadfruit>(), ModContent.ItemType<Coconut>(),
-                ModContent.ItemType<Grapefruit>(), ModContent.ItemType<Grapes>(), ModContent.ItemType<Guava>(), ModContent.ItemType<Kiwi>(), ModContent.ItemType<Lemon>(), ModContent.ItemType<Lime>(),
-                ModContent.ItemType<Mango>(), ModContent.ItemType<Orange>(), ModContent.ItemType<Papaya>(), ModContent.ItemType<Passionfruit>(), ModContent.ItemType<Peach>(), ModContent.ItemType<Pear>(), ModContent.ItemType<Persimmon>(),
-                ModContent.ItemType<Pineapple>(), ModContent.ItemType<Pomegranate>(), ModContent.ItemType<Strawberry>(), ModContent.ItemType<Watermelon>(), ModContent.ItemType<WatermelonSmall>());
+                ItemID.Elderberry, ItemID.BloodOrange, ItemID.Rambutan, ItemID.Mango, ItemID.Pineapple, ItemID.Banana, ItemID.Coconut, ItemID.Dragonfruit, ItemID.Starfruit, ItemID.Pomegranate, Mod.Find<ModItem>("Cherry").Type, Mod.Find<ModItem>("Dragonfruit").Type, Mod.Find<ModItem>("AppleGreen").Type,
+                Mod.Find<ModItem>("AppleRed").Type, Mod.Find<ModItem>("Apricot").Type, Mod.Find<ModItem>("Avocado").Type, Mod.Find<ModItem>("Banana").Type, Mod.Find<ModItem>("Berries").Type, Mod.Find<ModItem>("Breadfruit").Type, Mod.Find<ModItem>("Coconut").Type,
+                Mod.Find<ModItem>("Grapefruit").Type, Mod.Find<ModItem>("Grapes").Type, Mod.Find<ModItem>("Guava").Type, Mod.Find<ModItem>("Kiwi").Type, Mod.Find<ModItem>("Lemon").Type, Mod.Find<ModItem>("Lime").Type,
+                Mod.Find<ModItem>("Mango").Type, Mod.Find<ModItem>("Orange").Type, Mod.Find<ModItem>("Papaya").Type, Mod.Find<ModItem>("Passionfruit").Type, Mod.Find<ModItem>("Peach").Type, Mod.Find<ModItem>("Pear").Type, Mod.Find<ModItem>("Persimmon").Type,
+                Mod.Find<ModItem>("Pineapple").Type, Mod.Find<ModItem>("Pomegranate").Type, Mod.Find<ModItem>("Strawberry").Type, Mod.Find<ModItem>("Watermelon").Type, Mod.Find<ModItem>("WatermelonSmall").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:AllFruit", AllFruit);
 
-            RecipeGroup Apples = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Apple", ItemID.Apple, ModContent.ItemType<AppleRed>(), ModContent.ItemType<AppleGreen>());
+            RecipeGroup Apples = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Apple", ItemID.Apple, Mod.Find<ModItem>("AppleRed").Type, Mod.Find<ModItem>("AppleGreen").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Apples", Apples);
 
-            RecipeGroup Peppers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Pepper", ItemID.SpicyPepper, ModContent.ItemType<Pepper>(), ModContent.ItemType<BellPepper>());
+            RecipeGroup Peppers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Pepper", ItemID.SpicyPepper, Mod.Find<ModItem>("Pepper").Type, Mod.Find<ModItem>("BellPepper").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Peppers", Peppers);
 
-            RecipeGroup Flours = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Flour", ModContent.ItemType<Flour>(), ModContent.ItemType<FlourBig>(), ModContent.ItemType<FlourSmall>());
+            RecipeGroup Flours = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Flour", Mod.Find<ModItem>("Flour").Type, Mod.Find<ModItem>("FlourBig").Type, Mod.Find<ModItem>("FlourSmall").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Flours", Flours);
 
-            RecipeGroup Sugars = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sugar", ModContent.ItemType<Sugar>(), ModContent.ItemType<SugarBig>(), ModContent.ItemType<SugarSmall>());
+            RecipeGroup Sugars = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sugar", Mod.Find<ModItem>("Sugar").Type, Mod.Find<ModItem>("SugarBig").Type, Mod.Find<ModItem>("SugarSmall").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Sugars", Sugars);
         }
     }
@@ -152,38 +153,38 @@ namespace SquintlysFurnitureMod.Content
 
                 if (RecipeGroup.recipeGroups.TryGetValue(RecipeGroupID.Fruit, out var fruitGroup))
                 {
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<AppleGreen>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<AppleRed>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Apricot>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Avocado>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Banana>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<BellPepper>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Berries>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<BloodOrange>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Cherry>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Dragonfruit>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Grapefruit>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Grapes>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Guava>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Kiwi>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Lemon>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Lime>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Mango>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Orange>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Papaya>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Passionfruit>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Peach>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Pear>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Pepper>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Persimmon>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Pineapple>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Plum>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Pomegranate>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Starfruit>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Strawberry>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<SugarApple>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<Watermelon>());
-                    fruitGroup.ValidItems.Add(ModContent.ItemType<WatermelonSmall>());
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("AppleGreen").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("AppleRed").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Apricot").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Avocado").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Banana").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("BellPepper").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Berries").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("BloodOrange").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Cherry").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Dragonfruit").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Grapefruit").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Grapes").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Guava").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Kiwi").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Lemon").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Lime").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Mango").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Orange").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Papaya").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Passionfruit").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Peach").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Pear").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Pepper").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Persimmon").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Pineapple").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Plum").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Pomegranate").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Starfruit").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Strawberry").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("SugarApple").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Watermelon").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("WatermelonSmall").Type);
                 }
             }
         }

@@ -45,7 +45,7 @@ internal class BigCakeSlice : ModItem
             .Register();
 
         CreateRecipe(4)
-            .AddIngredient(ModContent.ItemType<BigCake>())
+            .AddIngredient(Mod.Find<ModItem>("BigCake").Type)
             .AddTile(TileID.CookingPots)
             .Register();
     }

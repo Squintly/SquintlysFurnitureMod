@@ -39,8 +39,8 @@ internal class Loaf : ModItem
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours", 2)
-            .AddIngredient(ModContent.ItemType<Salt>())
-            .AddIngredient(ModContent.ItemType<Yeast>())
+            .AddIngredient(Mod.Find<ModItem>("Salt").Type)
+            .AddIngredient(Mod.Find<ModItem>("Yeast").Type)
             .AddTile(TileID.CookingPots)
             .Register();
     }

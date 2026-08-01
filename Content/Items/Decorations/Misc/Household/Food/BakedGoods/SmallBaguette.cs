@@ -39,7 +39,7 @@ internal class SmallBaguette : ModItem
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours")
-            .AddIngredient(ModContent.ItemType<Yeast>())
+            .AddIngredient(Mod.Find<ModItem>("Yeast").Type)
             .AddIngredient(ItemID.WaterBucket)
             .AddTile(TileID.CookingPots)
             .Register();

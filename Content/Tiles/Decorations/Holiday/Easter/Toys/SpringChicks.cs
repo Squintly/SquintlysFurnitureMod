@@ -39,7 +39,7 @@ public class SpringChicks : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<SpringChick>());
+        RegisterItemDrop(Mod.Find<ModItem>("SpringChick").Type);
     }
 
     public override bool RightClick(int i, int j)
