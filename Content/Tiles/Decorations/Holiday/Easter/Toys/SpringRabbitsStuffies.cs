@@ -34,6 +34,6 @@ public class SpringRabbitsStuffies : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
-        RegisterItemDrop(ModContent.ItemType<SpringRabbitBig>());
+        RegisterItemDrop(Mod.Find<ModItem>("SpringRabbitBig").Type);
     }
 }

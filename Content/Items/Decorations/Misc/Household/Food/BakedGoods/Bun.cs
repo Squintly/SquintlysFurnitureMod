@@ -39,7 +39,7 @@ internal class Bun : ModItem
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours")
-            .AddIngredient(ModContent.ItemType<Yeast>())
+            .AddIngredient(Mod.Find<ModItem>("Yeast").Type)
             .AddTile(TileID.CookingPots)
             .Register();
     }

@@ -31,11 +31,11 @@ public class Shops : GlobalNPC
     {
         if (shop.NpcType == NPCID.Merchant)
         {
-            shop.Add<Egg>();
-            shop.Add<Sugar>();
-            shop.Add<Flour>();
-            shop.Add<Yeast>();
-            shop.Add<Salt>();
+            shop.Add(Mod.Find<ModItem>("Egg").Type);
+            shop.Add(Mod.Find<ModItem>("Sugar").Type);
+            shop.Add(Mod.Find<ModItem>("Flour").Type);
+            shop.Add(Mod.Find<ModItem>("Yeast").Type);
+            shop.Add(Mod.Find<ModItem>("Salt").Type);
         }
     }
 }

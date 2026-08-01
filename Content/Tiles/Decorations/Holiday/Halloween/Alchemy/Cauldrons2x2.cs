@@ -32,6 +32,6 @@ public class Cauldrons2x2 : ModTile
         TileObjectData.newTile.StyleWrapLimit = 111;
 
         TileObjectData.addTile(Type);
-        RegisterItemDrop(ModContent.ItemType<Cauldrons>());
+        RegisterItemDrop(Mod.Find<ModItem>("Cauldrons").Type);
     }
 }

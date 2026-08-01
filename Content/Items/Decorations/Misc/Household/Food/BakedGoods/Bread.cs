@@ -39,7 +39,7 @@ internal class Bread : ModItem
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours", 2)
-            .AddIngredient(ModContent.ItemType<Yeast>())
+            .AddIngredient(Mod.Find<ModItem>("Yeast").Type)
             .AddRecipeGroup(RecipeGroupID.Wood, 2)
             .AddTile(TileID.CookingPots)
             .Register();

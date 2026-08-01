@@ -38,7 +38,7 @@ public class BigCarrots : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<BigCarrot>());
+        RegisterItemDrop(Mod.Find<ModItem>("BigCarrot").Type);
     }
 
     public override bool RightClick(int i, int j)

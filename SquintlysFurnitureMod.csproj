@@ -2,6 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <Import Project="..\tModLoader.targets" />
   <PropertyGroup>
+	<ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>SquintlysFurnitureMod</AssemblyName>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -1196,4 +1197,13 @@
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Entertainment\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Medical\" />
   </ItemGroup>
+	<Target Name="GenerateGlobalUsings" BeforeTargets="BeforeBuild">
+		<Exec Command="pwsh -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1"
+			  IgnoreExitCode="false"
+			  Condition="'$(OS)' != 'Windows_NT'" />
+
+		<!-- Windows fallback if pwsh is not installed -->
+		<Exec Command="powershell -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1"
+			  Condition="'$(OS)' == 'Windows_NT'" />
+	</Target>
 </Project>

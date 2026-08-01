@@ -39,7 +39,7 @@ internal class SaltandPepperGlass : ModItem
     {
         CreateRecipe()
             .AddIngredient(ItemID.Glass)
-            .AddIngredient(ModContent.ItemType<Salt>())
+            .AddIngredient(Mod.Find<ModItem>("Salt").Type)
             .AddRecipeGroup("SquintlyFurnitureMod:Peppers")
             .AddTile(TileID.WorkBenches)
             .Register();
