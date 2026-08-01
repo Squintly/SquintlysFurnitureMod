@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Hammers;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeFour;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -27,8 +28,8 @@ internal class PoleRack : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 15)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Polearms")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

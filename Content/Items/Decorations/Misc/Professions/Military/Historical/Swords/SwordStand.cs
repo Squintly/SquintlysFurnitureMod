@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Spears;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeThree;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -27,8 +28,8 @@ internal class SwordStand : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-            .AddRecipeGroup(RecipeGroupID.Wood, 5)
+            .AddRecipeGroup("SquintlyFurnitureMod:Swords")
+            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

@@ -1,10 +1,23 @@
-﻿using SquintlysFurnitureMod.Content.Furniture.Misc.Platforms.Items;
+﻿using SquintlysFurnitureMod.Content.Blocks.Themed.Aesthetics.Repaired;
+using SquintlysFurnitureMod.Content.Blocks.Themed.Aesthetics.Tattered;
+using SquintlysFurnitureMod.Content.Furniture.Misc.Platforms.Items;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Items.Blocks.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.Blocks.VanillaPlus;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Fruit;
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Future.Guns;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Axes;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.GuanDaos;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Hammers;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Picks;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Poles;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Spears;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Swords;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern;
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern.Guns;
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using SquintlysFurnitureMod.Content.Items.WallItems.Themed.Egypt;
 using SquintlysFurnitureMod.Content.Items.WallItems.VanillaPlus;
@@ -67,24 +80,7 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup Festive = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Festive Block", ItemID.CandyCaneBlock, ItemID.GreenCandyCaneBlock, ItemID.PineTreeBlock);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Festive", Festive);
 
-            RecipeGroup TeakWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Wall", ModContent.ItemType<TeakWallItem>(), ModContent.ItemType<TeakFenceItem>(),
-                ModContent.ItemType<TeakFenceSlatItem>(), ModContent.ItemType<TeakFenceSolidItem>(), ModContent.ItemType<TeakFenceLatticeItem>(), ModContent.ItemType<TeakPoleItem>());
-            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakWalls", TeakWalls);
-
-            RecipeGroup TeakPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Platforms", ModContent.ItemType<TeakPlatformItem>(), ModContent.ItemType<TeakShelfItem>());
-            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakPlatforms", TeakPlatforms);
-
-            RecipeGroup HieroBlocks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sandstone Block/Wall",
-                ModContent.ItemType<HieroBlock1Item>(), ModContent.ItemType<HieroBlock2Item>(), ModContent.ItemType<HieroBlock3Item>(), ModContent.ItemType<HieroBlock4Item>(),
-                ModContent.ItemType<FadedHieroBlock1Item>(), ModContent.ItemType<FadedHieroBlock2Item>(), ModContent.ItemType<FadedHieroBlock3Item>(), ModContent.ItemType<FadedHieroBlock4Item>(),
-                ModContent.ItemType<HieroWall1Item>(), ModContent.ItemType<HieroWall2Item>(), ModContent.ItemType<HieroWall3Item>(), ModContent.ItemType<HieroWall4Item>(), ModContent.ItemType<HieroWallSmallItem>(),
-                ModContent.ItemType<FadedHieroWall1Item>(), ModContent.ItemType<FadedHieroWall2Item>(), ModContent.ItemType<FadedHieroWall3Item>(), ModContent.ItemType<FadedHieroWall4Item>(), ModContent.ItemType<FadedHieroWallSmallItem>(),
-                ModContent.ItemType<PolishedSandstoneBrickItem>(), ModContent.ItemType<PolishedSandstoneBrickWallItem>(), ItemID.Sandstone, ItemID.SandstoneBrick, ItemID.SandstoneBrickWall, ItemID.SandstoneSlab);
-            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:HieroBlocks", HieroBlocks);
-
-            RecipeGroup ImperialWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Wall", ModContent.ItemType<ImperialWallpaperFancyItem>(), ModContent.ItemType<ImperialWallpaperItem>(),
-                ModContent.ItemType<ImperialPanellingItem>(), ModContent.ItemType<ImperialFenceItem>());
-            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialWalls", ImperialWalls);
+            //Platforms
 
             RecipeGroup ImperialPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Platforms", Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(0)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(1)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(2)).Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialPlatforms", ImperialPlatforms);
@@ -95,6 +91,29 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup RepairedPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Repaired Platforms", Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(6)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(7)).Type, Mod.Find<ModItem>(Platforms_Items.GetInternalNameFromStyle(8)).Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:RepairedPlatforms", RepairedPlatforms);
 
+            RecipeGroup TeakPlatforms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Platforms", ModContent.ItemType<TeakPlatformItem>(), ModContent.ItemType<TeakShelfItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakPlatforms", TeakPlatforms);
+
+            //Blocks
+
+            RecipeGroup HieroBlocks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sandstone Block/Wall",
+                ModContent.ItemType<HieroBlock1Item>(), ModContent.ItemType<HieroBlock2Item>(), ModContent.ItemType<HieroBlock3Item>(), ModContent.ItemType<HieroBlock4Item>(),
+                ModContent.ItemType<FadedHieroBlock1Item>(), ModContent.ItemType<FadedHieroBlock2Item>(), ModContent.ItemType<FadedHieroBlock3Item>(), ModContent.ItemType<FadedHieroBlock4Item>(),
+                ModContent.ItemType<HieroWall1Item>(), ModContent.ItemType<HieroWall2Item>(), ModContent.ItemType<HieroWall3Item>(), ModContent.ItemType<HieroWall4Item>(), ModContent.ItemType<HieroWallSmallItem>(),
+                ModContent.ItemType<FadedHieroWall1Item>(), ModContent.ItemType<FadedHieroWall2Item>(), ModContent.ItemType<FadedHieroWall3Item>(), ModContent.ItemType<FadedHieroWall4Item>(), ModContent.ItemType<FadedHieroWallSmallItem>(),
+                ModContent.ItemType<PolishedSandstoneBrickItem>(), ModContent.ItemType<PolishedSandstoneBrickWallItem>(), ItemID.Sandstone, ItemID.SandstoneBrick, ItemID.SandstoneBrickWall, ItemID.SandstoneSlab);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:HieroBlocks", HieroBlocks);
+            
+            //Walls
+
+            RecipeGroup TeakWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Teak Wall", ModContent.ItemType<TeakWallItem>(), ModContent.ItemType<TeakFenceItem>(),
+                ModContent.ItemType<TeakFenceSlatItem>(), ModContent.ItemType<TeakFenceSolidItem>(), ModContent.ItemType<TeakFenceLatticeItem>(), ModContent.ItemType<TeakPoleItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:TeakWalls", TeakWalls);
+
+            RecipeGroup ImperialWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Imperial Wall", ModContent.ItemType<ImperialWallpaperFancyItem>(), ModContent.ItemType<ImperialWallpaperItem>(),
+                ModContent.ItemType<ImperialPanellingItem>(), ModContent.ItemType<ImperialFenceItem>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:ImperialWalls", ImperialWalls);
+            
             RecipeGroup CinderblockWalls = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Cinderblock Walls", ModContent.ItemType<CinderblockWallItem>(), ModContent.ItemType<CinderblockFenceItem>());
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:CinderblockWalls", CinderblockWalls);
 
@@ -134,6 +153,44 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Sugars", Sugars);
         }
     }
+   public class WeaponsRecipeGroups : ModSystem
+    {
+        public override void AddRecipeGroups()
+        {
+            RecipeGroup Weapons = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Weapon", ModContent.ItemType<Axe>(), ModContent.ItemType<AxeLong>(), ModContent.ItemType<MountedAxe>(), ModContent.ItemType<MountedAxeLong>(), ModContent.ItemType<WallAxe>(),
+                ModContent.ItemType<GuanDao>(), ModContent.ItemType<GuanDaoLong>(),  ModContent.ItemType<MountedGuanDao>(), ModContent.ItemType<MountedGuanDaoLong>(),
+                ModContent.ItemType<Hammer>(), ModContent.ItemType<HammerLong>(), ModContent.ItemType<MountedHammer>(), ModContent.ItemType<MountedHammerLong>(), 
+                ModContent.ItemType<Pickaxe>(), ModContent.ItemType<PickaxeLong>(), ModContent.ItemType<MountedPick>(), ModContent.ItemType<MountedPickLong>(), 
+                ModContent.ItemType<Pole>(), ModContent.ItemType<PoleLong>(), ModContent.ItemType<MountedPole>(), ModContent.ItemType<MountedPoleLong>(), 
+                ModContent.ItemType<Spear>(), ModContent.ItemType<SpearLong>(), ModContent.ItemType<MountedSpear>(), ModContent.ItemType<MountedSpearLong>(),
+                ModContent.ItemType<Sword>(), ModContent.ItemType<SwordScabbard>(), ModContent.ItemType<SwordStanding>(), ModContent.ItemType<SwordMounted>(), ModContent.ItemType<SwordMountedThin>(), ModContent.ItemType<SwordMountedScabbard>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Weapons", Weapons);
+
+            RecipeGroup Axes = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Axe", ModContent.ItemType<Axe>(), ModContent.ItemType<AxeLong>(), ModContent.ItemType<MountedAxe>(), ModContent.ItemType<MountedAxeLong>(), ModContent.ItemType<WallAxe>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Axes", Axes);
+
+            RecipeGroup GuanDaos = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative GuanDao", ModContent.ItemType<GuanDao>(), ModContent.ItemType<GuanDaoLong>(),  ModContent.ItemType<MountedGuanDao>(), ModContent.ItemType<MountedGuanDaoLong>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:GuanDaos", GuanDaos);
+
+            RecipeGroup Hammers = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Hammer", ModContent.ItemType<Hammer>(), ModContent.ItemType<HammerLong>(), ModContent.ItemType<MountedHammer>(), ModContent.ItemType<MountedHammerLong>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Hammers", Hammers);
+
+            RecipeGroup Picks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Pickaxe", ModContent.ItemType<Pickaxe>(), ModContent.ItemType<PickaxeLong>(), ModContent.ItemType<MountedPick>(), ModContent.ItemType<MountedPickLong>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Picks", Picks);
+
+            RecipeGroup Polearms = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Polearm", ModContent.ItemType<Pole>(), ModContent.ItemType<PoleLong>(), ModContent.ItemType<MountedPole>(), ModContent.ItemType<MountedPoleLong>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Polearms", Polearms);
+            
+            RecipeGroup Spears = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Spear", ModContent.ItemType<Spear>(), ModContent.ItemType<SpearLong>(), ModContent.ItemType<MountedSpear>(), ModContent.ItemType<MountedSpearLong>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Spears", Spears);
+            
+            RecipeGroup Swords = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Sword", ModContent.ItemType<Sword>(), ModContent.ItemType<SwordScabbard>(), ModContent.ItemType<SwordStanding>(), ModContent.ItemType<SwordMounted>(), ModContent.ItemType<SwordMountedThin>(), ModContent.ItemType<SwordMountedScabbard>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Swords", Swords);
+
+            RecipeGroup Guns = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Decorative Gun", ModContent.ItemType<GunStanding>(), ModContent.ItemType<FutureGun>(), ModContent.ItemType<FutureGunStanding>(), ModContent.ItemType<GunMounted>());
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Guns", Guns);
+        }
+    }
 
     public class RecipeGroupAdditions : ModSystem
     {
@@ -148,6 +205,9 @@ namespace SquintlysFurnitureMod.Content
                     woodGroup.ValidItems.Add(ModContent.ItemType<SpringyWood>());
                     woodGroup.ValidItems.Add(ModContent.ItemType<SpringyWoodBlueItem>());
                     woodGroup.ValidItems.Add(ModContent.ItemType<SpringyWoodGreenItem>());
+
+                    woodGroup.ValidItems.Add(ModContent.ItemType<TatteredWoodItem>());
+                    woodGroup.ValidItems.Add(ModContent.ItemType<RepairedWoodItem>());
                 }
 
                 if (RecipeGroup.recipeGroups.TryGetValue(RecipeGroupID.Fruit, out var fruitGroup))

@@ -1,8 +1,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -35,84 +37,104 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
 
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 12;
-            TileObjectData.newTile.StyleMultiplier = 12;
+            TileObjectData.newTile.StyleMultiplier = 4;
             TileObjectData.newTile.RandomStyleRange = 3;
-
-            ////Left
-
-            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            //TileObjectData.newAlternate.Origin = Point16.Zero;
-            //TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            //TileObjectData.newAlternate.AnchorAlternateTiles = [ModContent.TileType<LibraryShelves_3>()];
-            //TileObjectData.addAlternate(3);
-
-            ////Middle
-
-            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            //TileObjectData.newAlternate.Origin = Point16.Zero;
-            //TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            //TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            //TileObjectData.newAlternate.AnchorAlternateTiles = [ModContent.TileType<LibraryShelves_3>()];
-            //TileObjectData.addAlternate(6);
-
-            ////Right
-
-            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            //TileObjectData.newAlternate.Origin = Point16.Zero;
-            //TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            //TileObjectData.newAlternate.AnchorAlternateTiles = [ModContent.TileType<LibraryShelves_3>()];
-            //TileObjectData.addAlternate(9);
 
             TileObjectData.addTile(Type);
         }
 
-        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            Tile tile = Main.tile[i, j];
-            Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
+            bool draw = false;
+            int offsetX, offsetY, x, y;
+            offsetX = offsetY = x = y = 0;
+            int frameX = (Main.tile[i, j].TileFrameX % 54);
+            int frameY = Main.tile[i, j].TileFrameY;
 
-            Tile right = Main.tile[i + 3, j];
-            Tile left = Main.tile[i - 1, j];
-
-            int height = tile.TileFrameY % 92 == 92 ? 18 : 16;
-
-            if (right.HasTile && tile.TileType == ModContent.TileType<LibraryShelves_3>())
+            //Left
+            if (frameX == 0)
             {
-                spriteBatch.Draw(
-                TextureAssets.Tile[Type].Value,
-                new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
-                new Rectangle(tile.TileFrameX + 162, tile.TileFrameY, 16, 16),
-                Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
+                Tile tile = Main.tile[i - ((frameX == 0) ? 1 : 3), j];
+                int type = tile.TileType;
+                //Repaired
+                if ((Main.tile[i, j].TileFrameX >= 216) &&
+                    (type == Type && tile.TileFrameX >= 216))
+                {
+                    draw = true;
+                    x = 378;
+                    offsetX = -4;
+                    y = frameY;
+                }   
+                //Tattered
+                else if (Main.tile[i, j].TileFrameX <= 216 &&
+                    (type == Type && tile.TileFrameX <= 216))
+                {
+                    draw = true;
+                    offsetX = -4;
+                    x = 162;
+                    y = frameY;
+                }
             }
 
-            if (left.HasTile && tile.TileType == ModContent.TileType<LibraryShelves_3>() && right.HasTile && tile.TileType == ModContent.TileType<LibraryShelves_3>())
+            //Right
+            //else
+            //{
+            //    Tile tile = Main.tile[i - ((frameX == 0) ? 3 : 1), j];
+            //    int type = tile.TileType;
+            //    //Tattered
+            //    if (Main.tile[i, j].TileFrameX <= 214 &&
+            //        (type == Type && tile.TileFrameX <= 214))
+            //    {
+            //        draw = true;
+            //        offsetX = 4;
+            //        x = 108;
+            //        y = frameY;
+            //    }
+            //    //Repaired
+            //    else if (Main.tile[i, j].TileFrameX >= 216 &&
+            //        (type == Type && tile.TileFrameX >= 216))
+            //    {
+            //        draw = true;
+            //        x = 378;
+            //        offsetX = 4;
+            //        y = frameY;
+            //    }
+            //}
+            //Right
+            //else
+            //{
+            //    Tile tile = Main.tile[i + ((frameX == 0) ? 3 : 1), j];
+            //    int type = tile.TileType;
+            //    //Tattered
+            //    if (Main.tile[i, j].TileFrameY <= 90 &&
+            //        (type == Type && tile.TileFrameY <= 90))
+            //    {
+            //        draw = true;
+            //        offsetX = 16;
+            //        x = 162;
+            //        y = ((frameY == 0) ? 0 : 18);
+            //    }
+            //    //Repaired
+            //    else if (Main.tile[i, j].TileFrameY > 90 &&
+            //        (type == Type && tile.TileFrameY > 90))
+            //    {
+            //        draw = true;
+            //        offsetX = 32;
+            //        x = 162;
+            //        y = ((frameY == 0) ? 0 : 18) + 90;
+            //    }
+            //}
+            if (draw)
             {
+                Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
+                var texture = Main.instance.TilesRenderer.GetTileDrawTexture(Main.tile[i, j], i, j);
+                
                 spriteBatch.Draw(
-                TextureAssets.Tile[Type].Value,
-                new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
-                new Rectangle(tile.TileFrameX + 324, tile.TileFrameY, 16, 16),
-                Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
-            }
-
-            if (left.HasTile && tile.TileType == ModContent.TileType<LibraryShelves_3>())
-            {
-                spriteBatch.Draw(
-                TextureAssets.Tile[Type].Value,
-                new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
-                new Rectangle(tile.TileFrameX + 486, tile.TileFrameY, 16, height),
-                Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
-            }
-            else
-            {
-                spriteBatch.Draw(
-                    TextureAssets.Tile[Type].Value,
-                    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
-                    new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, 16),
+                    texture,
+                    new Vector2(i * 16 + offsetX - (int)Main.screenPosition.X, j * 16f + offsetY - (int)Main.screenPosition.Y) + zero,
+                    new Rectangle(x, y, 8, 16),
                     Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
             }
-
-            return false;
         }
     }
 }

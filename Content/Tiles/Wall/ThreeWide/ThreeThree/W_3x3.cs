@@ -18,6 +18,8 @@ public class W_3x3 : ModTile
         Main.tileNoFail[Type] = false;
         Main.tileNoAttach[Type] = true;
 
+        TileID.Sets.FramesOnKillWall[Type] = true;
+
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 
         TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };

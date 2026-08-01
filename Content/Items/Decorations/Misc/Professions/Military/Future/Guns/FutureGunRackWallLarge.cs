@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern;
 using SquintlysFurnitureMod.Content.Tiles.Wall.ThreeWide.ThreeThree;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -27,8 +28,8 @@ internal class FutureGunRackWallLarge : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.ExplosivePowder, 8)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 12)
+            .AddRecipeGroup("SquintlyFurnitureMod:Guns")
+            .AddIngredient(ModContent.ItemType<ModernWeaponRackLarge>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

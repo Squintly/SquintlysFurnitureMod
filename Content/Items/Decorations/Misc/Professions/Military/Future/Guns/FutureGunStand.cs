@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeThree;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -27,8 +28,8 @@ internal class FutureGunStand : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ItemID.ExplosivePowder, 6)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddRecipeGroup("SquintlyFurnitureMod:Guns")
+            .AddIngredient(ModContent.ItemType<ModernWeaponStand>())
             .AddTile(TileID.HeavyWorkBench)
             .Register();
     }

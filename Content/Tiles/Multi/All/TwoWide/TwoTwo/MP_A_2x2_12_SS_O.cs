@@ -69,11 +69,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoTwo
 
             TileObjectData.newTile.AnchorTop = AnchorData.Empty;
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.Origin = Point16.Zero;
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, TileObjectData.newTile.Width, 0);
-            TileObjectData.newAlternate.DrawYOffset = -8;
-            TileObjectData.addAlternate(0);
+            //TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            //TileObjectData.newAlternate.Origin = Point16.Zero;
+            //TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered, TileObjectData.newTile.Width, 0);
+            //TileObjectData.newAlternate.DrawYOffset = -8;
+            //TileObjectData.addAlternate(0);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Origin = Point16.Zero;
@@ -81,14 +81,14 @@ namespace SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoTwo
             TileObjectData.addAlternate(0);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.Origin = new Point16(0, 1);
-            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 2, 0);
+            TileObjectData.newAlternate.Origin = new Point16(0, 0);
+            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 1, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = [124, 561, 574, 575, 576, 577, 578];
             TileObjectData.addAlternate(12);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Origin = new Point16(0, 0);
-            TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 2, 0);
+            TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 1, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = [124, 561, 574, 575, 576, 577, 578];
             TileObjectData.addAlternate(24);
 

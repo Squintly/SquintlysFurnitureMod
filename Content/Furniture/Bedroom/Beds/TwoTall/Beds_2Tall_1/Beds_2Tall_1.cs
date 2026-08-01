@@ -23,14 +23,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Beds_2Tal
             CinderblockBed, //2
         }
 
-        public const int NextStyleHeight = 34;
+        public const int NextStyleHeight = 38;
 
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
-
-            Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[Type] = false;
 
             Main.tileLavaDeath[Type] = true;
 
@@ -44,7 +41,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Beds_2Tal
             TileID.Sets.InteractibleByNPCs[Type] = true;
             TileID.Sets.IsValidSpawnPoint[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style4x2);
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.Height = 2;
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
@@ -76,7 +73,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.TwoTall.Beds_2Tal
 
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
-            info.VisualOffset.Y += 0f;
+            info.VisualOffset.Y += 4f;
         }
 
         public override bool RightClick(int i, int j)
