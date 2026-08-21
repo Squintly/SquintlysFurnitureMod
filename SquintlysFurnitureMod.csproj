@@ -534,8 +534,6 @@
     <None Remove="Content\Items\Blocks\Woods\TeakShinglesItems.png" />
     <None Remove="Content\Items\Blocks\Woods\TeakSlatsItem.png" />
     <None Remove="Content\Items\Blocks\Woods\TeakWood.png" />
-    <None Remove="Content\Items\Decorations\Crafting\FloralWorktableItem.png" />
-    <None Remove="Content\Items\Decorations\Crafting\PrintingPress.png" />
     <None Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.png" />
     <None Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignLargeItem.png" />
     <None Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignItem.png" />
@@ -1170,6 +1168,8 @@
     <None Remove="Reference\TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\Base Files\Crafting\2-Wide\2x4\Easel.png" Link="Content\Tiles\CraftingStations\General\Misc\Easel.png" />
+    <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\Base Files\Crafting\2-Wide\2x4\Easel_Overlay.png" Link="Content\Tiles\CraftingStations\General\Misc\Easel_Overlay.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\TeakBranches.png" Link="Content\Tiles\Plants\Trees\Teak\TeakBranches.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalBranchesFlowering.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalBranchesFlowering.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalBranchesWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalBranchesWithered.png" />
@@ -1198,12 +1198,9 @@
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Medical\" />
   </ItemGroup>
 	<Target Name="GenerateGlobalUsings" BeforeTargets="BeforeBuild">
-		<Exec Command="pwsh -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1"
-			  IgnoreExitCode="false"
-			  Condition="'$(OS)' != 'Windows_NT'" />
+		<Exec Command="pwsh -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1" IgnoreExitCode="false" Condition="'$(OS)' != 'Windows_NT'" />
 
 		<!-- Windows fallback if pwsh is not installed -->
-		<Exec Command="powershell -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1"
-			  Condition="'$(OS)' == 'Windows_NT'" />
+		<Exec Command="powershell -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1" Condition="'$(OS)' == 'Windows_NT'" />
 	</Target>
 </Project>

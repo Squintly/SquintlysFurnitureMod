@@ -1,5 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
 using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_2_Item;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -13,10 +14,10 @@ internal class Baths_1_Items : ModItem
     {
         public void Load(Mod mod)
         {
-            mod.AddContent(new Baths_1_Items(0)); //ImperialBathtub
-            mod.AddContent(new Baths_1_Items(1)); //TatteredBathtub
-            mod.AddContent(new Baths_1_Items(2)); //RepairedBathtub
-            mod.AddContent(new Baths_1_Items(3)); //CinderblockBathtub
+            for (int i = 0; i < 4; i++)
+            {
+                mod.AddContent(new Baths_1_Items(i));
+            }
         }
 
         public void Unload()

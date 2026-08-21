@@ -1,4 +1,5 @@
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

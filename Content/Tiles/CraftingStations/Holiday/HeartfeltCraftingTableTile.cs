@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Items.Decorations.Crafting;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

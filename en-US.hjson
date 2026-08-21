@@ -1399,6 +1399,11 @@ Mods: {
 				Tooltip: Try right-clicking!
 			}
 
+			Toothpaste: {
+				DisplayName: Toothpaste
+				Tooltip: ""
+			}
+
 			MedicineBottle: {
 				DisplayName: Medicine Bottle
 				Tooltip: Try right-clicking!
@@ -7732,6 +7737,156 @@ Mods: {
 			RepairedLibraryShelf: {
 				Tooltip: ""
 				DisplayName: Repaired Library Shelf
+			}
+
+			TeakGrassSeeds: {
+				DisplayName: Teak Grass Seeds
+				Tooltip: ""
+			}
+
+			TerraPretaItem: {
+				DisplayName: Terra Preta Item
+				Tooltip: ""
+			}
+
+			ButcherTableItem: {
+				DisplayName: Butcher Table Item
+				Tooltip: ""
+			}
+
+			FisherTableItem: {
+				DisplayName: Fisher Table Item
+				Tooltip: ""
+			}
+
+			ArchivistDeskItem: {
+				DisplayName: Archivist Desk Item
+				Tooltip: ""
+			}
+
+			DecoBoxItem: {
+				DisplayName: Deco Box Item
+				Tooltip: ""
+			}
+
+			EaselItem: {
+				DisplayName: Easel Item
+				Tooltip: ""
+			}
+
+			SmelterItem: {
+				DisplayName: Smelter Item
+				Tooltip: ""
+			}
+
+			ToolShedItem: {
+				DisplayName: Tool Shed Item
+				Tooltip: ""
+			}
+
+			WorktableItem: {
+				DisplayName: Worktable Item
+				Tooltip: ""
+			}
+
+			SpringRabbitsPlush: {
+				DisplayName: Spring Rabbits Plush
+				Tooltip: ""
+			}
+
+			Scoops: {
+				DisplayName: Scoops
+				Tooltip: ""
+			}
+
+			Eggs: {
+				DisplayName: Eggs
+				Tooltip: ""
+			}
+
+			Baskets: {
+				DisplayName: Baskets
+				Tooltip: ""
+			}
+
+			ThornBasket: {
+				DisplayName: Thorn Basket
+				Tooltip: ""
+			}
+
+			TeakFlowersPacket: {
+				DisplayName: Teak Flowers Packet
+				Tooltip: ""
+			}
+
+			TeakGrassPacket: {
+				DisplayName: Teak Grass Packet
+				Tooltip: ""
+			}
+
+			ShopBooksItem: {
+				DisplayName: Shop Books Item
+				Tooltip: ""
+			}
+
+			ShopBreadItem: {
+				Tooltip: ""
+				DisplayName: Shop Bread Item
+			}
+
+			ShopStall: {
+				Tooltip: ""
+				DisplayName: Shop Stall
+			}
+
+			FridgeAntique: {
+				Tooltip: ""
+				DisplayName: Fridge Antique
+			}
+
+			FridgeVintage: {
+				Tooltip: ""
+				DisplayName: Fridge Vintage
+			}
+
+			FridgeModern: {
+				Tooltip: ""
+				DisplayName: Fridge Modern
+			}
+
+			FridgeRetro: {
+				DisplayName: Fridge Retro
+				Tooltip: ""
+			}
+
+			StoveModern: {
+				DisplayName: Stove Modern
+				Tooltip: ""
+			}
+
+			StoveVintage: {
+				DisplayName: Stove Vintage
+				Tooltip: ""
+			}
+
+			StoveAntique: {
+				DisplayName: Stove Antique
+				Tooltip: ""
+			}
+
+			StoveRetro: {
+				DisplayName: Stove Retro
+				Tooltip: ""
+			}
+
+			ShopFakeItem: {
+				DisplayName: Shop Fake Item
+				Tooltip: ""
+			}
+
+			ShopRealItem: {
+				DisplayName: Shop Real Item
+				Tooltip: ""
 			}
 		}
 

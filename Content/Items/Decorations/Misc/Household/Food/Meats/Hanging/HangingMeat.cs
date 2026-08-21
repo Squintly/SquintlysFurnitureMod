@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 using SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneTwo.Normal;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -38,7 +39,7 @@ internal class HangingMeat : ModItem
     {
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Meat", 2)
-            .AddTile(TileID.CookingPots)
+            .AddTile(ModContent.TileType<ButcherTable>())
             .Register();
     }
 }

@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_2_Item
+namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_4_Item
 {
     internal class S_1x1_B_4_Items : ModItem
     {
@@ -26,7 +26,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S
             {
             }
         }
-        public enum s_1x1_B_4_Style
+        public enum S_1x1_B_4_Style
         {
             Orange = 0,
             Coconut = 1,
@@ -52,7 +52,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S
         public static string GetInternalNameFromStyle(int style)
         {
 
-            return Enum.GetName(typeof(s_1x1_B_4_Style), style);
+            return Enum.GetName(typeof(S_1x1_B_4_Style), style);
 
             throw new Exception("Invalid style");
         }

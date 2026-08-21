@@ -29,11 +29,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2
         }
         public enum s_2x2_3_Style
         {
-            FestiveDecorations = 0,
+            FestiveDecor = 0,
             Poinsettas = 1,
             Baskets = 2,
             Cauldrons = 3,
-            ThornBaskets = 4,
+            ThornBasket = 4,
         }
 
         protected override bool CloneNewInstances => true;

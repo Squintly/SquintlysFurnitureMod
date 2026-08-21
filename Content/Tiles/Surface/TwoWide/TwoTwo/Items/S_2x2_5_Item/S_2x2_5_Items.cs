@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2_3_Item
+namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2_5_Item
 {
     internal class S_2x2_5_Items : ModItem
     {

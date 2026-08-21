@@ -1,5 +1,8 @@
+using Microsoft.VisualBasic;
 using Terraria;
+using Terraria.GameContent.Metadata;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Abstracts.Blocks;
@@ -17,6 +20,8 @@ public abstract class SolidDirt : ModTile
         TileID.Sets.ChecksForMerge[Type] = true;
         TileID.Sets.CanBeDugByShovel[Type] = true;
         TileID.Sets.CanBeClearedDuringOreRunner[Type] = true;
+        TileID.Sets.Conversion.Dirt[Type] = true;
+        TileMaterials.SetForTileId(Type, TileMaterials._materialsByName["Dirt"]);
 
         SafeSetStaticDefaults();
     }

@@ -1,5 +1,5 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using System;
 using Terraria;

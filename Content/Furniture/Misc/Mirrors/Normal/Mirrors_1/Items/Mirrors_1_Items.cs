@@ -1,6 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
 using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -18,12 +18,6 @@ internal class Mirrors_1_Items : ModItem
                 {
                     mod.AddContent(new Mirrors_1_Items(i));
                 }
-            //mod.AddContent(new Mirrors_1_Items(0)); //ImperialMirror
-            //mod.AddContent(new Mirrors_1_Items(1)); //TatteredMirror
-            //mod.AddContent(new Mirrors_1_Items(2)); //RepairedMirror
-            //mod.AddContent(new Mirrors_1_Items(3)); //StoneBrickMirror
-            //mod.AddContent(new Mirrors_1_Items(4)); //RedBrickMirror
-            //mod.AddContent(new Mirrors_1_Items(5)); //CinderblockMirror
         }
 
         public void Unload()
@@ -48,31 +42,6 @@ internal class Mirrors_1_Items : ModItem
     public static string GetInternalNameFromStyle(int style) //This is a list of internal names. There MUST be an internal name for every style listed in the Load, or it'll kick up errors.
     {
         return Enum.GetName(typeof(Mirrors_1_Items_Style), style);
-
-        //if (style == 0)
-        //{
-        //    return "ImperialMirror";
-        //}
-        //if (style == 1)
-        //{
-        //    return "TatteredMirror";
-        //}
-        //if (style == 2)
-        //{
-        //    return "RepairedMirror";
-        //}
-        //if (style == 3)
-        //{
-        //    return "StoneBrickMirror";
-        //}
-        //if (style == 4)
-        //{
-        //    return "RedBrickMirror";
-        //}
-        //if (style == 5)
-        //{
-        //    return "CinderblockMirror";
-        //}
 
         throw new Exception("Invalid style");
     }
