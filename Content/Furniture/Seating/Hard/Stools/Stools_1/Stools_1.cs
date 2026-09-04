@@ -111,6 +111,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools.Stools_1
                 player.cursorItemIconReversed = true;
             }
         }
+
         public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
         public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -118,7 +119,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools.Stools_1
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
-            
+
             if (!TileDrawing.IsVisible(tile))
             {
                 return;
@@ -129,7 +130,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Hard.Stools.Stools_1
             int width = 32;
             int height = 32;
             int frameX = tile.TileFrameX;
-			int frameY = tile.TileFrameY;
+            int frameY = tile.TileFrameY;
             int offsetY = 14;
 
             spriteBatch.Draw(

@@ -44,7 +44,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.TwoTall.Roya
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.Width = 4;
             TileObjectData.newTile.Height = 2;
-            TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };;
+            TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
             TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 
             TileObjectData.newTile.StyleHorizontal = true;
@@ -103,6 +103,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.TwoTall.Roya
             }
             return true;
         }
+
         public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
         public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -110,7 +111,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.RoyalBeds.TwoTall.Roya
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
-            
+
             if (!TileDrawing.IsVisible(tile))
             {
                 return;

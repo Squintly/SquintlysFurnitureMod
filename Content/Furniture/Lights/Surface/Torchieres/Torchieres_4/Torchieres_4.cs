@@ -107,6 +107,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres.Torc
                 NetMessage.SendTileSquare(-1, topX, topY, 2, 3);
             }
         }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             if (Main.tile[i, j].TileFrameX / 144 != 0)
@@ -187,6 +188,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Torchieres.Torc
                 }
             }
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             var tile = Main.tile[i, j];

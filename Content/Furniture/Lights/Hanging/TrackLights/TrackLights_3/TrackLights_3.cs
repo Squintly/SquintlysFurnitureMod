@@ -202,7 +202,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.TrackLights.Tra
             {
                 Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
             }
-            
+
             return false;
         }
 

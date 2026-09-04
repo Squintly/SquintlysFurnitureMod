@@ -230,9 +230,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1) {
-				effects = SpriteEffects.FlipHorizontally;
-			}
+            if (i % 2 == 1)
+            {
+                effects = SpriteEffects.FlipHorizontally;
+            }
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
@@ -261,7 +262,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.2f;
                         float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.4f;
 
-                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 20, 20, 0), 0f, default, 1f, effects, 0f);  
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 20, 20, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
 
@@ -269,7 +270,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles
                 case StyleID.StoneBrickCandle:
                 case StyleID.RedBrickCandle:
                     if (frameX < 68)
-                    { 
+                    {
                         for (int c = 0; c < 1; c++)
                         {
                             float shakeX = Utils.RandomInt(ref randSeed, -5, 5) * 0.01f;
@@ -288,7 +289,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles
                             spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                         }
                     }
-                                
+
                     break;
 
                 default:
@@ -297,11 +298,12 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
                         float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
 
-                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 50, 50, 0), 0f, default, 1f, effects, 0f);                       
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 50, 50, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
             }
         }
+
         //public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
         //{
         //    ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);

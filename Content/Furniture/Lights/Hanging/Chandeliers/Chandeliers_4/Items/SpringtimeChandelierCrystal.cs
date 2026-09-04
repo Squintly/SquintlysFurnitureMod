@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers.Chandeliers_4;
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;

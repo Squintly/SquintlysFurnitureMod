@@ -260,6 +260,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands.Nightstand
                 player.cursorItemIconID = 0;
             }
         }
+
         public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
         public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -267,7 +268,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Nightstands.Nightstand
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
-            
+
             if (!TileDrawing.IsVisible(tile))
             {
                 return;

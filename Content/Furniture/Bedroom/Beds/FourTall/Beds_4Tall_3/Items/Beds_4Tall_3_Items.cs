@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using SquintlysFurnitureMod.Content.Furniture.Bedroom.Beds.FourTall.Beds_4Tall_3;
+using System;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

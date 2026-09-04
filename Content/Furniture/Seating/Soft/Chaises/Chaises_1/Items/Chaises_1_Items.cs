@@ -88,6 +88,5 @@ internal class Chaises_1_Items : ModItem
             .AddTile(ModContent.TileType<BrickOven>())
             .Register();
         }
-       
     }
 }

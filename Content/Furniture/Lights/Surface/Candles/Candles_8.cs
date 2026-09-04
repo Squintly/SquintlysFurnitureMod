@@ -1,8 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.CeilingLamps_2.Items;
-using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.TrackLights.TrackLights_3.Items;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles_3.Items;
 using System.Collections.Generic;
 using Terraria;

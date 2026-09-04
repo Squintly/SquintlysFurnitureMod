@@ -66,7 +66,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
             TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered |AnchorType.Platform, TileObjectData.newTile.Width, 0);
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.PlatformNonHammered | AnchorType.Platform, TileObjectData.newTile.Width, 0);
             TileObjectData.newAlternate.DrawYOffset = -8;
             TileObjectData.addAlternate(0);
 
@@ -118,6 +118,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
             }
         }
+
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         {
             if (i % 2 == 1)
@@ -125,6 +126,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                 spriteEffects = SpriteEffects.FlipHorizontally;
             }
         }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             if (Main.tile[i, j].TileFrameX / 36 != 0)
@@ -161,6 +163,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                     break;
             }
         }
+
         //public override void EmitParticles(int i, int j, Tile tileCache, short tileFrameX, short tileFrameY, Color tileLight, bool visible)
         //{
         //    if (!visible)
@@ -222,10 +225,11 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
 
             return false;
         }
+
         public override void AdjustMultiTileVineParameters(int i, int j, ref float? overrideWindCycle, ref float windPushPowerX, ref float windPushPowerY, ref bool dontRotateTopTiles, ref float totalWindMultiplier, ref Texture2D glowTexture, ref Color glowColor)
         {
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
-            
+
             var tile = Main.tile[i, j];
 
             short frameX = tile.TileFrameX;
@@ -270,6 +274,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                     //    break;
             }
         }
+
         public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
         {
             ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);

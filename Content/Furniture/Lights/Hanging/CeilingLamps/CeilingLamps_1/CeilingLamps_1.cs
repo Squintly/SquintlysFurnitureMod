@@ -116,6 +116,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 1);
             }
         }
+
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         {
             if (i % 2 == 1)
@@ -123,6 +124,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                 spriteEffects = SpriteEffects.FlipHorizontally;
             }
         }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             if (Main.tile[i, j].TileFrameX / 18 != 0)
@@ -152,6 +154,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                     break;
             }
         }
+
         public override void EmitParticles(int i, int j, Tile tileCache, short tileFrameX, short tileFrameY, Color tileLight, bool visible)
         {
             if (!visible)
@@ -202,74 +205,75 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
             //}
             //}
         }
-   //     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
-   //     {
-   //         var tile = Main.tile[i, j];
 
-   //         if (!TileDrawing.IsVisible(tile))
-   //         {
-   //             return;
-   //         }
+        //     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
+        //     {
+        //         var tile = Main.tile[i, j];
 
-   //         Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+        //         if (!TileDrawing.IsVisible(tile))
+        //         {
+        //             return;
+        //         }
 
-   //         if (Main.drawToScreen)
-   //         {
-   //             zero = Vector2.Zero;
-   //         }
+        //         Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
-   //         int width = 18;
-   //         int offsetY = 0;
-   //         int height = 18;
-   //         short frameX = tile.TileFrameX;
-   //         short frameY = tile.TileFrameY;
+        //         if (Main.drawToScreen)
+        //         {
+        //             zero = Vector2.Zero;
+        //         }
 
-   //         TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
+        //         int width = 18;
+        //         int offsetY = 0;
+        //         int height = 18;
+        //         short frameX = tile.TileFrameX;
+        //         short frameY = tile.TileFrameY;
 
-   //         ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
+        //         TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
 
-   //         SpriteEffects effects = SpriteEffects.None;
+        //         ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
 
-   //         if (i % 2 == 1) {
-			//	effects = SpriteEffects.FlipHorizontally;
-			//}
+        //         SpriteEffects effects = SpriteEffects.None;
 
-   //         StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
-   //         switch (style)
-   //         {
-   //             //High Flicker
-   //             case StyleID.ImperialCeilingLamp:
-   //                 for (int c = 0; c < 1; c++)
-   //                 {
-   //                     float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
-   //                     float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
+        //         if (i % 2 == 1) {
+        //	effects = SpriteEffects.FlipHorizontally;
+        //}
 
-   //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
-   //                 }
-   //                 break;
+        //         StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
+        //         switch (style)
+        //         {
+        //             //High Flicker
+        //             case StyleID.ImperialCeilingLamp:
+        //                 for (int c = 0; c < 1; c++)
+        //                 {
+        //                     float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.05f;
+        //                     float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.05f;
 
-   //             //Slight Flicker
-   //             case StyleID.CinderblockCeilingLamp:
-   //                 for (int c = 0; c < 1; c++)
-   //                 {
-   //                     float shakeX = Utils.RandomInt(ref randSeed, -5, 5) * 0.05f;
-   //                     float shakeY = Utils.RandomInt(ref randSeed, -5, 1) * 0.05f;
+        //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+        //                 }
+        //                 break;
 
-   //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
-   //                 }
-   //                 break;
+        //             //Slight Flicker
+        //             case StyleID.CinderblockCeilingLamp:
+        //                 for (int c = 0; c < 1; c++)
+        //                 {
+        //                     float shakeX = Utils.RandomInt(ref randSeed, -5, 5) * 0.05f;
+        //                     float shakeY = Utils.RandomInt(ref randSeed, -5, 1) * 0.05f;
 
-   //             default:
-   //                 for (int c = 0; c < 7; c++)
-   //                 {
-   //                     float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
-   //                     float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+        //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+        //                 }
+        //                 break;
 
-   //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
-   //                 }
-   //                 break;
-   //         }
-   //     }
+        //             default:
+        //                 for (int c = 0; c < 7; c++)
+        //                 {
+        //                     float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
+        //                     float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
+
+        //                     spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
+        //                 }
+        //                 break;
+        //         }
+        //     }
         public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
@@ -282,6 +286,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
 
             return false;
         }
+
         public override void AdjustMultiTileVineParameters(int i, int j, ref float? overrideWindCycle, ref float windPushPowerX, ref float windPushPowerY, ref bool dontRotateTopTiles, ref float totalWindMultiplier, ref Texture2D glowTexture, ref Color glowColor)
         {
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
@@ -318,9 +323,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1) {
-				effects = SpriteEffects.FlipHorizontally;
-			}
+            if (i % 2 == 1)
+            {
+                effects = SpriteEffects.FlipHorizontally;
+            }
 
             StyleID style = (StyleID)TileObjectData.GetTileStyle(Main.tile[i, j]);
             switch (style)

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns.Lanterns_2;
 using SquintlysFurnitureMod.Content.Items.Blocks.Woods.Teak;
 using Terraria;
 using Terraria.GameContent.Creative;

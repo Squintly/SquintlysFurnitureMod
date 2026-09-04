@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Lanterns.Lanterns_1;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;

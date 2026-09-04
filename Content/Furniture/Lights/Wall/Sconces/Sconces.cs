@@ -296,7 +296,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Wall.Sconces
                         spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 20, 20, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
-                    
+
                 case StyleID.TatteredSconceGlass:
                 case StyleID.TatteredSconceGlassSilver:
                     for (int c = 0; c < 7; c++)

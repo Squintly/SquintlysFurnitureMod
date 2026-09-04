@@ -65,7 +65,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Armchairs.Armchai
             Tile tile = Main.tile[i, j];
 
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
-            
+
             int height = tile.TileFrameY == 34 ? 18 : 16;
 
             spriteBatch.Draw(

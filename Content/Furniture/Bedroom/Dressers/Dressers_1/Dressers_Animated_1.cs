@@ -285,7 +285,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers.Dressers_1
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
-            
+
             if (!TileDrawing.IsVisible(tile))
             {
                 return;

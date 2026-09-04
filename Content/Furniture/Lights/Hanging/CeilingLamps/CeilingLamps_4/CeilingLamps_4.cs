@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using System.Collections.Generic;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.CeilingLamps_2.Items;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.TrackLights.TrackLights_3.Items;
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Halloween.Alchemy.Other;
-using System.Collections.Generic;
+
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -81,6 +81,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
 
             AddMapEntry(new Color(230, 200, 50), Language.GetText("MapObject.CeilingLamp"));
         }
+
         public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
             Tile t = Main.tile[i, j];
@@ -90,6 +91,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
             yield return new Item(Mod.Find<ModItem>(TrackLights_3_Items.GetInternalNameFromStyle(style)).Type);
             yield return new Item(Mod.Find<ModItem>(TrackLights_3_Items.GetInternalNameFromStyle(style)).Type);
         }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -226,6 +228,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
 
             return false;
         }
+
         public override void AdjustMultiTileVineParameters(int i, int j, ref float? overrideWindCycle, ref float windPushPowerX, ref float windPushPowerY, ref bool dontRotateTopTiles, ref float totalWindMultiplier, ref Texture2D glowTexture, ref Color glowColor)
         {
             var tile = Main.tile[i, j];
@@ -264,6 +267,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.CeilingLamps.Ce
                     //    break;
             }
         }
+
         public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
         {
             ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);

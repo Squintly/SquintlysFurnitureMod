@@ -234,6 +234,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candelabras.Can
                     break;
             }
         }
+
         //public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
         //{
         //    ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);

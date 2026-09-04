@@ -1,7 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
-using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
-using System;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

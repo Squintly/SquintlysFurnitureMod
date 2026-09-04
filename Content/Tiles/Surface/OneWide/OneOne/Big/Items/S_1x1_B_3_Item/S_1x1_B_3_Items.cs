@@ -1,5 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_Item;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +15,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S
         {
             this.placeStyle = placeStyle;
         }
+
         public class S_1x1_B_3_Items_Loader : ILoadable
         {
             public void Load(Mod mod)
@@ -30,6 +30,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S
             {
             }
         }
+
         public enum s_1x1_B_3_Style
         {
             Peach = 0,
@@ -50,13 +51,10 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S
 
         public static string GetInternalNameFromStyle(int style)
         {
-
             return Enum.GetName(typeof(s_1x1_B_3_Style), style);
 
             throw new Exception("Invalid style");
         }
-
-        
 
         public override void SetDefaults()
         {

@@ -202,6 +202,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candlesticks.Ca
                 }
             }
         }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             var tile = Main.tile[i, j];
@@ -213,9 +214,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candlesticks.Ca
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1) {
-				effects = SpriteEffects.FlipHorizontally;
-			}
+            if (i % 2 == 1)
+            {
+                effects = SpriteEffects.FlipHorizontally;
+            }
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
@@ -260,6 +262,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candlesticks.Ca
                     break;
             }
         }
+
         //public override void GetTileFlameData(int i, int j, ref TileDrawing.TileFlameData tileFlameData)
         //{
         //    ulong flameSeed = Main.TileFrameSeed ^ (ulong)(((long)i << 32) | (uint)j);

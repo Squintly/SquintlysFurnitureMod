@@ -76,9 +76,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests.Chests_1
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry1"), MapChestName);
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry2"), MapChestName);
-        
+
             AnimationFrameHeight = 36;
         }
+
         public override ushort GetMapOption(int i, int j)
         {
             return (ushort)(Main.tile[i, j].TileFrameX / 36);
@@ -232,6 +233,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests.Chests_1
                 player.cursorItemIconID = 0;
             }
         }
+
         //public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
         //public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -239,7 +241,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Storage.Chests.Chests_1
         //public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         //{
         //    Tile tile = Main.tile[i, j];
-        
+
         //    if (!TileDrawing.IsVisible(tile))
         //    {
         //        return;

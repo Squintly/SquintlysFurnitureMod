@@ -165,7 +165,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chaises.Chaises_3
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
-            
+
             if (!TileDrawing.IsVisible(tile))
             {
                 return;
@@ -176,7 +176,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Seating.Soft.Chaises.Chaises_3
             int width = 16;
             int height = 32;
             int frameX = tile.TileFrameX;
-			int frameY = tile.TileFrameY;
+            int frameY = tile.TileFrameY;
             int offsetY = 14;
 
             spriteBatch.Draw(

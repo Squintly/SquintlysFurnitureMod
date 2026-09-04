@@ -64,7 +64,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
                     x = 378;
                     offsetX = -4;
                     y = frameY;
-                }   
+                }
                 //Tattered
                 else if (Main.tile[i, j].TileFrameX <= 216 &&
                     (type == Type && tile.TileFrameX <= 216))
@@ -128,7 +128,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves
             {
                 Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
                 var texture = Main.instance.TilesRenderer.GetTileDrawTexture(Main.tile[i, j], i, j);
-                
+
                 spriteBatch.Draw(
                     texture,
                     new Vector2(i * 16 + offsetX - (int)Main.screenPosition.X, j * 16f + offsetY - (int)Main.screenPosition.Y) + zero,

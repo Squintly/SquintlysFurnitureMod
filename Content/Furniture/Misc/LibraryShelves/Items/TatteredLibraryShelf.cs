@@ -1,5 +1,3 @@
-using SquintlysFurnitureMod.Content.Furniture.Misc.Bookcases;
-using SquintlysFurnitureMod.Content.Furniture.Misc.LibraryShelves;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
