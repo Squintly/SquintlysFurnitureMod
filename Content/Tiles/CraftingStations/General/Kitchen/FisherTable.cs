@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -13,7 +14,7 @@ using Terraria.ObjectData;
 namespace SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 
 public class FisherTable : ModTile
-{   
+{
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -44,6 +45,7 @@ public class FisherTable : ModTile
 
         AddMapEntry(new Color(80, 44, 24), Language.GetText("Fisher's Table"));
     }
+
     public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
     public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -51,7 +53,7 @@ public class FisherTable : ModTile
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
         Tile tile = Main.tile[i, j];
-            
+
         if (!TileDrawing.IsVisible(tile))
         {
             return;
@@ -68,6 +70,7 @@ public class FisherTable : ModTile
                 Lighting.GetColor(i, j));
     }
 }
+
 public class FisherTableItem : ModItem
 {
     public override void SetStaticDefaults()
@@ -80,7 +83,7 @@ public class FisherTableItem : ModItem
         Item.width = 32;
         Item.height = 32;
 
-        Item.value = Item.buyPrice(silver: 30);
+        Item.value = Item.buyPrice(silver: 50);
 
         Item.DefaultToPlaceableTile(ModContent.TileType<FisherTable>());
     }
@@ -92,6 +95,11 @@ public class FisherTableItem : ModItem
             .AddRecipeGroup(RecipeGroupID.IronBar, 10)
             .AddRecipeGroup(RecipeGroupID.FishForDinner)
             .AddTile(TileID.Sawmill)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 50)
+            .AddTile(ModContent.TileType<ShopFish>())
             .Register();
     }
 }

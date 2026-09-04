@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -48,6 +49,7 @@ public class PrintingPressTile : ModTile
         }
     }
 }
+
 internal class PrintingPress : ModItem
 {
     public override void SetStaticDefaults()
@@ -60,7 +62,7 @@ internal class PrintingPress : ModItem
         Item.width = 24;
         Item.height = 24;
 
-        Item.value = Item.buyPrice(copper: 1);
+        Item.value = Item.buyPrice(silver: 15);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -79,8 +81,13 @@ internal class PrintingPress : ModItem
     {
         CreateRecipe(1)
             .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 2)
-            .AddTile(TileID.WorkBenches)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+            .AddTile(TileID.Sawmill)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 15)
+            .AddTile(ModContent.TileType<ShopBooks>())
             .Register();
     }
 }

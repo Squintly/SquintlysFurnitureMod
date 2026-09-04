@@ -30,7 +30,7 @@ public class ShopAdditions : GlobalNPC
     {
         if (shop.NpcType == NPCID.Merchant)
         {
-            shop.Add(Mod.Find<ModItem>("Egg").Type);
+            shop.Add(Mod.Find<ModItem>("Eggs").Type);
             shop.Add(Mod.Find<ModItem>("Sugar").Type);
             shop.Add(Mod.Find<ModItem>("Flour").Type);
             shop.Add(Mod.Find<ModItem>("Yeast").Type);

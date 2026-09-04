@@ -40,7 +40,7 @@ internal class Cupcake : ModItem
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours")
             .AddRecipeGroup("SquintlyFurnitureMod:Sugars")
-            .AddIngredient(ModContent.ItemType<Egg>())
+            .AddRecipeGroup("SquintlyFurnitureMod:Eggs")
             .AddTile(TileID.CookingPots)
             .Register();
     }

@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal.Three;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

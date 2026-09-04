@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -18,7 +19,7 @@ internal class FloralWorktableItem : ModItem
         Item.width = 24;
         Item.height = 25;
 
-        Item.value = Item.buyPrice(copper: 1);
+        Item.value = Item.buyPrice(silver: 10);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -39,7 +40,12 @@ internal class FloralWorktableItem : ModItem
             .AddRecipeGroup(RecipeGroupID.Wood, 8)
             .AddRecipeGroup(RecipeGroupID.IronBar, 2)
             .AddRecipeGroup("SquintlyFurnitureMod:FlowerSeeds", 4)
-            .AddTile(TileID.WorkBenches)
+            .AddTile(TileID.Sawmill)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 10)
+            .AddTile(ModContent.TileType<ShopFlowers>())
             .Register();
     }
 }

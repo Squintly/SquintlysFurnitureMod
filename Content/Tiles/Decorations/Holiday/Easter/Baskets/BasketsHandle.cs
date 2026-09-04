@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Storage.Medium;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

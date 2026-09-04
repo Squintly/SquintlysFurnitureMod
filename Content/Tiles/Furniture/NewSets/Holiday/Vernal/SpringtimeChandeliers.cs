@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Chandeliers.Chandeliers_4.Items;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Vernal.Lights;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

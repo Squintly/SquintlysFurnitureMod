@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.Axes;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeFour;
 using Terraria;
 using Terraria.GameContent.Creative;

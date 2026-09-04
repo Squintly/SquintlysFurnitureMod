@@ -40,6 +40,19 @@ Mods: {
 				MapEntry3: Red Brick Dresser
 				MapEntry4: Cinderblock Dresser
 			}
+
+			Counters_9_Antique.MapEntry0: Antique Counter
+			Counters_9_Modern.MapEntry0: Modern Counter
+			Counters_9_Retro.MapEntry0: Retro Counter
+			Counters_9_Vintage.MapEntry0: Vintage Counter
+
+			Cupboards_6_Antique.MapEntry0: Antique Cupboard
+			Cupboards_6_Modern.MapEntry0: Modern Cupboard
+			Cupboards_6_Retro.MapEntry0: Retro Cupboard
+			Cupboards_6_Vintage.MapEntry0: Vintage Cupboard
+
+			ToolChest.MapEntry0: Tool Chest
+			ToolChestWide.MapEntry0: Wide Tool Chest
 		}
 
 		Items: {
@@ -7814,82 +7827,408 @@ Mods: {
 				Tooltip: ""
 			}
 
-			TeakFlowersPacket: {
-				DisplayName: Teak Flowers Packet
-				Tooltip: ""
-			}
-
-			TeakGrassPacket: {
-				DisplayName: Teak Grass Packet
-				Tooltip: ""
-			}
-
-			ShopBooksItem: {
-				DisplayName: Shop Books Item
-				Tooltip: ""
-			}
-
-			ShopBreadItem: {
-				Tooltip: ""
-				DisplayName: Shop Bread Item
-			}
-
-			ShopStall: {
-				Tooltip: ""
-				DisplayName: Shop Stall
-			}
-
 			FridgeAntique: {
-				Tooltip: ""
-				DisplayName: Fridge Antique
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
+				DisplayName: Antique Fridge
 			}
 
 			FridgeVintage: {
-				Tooltip: ""
-				DisplayName: Fridge Vintage
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
+				DisplayName: Vintage Fridge
 			}
 
 			FridgeModern: {
-				Tooltip: ""
-				DisplayName: Fridge Modern
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
+				DisplayName: Modern Fridge
 			}
 
 			FridgeRetro: {
-				DisplayName: Fridge Retro
-				Tooltip: ""
+				DisplayName: Retro Fridge
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
 			}
 
 			StoveModern: {
-				DisplayName: Stove Modern
-				Tooltip: ""
+				DisplayName: Modern Stove
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
 			}
 
 			StoveVintage: {
-				DisplayName: Stove Vintage
-				Tooltip: ""
+				DisplayName: Vintage Stove
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
 			}
 
 			StoveAntique: {
-				DisplayName: Stove Antique
-				Tooltip: ""
+				DisplayName: Antique Stove
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
 			}
 
 			StoveRetro: {
-				DisplayName: Stove Retro
-				Tooltip: ""
+				DisplayName: Retro Stove
+				Tooltip: Try right clicking! Shift-right click to cycle backwards.
 			}
 
 			ShopFakeItem: {
-				DisplayName: Shop Fake Item
-				Tooltip: ""
+				DisplayName: Empty Shop
+				Tooltip:
+					'''
+					A stall operating on the honor system, which counts as all stalls. 
+					Primarily intended for decorative purposes or use with Magic Storage.
+					Shift-right click to cycle backwards. 
+					'''
 			}
 
 			ShopRealItem: {
-				DisplayName: Shop Real Item
+				Tooltip:
+					'''
+					A stall where a new vendor arrives each morning to sell their wares.
+					Want something else? Send them packing early with right click!
+					Shift-right click to cycle backwards. 
+					'''
+				DisplayName: Shop Stall
+			}
+
+			CounterModernItem: {
+				DisplayName: Modern Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterVintageItem: {
+				DisplayName: Vintage Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterAntiqueItem: {
+				DisplayName: Antique Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterRetroItem: {
+				DisplayName: Retro Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CuttingBoardItem: {
+				DisplayName: Cutting Board Item
+				Tooltip: ""
+			}
+
+			MicrowaveModern: {
+				DisplayName: Microwave Modern
+				Tooltip: ""
+			}
+
+			MicrowaveRetro: {
+				DisplayName: Microwave Retro
+				Tooltip: ""
+			}
+
+			MicrowaveAntique: {
+				DisplayName: Microwave Antique
+				Tooltip: ""
+			}
+
+			MicrowaveVintage: {
+				DisplayName: Microwave Vintage
+				Tooltip: ""
+			}
+
+			ChoppingBlockItem: {
+				DisplayName: Chopping Block Item
+				Tooltip: ""
+			}
+
+			PaintJarItem: {
+				DisplayName: Paint Jar Item
+				Tooltip: ""
+			}
+
+			TackleBox: {
+				DisplayName: Tackle Box
+				Tooltip: ""
+			}
+
+			DishwasherModern: {
+				DisplayName: Modern Dishwasher
+				Tooltip: ""
+			}
+
+			DishwasherVintage: {
+				DisplayName: Vintage Dishwasher
+				Tooltip: ""
+			}
+
+			DishwasherAntique: {
+				DisplayName: Antique Dishwasher
+				Tooltip: ""
+			}
+
+			DishwasherRetro: {
+				DisplayName: Retro Dishwasher
+				Tooltip: ""
+			}
+
+			CounterNarrowModern: {
+				DisplayName: Narrow Modern Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterNarrowVintage: {
+				DisplayName: Narrow Vintage Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterNarrowAntique: {
+				DisplayName: Narrow Antique Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CounterNarrowRetro: {
+				DisplayName: Narrow Retro Counter
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CupboardModern: {
+				DisplayName: Modern Cupboard
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CupboardVintage: {
+				DisplayName: Vintage Cupboard
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CupboardAntique: {
+				DisplayName: Antique Cupboard
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CupboardRetro: {
+				DisplayName: Retro Cupboard
+				Tooltip: Shift-right click to cycle!
+			}
+
+			KitchenSinkModern: {
+				DisplayName: Modern Kitchen Sink
+				Tooltip: Shift-right click to cycle!
+			}
+
+			KitchenSinkVintage: {
+				DisplayName: Vintage Kitchen Sink
+				Tooltip: Shift-right click to cycle!
+			}
+
+			KitchenSinkAntique: {
+				DisplayName: Antique Kitchen Sink
+				Tooltip: Shift-right click to cycle!
+			}
+
+			KitchenSinkRetro: {
+				DisplayName: Retro Kitchen Sink
+				Tooltip: Shift-right click to cycle!
+			}
+
+			CupboardNarrowModern: {
+				DisplayName: Cupboard Narrow Modern
+				Tooltip: ""
+			}
+
+			CupboardNarrowVintage: {
+				DisplayName: Cupboard Narrow Vintage
+				Tooltip: ""
+			}
+
+			CupboardNarrowAntique: {
+				DisplayName: Cupboard Narrow Antique
+				Tooltip: ""
+			}
+
+			CupboardNarrowRetro: {
+				DisplayName: Cupboard Narrow Retro
+				Tooltip: ""
+			}
+
+			CupboardThinModern: {
+				DisplayName: Cupboard Thin Modern
+				Tooltip: ""
+			}
+
+			CupboardThinVintage: {
+				DisplayName: Cupboard Thin Vintage
+				Tooltip: ""
+			}
+
+			CupboardThinAntique: {
+				DisplayName: Cupboard Thin Antique
+				Tooltip: ""
+			}
+
+			CupboardThinRetro: {
+				DisplayName: Cupboard Thin Retro
+				Tooltip: ""
+			}
+
+			OvenHoodAntique: {
+				Tooltip: ""
+				DisplayName: Oven Hood Antique
+			}
+
+			OvenHoodVintage: {
+				Tooltip: ""
+				DisplayName: Oven Hood Vintage
+			}
+
+			OvenHoodModern: {
+				Tooltip: ""
+				DisplayName: Oven Hood Modern
+			}
+
+			OvenHoodRetro: {
+				DisplayName: Oven Hood Retro
+				Tooltip: ""
+			}
+
+			MasonryRackItem: {
+				DisplayName: Masonry Rack Item
+				Tooltip: ""
+			}
+
+			PaintJarsItem: {
+				DisplayName: Paint Jars Item
+				Tooltip: ""
+			}
+
+			SewingBoxItem: {
+				DisplayName: Sewing Box Item
+				Tooltip: ""
+			}
+
+			ThreadItem: {
+				DisplayName: Thread Item
+				Tooltip: ""
+			}
+
+			ChocolateEggs: {
+				DisplayName: Chocolate Eggs
+				Tooltip: ""
+			}
+
+			CarrotsBig: {
+				DisplayName: Carrots Big
+				Tooltip: ""
+			}
+
+			BreadPanSmall: {
+				DisplayName: Bread Pan Small
+				Tooltip: ""
+			}
+
+			EggsBrown: {
+				DisplayName: Eggs Brown
+				Tooltip: ""
+			}
+
+			PaintBrush: {
+				DisplayName: Paint Brush
+				Tooltip: ""
+			}
+
+			PaintPalette: {
+				DisplayName: Paint Palette
+				Tooltip: ""
+			}
+
+			SpoonJar: {
+				DisplayName: Spoon Jar
+				Tooltip: ""
+			}
+
+			ToolBoxItem: {
+				DisplayName: Tool Box Item
+				Tooltip: ""
+			}
+
+			ToolChestItem: {
+				DisplayName: Tool Chest Item
+				Tooltip: ""
+			}
+
+			ToolChestTallItem: {
+				DisplayName: Tool Chest Tall Item
+				Tooltip: ""
+			}
+
+			ToolChestWideItem: {
+				DisplayName: Tool Chest Wide Item
+				Tooltip: ""
+			}
+
+			ToolCupboardItem: {
+				DisplayName: Tool Cupboard Item
+				Tooltip: ""
+			}
+
+			ShopSeasonalItem: {
+				DisplayName: Shop Seasonal Item
+				Tooltip: ""
+			}
+
+			KnifeBlock: {
+				DisplayName: Knife Block
+				Tooltip: ""
+			}
+
+			PaintCups: {
+				DisplayName: Paint Cups
+				Tooltip: ""
+			}
+
+			Pots: {
+				DisplayName: Pots
+				Tooltip: ""
+			}
+
+			DishwasherRetroItem: {
+				Tooltip: ""
+				DisplayName: Dishwasher Retro Item
+			}
+
+			DishwasherModernItem: {
+				Tooltip: ""
+				DisplayName: Dishwasher Modern Item
+			}
+
+			DishwasherAntiqueItem: {
+				Tooltip: ""
+				DisplayName: Dishwasher Antique Item
+			}
+
+			DishwasherVintageItem: {
+				DisplayName: Dishwasher Vintage Item
+				Tooltip: ""
+			}
+
+			KitchenSinkAntiqueItem: {
+				DisplayName: Kitchen Sink Antique Item
+				Tooltip: ""
+			}
+
+			KitchenSinkModernItem: {
+				DisplayName: Kitchen Sink Modern Item
+				Tooltip: ""
+			}
+
+			KitchenSinkRetroItem: {
+				DisplayName: Kitchen Sink Retro Item
+				Tooltip: ""
+			}
+
+			KitchenSinkVintageItem: {
+				DisplayName: Kitchen Sink Vintage Item
 				Tooltip: ""
 			}
 		}
 
 		Projectiles.CorruptReedProjectile.DisplayName: Corrupt Reed Projectile
+		Keybinds.AltPressed.DisplayName: Alt Pressed
 	}
 }

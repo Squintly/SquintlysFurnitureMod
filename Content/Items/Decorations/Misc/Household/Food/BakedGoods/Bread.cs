@@ -1,5 +1,4 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal.Four;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

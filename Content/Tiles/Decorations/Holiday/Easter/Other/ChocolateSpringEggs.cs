@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Sweets;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -39,7 +38,7 @@ public class ChocolateSpringEggs : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(Mod.Find<ModItem>("ChocolateSpringEgg").Type);
+        RegisterItemDrop(Mod.Find<ModItem>("ChocolateEggs").Type);
     }
 
     public override bool RightClick(int i, int j)

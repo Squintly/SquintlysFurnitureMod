@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Tiles.Wall.ThreeWide.ThreeTwo;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -118,6 +118,11 @@ public class SmelterItem : ModItem
             .AddIngredient(ItemID.GrayBrick, 20)
             .AddIngredient(ItemID.LavaBucket)
             .AddTile(TileID.Anvils)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 18)
+            .AddTile(ModContent.TileType<ShopSmith>())
             .Register();
     }
 }

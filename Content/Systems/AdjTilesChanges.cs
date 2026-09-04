@@ -23,7 +23,7 @@
 //            int[] result = base.AdjTiles(type);
 
 //            if (type == ModContent.TileType<Shops>() && (tile.TileFrameX / 74))
-//            {   
+//            {
 //                int i = Main.tile.Width;
 //                int j = Main.tile.Height;
 //                Tile tile = Main.tile[i, j];

@@ -1,5 +1,7 @@
 using SquintlysFurnitureMod.Content.Items.WallItems.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -20,7 +22,7 @@ internal class ChocolateBlockItem : ModItem
         Item.width = 16;
         Item.height = 16;
 
-        Item.value = Item.buyPrice(copper: 0);
+        Item.value = Item.buyPrice(copper: 50);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -38,13 +40,13 @@ internal class ChocolateBlockItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<ChocolateWallItem>(), 4)
-           .AddTile(TileID.WorkBenches)
-           .Register();
+            .AddIngredient(ItemID.CopperCoin, 50)
+            .AddTile(ModContent.TileType<ShopBread>())
+            .Register();
 
         CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 1)
-           .AddTile(TileID.WorkBenches)
+           .AddIngredient(ModContent.ItemType<ChocolateWallItem>(), 4)
+           .AddTile(ModContent.TileType<Worktable>())
            .Register();
 
         CreateRecipe()
@@ -52,8 +54,13 @@ internal class ChocolateBlockItem : ModItem
            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
            .Register();
 
-        CreateRecipe()
-           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>(), 4)
+        CreateRecipe(10)
+           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>())
+           .AddTile(ModContent.TileType<Worktable>())
+           .Register();
+
+        CreateRecipe(10)
+           .AddIngredient(ModContent.ItemType<HeartfeltBlockItem>())
            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
            .Register();
     }

@@ -1,4 +1,4 @@
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Three;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -6,42 +6,42 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
 
-internal class Egg : ModItem
-{
-    public override void SetStaticDefaults()
-    {
-        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-    }
+//internal class Egg : ModItem
+//{
+//    public override void SetStaticDefaults()
+//    {
+//        CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+//    }
 
-    public override void SetDefaults()
-    {
-        Item.width = 16;
-        Item.height = 20;
+//    public override void SetDefaults()
+//    {
+//        Item.width = 16;
+//        Item.height = 20;
 
-        Item.value = Item.buyPrice(copper: 10);
+//        Item.value = Item.buyPrice(copper: 50);
 
-        Item.useStyle = ItemUseStyleID.Swing;
-        Item.useTurn = true;
-        Item.useAnimation = 15;
-        Item.useTime = 15;
+//        Item.useStyle = ItemUseStyleID.Swing;
+//        Item.useTurn = true;
+//        Item.useAnimation = 15;
+//        Item.useTime = 15;
 
-        Item.autoReuse = true;
-        Item.consumable = true;
+//        Item.autoReuse = true;
+//        Item.consumable = true;
 
-        Item.maxStack = 9999;
+//        Item.maxStack = 9999;
 
-        Item.createTile = ModContent.TileType<S_1x1_B_3>();
-        Item.placeStyle = 5;
-    }
-}
+//        Item.createTile = ModContent.TileType<S_1x1_B_3>();
+//        Item.placeStyle = 5;
+//    }
+//}
 
-public class EggRecipes : ModSystem
-{
-    public override void AddRecipes()
-    {
-        Recipe recipe = Recipe.Create(ItemID.FriedEgg);
-        recipe.AddIngredient(ModContent.ItemType<Egg>());
-        recipe.AddTile(TileID.CookingPots);
-        recipe.Register();
-    }
-}
+//public class EggRecipes : ModSystem
+//{
+//    public override void AddRecipes()
+//    {
+//        Recipe recipe = Recipe.Create(ItemID.FriedEgg);
+//        recipe.AddIngredient(ModContent.ItemType<Egg>());
+//        recipe.AddTile(TileID.CookingPots);
+//        recipe.Register();
+//    }
+//}

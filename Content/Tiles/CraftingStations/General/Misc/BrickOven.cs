@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Tiles.Wall.ThreeWide.ThreeTwo;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -118,6 +118,11 @@ public class BrickOvenItem : ModItem
             .AddRecipeGroup(RecipeGroupID.Wood, 5)
             .AddIngredient(ItemID.Torch, 5)
             .AddTile(TileID.HeavyWorkBench)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 30)
+            .AddTile(ModContent.TileType<ShopBread>())
             .Register();
     }
 }

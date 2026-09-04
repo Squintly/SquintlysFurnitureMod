@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Items.Materials;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal.Three;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -38,7 +38,7 @@ internal class EggCarton : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Egg>(), 6)
+            .AddRecipeGroup("SquintlyFurnitureMod:Eggs", 6)
             .AddIngredient(ModContent.ItemType<Paper>(), 2)
             .AddTile(TileID.HeavyWorkBench)
             .Register();

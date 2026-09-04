@@ -1,7 +1,7 @@
 using SquintlysFurnitureMod.Content.Items.Blocks.Holiday;
 using SquintlysFurnitureMod.Content.Items.Materials;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal;
+using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal.Six;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

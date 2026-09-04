@@ -1,5 +1,4 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern;
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Modern.Guns;
 using SquintlysFurnitureMod.Content.Tiles.Wall.ThreeWide.ThreeTwo;
 using Terraria;
 using Terraria.GameContent.Creative;

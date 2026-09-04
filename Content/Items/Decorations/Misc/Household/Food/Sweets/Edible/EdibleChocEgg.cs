@@ -47,7 +47,7 @@ internal class EdibleChocEgg : ModItem
             .Register();
 
         CreateRecipe()
-            .AddIngredient(Mod.Find<ModItem>("ChocolateSpringEgg").Type, 1)
+            .AddIngredient(Mod.Find<ModItem>("ChocolateEggs").Type, 1)
             .Register();
     }
 }

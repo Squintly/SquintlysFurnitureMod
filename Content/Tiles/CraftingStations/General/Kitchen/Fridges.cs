@@ -13,7 +13,7 @@ using Terraria.ObjectData;
 namespace SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 
 public class Fridges : ModTile
-{   
+{
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -27,6 +27,8 @@ public class Fridges : ModTile
         Main.tileSolidTop[Type] = true;
         Main.tileTable[Type] = true;
         TileID.Sets.IgnoredByNpcStepUp[Type] = true;
+
+        AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
         TileObjectData.newTile.Origin = new Point16(0, 0);
@@ -46,6 +48,7 @@ public class Fridges : ModTile
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Fridge"));
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -61,158 +64,40 @@ public class Fridges : ModTile
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
+        int topX = i - tile.TileFrameX % 32 / 16; //change first number depending on size
         int topY = j - tile.TileFrameY % 72 / 16;
 
         bool shiftPressed = Main.keyState.PressingShift();
-        //Modern
-        if (tile.TileFrameX <= 106)
+        if (!shiftPressed)
         {
-            if (!shiftPressed)
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 36); //change first two by total size, last by style size
+
+            for (int x = topX; x < topX + 2; x++) // change depending on width
             {
-                short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
+                for (int y = topY; y < topY + 4; y++) // change height
                 {
-                    for (int y = topY; y < topY + 4; y++) // change height
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
                     {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-            if (shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX <= 36 ? 72 : -36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
+                        Wiring.SkipWire(x, y);
                     }
                 }
             }
         }
-        //Vintage
-        if (tile.TileFrameX >= 108 && tile.TileFrameX <= 214)
+        if (shiftPressed)
         {
-            if (!shiftPressed)
+            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 72 : -36); //change first two by total size, last by style size
+
+            for (int x = topX; x < topX + 2; x++) // change depending on width
             {
-                short frameAdjustment = (short)(tile.TileFrameX >= 178 ? -72 : 36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
+                for (int y = topY; y < topY + 4; y++) // change height
                 {
-                    for (int y = topY; y < topY + 4; y++) // change height
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
                     {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-            if (shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX <= 142 ? 72 : -36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-        }
-        //Antique
-        if (tile.TileFrameX >= 214 && tile.TileFrameX <= 322)
-        {
-            if (!shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX >= 286 ? -72 : 36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-            if (shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX <= 250 ? 72 : -36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-        }
-        //Retro
-        if (tile.TileFrameX >= 322)
-        {
-            if (!shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX >= 394 ? -72 : 36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
-                    }
-                }
-            }
-            if (shiftPressed)
-            {
-                short frameAdjustment = (short)(tile.TileFrameX <= 358 ? 72 : -36); //change first two by total size, last by style size
-
-                for (int x = topX; x < topX + 2; x++) // change depending on width
-                {
-                    for (int y = topY; y < topY + 4; y++) // change height
-                    {
-                        Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                        if (Wiring.running)
-                        {
-                            Wiring.SkipWire(x, y);
-                        }
+                        Wiring.SkipWire(x, y);
                     }
                 }
             }
@@ -221,28 +106,5 @@ public class Fridges : ModTile
         {
             NetMessage.SendTileSquare(-1, topX, topY, 2, 4); //change for width, height
         }
-    }
-    public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
-
-    public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
-
-    public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
-    {
-        Tile tile = Main.tile[i, j];
-            
-        if (!TileDrawing.IsVisible(tile))
-        {
-            return;
-        }
-
-        Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
-
-        int height = tile.TileFrameY == 72 ? 18 : 16;
-
-        spriteBatch.Draw(
-                ModContent.Request<Texture2D>(Texture + "_Overlay").Value,
-                new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + zero,
-                new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, height),
-                Lighting.GetColor(i, j));
     }
 }

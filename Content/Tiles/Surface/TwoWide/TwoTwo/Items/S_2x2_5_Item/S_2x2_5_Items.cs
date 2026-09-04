@@ -1,10 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_Item;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -27,6 +21,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2
             {
             }
         }
+
         public enum s_2x2_5_Style
         {
             SpringBasket = 0,
@@ -40,7 +35,6 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Items.S_2x2
 
         public static string GetInternalNameFromStyle(int style)
         {
-
             return Enum.GetName(typeof(s_2x2_5_Style), style);
 
             throw new Exception("Invalid style");

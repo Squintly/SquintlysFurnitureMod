@@ -33,6 +33,9 @@
     <None Remove="Content\Tiles\Trees\**" />
   </ItemGroup>
   <ItemGroup>
+    <AdditionalFiles Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9.png" />
+    <AdditionalFiles Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9_Highlight.png" />
+    <AdditionalFiles Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9_Merge.png" />
     <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignItem.png" />
     <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\GoldNorthPoleSignLargeItem.png" />
     <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Christmas\NorthPoleSignItem.png" />
@@ -74,6 +77,9 @@
     <None Remove="Content\Furniture\Bedroom\RoyalBeds\RoyalBeds_4Tall_6_Highlight.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall.png" />
     <None Remove="Content\Furniture\Bedroom\RoyalBeds_4Tall_Highlight.png" />
+    <None Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9.png" />
+    <None Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9_Highlight.png" />
+    <None Remove="Content\Furniture\Kitchen\Storage\Counters\Counters_9_Merge.png" />
     <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps_4.png" />
     <None Remove="Content\Furniture\Lights\Hanging\CeilingLamps\CeilingLamps_4_Flame.png" />
     <None Remove="Content\Furniture\Lights\Hanging\Chandeliers.png" />
@@ -187,7 +193,6 @@
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\Pitcher.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepper.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepperGlass.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\Scoop.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCake.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCakeSlice.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BirthdayCakeBlue.png" />
@@ -1193,7 +1198,6 @@
     <Folder Include="Content\Items\Decorations\Misc\Technology\Appliances\" />
     <Folder Include="Content\Items\Decorations\Misc\Technology\Entertainment\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Hobbies\Music\" />
-    <Folder Include="Content\Tiles\Decorations\Misc\Technology\Appliances\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Entertainment\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Medical\" />
   </ItemGroup>

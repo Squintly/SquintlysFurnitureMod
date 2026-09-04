@@ -1,9 +1,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Items.Materials;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.Creative;
 using Terraria.GameContent.Drawing;
@@ -29,7 +30,7 @@ public class Easel : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
         TileObjectData.newTile.Origin = new Point16(0, 0);
         TileObjectData.newTile.Height = 4;
-        TileObjectData.newTile.Width = 2; 
+        TileObjectData.newTile.Width = 2;
         TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 18 };
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
@@ -40,7 +41,10 @@ public class Easel : ModTile
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(253, 221, 195), Language.GetText("Easel"));
+
+        AdjTiles = new int[] { ModContent.TileType<PaintJars>() };
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -58,9 +62,8 @@ public class Easel : ModTile
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
         int topY = j - tile.TileFrameY % 72 / 16;
-
+       
         short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change first two by total size, last by style size
-
         for (int x = topX; x < topX + 2; x++) // change depending on width
         {
             for (int y = topY; y < topY + 4; y++) // change height
@@ -73,12 +76,12 @@ public class Easel : ModTile
                 }
             }
         }
-
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 2, 4); //change for width, height
         }
     }
+
     public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
     public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -86,7 +89,7 @@ public class Easel : ModTile
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
         Tile tile = Main.tile[i, j];
-            
+
         if (!TileDrawing.IsVisible(tile))
         {
             return;
@@ -127,6 +130,11 @@ public class EaselItem : ModItem
             .AddRecipeGroup(RecipeGroupID.Wood, 10)
             .AddIngredient(ModContent.ItemType<Paper>(), 10)
             .AddTile(TileID.Sawmill)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.CopperCoin, 10)
+            .AddTile(ModContent.TileType<ShopPaint>())
             .Register();
     }
 }

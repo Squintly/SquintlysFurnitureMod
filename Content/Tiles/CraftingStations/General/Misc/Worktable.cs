@@ -40,6 +40,7 @@ public class Worktable : ModTile
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(89, 51, 28), Language.GetText("Worktable"));
+        AdjTiles = new int[] { TileID.WorkBenches };
     }
 }
 

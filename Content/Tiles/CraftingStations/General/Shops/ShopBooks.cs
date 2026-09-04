@@ -1,12 +1,8 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -42,13 +38,14 @@ public class ShopBooks : ModTile
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Shop"));
         AnimationFrameHeight = 74;
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech, new Vector2(i * 16, j * 16));
 
         Tile tile = Main.tile[i, j];
         (int topX, int topY) = TileObjectData.TopLeft(i, j);
-        
+
         bool shiftPressed = Main.keyState.PressingShift();
 
         if (!shiftPressed)
@@ -68,7 +65,7 @@ public class ShopBooks : ModTile
             {
                 for (int y = topY; y < topY + 4; y++)
                 {
-                    Main.tile[x, y].TileType = (ushort)ModContent.TileType<ShopWeapons>();
+                    Main.tile[x, y].TileType = (ushort)ModContent.TileType<ShopAppliances>();
                 }
             }
         }
@@ -79,8 +76,8 @@ public class ShopBooks : ModTile
         }
 
         return true;
-
     }
+
     public override void AnimateTile(ref int frame, ref int frameCounter)
     {
         frameCounter++;
@@ -100,6 +97,7 @@ public class ShopBooks : ModTile
             frameYOffset = Main.tileFrame[type] * 74;
         }
     }
+
     public override void RandomUpdate(int i, int j)
     {
         if (Main.dayTime && Main.time == 0)
@@ -108,4 +106,3 @@ public class ShopBooks : ModTile
         }
     }
 }
-

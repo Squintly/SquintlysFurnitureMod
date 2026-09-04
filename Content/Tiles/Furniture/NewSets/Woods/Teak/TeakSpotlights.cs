@@ -2,8 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights.Spotlights_2.Items;
-using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles_3.Items;
-using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Woods.Teak;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
@@ -57,6 +55,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Woods.Teak
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Lantern"));
         }
+
         public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
             Tile t = Main.tile[i, j];

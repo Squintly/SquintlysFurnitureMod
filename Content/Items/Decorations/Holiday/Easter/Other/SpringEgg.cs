@@ -38,7 +38,7 @@ internal class SpringEgg : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ModContent.ItemType<Egg>(), 1)
+            .AddRecipeGroup("SquintlyFurnitureMod:Eggs")
             .AddRecipeGroup("SquintlyFurnitureMod:Paint", 1)
             .AddTile(ModContent.TileType<FloralWorktable>())
             .Register();

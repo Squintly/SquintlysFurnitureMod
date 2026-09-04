@@ -40,7 +40,7 @@ internal class BigCakeSlice : ModItem
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours", 2)
             .AddRecipeGroup("SquintlyFurnitureMod:Sugars", 2)
-            .AddIngredient(ModContent.ItemType<Egg>())
+            .AddRecipeGroup("SquintlyFurnitureMod:Eggs")
             .AddTile(TileID.CookingPots)
             .Register();
 

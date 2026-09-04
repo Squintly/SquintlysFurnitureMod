@@ -1,7 +1,5 @@
-﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
-using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using SquintlysFurnitureMod.Content.Furniture.Misc.Mirrors.Normal.Mirrors_1;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using System;
 using Terraria;
 using Terraria.ID;
@@ -16,15 +14,16 @@ internal class Fridges_Items : ModItem
         public void Load(Mod mod) //This tells the game how many new items to make, and what style on the tile those items place. 0 here places the first (0th) style on the Mirrors_1 tile, while 1 places the 2nd, etc. Fun fact: you can skip numbers in order to have an item generated the normal way without making a duplicate. I've done that mostly for items from furniture sets I intend to replace, and for the Golden Stool, because I couldn't figure out how to make it drop from pirates properly.
         {
             for (int i = 0; i < 4; i++)
-                {
-                    mod.AddContent(new Fridges_Items(i));
-                }
+            {
+                mod.AddContent(new Fridges_Items(i));
+            }
         }
 
         public void Unload()
         {
         }
     }
+
     public enum Fridges_Items_Style
     {
         FridgeModern = 0,
@@ -34,7 +33,7 @@ internal class Fridges_Items : ModItem
     }
 
     protected override bool CloneNewInstances => true; //This makes the game make a new item for each thing
-    private readonly int placeStyle; 
+    private readonly int placeStyle;
 
     public override string Name => GetInternalNameFromStyle(placeStyle); //This connects the style (which is determined on the tile, not the item) with the internal name of the tile. This is NOT the item's actual name, but rather what you'd use as a class name for an individual item done the standard way, and they must all be unique. I try to have these match the style names I've given in the tile itself, as these are stored as strings rather than class names, meaning I can search for one thing and get results for both the tile and the item that places it.
 
@@ -52,13 +51,13 @@ internal class Fridges_Items : ModItem
 
     public override void SetDefaults() //This is more or less what you'd find in a normal item. I'm trying to standardize every item sprite to 32x32 but haven't done all of them yet. If an item sprite isn't 32x32 either just give it empty space, or if it's too large let me know and I'll make a smaller one.
     {
-        Item.DefaultToPlaceableTile(ModContent.TileType<Fridges>(), placeStyle); //This is what tells the code what tile the items generated in this class places. Make sure this 
+        Item.DefaultToPlaceableTile(ModContent.TileType<Fridges>(), placeStyle); //This is what tells the code what tile the items generated in this class places. Make sure this
 
         Item.width = 32;
         Item.height = 32;
 
-        Item.value = Item.buyPrice(silver: 2);
-        Item.maxStack = Item.CommonMaxStack; //Hey, you know that idea you had about replacing the numbers? Turns out TML actually already did that! I forgot about that, lol 
+        Item.value = Item.buyPrice(silver: 30);
+        Item.maxStack = Item.CommonMaxStack; //Hey, you know that idea you had about replacing the numbers? Turns out TML actually already did that! I forgot about that, lol
     }
 
     public override void AddRecipes() //This is entirely normal recipe code, for the most part.
@@ -67,7 +66,12 @@ internal class Fridges_Items : ModItem
             .AddRecipeGroup(RecipeGroupID.IronBar, 10)
             .AddIngredient(ItemID.Glass, 5)
             .AddIngredient(ItemID.IceBlock, 5)
-            .AddTile(TileID.HeavyWorkBench)
+            .AddTile(TileID.Anvils)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 30)
+            .AddTile(ModContent.TileType<ShopFish>())
             .Register();
     }
 }

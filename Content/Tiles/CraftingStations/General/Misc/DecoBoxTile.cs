@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Items.Materials;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -34,6 +35,7 @@ public class DecoBoxTile : ModTile
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Decoration Box"));
     }
 }
+
 internal class DecoBoxItem : ModItem
 {
     public override void SetStaticDefaults()
@@ -46,7 +48,7 @@ internal class DecoBoxItem : ModItem
         Item.width = 14;
         Item.height = 18;
 
-        Item.value = Item.buyPrice(copper: 1);
+        Item.value = Item.buyPrice(copper: 10);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -64,7 +66,8 @@ internal class DecoBoxItem : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddRecipeGroup(RecipeGroupID.Wood)
+            .AddRecipeGroup(RecipeGroupID.Wood, 10)
+            .AddIngredient(ModContent.ItemType<Paper>(), 10)
             .AddTile(TileID.WorkBenches)
             .Register();
     }

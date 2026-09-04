@@ -40,7 +40,7 @@ internal class Cake : ModItem
         CreateRecipe()
             .AddRecipeGroup("SquintlyFurnitureMod:Flours", 2)
             .AddRecipeGroup("SquintlyFurnitureMod:Sugars")
-            .AddIngredient(ModContent.ItemType<Egg>())
+            .AddRecipeGroup("SquintlyFurnitureMod:Eggs")
             .AddTile(TileID.CookingPots)
             .Register();
     }

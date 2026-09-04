@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Farming.Crops;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -38,7 +37,7 @@ public class BigCarrots : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(Mod.Find<ModItem>("BigCarrot").Type);
+        RegisterItemDrop(Mod.Find<ModItem>("CarrotsBig").Type);
     }
 
     public override bool RightClick(int i, int j)

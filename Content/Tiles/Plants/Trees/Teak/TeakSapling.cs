@@ -57,7 +57,7 @@
 //		}
 
 //		public override void RandomUpdate(int i, int j, bool underground) {
-//			// A random chance to slow down growth. 
+//			// A random chance to slow down growth.
 //			if (!WorldGen.genRand.NextBool(20)) {
 //				return;
 //			}

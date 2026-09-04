@@ -16,7 +16,7 @@ using Terraria.ObjectData;
 namespace SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 
 public class Stoves : ModTile
-{   
+{
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -30,7 +30,8 @@ public class Stoves : ModTile
         Main.tileSolidTop[Type] = true;
         Main.tileTable[Type] = true;
         TileID.Sets.IgnoredByNpcStepUp[Type] = true;
-        TileID.Sets.DrawTileInSolidLayer[Type] = false;
+
+        AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
         TileObjectData.newTile.Origin = new Point16(0, 0);
@@ -70,7 +71,7 @@ public class Stoves : ModTile
         int topY = j - tile.TileFrameY % 52 / 16;
 
         bool shiftPressed = Main.keyState.PressingShift();
-        
+
         //Modern
         if (tile.TileFrameX <= 106)
         {
@@ -93,7 +94,7 @@ public class Stoves : ModTile
             }
             if (shiftPressed)
             {
-                short frameAdjustment = (short)(tile.TileFrameX <= 36 ? 72 : -36); //change first two by total size, last by style size
+                short frameAdjustment = (short)(tile.TileFrameX < 36 ? 72 : -36); //change first two by total size, last by style size
 
                 for (int x = topX; x < topX + 2; x++) // change depending on width
                 {
@@ -264,83 +265,44 @@ public class Stoves : ModTile
             //Left 1-up
             Tile tileRedraw = (Main.tile[i, j - 1]);
             if (tileRedraw.TileType != 0)
-            { 
+            {
                 spriteBatch.Draw(
-				    TextureAssets.Tile[tileRedraw.TileType].Value,
-				    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - 16 - (int)Main.screenPosition.Y) + zero,
-				    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
-				    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
+                    TextureAssets.Tile[tileRedraw.TileType].Value,
+                    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - 16 - (int)Main.screenPosition.Y) + zero,
+                    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
+                    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
             }
             //Right 1-up
             tileRedraw = (Main.tile[i + 1, j - 1]);
             if (tileRedraw.TileType != 0)
-            { 
+            {
                 spriteBatch.Draw(
-				    TextureAssets.Tile[tileRedraw.TileType].Value,
-				    new Vector2(i * 16 + 16 - (int)Main.screenPosition.X, j * 16 - 16 - (int)Main.screenPosition.Y) + zero,
-				    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
-				    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
+                    TextureAssets.Tile[tileRedraw.TileType].Value,
+                    new Vector2(i * 16 + 16 - (int)Main.screenPosition.X, j * 16 - 16 - (int)Main.screenPosition.Y) + zero,
+                    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
+                    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
             }
             //Left 2-up
             tileRedraw = (Main.tile[i, j - 2]);
             if (tileRedraw.TileType != 0)
-            { 
+            {
                 spriteBatch.Draw(
-				    TextureAssets.Tile[tileRedraw.TileType].Value,
-				    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - 32 - (int)Main.screenPosition.Y) + zero,
-				    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
-				    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
+                    TextureAssets.Tile[tileRedraw.TileType].Value,
+                    new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - 32 - (int)Main.screenPosition.Y) + zero,
+                    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
+                    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
             }
             //Right 2-up
             tileRedraw = (Main.tile[i + 1, j - 2]);
             if (tileRedraw.TileType != 0)
-            { 
+            {
                 spriteBatch.Draw(
-				    TextureAssets.Tile[tileRedraw.TileType].Value,
-				    new Vector2(i * 16 + 16 - (int)Main.screenPosition.X, j * 16 - 32 - (int)Main.screenPosition.Y) + zero,
-				    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
-				    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
+                    TextureAssets.Tile[tileRedraw.TileType].Value,
+                    new Vector2(i * 16 + 16 - (int)Main.screenPosition.X, j * 16 - 32 - (int)Main.screenPosition.Y) + zero,
+                    new Rectangle(tileRedraw.TileFrameX, tileRedraw.TileFrameY, 16, 16),
+                    Lighting.GetColor(i, j), 0f, default, 1f, SpriteEffects.None, 0f);
             }
         }
-
-        //Tile tile = ((Tilemap)(Main.tile))[i, j];
-        //Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
-        //if (Main.drawToScreen)
-        //{
-        //	zero = Vector2.Zero;
-        //}
-        //if (((Tile)(tile)).TileFrameX % 36 == 0 && ((Tile)(tile)).TileFrameY == 0)
-        //{
-        //	    Main.spriteBatch.Draw(
-        //              ModContent.Request<Texture2D>(Texture + "_Tops").Value,
-        //              new Vector2((float)(i * 16 - (int)Main.screenPosition.X), (float)(j * 16 - 16 - (int)Main.screenPosition.Y)) + zero, 
-        //              (Rectangle?)new Rectangle(32 * (((Tile)(tile)).TileFrameX / 36), 0, 32, 24), 
-        //              Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, (SpriteEffects)0, 0f);
-
-        //	Tile tile2 = ((Tilemap)(Main.tile))[i, j - 1];
-        //	if (((Tile)(tile2)).TileType != 0)
-        //	{
-        //		Main.spriteBatch.Draw(TextureAssets.Tile[((Tile)(tile2)).TileType].Value, 
-        //              new Vector2((float)(i * 16 - (int)Main.screenPosition.X), (float)(j * 16 - 16 - (int)Main.screenPosition.Y)) + zero, 
-        //              (Rectangle?)new Rectangle((int)((Tile)(tile2)).TileFrameX, (int)((Tile)(tile2)).TileFrameY, 16, 16), 
-        //              Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, (SpriteEffects)0, 0f);
-        //	}
-        //	tile2 = ((Tilemap)(Main.tile))[i + 1, j - 1];
-        //	if (((Tile)(tile2)).TileType != 0)
-        //	{
-        //		Main.spriteBatch.Draw(TextureAssets.Tile[((Tile)(tile2)).TileType].Value, 
-        //              new Vector2((float)(i * 16 + 16 - (int)Main.screenPosition.X), (float)(j * 16 - 16 - (int)Main.screenPosition.Y)) + zero, 
-        //              (Rectangle?)new Rectangle((int)((Tile)(tile2)).TileFrameX, (int)((Tile)(tile2)).TileFrameY, 16, 16), 
-        //              Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, (SpriteEffects)0, 0f);
-        //	}
-        //	tile2 = ((Tilemap)(Main.tile))[i + 1, j - 2];
-        //	if (((Tile)(tile2)).TileType != 0)
-        //	{
-        //		Main.spriteBatch.Draw(TextureAssets.Tile[((Tile)(tile2)).TileType].Value, 
-        //              new Vector2((float)(i * 16 + 16 - (int)Main.screenPosition.X), (float)(j * 16 - 32 - (int)Main.screenPosition.Y)) + zero, 
-        //              (Rectangle?)new Rectangle((int)((Tile)(tile2)).TileFrameX, (int)((Tile)(tile2)).TileFrameY, 16, 16), 
-        //              Lighting.GetColor(i, j), 0f, Vector2.Zero, 1f, (SpriteEffects)0, 0f);
-        //	}
-		return true;
-	}
+        return true;
+    }
 }

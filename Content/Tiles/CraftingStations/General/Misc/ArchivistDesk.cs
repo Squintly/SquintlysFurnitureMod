@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -35,7 +36,7 @@ public class ArchivistDesk : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
         TileObjectData.newTile.Origin = new Point16(0, 0);
         TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 18 };
-        TileObjectData.newTile.Width = 4; 
+        TileObjectData.newTile.Width = 4;
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -46,6 +47,7 @@ public class ArchivistDesk : ModTile
 
         AddMapEntry(new Color(80, 44, 24), Language.GetText("Archvist's Desk"));
     }
+
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -84,7 +86,7 @@ public class ArchivistDesk : ModTile
         }
         if (shiftPressed)
         {
-            short frameAdjustment = (short)(tile.TileFrameX <= 72 ? 360 : -72); //change first two by total size, last by style size
+            short frameAdjustment = (short)(tile.TileFrameX < 72 ? 360 : -72); //change first two by total size, last by style size
 
             for (int x = topX; x < topX + 4; x++) // change depending on width
             {
@@ -104,6 +106,7 @@ public class ArchivistDesk : ModTile
             NetMessage.SendTileSquare(-1, topX, topY, 4, 3); //change for width, height
         }
     }
+
     public static Vector2 TileOffset => Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
 
     public static Vector2 TileCustomPosition(int i, int j, Vector2 off = default) => new Vector2(i, j) * 16 - Main.screenPosition - off + TileOffset;
@@ -111,7 +114,7 @@ public class ArchivistDesk : ModTile
     public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
     {
         Tile tile = Main.tile[i, j];
-            
+
         if (!TileDrawing.IsVisible(tile))
         {
             return;
@@ -153,6 +156,11 @@ public class ArchivistDeskItem : ModItem
             .AddRecipeGroup(RecipeGroupID.IronBar, 5)
             .AddIngredient(ItemID.Book, 5)
             .AddTile(TileID.Sawmill)
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 30)
+            .AddTile(ModContent.TileType<ShopBooks>())
             .Register();
     }
 }

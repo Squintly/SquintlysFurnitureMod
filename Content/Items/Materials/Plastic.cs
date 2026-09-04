@@ -1,3 +1,4 @@
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -34,8 +35,8 @@ internal class Plastic : ModItem
     {
         CreateRecipe(4)
             .AddRecipeGroup(RecipeGroupID.Wood, 2)
-            .AddIngredient(ItemID.Gel, 2)
-            .AddTile(TileID.WorkBenches)
+            .AddIngredient(ItemID.Gel, 4)
+            .AddTile(ModContent.TileType<Smelter>())
             .Register();
     }
 }

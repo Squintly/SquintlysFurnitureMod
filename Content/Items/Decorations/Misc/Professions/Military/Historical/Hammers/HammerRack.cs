@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Professions.Military.Historical.GuanDaos;
 using SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeThree;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -27,10 +26,10 @@ internal class HammerRack : ModItem
 
     public override void AddRecipes()
     {
-       CreateRecipe(1)
-            .AddRecipeGroup("SquintlyFurnitureMod:Hammers")
-            .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
-            .AddTile(TileID.HeavyWorkBench)
-            .Register();
+        CreateRecipe(1)
+             .AddRecipeGroup("SquintlyFurnitureMod:Hammers")
+             .AddIngredient(ModContent.ItemType<WeaponStandEmpty>())
+             .AddTile(TileID.HeavyWorkBench)
+             .Register();
     }
 }

@@ -1,6 +1,7 @@
 using SquintlysFurnitureMod.Content.Items.Furniture.NewSets.Holiday.Heartfelt;
 using SquintlysFurnitureMod.Content.Items.WallItems.Holiday;
 using SquintlysFurnitureMod.Content.Tiles.Blocks.Holiday;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -22,7 +23,7 @@ internal class HeartfeltBlockItem : ModItem
         Item.width = 16;
         Item.height = 16;
 
-        Item.value = Item.buyPrice(copper: 0);
+        Item.value = Item.buyPrice(silver: 5);
 
         Item.useStyle = ItemUseStyleID.Swing;
         Item.useTurn = true;
@@ -39,15 +40,15 @@ internal class HeartfeltBlockItem : ModItem
 
     public override void AddRecipes()
     {
-        CreateRecipe()
-            .AddIngredient(ModContent.ItemType<HeartfeltWallItem>(), 4)
-            .AddTile(TileID.WorkBenches)
+        CreateRecipe(30)
+            .AddIngredient(ItemID.LifeCrystal)
+            .AddTile(ModContent.TileType<Worktable>())
             .Register();
 
-        CreateRecipe(10)
-            .AddIngredient(ItemID.LifeCrystal)
-            .AddTile(TileID.WorkBenches)
-            .Register();
+        CreateRecipe(30)
+           .AddIngredient(ItemID.LifeCrystal)
+           .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
+           .Register();
 
         CreateRecipe()
             .AddIngredient(ModContent.ItemType<HeartfeltPlatform>(), 2)
@@ -62,9 +63,9 @@ internal class HeartfeltBlockItem : ModItem
            .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
            .Register();
 
-        CreateRecipe(10)
-           .AddIngredient(ItemID.LifeCrystal)
-           .AddTile(ModContent.TileType<HeartfeltCraftingTableTile>())
-           .Register();
+        CreateRecipe()
+            .AddIngredient(ModContent.ItemType<HeartfeltWallItem>(), 4)
+            .AddTile(ModContent.TileType<Worktable>())
+            .Register();
     }
 }

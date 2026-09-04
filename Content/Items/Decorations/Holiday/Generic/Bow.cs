@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.Wall.TwoWide.TwoTwo;
 using Terraria;

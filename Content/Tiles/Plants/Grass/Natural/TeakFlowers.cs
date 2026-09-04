@@ -18,7 +18,7 @@
 //public class TeakFlowers : ModTile
 //{
 //    public override void SetStaticDefaults()
-//    {   
+//    {
 //        Main.tileFrameImportant[Type] = true;
 //        TileID.Sets.DisableSmartCursor[Type] = true;
 
@@ -38,7 +38,7 @@
 //		TileID.Sets.IgnoredByGrowingSaplings[Type] = true;
 
 //        HitSound = SoundID.Grass;
-    
+
 //        TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
 //        TileObjectData.newTile.Origin = new Point16(0, 0);
 //        TileObjectData.newTile.DrawXOffset = 0;
@@ -82,11 +82,11 @@
 //            spriteEffects = SpriteEffects.FlipHorizontally;
 //        }
 //    }
-//    public override bool CanDrop(int i, int j) 
+//    public override bool CanDrop(int i, int j)
 //    {
 //	return true;
 //	}
-//    public override IEnumerable<Item> GetItemDrops(int i, int j) 
+//    public override IEnumerable<Item> GetItemDrops(int i, int j)
 //    {
 //		Vector2 worldPosition = new Vector2(i, j).ToWorldCoordinates();
 //		Player nearestPlayer = Main.player[Player.FindClosest(worldPosition, 16, 16)];
@@ -94,7 +94,7 @@
 //		int seedItemType = ModContent.ItemType<TeakGrassSeeds>();
 //		int seedItemStack = 1;
 
-//		if (nearestPlayer.active && (nearestPlayer.HeldItem.type == ItemID.StaffofRegrowth || nearestPlayer.HeldItem.type == ItemID.AcornAxe)) 
+//		if (nearestPlayer.active && (nearestPlayer.HeldItem.type == ItemID.StaffofRegrowth || nearestPlayer.HeldItem.type == ItemID.AcornAxe))
 //        {
 //			seedItemStack = Main.rand.Next(1, 6);
 //		}
@@ -117,7 +117,6 @@
 
 //    public override void SetDefaults()
 //    {
-
 //        Item.width = 32;
 //        Item.height = 32;
 //        Item.value = Item.buyPrice(silver: 1);
@@ -148,7 +147,6 @@
 //        Item.width = 32;
 //        Item.height = 32;
 //        Item.value = Item.buyPrice(silver: 1);
-
 
 //    }
 //    public override void AddRecipes()

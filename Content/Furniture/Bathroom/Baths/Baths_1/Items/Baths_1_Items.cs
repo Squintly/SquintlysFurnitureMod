@@ -1,6 +1,5 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.General.Bricks.Cinderblock;
 using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Items.S_1x1_B_2_Item;
 using System;
 using Terraria;
 using Terraria.ID;
