@@ -1,7 +1,9 @@
 using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Halloween.Decals;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -38,5 +40,48 @@ public class HalloweenDecalCrows : ModTile
         TileObjectData.addTile(Type);
 
         RegisterItemDrop(ModContent.ItemType<HalloweenDecalsCrowItem>());
+    }
+    public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+    {
+        return true;
+    }
+
+    public override bool RightClick(int i, int j)
+    {
+        SoundEngine.PlaySound(SoundID.Mech);
+        ToggleTile(i, j);
+        return true;
+    }
+
+    public override void HitWire(int i, int j)
+    {
+        ToggleTile(i, j);
+    }
+
+    public void ToggleTile(int i, int j)
+    {
+        Tile tile = Main.tile[i, j];
+        int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
+        int topY = j - tile.TileFrameY % 18 / 18;
+
+        short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 18); //change depending on width
+
+        for (int x = topX; x < topX + 1; x++) // change depending on width
+        {
+            for (int y = topY; y < topY + 1; y++) // change height
+            {
+                Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                if (Wiring.running)
+                {
+                    Wiring.SkipWire(x, y);
+                }
+            }
+        }
+
+        if (Main.netMode != NetmodeID.SinglePlayer)
+        {
+            NetMessage.SendTileSquare(-1, topX, topY, 1, 1); //change for width, height
+        }
     }
 }

@@ -752,7 +752,7 @@ Mods: {
 
 			BottleSmallBlack: {
 				DisplayName: Small Black Bottle
-				Tooltip: Try right clicking!
+				Tooltip: ""
 			}
 
 			TinyJarBlack: {
