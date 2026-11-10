@@ -80,7 +80,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Bedroom.Dressers.Dressers_1
 
         public override LocalizedText DefaultContainerName(int frameX, int frameY)
         {
-            int option = frameX / 36;
+            int option = frameX / 54;
             return this.GetLocalization("MapEntry" + option);
         }
 
