@@ -61,12 +61,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Furniture.NewSets.Holiday.Vernal
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.Dresser"));
+            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
         }
 
         public override LocalizedText DefaultContainerName(int frameX, int frameY)
         {
-            return CreateMapEntryName();
+            int option = frameX / 54;
+            return this.GetLocalization("MapEntry" + option);
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)

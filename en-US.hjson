@@ -8,9 +8,9 @@ Mods: {
 
 			Chests_Top_1: {
 				ContainerName: Chests
-				MapEntry2: Gray Brick Chest
+				MapEntry0: Gray Brick Chest
 				MapEntry1: Red Brick Chest
-				MapEntry0: Cinderblock Chest
+				MapEntry2: Cinderblock Chest
 			}
 
 			Chests_1: {
@@ -20,17 +20,21 @@ Mods: {
 				MapEntry2: Repaired Chest
 			}
 
+			TeakNightstand.MapEntry0: Teak Nightstand
+			SpringtimeNightstand.MapEntry0: Vernal Nightstand
+
 			Nightstands_1: {
 				ContainerName: Nightstands
 				MapEntry0: Imperial Nightstand
 				MapEntry1: Tattered Nightstand
 				MapEntry2: Repaired Nightstand
-				MapEntry3: Gray Brick Nightstand
+				MapEntry3: Grey Brick Nightstand
 				MapEntry4: Red Brick Nightstand
 				MapEntry5: Cinderblock Nightstand
 			}
 
 			Dressers_Animated_1.MapEntry0: Tattered Dresser
+			SpringtimeDresser.MapEntry0: Vernal Dresser
 
 			Dressers_1: {
 				ContainerName: Dressers
@@ -3230,7 +3234,7 @@ Mods: {
 			}
 
 			SpringtimeSofa: {
-				DisplayName: Springtime Sofa
+				DisplayName: Vernal Sofa
 				Tooltip: ""
 			}
 
