@@ -1,23 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using System;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ModLoader.IO;
 using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Counters_9
@@ -49,7 +41,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
             TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
             TileID.Sets.GeneralPlacementTiles[Type] = false;
             TileID.Sets.PreventsTileRemovalIfOnTopOfIt[Type] = true;
-			TileID.Sets.PreventsTileHammeringIfOnTopOfIt[Type] = true;
+            TileID.Sets.PreventsTileHammeringIfOnTopOfIt[Type] = true;
 
             TileID.Sets.AvoidedByNPCs[Type] = true;
             TileID.Sets.AvoidedByMeteorLanding[Type] = true;
@@ -454,7 +446,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
         }
     }
 
-    public class CounterRetroItem : ModItem
+    public class Counter_9_Retro_Item : ModItem
     {
         public override void SetStaticDefaults()
         {

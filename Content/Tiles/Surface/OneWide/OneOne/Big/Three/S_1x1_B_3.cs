@@ -12,17 +12,18 @@ public class S_1x1_B_3 : ModTile
 {
     public enum StyleID
     {
-        Peach,
-        Apricot,
-        Butter,
-        Pineapple,
+        Peaches,
+        Apricots,
+        Butters,
+        Pineapples,
         ChocolateEggs,
         Eggs,
         BigCarrots,
-        Plum,
-        BloodOrange,
-        BreadPanSmall,
-        EggsBrown
+        Plums,
+        BloodOranges,
+        BreadPansSmall,
+        EggsBrown,
+        Blenders
     }
     public override void SetStaticDefaults()
     {
@@ -38,7 +39,6 @@ public class S_1x1_B_3 : ModTile
 
         TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
         TileObjectData.newTile.CoordinateWidth = 32;
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Clutter.Cleaning;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -37,7 +36,7 @@ public class CleaningSupplies : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<Detergent>());
+        RegisterItemDrop(Mod.Find<ModItem>("Detergent").Type);
     }
 
     public override bool RightClick(int i, int j)

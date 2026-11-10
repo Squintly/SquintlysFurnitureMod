@@ -10,6 +10,16 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal.Four
 
 public class S_2x1_N_4 : ModTile
 {
+    public enum StyleIDs
+    {
+        Breads,
+        Baguettes,
+        Loafs,
+        CheeseWheels,
+        RolledTowels,
+        Bolsters,
+        Spices
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -58,33 +68,51 @@ public class S_2x1_N_4 : ModTile
         int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 18 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 36); //change first two by total size, last by style size
-
-        for (int x = topX; x < topX + 2; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 1; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 36); //change first two by total size, last by style size
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 2; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
-        }
 
-        if (Main.netMode != NetmodeID.SinglePlayer)
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 2, 1); //change for width, height
+            }
+        }
+        if (shiftPressed)
         {
-            NetMessage.SendTileSquare(-1, topX, topY, 2, 1); //change for width, height
+            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 108 : -36); //change first two by total size, last by style size
+
+            for (int x = topX; x < topX + 2; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
+            if (Main.netMode != NetmodeID.SinglePlayer)
+            {
+                NetMessage.SendTileSquare(-1, topX, topY, 2, 1); //change for width, height
+            }
         }
     }
 }
 
-/*STYLES
-0- Bread X
-1- Baguettes X
-2- Round Loaf X
-3- Cheese Wheel X
-4- Rolled Towel X
-5- Bolster X
-*/

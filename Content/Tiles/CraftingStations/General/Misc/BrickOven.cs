@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.DataStructures;
@@ -32,7 +33,7 @@ public class BrickOven : ModTile
 
         Main.tileLighted[Type] = true;
         AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTorch);
-        AdjTiles = new int[] { TileID.Torches };
+        AdjTiles = new int[] { TileID.Torches, ModContent.TileType<Stoves>() };
 
         TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
         TileObjectData.newTile.Width = 2;

@@ -1,6 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using System;
+﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -71,7 +69,7 @@ internal class Microwaves_Items : ModItem
 
         CreateRecipe()
             .AddIngredient(ItemID.SilverCoin, 45)
-            .AddTile(ModContent.TileType<ShopMisc>())
+            .AddTile(ModContent.TileType<ShopAppliances>())
             .Register();
     }
 }

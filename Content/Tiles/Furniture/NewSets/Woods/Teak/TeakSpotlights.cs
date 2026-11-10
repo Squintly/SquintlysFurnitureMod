@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Hanging.Spotlights.Spotlights_2.Items;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;

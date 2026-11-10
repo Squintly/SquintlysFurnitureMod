@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Decor.Vases;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -39,7 +38,7 @@ public class VasesFloral : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<VaseFloral>());
+        RegisterItemDrop(Mod.Find<ModItem>("VaseFloral").Type);
     }
 
     public override bool RightClick(int i, int j)

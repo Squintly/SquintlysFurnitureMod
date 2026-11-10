@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using SquintlysFurnitureMod.Content.Blocks.VanillaPlus.Plants.Reeds;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -37,6 +38,8 @@ public class ShopAppliances : ModTile
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Shop"));
         AnimationFrameHeight = 74;
+
+        RegisterItemDrop(ModContent.ItemType<ShopRealItem>());
     }
 
     public override bool RightClick(int i, int j)

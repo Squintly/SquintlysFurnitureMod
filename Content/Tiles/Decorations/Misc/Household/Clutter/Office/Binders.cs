@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Clutter.Office.Documents.Modern;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -37,7 +36,7 @@ public class Binders : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<Binder>());
+        RegisterItemDrop(Mod.Find<ModItem>("Binder").Type);
     }
 
     public override bool RightClick(int i, int j)

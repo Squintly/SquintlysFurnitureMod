@@ -1,11 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Furniture.Counters;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -42,12 +38,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.KitchenSink
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 5)
-            .AddIngredient(ItemID.WaterBucket)
-            .AddIngredient(ItemID.StoneSlab, 5)
-            .AddTile(ModContent.TileType<Worktable>())
-            .Register();
+                .AddRecipeGroup(RecipeGroupID.Wood, 10)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+                .AddIngredient(ItemID.WaterBucket)
+                .AddIngredient(ItemID.StoneSlab, 5)
+                .AddTile(ModContent.TileType<Worktable>())
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.SilverCoin, 21)
+                .AddTile(ModContent.TileType<ShopAppliances>())
+                .Register();
         }
     }
 
@@ -79,12 +80,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.KitchenSink
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 5)
-            .AddIngredient(ItemID.WaterBucket)
-            .AddIngredient(ItemID.StoneSlab, 5)
-            .AddTile(ModContent.TileType<Worktable>())
-            .Register();
+                .AddRecipeGroup(RecipeGroupID.Wood, 10)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+                .AddIngredient(ItemID.WaterBucket)
+                .AddIngredient(ItemID.StoneSlab, 5)
+                .AddTile(ModContent.TileType<Worktable>())
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.SilverCoin, 21)
+                .AddTile(ModContent.TileType<ShopAppliances>())
+                .Register();
         }
     }
 
@@ -116,12 +122,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.KitchenSink
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 5)
-            .AddIngredient(ItemID.WaterBucket)
-            .AddIngredient(ItemID.StoneSlab, 5)
-            .AddTile(ModContent.TileType<Worktable>())
-            .Register();
+                .AddRecipeGroup(RecipeGroupID.Wood, 10)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+                .AddIngredient(ItemID.WaterBucket)
+                .AddIngredient(ItemID.StoneSlab, 5)
+                .AddTile(ModContent.TileType<Worktable>())
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.SilverCoin, 21)
+                .AddTile(ModContent.TileType<ShopAppliances>())
+                .Register();
         }
     }
 
@@ -153,12 +164,17 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.KitchenSink
         public override void AddRecipes()
         {
             CreateRecipe()
-            .AddRecipeGroup(RecipeGroupID.Wood, 10)
-            .AddRecipeGroup(RecipeGroupID.IronBar, 5)
-            .AddIngredient(ItemID.WaterBucket)
-            .AddIngredient(ItemID.StoneSlab, 5)
-            .AddTile(ModContent.TileType<Worktable>())
-            .Register();
+                .AddRecipeGroup(RecipeGroupID.Wood, 10)
+                .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+                .AddIngredient(ItemID.WaterBucket)
+                .AddIngredient(ItemID.StoneSlab, 5)
+                .AddTile(ModContent.TileType<Worktable>())
+                .Register();
+
+            CreateRecipe()
+                .AddIngredient(ItemID.SilverCoin, 21)
+                .AddTile(ModContent.TileType<ShopAppliances>())
+                .Register();
         }
     }
 }

@@ -10,6 +10,14 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Eight;
 
 public class S_1x1_B_8 : ModTile
 {
+    public enum StyleIDs
+    {
+        FloralVases,
+        CratesSmall,
+        BasketsSmall,
+        BasketsHandleSmall,
+        BasketsSmallTall
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -24,8 +32,7 @@ public class S_1x1_B_8 : ModTile
 
         TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
         TileObjectData.newTile.CoordinateWidth = 32;
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
-        TileObjectData.newTile.DrawYOffset = -12;
+        TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
@@ -55,31 +62,47 @@ public class S_1x1_B_8 : ModTile
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 32;
+        int topX = i - tile.TileFrameX % 34 / 34; //change first number depending on size
+        int topY = j - tile.TileFrameY % 34 / 34;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 224 ? -224 : 32); //change first two by total size, last by style size
-
-        for (int x = topX; x < topX + 1; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 1; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 238 ? -238 : 34); //change first two by total size, last by style size
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 1; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
         }
+        if (shiftPressed)
+        {
+            short frameAdjustment = (short)(tile.TileFrameX < 34 ? 238 : -34); //change first two by total size, last by style size
 
+            for (int x = topX; x < topX + 1; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+        }
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 1, 1); //change for width, height
         }
     }
 }
-
-/* STYLES
-0- Floral Vases X
-*/

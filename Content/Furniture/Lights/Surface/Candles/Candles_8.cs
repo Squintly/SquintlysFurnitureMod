@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles.Candles_3.Items;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -226,9 +225,10 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
 
             SpriteEffects effects = SpriteEffects.None;
 
-            if (i % 2 == 1) {
-				effects = SpriteEffects.FlipHorizontally;
-			}
+            if (i % 2 == 1)
+            {
+                effects = SpriteEffects.FlipHorizontally;
+            }
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
 
@@ -256,7 +256,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.2f;
                         float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.4f;
 
-                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);  
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
 
@@ -266,7 +266,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candles
                         float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;
                         float shakeY = Utils.RandomInt(ref randSeed, -10, 1) * 0.35f;
 
-                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);                       
+                        spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X - (width - 16f) / 2f + shakeX, j * 16 - (int)Main.screenPosition.Y + offsetY + shakeY) + zero, new Rectangle(frameX, frameY, width, height), new Color(100, 100, 100, 0), 0f, default, 1f, effects, 0f);
                     }
                     break;
             }

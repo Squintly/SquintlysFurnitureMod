@@ -1,11 +1,7 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Furniture.Counters;
+using SquintlysFurnitureMod.Content.Abstracts.Furniture.Cupboards;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -14,14 +10,14 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.CupboardsThin
 {
-    public class CupboardsThin_Antique : Merge_Table_1x2_6
+    public class CupboardsThin_3_Antique : Merge_Cupboard_2x1_3
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Cupboard"));
         }
     }
-    public class CupboardThin_Antique_Item : ModItem
+    public class CupboardThin_3_Antique_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -36,7 +32,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_Antique>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_3_Antique>());
         }
 
         public override void AddRecipes()
@@ -49,14 +45,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
         }
     }
 
-    public class CupboardsThin_Modern : Merge_Table_1x2_6
+    public class CupboardsThin_3_Modern : Merge_Cupboard_2x1_3
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Cupboard"));
         }
     }
-    public class CupboardThin_Modern_Item : ModItem
+    public class CupboardThin_3_Modern_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -71,7 +67,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_Modern>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_3_Modern>());
         }
 
         public override void AddRecipes()
@@ -84,14 +80,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
         }
     }
 
-    public class CupboardsThin_Retro : Merge_Table_1x2_6
+    public class CupboardsThin_3_Retro : Merge_Cupboard_2x1_3
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Cupboard"));
         }
     }
-    public class CupboardsThin_Retro_Item : ModItem
+    public class CupboardThin_3_Retro_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -106,7 +102,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_Retro>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_3_Retro>());
         }
 
         public override void AddRecipes()
@@ -119,14 +115,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
         }
     }
 
-    public class CupboardsThin_Vintage : Merge_Table_1x2_6
+    public class CupboardsThin_3_Vintage : Merge_Cupboard_2x1_3
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Cupboard"));
         }
     }
-    public class CupboardsThin_Vintage_Item : ModItem
+    public class CupboardThin_3_Vintage_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -141,7 +137,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_Vintage>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CupboardsThin_3_Vintage>());
         }
 
         public override void AddRecipes()

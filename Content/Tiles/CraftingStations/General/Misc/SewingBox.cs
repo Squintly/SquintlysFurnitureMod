@@ -31,6 +31,7 @@ public class SewingBox : ModTile
         TileObjectData.newTile.Height = 1;
         TileObjectData.newTile.Width = 2;
         TileObjectData.newTile.CoordinateHeights = new int[] { 32 };
+        TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
         TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
@@ -40,8 +41,7 @@ public class SewingBox : ModTile
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(138, 94, 54), Language.GetText("Sewing Box"));
-
-        AdjTiles = new int[] { ModContent.TileType<Thread>() };
+        AdjTiles = new int[] { TileID.Loom, TileID.LivingLoom };
     }
 
     public override bool RightClick(int i, int j)
@@ -61,7 +61,7 @@ public class SewingBox : ModTile
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 32 / 18;
-       
+
         bool shiftPressed = Main.keyState.PressingShift();
         if (!shiftPressed)
         {
@@ -141,7 +141,7 @@ public class SewingBoxItem : ModItem
         Item.width = 32;
         Item.height = 32;
 
-        Item.value = Item.buyPrice(silver:  18);
+        Item.value = Item.buyPrice(silver: 18);
 
         Item.DefaultToPlaceableTile(ModContent.TileType<SewingBox>());
     }

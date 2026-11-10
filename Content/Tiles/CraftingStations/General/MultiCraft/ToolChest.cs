@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
@@ -14,258 +13,262 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.MultiCraft;
-    public class ToolChest : ModTile
+
+public class ToolChest : ModTile
+{
+    public override void SetStaticDefaults()
     {
-        public override void SetStaticDefaults()
+        Main.tileFrameImportant[Type] = true;
+
+        Main.tileNoAttach[Type] = true;
+        Main.tileNoFail[Type] = false;
+
+        TileID.Sets.HasOutlines[Type] = true;
+        TileID.Sets.DisableSmartCursor[Type] = true;
+
+        Main.tileSpelunker[Type] = true;
+        Main.tileOreFinderPriority[Type] = 500;
+
+        Main.tileSolidTop[Type] = true;
+        Main.tileTable[Type] = true;
+
+        AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
+
+        Main.tileContainer[Type] = true;
+        TileID.Sets.BasicChest[Type] = true;
+
+        TileID.Sets.IsAContainer[Type] = true;
+        TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
+        TileID.Sets.GeneralPlacementTiles[Type] = false;
+
+        TileID.Sets.AvoidedByNPCs[Type] = true;
+        TileID.Sets.AvoidedByMeteorLanding[Type] = true;
+        TileID.Sets.InteractibleByNPCs[Type] = true;
+
+        TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+        TileObjectData.newTile.Origin = new Point16(0, 1);
+        TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
+
+        TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
+        TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);
+
+        TileObjectData.newTile.AnchorInvalidTiles = new int[]
         {
-            Main.tileFrameImportant[Type] = true;
-
-            Main.tileNoAttach[Type] = true;
-            Main.tileNoFail[Type] = false;
-
-            TileID.Sets.HasOutlines[Type] = true;
-            TileID.Sets.DisableSmartCursor[Type] = true;
-
-            Main.tileSpelunker[Type] = true;
-            Main.tileOreFinderPriority[Type] = 500;
-
-            Main.tileSolidTop[Type] = true;
-            Main.tileTable[Type] = true;
-
-            AddToArray(ref TileID.Sets.RoomNeeds.CountsAsTable);
-
-            Main.tileContainer[Type] = true;
-            TileID.Sets.BasicChest[Type] = true;
-
-            TileID.Sets.IsAContainer[Type] = true;
-            TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
-            TileID.Sets.GeneralPlacementTiles[Type] = false;
-
-            TileID.Sets.AvoidedByNPCs[Type] = true;
-            TileID.Sets.AvoidedByMeteorLanding[Type] = true;
-            TileID.Sets.InteractibleByNPCs[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-            TileObjectData.newTile.Origin = new Point16(0, 1);
-            TileObjectData.newTile.CoordinateHeights = new[] { 16, 18 };
-
-            TileObjectData.newTile.HookCheckIfCanPlace = new PlacementHook(Chest.FindEmptyChest, -1, 0, true);
-            TileObjectData.newTile.HookPostPlaceMyPlayer = new PlacementHook(Chest.AfterPlacement_Hook, -1, 0, false);
-
-            TileObjectData.newTile.AnchorInvalidTiles = new int[]
-            {
                 TileID.MagicalIceBlock,
                 TileID.Boulder,
                 TileID.BouncyBoulder,
                 TileID.LifeCrystalBoulder,
                 TileID.RollingCactus
-            };
+        };
 
-            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+        TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 
-            TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleMultiplier = 4;
-            TileObjectData.newTile.RandomStyleRange = 4;
+        TileObjectData.newTile.StyleHorizontal = true;
+        TileObjectData.newTile.StyleMultiplier = 4;
+        TileObjectData.newTile.RandomStyleRange = 4;
 
-            TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
+        TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
-            TileObjectData.addTile(Type);
+        TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
+        AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
 
-            AnimationFrameHeight = 36;
+        AnimationFrameHeight = 36;
 
-            AdjTiles = new int[] {TileID.Containers, ModContent.TileType<ToolBox>(), ModContent.TileType<Worktable>(), ModContent.TileType<ChoppingBlock>(), ModContent.TileType<DecoBoxTile>(), ModContent.TileType<Easel>() };
+        AdjTiles = new int[]
+        {TileID.Containers, ModContent.TileType<ToolBox>(), ModContent.TileType<Worktable>(),
+            ModContent.TileType<ChoppingBlock>(), ModContent.TileType<DecoBoxTile>(), ModContent.TileType<Easel>(),
+            ModContent.TileType<SewingMachine>(), ModContent.TileType<PotteryWheel>(),};
+    }
+
+    public override ushort GetMapOption(int i, int j)
+    {
+        return (ushort)(Main.tile[i, j].TileFrameX / 144);
+    }
+
+    public override LocalizedText DefaultContainerName(int frameX, int frameY)
+    {
+        int option = frameX / 144;
+        return this.GetLocalization("MapEntry" + option);
+    }
+
+    public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+    {
+        return true;
+    }
+
+    public static string MapChestName(string name, int i, int j)
+    {
+        int left = i;
+        int top = j;
+        Tile tile = Main.tile[i, j];
+        if (tile.TileFrameX % 36 != 0)
+        {
+            left--;
         }
 
-        public override ushort GetMapOption(int i, int j)
+        if (tile.TileFrameY != 0)
         {
-            return (ushort)(Main.tile[i, j].TileFrameX / 144);
+            top--;
         }
 
-        public override LocalizedText DefaultContainerName(int frameX, int frameY)
+        int chest = Chest.FindChest(left, top);
+        if (chest < 0)
         {
-            int option = frameX / 144;
-            return this.GetLocalization("MapEntry" + option);
+            return Language.GetTextValue("LegacyChestType.0");
         }
 
-        public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
+        if (Main.chest[chest].name == "")
         {
+            return name;
+        }
+
+        return name + ": " + Main.chest[chest].name;
+    }
+
+    public override void KillMultiTile(int i, int j, int frameX, int frameY)
+    {
+        Chest.DestroyChest(i, j);
+    }
+
+    public override bool RightClick(int i, int j)
+    {
+        Player player = Main.LocalPlayer;
+        Tile tile = Main.tile[i, j];
+        Main.mouseRightRelease = false;
+        int left = i;
+        int top = j;
+        if (tile.TileFrameX % 36 != 0)
+        {
+            left--;
+        }
+
+        if (tile.TileFrameY != 0)
+        {
+            top--;
+        }
+
+        bool shiftPressed = Main.keyState.PressingShift();
+
+        if (shiftPressed)
+        {
+            SoundEngine.PlaySound(SoundID.Mech);
+            ToggleTile(i, j);
             return true;
         }
 
-        public static string MapChestName(string name, int i, int j)
+        player.CloseSign();
+        player.SetTalkNPC(-1);
+        Main.npcChatCornerItem = 0;
+        Main.npcChatText = "";
+        if (Main.editChest)
         {
-            int left = i;
-            int top = j;
-            Tile tile = Main.tile[i, j];
-            if (tile.TileFrameX % 36 != 0)
-            {
-                left--;
-            }
-
-            if (tile.TileFrameY != 0)
-            {
-                top--;
-            }
-
-            int chest = Chest.FindChest(left, top);
-            if (chest < 0)
-            {
-                return Language.GetTextValue("LegacyChestType.0");
-            }
-
-            if (Main.chest[chest].name == "")
-            {
-                return name;
-            }
-
-            return name + ": " + Main.chest[chest].name;
+            SoundEngine.PlaySound(SoundID.MenuTick);
+            Main.editChest = false;
+            Main.npcChatText = string.Empty;
         }
 
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        if (player.editedChestName)
         {
-            Chest.DestroyChest(i, j);
+            NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
+            player.editedChestName = false;
         }
 
-        public override bool RightClick(int i, int j)
+        int chest = Chest.FindChest(left, top);
+        if (chest != -1)
         {
-            Player player = Main.LocalPlayer;
-            Tile tile = Main.tile[i, j];
-            Main.mouseRightRelease = false;
-            int left = i;
-            int top = j;
-            if (tile.TileFrameX % 36 != 0)
+            Main.stackSplit = 600;
+            if (chest == player.chest)
             {
-                left--;
-            }
-
-            if (tile.TileFrameY != 0)
-            {
-                top--;
-            }
-
-            bool shiftPressed = Main.keyState.PressingShift();
-
-            if (shiftPressed)
-            {
-                SoundEngine.PlaySound(SoundID.Mech);
-                ToggleTile(i, j);
-                return true;
-            }
-
-            player.CloseSign();
-            player.SetTalkNPC(-1);
-            Main.npcChatCornerItem = 0;
-            Main.npcChatText = "";
-            if (Main.editChest)
-            {
-                SoundEngine.PlaySound(SoundID.MenuTick);
-                Main.editChest = false;
-                Main.npcChatText = string.Empty;
-            }
-
-            if (player.editedChestName)
-            {
-                NetMessage.SendData(MessageID.SyncPlayerChest, -1, -1, NetworkText.FromLiteral(Main.chest[player.chest].name), player.chest, 1f);
-                player.editedChestName = false;
-            }
-
-            int chest = Chest.FindChest(left, top);
-            if (chest != -1)
-            {
-                Main.stackSplit = 600;
-                if (chest == player.chest)
-                {
-                    player.chest = -1;
-                    SoundEngine.PlaySound(SoundID.MenuClose);
-                }
-                else
-                {
-                    SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
-                    player.OpenChest(left, top, chest);
-                }
-
-                Recipe.FindRecipes();
-            }
-            return true;
-        }
-
-        public void ToggleTile(int i, int j)
-        {
-            Tile tile = Main.tile[i, j];
-            int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
-            int topY = j - tile.TileFrameY % 36 / 16;
-            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 108 : -36); //change first two by total size, last by style size
-
-            for (int x = topX; x < topX + 2; x++) // change depending on width
-            {
-                for (int y = topY; y < topY + 2; y++) // change height
-                {
-                    Main.tile[x, y].TileFrameX += frameAdjustment;
-
-                    if (Wiring.running)
-                    {
-                        Wiring.SkipWire(x, y);
-                    }
-                }
-            }
-            if (Main.netMode != NetmodeID.SinglePlayer)
-            {
-                NetMessage.SendTileSquare(-1, topX, topY, 2, 2); //change for width, height
-            }
-        }
-
-        public override void MouseOver(int i, int j)
-        {
-            Player player = Main.LocalPlayer;
-            Tile tile = Main.tile[i, j];
-            int left = i;
-            int top = j;
-            if (tile.TileFrameX % 36 != 0)
-            {
-                left--;
-            }
-
-            if (tile.TileFrameY != 0)
-            {
-                top--;
-            }
-
-            int chest = Chest.FindChest(left, top);
-            player.cursorItemIconID = -1;
-            if (chest < 0)
-            {
-                player.cursorItemIconText = Language.GetTextValue("LegacyChestType.0");
+                player.chest = -1;
+                SoundEngine.PlaySound(SoundID.MenuClose);
             }
             else
             {
-                string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
-                player.cursorItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : defaultName;
-                if (player.cursorItemIconText == defaultName)
-                {
-                    int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
-                    player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
+                SoundEngine.PlaySound(player.chest < 0 ? SoundID.MenuOpen : SoundID.MenuTick);
+                player.OpenChest(left, top, chest);
+            }
 
-                    player.cursorItemIconText = "";
+            Recipe.FindRecipes();
+        }
+        return true;
+    }
+
+    public void ToggleTile(int i, int j)
+    {
+        Tile tile = Main.tile[i, j];
+        int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
+        int topY = j - tile.TileFrameY % 36 / 16;
+        short frameAdjustment = (short)(tile.TileFrameX < 36 ? 108 : -36); //change first two by total size, last by style size
+
+        for (int x = topX; x < topX + 2; x++) // change depending on width
+        {
+            for (int y = topY; y < topY + 2; y++) // change height
+            {
+                Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                if (Wiring.running)
+                {
+                    Wiring.SkipWire(x, y);
                 }
             }
-
-            player.noThrow = 2;
-            player.cursorItemIconEnabled = true;
         }
-
-        public override void MouseOverFar(int i, int j)
+        if (Main.netMode != NetmodeID.SinglePlayer)
         {
-            MouseOver(i, j);
-            Player player = Main.LocalPlayer;
-            if (player.cursorItemIconText == "")
-            {
-                player.cursorItemIconEnabled = false;
-                player.cursorItemIconID = 0;
-            }
+            NetMessage.SendTileSquare(-1, topX, topY, 2, 2); //change for width, height
         }
     }
+
+    public override void MouseOver(int i, int j)
+    {
+        Player player = Main.LocalPlayer;
+        Tile tile = Main.tile[i, j];
+        int left = i;
+        int top = j;
+        if (tile.TileFrameX % 36 != 0)
+        {
+            left--;
+        }
+
+        if (tile.TileFrameY != 0)
+        {
+            top--;
+        }
+
+        int chest = Chest.FindChest(left, top);
+        player.cursorItemIconID = -1;
+        if (chest < 0)
+        {
+            player.cursorItemIconText = Language.GetTextValue("LegacyChestType.0");
+        }
+        else
+        {
+            string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
+            player.cursorItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : defaultName;
+            if (player.cursorItemIconText == defaultName)
+            {
+                int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
+                player.cursorItemIconID = TileLoader.GetItemDropFromTypeAndStyle(Type, style);
+
+                player.cursorItemIconText = "";
+            }
+        }
+
+        player.noThrow = 2;
+        player.cursorItemIconEnabled = true;
+    }
+
+    public override void MouseOverFar(int i, int j)
+    {
+        MouseOver(i, j);
+        Player player = Main.LocalPlayer;
+        if (player.cursorItemIconText == "")
+        {
+            player.cursorItemIconEnabled = false;
+            player.cursorItemIconID = 0;
+        }
+    }
+}
 
 public class ToolChestItem : ModItem
 {
@@ -289,6 +292,7 @@ public class ToolChestItem : ModItem
         CreateRecipe(1)
             .AddRecipeGroup(RecipeGroupID.IronBar, 5)
             .AddIngredient(ModContent.ItemType<ToolBoxItem>())
+            .AddIngredient(ModContent.ItemType<SewingMachineItem>())
             .AddIngredient(ModContent.ItemType<WorktableItem>())
             .AddIngredient(ModContent.ItemType<ChoppingBlockItem>())
             .AddIngredient(ModContent.ItemType<DecoBoxItem>())

@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.NewYears;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -30,6 +29,6 @@ public class SmallCrackers : ModTile
         TileObjectData.newTile.LavaPlacement = LiquidPlacement.NotAllowed;
 
         TileObjectData.addTile(Type);
-        RegisterItemDrop(ModContent.ItemType<Crackers>());
+        RegisterItemDrop(Mod.Find<ModItem>("Cracker").Type);
     }
 }

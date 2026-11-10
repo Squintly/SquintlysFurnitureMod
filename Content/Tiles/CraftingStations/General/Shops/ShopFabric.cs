@@ -37,6 +37,8 @@ public class ShopFabric : ModTile
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Shop"));
         AnimationFrameHeight = 74;
+
+        RegisterItemDrop(ModContent.ItemType<ShopRealItem>());
     }
 
     public override bool RightClick(int i, int j)

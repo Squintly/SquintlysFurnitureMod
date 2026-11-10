@@ -1,5 +1,4 @@
 ﻿using SquintlysFurnitureMod.Content.Blocks.Themed.Eras.Imperial;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

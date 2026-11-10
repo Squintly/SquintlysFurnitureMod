@@ -9,6 +9,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoOne.Normal;
 
 public class S_2x1_N : ModTile
 {
+    public enum StyleIDs
+    {
+        EmptyBasket,
+        Planter,
+        EmptyBreadBasket,
+        RollingPin
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;

@@ -1,14 +1,12 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -43,7 +41,7 @@ public class ToolBox : ModTile
 
         AddMapEntry(new Color(167, 52, 52), Language.GetText("Tool Box"));
 
-        AdjTiles = new int[] { ModContent.TileType<SewingBox>(), ModContent.TileType<Mortar>(), ModContent.TileType<PaintJars>(), ModContent.TileType<CuttingBoard>(), ModContent.TileType<MasonryRack>() };
+        AdjTiles = new int[] { ModContent.TileType<Mortar>(), ModContent.TileType<PaintJars>(), ModContent.TileType<CuttingBoard>(), ModContent.TileType<MasonryRack>() };
     }
 
     public override bool RightClick(int i, int j)
@@ -127,7 +125,6 @@ public class ToolBoxItem : ModItem
     {
         CreateRecipe(1)
             .AddRecipeGroup(RecipeGroupID.IronBar, 5)
-            .AddIngredient(ModContent.ItemType<SewingBoxItem>())
             .AddIngredient(ModContent.ItemType<MortarItem>())
             .AddIngredient(ModContent.ItemType<PaintJarsItem>())
             .AddIngredient(ModContent.ItemType<CuttingBoardItem>())

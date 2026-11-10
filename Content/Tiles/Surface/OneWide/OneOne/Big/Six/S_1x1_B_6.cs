@@ -11,7 +11,7 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Six;
 public class S_1x1_B_6 : ModTile
 {
     public enum StyleIDs
-    { 
+    {
         MilkJugs,
         Grapes,
         ChickPlushies,
@@ -33,7 +33,6 @@ public class S_1x1_B_6 : ModTile
 
         TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
         TileObjectData.newTile.CoordinateWidth = 32;
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
         TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
@@ -111,10 +110,3 @@ public class S_1x1_B_6 : ModTile
         }
     }
 }
-
-/* STYLES
-0- Milk Jugs X
-1- Grapes X
-2- Chick Plushies X
-3- Bell Peppers X
-*/

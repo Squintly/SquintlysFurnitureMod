@@ -10,6 +10,24 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Big.Four;
 
 public class S_1x1_B_4 : ModTile
 {
+    public enum StyleIDs
+    {
+        Oranges,
+        Coconuts,
+        Lemons,
+        Limes,
+        Bananas,
+        CakeSlices,
+        SmallSugars,
+        SmallFlours,
+        WoodenBuckets,
+        GrenadesGreen,
+        GrenadesBrown,
+        GrenadesBlack,
+        GrenadesRed,
+        GrenadesFuture
+    }
+
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -22,10 +40,9 @@ public class S_1x1_B_4 : ModTile
 
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
 
-        TileObjectData.newTile.CoordinateHeights = new int[1] { 30 };
-        TileObjectData.newTile.CoordinateWidth = 30;
-        TileObjectData.newTile.CoordinatePaddingFix = new Point16(0, 2);
-        TileObjectData.newTile.DrawYOffset = -12;
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 32 };
+        TileObjectData.newTile.CoordinateWidth = 32;
+        TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
@@ -55,13 +72,13 @@ public class S_1x1_B_4 : ModTile
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 32; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 32;
+        int topX = i - tile.TileFrameX % 34 / 34; //change first number depending on size
+        int topY = j - tile.TileFrameY % 34 / 34;
 
         bool shiftPressed = Main.keyState.PressingShift();
         if (!shiftPressed)
         {
-            short frameAdjustment = (short)(tile.TileFrameX >= 96 ? -96 : 32); //change first two by total size, last by style size
+            short frameAdjustment = (short)(tile.TileFrameX >= 136 ? -136 : 34); //change first two by total size, last by style size
 
             for (int x = topX; x < topX + 1; x++) // change depending on width
             {
@@ -78,7 +95,7 @@ public class S_1x1_B_4 : ModTile
         }
         if (shiftPressed)
         {
-            short frameAdjustment = (short)(tile.TileFrameX < 32 ? 96 : -32); //change first two by total size, last by style size
+            short frameAdjustment = (short)(tile.TileFrameX < 34 ? 136 : -34); //change first two by total size, last by style size
 
             for (int x = topX; x < topX + 1; x++) // change depending on width
             {
@@ -99,21 +116,3 @@ public class S_1x1_B_4 : ModTile
         }
     }
 }
-
-/* STYLES
-0- Orange X
-1- Coconut X
-2- Lemon X
-3- Lime X
-4- Banana X
-5- Small Cake Slice X
-6- Small Sugar X
-7- Small Flour X
-8- Wooden Bucket X
-9- grenades
-10- brown grenades
-11- black grenades
-12- red grenades
-13- future grenades
-
-*/

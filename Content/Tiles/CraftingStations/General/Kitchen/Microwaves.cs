@@ -23,6 +23,7 @@ public class Microwaves : ModTile
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
 
         TileObjectData.newTile.CoordinateHeights = new[] { 32 };
+        TileObjectData.newTile.DrawYOffset = -14;
 
         TileObjectData.newTile.Width = 2;
 
@@ -45,8 +46,28 @@ public class Microwaves : ModTile
         TileObjectData.addTile(Type);
 
         AdjTiles = new int[] { ModContent.TileType<Stoves>() };
+
+        AnimationFrameHeight = 34;
+    }
+    public override void AnimateTile(ref int frame, ref int frameCounter)
+    {
+        frameCounter++;
+        if (frameCounter >= 24)
+        {
+            frameCounter = 0;
+            frame++;
+            frame %= 3;
+        }
     }
 
+    public override void AnimateIndividualTile(int type, int i, int j, ref int frameXOffset, ref int frameYOffset)
+    {
+        var tile = Main.tile[i, j];
+        if (tile.TileFrameY < 34)
+        {
+            frameYOffset = Main.tileFrame[type] * 34;
+        }
+    }
     public override bool RightClick(int i, int j)
     {
         SoundEngine.PlaySound(SoundID.Mech);
@@ -63,12 +84,12 @@ public class Microwaves : ModTile
     {
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
-        int topY = j - tile.TileFrameY % 32 / 32;
+        int topY = j - tile.TileFrameY % 34 / 32;
 
         bool shiftPressed = Main.keyState.PressingShift();
         if (!shiftPressed)
         {
-            short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 36); //change first two by total size, last by style size
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 36); //change first two by total size, last by style size
 
             for (int x = topX; x < topX + 2; x++) // change depending on width
             {
@@ -85,7 +106,7 @@ public class Microwaves : ModTile
         }
         if (shiftPressed)
         {
-            short frameAdjustment = (short)(tile.TileFrameX > 36 ? 108 : -36); //change first two by total size, last by style size
+            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 72 : -36); //change first two by total size, last by style size
 
             for (int x = topX; x < topX + 2; x++) // change depending on width
             {

@@ -1,5 +1,5 @@
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -85,8 +85,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.WhitePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -95,8 +94,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.GrayPaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -105,8 +103,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.BlackPaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -115,8 +112,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.SkyBluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -125,8 +121,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.BluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -135,8 +130,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             CreateRecipe()
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.DeepBluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -146,8 +140,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.WhitePaint)
             .AddIngredient(ItemID.SkyBluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -157,8 +150,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.GrayPaint)
             .AddIngredient(ItemID.SkyBluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
 
@@ -168,8 +160,7 @@ internal class MP_A_1x3_12_SS_O_Items : ModItem
             .AddIngredient(ItemID.Silk, 4)
             .AddIngredient(ItemID.BlackPaint)
             .AddIngredient(ItemID.SkyBluePaint)
-            .AddTile(TileID.Loom)
-            .AddTile(TileID.DyeVat)
+            .AddTile(ModContent.TileType<SewingBox>())
             .Register();
         }
     }

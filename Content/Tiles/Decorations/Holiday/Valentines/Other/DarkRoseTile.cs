@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Holiday.Valentines.Other.Clutter;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -39,6 +38,6 @@ public class DarkRoseTile : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<DarkRose>());
+        RegisterItemDrop(Mod.Find<ModItem>("Rose").Type);
     }
 }

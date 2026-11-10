@@ -1,13 +1,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Newtonsoft.Json.Linq;
-using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -115,7 +112,7 @@ public class Stoves : ModTile
         {
             if (!shiftPressed)
             {
-                short frameAdjustment = (short)(tile.TileFrameX >= 178 ? -72 : 36); //change first two by total size, last by style size
+                short frameAdjustment = (short)(tile.TileFrameX >= 180 ? -72 : 36); //change first two by total size, last by style size
 
                 for (int x = topX; x < topX + 2; x++) // change depending on width
                 {

@@ -1,6 +1,5 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen.Items;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
@@ -48,7 +47,7 @@ public class ToolShed : ModTile
         AddMapEntry(new Color(89, 51, 28), Language.GetText("ToolShed"));
         AdjTiles = new int[]
         {
-            ModContent.TileType<BrickOven>(), ModContent.TileType<Smelter>(), ModContent.TileType<Stoves>(), ModContent.TileType<Fridges>(), ModContent.TileType<FestiveWorktable>(), ModContent.TileType<HeartfeltCraftingTableTile>() 
+            ModContent.TileType<BrickOven>(), ModContent.TileType<Smelter>(), ModContent.TileType<Stoves>(), ModContent.TileType<Fridges>(), ModContent.TileType<FestiveWorktable>(), ModContent.TileType<HeartfeltCraftingTableTile>()
         };
     }
 }

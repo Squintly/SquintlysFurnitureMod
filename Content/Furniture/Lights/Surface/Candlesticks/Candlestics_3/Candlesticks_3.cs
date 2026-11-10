@@ -11,7 +11,6 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using static Terraria.GameContent.Drawing.TileDrawing;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Lights.Surface.Candlesticks.Candlestics_3
 {

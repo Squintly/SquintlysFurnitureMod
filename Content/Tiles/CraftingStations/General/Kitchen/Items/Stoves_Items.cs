@@ -1,5 +1,4 @@
 ﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -69,7 +68,7 @@ internal class Stoves_Items : ModItem
 
         CreateRecipe()
             .AddIngredient(ItemID.SilverCoin, 30)
-            .AddTile(ModContent.TileType<ShopMeat>())
+            .AddTile(ModContent.TileType<ShopAppliances>())
             .Register();
     }
 }

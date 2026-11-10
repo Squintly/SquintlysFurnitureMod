@@ -1,6 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using SquintlysFurnitureMod.Content.Tiles.Multi.All.TwoWide.TwoThree;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -28,7 +26,7 @@ internal class MP_A_2x2_12_SS_O_Items : ModItem
     {
         BannerWhiteFlatWideShortItem = 0,
         BannerWhitePointWideShortItem = 1,
-        BannerWhiteRoundWideShortItem = 2, 
+        BannerWhiteRoundWideShortItem = 2,
         BannerGrayFlatWideShortItem = 3,
         BannerGrayPointWideShortItem = 4,
         BannerGrayRoundWideShortItem = 5,

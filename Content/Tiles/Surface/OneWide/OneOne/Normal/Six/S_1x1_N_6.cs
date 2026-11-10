@@ -10,6 +10,13 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.OneWide.OneOne.Normal.Six;
 
 public class S_1x1_N_6 : ModTile
 {
+    public enum StyleIDs
+    {
+        ToyBalls,
+        ValentinesCards,
+        SnackBowls,
+        Toasters
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -21,6 +28,7 @@ public class S_1x1_N_6 : ModTile
         Main.tileNoAttach[Type] = true;
 
         TileObjectData.newTile.CopyFrom(TileObjectData.StyleOnTable1x1);
+        TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
 
         TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table, TileObjectData.newTile.Width, 0);
 
@@ -53,21 +61,41 @@ public class S_1x1_N_6 : ModTile
         int topX = i - tile.TileFrameX % 18 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 18 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 90 ? -90 : 18); //change depending width
-
-        for (int x = topX; x < topX + 1; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 1; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 90 ? -90 : 18); //change depending width
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 1; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
         }
+        if (shiftPressed)
+        {
+            short frameAdjustment = (short)(tile.TileFrameX < 18 ? 90 : -18); //change depending width
 
+            for (int x = topX; x < topX + 1; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 1; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+        }
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 1, 1); //change for width, height
@@ -75,8 +103,3 @@ public class S_1x1_N_6 : ModTile
     }
 }
 
-/*STYLES
-0- Toy Balls X
-1- Valetines Cards X
-2- Snack Bowls X
-*/

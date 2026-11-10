@@ -1,6 +1,4 @@
-﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using System;
+﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -71,7 +69,7 @@ internal class Fridges_Items : ModItem
 
         CreateRecipe()
             .AddIngredient(ItemID.SilverCoin, 30)
-            .AddTile(ModContent.TileType<ShopFish>())
+            .AddTile(ModContent.TileType<ShopAppliances>())
             .Register();
     }
 }

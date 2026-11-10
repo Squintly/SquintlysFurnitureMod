@@ -1,24 +1,14 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Newtonsoft.Json.Linq;
-using ReLogic.Content;
-using SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupboards_6;
-using SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.CupboardsNarrow;
-using SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.CupboardsThin;
-using System;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent;
-using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using static Terraria.ModLoader.PlayerDrawLayer;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.OvenHoods;
 

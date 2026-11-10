@@ -38,7 +38,7 @@ public class ChocolateSpringEggs : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(Mod.Find<ModItem>("ChocolateEggs").Type);
+        RegisterItemDrop(Mod.Find<ModItem>("ChocolateEgg").Type);
     }
 
     public override bool RightClick(int i, int j)

@@ -1,11 +1,6 @@
 using Microsoft.Xna.Framework;
 using SquintlysFurnitureMod.Content.Abstracts.Furniture.Counters;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -14,14 +9,14 @@ using Terraria.ModLoader;
 
 namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.CountersNarrow
 {
-    public class CountersNarrow_Antique : Merge_Table_1x2_6
+    public class CountersNarrow_6_Antique : Merge_Table_1x2_6
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Counter"));
         }
     }
-    public class CounterNarrow_Antique_Item : ModItem
+    public class CounterNarrow_6_Antique_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -36,7 +31,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_Antique>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_6_Antique>());
         }
 
         public override void AddRecipes()
@@ -50,14 +45,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
         }
     }
 
-    public class CountersNarrow_Modern : Merge_Table_1x2_6
+    public class CountersNarrow_6_Modern : Merge_Table_1x2_6
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Counter"));
         }
     }
-    public class CounterNarrow_Modern_Item : ModItem
+    public class CounterNarrow_6_Modern_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -72,7 +67,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_Modern>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_6_Modern>());
         }
 
         public override void AddRecipes()
@@ -86,14 +81,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
         }
     }
 
-    public class CountersNarrow_Retro : Merge_Table_1x2_6
+    public class CountersNarrow_6_Retro : Merge_Table_1x2_6
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Counter"));
         }
     }
-    public class CountersNarrow_Retro_Item : ModItem
+    public class CounterNarrow_6_Retro_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -108,7 +103,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_Retro>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_6_Retro>());
         }
 
         public override void AddRecipes()
@@ -122,14 +117,14 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
         }
     }
 
-    public class CountersNarrow_Vintage : Merge_Table_1x2_6
+    public class CountersNarrow_6_Vintage : Merge_Table_1x2_6
     {
         public override void SafeSetStaticDefaults()
         {
             AddMapEntry(new Color(200, 200, 200), Language.GetText("Counter"));
         }
     }
-    public class CountersNarrow_Vintage_Item : ModItem
+    public class CounterNarrow_6_Vintage_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -144,7 +139,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Count
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_Vintage>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<CountersNarrow_6_Vintage>());
         }
 
         public override void AddRecipes()

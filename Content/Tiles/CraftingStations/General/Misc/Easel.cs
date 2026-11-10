@@ -62,7 +62,7 @@ public class Easel : ModTile
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
         int topY = j - tile.TileFrameY % 72 / 16;
-       
+
         short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change first two by total size, last by style size
         for (int x = topX; x < topX + 2; x++) // change depending on width
         {

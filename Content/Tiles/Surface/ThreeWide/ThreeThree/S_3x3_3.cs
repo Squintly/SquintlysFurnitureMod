@@ -53,21 +53,41 @@ public class S_3x3_3 : ModTile
         int topX = i - tile.TileFrameX % 54 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 54 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 54); //change first two by total size - one style, last by style size
-
-        for (int x = topX; x < topX + 3; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 3; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 108 ? -108 : 54); //change first two by total size - one style, last by style size
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 3; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 3; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
         }
+        if (shiftPressed)
+        {
+            short frameAdjustment = (short)(tile.TileFrameX < 54 ? -108 : 54); //change first two by total size - one style, last by style size
 
+            for (int x = topX; x < topX + 3; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 3; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+        }
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 3, 3); //change for width, height

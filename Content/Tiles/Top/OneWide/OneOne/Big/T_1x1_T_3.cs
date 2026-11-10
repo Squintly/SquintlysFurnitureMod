@@ -77,21 +77,41 @@ namespace SquintlysFurnitureMod.Content.Tiles.Top.OneWide.OneOne.Big
             int topX = i - tile.TileFrameX % 18 / 18;
             int topY = j - tile.TileFrameY % 32 / 32;
 
-            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 18);
-
-            for (int x = topX; x < topX + 1; x++)
+            bool shiftPressed = Main.keyState.PressingShift();
+            if (!shiftPressed)
             {
-                for (int y = topY; y < topY + 1; y++)
-                {
-                    Main.tile[x, y].TileFrameX += frameAdjustment;
+                short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 18);
 
-                    if (Wiring.running)
+                for (int x = topX; x < topX + 1; x++)
+                {
+                    for (int y = topY; y < topY + 1; y++)
                     {
-                        Wiring.SkipWire(x, y);
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
                     }
                 }
             }
+            if (!shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX < 18 ? 36 : -18);
 
+                for (int x = topX; x < topX + 1; x++)
+                {
+                    for (int y = topY; y < topY + 1; y++)
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
                 NetMessage.SendTileSquare(-1, topX, topY, 1, 1);

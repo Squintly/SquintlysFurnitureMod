@@ -8,24 +8,28 @@
   </PropertyGroup>
   <ItemGroup>
     <AdditionalFiles Remove="Content\Items\Blocks\Other\**" />
+    <AdditionalFiles Remove="Content\Items\Decorations\Holiday\Valentines\Other\Food\**" />
     <AdditionalFiles Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <AdditionalFiles Remove="Content\Items\Walls\**" />
     <AdditionalFiles Remove="Content\Tiles\Blocks\Other\**" />
     <AdditionalFiles Remove="Content\Tiles\Surface\1x2\**" />
     <AdditionalFiles Remove="Content\Tiles\Trees\**" />
     <Compile Remove="Content\Items\Blocks\Other\**" />
+    <Compile Remove="Content\Items\Decorations\Holiday\Valentines\Other\Food\**" />
     <Compile Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <Compile Remove="Content\Items\Walls\**" />
     <Compile Remove="Content\Tiles\Blocks\Other\**" />
     <Compile Remove="Content\Tiles\Surface\1x2\**" />
     <Compile Remove="Content\Tiles\Trees\**" />
     <EmbeddedResource Remove="Content\Items\Blocks\Other\**" />
+    <EmbeddedResource Remove="Content\Items\Decorations\Holiday\Valentines\Other\Food\**" />
     <EmbeddedResource Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <EmbeddedResource Remove="Content\Items\Walls\**" />
     <EmbeddedResource Remove="Content\Tiles\Blocks\Other\**" />
     <EmbeddedResource Remove="Content\Tiles\Surface\1x2\**" />
     <EmbeddedResource Remove="Content\Tiles\Trees\**" />
     <None Remove="Content\Items\Blocks\Other\**" />
+    <None Remove="Content\Items\Decorations\Holiday\Valentines\Other\Food\**" />
     <None Remove="Content\Items\Furniture\SetExtras\Stools\**" />
     <None Remove="Content\Items\Walls\**" />
     <None Remove="Content\Tiles\Blocks\Other\**" />
@@ -188,11 +192,6 @@
     <None Remove="Content\Furniture\Surfaces\Workbenches\WorkBenches_10.png" />
     <None Remove="Content\Furniture\Surfaces\WorkBenches_5.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Clutter\Cleaning\Spraybottle.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\CreamandSugar.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\PepperMill.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\Pitcher.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepper.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Accessories\SaltandPepperGlass.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCake.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BigCakeSlice.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\BakedGoods\BirthdayCakeBlue.png" />
@@ -249,21 +248,6 @@
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Fruit\SugarApple.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Fruit\Watermelon.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\Fruit\WatermelonSmall.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Butter.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Cheese.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\CheeseSlice.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\CheeseWheel.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\EggCarton.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Flour.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\FlourBig.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\FlourSmall.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Milk.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Salt.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\StaplePackage.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Sugar.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\SugarBig.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\SugarSmall.png" />
-    <None Remove="Content\Items\Decorations\Misc\Household\Food\Ingredients\Yeast.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\KitchenTools\RollingPin.png" />
     <None Remove="Content\Items\Decorations\Misc\Household\Food\KitchenTools\RollingPinBig.png" />
     <None Remove="Content\Items\Decorations\Misc\Professions\Farming\WateringCan.png" />
@@ -1111,7 +1095,6 @@
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeFour\S_3x4.png" />
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeOne\Normal\S_3x1_N.png" />
     <None Remove="Content\Tiles\Surface\ThreeWide\ThreeThree\S_3x3_3.png" />
-    <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Big\S_2x1_B_2_Lighted.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Big\S_2x1_B_3.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Normal\S_2x1_N.png" />
     <None Remove="Content\Tiles\Surface\TwoWide\TwoOne\Normal\S_2x1_N_3.png" />
@@ -1173,6 +1156,9 @@
     <None Remove="Reference\TextFile1.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="obj\Debug\net8.0\SquintlysFurnitureMod.AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\Base Files\Crafting\2-Wide\2x4\Easel.png" Link="Content\Tiles\CraftingStations\General\Misc\Easel.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\Base Files\Crafting\2-Wide\2x4\Easel_Overlay.png" Link="Content\Tiles\CraftingStations\General\Misc\Easel_Overlay.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\TeakBranches.png" Link="Content\Tiles\Plants\Trees\Teak\TeakBranches.png" />
@@ -1183,14 +1169,28 @@
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreetopsFlowering.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreetopsFlowering.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreetopsWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreetopsWithered.png" />
     <Content Include="..\..\..\..\..\..\Dropbox\Modding\Terraria\Squintly's Furniture Mod\★TO IMPLEMENT★\VernalTreeWithered.png" Link="Content\Tiles\Plants\Trees\Vernal\VernalTreeWithered.png" />
+    <Content Include="obj\Debug\net8.0\SquintlysFurnitureMod.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\net8.0\SquintlysFurnitureMod.sourcelink.json" />
+    <Content Include="obj\project.assets.json" />
+    <Content Include="obj\SquintlysFurnitureMod.csproj.nuget.dgspec.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Blocks\General\NewFolder\" />
     <Folder Include="Content\Blocks\Themed\Holiday\" />
+    <Folder Include="Content\Furniture\Kitchen\Appliances\KitchenSinks\Items\" />
     <Folder Include="Content\Furniture\Lights\Surface\Lampposts\" />
-    <Folder Include="Content\Items\Decorations\Holiday\Valentines\Other\Food\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Clutter\Cleaning\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Decor\Pillows\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Decor\Towels\Surface\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Decor\Vases\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Food\Bowls\" />
+    <Folder Include="Content\Items\Decorations\Misc\Household\Food\Veggies\Edible\" />
+    <Folder Include="Content\Items\Decorations\Misc\Professions\Military\Future\Explosives\" />
     <Folder Include="Content\Tiles\Plants\Trees\Vernal\" />
+    <Folder Include="Content\Tiles\Surface\OneWide\OneOne\Big\Eleven\" />
     <Folder Include="Content\Tiles\Surface\OneWide\OneTwo\Normal\" />
+    <Folder Include="Content\Tiles\Surface\TwoWide\TwoOne\Big\One\" />
+    <Folder Include="Content\Tiles\Surface\TwoWide\TwoOne\Big\Two\" />
     <Folder Include="Content\Tiles\Wall\FiveWide\FiveOne\Normal\" />
     <Folder Include="Content\Tiles\Wall\FourWide\FourOne\Normal\" />
     <Folder Include="Content\Items\Decorations\Misc\Hobbies\Music\" />
@@ -1200,6 +1200,23 @@
     <Folder Include="Content\Tiles\Decorations\Misc\Hobbies\Music\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Entertainment\" />
     <Folder Include="Content\Tiles\Decorations\Misc\Technology\Medical\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\.AssemblyReference.cache" />
+    <None Include="obj\Debug\net8.0\refint\SquintlysFurnitureMod.dll" />
+    <None Include="obj\Debug\net8.0\ref\SquintlysFurnitureMod.dll" />
+    <None Include="obj\Debug\net8.0\Squintly.FB6EC26B.Up2Date" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.assets.cache" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.dll" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net8.0\SquintlysFurnitureMod.pdb" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\SquintlysFurnitureMod.csproj.nuget.g.props" />
+    <None Include="obj\SquintlysFurnitureMod.csproj.nuget.g.targets" />
   </ItemGroup>
 	<Target Name="GenerateGlobalUsings" BeforeTargets="BeforeBuild">
 		<Exec Command="pwsh -ExecutionPolicy Bypass -File GenerateGlobalUsings.ps1" IgnoreExitCode="false" Condition="'$(OS)' != 'Windows_NT'" />

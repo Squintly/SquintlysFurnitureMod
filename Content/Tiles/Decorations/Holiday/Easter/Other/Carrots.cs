@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Veggies;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -37,7 +36,7 @@ public class Carrots : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<Carrot>());
+        RegisterItemDrop(Mod.Find<ModItem>("Carrot").Type);
     }
 
     public override bool RightClick(int i, int j)

@@ -1,7 +1,6 @@
 ﻿using SquintlysFurnitureMod.Content.Items.Blocks.Holiday.Spring;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

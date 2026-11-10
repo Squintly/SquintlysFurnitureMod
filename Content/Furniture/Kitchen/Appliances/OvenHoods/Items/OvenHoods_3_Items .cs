@@ -1,7 +1,5 @@
-﻿using SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.Dishwashers;
-using SquintlysFurnitureMod.Content.Furniture.Kitchen.Appliances.KitchenSinks;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using System;
+﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -64,9 +62,14 @@ internal class OvenHoods_3_Items : ModItem
     public override void AddRecipes()
     {
         CreateRecipe()
-        .AddRecipeGroup(RecipeGroupID.Wood, 10)
-        .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-        .AddTile(ModContent.TileType<Worktable>())
-        .Register();
+            .AddRecipeGroup(RecipeGroupID.Wood, 10)
+            .AddRecipeGroup(RecipeGroupID.IronBar, 10)
+            .AddTile(ModContent.TileType<Worktable>())
+            .Register();
+
+        CreateRecipe()
+            .AddIngredient(ItemID.SilverCoin, 30)
+            .AddTile(ModContent.TileType<ShopAppliances>())
+            .Register();
     }
 }

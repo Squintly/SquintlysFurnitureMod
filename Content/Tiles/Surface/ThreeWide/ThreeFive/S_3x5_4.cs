@@ -10,6 +10,11 @@ namespace SquintlysFurnitureMod.Content.Tiles.Surface.ThreeWide.ThreeFive;
 
 public class S_3x5_4 : ModTile
 {
+    public enum StyleIDs
+    {
+        RackPolesLong,
+        RackMiscsLong
+    }
     public override void SetStaticDefaults()
     {
         Main.tileFrameImportant[Type] = true;
@@ -55,29 +60,44 @@ public class S_3x5_4 : ModTile
         int topX = i - tile.TileFrameX % 54 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 90 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 162 ? -162 : 54); //change first two by total size - one style, last by style size
-
-        for (int x = topX; x < topX + 3; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 5; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 162 ? -162 : 54); //change first two by total size - one style, last by style size
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 3; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 5; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
         }
+        if (shiftPressed)
+        {
+            short frameAdjustment = (short)(tile.TileFrameX < 54 ? 162 : -54); //change first two by total size - one style, last by style size
 
+            for (int x = topX; x < topX + 3; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 5; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+        }
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 3, 5); //change for width, height
         }
     }
 }
-
-/*STYLES
-0- Long Poles Rack
-1- Long Misc Weapons Rack
-*/

@@ -60,21 +60,41 @@ public class S_2x2_2 : ModTile
         int topX = i - tile.TileFrameX % 36 / 18; //change first number depending on size
         int topY = j - tile.TileFrameY % 36 / 18;
 
-        short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change first two by total size, last by style size
-
-        for (int x = topX; x < topX + 2; x++) // change depending on width
+        bool shiftPressed = Main.keyState.PressingShift();
+        if (!shiftPressed)
         {
-            for (int y = topY; y < topY + 2; y++) // change height
-            {
-                Main.tile[x, y].TileFrameX += frameAdjustment;
+            short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36); //change first two by total size, last by style size
 
-                if (Wiring.running)
+            for (int x = topX; x < topX + 2; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 2; y++) // change height
                 {
-                    Wiring.SkipWire(x, y);
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
                 }
             }
         }
+        if (shiftPressed)
+        {
+            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 36 : -36); //change first two by total size, last by style size
 
+            for (int x = topX; x < topX + 2; x++) // change depending on width
+            {
+                for (int y = topY; y < topY + 2; y++) // change height
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+        }
         if (Main.netMode != NetmodeID.SinglePlayer)
         {
             NetMessage.SendTileSquare(-1, topX, topY, 2, 2); //change for width, height

@@ -37,6 +37,8 @@ public class ShopHeartfelt : ModTile
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("SeasonalShop"));
         AnimationFrameHeight = 74;
+
+        RegisterItemDrop(ModContent.ItemType<ShopSeasonalItem>());
     }
 
     public override bool RightClick(int i, int j)

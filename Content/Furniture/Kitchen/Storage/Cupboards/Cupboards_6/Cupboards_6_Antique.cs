@@ -1,17 +1,12 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using ReLogic.Content;
 using SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Counters.Counters_9;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
-using System;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.Localization;
@@ -47,7 +42,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             TileID.Sets.FriendlyFairyCanLureTo[Type] = true;
             TileID.Sets.GeneralPlacementTiles[Type] = false;
             TileID.Sets.PreventsTileRemovalIfOnTopOfIt[Type] = true;
-			TileID.Sets.PreventsTileHammeringIfOnTopOfIt[Type] = true;
+            TileID.Sets.PreventsTileHammeringIfOnTopOfIt[Type] = true;
 
             TileID.Sets.AvoidedByNPCs[Type] = true;
             TileID.Sets.AvoidedByMeteorLanding[Type] = true;
@@ -382,7 +377,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             }
         }
     }
-    public class Cupboards_Antique_Item : ModItem
+    public class Cupboard_6_Antique_Item : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -397,7 +392,7 @@ namespace SquintlysFurnitureMod.Content.Furniture.Kitchen.Storage.Cupboards.Cupb
             Item.value = Item.buyPrice(silver: 6);
             Item.maxStack = Item.CommonMaxStack;
 
-            Item.DefaultToPlaceableTile(ModContent.TileType<Counters_9_Antique>());
+            Item.DefaultToPlaceableTile(ModContent.TileType<Cupboards_6_Antique>());
         }
 
         public override void AddRecipes()

@@ -1,10 +1,8 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -41,7 +39,6 @@ public class Fridges : ModTile
 
         TileObjectData.newTile.StyleHorizontal = true;
         TileObjectData.newTile.StyleMultiplier = 3;
-        TileObjectData.newTile.StyleWrapLimit = 3;
         TileObjectData.newTile.RandomStyleRange = 3;
 
         TileObjectData.addTile(Type);
@@ -64,40 +61,157 @@ public class Fridges : ModTile
     public void ToggleTile(int i, int j)
     {
         Tile tile = Main.tile[i, j];
-        int topX = i - tile.TileFrameX % 32 / 16; //change first number depending on size
+        int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
         int topY = j - tile.TileFrameY % 72 / 16;
 
         bool shiftPressed = Main.keyState.PressingShift();
-        if (!shiftPressed)
+        if (tile.TileFrameX < 108)
         {
-            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 36); //change first two by total size, last by style size
-
-            for (int x = topX; x < topX + 2; x++) // change depending on width
+            if (!shiftPressed)
             {
-                for (int y = topY; y < topY + 4; y++) // change height
-                {
-                    Main.tile[x, y].TileFrameX += frameAdjustment;
+                short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 36); //change first two by total size, last by style size
 
-                    if (Wiring.running)
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
                     {
-                        Wiring.SkipWire(x, y);
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+            if (shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX < 36 ? 72 : -36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
                     }
                 }
             }
         }
-        if (shiftPressed)
+        //Vintage
+        if (tile.TileFrameX >= 108 && tile.TileFrameX < 216)
         {
-            short frameAdjustment = (short)(tile.TileFrameX < 36 ? 72 : -36); //change first two by total size, last by style size
-
-            for (int x = topX; x < topX + 2; x++) // change depending on width
+            if (!shiftPressed)
             {
-                for (int y = topY; y < topY + 4; y++) // change height
-                {
-                    Main.tile[x, y].TileFrameX += frameAdjustment;
+                short frameAdjustment = (short)(tile.TileFrameX >= 180 ? -72 : 36); //change first two by total size, last by style size
 
-                    if (Wiring.running)
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
                     {
-                        Wiring.SkipWire(x, y);
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+            if (shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX < 144 ? 72 : -36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+        }
+        //Antique
+        if (tile.TileFrameX >= 216 && tile.TileFrameX < 324)
+        {
+            if (!shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX >= 288 ? -72 : 36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+            if (shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX < 252 ? 72 : -36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+        }
+        //Retro
+        if (tile.TileFrameX > 324)
+        {
+            if (!shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX >= 396 ? -72 : 36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
+                    }
+                }
+            }
+            if (shiftPressed)
+            {
+                short frameAdjustment = (short)(tile.TileFrameX < 360 ? 72 : -36); //change first two by total size, last by style size
+
+                for (int x = topX; x < topX + 2; x++) // change depending on width
+                {
+                    for (int y = topY; y < topY + 4; y++) // change height
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                        if (Wiring.running)
+                        {
+                            Wiring.SkipWire(x, y);
+                        }
                     }
                 }
             }

@@ -1,5 +1,5 @@
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.Holiday;
-using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo;
+using SquintlysFurnitureMod.Content.Tiles.Surface.TwoWide.TwoTwo.Three;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;

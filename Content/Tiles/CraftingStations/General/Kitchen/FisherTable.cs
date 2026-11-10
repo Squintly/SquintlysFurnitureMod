@@ -93,7 +93,7 @@ public class FisherTableItem : ModItem
         CreateRecipe(1)
             .AddRecipeGroup(RecipeGroupID.Wood, 30)
             .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-            .AddRecipeGroup(RecipeGroupID.FishForDinner)
+            .AddRecipeGroup("SquintlyFurnitureMod:Fish")
             .AddTile(TileID.Sawmill)
             .Register();
 

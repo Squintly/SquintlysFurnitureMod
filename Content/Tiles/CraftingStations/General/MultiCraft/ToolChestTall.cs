@@ -1,13 +1,11 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -66,7 +64,7 @@ public class ToolChestTall : ModTile
         Tile tile = Main.tile[i, j];
         int topX = i - tile.TileFrameX % 36 / 16; //change first number depending on size
         int topY = j - tile.TileFrameY % 54 / 16;
-       
+
         bool shiftPressed = Main.keyState.PressingShift();
         if (shiftPressed)
         {

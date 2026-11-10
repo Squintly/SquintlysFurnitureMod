@@ -1,4 +1,5 @@
-﻿using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Food.Ingredients;
+﻿using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Kitchen;
+using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Misc;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -34,4 +35,27 @@ namespace SquintlysFurnitureMod.Content
             recipe.Register();
         }
     }
+    public class SilkRecipes : ModSystem
+    {
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ItemID.Silk);
+            recipe.AddIngredient(ModContent.ItemType<ThreadItem>(), 4);
+            recipe.AddTile(ModContent.TileType<SewingBox>());
+            recipe.Register();
+        }
+    }
+    public class FridgeRecipes : ModSystem
+    {
+        public override void AddRecipes()
+        {
+            Recipe recipe = Recipe.Create(ItemID.IceBlock);
+            recipe.AddTile(ModContent.TileType<Fridges>());
+            recipe.Register();
+
+            recipe = Recipe.Create(ItemID.SnowBlock);
+            recipe.AddTile(ModContent.TileType<Fridges>());
+            recipe.Register();
+        }
+}
 }

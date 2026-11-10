@@ -63,8 +63,14 @@ namespace SquintlysFurnitureMod.Content
 
             RecipeGroup Explosives = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Explosives", ItemID.Bomb, ItemID.StickyBomb, ItemID.BouncyBomb, ItemID.DirtBomb, ItemID.DirtStickyBomb,
                     ItemID.DryBomb, ItemID.WetBomb, ItemID.HoneyBomb, ItemID.LavaBomb, ItemID.ScarabBomb, ItemID.BombFish, ItemID.SmokeBomb, ItemID.Grenade, ItemID.BouncyGrenade, ItemID.StickyGrenade, ItemID.PartyGirlGrenade,
-                    ItemID.Dynamite, ItemID.BouncyDynamite, ItemID.StickyDynamite, ItemID.DynamiteFish);
+                    ItemID.Dynamite, ItemID.BouncyDynamite, ItemID.StickyDynamite, ItemID.DynamiteFish, Mod.Find<ModItem>("GrenadeBrown").Type, Mod.Find<ModItem>("GrenadeGreen").Type,
+                    Mod.Find<ModItem>("GrenadeBlack").Type, Mod.Find<ModItem>("GrenadeRed").Type, Mod.Find<ModItem>("GrenadeFuture").Type, Mod.Find<ModItem>("FutureExplosive").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Explosives", Explosives);
+
+            RecipeGroup Fish = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Non-Quest Fish", ItemID.DoubleCod, ItemID.Damselfish, ItemID.ArmoredCavefish, ItemID.CrimsonTigerfish, ItemID.FlarefinKoi, ItemID.Obsidifish,
+                    ItemID.Prismite, ItemID.PrincessFish, ItemID.Hemopiranha, ItemID.SpecularFish, ItemID.Stinkfish, ItemID.VariegatedLardfish, ItemID.ChaosFish, ItemID.FrostMinnow, ItemID.Ebonkoi, ItemID.Trout, ItemID.Tuna,
+                    ItemID.Bass, ItemID.Salmon, ItemID.RedSnapper, ItemID.Flounder, ItemID.AtlanticCod, ItemID.Shrimp, ItemID.RockLobster, ItemID.FrostMinnow);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Fish", Fish);
         }
     }
 
@@ -137,19 +143,25 @@ namespace SquintlysFurnitureMod.Content
             RecipeGroup Meat = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Meat", ItemID.Steak, ItemID.Bacon, ItemID.BBQRibs, ItemID.ChickenNugget, ItemID.HamBat);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Meat", Meat);
 
-            RecipeGroup Milks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Milk", ItemID.MilkCarton, Mod.Find<ModItem>("Milk").Type);
+            RecipeGroup Milks = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Milk", ItemID.MilkCarton, Mod.Find<ModItem>("MilkJug").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Milks", Milks);
 
-            RecipeGroup Eggs = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Egg", Mod.Find<ModItem>("EggsBrown").Type, Mod.Find<ModItem>("Eggs").Type);
+            RecipeGroup Eggs = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Egg", Mod.Find<ModItem>("EggBrown").Type, Mod.Find<ModItem>("Egg").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Eggs", Eggs);
+
+            RecipeGroup Carrots = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Carrot", Mod.Find<ModItem>("Carrot").Type, Mod.Find<ModItem>("CarrotBig").Type);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Carrots", Carrots);
 
             RecipeGroup AllFruit = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Fruit", ItemID.Apple, ItemID.Apricot, ItemID.Grapefruit, ItemID.Lemon, ItemID.Peach, ItemID.Cherry, ItemID.Plum, ItemID.BlackCurrant,
                 ItemID.Elderberry, ItemID.BloodOrange, ItemID.Rambutan, ItemID.Mango, ItemID.Pineapple, ItemID.Banana, ItemID.Coconut, ItemID.Dragonfruit, ItemID.Starfruit, ItemID.Pomegranate, Mod.Find<ModItem>("Cherry").Type, Mod.Find<ModItem>("Dragonfruit").Type, Mod.Find<ModItem>("AppleGreen").Type,
-                Mod.Find<ModItem>("AppleRed").Type, Mod.Find<ModItem>("Apricot").Type, Mod.Find<ModItem>("Avocado").Type, Mod.Find<ModItem>("Banana").Type, Mod.Find<ModItem>("Berries").Type, Mod.Find<ModItem>("Breadfruit").Type, Mod.Find<ModItem>("Coconut").Type,
+                Mod.Find<ModItem>("AppleRed").Type, Mod.Find<ModItem>("Apricot").Type, Mod.Find<ModItem>("Avocado").Type, Mod.Find<ModItem>("Banana").Type, Mod.Find<ModItem>("Berry").Type, Mod.Find<ModItem>("Breadfruit").Type, Mod.Find<ModItem>("Coconut").Type,
                 Mod.Find<ModItem>("Grapefruit").Type, Mod.Find<ModItem>("Grapes").Type, Mod.Find<ModItem>("Guava").Type, Mod.Find<ModItem>("Kiwi").Type, Mod.Find<ModItem>("Lemon").Type, Mod.Find<ModItem>("Lime").Type,
                 Mod.Find<ModItem>("Mango").Type, Mod.Find<ModItem>("Orange").Type, Mod.Find<ModItem>("Papaya").Type, Mod.Find<ModItem>("Passionfruit").Type, Mod.Find<ModItem>("Peach").Type, Mod.Find<ModItem>("Pear").Type, Mod.Find<ModItem>("Persimmon").Type,
                 Mod.Find<ModItem>("Pineapple").Type, Mod.Find<ModItem>("Pomegranate").Type, Mod.Find<ModItem>("Strawberry").Type, Mod.Find<ModItem>("Watermelon").Type, Mod.Find<ModItem>("WatermelonSmall").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:AllFruit", AllFruit);
+
+            RecipeGroup Veggies = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Veggies", Mod.Find<ModItem>("CarrotBig").Type, Mod.Find<ModItem>("Carrot").Type);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Veggies", Veggies);
 
             RecipeGroup Apples = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Apple", ItemID.Apple, Mod.Find<ModItem>("AppleRed").Type, Mod.Find<ModItem>("AppleGreen").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Apples", Apples);
@@ -162,6 +174,9 @@ namespace SquintlysFurnitureMod.Content
 
             RecipeGroup Sugars = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Sugar", Mod.Find<ModItem>("Sugar").Type, Mod.Find<ModItem>("SugarBig").Type, Mod.Find<ModItem>("SugarSmall").Type);
             RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Sugars", Sugars);
+
+            RecipeGroup Cheeses = new RecipeGroup(() => $"{Language.GetTextValue("LegacyMisc.37")} Small Cheese", Mod.Find<ModItem>("Cheese").Type, Mod.Find<ModItem>("CheeseSlice").Type);
+            RecipeGroup.RegisterGroup("SquintlyFurnitureMod:Cheeses", Cheeses);
         }
     }
 
@@ -230,7 +245,7 @@ namespace SquintlysFurnitureMod.Content
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Avocado").Type);
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Banana").Type);
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("BellPepper").Type);
-                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Berries").Type);
+                    fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Berry").Type);
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("BloodOrange").Type);
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Cherry").Type);
                     fruitGroup.ValidItems.Add(Mod.Find<ModItem>("Dragonfruit").Type);

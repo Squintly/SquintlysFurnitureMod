@@ -1,4 +1,3 @@
-using SquintlysFurnitureMod.Content.Items.Decorations.Misc.Household.Clutter.Office.Supplies.Modern;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -37,7 +36,7 @@ public class StickyNotes : ModTile
 
         TileObjectData.addTile(Type);
 
-        RegisterItemDrop(ModContent.ItemType<StickyNote>());
+        RegisterItemDrop(Mod.Find<ModItem>("StickyNote").Type);
     }
 
     public override bool RightClick(int i, int j)

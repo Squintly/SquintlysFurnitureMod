@@ -2,7 +2,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.Audio;
 using Terraria.Enums;
 using Terraria.GameContent.Drawing;
 using Terraria.ID;

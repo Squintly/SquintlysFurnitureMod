@@ -1,6 +1,4 @@
 using SquintlysFurnitureMod.Content.Tiles.CraftingStations.General.Shops;
-using SquintlysFurnitureMod.Content.Tiles.Multi.All.OneWide.OneThree;
-using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

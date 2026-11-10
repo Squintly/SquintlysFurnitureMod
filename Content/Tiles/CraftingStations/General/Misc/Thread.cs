@@ -35,7 +35,7 @@ public class Thread : ModTile
         TileObjectData.addTile(Type);
 
         AddMapEntry(new Color(200, 200, 200), Language.GetText("Thread"));
-        AdjTiles = new int[] { TileID.Loom, TileID.LivingLoom };
+        AdjTiles = new int[] { ModContent.TileType<SewingBox>() };
     }
 
     public override bool RightClick(int i, int j)
